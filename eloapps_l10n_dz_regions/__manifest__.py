@@ -5,7 +5,7 @@
     'name': '58 Wilayas - Algérie',
     'summary' : "Gestion par base de données relationnelles des adresses de vos contacts localisé en Algérie",
     'description' : "Gestion par base de données relationnelles des adresses de vos contacts localisé en Algérie",
-    'version': '16.1.2.0',
+    'version': '19.1.2.0',
     'category': 'Sales/CRM',
 
     'company': 'Elosys',

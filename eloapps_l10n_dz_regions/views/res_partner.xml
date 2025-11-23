@@ -4,7 +4,6 @@
         <field name="name">res.partner.form.l10n.dz</field>
         <field name="model">res.partner</field>
         <field name="priority">20</field>
-        <field name="type">form</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
             <data>
