@@ -1,5 +1,4 @@
 from odoo import models, fields, api
-from odoo.osv import expression
 import logging 
 
 class ActivityCode(models.Model):

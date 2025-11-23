@@ -2,7 +2,7 @@ from odoo import http
 
 
 class BannerCnrc(http.Controller):
-	@http.route('/l10n_dz_elosys/banner_cnrc', type='json', auth="user")
+	@http.route('/l10n_dz_elosys/banner_cnrc', type='jsonrpc', auth="user")
 	def banner(self):
 		return {
 			'html': """

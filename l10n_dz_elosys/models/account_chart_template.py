@@ -3,7 +3,7 @@
 from odoo import models, fields, api, _
 from odoo.exceptions import UserError
 
-class AccountChartTemplate(models.Model):
+class AccountChartTemplate(models.AbstractModel):
     _inherit = 'account.chart.template'
 
             
