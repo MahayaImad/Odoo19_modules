@@ -1,43 +1,39 @@
 # -*- encoding: utf-8 -*-
-from email.policy import default
 from odoo import models, fields, api, _
-from odoo.exceptions import UserError
-import odoo.addons.decimal_precision as dp
+from odoo.exceptions import UserError, ValidationError
 import re
-from odoo.exceptions import ValidationError
 
 GLOBAL_REGEXEX_NIS_NIF = "^[a-zA-Z0-9]{15}$"
 
 class ResCompany(models.Model):
     _inherit = 'res.company'
-    
+
     activity_code = fields.Many2many("activity.code" , string ="Code d'activité", index=True, ondelete="cascade")
-    
+
     #Les configurations qui permet d'afficher le code/secteur d'activité sur les rapports (Devis/Facture)
     industry_id_in_invoice  =fields.Boolean(string ="Secteur d'activité")
     activity_code_in_invoice  =fields.Boolean(string ="Code d'activité")
 
     industry_id_in_quotation  =fields.Boolean(string ="Secteur d'activité")
     activity_code_in_quotation  =fields.Boolean(string ="Code d'activité")
-    
-    
+
+
     transfer_tax_journal = fields.Many2one("account.journal" , string ="Journal de transfert de taxe",default=lambda self: self.env['account.journal'].search([('type', '=','general')],limit=1))
     temporary_tax_account = fields.Many2one("account.account" , string ="Compte temporaire de taxe" )
     based_on = fields.Selection(
         [('posted_invoices', 'Factures validées'),
          ('payment', 'Paiements des factures')],default="payment", string="Basé sur")
-    
-  
+
+
 
 
     fax = fields.Char(
-        string="Fax",
-        size=64
+        string="Fax"
     )
 
-    capital_social = fields.Float(
+    capital_social = fields.Monetary(
         string="Capital Social",
-        digits=dp.get_precision('Account'),
+        currency_field='currency_id',
         required=True,
         default=0.0
     )
@@ -47,15 +43,15 @@ class ResCompany(models.Model):
     )
 
     nis = fields.Char(
-        string="N.I.S",
+        string="N.I.S"
     )
 
     ai = fields.Char(
-        string="A.I",
+        string="A.I"
     )
 
     nif = fields.Char(
-        string="N.I.F",
+        string="N.I.F"
     )
 
     forme_juridique = fields.Many2one(
@@ -139,13 +135,12 @@ class BaseDocumentLayout2(models.TransientModel):
     
     
     fax = fields.Char(
-        string="Fax",
-        size=64
+        string="Fax"
     )
 
-    capital_social = fields.Float(
+    capital_social = fields.Monetary(
         string="Capital Social",
-        digits=dp.get_precision('Account'),
+        currency_field='currency_id',
         required=True,
         default=0.0
     )
@@ -155,18 +150,15 @@ class BaseDocumentLayout2(models.TransientModel):
     )
 
     nis = fields.Char(
-        string="N.I.S",
-        size=15
+        string="N.I.S"
     )
 
     ai = fields.Char(
-        string="A.I",
-        size=11
+        string="A.I"
     )
 
     nif = fields.Char(
-        string="N.I.F",
-        size=15
+        string="N.I.F"
     )
 
     forme_juridique = fields.Many2one(
