@@ -7,7 +7,7 @@
 
 
     'category': 'Accounting/accounting',
-    'version': '16.0.2.0',
+    'version': '19.0.1.0',
 
     "contributors": [
         "1 <Chems Eddine SAHININE>",
