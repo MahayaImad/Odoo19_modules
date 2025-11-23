@@ -7,10 +7,10 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='state_ids']" position='replace'>
                 <field name="state_ids">
-                    <tree>
+                    <list>
                         <field name="name"/>
                         <field name="code"/>
-                    </tree>
+                    </list>
                 </field>
             </xpath>
         </field>
@@ -39,13 +39,13 @@
         <field name="model">res.country.state</field>
         <field name="inherit_id" ref="base.view_country_state_tree"/>
         <field name="arch" type="xml">
-            <xpath expr="//tree" position='replace'>
-                <tree string="State">
+            <xpath expr="//list" position='replace'>
+                <list string="State">
                     <field name="name"/>
                     <field name="code"/>
                     <field name="country_id" options="{'no_create': True, 'no_open': True}"/>
                     <button name="action_read_state" type="object" icon ="fa-external-link" class="oe_highlight"/>
-                </tree>
+                </list>
             </xpath>
         </field>
     </record>
@@ -54,13 +54,13 @@
         <field name="name">Liste des communes</field>
         <field name="model">res.country.state.commune</field>
         <field name="arch" type="xml">
-            <tree default_order='state_id, code'>
+            <list default_order='state_id, code'>
                 <field name='name' string="Commune"/>
                 <field name='code' string="Code"/>
                 <field name='state_id' string="Wilaya"/>
                 <field name='country_id' string="Pays"/>
                 <button name="action_read_commune" type="object" icon ="fa-external-link" class="oe_highlight"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -81,13 +81,13 @@
         <field name="name">Liste des localites</field>
         <field name="model">res.country.state.localite</field>
         <field name="arch" type="xml">
-            <tree default_order='state_id, code'>
+            <list default_order='state_id, code'>
                 <field name='name' string="Localité"/>
                 <field name='code' string="Code"/>
                 <field name='state_id' string="Wilaya"/>
                 <field name='country_id' string="Pays"/>
                 <button name="action_read_localite" type="object" icon ="fa-external-link" class="oe_highlight"/>
-            </tree>
+            </list>
         </field>
     </record>
 

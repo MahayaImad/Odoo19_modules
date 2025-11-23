@@ -18,7 +18,6 @@ class ResCountryState(models.Model):
         return {
             'name': self.display_name,
             'type': 'ir.actions.act_window',
-            'view_type': 'form',
             'view_mode': 'form',
             'res_model': 'res.country.state',
             'res_id': self.id,
@@ -47,7 +46,6 @@ class ResCountryCommune(models.Model):
         return {
             'name': self.display_name,
             'type': 'ir.actions.act_window',
-            'view_type': 'form',
             'view_mode': 'form',
             'res_model': 'res.country.state.commune',
             'res_id': self.id,
@@ -76,7 +74,6 @@ class ResCountryLocalite(models.Model):
         return {
             'name': self.display_name,
             'type': 'ir.actions.act_window',
-            'view_type': 'form',
             'view_mode': 'form',
             'res_model': 'res.country.state.localite',
             'res_id': self.id,
