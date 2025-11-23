@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_l10n_dz_commune,res commune,model_res_country_state_commune,base.group_user,1,1,1,1
+access_l10n_dz_localite,res localite,model_res_country_state_localite,base.group_user,1,1,1,1
