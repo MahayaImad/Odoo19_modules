@@ -8,7 +8,7 @@
 
 
     'category': 'Accounting/Localizations/Account Charts',
-    'version': '16.0.5.1',
+    'version': '19.0.1.0',
 
 
     "contributors": [

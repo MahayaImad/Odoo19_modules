@@ -17,10 +17,10 @@
                             <field name="regulation" widget="radio"/>
                         </group>
                     </group><br/>
-                    <div attrs="{'invisible': [('regulation', '!=', 'regulated_activity')]}" style="border: solid 1px #e4e6e8; background-color: #e3faf3; text-align:center">            
+                    <div invisible="regulation != 'regulated_activity'" style="border: solid 1px #e4e6e8; background-color: #e3faf3; text-align:center">
                         <p style="margin-top:5px;">Toute activité ou profession soumise à inscription au registre du commerce et requérant par sa nature, son contenu, son objet et les moyens mis en ouvre, la réunion de conditions particulières pour autoriser son exercice.</p>
                     </div>
-                    <div attrs="{'invisible': [('regulation', '!=', 'unauthorized_activity')]}" style="border: solid 1px #e4e6e8; background-color: #f9ded9; text-align:center">            
+                    <div invisible="regulation != 'unauthorized_activity'" style="border: solid 1px #e4e6e8; background-color: #f9ded9; text-align:center">
                         <p style="margin-top:5px;">Toute activité n'est pas soumise à la présentation d'une autorisation ou d'un agrément provisoire, délivré par l'administration ou l'institution habilitée.</p>
                     </div>
                 </sheet>

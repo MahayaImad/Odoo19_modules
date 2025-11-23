@@ -6,8 +6,8 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
             <xpath expr="//group[@name='accounting_entries']" position="after">
-                
-                <group string="Information fiscale" attrs="{'invisible':[('company_type','not in','company')]}" groups="account.group_account_invoice">
+
+                <group string="Information fiscale" invisible="company_type not in ['company']" groups="account.group_account_invoice">
                     <field name="fiscal_position" options="{'no_edit' : True, 'no_create': True}" groups="account.group_account_invoice"/>
                     <field name="activity_code" widget="many2many_tags"/>
                     <field name="rc" class="oe_line" groups="account.group_account_invoice"/>

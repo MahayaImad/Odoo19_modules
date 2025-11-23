@@ -37,8 +37,7 @@ class ResPartner(models.Model):
     )
 
     fax = fields.Char(
-        string="Fax",
-        size=64
+        string="Fax"
     )
 
     
