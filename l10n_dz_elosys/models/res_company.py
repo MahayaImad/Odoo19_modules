@@ -132,10 +132,17 @@ class BaseDocumentLayout2(models.TransientModel):
         'res.country',
         string=_('country'),
     )
-    
-    
+
+
     fax = fields.Char(
         string="Fax"
+    )
+
+    currency_id = fields.Many2one(
+        'res.currency',
+        string="Currency",
+        related='company_id.currency_id',
+        readonly=True
     )
 
     capital_social = fields.Monetary(
