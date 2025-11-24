@@ -3,10 +3,18 @@
 from odoo import models, fields, api, _
 from odoo.exceptions import UserError
 
+# Odoo 19 Note: The account.chart.template model no longer exists in Odoo 19.
+# Chart of accounts setup is now handled differently.
+# This file is kept for reference but the class is commented out to avoid errors.
+
+# TODO: Implement post_init_hook to setup account groups hierarchy
+# The logic below should be moved to a post-install hook function
+
+"""
 class AccountChartTemplate(models.AbstractModel):
     _inherit = 'account.chart.template'
 
-            
+
     def _load(self, company):
         res = super(AccountChartTemplate, self)._load(company)
 
@@ -55,3 +63,4 @@ class AccountChartTemplate(models.AbstractModel):
                                 code_prefix_start = tmp_cps
 
         return res
+"""
