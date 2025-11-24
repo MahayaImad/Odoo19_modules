@@ -1,54 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <odoo>
     <data noupdate='1'>
-        <!-- Removed pcg_0 - not needed for Odoo 19 -->
-
-        <!-- <record id='pcg_0' model='account.group'>
-
+        <record id='pcg_0' model='account.group'>
             <field name='name'>Système Comptable et Financier Algérien</field>
-
             <field name='code_prefix_start'>0</field>
+        </record>
 
-        </record> -->
-
-        <!-- Removed pcg_classes_1_a_5 - not needed for Odoo 19 -->
-
-
-        <!-- <record id='pcg_classes_1_a_5' model='account.group'>
-
-
+        <record id='pcg_classes_1_a_5' model='account.group'>
             <field name='name'>Comptes de bilan</field>
-
-
             <field name='code_prefix_start'>Classes 1 à 5</field>
-
-
             <field name='parent_id' ref='pcg_0'/>
+        </record>
 
-
-        </record> -->
-
-        <!-- Removed pcg_classes_6_a_7 - not needed for Odoo 19 -->
-
-
-        <!-- <record id='pcg_classes_6_a_7' model='account.group'>
-
-
+        <record id='pcg_classes_6_a_7' model='account.group'>
             <field name='name'>Comptes de gestion</field>
-
-
             <field name='code_prefix_start'>Classes 6 à 7</field>
-
-
             <field name='parent_id' ref='pcg_0'/>
-
-
-        </record> -->
+        </record>
 
         <record id='pcg_1' model='account.group'>
             <field name='name'>CLASSE 1 : COMPTES DE CAPITAUX</field>
-            <field name='code_prefix_start'>1</field>
-            <field name='code_prefix_end'>19</field>
+            <field name='code_prefix_start'>Classe 1</field>
+            <field name='parent_id' ref='pcg_classes_1_a_5'/>
         </record>
 
         <record id='pcg_10' model='account.group'>
@@ -749,8 +722,8 @@
 
         <record id='pcg_2' model='account.group'>
             <field name='name'>CLASSE 2 : COMPTES D’IMMOBILISATIONS</field>
-            <field name='code_prefix_start'>2</field>
-            <field name='code_prefix_end'>29</field>
+            <field name='code_prefix_start'>Classe 2</field>
+            <field name='parent_id' ref='pcg_classes_1_a_5'/>
         </record>
 
         <record id='pcg_20' model='account.group'>
@@ -1679,8 +1652,8 @@
 
         <record id='pcg_3' model='account.group'>
             <field name='name'>CLASSE 3 : COMPTES DE STOCKS ET EN COURS</field>
-            <field name='code_prefix_start'>3</field>
-            <field name='code_prefix_end'>39</field>
+            <field name='code_prefix_start'>Classe 3</field>
+            <field name='parent_id' ref='pcg_classes_1_a_5'/>
         </record>
 
         <record id='pcg_30' model='account.group'>
@@ -2267,8 +2240,8 @@
 
         <record id='pcg_4' model='account.group'>
             <field name='name'>CLASSE 4 : COMPTES DE TIERS</field>
-            <field name='code_prefix_start'>4</field>
-            <field name='code_prefix_end'>49</field>
+            <field name='code_prefix_start'>Classe 4</field>
+            <field name='parent_id' ref='pcg_classes_1_a_5'/>
         </record>
 
         <record id='pcg_40' model='account.group'>
@@ -3527,8 +3500,8 @@
 
         <record id='pcg_5' model='account.group'>
             <field name='name'>CLASSE 5 : COMPTES FINANCIERS</field>
-            <field name='code_prefix_start'>5</field>
-            <field name='code_prefix_end'>59</field>
+            <field name='code_prefix_start'>Classe 5</field>
+            <field name='parent_id' ref='pcg_classes_1_a_5'/>
         </record>
 
         <record id='pcg_50' model='account.group'>
@@ -3875,8 +3848,8 @@
 
         <record id='pcg_6' model='account.group'>
             <field name='name'>CLASSE 6 : COMPTES DE CHARGES</field>
-            <field name='code_prefix_start'>6</field>
-            <field name='code_prefix_end'>69</field>
+            <field name='code_prefix_start'>Classe 6</field>
+            <field name='parent_id' ref='pcg_classes_6_a_7'/>
         </record>
 
         <record id='pcg_60' model='account.group'>
@@ -5279,8 +5252,8 @@
 
         <record id='pcg_7' model='account.group'>
             <field name='name'>CLASSE 7 : COMPTES DE PRODUITS</field>
-            <field name='code_prefix_start'>7</field>
-            <field name='code_prefix_end'>79</field>
+            <field name='code_prefix_start'>Classe 7</field>
+            <field name='parent_id' ref='pcg_classes_6_a_7'/>
         </record>
 
         <record id='pcg_70' model='account.group'>
