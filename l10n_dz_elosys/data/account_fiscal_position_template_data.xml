@@ -4,15 +4,15 @@
     <!-- To solve bug 1240265, we have to delete all fiscal position templates before each update.
          The valid ones will be re-created later during the update.
          /!\ This must be executed *before* loading the fiscal position templates!! -->
-    <delete model="account.fiscal.position.template" search="[('chart_template_id','=',ref('l10n_dz_base_pcg_chart_template'))]"/>
+    <delete model="account.fiscal.position" search="[('chart_template_id','=',ref('l10n_dz_base_pcg_chart_template'))]"/>
 
-    <record id="fiscal_position_template_exo" model="account.fiscal.position.template">
+    <record id="fiscal_position_template_exo" model="account.fiscal.position">
         <field name="name">Exonération TVA A la vente : ANSEJ, ANDI, Export,...</field>
         <field name="chart_template_id" ref="l10n_dz_base_pcg_chart_template"/>
 
     </record>
 
-    <record id="fiscal_position_template_import_export" model="account.fiscal.position.template">
+    <record id="fiscal_position_template_import_export" model="account.fiscal.position">
         <field name="name">Fournisseurs étranger</field>
         <field name="chart_template_id" ref="l10n_dz_base_pcg_chart_template"/>
 

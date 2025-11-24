@@ -10,6 +10,9 @@
         <field name="applicability">accounts</field>
     </record>
 
+    <!-- Odoo 19 Note: account.chart.template no longer exists.
+    Default accounts configuration should now be done through company settings or res.config.settings. -->
+    <!--
      <record id="l10n_dz_base_pcg_chart_template" model="account.chart.template">
         <field name="property_account_receivable_id" ref="pcg_411000"/>
         <field name="default_pos_receivable_account_id" ref="pcg_411100" />
@@ -20,13 +23,9 @@
 
         <field name="income_currency_exchange_account_id" ref="pcg_766000"/>
         <field name="expense_currency_exchange_account_id" ref="pcg_666000"/>
-        
+
         <field name="currency_id" ref="base.DZD"/>
         <field name="country_id" ref="base.dz"/>
-
-
-
-
-       
     </record>
+    -->
 </odoo>
