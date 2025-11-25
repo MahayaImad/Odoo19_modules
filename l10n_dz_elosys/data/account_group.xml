@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <odoo>
-    <data noupdate="1">
+    <data noupdate="0">
         <record id="pcg_0" model="account.group">
             <field name="name">Système Comptable et Financier Algérien</field>
             <field name="code_prefix_start">0</field>
