@@ -1,1069 +1,1069 @@
 id,name,code_prefix_start,code_prefix_end,parent_id/id
-pcg_0,Système Comptable et Financier Algérien,0,9,
-pcg_1,CLASSE 1 : COMPTES DE CAPITAUX,1,9,
-pcg_10,"Capital, réserves et assimilés",10,19,pcg_1
-pcg_101,"Capital émis ou capital social ou fonds de dotation, ou fonds d’exploitation",101,109,pcg_10
-pcg_1011,Capital social,1011,1019,pcg_101
-pcg_1012,Fonds de dotation,1012,1019,pcg_101
-pcg_1013,Fonds d'exploitation,1013,1019,pcg_101
-pcg_1018,Autres fonds propres,1018,1019,pcg_101
-pcg_103,Primes liées au capital social,103,109,pcg_10
-pcg_1031,Prime d’émission,1031,1039,pcg_103
-pcg_1032,Prime de fusion,1032,1039,pcg_103
-pcg_1033,Prime d’apports,1033,1039,pcg_103
-pcg_1034,Prime de conversion d’obligations en actions,1034,1039,pcg_103
-pcg_1035,Bons de souscription d’actions (BSA),1035,1039,pcg_103
-pcg_104,Ecart d’évaluation,104,109,pcg_10
-pcg_105,Ecart de réévaluation,105,109,pcg_10
-pcg_1051,Ecart de réévaluation sur immobilisations corporelles,1051,1059,pcg_105
-pcg_1059,Ecart de réévaluation rapporté au résultat de l’exercice,1059,1059,pcg_105
-pcg_106,"Réserves (légale, statutaire, ordinaire, réglementée)",106,109,pcg_10
-pcg_1061,Réserve légale,1061,1069,pcg_106
-pcg_1062,Réserves réglementées,1062,1069,pcg_106
-pcg_1063,Réserves statutaires ou contractuelles,1063,1069,pcg_106
-pcg_1064,Réserves ordinaires,1064,1069,pcg_106
-pcg_1065,Réserves Spéciales consécutive à l’octroi d’avantages,1065,1069,pcg_106
-pcg_1066,Réserves facultatives,1066,1069,pcg_106
-pcg_1068,Autres réserves,1068,1069,pcg_106
-pcg_107,Ecart d'équivalence,107,109,pcg_10
-pcg_108,Compte de l'exploitant,108,109,pcg_10
-pcg_109,Actionnaires : Capital souscrit non appelé,109,109,pcg_10
-pcg_11,Report à nouveau,11,19,pcg_1
-pcg_110,Report à nouveau (bénéfice),110,119,pcg_11
-pcg_115,Impact résultant du changement de la réglementation et des méthodes,115,119,pcg_11
-pcg_1151,Impact d'ajustement positif (plus value),1151,1159,pcg_115
-pcg_1159,Impact d'ajustement négatif (moins value),1159,1159,pcg_115
-pcg_117,Impact résultant des corrections d’estimation et d’erreurs comptables,117,119,pcg_11
-pcg_1171,Impact d'assainissement comptable et financier : positif,1171,1179,pcg_117
-pcg_1175,Ajustement résultant de correction d'estimation,1175,1179,pcg_117
-pcg_1176,Ajustement résultant de correction d'erreurs comptables,1176,1179,pcg_117
-pcg_1179,Impact d'assainissement comptable et financier : négatif,1179,1179,pcg_117
-pcg_118,Acompte sur dividendes,118,119,pcg_11
-pcg_119,Report à nouveau (Déficit),119,119,pcg_11
-pcg_12,Résultat de l'exercice,12,19,pcg_1
-pcg_120,Résultat net de l’exercice – (BENEFICE),120,129,pcg_12
-pcg_121,Marge commerciale,121,129,pcg_12
-pcg_122,Production de l’exercice,122,129,pcg_12
-pcg_123,Valeur Ajoutée d’exploitation,123,129,pcg_12
-pcg_124,Excédent (ou insuffisance) brut d’exploitation (EBE) – EBITDA,124,129,pcg_12
-pcg_125,Résultat opérationnel,125,129,pcg_12
-pcg_126,Résultat ordinaire avant impôts,126,129,pcg_12
-pcg_127,Résultat extraordinaire,127,129,pcg_12
-pcg_128,Résultat brut de l’exercice,128,129,pcg_12
-pcg_129,Résultat net de l’exercice – (DEFICIT),129,129,pcg_12
-pcg_13,Produits et charges différés – hors cycle d’exploitation,13,19,pcg_1
-pcg_131,Subventions d’équipement,131,139,pcg_13
-pcg_1311,Subventions d’équipements : Financement de l'Etat,1311,1319,pcg_131
-pcg_1312,Subventions d’équipements : Financement d'autres organismes,1312,1319,pcg_131
-pcg_1313,Transfert gratuit d’immobilisations,1313,1319,pcg_131
-pcg_1319,Subventions inscrites au compte de résultat,1319,1319,pcg_131
-pcg_132,Autres subventions d’investissement,132,139,pcg_13
-pcg_1321,Subventions d’investissement,1321,1329,pcg_132
-pcg_1322,Subventions pour financement d'activités à long terme,1322,1329,pcg_132
-pcg_1329,Autres subventions inscrites au compte de résultat,1329,1329,pcg_132
-pcg_133,Impôts différés actif,133,139,pcg_13
-pcg_134,Impôts différés passif,134,139,pcg_13
-pcg_138,Autres produits et charges différés,138,139,pcg_13
-pcg_1386,Charges différées – Passif non courant,1386,1389,pcg_138
-pcg_1387,Produits différés – Passif non courant,1387,1389,pcg_138
-pcg_15,Provisions pour charges - passifs non courants,15,19,pcg_1
-pcg_153,Provisions pour pensions et obligations similaires,153,159,pcg_15
-pcg_1531,Provisions pour avantages au personnel (IDR – IFC),1531,1539,pcg_153
-pcg_155,Provisions pour impôts,155,159,pcg_15
-pcg_1551,Provision pour rappel d'impôts et amendes fiscales,1551,1559,pcg_155
-pcg_156,Provisions pour renouvellement des immobilisations (concession),156,159,pcg_15
-pcg_158,Autres provisions pour charges - passifs non courants,158,159,pcg_15
-pcg_1581,Provisions pour remise en l’état ou de démantèlement,1581,1589,pcg_158
-pcg_1582,Provision pour perte à terminaison (contrats déficitaires),1582,1589,pcg_158
-pcg_1583,Provision pour procès et litiges (au-delà de 12 mois),1583,1589,pcg_158
-pcg_1584,Provision pour garantie données aux clients (au-delà de 12 mois),1584,1589,pcg_158
-pcg_1588,Autres provisions résultant d’obligation légale ou implicite,1588,1589,pcg_158
-pcg_16,Emprunts et dettes assimilés,16,19,pcg_1
-pcg_161,Titres participatifs,161,169,pcg_16
-pcg_1611,Emprunt Principal,1611,1619,pcg_161
-pcg_1618,Intérêts courus et non échus,1618,1619,pcg_161
-pcg_162,Emprunts obligataires convertibles,162,169,pcg_16
-pcg_1621,Emprunt Principal,1621,1629,pcg_162
-pcg_1628,Intérêts courus et non échus,1628,1629,pcg_162
-pcg_163,Autres emprunts obligataires,163,169,pcg_16
-pcg_1631,Emprunt Principal,1631,1639,pcg_163
-pcg_1638,Intérêts courus et non échus,1638,1639,pcg_163
-pcg_164,Emprunts auprès des établissements de crédit,164,169,pcg_16
-pcg_1641,Emprunts à Court Terme,1641,1649,pcg_164
-pcg_1642,Emprunts à Moyen  Terme,1642,1649,pcg_164
-pcg_1643,Emprunts à Long Terme,1643,1649,pcg_164
-pcg_1646,Intérêts intercalaires,1646,1649,pcg_164
-pcg_1648,Intérêts courus et non échus,1648,1649,pcg_164
-pcg_165,Dépôts et cautionnements reçus,165,169,pcg_16
-pcg_1651,Dépôts reçus,1651,1659,pcg_165
-pcg_1655,Cautionnements reçus,1655,1659,pcg_165
-pcg_1658,Intérêts courus et non échus,1658,1659,pcg_165
-pcg_167,Dettes sur contrat de location-financement,167,169,pcg_16
-pcg_1671,Financement Principal,1671,1679,pcg_167
-pcg_1678,Intérêts courus et non échus,1678,1679,pcg_167
-pcg_168,Autres emprunts et dettes assimilés,168,169,pcg_16
-pcg_1681,Emprunt Principal,1681,1689,pcg_168
-pcg_1688,Intérêts courus et non échus,1688,1689,pcg_168
-pcg_169,Primes de remboursement des obligations,169,169,pcg_16
-pcg_17,Dettes rattachées à des participations,17,19,pcg_1
-pcg_171,Dettes rattachées à des participations groupe,171,179,pcg_17
-pcg_172,Dettes rattachés à des participations hors groupe,172,179,pcg_17
-pcg_173,Dettes rattachés à des sociétés en participation,173,179,pcg_17
-pcg_178,Autres dettes rattachés à des participations,178,179,pcg_17
-pcg_18,Comptes de liaison des établissements et sociétés en participation,18,19,pcg_1
-pcg_181,Comptes de liaison entre établissements,181,189,pcg_18
-pcg_1814,Créances sur la participation ou GIE,1814,1819,pcg_181
-pcg_1815,Dettes envers la participation ou GIE,1815,1819,pcg_181
-pcg_1816,Charges inter-Unités (ou établissement),1816,1819,pcg_181
-pcg_1817,Produis inter-Unités (ou établissement),1817,1819,pcg_181
-pcg_188,Comptes de liaison entre sociétés en participation,188,189,pcg_18
-pcg_2,CLASSE 2 : COMPTES D’IMMOBILISATIONS,2,9,
-pcg_20,Immobilisations incorporelles,20,29,pcg_2
-pcg_203,Frais de développement immobilisables,203,209,pcg_20
-pcg_204,Logiciels informatiques et assimilés,204,209,pcg_20
-pcg_2041,Logiciels de traitements informatiques,2041,2049,pcg_204
-pcg_2042,Hébergement site Web,2042,2049,pcg_204
-pcg_205,"Concessions et droits similaires, brevets, licences, marques",205,209,pcg_20
-pcg_2051,Droit à la propriété industrielle et commerciale,2051,2059,pcg_205
-pcg_2058,Autres droits similaires (concession et franchise),2058,2059,pcg_205
-pcg_207,Ecart d’acquisition – « goodwill »,207,209,pcg_20
-pcg_2071,Ecart d'acquisition positif (goodwill),2071,2079,pcg_207
-pcg_2072,Autres écarts d’acquisitions ou de fusions,2072,2079,pcg_207
-pcg_2079,Ecart d'acquisition négatif (badwill),2079,2079,pcg_207
-pcg_208,Autres immobilisations incorporelles,208,209,pcg_20
-pcg_2081,Fonds de commerce,2081,2089,pcg_208
-pcg_2082,Droit au bail,2082,2089,pcg_208
-pcg_2087,Actif environnemental,2087,2089,pcg_208
-pcg_21,Immobilisations corporelles,21,29,pcg_2
-pcg_211,Terrains,211,219,pcg_21
-pcg_2111,Terrains nus,2111,2119,pcg_211
-pcg_2112,Terrains bâtis,2112,2119,pcg_211
-pcg_2113,Terrains aménagés,2113,2119,pcg_211
-pcg_2114,Terrains de gisement (carrières),2114,2119,pcg_211
-pcg_212,Agencements et aménagements des terrains,212,219,pcg_21
-pcg_2121,Aménagement d’espaces verts,2121,2129,pcg_212
-pcg_2122,Autres agencements et aménagements de terrains,2122,2129,pcg_212
-pcg_213,Constructions,213,219,pcg_21
-pcg_2131,Bâtiments administratifs & commerciaux,2131,2139,pcg_213
-pcg_2132,Bâtiments industriels (à décomposer en cas de besoin),2132,2139,pcg_213
-pcg_2133,Bâtiments sociaux (CMS – CANTINE – REFECTOIRE),2133,2139,pcg_213
-pcg_2134,Immeubles de placement,2134,2139,pcg_213
-pcg_2135,Autres constructions,2135,2139,pcg_213
-pcg_2136,"Agencements, aménagements et installations des bâtiments",2136,2139,pcg_213
-pcg_2137,Ouvrages d’infrastructures : Voies de transport ou d'accès,2137,2139,pcg_213
-pcg_2138,Autres travaux d'aménagement sur ouvrages d’infrastructures,2138,2139,pcg_213
-pcg_215,"Installations techniques, matériel et outillage industriels",215,219,pcg_21
-pcg_2151,Installations complexes spécialisées,2151,2159,pcg_215
-pcg_2153,Installations à caractère spécifique,2153,2159,pcg_215
-pcg_2154,Matériel industriel,2154,2159,pcg_215
-pcg_2155,Outillage industriel,2155,2159,pcg_215
-pcg_2157,Agencements et aménagements du matériel et outillage industriel,2157,2159,pcg_215
-pcg_2158,Autres matériels et outillage industriel,2158,2159,pcg_215
-pcg_218,Autres immobilisations corporelles,218,219,pcg_21
-pcg_2181,"Installations générales, agencements et aménagements divers",2181,2189,pcg_218
-pcg_2182,Matériel de transport,2182,2189,pcg_218
-pcg_2183,Matériel de bureautique et d'informatique,2183,2189,pcg_218
-pcg_2184,Mobilier,2184,2189,pcg_218
-pcg_2185,Autres mobiliers et matériels divers,2185,2189,pcg_218
-pcg_2186,Actifs biologiques,2186,2189,pcg_218
-pcg_2187,Emballages récupérables,2187,2189,pcg_218
-pcg_22,Immobilisations en concession,22,29,pcg_2
-pcg_221,Terrains en concession,221,229,pcg_22
-pcg_222,Agencements et aménagements de terrain en concession,222,229,pcg_22
-pcg_223,Constructions en concession,223,229,pcg_22
-pcg_225,Installations techniques en concession,225,229,pcg_22
-pcg_228,Autres immobilisations corporelles en concession,228,229,pcg_22
-pcg_229,Droits du concédant,229,229,pcg_22
-pcg_23,Immobilisations en cours,23,29,pcg_2
-pcg_232,Immobilisations corporelles en cours,232,239,pcg_23
-pcg_2322,Terrains en cours,2322,2329,pcg_232
-pcg_2323,Constructions en cours,2323,2329,pcg_232
-pcg_2325,"Installations techniques, matériels et outillage industriels en cours",2325,2329,pcg_232
-pcg_2328,Autres immobilisations corporelles en cours,2328,2329,pcg_232
-pcg_237,Immobilisations incorporelles en cours,237,239,pcg_23
-pcg_238,Avances et acomptes versés sur commandes d'immobilisations,238,239,pcg_23
-pcg_2382,Avances sur commandes d’immobilisations incorporelles,2382,2389,pcg_238
-pcg_2384,Avances sur commandes d’immobilisations corporelles,2384,2389,pcg_238
-pcg_26,Participations et créances rattachées à des participations,26,29,pcg_2
-pcg_261,Titres de filiales,261,269,pcg_26
-pcg_262,Autres titres de participation,262,269,pcg_26
-pcg_265,Titres de participation évalués par équivalence (entreprises associés),265,269,pcg_26
-pcg_266,Créances rattachées à des participations groupe,266,269,pcg_26
-pcg_267,Créances rattachés à des participations hors groupe,267,269,pcg_26
-pcg_268,Créances rattachés à des sociétés en participation,268,269,pcg_26
-pcg_269,Versements restant à effectuer sur titres de participation non libérés,269,269,pcg_26
-pcg_27,Autres immobilisations financières,27,29,pcg_2
-pcg_271,Titres immobilisés autres que les titres immobilisés de l'activité de portefeuille,271,279,pcg_27
-pcg_272,"Titres représentatifs de droit de créance (obligations, bons)",272,279,pcg_27
-pcg_2721,Obligations à terme,2721,2729,pcg_272
-pcg_2722,Bons du Trésor,2722,2729,pcg_272
-pcg_2723,Dépôts à terme (DAT > 12 mois),2723,2729,pcg_272
-pcg_273,Titres immobilisés de l'activité de portefeuille – (T.I.A.P),273,279,pcg_27
-pcg_274,Prêts et créances sur contrat de location-financement,274,279,pcg_27
-pcg_2741,Prêts participatifs,2741,2749,pcg_274
-pcg_2742,Prêts au personnel,2742,2749,pcg_274
-pcg_2743,Autres prêts accordés,2743,2749,pcg_274
-pcg_2744,Créances sur contrat de location-financement,2744,2749,pcg_274
-pcg_2748,Intérêts courus sur prêts et créances de crédit bail,2748,2749,pcg_274
-pcg_275,Dépôts et cautionnements versés,275,279,pcg_27
-pcg_2751,Dépôts versés,2751,2759,pcg_275
-pcg_2752,Cautionnements versés aux fonds de garantie,2752,2759,pcg_275
-pcg_2753,Cautions de soumissions,2753,2759,pcg_275
-pcg_2754,Cautions de bonne exécution ou de bonne fin,2754,2759,pcg_275
-pcg_2755,Cautionnements versés sur loyers (Loyers d'avance),2755,2759,pcg_275
-pcg_2756,"Cautionnements versés sur Téléphone, Eau, Gaz et électricité",2756,2759,pcg_275
-pcg_2757,Cautionnements versés à la SONELGAZ,2757,2759,pcg_275
-pcg_2758,Autres cautionnements versés,2758,2759,pcg_275
-pcg_276,Autres créances immobilisées,276,279,pcg_27
-pcg_2761,Créances diverses – Actifs non courants,2761,2769,pcg_276
-pcg_2768,Intérêts courus et non échus sur actifs non courants,2768,2769,pcg_276
-pcg_279,Versements restant à effectuer sur titres immobilisés non libérés,279,279,pcg_27
-pcg_28,Amortissements des immobilisations,28,29,pcg_2
-pcg_280,Amortissements des immobilisations incorporelles,280,289,pcg_28
-pcg_2803,Amortissements des frais de développement immobilisables,2803,2809,pcg_280
-pcg_2804,Amortissements des logiciels informatiques et assimilés,2804,2809,pcg_280
-pcg_2805,"Amortissements concessions & droits similaires, brevets, licences, marques",2805,2809,pcg_280
-pcg_2808,Amortissements des autres immobilisations incorporelles,2808,2809,pcg_280
-pcg_281,Amortissements des immobilisations corporelles,281,289,pcg_28
-pcg_2811,Amortissements des terrains de gisement (carrières …),2811,2819,pcg_281
-pcg_2812,Amortissements des agencements et aménagements de terrains,2812,2819,pcg_281
-pcg_2813,Amortissements des constructions,2813,2819,pcg_281
-pcg_2815,"Amortissements des Installations techniques, matériels outillage industriels",2815,2819,pcg_281
-pcg_2818,Amortissements des autres immobilisations corporelles,2818,2819,pcg_281
-pcg_282,Amortissements des immobilisations mises en concession,282,289,pcg_28
-pcg_2821,Amortissement : Terrains en concession,2821,2829,pcg_282
-pcg_2822,Amortissement : Agencements et aménagements de terrains,2822,2829,pcg_282
-pcg_2823,Amortissement : Constructions en concession,2823,2829,pcg_282
-pcg_2825,Amortissement : Installations techniques en concession,2825,2829,pcg_282
-pcg_2828,Amortissement : Autres immobilisations corporelles en concession,2828,2829,pcg_282
-pcg_29,Pertes de valeur sur immobilisations,29,29,pcg_2
-pcg_290,Pertes de valeur sur immobilisations incorporelles,290,299,pcg_29
-pcg_2903,Pertes de valeur sur frais de développement immobilisables,2903,2909,pcg_290
-pcg_2904,Pertes de valeur sur logiciels informatiques et assimilés,2904,2909,pcg_290
-pcg_2905,"Pertes de valeur sur concessions & droits similaires, brevets, licences, marques",2905,2909,pcg_290
-pcg_2907,Pertes de valeur sur écart d’acquisition (Goodwill),2907,2909,pcg_290
-pcg_2908,Pertes de valeur sur autres immobilisations incorporelles,2908,2909,pcg_290
-pcg_291,Pertes de valeur sur immobilisations corporelles,291,299,pcg_29
-pcg_2911,Perte de valeur des terrains (autres que les terrains de gisement),2911,2919,pcg_291
-pcg_2912,Pertes de valeur sur agencements et aménagements de terrain,2912,2919,pcg_291
-pcg_2913,Pertes de valeur sur constructions,2913,2919,pcg_291
-pcg_2914,Pertes de valeur sur immeubles de placement (Juste valeur),2914,2919,pcg_291
-pcg_2915,"Pertes de valeur sur Installations techniques, matériel et outillage industriel",2915,2919,pcg_291
-pcg_2916,Pertes de valeur sur actifs biologiques (Juste valeur),2916,2919,pcg_291
-pcg_2918,Pertes de valeur sur autres immobilisations corporelles,2918,2919,pcg_291
-pcg_292,Pertes de valeur sur immobilisations mises en concession,292,299,pcg_29
-pcg_293,Pertes de valeur sur immobilisations en cours,293,299,pcg_29
-pcg_2931,Pertes de valeurs sur immobilisations incorporelles en cours,2931,2939,pcg_293
-pcg_2932,Pertes de valeurs sur immobilisations corporelles en cours,2932,2939,pcg_293
-pcg_294,Pertes de valeurs sur les Unités Génératrices de Trésorerie,294,299,pcg_29
-pcg_2941,Pertes de valeur sur U.G.T  (1),2941,2949,pcg_294
-pcg_2942,Pertes de valeur sur U.G.T  (2),2942,2949,pcg_294
-pcg_296,Pertes de valeur sur participations et créances rattachées à participations,296,299,pcg_29
-pcg_2961,Pertes de valeur sur titres de filiales,2961,2969,pcg_296
-pcg_2962,Pertes de valeur sur autres titres de participation,2962,2969,pcg_296
-pcg_2966,Pertes de valeur sur créances rattachées à des participations – groupe,2966,2969,pcg_296
-pcg_2967,Pertes de valeur sur créances rattachées à des participations – HG,2967,2969,pcg_296
-pcg_2968,Pertes de valeur sur créances rattachées à des SEP,2968,2969,pcg_296
-pcg_297,Pertes de valeur sur autres titres immobilisés,297,299,pcg_29
-pcg_2971,Pertes de valeur sur titres de placement,2971,2979,pcg_297
-pcg_2972,Pertes de valeurs sur les TIAP,2972,2979,pcg_297
-pcg_298,Pertes de valeur sur autres actifs financiers immobilisés,298,299,pcg_29
-pcg_2981,Pertes de valeur sur les titres participatifs,2981,2989,pcg_298
-pcg_2982,Pertes de valeur sur les prêts ordinaires,2982,2989,pcg_298
-pcg_2983,Pertes de valeur sur les dépôts et cautionnements versés,2983,2989,pcg_298
-pcg_2988,Pertes de valeur sur autres actifs financiers immobilisés,2988,2989,pcg_298
-pcg_3,CLASSE 3 : COMPTES DE STOCKS ET EN COURS,3,9,
-pcg_30,Stocks de marchandises,30,39,pcg_3
-pcg_301,Marchandises (ou groupe) A,301,309,pcg_30
-pcg_302,Marchandises (ou groupe) B,302,309,pcg_30
-pcg_31,Matières premières et fournitures,31,39,pcg_3
-pcg_311,Matières premières,311,319,pcg_31
-pcg_3111,Matières (ou groupe) A,3111,3119,pcg_311
-pcg_3112,Matières (ou groupe) B,3112,3119,pcg_311
-pcg_3118,Autres matières premières,3118,3119,pcg_311
-pcg_317,Fournitures Accessoires,317,319,pcg_31
-pcg_3171,Fournitures A,3171,3179,pcg_317
-pcg_3172,Fournitures B,3172,3179,pcg_317
-pcg_3178,Autres fournitures accessoires,3178,3179,pcg_317
-pcg_32,Autres approvisionnements,32,39,pcg_3
-pcg_321,Matières consommables,321,329,pcg_32
-pcg_3211,Matières (ou groupe) C,3211,3219,pcg_321
-pcg_3212,Matières (ou groupe) D,3212,3219,pcg_321
-pcg_3218,Autres matières consommables,3218,3219,pcg_321
-pcg_322,Fournitures consommables,322,329,pcg_32
-pcg_3221,Carburant et lubrifiant – Véhicules,3221,3229,pcg_322
-pcg_3222,Petit outillage et fournitures d'ateliers,3222,3229,pcg_322
-pcg_3223,Droguerie et Produits d'entretien,3223,3229,pcg_322
-pcg_3224,Pièces de rechange pour équipements & matériels techniques,3224,3229,pcg_322
-pcg_3225,Pièces de rechange et pneumatique pour matériel de transport,3225,3229,pcg_322
-pcg_3226,Quincaillerie générale et fournitures de magasin,3226,3229,pcg_322
-pcg_3227,Fournitures de bureau et imprimés,3227,3229,pcg_322
-pcg_3228,Autres fournitures consommables,3228,3229,pcg_322
-pcg_326,Emballages (non récupérables),326,329,pcg_32
-pcg_3261,Emballages perdus,3261,3269,pcg_326
-pcg_3262,Emballages récupérables non identifiables,3262,3269,pcg_326
-pcg_3263,Emballages à usage mixte,3263,3269,pcg_326
-pcg_33,En cours de production de biens,33,39,pcg_3
-pcg_331,Produits en cours,331,339,pcg_33
-pcg_3311,Produits en cours – P1,3311,3319,pcg_331
-pcg_3312,Produits en cours – P2,3312,3319,pcg_331
-pcg_3313,Produits en cours – P3,3313,3319,pcg_331
-pcg_335,Travaux en cours,335,339,pcg_33
-pcg_3351,Travaux en cours – T1,3351,3359,pcg_335
-pcg_3352,Travaux en cours – T2,3352,3359,pcg_335
-pcg_3353,Travaux en cours – T3,3353,3359,pcg_335
-pcg_34,En cours de production de services,34,39,pcg_3
-pcg_341,Etudes en cours,341,349,pcg_34
-pcg_3411,Etudes en cours – E1,3411,3419,pcg_341
-pcg_3412,Etudes en cours – E2,3412,3419,pcg_341
-pcg_3413,Etudes en cours – E3,3413,3419,pcg_341
-pcg_345,Prestations de services en cours,345,349,pcg_34
-pcg_3451,Prestations de services en cours – S1,3451,3459,pcg_345
-pcg_3452,Prestations de services en cours – S2,3452,3459,pcg_345
-pcg_3453,Prestations de services en cours – S3,3453,3459,pcg_345
-pcg_35,Stocks de produits,35,39,pcg_3
-pcg_351,Produits intermédiaires,351,359,pcg_35
-pcg_3511,Produits intermédiaires (ou groupe) – PI 1,3511,3519,pcg_351
-pcg_3512,Produits intermédiaires (ou groupe) – PI 2,3512,3519,pcg_351
-pcg_355,Produits finis,355,359,pcg_35
-pcg_3551,Produits finis (ou groupe) – PF 1,3551,3559,pcg_355
-pcg_3552,Produits finis (ou groupe) – PF 2,3552,3559,pcg_355
-pcg_3553,Produits finis (ou groupe) – PF 3,3553,3559,pcg_355
-pcg_358,"Produits résiduels ou matières de récupération (déchets, rebuts)",358,359,pcg_35
-pcg_3581,Produits résiduels,3581,3589,pcg_358
-pcg_3582,Matières de récupération (à recycler),3582,3589,pcg_358
-pcg_3583,Déchets et rebuts divers destinés à être cédés ou détruits,3583,3589,pcg_358
-pcg_36,Stocks provenant d’immobilisations,36,39,pcg_3
-pcg_361,Lot de bord et pièces d’accompagnement,361,369,pcg_36
-pcg_362,Organes et accessoires démantelés,362,369,pcg_36
-pcg_365,Pièces de rechanges récupérées sur matériels,365,369,pcg_36
-pcg_368,Actifs non courants destinés à être cédés (réformes),368,369,pcg_36
-pcg_37,"Stocks à l'extérieur (en cours de route, en dépôt ou en consignation)",37,39,pcg_3
-pcg_371,Matières premières en cours de réception,371,379,pcg_37
-pcg_372,Autres approvisionnements à réceptionner,372,379,pcg_37
-pcg_373,Stocks en dépôt ou en consignation,373,379,pcg_37
-pcg_374,Stocks sous douanes,374,379,pcg_37
-pcg_38,Achats stockés,38,39,pcg_3
-pcg_380,Achats de Marchandises stockées,380,389,pcg_38
-pcg_3801,Achats de Marchandises (ou groupe) A,3801,3809,pcg_380
-pcg_3802,Achats de Marchandises (ou groupe) B,3802,3809,pcg_380
-pcg_381,Achats de Matières premières et fournitures stockées,381,389,pcg_38
-pcg_3811,Achats de Matières premières,3811,3819,pcg_381
-pcg_3817,Achats de Fournitures Accessoires,3817,3819,pcg_381
-pcg_382,Autres approvisionnements stockés,382,389,pcg_38
-pcg_3821,Achat de Matières consommables stockées,3821,3829,pcg_382
-pcg_3822,Achat de Fournitures consommables stockées,3822,3829,pcg_382
-pcg_3826,Achat d'Emballages non récupérables,3826,3829,pcg_382
-pcg_3827,Achat de Fournitures consommables non stockées,3827,3829,pcg_382
-pcg_383,Frais Accessoires sur Achats (indirects) – incorporables,383,389,pcg_38
-pcg_3830,Frais Accessoires sur Achats de marchandises,3830,3839,pcg_383
-pcg_3831,Frais Accessoires sur Achats de matières premières et fournitures,3831,3839,pcg_383
-pcg_3832,Frais Accessoires sur Achats d'autres approvisionnements,3832,3839,pcg_383
-pcg_384,Achats sans paiements,384,389,pcg_38
-pcg_3841,Achats locaux,3841,3849,pcg_384
-pcg_3842,Achats à l'importation,3842,3849,pcg_384
-pcg_39,Pertes de valeur sur stocks et en cours,39,39,pcg_3
-pcg_390,Pertes de valeur sur Stocks de marchandises,390,399,pcg_39
-pcg_391,Pertes de valeur sur Matières premières et fournitures,391,399,pcg_39
-pcg_392,Pertes de valeur sur Autres approvisionnements,392,399,pcg_39
-pcg_393,Pertes de valeur sur En cours de production de biens,393,399,pcg_39
-pcg_394,Pertes de valeur sur En cours de production de services,394,399,pcg_39
-pcg_395,Pertes de valeur sur stocks de produits,395,399,pcg_39
-pcg_397,Pertes de valeur sur Stocks à l'extérieur,397,399,pcg_39
-pcg_4,CLASSE 4 : COMPTES DE TIERS,4,9,
-pcg_40,Fournisseurs et comptes rattachés,40,49,pcg_4
-pcg_401,Fournisseurs de biens et services,401,409,pcg_40
-pcg_4013,Fournisseurs de stocks,4013,4019,pcg_401
-pcg_4016,Fournisseurs de services,4016,4019,pcg_401
-pcg_4017,Fournisseurs : Retenue de garantie sur stocks & services,4017,4019,pcg_401
-pcg_403,Fournisseurs : Effets à payer,403,409,pcg_40
-pcg_4031,Effets à payer aux fournisseurs de stocks,4031,4039,pcg_403
-pcg_4032,Effets à payer aux fournisseurs de services,4032,4039,pcg_403
-pcg_404,Fournisseurs d'immobilisations,404,409,pcg_40
-pcg_4041,Fournisseurs d'immobilisations : Nationaux – Publics,4041,4049,pcg_404
-pcg_4042,Fournisseurs d'immobilisations : Nationaux – Privés,4042,4049,pcg_404
-pcg_4043,Fournisseurs d'immobilisations : Etrangers,4043,4049,pcg_404
-pcg_4047,Fournisseurs d'immobilisations : Retenues de garantie,4047,4049,pcg_404
-pcg_405,Fournisseurs d'immobilisations : Effets à payer,405,409,pcg_40
-pcg_408,Fournisseurs factures non parvenues,408,409,pcg_40
-pcg_4081,Fournisseurs de stocks nationaux : Factures non parvenues,4081,4089,pcg_408
-pcg_4082,Fournisseurs de services – factures non parvenues,4082,4089,pcg_408
-pcg_4083,Factures à recevoir des Fournisseurs d’immobilisations,4083,4089,pcg_408
-pcg_4086,"Factures à recevoir des Consultants, CAC et Experts",4086,4089,pcg_408
-pcg_4088,Fournisseurs : Intérêts courus à payer,4088,4089,pcg_408
-pcg_4091,Fournisseurs : Avances et acomptes sur commandes,4091,4099,pcg_40
-pcg_4094,"Autres avances et acomptes (Consultants, CAC et Experts)",4094,4099,pcg_40
-pcg_4096,Fournisseurs : Créances pour emballages et matériels à rendre,4096,4099,pcg_40
-pcg_4097,Fournisseurs à soldes débiteurs (à détailler par code Tiers),4097,4099,pcg_40
-pcg_4098,R.R.R à obtenir,4098,4099,pcg_40
-pcg_41,Clients et comptes rattachés,41,49,pcg_4
-pcg_411,Clients,411,419,pcg_41
-pcg_4111,Clients : Ventes de biens et services,4111,4119,pcg_411
-pcg_4114,Clients : Autres créances diverses,4114,4119,pcg_411
-pcg_4117,Clients : Retenues de garantie,4117,4119,pcg_411
-pcg_413,Clients : effets à recevoir,413,419,pcg_41
-pcg_416,Clients douteux (ou litigieux),416,419,pcg_41
-pcg_4161,Clients douteux : secteur public,4161,4169,pcg_416
-pcg_4162,Clients douteux : secteur privé,4162,4169,pcg_416
-pcg_417,Créances sur travaux ou prestations en cours,417,419,pcg_41
-pcg_4171,Créances sur travaux en cours (à l'avancement),4171,4179,pcg_417
-pcg_4172,Créances sur prestations en cours (à l'avancement),4172,4179,pcg_417
-pcg_418,Clients - produits (finis) non encore facturés,418,419,pcg_41
-pcg_4181,Clients : Factures à établir – Secteur Public,4181,4189,pcg_418
-pcg_4182,Clients : Factures à établir – Secteur Privé,4182,4189,pcg_418
-pcg_4188,Clients : intérêts moratoires à facturer,4188,4189,pcg_418
-pcg_419,Clients créditeurs – RRR à accorder et autres avoirs à établir,419,419,pcg_41
-pcg_4191,Avances et acomptes perçus sur commandes,4191,4199,pcg_419
-pcg_4196,Clients : dettes pour emballages et matériels consignés,4196,4199,pcg_419
-pcg_4197,Clients à solde créditeur (à détailler par code Tiers),4197,4199,pcg_419
-pcg_4198,R.R.R. à accorder,4198,4199,pcg_419
-pcg_42,Personnel et comptes rattachés,42,49,pcg_4
-pcg_421,Personnel : Rémunérations dues,421,429,pcg_42
-pcg_4211,Salaires et appointements à payer,4211,4219,pcg_421
-pcg_4212,Présalaires à payer,4212,4219,pcg_421
-pcg_4213,Soldes de tout compte restant dus,4213,4219,pcg_421
-pcg_422,Fonds des œuvres sociales,422,429,pcg_42
-pcg_4221,Contributions annuelles à payer (3%),4221,4229,pcg_422
-pcg_4229,Autres avances pour le compte des œuvres sociales,4229,4229,pcg_422
-pcg_423,Participation des salariés au résultat,423,429,pcg_42
-pcg_4231,Quote-part de bénéfice attribuée au personnel,4231,4239,pcg_423
-pcg_425,Personnel : Avances et acomptes accordés,425,429,pcg_42
-pcg_4251,Avances sur salaires,4251,4259,pcg_425
-pcg_4256,Avances sur frais de mission,4256,4259,pcg_425
-pcg_4258,Autres avances exceptionnelles,4258,4259,pcg_425
-pcg_426,Personnel : Dépôts reçus,426,429,pcg_42
-pcg_4261,Frais médicaux à rembourser,4261,4269,pcg_426
-pcg_4268,Autres dépôts et prestations reçus au profit du personnel,4268,4269,pcg_426
-pcg_427,Personnel : Oppositions,427,429,pcg_42
-pcg_4271,Saisie-arrêt et cession de rémunération (sur décision de Justice),4271,4279,pcg_427
-pcg_4272,Retenue sur prêts sociaux,4272,4279,pcg_427
-pcg_4273,Retenue pour fonds de solidarité nationale et internationale,4273,4279,pcg_427
-pcg_4274,Retenue sur loyers logements du personnel,4274,4279,pcg_427
-pcg_4275,Salaires bloqués,4275,4279,pcg_427
-pcg_4278,Autres retenues sur salaires,4278,4279,pcg_427
-pcg_428,Personnel : Charges à payer et produits à recevoir,428,429,pcg_42
-pcg_4281,Dettes provisionnées pour congés à payer,4281,4289,pcg_428
-pcg_4286,Frais de mission à payer,4286,4289,pcg_428
-pcg_4288,Personnel : Autres charges à payer,4288,4289,pcg_428
-pcg_4289,Personnel : Produits à recevoir,4289,4289,pcg_428
-pcg_43,Organismes sociaux et comptes rattachés,43,49,pcg_4
-pcg_431,Sécurité sociale,431,439,pcg_43
-pcg_4311,Retenue sécurité sociale (part des employés),4311,4319,pcg_431
-pcg_4312,Cotisations FNPOS,4312,4319,pcg_431
-pcg_4313,CNAS à payer (part employeur),4313,4319,pcg_431
-pcg_4314,Cotisations CASNOS à payer,4314,4319,pcg_431
-pcg_432,Autres organismes sociaux,432,439,pcg_43
-pcg_4321,Cotisations Mutuelle à payer,4321,4329,pcg_432
-pcg_4322,Cotisations OPREBAT à payer,4322,4329,pcg_432
-pcg_4323,Cotisations CACOBATPH à payer,4323,4329,pcg_432
-pcg_4326,Assurance groupe (Quote-part employeur) à payer,4326,4329,pcg_432
-pcg_4327,Assurance groupe (Quote-part des travailleurs) à payer,4327,4329,pcg_432
-pcg_4328,Autres organismes sociaux,4328,4329,pcg_432
-pcg_438,"Organismes sociaux, charges à payer et produits à recevoir",438,439,pcg_43
-pcg_4386,Organismes sociaux : Charges sociales sur congés à payer,4386,4389,pcg_438
-pcg_4388,Organismes sociaux : Autres charges à payer,4388,4389,pcg_438
-pcg_4389,Organismes sociaux : Produits à recevoir,4389,4389,pcg_438
-pcg_44,"Etat, collectivités publiques, organismes internationaux et comptes rattachés",44,49,pcg_4
-pcg_441,"Etat et autres collectivités publiques, subventions à recevoir",441,449,pcg_44
-pcg_4411,Subventions d’investissements à recevoir,4411,4419,pcg_441
-pcg_4412,Subventions d’exploitation à recevoir,4412,4419,pcg_441
-pcg_4413,Subventions d’équilibre à recevoir,4413,4419,pcg_441
-pcg_4414,Subventions certification ISO à recevoir,4414,4419,pcg_441
-pcg_4418,Autres subventions et aides publiques à recevoir,4418,4419,pcg_441
-pcg_4419,Avances sur subventions,4419,4419,pcg_441
-pcg_442,"Etat, impôts et taxes recouvrables sur des tiers",442,449,pcg_44
-pcg_4421,IRG retenu sur salaires (barème),4421,4429,pcg_442
-pcg_4422,IRG – Libératoire sur rappels de salaires et participation,4422,4429,pcg_442
-pcg_4423,IRG – Libératoire sur bénéfices distribués,4423,4429,pcg_442
-pcg_4424,IRG – Libératoire sur revenus mobiliers,4424,4429,pcg_442
-pcg_4425,IRG – Libératoire sur Jetons de présence et tantièmes,4425,4429,pcg_442
-pcg_4426,IRG – Libératoire retenu à la source aux consultants,4426,4429,pcg_442
-pcg_4428,Autres impôts retenus à la source,4428,4429,pcg_442
-pcg_443,Opérations particulières avec l'Etat et les collectivités publiques,443,449,pcg_44
-pcg_4431,Créances sur l'Etat – Indemnisations,4431,4439,pcg_443
-pcg_4432,Avance pour compte ANEM – Emplois aidés (Quote part de l'Etat),4432,4439,pcg_443
-pcg_4438,Créances ou dettes résultant du changement de la réglementation fiscale,4438,4439,pcg_443
-pcg_444,"Etat, impôts sur les résultats",444,449,pcg_44
-pcg_4441,Acomptes provisionnels sur I.B.S,4441,4449,pcg_444
-pcg_4449,Impôts sur les bénéfices – I.B.S à payer,4449,4449,pcg_444
-pcg_445,"Etat, taxes sur le chiffre d'affaires",445,449,pcg_44
-pcg_4455,TVA à décaisser,4455,4459,pcg_445
-pcg_4456,TVA récupérable & précompte,4456,4459,pcg_445
-pcg_4457,TVA collectée,4457,4459,pcg_445
-pcg_4458,TVA à régulariser,4458,4459,pcg_445
-pcg_446,Organismes internationaux,446,449,pcg_44
-pcg_4461,Fonds de solidarité internationale,4461,4469,pcg_446
-pcg_4462,Subventions d’organismes étrangers,4462,4469,pcg_446
-pcg_447,"Autres impôts, taxes et versements assimilés",447,449,pcg_44
-pcg_4471,Taxe sur l’activité professionnelle – TAP  à payer (sur G.50),4471,4479,pcg_447
-pcg_4472,Taxe sur l’apprentissage et la formation professionnelle,4472,4479,pcg_447
-pcg_4473,Taxe sur l’environnement – (Écotaxe),4473,4479,pcg_447
-pcg_4474,Droits d’enregistrement à payer,4474,4479,pcg_447
-pcg_4475,Taxe foncière à payer,4475,4479,pcg_447
-pcg_4476,Taxes spéciales (ou spécifiques) à payer,4476,4479,pcg_447
-pcg_4478,"Autres droits, impôts et taxes à payer",4478,4479,pcg_447
-pcg_448,"Etat, charges à payer et produits à recevoir (hors impôts)",448,449,pcg_44
-pcg_4482,Etat – charges à payer : Charges fiscales sur congés à payer,4482,4489,pcg_448
-pcg_4486,Rappels d'impôts à payer (hors IBS),4486,4489,pcg_448
-pcg_4487,Etat – produits à recevoir : Trop versés sur impôts,4487,4489,pcg_448
-pcg_4488,Etat – produits à recevoir : Dégrèvement d’impôts,4488,4489,pcg_448
-pcg_45,Groupe et Associés,45,49,pcg_4
-pcg_451,Opérations Groupe,451,459,pcg_45
-pcg_4511,Avances de fonds,4511,4519,pcg_451
-pcg_4518,Autres opérations,4518,4519,pcg_451
-pcg_455,Associés – Comptes courants,455,459,pcg_45
-pcg_4551,Associés – Comptes courants : Principal,4551,4559,pcg_455
-pcg_4556,Associés – Comptes courants : Intérêts courus,4556,4559,pcg_455
-pcg_456,Associés – Opérations sur le capital,456,459,pcg_45
-pcg_4561,Associés : Comptes d’apport en société,4561,4569,pcg_456
-pcg_4562,"Associés : Capital souscrit, appelé et non versé (apports à libérer)",4562,4569,pcg_456
-pcg_4563,Associés : Versements reçus sur augmentation de Capital,4563,4569,pcg_456
-pcg_4564,Associés : Versements anticipés,4564,4569,pcg_456
-pcg_4566,Actionnaires défaillants,4566,4569,pcg_456
-pcg_4567,Associés : Capital à rembourser,4567,4569,pcg_456
-pcg_457,Associés – Dividendes à payer,457,459,pcg_45
-pcg_4571,Coupons d’action,4571,4579,pcg_457
-pcg_4572,Dividendes mis en paiement,4572,4579,pcg_457
-pcg_4577,Tantièmes à payer aux administrateurs et gérants,4577,4579,pcg_457
-pcg_458,Associés – Opérations faites en commun ou en groupement,458,459,pcg_45
-pcg_4586,Opérations faites en commun : Charges à payer,4586,4589,pcg_458
-pcg_4587,Opérations faites en commun : Produits à recevoir,4587,4589,pcg_458
-pcg_4588,Intérêts courus,4588,4589,pcg_458
-pcg_46,Débiteurs divers et créditeurs divers,46,49,pcg_4
-pcg_462,Créances sur cessions d'immobilisations,462,469,pcg_46
-pcg_4621,Fonds à recevoir sur cessions d’Actifs réformés,4621,4629,pcg_462
-pcg_4622,Débiteurs sur cessions d’immobilisations,4622,4629,pcg_462
-pcg_464,Dettes sur acquisitions de VMP et instruments financiers dérivés,464,469,pcg_46
-pcg_465,Créances sur cessions de VMP et instruments financiers dérivés,465,469,pcg_46
-pcg_467,Autres comptes débiteurs ou créditeurs,467,469,pcg_46
-pcg_4671,"Fonds en dépôt chez les officiers ministériels (notaire, commis. priseurs)",4671,4679,pcg_467
-pcg_4672,Avances sur frais divers,4672,4679,pcg_467
-pcg_4673,Achats pour compte de tiers,4673,4679,pcg_467
-pcg_4674,Autres avances pour compte,4674,4679,pcg_467
-pcg_4675,Jetons de présence à payer aux Administrateurs,4675,4679,pcg_467
-pcg_4676,Débiteurs divers (à détailler),4676,4679,pcg_467
-pcg_4679,Créditeurs de frais divers (à détailler),4679,4679,pcg_467
-pcg_468,Divers charges à payer et produits à recevoir,468,469,pcg_46
-pcg_4686,Charges à payer,4686,4689,pcg_468
-pcg_4687,Produits à recevoir,4687,4689,pcg_468
-pcg_47,Comptes transitoires ou d'attente,47,49,pcg_4
-pcg_476,Dépenses en attente d’imputation,476,479,pcg_47
-pcg_477,Recettes en attente d’imputation,477,479,pcg_47
-pcg_478,Autres opérations à régulariser,478,479,pcg_47
-pcg_48,Charges ou produits constatés d'avance et provisions,48,49,pcg_4
-pcg_481,Provisions - passifs courants,481,489,pcg_48
-pcg_4811,Provisions pour procès et litiges (moins de 12 mois),4811,4819,pcg_481
-pcg_4812,Provisions pour garanties données aux clients (moins de 12 mois),4812,4819,pcg_481
-pcg_4815,Provisions pour amendes et pénalités,4815,4819,pcg_481
-pcg_4816,Provisions pour pertes de change,4816,4819,pcg_481
-pcg_4818,Autres provisions : Passifs courants,4818,4819,pcg_481
-pcg_486,Charges constatées d'avance,486,489,pcg_48
-pcg_4861,Loyers payés d’avance (autre que cautionnement),4861,4869,pcg_486
-pcg_4862,Primes d’assurances payées d’avance,4862,4869,pcg_486
-pcg_4863,Abonnements payés d’avance,4863,4869,pcg_486
-pcg_4866,Charges financières différées,4866,4869,pcg_486
-pcg_4868,Autres charges constatées d’avance,4868,4869,pcg_486
-pcg_487,Produits constatés d'avance,487,489,pcg_48
-pcg_4871,Loyers perçus d’avance (immeubles de placement),4871,4879,pcg_487
-pcg_4877,Subventions à étaler,4877,4879,pcg_487
-pcg_4878,Autres produits constatés d’avance,4878,4879,pcg_487
-pcg_49,Pertes de valeur sur comptes de tiers,49,49,pcg_4
-pcg_491,Pertes de valeur sur comptes de clients,491,499,pcg_49
-pcg_4911,Pertes de valeurs sur comptes de clients,4911,4919,pcg_491
-pcg_4912,Pertes de valeurs sur retenues de garanties,4912,4919,pcg_491
-pcg_495,Pertes de valeur sur comptes du groupe et sur associés,495,499,pcg_49
-pcg_4951,Pertes de valeur sur compte du groupe,4951,4959,pcg_495
-pcg_4955,Pertes de valeur sur comptes courants des associés,4955,4959,pcg_495
-pcg_4958,Pertes de valeur sur opérations faites en commun (SEP – GIE),4958,4959,pcg_495
-pcg_496,Pertes de valeur sur comptes de débiteurs divers,496,499,pcg_49
-pcg_4962,Pertes de valeur sur créances de cessions d'immobilisations,4962,4969,pcg_496
-pcg_4965,Pertes de valeur sur créances de cessions de VMP,4965,4969,pcg_496
-pcg_4967,Pertes de valeur sur autres comptes débiteurs,4967,4969,pcg_496
-pcg_498,Pertes de valeur sur autres comptes de tiers,498,499,pcg_49
-pcg_5,CLASSE 5 : COMPTES FINANCIERS,5,9,
-pcg_50,Valeurs mobilières de placement,50,59,pcg_5
-pcg_501,Part dans des entreprises liées,501,509,pcg_50
-pcg_502,Actions propres,502,509,pcg_50
-pcg_503,Autres actions ou titres conférant un droit de propriété,503,509,pcg_50
-pcg_506,"Obligations, bons du trésor et bons de caisse à court terme",506,509,pcg_50
-pcg_508,Autres valeurs mobilières de placement et créances assimilés,508,509,pcg_50
-pcg_509,Versements restant à effectuer sur VMP non libérées,509,509,pcg_50
-pcg_51,"Banque, établissements financiers et assimilés",51,59,pcg_5
-pcg_511,Valeurs à l'encaissement,511,519,pcg_51
-pcg_5111,Chèques à encaisser,5111,5119,pcg_511
-pcg_5112,Traites remises à l’escompte,5112,5119,pcg_511
-pcg_5118,Autres valeurs à l’encaissement,5118,5119,pcg_511
-pcg_512,Banques comptes courants,512,519,pcg_51
-pcg_5121,Comptes bancaires : Dinars,5121,5129,pcg_512
-pcg_5122,Comptes bancaires : Devises,5122,5129,pcg_512
-pcg_515,Trésor Public et établissements publics,515,519,pcg_51
-pcg_5151,Caisses du Trésor Public,5151,5159,pcg_515
-pcg_5152,Caisses des établissements publics,5152,5159,pcg_515
-pcg_517,Autres organismes financiers,517,519,pcg_51
-pcg_5171,Banque postale (C.C.P),5171,5179,pcg_517
-pcg_5172,Sociétés de leasing (crédit-bail),5172,5179,pcg_517
-pcg_5173,Sociétés de factoring (affacturage),5173,5179,pcg_517
-pcg_5176,Société de bourse,5176,5179,pcg_517
-pcg_5178,Autres organismes et établissements financiers,5178,5179,pcg_517
-pcg_518,Intérêts courus,518,519,pcg_51
-pcg_5186,Intérêts courus à payer  (agios à payer),5186,5189,pcg_518
-pcg_5187,Intérêts courus à recevoir (intérêts des dépôts créditeurs à recevoir),5187,5189,pcg_518
-pcg_519,Concours bancaires courants,519,519,pcg_51
-pcg_5191,Facilité de caisse,5191,5199,pcg_519
-pcg_5192,Découvert bancaire,5192,5199,pcg_519
-pcg_5193,Autres avances bancaires,5193,5199,pcg_519
-pcg_5198,Intérêts courus sur concours bancaires courants,5198,5199,pcg_519
-pcg_52,Instruments financiers dérivés,52,59,pcg_5
-pcg_521,Instruments financiers dérivés : Actifs,521,529,pcg_52
-pcg_529,Instruments financiers dérivés : Passifs,529,529,pcg_52
-pcg_53,Caisse,53,59,pcg_5
-pcg_531,Caisse siège social,531,539,pcg_53
-pcg_5311,Caisse principale en Dinars,5311,5319,pcg_531
-pcg_5314,Caisse principale en Devises,5314,5319,pcg_531
-pcg_532,Caisse Auxiliaire,532,539,pcg_53
-pcg_5321,Caisse auxiliaire : Succursale (ou Unité) A,5321,5329,pcg_532
-pcg_5322,Caisse auxiliaire : Succursale (ou Unité) B,5322,5329,pcg_532
-pcg_54,Régies d'avances et accréditifs,54,59,pcg_5
-pcg_541,Régies d'avances,541,549,pcg_54
-pcg_542,Accréditifs,542,549,pcg_54
-pcg_58,Virements internes,58,59,pcg_5
-pcg_581,Virements de fonds,581,589,pcg_58
-pcg_5811,Virements interbancaires,5811,5819,pcg_581
-pcg_5812,Versements d'espèces en banques,5812,5819,pcg_581
-pcg_5813,Alimentation caisses,5813,5819,pcg_581
-pcg_588,Autres virements internes,588,589,pcg_58
-pcg_5886,Achats au comptant,5886,5889,pcg_588
-pcg_5887,Ventes au comptant,5887,5889,pcg_588
-pcg_5888,Autres virements internes - détails,5888,5889,pcg_588
-pcg_59,Pertes de valeur sur actifs financiers courants,59,59,pcg_5
-pcg_591,Pertes de valeur sur valeurs en banque et Etablissements financiers,591,599,pcg_59
-pcg_594,Pertes de valeurs sur régies d'avances et accréditifs,594,599,pcg_59
-pcg_6,CLASSE 6 : COMPTES DE CHARGES,6,9,
-pcg_60,Achats consommés,60,69,pcg_6
-pcg_600,Achats de marchandises vendues,600,609,pcg_60
-pcg_6001,Matières premières consommées,6001,6009,pcg_600
-pcg_6002,Marchandises (ou groupe) B,6002,6009,pcg_600
-pcg_601,Matières premières & fournitures consommées,601,609,pcg_60
-pcg_6017,Fournitures accessoires consommées,6017,6019,pcg_601
-pcg_602,Autres approvisionnements consommés,602,609,pcg_60
-pcg_6021,Matières consommables,6021,6029,pcg_602
-pcg_6022,Fournitures consommables,6022,6029,pcg_602
-pcg_6026,Emballages consommés,6026,6029,pcg_602
-pcg_603,Variations des stocks (inventaire intermittent),603,609,pcg_60
-pcg_6030,Variations de stocks de marchandises,6030,6039,pcg_603
-pcg_6031,Variations de stock de matières premières & Fournitures,6031,6039,pcg_603
-pcg_6032,Variations de stock des autres approvisionnements,6032,6039,pcg_603
-pcg_604,Achats d'études et de prestations de services,604,609,pcg_60
-pcg_6041,Achats d'études,6041,6049,pcg_604
-pcg_6042,Achats de prestations de services,6042,6049,pcg_604
-pcg_605,"Achats de matériels, équipements et travaux",605,609,pcg_60
-pcg_6051,Achats d’immobilisations de faible valeur : Petit matériel & outillage,6051,6059,pcg_605
-pcg_6052,Achats d’immobilisations de faible valeur : Mobilier,6052,6059,pcg_605
-pcg_6053,Achats d’immobilisations de faible valeur : Matériel informatique,6053,6059,pcg_605
-pcg_6054,Achats d’immobilisations de faible valeur : Matériel de communicat.,6054,6059,pcg_605
-pcg_6058,"Autres achats de matériels, d'équipements et de travaux",6058,6059,pcg_605
-pcg_607,Achats non stockés de matières et fournitures,607,609,pcg_60
-pcg_6071,Achat non stocké de carburant,6071,6079,pcg_607
-pcg_6072,Achat non stocké d'énergie et de force motrice (ateliers),6072,6079,pcg_607
-pcg_6073,"Fournitures non stockées : Eau, Gaz & Electricité (bureaux)",6073,6079,pcg_607
-pcg_6074,Fournitures administratives et de bureautique non stockées,6074,6079,pcg_607
-pcg_6075,Achats non stockés de fournitures d'atelier et de magasin,6075,6079,pcg_607
-pcg_6076,Achat non stocké de Tenues de travail et de sécurité,6076,6079,pcg_607
-pcg_6078,Achat : Autres fournitures consommables non stockées,6078,6079,pcg_607
-pcg_608,Frais accessoires d’achat (inventaire intermittent),608,609,pcg_60
-pcg_609,"Rabais, remises, ristournes obtenus sur achats",609,609,pcg_60
-pcg_6090,R.R.R Obtenus sur achats de marchandises,6090,6099,pcg_609
-pcg_6091,R.R.R Obtenus sur achats de matières premières,6091,6099,pcg_609
-pcg_6092,R.R.R Obtenus sur achats d’autres approvisionnements,6092,6099,pcg_609
-pcg_6094,R.R.R Obtenus sur achats sur études et prestations,6094,6099,pcg_609
-pcg_6095,R.R.R Obtenus sur achats de petits matériels et équipements,6095,6099,pcg_609
-pcg_61,Services extérieurs,61,69,pcg_6
-pcg_611,Sous-traitance générale,611,619,pcg_61
-pcg_6111,Sous traitance de spécialité,6111,6119,pcg_611
-pcg_6112,Sous traitance de capacité,6112,6119,pcg_611
-pcg_6113,Sous traitance de marché,6113,6119,pcg_611
-pcg_613,Locations,613,619,pcg_61
-pcg_6131,Contrats de location-financement (en crédit-bail),6131,6139,pcg_613
-pcg_6137,Malis sur emballages rendus,6137,6139,pcg_613
-pcg_614,Charges locatives et charges de copropriété,614,619,pcg_61
-pcg_6141,Charges locatives d’immeubles,6141,6149,pcg_614
-pcg_6142,Charges de copropriété logements de fonction,6142,6149,pcg_614
-pcg_6143,Loyers garages et parking de stationnement de véhicules,6143,6149,pcg_614
-pcg_6148,Autres charges locatives,6148,6149,pcg_614
-pcg_615,"Entretien, réparations et maintenance",615,619,pcg_61
-pcg_6151,Entretien et réparation sur biens immobiliers,6151,6159,pcg_615
-pcg_6152,Entretien et réparation sur biens mobiliers,6152,6159,pcg_615
-pcg_6156,Maintenance,6156,6159,pcg_615
-pcg_616,Primes d'assurances,616,619,pcg_61
-pcg_6161,Assurances multirisques professionnels,6161,6169,pcg_616
-pcg_6162,Assurances transport,6162,6169,pcg_616
-pcg_6163,Assurance responsabilité civile,6163,6169,pcg_616
-pcg_6164,Assurance catastrophe naturelle,6164,6169,pcg_616
-pcg_6165,Assurance couverture risque de Vie,6165,6169,pcg_616
-pcg_6168,Autres assurances,6168,6169,pcg_616
-pcg_617,Etudes et recherches,617,619,pcg_61
-pcg_6171,Assistance technique,6171,6179,pcg_617
-pcg_6178,Autres frais d’études et de recherches,6178,6179,pcg_617
-pcg_618,Documentation et divers,618,619,pcg_61
-pcg_6181,Documentation générale,6181,6189,pcg_618
-pcg_6182,"Abonnements aux Journaux, revues et JO/BOAL/BOMOP ...etc.",6182,6189,pcg_618
-pcg_6183,"Documentation technique (plans, schémas, maquettes, etc.)",6183,6189,pcg_618
-pcg_6184,Frais de reprographie,6184,6189,pcg_618
-pcg_6185,Frais de soumissions et de marchés,6185,6189,pcg_618
-pcg_6186,Frais de conseils et assemblées,6186,6189,pcg_618
-pcg_6187,"Frais de colloques, séminaires et conférences",6187,6189,pcg_618
-pcg_619,"Rabais, remises, ristournes obtenus sur services extérieurs",619,619,pcg_61
-pcg_62,Autres services extérieurs,62,69,pcg_6
-pcg_621,Personnel extérieur a l'entreprise,621,629,pcg_62
-pcg_6211,Personnel intérimaire,6211,6219,pcg_621
-pcg_6212,Charges de sécurité et de gardiennage,6212,6219,pcg_621
-pcg_6213,Charges de nettoyage et travaux d’insalubrité,6213,6219,pcg_621
-pcg_6216,Personnel détaché ou prêté à l’entreprise,6216,6219,pcg_621
-pcg_622,Rémunérations d'intermédiaires et honoraires,622,629,pcg_62
-pcg_6222,Commissions sur ventes,6222,6229,pcg_622
-pcg_6223,Rémunération de consultants,6223,6229,pcg_622
-pcg_6225,Rémunération d’affacturage (factoring),6225,6229,pcg_622
-pcg_6226,Honoraires (autres que ceux incorporés dans les coûts),6226,6229,pcg_622
-pcg_6227,Frais d’actes et de contentieux,6227,6229,pcg_622
-pcg_6228,Autres rémunérations divers (non incorporables aux coûts),6228,6229,pcg_622
-pcg_623,"Publicité, publication, relations publiques",623,629,pcg_62
-pcg_6231,Annonces et insertions,6231,6239,pcg_623
-pcg_6232,Echantillons,6232,6239,pcg_623
-pcg_6233,"Foires, expositions et festivités",6233,6239,pcg_623
-pcg_6234,"Parrainage, Sponsoring et mécénat",6234,6239,pcg_623
-pcg_6235,Cadeau à la clientèle,6235,6239,pcg_623
-pcg_6236,Catalogues et imprimés,6236,6239,pcg_623
-pcg_6237,Publications Autres publicités,6237,6239,pcg_623
-pcg_6238,Autres frais de relations publiques,6238,6239,pcg_623
-pcg_624,Transports de biens et transport collectif du personnel,624,629,pcg_62
-pcg_6241,Transport sur ventes,6241,6249,pcg_624
-pcg_6242,Transport collectif du personnel,6242,6249,pcg_624
-pcg_6243,Transport entre établissements ou chantiers,6243,6249,pcg_624
-pcg_6244,Transport administratif,6244,6249,pcg_624
-pcg_6248,Autres transports divers,6248,6249,pcg_624
-pcg_625,"Déplacements, missions et réceptions",625,629,pcg_62
-pcg_6251,Voyages et déplacements à l’étranger,6251,6259,pcg_625
-pcg_6252,Frais de déménagement,6252,6259,pcg_625
-pcg_6255,Missions : intérieur du pays,6255,6259,pcg_625
-pcg_6257,Réceptions et hébergement,6257,6259,pcg_625
-pcg_626,Frais postaux et de télécommunications,626,629,pcg_62
-pcg_6261,Affranchissement courrier,6261,6269,pcg_626
-pcg_6262,Abonnement boite postale,6262,6269,pcg_626
-pcg_6263,Abonnements et communications téléphonie mobile,6263,6269,pcg_626
-pcg_6264,Abonnement internet,6264,6269,pcg_626
-pcg_6265,Frais de télécommunication (fixe et fax),6265,6269,pcg_626
-pcg_627,Services bancaires et assimilés,627,629,pcg_62
-pcg_6271,Frais sur effets et sur titres,6271,6279,pcg_627
-pcg_6272,Commissions bancaires,6272,6279,pcg_627
-pcg_6276,Location de coffres,6276,6279,pcg_627
-pcg_6278,Autres frais et commissions bancaires,6278,6279,pcg_627
-pcg_628,Cotisations et divers,628,629,pcg_62
-pcg_6281,Frais de recrutement de personnel,6281,6289,pcg_628
-pcg_6282,Frais de formation externe du personnel,6282,6289,pcg_628
-pcg_6283,Cotisations professionnelles,6283,6289,pcg_628
-pcg_6284,Droits de stationnement parking privé,6284,6289,pcg_628
-pcg_6288,Autres cotisations et dons courants divers,6288,6289,pcg_628
-pcg_629,"Rabais, remises, ristournes obtenus sur autres services extérieurs",629,629,pcg_62
-pcg_63,Charges de personnel,63,69,pcg_6
-pcg_631,Rémunérations du personnel,631,639,pcg_63
-pcg_6311,Traitements et Salaires,6311,6319,pcg_631
-pcg_6312,Primes,6312,6319,pcg_631
-pcg_6313,Indemnités,6313,6319,pcg_631
-pcg_6314,Prestations directes,6314,6319,pcg_631
-pcg_6315,Avantages et prestations en nature,6315,6319,pcg_631
-pcg_634,Rémunération de l'exploitant,634,639,pcg_63
-pcg_635,Cotisations aux organismes sociaux,635,639,pcg_63
-pcg_6351,Cotisations de sécurité sociale – CNAS,6351,6359,pcg_635
-pcg_6352,Cotisations au FNPOS,6352,6359,pcg_635
-pcg_6353,Cotisations à la retraite – CNR,6353,6359,pcg_635
-pcg_6354,Cotisations aux mutuelles,6354,6359,pcg_635
-pcg_6355,Cotisations à la CACOBATPH,6355,6359,pcg_635
-pcg_636,Cotisations sociales de l'exploitant,636,639,pcg_63
-pcg_6361,Cotisation annuelle à la CASNOS,6361,6369,pcg_636
-pcg_6368,Autres cotisations,6368,6369,pcg_636
-pcg_637,Autres charges sociales,637,639,pcg_63
-pcg_6374,Versements aux œuvres sociales,6374,6379,pcg_637
-pcg_6375,Autres contributions sociales,6375,6379,pcg_637
-pcg_638,Autres charges de personnel,638,639,pcg_63
-pcg_6381,Médecine du travail et pharmacie,6381,6389,pcg_638
-pcg_6382,Frais de formation et de perfectionnement du personnel (en interne),6382,6389,pcg_638
-pcg_6383,Frais d’activités socioculturelles et sportives,6383,6389,pcg_638
-pcg_6384,Avantages en nature accordés au personnel,6384,6389,pcg_638
-pcg_6385,Médailles du mérite et Jubilé,6385,6389,pcg_638
-pcg_6387,"Intéressement, primes et avantages liés aux résultats",6387,6389,pcg_638
-pcg_6388,Autres charges de personnel,6388,6389,pcg_638
-pcg_64,"Impôts, Taxes et versements assimilés",64,69,pcg_6
-pcg_641,"Impôts, taxes et versements assimilés sur rémunérations",641,649,pcg_64
-pcg_6412,Taxe d’apprentissage,6412,6419,pcg_641
-pcg_6413,Taxe sur la formation professionnelle,6413,6419,pcg_641
-pcg_6418,Autres taxes sur les salaires,6418,6419,pcg_641
-pcg_642,Impôts et taxes non récupérables sur chiffre d’affaires,642,649,pcg_64
-pcg_6421,Taxe sur l’activité professionnelle – T.A.P. (sur les débits),6421,6429,pcg_642
-pcg_6422,Taxe sur l’activité professionnelle – T.A.P. (sur encaissements),6422,6429,pcg_642
-pcg_645,Autres impôts et taxes (hors impôts sur les résultats),645,649,pcg_64
-pcg_6451,Taxe foncière sur les propriétés bâties et non bâties,6451,6459,pcg_645
-pcg_6452,Taxes spéciales et droits d'accises,6452,6459,pcg_645
-pcg_6453,Taxe sur l’environnement (écotaxe),6453,6459,pcg_645
-pcg_6454,Taxes sur les véhicules (Vignettes),6454,6459,pcg_645
-pcg_6455,Droits de stationnement parking communal,6455,6459,pcg_645
-pcg_6456,Droits d’enregistrement sur actes et marchés,6456,6459,pcg_645
-pcg_6457,Droits de timbre,6457,6459,pcg_645
-pcg_6458,"Autres droits, impôts et taxes divers",6458,6459,pcg_645
-pcg_65,Autres charges opérationnelles,65,69,pcg_6
-pcg_651,"Redevances pour concessions, brevets, licences, logiciels et valeurs similaires",651,659,pcg_65
-pcg_6511,Redevances pour concessions,6511,6519,pcg_651
-pcg_6512,Redevances pour brevets et licences de fabrication,6512,6519,pcg_651
-pcg_6516,Redevances pour exploitation de logiciels et valeurs similaires,6516,6519,pcg_651
-pcg_652,Moins values sur sortie d'actifs immobilisés non financiers,652,659,pcg_65
-pcg_6521,Moins value sur cession matériel et outillage,6521,6529,pcg_652
-pcg_6522,Moins value sur cession matériel de transport,6522,6529,pcg_652
-pcg_6523,Moins value sur cession mobilier et matériel de bureau,6523,6529,pcg_652
-pcg_6528,Moins value sur cession autres équipements et matériels,6528,6529,pcg_652
-pcg_653,Jetons de présence,653,659,pcg_65
-pcg_6531,Jetons de présence aux administrateurs,6531,6539,pcg_653
-pcg_654,Pertes sur créances irrécouvrables,654,659,pcg_65
-pcg_6541,Pertes sur créances de l'exercice,6541,6549,pcg_654
-pcg_6542,Pertes sur créances des exercices antérieurs,6542,6549,pcg_654
-pcg_655,Quote-part de résultat sur opérations faites en commun,655,659,pcg_65
-pcg_6551,Quote-part de bénéfice transféré dans le cadre d'un GIE ou d'une SEP,6551,6559,pcg_655
-pcg_6552,Quote-part de perte supportée dans le cadre d'un GIE ou d'une SEP,6552,6559,pcg_655
-pcg_656,"Amendes et pénalités, subventions accordées, dons et libéralités",656,659,pcg_65
-pcg_6562,"Amendes et pénalités (pénales, fiscales et parafiscales)",6562,6569,pcg_656
-pcg_6563,Subventions accordées,6563,6569,pcg_656
-pcg_6566,Dons et libéralités,6566,6569,pcg_656
-pcg_657,Charges exceptionnelles de gestion courante,657,659,pcg_65
-pcg_6571,Ecart de stocks (négatif) de marchandises,6571,6579,pcg_657
-pcg_6572,"Ecart de stocks (négatif) de matières, fournitures et autres approvisionnements",6572,6579,pcg_657
-pcg_6575,Rappel d’impôts (autre qu’IBS),6575,6579,pcg_657
-pcg_6578,Autres charges exceptionnelles,6578,6579,pcg_657
-pcg_658,Autres charges de gestion courante,658,659,pcg_65
-pcg_6581,Charges sur exercices antérieurs (en cours d'exercice),6581,6589,pcg_658
-pcg_6588,Autres charges diverses de gestion courante,6588,6589,pcg_658
-pcg_66,Charges financières,66,69,pcg_6
-pcg_661,Charges d'intérêts,661,669,pcg_66
-pcg_6611,Intérêts des emprunts,6611,6619,pcg_661
-pcg_6612,Intérêts des dettes,6612,6619,pcg_661
-pcg_6616,Intérêts bancaires sur opérations de financement (découvert),6616,6619,pcg_661
-pcg_6618,Intérêts des autres dettes,6618,6619,pcg_661
-pcg_664,Pertes sur créances liées à des participations,664,669,pcg_66
-pcg_665,Ecart d’évaluation sur actifs financiers - Moins-values,665,669,pcg_66
-pcg_6651,Mali provenant du rachat des actions propres,6651,6659,pcg_665
-pcg_666,Pertes de change,666,669,pcg_66
-pcg_667,Pertes nettes sur cessions d’actifs financiers,667,669,pcg_66
-pcg_668,Autres charges financières,668,669,pcg_66
-pcg_67,Eléments extraordinaires (Charges),67,69,pcg_6
-pcg_68,"Dotations aux amortissements, provisions et pertes de valeur",68,69,pcg_6
-pcg_681,"Dotations aux amortissements, provisions et pertes de valeur - actifs non courants",681,689,pcg_68
-pcg_6811,DAP-PDV : Immobilisations incorporelles,6811,6819,pcg_681
-pcg_6812,DAP-PDV : Immobilisations corporelles,6812,6819,pcg_681
-pcg_682,"Dotations aux amortissements, provisions et PDV des biens mis en concession",682,689,pcg_68
-pcg_685,Dotations aux provisions et pertes de valeurs – Actifs courants,685,689,pcg_68
-pcg_6853,Dotations pour pertes de valeurs sur stocks,6853,6859,pcg_685
-pcg_6854,Dotations pour pertes de valeurs sur créances,6854,6859,pcg_685
-pcg_6855,Dotation annuelle pour Indemnité de départ à la retraite et IFC,6855,6859,pcg_685
-pcg_6856,Dotations aux provisions pour pertes et charges – PNC,6856,6859,pcg_685
-pcg_6858,Dotations aux provisions – passifs courants,6858,6859,pcg_685
-pcg_686,"Dotations aux amortissements, provisions et pertes de valeur, éléments financiers",686,689,pcg_68
-pcg_6861,Dotations aux amortissements des primes de remboursement,6861,6869,pcg_686
-pcg_6862,Pertes de valeur des immobilisations financières,6862,6869,pcg_686
-pcg_69,Impôts sur les résultats et assimilés,69,69,pcg_6
-pcg_691,Participation des travailleurs aux bénéfices,691,699,pcg_69
-pcg_692,Imposition différée actif – Produits,692,699,pcg_69
-pcg_693,Imposition différée passif – Charges,693,699,pcg_69
-pcg_695,Impôts sur les bénéfices basés sur le résultat des activités ordinaires,695,699,pcg_69
-pcg_698,Autres impôts sur les résultats,698,699,pcg_69
-pcg_7,CLASSE 7 : COMPTES DE PRODUITS,7,9,
-pcg_70,"Ventes de marchandises et de produits fabriqués, vente de   prestations de services et produits annexes",70,79,pcg_7
-pcg_700,Ventes de Marchandises,700,709,pcg_70
-pcg_7001,Marchandises (ou groupe) A,7001,7009,pcg_700
-pcg_7002,Marchandises (ou groupe) B,7002,7009,pcg_700
-pcg_701,Ventes de produits finis,701,709,pcg_70
-pcg_7011,Ventes de Produit fini (ou groupe) – PF1,7011,7019,pcg_701
-pcg_7012,Ventes de Produit fini (ou groupe) – PF2,7012,7019,pcg_701
-pcg_7013,Ventes de Produit fini (ou groupe) – PF3,7013,7019,pcg_701
-pcg_702,Ventes de produits intermédiaires,702,709,pcg_70
-pcg_7021,Ventes de Produits intermédiaires (ou groupe) – PI-1,7021,7029,pcg_702
-pcg_7022,Ventes de Produits intermédiaires (ou groupe) – PI-2,7022,7029,pcg_702
-pcg_7028,Ventes de sous produits (PR et accessoires fabriqués),7028,7029,pcg_702
-pcg_703,Ventes de produits résiduels,703,709,pcg_70
-pcg_7031,Ventes de déchets,7031,7039,pcg_703
-pcg_7032,Ventes de rebuts,7032,7039,pcg_703
-pcg_7033,Ventes de matières de récupération recyclables,7033,7039,pcg_703
-pcg_704,Vente de travaux,704,709,pcg_70
-pcg_7041,Travaux hydrauliques,7041,7049,pcg_704
-pcg_7042,Travaux publics,7042,7049,pcg_704
-pcg_7043,Travaux de constructions de bâtiments,7043,7049,pcg_704
-pcg_7044,Travaux de restauration de sites et monuments,7044,7049,pcg_704
-pcg_7045,Travaux de VRD et d'assainissement,7045,7049,pcg_704
-pcg_7046,Travaux d'entretien et de nettoyage,7046,7049,pcg_704
-pcg_7047,Travaux forestiers,7047,7049,pcg_704
-pcg_7048,Autres travaux de réalisation,7048,7049,pcg_704
-pcg_705,Vente d'études,705,709,pcg_70
-pcg_7051,Etudes : E1,7051,7059,pcg_705
-pcg_7058,Autres études techniques,7058,7059,pcg_705
-pcg_706,Autres prestations de services,706,709,pcg_70
-pcg_7061,Prestations de services fournis : S1,7061,7069,pcg_706
-pcg_7068,Autres Prestations de services,7068,7069,pcg_706
-pcg_708,Produits des activités annexes,708,709,pcg_70
-pcg_7081,Cession de matières premières,7081,7089,pcg_708
-pcg_7082,Cession d’autres approvisionnements,7082,7089,pcg_708
-pcg_7086,Bonis sur reprise d’emballages consignés,7086,7089,pcg_708
-pcg_7088,Autres produits des activités annexes,7088,7089,pcg_708
-pcg_709,"Rabais, remises et ristournes accordés",709,709,pcg_70
-pcg_7092,Réduction sur ventes – Hors factures,7092,7099,pcg_709
-pcg_7093,Réduction sur prestations – Hors factures,7093,7099,pcg_709
-pcg_72,Production stockée ou déstockée,72,79,pcg_7
-pcg_723,Variation de stocks d'encours,723,729,pcg_72
-pcg_7233,En-cours de production,7233,7239,pcg_723
-pcg_7234,En-cours d'études et de services,7234,7239,pcg_723
-pcg_724,Variation de stocks de produits,724,729,pcg_72
-pcg_7241,Produits intermédiaires,7241,7249,pcg_724
-pcg_7245,Produits finis,7245,7249,pcg_724
-pcg_7248,Produits résiduels,7248,7249,pcg_724
-pcg_729,Coût de la sous activité (différence d'imputation coût du chômage),729,729,pcg_72
-pcg_73,Production immobilisée,73,79,pcg_7
-pcg_731,Production immobilisée d'actifs incorporels (logiciels),731,739,pcg_73
-pcg_732,Production immobilisée d'actifs corporels,732,739,pcg_73
-pcg_74,Subventions d’exploitation,74,79,pcg_7
-pcg_741,Subvention d'équilibre,741,749,pcg_74
-pcg_748,Autres subventions d'exploitation,748,749,pcg_74
-pcg_75,Autres produits opérationnels,75,79,pcg_7
-pcg_751,"Redevances pour concessions, brevets, licences, logiciels et valeurs similaires",751,759,pcg_75
-pcg_752,Plus values sur sorties d’actifs immobilisés non financiers,752,759,pcg_75
-pcg_7521,Plus value sur cession d’éléments d’actifs mis à la réforme,7521,7529,pcg_752
-pcg_7528,Plus value sur autres éléments d’actifs corporels cédés,7528,7529,pcg_752
-pcg_753,Jetons de présence et rémunérations d'administrateurs ou de gérant,753,759,pcg_75
-pcg_7531,Jetons de présence perçus,7531,7539,pcg_753
-pcg_754,Quotes-parts de subventions d’investissement virées au résultat de l’exercice,754,759,pcg_75
-pcg_755,Quote-part de résultat sur opérations faites en commun,755,759,pcg_75
-pcg_7551,Quote-part de perte transférée (dans les SEP et GIE),7551,7559,pcg_755
-pcg_7552,Quote-part de bénéfice attribué (dans les SEP et GIE),7552,7559,pcg_755
-pcg_756,Rentrées sur créances amorties,756,759,pcg_75
-pcg_757,Produits exceptionnels sur opérations de gestion,757,759,pcg_75
-pcg_7571,Ecart de stocks (positif) de marchandises,7571,7579,pcg_757
-pcg_7572,"Ecart de stocks (positif) de matières, fournitures et autres approvisionnements",7572,7579,pcg_757
-pcg_7575,Dégrèvements d’impôts (autre qu’IBS),7575,7579,pcg_757
-pcg_7578,Autres produits exceptionnels,7578,7579,pcg_757
-pcg_758,Autres produits de gestion courante,758,759,pcg_75
-pcg_7581,Lots de bord et pièces de rechange gratuites,7581,7589,pcg_758
-pcg_7582,Remboursements sinistres et dégâts assurés,7582,7589,pcg_758
-pcg_7583,Revenus des immeubles de placement,7583,7589,pcg_758
-pcg_7586,Produits des exercices antérieurs (en cours d'exercice),7586,7589,pcg_758
-pcg_7588,Autres produits divers de gestion courante,7588,7589,pcg_758
-pcg_76,Produits financiers,76,79,pcg_7
-pcg_761,Produits de participations,761,769,pcg_76
-pcg_762,Revenus des actifs financiers,762,769,pcg_76
-pcg_763,Revenus de créances,763,769,pcg_76
-pcg_765,Ecart d’évaluation sur actifs financiers – Plus-values,765,769,pcg_76
-pcg_766,Gains de change,766,769,pcg_76
-pcg_767,Profits nets sur cessions d’actifs financiers,767,769,pcg_76
-pcg_768,Autres produits financiers,768,769,pcg_76
-pcg_77,Eléments extraordinaires (Produits),77,79,pcg_7
-pcg_78,Reprises sur pertes de valeurs et provisions,78,79,pcg_7
-pcg_781,Reprise d'exploitation sur pertes de valeur et provisions - actifs non courants,781,789,pcg_78
-pcg_7811,Reprises sur amortissements : Immobilisations incorporelles,7811,7819,pcg_781
-pcg_7812,Reprises sur perte de valeur : Immobilisations incorporelles,7812,7819,pcg_781
-pcg_7813,Reprises sur amortissements : Immobilisations corporelles,7813,7819,pcg_781
-pcg_7814,Reprises sur perte de valeur : Immobilisations corporelles,7814,7819,pcg_781
-pcg_7815,Reprises sur écarts de réévaluation : Immobilisations corporelles,7815,7819,pcg_781
-pcg_7817,Reprises sur plus values à réinvestir,7817,7819,pcg_781
-pcg_785,Reprise d'exploitation sur pertes de valeur et provisions - actifs courants,785,789,pcg_78
-pcg_7853,Reprise sur pertes de valeurs – Stocks et encours,7853,7859,pcg_785
-pcg_7854,Reprise sur pertes de valeurs – Créances,7854,7859,pcg_785
-pcg_7858,Reprise sur provisions pour pertes et charges – PNC,7858,7859,pcg_785
-pcg_786,Reprises financières sur pertes de valeur et provisions,786,789,pcg_78
-pcg_18141,Créances commerciales,18141,18149,pcg_1814
-pcg_18151,Dettes commerciales,18151,18159,pcg_1815
-pcg_37178,Achats d'autres fournitures accessoires,37178,37179,pcg_371
-pcg_38111,Matières (ou groupe) A,38111,38119,pcg_3811
-pcg_38112,Matières (ou groupe) B,38112,38119,pcg_3811
-pcg_38118,Autres matières premières,38118,38119,pcg_3811
-pcg_38171,Achats de Fournitures A,38171,38179,pcg_3817
-pcg_38172,Achats de Fournitures B,38172,38179,pcg_3817
-pcg_400,Fournisseurs et comptes rattachés,400,409,pcg_40
-pcg_40131,Fournisseurs de stocks : Nationaux – Publics,40131,40139,pcg_4013
-pcg_40132,Fournisseurs de stocks : Nationaux – Privés,40132,40139,pcg_4013
-pcg_40133,Fournisseurs de stocks : Etrangers,40133,40139,pcg_4013
-pcg_40161,Fournisseurs de services : Nationaux – Publics,40161,40169,pcg_4016
-pcg_40162,Fournisseurs de services : Nationaux – Privés,40162,40169,pcg_4016
-pcg_40163,Fournisseurs de services : Etrangers,40163,40169,pcg_4016
-pcg_40171,Fournisseurs : Retenues de garantie – Publics,40171,40179,pcg_4017
-pcg_40172,Fournisseurs : Retenues de garantie – Privés,40172,40179,pcg_4017
-pcg_40173,Fournisseurs : Retenues de garantie – Etrangers,40173,40179,pcg_4017
-pcg_410,Clients et comptes rattachés,410,419,pcg_41
-pcg_44551,TVA à décaisser (à payer sur G.50),44551,44559,pcg_4455
-pcg_44552,Obligations cautionnées (au profit des Douanes),44552,44559,pcg_4455
-pcg_44562,TVA récupérable sur immobilisations,44562,44569,pcg_4456
-pcg_44563,TVA transférée par d'autres entreprises,44563,44569,pcg_4456
-pcg_44566,TVA récupérable sur achats de stocks et de services,44566,44569,pcg_4456
-pcg_44568,Crédit de TVA à reporter (Précompte),44568,44569,pcg_4456
-pcg_44571,TVA collectée sur Ventes – (livraisons juridiques ou matérielles),44571,44579,pcg_4457
-pcg_44572,TVA collectée sur les encaissements,44572,44579,pcg_4457
-pcg_44575,Droits de timbre perçus au profit du Trésor,44575,44579,pcg_4457
-pcg_44583,Remboursement de TVA demandé,44583,44589,pcg_4458
-pcg_44584,TVA récupérée d’avance ou en attente de régularisation,44584,44589,pcg_4458
-pcg_44586,TVA sur factures d’achats non parvenues,44586,44589,pcg_4458
-pcg_44587,TVA sur factures de ventes ou de prestations à établir,44587,44589,pcg_4458
-pcg_45611,Associés : Comptes d’apport en société,45611,45619,pcg_4561
-pcg_45615,Associés : Apports en numéraires,45615,45619,pcg_4561
-pcg_5031,Actions détenues en vue de la revente,5031,5039,pcg_503
-pcg_5061,Obligations à moins de 12 mois,5061,5069,pcg_506
-pcg_5062,Bons du Trésor à court terme,5062,5069,pcg_506
-pcg_5063,Bons de caisse à court terme,5063,5069,pcg_506
-pcg_5081,Autres valeurs mobilières,5081,5089,pcg_508
-pcg_5082,Bons de souscription,5082,5089,pcg_508
-pcg_5083,Intérêts courus,5083,5089,pcg_508
-pcg_5088,Intérêts courus,5088,5089,pcg_508
-pcg_5113,Effets à l'encaissement,5113,5119,pcg_511
-pcg_6011,Matières premières consommées,6011,6019,pcg_601
-pcg_60111,Matières (ou groupe) A,60111,60119,pcg_6011
-pcg_60112,Matières (ou groupe) B,60112,60119,pcg_6011
-pcg_60118,Autres matières premières consommées,60118,60119,pcg_6011
-pcg_60171,Fournitures A,60171,60179,pcg_6017
-pcg_60172,Fournitures B,60172,60179,pcg_6017
-pcg_60178,Autres fournitures accessoires consommées,60178,60179,pcg_6017
-pcg_60211,Matières (ou groupe) C,60211,60219,pcg_6021
-pcg_60212,Matières (ou groupe) D,60212,60219,pcg_6021
-pcg_60218,Autres matières consommées,60218,60219,pcg_6021
-pcg_60221,Carburant et lubrifiant – Véhicules,60221,60229,pcg_6022
-pcg_60222,Petit outillage et fournitures d'ateliers,60222,60229,pcg_6022
-pcg_60223,Droguerie et Produits d'entretien,60223,60229,pcg_6022
-pcg_60224,Pièces de rechange pour équipements et matériels techniques,60224,60229,pcg_6022
-pcg_60225,Pièces de rechange et pneumatique pour matériel de transport,60225,60229,pcg_6022
-pcg_60226,Quincaillerie générale et fournitures de magasin,60226,60229,pcg_6022
-pcg_60228,Autres fournitures consommées,60228,60229,pcg_6022
-pcg_60261,Emballages perdus consommés,60261,60269,pcg_6026
-pcg_60262,Emballages récupérables non identifiables consommés,60262,60269,pcg_6026
-pcg_60263,Emballages à usage mixte consommés,60263,60269,pcg_6026
-pcg_61311,Locations immobilières : Redevance de crédit bail immobilier,61311,61319,pcg_6131
-pcg_61312,Locations mobilières : Redevance de crédit bail mobilier,61312,61319,pcg_6131
-pcg_62551,Missions : intérieur du pays - Frais de voyage,62551,62559,pcg_6255
-pcg_62552,Missions : intérieur du pays - Frais de séjour,62552,62559,pcg_6255
-pcg_63111,"Traitements, salaires et appointements",63111,63119,pcg_6311
-pcg_63112,Présalaires et indemnités de stage et d’apprentissage,63112,63119,pcg_6311
-pcg_63113,Heures supplémentaires et IFSP,63113,63119,pcg_6311
-pcg_63114,Congés payés,63114,63119,pcg_6311
-pcg_63121,Prime de responsabilité,63121,63129,pcg_6312
-pcg_63122,Prime de panier,63122,63129,pcg_6312
-pcg_63123,Primes d’encouragement et de rendement individuel (PRI-PRC),63123,63129,pcg_6312
-pcg_63124,Primes sur résultats au profit des cadres dirigeants,63124,63129,pcg_6312
-pcg_63125,Primes de véhicule,63125,63129,pcg_6312
-pcg_63126,Prime de caisse et de bilan,63126,63129,pcg_6312
-pcg_63127,Prime de sujétion,63127,63129,pcg_6312
-pcg_63128,Primes spéciales,63128,63129,pcg_6312
-pcg_63131,Indemnité d'Expérience professionnelle (I.E.P),63131,63139,pcg_6313
-pcg_63132,Indemnité de nuisance,63132,63139,pcg_6313
-pcg_63133,Indemnité de travail posté,63133,63139,pcg_6313
-pcg_63134,Indemnités de fin de carrière et de départ à la retraite (IDR – IFC),63134,63139,pcg_6313
-pcg_63135,Indemnités kilométriques et de transport,63135,63139,pcg_6313
-pcg_63138,Autres Indemnités liées au salaire,63138,63139,pcg_6313
-pcg_63141,Bonifications,63141,63149,pcg_6314
-pcg_63142,"Supplément familial : Prime de scolarité, IPSU, ICAF",63142,63149,pcg_6314
-pcg_63148,Autres indemnités et avantages divers,63148,63149,pcg_6314
-pcg_7518,Autres droits et valeurs similaires,7518,7519,pcg_751
-pcg_78111,Reprises sur amortissements : Immobilisations incorporelles,78111,78119,pcg_7811
-pcg_78112,Reprises sur perte de valeur : Immobilisations incorporelles,78112,78119,pcg_7811
-pcg_78113,Reprises sur amortissements : Immobilisations corporelles,78113,78119,pcg_7811
-pcg_78114,Reprises sur perte de valeur : Immobilisations corporelles,78114,78119,pcg_7811
-pcg_78115,Reprises sur écarts de réévaluation : Immobilisations corporelles,78115,78119,pcg_7811
-pcg_78117,Reprises sur plus values à réinvestir,78117,78119,pcg_7811
+0,Système Comptable et Financier Algérien,0,0,
+1,CLASSE 1 : COMPTES DE CAPITAUX,1,1,
+10,"Capital, réserves et assimilés",10,10,1
+101,"Capital émis ou capital social ou fonds de dotation, ou fonds d’exploitation",101,101,10
+1011,Capital social,1011,1011,101
+1012,Fonds de dotation,1012,1012,101
+1013,Fonds d'exploitation,1013,1013,101
+1018,Autres fonds propres,1018,1018,101
+103,Primes liées au capital social,103,103,10
+1031,Prime d’émission,1031,1031,103
+1032,Prime de fusion,1032,1032,103
+1033,Prime d’apports,1033,1033,103
+1034,Prime de conversion d’obligations en actions,1034,1034,103
+1035,Bons de souscription d’actions (BSA),1035,1035,103
+104,Ecart d’évaluation,104,104,10
+105,Ecart de réévaluation,105,105,10
+1051,Ecart de réévaluation sur immobilisations corporelles,1051,1051,105
+1059,Ecart de réévaluation rapporté au résultat de l’exercice,1059,1059,105
+106,"Réserves (légale, statutaire, ordinaire, réglementée)",106,106,10
+1061,Réserve légale,1061,1061,106
+1062,Réserves réglementées,1062,1062,106
+1063,Réserves statutaires ou contractuelles,1063,1063,106
+1064,Réserves ordinaires,1064,1064,106
+1065,Réserves Spéciales consécutive à l’octroi d’avantages,1065,1065,106
+1066,Réserves facultatives,1066,1066,106
+1068,Autres réserves,1068,1068,106
+107,Ecart d'équivalence,107,107,10
+108,Compte de l'exploitant,108,108,10
+109,Actionnaires : Capital souscrit non appelé,109,109,10
+11,Report à nouveau,11,11,1
+110,Report à nouveau (bénéfice),110,110,11
+115,Impact résultant du changement de la réglementation et des méthodes,115,115,11
+1151,Impact d'ajustement positif (plus value),1151,1151,115
+1159,Impact d'ajustement négatif (moins value),1159,1159,115
+117,Impact résultant des corrections d’estimation et d’erreurs comptables,117,117,11
+1171,Impact d'assainissement comptable et financier : positif,1171,1171,117
+1175,Ajustement résultant de correction d'estimation,1175,1175,117
+1176,Ajustement résultant de correction d'erreurs comptables,1176,1176,117
+1179,Impact d'assainissement comptable et financier : négatif,1179,1179,117
+118,Acompte sur dividendes,118,118,11
+119,Report à nouveau (Déficit),119,119,11
+12,Résultat de l'exercice,12,12,1
+120,Résultat net de l’exercice – (BENEFICE),120,120,12
+121,Marge commerciale,121,121,12
+122,Production de l’exercice,122,122,12
+123,Valeur Ajoutée d’exploitation,123,123,12
+124,Excédent (ou insuffisance) brut d’exploitation (EBE) – EBITDA,124,124,12
+125,Résultat opérationnel,125,125,12
+126,Résultat ordinaire avant impôts,126,126,12
+127,Résultat extraordinaire,127,127,12
+128,Résultat brut de l’exercice,128,128,12
+129,Résultat net de l’exercice – (DEFICIT),129,129,12
+13,Produits et charges différés – hors cycle d’exploitation,13,13,1
+131,Subventions d’équipement,131,131,13
+1311,Subventions d’équipements : Financement de l'Etat,1311,1311,131
+1312,Subventions d’équipements : Financement d'autres organismes,1312,1312,131
+1313,Transfert gratuit d’immobilisations,1313,1313,131
+1319,Subventions inscrites au compte de résultat,1319,1319,131
+132,Autres subventions d’investissement,132,132,13
+1321,Subventions d’investissement,1321,1321,132
+1322,Subventions pour financement d'activités à long terme,1322,1322,132
+1329,Autres subventions inscrites au compte de résultat,1329,1329,132
+133,Impôts différés actif,133,133,13
+134,Impôts différés passif,134,134,13
+138,Autres produits et charges différés,138,138,13
+1386,Charges différées – Passif non courant,1386,1386,138
+1387,Produits différés – Passif non courant,1387,1387,138
+15,Provisions pour charges - passifs non courants,15,15,1
+153,Provisions pour pensions et obligations similaires,153,153,15
+1531,Provisions pour avantages au personnel (IDR – IFC),1531,1531,153
+155,Provisions pour impôts,155,155,15
+1551,Provision pour rappel d'impôts et amendes fiscales,1551,1551,155
+156,Provisions pour renouvellement des immobilisations (concession),156,156,15
+158,Autres provisions pour charges - passifs non courants,158,158,15
+1581,Provisions pour remise en l’état ou de démantèlement,1581,1581,158
+1582,Provision pour perte à terminaison (contrats déficitaires),1582,1582,158
+1583,Provision pour procès et litiges (au-delà de 12 mois),1583,1583,158
+1584,Provision pour garantie données aux clients (au-delà de 12 mois),1584,1584,158
+1588,Autres provisions résultant d’obligation légale ou implicite,1588,1588,158
+16,Emprunts et dettes assimilés,16,16,1
+161,Titres participatifs,161,161,16
+1611,Emprunt Principal,1611,1611,161
+1618,Intérêts courus et non échus,1618,1618,161
+162,Emprunts obligataires convertibles,162,162,16
+1621,Emprunt Principal,1621,1621,162
+1628,Intérêts courus et non échus,1628,1628,162
+163,Autres emprunts obligataires,163,163,16
+1631,Emprunt Principal,1631,1631,163
+1638,Intérêts courus et non échus,1638,1638,163
+164,Emprunts auprès des établissements de crédit,164,164,16
+1641,Emprunts à Court Terme,1641,1641,164
+1642,Emprunts à Moyen  Terme,1642,1642,164
+1643,Emprunts à Long Terme,1643,1643,164
+1646,Intérêts intercalaires,1646,1646,164
+1648,Intérêts courus et non échus,1648,1648,164
+165,Dépôts et cautionnements reçus,165,165,16
+1651,Dépôts reçus,1651,1651,165
+1655,Cautionnements reçus,1655,1655,165
+1658,Intérêts courus et non échus,1658,1658,165
+167,Dettes sur contrat de location-financement,167,167,16
+1671,Financement Principal,1671,1671,167
+1678,Intérêts courus et non échus,1678,1678,167
+168,Autres emprunts et dettes assimilés,168,168,16
+1681,Emprunt Principal,1681,1681,168
+1688,Intérêts courus et non échus,1688,1688,168
+169,Primes de remboursement des obligations,169,169,16
+17,Dettes rattachées à des participations,17,17,1
+171,Dettes rattachées à des participations groupe,171,171,17
+172,Dettes rattachés à des participations hors groupe,172,172,17
+173,Dettes rattachés à des sociétés en participation,173,173,17
+178,Autres dettes rattachés à des participations,178,178,17
+18,Comptes de liaison des établissements et sociétés en participation,18,18,1
+181,Comptes de liaison entre établissements,181,181,18
+1814,Créances sur la participation ou GIE,1814,1814,181
+1815,Dettes envers la participation ou GIE,1815,1815,181
+1816,Charges inter-Unités (ou établissement),1816,1816,181
+1817,Produis inter-Unités (ou établissement),1817,1817,181
+188,Comptes de liaison entre sociétés en participation,188,188,18
+2,CLASSE 2 : COMPTES D’IMMOBILISATIONS,2,2,
+20,Immobilisations incorporelles,20,20,2
+203,Frais de développement immobilisables,203,203,20
+204,Logiciels informatiques et assimilés,204,204,20
+2041,Logiciels de traitements informatiques,2041,2041,204
+2042,Hébergement site Web,2042,2042,204
+205,"Concessions et droits similaires, brevets, licences, marques",205,205,20
+2051,Droit à la propriété industrielle et commerciale,2051,2051,205
+2058,Autres droits similaires (concession et franchise),2058,2058,205
+207,Ecart d’acquisition – « goodwill »,207,207,20
+2071,Ecart d'acquisition positif (goodwill),2071,2071,207
+2072,Autres écarts d’acquisitions ou de fusions,2072,2072,207
+2079,Ecart d'acquisition négatif (badwill),2079,2079,207
+208,Autres immobilisations incorporelles,208,208,20
+2081,Fonds de commerce,2081,2081,208
+2082,Droit au bail,2082,2082,208
+2087,Actif environnemental,2087,2087,208
+21,Immobilisations corporelles,21,21,2
+211,Terrains,211,211,21
+2111,Terrains nus,2111,2111,211
+2112,Terrains bâtis,2112,2112,211
+2113,Terrains aménagés,2113,2113,211
+2114,Terrains de gisement (carrières),2114,2114,211
+212,Agencements et aménagements des terrains,212,212,21
+2121,Aménagement d’espaces verts,2121,2121,212
+2122,Autres agencements et aménagements de terrains,2122,2122,212
+213,Constructions,213,213,21
+2131,Bâtiments administratifs & commerciaux,2131,2131,213
+2132,Bâtiments industriels (à décomposer en cas de besoin),2132,2132,213
+2133,Bâtiments sociaux (CMS – CANTINE – REFECTOIRE),2133,2133,213
+2134,Immeubles de placement,2134,2134,213
+2135,Autres constructions,2135,2135,213
+2136,"Agencements, aménagements et installations des bâtiments",2136,2136,213
+2137,Ouvrages d’infrastructures : Voies de transport ou d'accès,2137,2137,213
+2138,Autres travaux d'aménagement sur ouvrages d’infrastructures,2138,2138,213
+215,"Installations techniques, matériel et outillage industriels",215,215,21
+2151,Installations complexes spécialisées,2151,2151,215
+2153,Installations à caractère spécifique,2153,2153,215
+2154,Matériel industriel,2154,2154,215
+2155,Outillage industriel,2155,2155,215
+2157,Agencements et aménagements du matériel et outillage industriel,2157,2157,215
+2158,Autres matériels et outillage industriel,2158,2158,215
+218,Autres immobilisations corporelles,218,218,21
+2181,"Installations générales, agencements et aménagements divers",2181,2181,218
+2182,Matériel de transport,2182,2182,218
+2183,Matériel de bureautique et d'informatique,2183,2183,218
+2184,Mobilier,2184,2184,218
+2185,Autres mobiliers et matériels divers,2185,2185,218
+2186,Actifs biologiques,2186,2186,218
+2187,Emballages récupérables,2187,2187,218
+22,Immobilisations en concession,22,22,2
+221,Terrains en concession,221,221,22
+222,Agencements et aménagements de terrain en concession,222,222,22
+223,Constructions en concession,223,223,22
+225,Installations techniques en concession,225,225,22
+228,Autres immobilisations corporelles en concession,228,228,22
+229,Droits du concédant,229,229,22
+23,Immobilisations en cours,23,23,2
+232,Immobilisations corporelles en cours,232,232,23
+2322,Terrains en cours,2322,2322,232
+2323,Constructions en cours,2323,2323,232
+2325,"Installations techniques, matériels et outillage industriels en cours",2325,2325,232
+2328,Autres immobilisations corporelles en cours,2328,2328,232
+237,Immobilisations incorporelles en cours,237,237,23
+238,Avances et acomptes versés sur commandes d'immobilisations,238,238,23
+2382,Avances sur commandes d’immobilisations incorporelles,2382,2382,238
+2384,Avances sur commandes d’immobilisations corporelles,2384,2384,238
+26,Participations et créances rattachées à des participations,26,26,2
+261,Titres de filiales,261,261,26
+262,Autres titres de participation,262,262,26
+265,Titres de participation évalués par équivalence (entreprises associés),265,265,26
+266,Créances rattachées à des participations groupe,266,266,26
+267,Créances rattachés à des participations hors groupe,267,267,26
+268,Créances rattachés à des sociétés en participation,268,268,26
+269,Versements restant à effectuer sur titres de participation non libérés,269,269,26
+27,Autres immobilisations financières,27,27,2
+271,Titres immobilisés autres que les titres immobilisés de l'activité de portefeuille,271,271,27
+272,"Titres représentatifs de droit de créance (obligations, bons)",272,272,27
+2721,Obligations à terme,2721,2721,272
+2722,Bons du Trésor,2722,2722,272
+2723,Dépôts à terme (DAT > 12 mois),2723,2723,272
+273,Titres immobilisés de l'activité de portefeuille – (T.I.A.P),273,273,27
+274,Prêts et créances sur contrat de location-financement,274,274,27
+2741,Prêts participatifs,2741,2741,274
+2742,Prêts au personnel,2742,2742,274
+2743,Autres prêts accordés,2743,2743,274
+2744,Créances sur contrat de location-financement,2744,2744,274
+2748,Intérêts courus sur prêts et créances de crédit bail,2748,2748,274
+275,Dépôts et cautionnements versés,275,275,27
+2751,Dépôts versés,2751,2751,275
+2752,Cautionnements versés aux fonds de garantie,2752,2752,275
+2753,Cautions de soumissions,2753,2753,275
+2754,Cautions de bonne exécution ou de bonne fin,2754,2754,275
+2755,Cautionnements versés sur loyers (Loyers d'avance),2755,2755,275
+2756,"Cautionnements versés sur Téléphone, Eau, Gaz et électricité",2756,2756,275
+2757,Cautionnements versés à la SONELGAZ,2757,2757,275
+2758,Autres cautionnements versés,2758,2758,275
+276,Autres créances immobilisées,276,276,27
+2761,Créances diverses – Actifs non courants,2761,2761,276
+2768,Intérêts courus et non échus sur actifs non courants,2768,2768,276
+279,Versements restant à effectuer sur titres immobilisés non libérés,279,279,27
+28,Amortissements des immobilisations,28,28,2
+280,Amortissements des immobilisations incorporelles,280,280,28
+2803,Amortissements des frais de développement immobilisables,2803,2803,280
+2804,Amortissements des logiciels informatiques et assimilés,2804,2804,280
+2805,"Amortissements concessions & droits similaires, brevets, licences, marques",2805,2805,280
+2808,Amortissements des autres immobilisations incorporelles,2808,2808,280
+281,Amortissements des immobilisations corporelles,281,281,28
+2811,Amortissements des terrains de gisement (carrières …),2811,2811,281
+2812,Amortissements des agencements et aménagements de terrains,2812,2812,281
+2813,Amortissements des constructions,2813,2813,281
+2815,"Amortissements des Installations techniques, matériels outillage industriels",2815,2815,281
+2818,Amortissements des autres immobilisations corporelles,2818,2818,281
+282,Amortissements des immobilisations mises en concession,282,282,28
+2821,Amortissement : Terrains en concession,2821,2821,282
+2822,Amortissement : Agencements et aménagements de terrains,2822,2822,282
+2823,Amortissement : Constructions en concession,2823,2823,282
+2825,Amortissement : Installations techniques en concession,2825,2825,282
+2828,Amortissement : Autres immobilisations corporelles en concession,2828,2828,282
+29,Pertes de valeur sur immobilisations,29,29,2
+290,Pertes de valeur sur immobilisations incorporelles,290,290,29
+2903,Pertes de valeur sur frais de développement immobilisables,2903,2903,290
+2904,Pertes de valeur sur logiciels informatiques et assimilés,2904,2904,290
+2905,"Pertes de valeur sur concessions & droits similaires, brevets, licences, marques",2905,2905,290
+2907,Pertes de valeur sur écart d’acquisition (Goodwill),2907,2907,290
+2908,Pertes de valeur sur autres immobilisations incorporelles,2908,2908,290
+291,Pertes de valeur sur immobilisations corporelles,291,291,29
+2911,Perte de valeur des terrains (autres que les terrains de gisement),2911,2911,291
+2912,Pertes de valeur sur agencements et aménagements de terrain,2912,2912,291
+2913,Pertes de valeur sur constructions,2913,2913,291
+2914,Pertes de valeur sur immeubles de placement (Juste valeur),2914,2914,291
+2915,"Pertes de valeur sur Installations techniques, matériel et outillage industriel",2915,2915,291
+2916,Pertes de valeur sur actifs biologiques (Juste valeur),2916,2916,291
+2918,Pertes de valeur sur autres immobilisations corporelles,2918,2918,291
+292,Pertes de valeur sur immobilisations mises en concession,292,292,29
+293,Pertes de valeur sur immobilisations en cours,293,293,29
+2931,Pertes de valeurs sur immobilisations incorporelles en cours,2931,2931,293
+2932,Pertes de valeurs sur immobilisations corporelles en cours,2932,2932,293
+294,Pertes de valeurs sur les Unités Génératrices de Trésorerie,294,294,29
+2941,Pertes de valeur sur U.G.T  (1),2941,2941,294
+2942,Pertes de valeur sur U.G.T  (2),2942,2942,294
+296,Pertes de valeur sur participations et créances rattachées à participations,296,296,29
+2961,Pertes de valeur sur titres de filiales,2961,2961,296
+2962,Pertes de valeur sur autres titres de participation,2962,2962,296
+2966,Pertes de valeur sur créances rattachées à des participations – groupe,2966,2966,296
+2967,Pertes de valeur sur créances rattachées à des participations – HG,2967,2967,296
+2968,Pertes de valeur sur créances rattachées à des SEP,2968,2968,296
+297,Pertes de valeur sur autres titres immobilisés,297,297,29
+2971,Pertes de valeur sur titres de placement,2971,2971,297
+2972,Pertes de valeurs sur les TIAP,2972,2972,297
+298,Pertes de valeur sur autres actifs financiers immobilisés,298,298,29
+2981,Pertes de valeur sur les titres participatifs,2981,2981,298
+2982,Pertes de valeur sur les prêts ordinaires,2982,2982,298
+2983,Pertes de valeur sur les dépôts et cautionnements versés,2983,2983,298
+2988,Pertes de valeur sur autres actifs financiers immobilisés,2988,2988,298
+3,CLASSE 3 : COMPTES DE STOCKS ET EN COURS,3,3,
+30,Stocks de marchandises,30,30,3
+301,Marchandises (ou groupe) A,301,301,30
+302,Marchandises (ou groupe) B,302,302,30
+31,Matières premières et fournitures,31,31,3
+311,Matières premières,311,311,31
+3111,Matières (ou groupe) A,3111,3111,311
+3112,Matières (ou groupe) B,3112,3112,311
+3118,Autres matières premières,3118,3118,311
+317,Fournitures Accessoires,317,317,31
+3171,Fournitures A,3171,3171,317
+3172,Fournitures B,3172,3172,317
+3178,Autres fournitures accessoires,3178,3178,317
+32,Autres approvisionnements,32,32,3
+321,Matières consommables,321,321,32
+3211,Matières (ou groupe) C,3211,3211,321
+3212,Matières (ou groupe) D,3212,3212,321
+3218,Autres matières consommables,3218,3218,321
+322,Fournitures consommables,322,322,32
+3221,Carburant et lubrifiant – Véhicules,3221,3221,322
+3222,Petit outillage et fournitures d'ateliers,3222,3222,322
+3223,Droguerie et Produits d'entretien,3223,3223,322
+3224,Pièces de rechange pour équipements & matériels techniques,3224,3224,322
+3225,Pièces de rechange et pneumatique pour matériel de transport,3225,3225,322
+3226,Quincaillerie générale et fournitures de magasin,3226,3226,322
+3227,Fournitures de bureau et imprimés,3227,3227,322
+3228,Autres fournitures consommables,3228,3228,322
+326,Emballages (non récupérables),326,326,32
+3261,Emballages perdus,3261,3261,326
+3262,Emballages récupérables non identifiables,3262,3262,326
+3263,Emballages à usage mixte,3263,3263,326
+33,En cours de production de biens,33,33,3
+331,Produits en cours,331,331,33
+3311,Produits en cours – P1,3311,3311,331
+3312,Produits en cours – P2,3312,3312,331
+3313,Produits en cours – P3,3313,3313,331
+335,Travaux en cours,335,335,33
+3351,Travaux en cours – T1,3351,3351,335
+3352,Travaux en cours – T2,3352,3352,335
+3353,Travaux en cours – T3,3353,3353,335
+34,En cours de production de services,34,34,3
+341,Etudes en cours,341,341,34
+3411,Etudes en cours – E1,3411,3411,341
+3412,Etudes en cours – E2,3412,3412,341
+3413,Etudes en cours – E3,3413,3413,341
+345,Prestations de services en cours,345,345,34
+3451,Prestations de services en cours – S1,3451,3451,345
+3452,Prestations de services en cours – S2,3452,3452,345
+3453,Prestations de services en cours – S3,3453,3453,345
+35,Stocks de produits,35,35,3
+351,Produits intermédiaires,351,351,35
+3511,Produits intermédiaires (ou groupe) – PI 1,3511,3511,351
+3512,Produits intermédiaires (ou groupe) – PI 2,3512,3512,351
+355,Produits finis,355,355,35
+3551,Produits finis (ou groupe) – PF 1,3551,3551,355
+3552,Produits finis (ou groupe) – PF 2,3552,3552,355
+3553,Produits finis (ou groupe) – PF 3,3553,3553,355
+358,"Produits résiduels ou matières de récupération (déchets, rebuts)",358,358,35
+3581,Produits résiduels,3581,3581,358
+3582,Matières de récupération (à recycler),3582,3582,358
+3583,Déchets et rebuts divers destinés à être cédés ou détruits,3583,3583,358
+36,Stocks provenant d’immobilisations,36,36,3
+361,Lot de bord et pièces d’accompagnement,361,361,36
+362,Organes et accessoires démantelés,362,362,36
+365,Pièces de rechanges récupérées sur matériels,365,365,36
+368,Actifs non courants destinés à être cédés (réformes),368,368,36
+37,"Stocks à l'extérieur (en cours de route, en dépôt ou en consignation)",37,37,3
+371,Matières premières en cours de réception,371,371,37
+372,Autres approvisionnements à réceptionner,372,372,37
+373,Stocks en dépôt ou en consignation,373,373,37
+374,Stocks sous douanes,374,374,37
+38,Achats stockés,38,38,3
+380,Achats de Marchandises stockées,380,380,38
+3801,Achats de Marchandises (ou groupe) A,3801,3801,380
+3802,Achats de Marchandises (ou groupe) B,3802,3802,380
+381,Achats de Matières premières et fournitures stockées,381,381,38
+3811,Achats de Matières premières,3811,3811,381
+3817,Achats de Fournitures Accessoires,3817,3817,381
+382,Autres approvisionnements stockés,382,382,38
+3821,Achat de Matières consommables stockées,3821,3821,382
+3822,Achat de Fournitures consommables stockées,3822,3822,382
+3826,Achat d'Emballages non récupérables,3826,3826,382
+3827,Achat de Fournitures consommables non stockées,3827,3827,382
+383,Frais Accessoires sur Achats (indirects) – incorporables,383,383,38
+3830,Frais Accessoires sur Achats de marchandises,3830,3830,383
+3831,Frais Accessoires sur Achats de matières premières et fournitures,3831,3831,383
+3832,Frais Accessoires sur Achats d'autres approvisionnements,3832,3832,383
+384,Achats sans paiements,384,384,38
+3841,Achats locaux,3841,3841,384
+3842,Achats à l'importation,3842,3842,384
+39,Pertes de valeur sur stocks et en cours,39,39,3
+390,Pertes de valeur sur Stocks de marchandises,390,390,39
+391,Pertes de valeur sur Matières premières et fournitures,391,391,39
+392,Pertes de valeur sur Autres approvisionnements,392,392,39
+393,Pertes de valeur sur En cours de production de biens,393,393,39
+394,Pertes de valeur sur En cours de production de services,394,394,39
+395,Pertes de valeur sur stocks de produits,395,395,39
+397,Pertes de valeur sur Stocks à l'extérieur,397,397,39
+4,CLASSE 4 : COMPTES DE TIERS,4,4,
+40,Fournisseurs et comptes rattachés,40,40,4
+401,Fournisseurs de biens et services,401,401,40
+4013,Fournisseurs de stocks,4013,4013,401
+4016,Fournisseurs de services,4016,4016,401
+4017,Fournisseurs : Retenue de garantie sur stocks & services,4017,4017,401
+403,Fournisseurs : Effets à payer,403,403,40
+4031,Effets à payer aux fournisseurs de stocks,4031,4031,403
+4032,Effets à payer aux fournisseurs de services,4032,4032,403
+404,Fournisseurs d'immobilisations,404,404,40
+4041,Fournisseurs d'immobilisations : Nationaux – Publics,4041,4041,404
+4042,Fournisseurs d'immobilisations : Nationaux – Privés,4042,4042,404
+4043,Fournisseurs d'immobilisations : Etrangers,4043,4043,404
+4047,Fournisseurs d'immobilisations : Retenues de garantie,4047,4047,404
+405,Fournisseurs d'immobilisations : Effets à payer,405,405,40
+408,Fournisseurs factures non parvenues,408,408,40
+4081,Fournisseurs de stocks nationaux : Factures non parvenues,4081,4081,408
+4082,Fournisseurs de services – factures non parvenues,4082,4082,408
+4083,Factures à recevoir des Fournisseurs d’immobilisations,4083,4083,408
+4086,"Factures à recevoir des Consultants, CAC et Experts",4086,4086,408
+4088,Fournisseurs : Intérêts courus à payer,4088,4088,408
+4091,Fournisseurs : Avances et acomptes sur commandes,4091,4091,40
+4094,"Autres avances et acomptes (Consultants, CAC et Experts)",4094,4094,40
+4096,Fournisseurs : Créances pour emballages et matériels à rendre,4096,4096,40
+4097,Fournisseurs à soldes débiteurs (à détailler par code Tiers),4097,4097,40
+4098,R.R.R à obtenir,4098,4098,40
+41,Clients et comptes rattachés,41,41,4
+411,Clients,411,411,41
+4111,Clients : Ventes de biens et services,4111,4111,411
+4114,Clients : Autres créances diverses,4114,4114,411
+4117,Clients : Retenues de garantie,4117,4117,411
+413,Clients : effets à recevoir,413,413,41
+416,Clients douteux (ou litigieux),416,416,41
+4161,Clients douteux : secteur public,4161,4161,416
+4162,Clients douteux : secteur privé,4162,4162,416
+417,Créances sur travaux ou prestations en cours,417,417,41
+4171,Créances sur travaux en cours (à l'avancement),4171,4171,417
+4172,Créances sur prestations en cours (à l'avancement),4172,4172,417
+418,Clients - produits (finis) non encore facturés,418,418,41
+4181,Clients : Factures à établir – Secteur Public,4181,4181,418
+4182,Clients : Factures à établir – Secteur Privé,4182,4182,418
+4188,Clients : intérêts moratoires à facturer,4188,4188,418
+419,Clients créditeurs – RRR à accorder et autres avoirs à établir,419,419,41
+4191,Avances et acomptes perçus sur commandes,4191,4191,419
+4196,Clients : dettes pour emballages et matériels consignés,4196,4196,419
+4197,Clients à solde créditeur (à détailler par code Tiers),4197,4197,419
+4198,R.R.R. à accorder,4198,4198,419
+42,Personnel et comptes rattachés,42,42,4
+421,Personnel : Rémunérations dues,421,421,42
+4211,Salaires et appointements à payer,4211,4211,421
+4212,Présalaires à payer,4212,4212,421
+4213,Soldes de tout compte restant dus,4213,4213,421
+422,Fonds des œuvres sociales,422,422,42
+4221,Contributions annuelles à payer (3%),4221,4221,422
+4229,Autres avances pour le compte des œuvres sociales,4229,4229,422
+423,Participation des salariés au résultat,423,423,42
+4231,Quote-part de bénéfice attribuée au personnel,4231,4231,423
+425,Personnel : Avances et acomptes accordés,425,425,42
+4251,Avances sur salaires,4251,4251,425
+4256,Avances sur frais de mission,4256,4256,425
+4258,Autres avances exceptionnelles,4258,4258,425
+426,Personnel : Dépôts reçus,426,426,42
+4261,Frais médicaux à rembourser,4261,4261,426
+4268,Autres dépôts et prestations reçus au profit du personnel,4268,4268,426
+427,Personnel : Oppositions,427,427,42
+4271,Saisie-arrêt et cession de rémunération (sur décision de Justice),4271,4271,427
+4272,Retenue sur prêts sociaux,4272,4272,427
+4273,Retenue pour fonds de solidarité nationale et internationale,4273,4273,427
+4274,Retenue sur loyers logements du personnel,4274,4274,427
+4275,Salaires bloqués,4275,4275,427
+4278,Autres retenues sur salaires,4278,4278,427
+428,Personnel : Charges à payer et produits à recevoir,428,428,42
+4281,Dettes provisionnées pour congés à payer,4281,4281,428
+4286,Frais de mission à payer,4286,4286,428
+4288,Personnel : Autres charges à payer,4288,4288,428
+4289,Personnel : Produits à recevoir,4289,4289,428
+43,Organismes sociaux et comptes rattachés,43,43,4
+431,Sécurité sociale,431,431,43
+4311,Retenue sécurité sociale (part des employés),4311,4311,431
+4312,Cotisations FNPOS,4312,4312,431
+4313,CNAS à payer (part employeur),4313,4313,431
+4314,Cotisations CASNOS à payer,4314,4314,431
+432,Autres organismes sociaux,432,432,43
+4321,Cotisations Mutuelle à payer,4321,4321,432
+4322,Cotisations OPREBAT à payer,4322,4322,432
+4323,Cotisations CACOBATPH à payer,4323,4323,432
+4326,Assurance groupe (Quote-part employeur) à payer,4326,4326,432
+4327,Assurance groupe (Quote-part des travailleurs) à payer,4327,4327,432
+4328,Autres organismes sociaux,4328,4328,432
+438,"Organismes sociaux, charges à payer et produits à recevoir",438,438,43
+4386,Organismes sociaux : Charges sociales sur congés à payer,4386,4386,438
+4388,Organismes sociaux : Autres charges à payer,4388,4388,438
+4389,Organismes sociaux : Produits à recevoir,4389,4389,438
+44,"Etat, collectivités publiques, organismes internationaux et comptes rattachés",44,44,4
+441,"Etat et autres collectivités publiques, subventions à recevoir",441,441,44
+4411,Subventions d’investissements à recevoir,4411,4411,441
+4412,Subventions d’exploitation à recevoir,4412,4412,441
+4413,Subventions d’équilibre à recevoir,4413,4413,441
+4414,Subventions certification ISO à recevoir,4414,4414,441
+4418,Autres subventions et aides publiques à recevoir,4418,4418,441
+4419,Avances sur subventions,4419,4419,441
+442,"Etat, impôts et taxes recouvrables sur des tiers",442,442,44
+4421,IRG retenu sur salaires (barème),4421,4421,442
+4422,IRG – Libératoire sur rappels de salaires et participation,4422,4422,442
+4423,IRG – Libératoire sur bénéfices distribués,4423,4423,442
+4424,IRG – Libératoire sur revenus mobiliers,4424,4424,442
+4425,IRG – Libératoire sur Jetons de présence et tantièmes,4425,4425,442
+4426,IRG – Libératoire retenu à la source aux consultants,4426,4426,442
+4428,Autres impôts retenus à la source,4428,4428,442
+443,Opérations particulières avec l'Etat et les collectivités publiques,443,443,44
+4431,Créances sur l'Etat – Indemnisations,4431,4431,443
+4432,Avance pour compte ANEM – Emplois aidés (Quote part de l'Etat),4432,4432,443
+4438,Créances ou dettes résultant du changement de la réglementation fiscale,4438,4438,443
+444,"Etat, impôts sur les résultats",444,444,44
+4441,Acomptes provisionnels sur I.B.S,4441,4441,444
+4449,Impôts sur les bénéfices – I.B.S à payer,4449,4449,444
+445,"Etat, taxes sur le chiffre d'affaires",445,445,44
+4455,TVA à décaisser,4455,4455,445
+4456,TVA récupérable & précompte,4456,4456,445
+4457,TVA collectée,4457,4457,445
+4458,TVA à régulariser,4458,4458,445
+446,Organismes internationaux,446,446,44
+4461,Fonds de solidarité internationale,4461,4461,446
+4462,Subventions d’organismes étrangers,4462,4462,446
+447,"Autres impôts, taxes et versements assimilés",447,447,44
+4471,Taxe sur l’activité professionnelle – TAP  à payer (sur G.50),4471,4471,447
+4472,Taxe sur l’apprentissage et la formation professionnelle,4472,4472,447
+4473,Taxe sur l’environnement – (Écotaxe),4473,4473,447
+4474,Droits d’enregistrement à payer,4474,4474,447
+4475,Taxe foncière à payer,4475,4475,447
+4476,Taxes spéciales (ou spécifiques) à payer,4476,4476,447
+4478,"Autres droits, impôts et taxes à payer",4478,4478,447
+448,"Etat, charges à payer et produits à recevoir (hors impôts)",448,448,44
+4482,Etat – charges à payer : Charges fiscales sur congés à payer,4482,4482,448
+4486,Rappels d'impôts à payer (hors IBS),4486,4486,448
+4487,Etat – produits à recevoir : Trop versés sur impôts,4487,4487,448
+4488,Etat – produits à recevoir : Dégrèvement d’impôts,4488,4488,448
+45,Groupe et Associés,45,45,4
+451,Opérations Groupe,451,451,45
+4511,Avances de fonds,4511,4511,451
+4518,Autres opérations,4518,4518,451
+455,Associés – Comptes courants,455,455,45
+4551,Associés – Comptes courants : Principal,4551,4551,455
+4556,Associés – Comptes courants : Intérêts courus,4556,4556,455
+456,Associés – Opérations sur le capital,456,456,45
+4561,Associés : Comptes d’apport en société,4561,4561,456
+4562,"Associés : Capital souscrit, appelé et non versé (apports à libérer)",4562,4562,456
+4563,Associés : Versements reçus sur augmentation de Capital,4563,4563,456
+4564,Associés : Versements anticipés,4564,4564,456
+4566,Actionnaires défaillants,4566,4566,456
+4567,Associés : Capital à rembourser,4567,4567,456
+457,Associés – Dividendes à payer,457,457,45
+4571,Coupons d’action,4571,4571,457
+4572,Dividendes mis en paiement,4572,4572,457
+4577,Tantièmes à payer aux administrateurs et gérants,4577,4577,457
+458,Associés – Opérations faites en commun ou en groupement,458,458,45
+4586,Opérations faites en commun : Charges à payer,4586,4586,458
+4587,Opérations faites en commun : Produits à recevoir,4587,4587,458
+4588,Intérêts courus,4588,4588,458
+46,Débiteurs divers et créditeurs divers,46,46,4
+462,Créances sur cessions d'immobilisations,462,462,46
+4621,Fonds à recevoir sur cessions d’Actifs réformés,4621,4621,462
+4622,Débiteurs sur cessions d’immobilisations,4622,4622,462
+464,Dettes sur acquisitions de VMP et instruments financiers dérivés,464,464,46
+465,Créances sur cessions de VMP et instruments financiers dérivés,465,465,46
+467,Autres comptes débiteurs ou créditeurs,467,467,46
+4671,"Fonds en dépôt chez les officiers ministériels (notaire, commis. priseurs)",4671,4671,467
+4672,Avances sur frais divers,4672,4672,467
+4673,Achats pour compte de tiers,4673,4673,467
+4674,Autres avances pour compte,4674,4674,467
+4675,Jetons de présence à payer aux Administrateurs,4675,4675,467
+4676,Débiteurs divers (à détailler),4676,4676,467
+4679,Créditeurs de frais divers (à détailler),4679,4679,467
+468,Divers charges à payer et produits à recevoir,468,468,46
+4686,Charges à payer,4686,4686,468
+4687,Produits à recevoir,4687,4687,468
+47,Comptes transitoires ou d'attente,47,47,4
+476,Dépenses en attente d’imputation,476,476,47
+477,Recettes en attente d’imputation,477,477,47
+478,Autres opérations à régulariser,478,478,47
+48,Charges ou produits constatés d'avance et provisions,48,48,4
+481,Provisions - passifs courants,481,481,48
+4811,Provisions pour procès et litiges (moins de 12 mois),4811,4811,481
+4812,Provisions pour garanties données aux clients (moins de 12 mois),4812,4812,481
+4815,Provisions pour amendes et pénalités,4815,4815,481
+4816,Provisions pour pertes de change,4816,4816,481
+4818,Autres provisions : Passifs courants,4818,4818,481
+486,Charges constatées d'avance,486,486,48
+4861,Loyers payés d’avance (autre que cautionnement),4861,4861,486
+4862,Primes d’assurances payées d’avance,4862,4862,486
+4863,Abonnements payés d’avance,4863,4863,486
+4866,Charges financières différées,4866,4866,486
+4868,Autres charges constatées d’avance,4868,4868,486
+487,Produits constatés d'avance,487,487,48
+4871,Loyers perçus d’avance (immeubles de placement),4871,4871,487
+4877,Subventions à étaler,4877,4877,487
+4878,Autres produits constatés d’avance,4878,4878,487
+49,Pertes de valeur sur comptes de tiers,49,49,4
+491,Pertes de valeur sur comptes de clients,491,491,49
+4911,Pertes de valeurs sur comptes de clients,4911,4911,491
+4912,Pertes de valeurs sur retenues de garanties,4912,4912,491
+495,Pertes de valeur sur comptes du groupe et sur associés,495,495,49
+4951,Pertes de valeur sur compte du groupe,4951,4951,495
+4955,Pertes de valeur sur comptes courants des associés,4955,4955,495
+4958,Pertes de valeur sur opérations faites en commun (SEP – GIE),4958,4958,495
+496,Pertes de valeur sur comptes de débiteurs divers,496,496,49
+4962,Pertes de valeur sur créances de cessions d'immobilisations,4962,4962,496
+4965,Pertes de valeur sur créances de cessions de VMP,4965,4965,496
+4967,Pertes de valeur sur autres comptes débiteurs,4967,4967,496
+498,Pertes de valeur sur autres comptes de tiers,498,498,49
+5,CLASSE 5 : COMPTES FINANCIERS,5,5,
+50,Valeurs mobilières de placement,50,50,5
+501,Part dans des entreprises liées,501,501,50
+502,Actions propres,502,502,50
+503,Autres actions ou titres conférant un droit de propriété,503,503,50
+506,"Obligations, bons du trésor et bons de caisse à court terme",506,506,50
+508,Autres valeurs mobilières de placement et créances assimilés,508,508,50
+509,Versements restant à effectuer sur VMP non libérées,509,509,50
+51,"Banque, établissements financiers et assimilés",51,51,5
+511,Valeurs à l'encaissement,511,511,51
+5111,Chèques à encaisser,5111,5111,511
+5112,Traites remises à l’escompte,5112,5112,511
+5118,Autres valeurs à l’encaissement,5118,5118,511
+512,Banques comptes courants,512,512,51
+5121,Comptes bancaires : Dinars,5121,5121,512
+5122,Comptes bancaires : Devises,5122,5122,512
+515,Trésor Public et établissements publics,515,515,51
+5151,Caisses du Trésor Public,5151,5151,515
+5152,Caisses des établissements publics,5152,5152,515
+517,Autres organismes financiers,517,517,51
+5171,Banque postale (C.C.P),5171,5171,517
+5172,Sociétés de leasing (crédit-bail),5172,5172,517
+5173,Sociétés de factoring (affacturage),5173,5173,517
+5176,Société de bourse,5176,5176,517
+5178,Autres organismes et établissements financiers,5178,5178,517
+518,Intérêts courus,518,518,51
+5186,Intérêts courus à payer  (agios à payer),5186,5186,518
+5187,Intérêts courus à recevoir (intérêts des dépôts créditeurs à recevoir),5187,5187,518
+519,Concours bancaires courants,519,519,51
+5191,Facilité de caisse,5191,5191,519
+5192,Découvert bancaire,5192,5192,519
+5193,Autres avances bancaires,5193,5193,519
+5198,Intérêts courus sur concours bancaires courants,5198,5198,519
+52,Instruments financiers dérivés,52,52,5
+521,Instruments financiers dérivés : Actifs,521,521,52
+529,Instruments financiers dérivés : Passifs,529,529,52
+53,Caisse,53,53,5
+531,Caisse siège social,531,531,53
+5311,Caisse principale en Dinars,5311,5311,531
+5314,Caisse principale en Devises,5314,5314,531
+532,Caisse Auxiliaire,532,532,53
+5321,Caisse auxiliaire : Succursale (ou Unité) A,5321,5321,532
+5322,Caisse auxiliaire : Succursale (ou Unité) B,5322,5322,532
+54,Régies d'avances et accréditifs,54,54,5
+541,Régies d'avances,541,541,54
+542,Accréditifs,542,542,54
+58,Virements internes,58,58,5
+581,Virements de fonds,581,581,58
+5811,Virements interbancaires,5811,5811,581
+5812,Versements d'espèces en banques,5812,5812,581
+5813,Alimentation caisses,5813,5813,581
+588,Autres virements internes,588,588,58
+5886,Achats au comptant,5886,5886,588
+5887,Ventes au comptant,5887,5887,588
+5888,Autres virements internes - détails,5888,5888,588
+59,Pertes de valeur sur actifs financiers courants,59,59,5
+591,Pertes de valeur sur valeurs en banque et Etablissements financiers,591,591,59
+594,Pertes de valeurs sur régies d'avances et accréditifs,594,594,59
+6,CLASSE 6 : COMPTES DE CHARGES,6,6,
+60,Achats consommés,60,60,6
+600,Achats de marchandises vendues,600,600,60
+6001,Matières premières consommées,6001,6001,600
+6002,Marchandises (ou groupe) B,6002,6002,600
+601,Matières premières & fournitures consommées,601,601,60
+6017,Fournitures accessoires consommées,6017,6017,601
+602,Autres approvisionnements consommés,602,602,60
+6021,Matières consommables,6021,6021,602
+6022,Fournitures consommables,6022,6022,602
+6026,Emballages consommés,6026,6026,602
+603,Variations des stocks (inventaire intermittent),603,603,60
+6030,Variations de stocks de marchandises,6030,6030,603
+6031,Variations de stock de matières premières & Fournitures,6031,6031,603
+6032,Variations de stock des autres approvisionnements,6032,6032,603
+604,Achats d'études et de prestations de services,604,604,60
+6041,Achats d'études,6041,6041,604
+6042,Achats de prestations de services,6042,6042,604
+605,"Achats de matériels, équipements et travaux",605,605,60
+6051,Achats d’immobilisations de faible valeur : Petit matériel & outillage,6051,6051,605
+6052,Achats d’immobilisations de faible valeur : Mobilier,6052,6052,605
+6053,Achats d’immobilisations de faible valeur : Matériel informatique,6053,6053,605
+6054,Achats d’immobilisations de faible valeur : Matériel de communicat.,6054,6054,605
+6058,"Autres achats de matériels, d'équipements et de travaux",6058,6058,605
+607,Achats non stockés de matières et fournitures,607,607,60
+6071,Achat non stocké de carburant,6071,6071,607
+6072,Achat non stocké d'énergie et de force motrice (ateliers),6072,6072,607
+6073,"Fournitures non stockées : Eau, Gaz & Electricité (bureaux)",6073,6073,607
+6074,Fournitures administratives et de bureautique non stockées,6074,6074,607
+6075,Achats non stockés de fournitures d'atelier et de magasin,6075,6075,607
+6076,Achat non stocké de Tenues de travail et de sécurité,6076,6076,607
+6078,Achat : Autres fournitures consommables non stockées,6078,6078,607
+608,Frais accessoires d’achat (inventaire intermittent),608,608,60
+609,"Rabais, remises, ristournes obtenus sur achats",609,609,60
+6090,R.R.R Obtenus sur achats de marchandises,6090,6090,609
+6091,R.R.R Obtenus sur achats de matières premières,6091,6091,609
+6092,R.R.R Obtenus sur achats d’autres approvisionnements,6092,6092,609
+6094,R.R.R Obtenus sur achats sur études et prestations,6094,6094,609
+6095,R.R.R Obtenus sur achats de petits matériels et équipements,6095,6095,609
+61,Services extérieurs,61,61,6
+611,Sous-traitance générale,611,611,61
+6111,Sous traitance de spécialité,6111,6111,611
+6112,Sous traitance de capacité,6112,6112,611
+6113,Sous traitance de marché,6113,6113,611
+613,Locations,613,613,61
+6131,Contrats de location-financement (en crédit-bail),6131,6131,613
+6137,Malis sur emballages rendus,6137,6137,613
+614,Charges locatives et charges de copropriété,614,614,61
+6141,Charges locatives d’immeubles,6141,6141,614
+6142,Charges de copropriété logements de fonction,6142,6142,614
+6143,Loyers garages et parking de stationnement de véhicules,6143,6143,614
+6148,Autres charges locatives,6148,6148,614
+615,"Entretien, réparations et maintenance",615,615,61
+6151,Entretien et réparation sur biens immobiliers,6151,6151,615
+6152,Entretien et réparation sur biens mobiliers,6152,6152,615
+6156,Maintenance,6156,6156,615
+616,Primes d'assurances,616,616,61
+6161,Assurances multirisques professionnels,6161,6161,616
+6162,Assurances transport,6162,6162,616
+6163,Assurance responsabilité civile,6163,6163,616
+6164,Assurance catastrophe naturelle,6164,6164,616
+6165,Assurance couverture risque de Vie,6165,6165,616
+6168,Autres assurances,6168,6168,616
+617,Etudes et recherches,617,617,61
+6171,Assistance technique,6171,6171,617
+6178,Autres frais d’études et de recherches,6178,6178,617
+618,Documentation et divers,618,618,61
+6181,Documentation générale,6181,6181,618
+6182,"Abonnements aux Journaux, revues et JO/BOAL/BOMOP ...etc.",6182,6182,618
+6183,"Documentation technique (plans, schémas, maquettes, etc.)",6183,6183,618
+6184,Frais de reprographie,6184,6184,618
+6185,Frais de soumissions et de marchés,6185,6185,618
+6186,Frais de conseils et assemblées,6186,6186,618
+6187,"Frais de colloques, séminaires et conférences",6187,6187,618
+619,"Rabais, remises, ristournes obtenus sur services extérieurs",619,619,61
+62,Autres services extérieurs,62,62,6
+621,Personnel extérieur a l'entreprise,621,621,62
+6211,Personnel intérimaire,6211,6211,621
+6212,Charges de sécurité et de gardiennage,6212,6212,621
+6213,Charges de nettoyage et travaux d’insalubrité,6213,6213,621
+6216,Personnel détaché ou prêté à l’entreprise,6216,6216,621
+622,Rémunérations d'intermédiaires et honoraires,622,622,62
+6222,Commissions sur ventes,6222,6222,622
+6223,Rémunération de consultants,6223,6223,622
+6225,Rémunération d’affacturage (factoring),6225,6225,622
+6226,Honoraires (autres que ceux incorporés dans les coûts),6226,6226,622
+6227,Frais d’actes et de contentieux,6227,6227,622
+6228,Autres rémunérations divers (non incorporables aux coûts),6228,6228,622
+623,"Publicité, publication, relations publiques",623,623,62
+6231,Annonces et insertions,6231,6231,623
+6232,Echantillons,6232,6232,623
+6233,"Foires, expositions et festivités",6233,6233,623
+6234,"Parrainage, Sponsoring et mécénat",6234,6234,623
+6235,Cadeau à la clientèle,6235,6235,623
+6236,Catalogues et imprimés,6236,6236,623
+6237,Publications Autres publicités,6237,6237,623
+6238,Autres frais de relations publiques,6238,6238,623
+624,Transports de biens et transport collectif du personnel,624,624,62
+6241,Transport sur ventes,6241,6241,624
+6242,Transport collectif du personnel,6242,6242,624
+6243,Transport entre établissements ou chantiers,6243,6243,624
+6244,Transport administratif,6244,6244,624
+6248,Autres transports divers,6248,6248,624
+625,"Déplacements, missions et réceptions",625,625,62
+6251,Voyages et déplacements à l’étranger,6251,6251,625
+6252,Frais de déménagement,6252,6252,625
+6255,Missions : intérieur du pays,6255,6255,625
+6257,Réceptions et hébergement,6257,6257,625
+626,Frais postaux et de télécommunications,626,626,62
+6261,Affranchissement courrier,6261,6261,626
+6262,Abonnement boite postale,6262,6262,626
+6263,Abonnements et communications téléphonie mobile,6263,6263,626
+6264,Abonnement internet,6264,6264,626
+6265,Frais de télécommunication (fixe et fax),6265,6265,626
+627,Services bancaires et assimilés,627,627,62
+6271,Frais sur effets et sur titres,6271,6271,627
+6272,Commissions bancaires,6272,6272,627
+6276,Location de coffres,6276,6276,627
+6278,Autres frais et commissions bancaires,6278,6278,627
+628,Cotisations et divers,628,628,62
+6281,Frais de recrutement de personnel,6281,6281,628
+6282,Frais de formation externe du personnel,6282,6282,628
+6283,Cotisations professionnelles,6283,6283,628
+6284,Droits de stationnement parking privé,6284,6284,628
+6288,Autres cotisations et dons courants divers,6288,6288,628
+629,"Rabais, remises, ristournes obtenus sur autres services extérieurs",629,629,62
+63,Charges de personnel,63,63,6
+631,Rémunérations du personnel,631,631,63
+6311,Traitements et Salaires,6311,6311,631
+6312,Primes,6312,6312,631
+6313,Indemnités,6313,6313,631
+6314,Prestations directes,6314,6314,631
+6315,Avantages et prestations en nature,6315,6315,631
+634,Rémunération de l'exploitant,634,634,63
+635,Cotisations aux organismes sociaux,635,635,63
+6351,Cotisations de sécurité sociale – CNAS,6351,6351,635
+6352,Cotisations au FNPOS,6352,6352,635
+6353,Cotisations à la retraite – CNR,6353,6353,635
+6354,Cotisations aux mutuelles,6354,6354,635
+6355,Cotisations à la CACOBATPH,6355,6355,635
+636,Cotisations sociales de l'exploitant,636,636,63
+6361,Cotisation annuelle à la CASNOS,6361,6361,636
+6368,Autres cotisations,6368,6368,636
+637,Autres charges sociales,637,637,63
+6374,Versements aux œuvres sociales,6374,6374,637
+6375,Autres contributions sociales,6375,6375,637
+638,Autres charges de personnel,638,638,63
+6381,Médecine du travail et pharmacie,6381,6381,638
+6382,Frais de formation et de perfectionnement du personnel (en interne),6382,6382,638
+6383,Frais d’activités socioculturelles et sportives,6383,6383,638
+6384,Avantages en nature accordés au personnel,6384,6384,638
+6385,Médailles du mérite et Jubilé,6385,6385,638
+6387,"Intéressement, primes et avantages liés aux résultats",6387,6387,638
+6388,Autres charges de personnel,6388,6388,638
+64,"Impôts, Taxes et versements assimilés",64,64,6
+641,"Impôts, taxes et versements assimilés sur rémunérations",641,641,64
+6412,Taxe d’apprentissage,6412,6412,641
+6413,Taxe sur la formation professionnelle,6413,6413,641
+6418,Autres taxes sur les salaires,6418,6418,641
+642,Impôts et taxes non récupérables sur chiffre d’affaires,642,642,64
+6421,Taxe sur l’activité professionnelle – T.A.P. (sur les débits),6421,6421,642
+6422,Taxe sur l’activité professionnelle – T.A.P. (sur encaissements),6422,6422,642
+645,Autres impôts et taxes (hors impôts sur les résultats),645,645,64
+6451,Taxe foncière sur les propriétés bâties et non bâties,6451,6451,645
+6452,Taxes spéciales et droits d'accises,6452,6452,645
+6453,Taxe sur l’environnement (écotaxe),6453,6453,645
+6454,Taxes sur les véhicules (Vignettes),6454,6454,645
+6455,Droits de stationnement parking communal,6455,6455,645
+6456,Droits d’enregistrement sur actes et marchés,6456,6456,645
+6457,Droits de timbre,6457,6457,645
+6458,"Autres droits, impôts et taxes divers",6458,6458,645
+65,Autres charges opérationnelles,65,65,6
+651,"Redevances pour concessions, brevets, licences, logiciels et valeurs similaires",651,651,65
+6511,Redevances pour concessions,6511,6511,651
+6512,Redevances pour brevets et licences de fabrication,6512,6512,651
+6516,Redevances pour exploitation de logiciels et valeurs similaires,6516,6516,651
+652,Moins values sur sortie d'actifs immobilisés non financiers,652,652,65
+6521,Moins value sur cession matériel et outillage,6521,6521,652
+6522,Moins value sur cession matériel de transport,6522,6522,652
+6523,Moins value sur cession mobilier et matériel de bureau,6523,6523,652
+6528,Moins value sur cession autres équipements et matériels,6528,6528,652
+653,Jetons de présence,653,653,65
+6531,Jetons de présence aux administrateurs,6531,6531,653
+654,Pertes sur créances irrécouvrables,654,654,65
+6541,Pertes sur créances de l'exercice,6541,6541,654
+6542,Pertes sur créances des exercices antérieurs,6542,6542,654
+655,Quote-part de résultat sur opérations faites en commun,655,655,65
+6551,Quote-part de bénéfice transféré dans le cadre d'un GIE ou d'une SEP,6551,6551,655
+6552,Quote-part de perte supportée dans le cadre d'un GIE ou d'une SEP,6552,6552,655
+656,"Amendes et pénalités, subventions accordées, dons et libéralités",656,656,65
+6562,"Amendes et pénalités (pénales, fiscales et parafiscales)",6562,6562,656
+6563,Subventions accordées,6563,6563,656
+6566,Dons et libéralités,6566,6566,656
+657,Charges exceptionnelles de gestion courante,657,657,65
+6571,Ecart de stocks (négatif) de marchandises,6571,6571,657
+6572,"Ecart de stocks (négatif) de matières, fournitures et autres approvisionnements",6572,6572,657
+6575,Rappel d’impôts (autre qu’IBS),6575,6575,657
+6578,Autres charges exceptionnelles,6578,6578,657
+658,Autres charges de gestion courante,658,658,65
+6581,Charges sur exercices antérieurs (en cours d'exercice),6581,6581,658
+6588,Autres charges diverses de gestion courante,6588,6588,658
+66,Charges financières,66,66,6
+661,Charges d'intérêts,661,661,66
+6611,Intérêts des emprunts,6611,6611,661
+6612,Intérêts des dettes,6612,6612,661
+6616,Intérêts bancaires sur opérations de financement (découvert),6616,6616,661
+6618,Intérêts des autres dettes,6618,6618,661
+664,Pertes sur créances liées à des participations,664,664,66
+665,Ecart d’évaluation sur actifs financiers - Moins-values,665,665,66
+6651,Mali provenant du rachat des actions propres,6651,6651,665
+666,Pertes de change,666,666,66
+667,Pertes nettes sur cessions d’actifs financiers,667,667,66
+668,Autres charges financières,668,668,66
+67,Eléments extraordinaires (Charges),67,67,6
+68,"Dotations aux amortissements, provisions et pertes de valeur",68,68,6
+681,"Dotations aux amortissements, provisions et pertes de valeur - actifs non courants",681,681,68
+6811,DAP-PDV : Immobilisations incorporelles,6811,6811,681
+6812,DAP-PDV : Immobilisations corporelles,6812,6812,681
+682,"Dotations aux amortissements, provisions et PDV des biens mis en concession",682,682,68
+685,Dotations aux provisions et pertes de valeurs – Actifs courants,685,685,68
+6853,Dotations pour pertes de valeurs sur stocks,6853,6853,685
+6854,Dotations pour pertes de valeurs sur créances,6854,6854,685
+6855,Dotation annuelle pour Indemnité de départ à la retraite et IFC,6855,6855,685
+6856,Dotations aux provisions pour pertes et charges – PNC,6856,6856,685
+6858,Dotations aux provisions – passifs courants,6858,6858,685
+686,"Dotations aux amortissements, provisions et pertes de valeur, éléments financiers",686,686,68
+6861,Dotations aux amortissements des primes de remboursement,6861,6861,686
+6862,Pertes de valeur des immobilisations financières,6862,6862,686
+69,Impôts sur les résultats et assimilés,69,69,6
+691,Participation des travailleurs aux bénéfices,691,691,69
+692,Imposition différée actif – Produits,692,692,69
+693,Imposition différée passif – Charges,693,693,69
+695,Impôts sur les bénéfices basés sur le résultat des activités ordinaires,695,695,69
+698,Autres impôts sur les résultats,698,698,69
+7,CLASSE 7 : COMPTES DE PRODUITS,7,7,
+70,"Ventes de marchandises et de produits fabriqués, vente de   prestations de services et produits annexes",70,70,7
+700,Ventes de Marchandises,700,700,70
+7001,Marchandises (ou groupe) A,7001,7001,700
+7002,Marchandises (ou groupe) B,7002,7002,700
+701,Ventes de produits finis,701,701,70
+7011,Ventes de Produit fini (ou groupe) – PF1,7011,7011,701
+7012,Ventes de Produit fini (ou groupe) – PF2,7012,7012,701
+7013,Ventes de Produit fini (ou groupe) – PF3,7013,7013,701
+702,Ventes de produits intermédiaires,702,702,70
+7021,Ventes de Produits intermédiaires (ou groupe) – PI-1,7021,7021,702
+7022,Ventes de Produits intermédiaires (ou groupe) – PI-2,7022,7022,702
+7028,Ventes de sous produits (PR et accessoires fabriqués),7028,7028,702
+703,Ventes de produits résiduels,703,703,70
+7031,Ventes de déchets,7031,7031,703
+7032,Ventes de rebuts,7032,7032,703
+7033,Ventes de matières de récupération recyclables,7033,7033,703
+704,Vente de travaux,704,704,70
+7041,Travaux hydrauliques,7041,7041,704
+7042,Travaux publics,7042,7042,704
+7043,Travaux de constructions de bâtiments,7043,7043,704
+7044,Travaux de restauration de sites et monuments,7044,7044,704
+7045,Travaux de VRD et d'assainissement,7045,7045,704
+7046,Travaux d'entretien et de nettoyage,7046,7046,704
+7047,Travaux forestiers,7047,7047,704
+7048,Autres travaux de réalisation,7048,7048,704
+705,Vente d'études,705,705,70
+7051,Etudes : E1,7051,7051,705
+7058,Autres études techniques,7058,7058,705
+706,Autres prestations de services,706,706,70
+7061,Prestations de services fournis : S1,7061,7061,706
+7068,Autres Prestations de services,7068,7068,706
+708,Produits des activités annexes,708,708,70
+7081,Cession de matières premières,7081,7081,708
+7082,Cession d’autres approvisionnements,7082,7082,708
+7086,Bonis sur reprise d’emballages consignés,7086,7086,708
+7088,Autres produits des activités annexes,7088,7088,708
+709,"Rabais, remises et ristournes accordés",709,709,70
+7092,Réduction sur ventes – Hors factures,7092,7092,709
+7093,Réduction sur prestations – Hors factures,7093,7093,709
+72,Production stockée ou déstockée,72,72,7
+723,Variation de stocks d'encours,723,723,72
+7233,En-cours de production,7233,7233,723
+7234,En-cours d'études et de services,7234,7234,723
+724,Variation de stocks de produits,724,724,72
+7241,Produits intermédiaires,7241,7241,724
+7245,Produits finis,7245,7245,724
+7248,Produits résiduels,7248,7248,724
+729,Coût de la sous activité (différence d'imputation coût du chômage),729,729,72
+73,Production immobilisée,73,73,7
+731,Production immobilisée d'actifs incorporels (logiciels),731,731,73
+732,Production immobilisée d'actifs corporels,732,732,73
+74,Subventions d’exploitation,74,74,7
+741,Subvention d'équilibre,741,741,74
+748,Autres subventions d'exploitation,748,748,74
+75,Autres produits opérationnels,75,75,7
+751,"Redevances pour concessions, brevets, licences, logiciels et valeurs similaires",751,751,75
+752,Plus values sur sorties d’actifs immobilisés non financiers,752,752,75
+7521,Plus value sur cession d’éléments d’actifs mis à la réforme,7521,7521,752
+7528,Plus value sur autres éléments d’actifs corporels cédés,7528,7528,752
+753,Jetons de présence et rémunérations d'administrateurs ou de gérant,753,753,75
+7531,Jetons de présence perçus,7531,7531,753
+754,Quotes-parts de subventions d’investissement virées au résultat de l’exercice,754,754,75
+755,Quote-part de résultat sur opérations faites en commun,755,755,75
+7551,Quote-part de perte transférée (dans les SEP et GIE),7551,7551,755
+7552,Quote-part de bénéfice attribué (dans les SEP et GIE),7552,7552,755
+756,Rentrées sur créances amorties,756,756,75
+757,Produits exceptionnels sur opérations de gestion,757,757,75
+7571,Ecart de stocks (positif) de marchandises,7571,7571,757
+7572,"Ecart de stocks (positif) de matières, fournitures et autres approvisionnements",7572,7572,757
+7575,Dégrèvements d’impôts (autre qu’IBS),7575,7575,757
+7578,Autres produits exceptionnels,7578,7578,757
+758,Autres produits de gestion courante,758,758,75
+7581,Lots de bord et pièces de rechange gratuites,7581,7581,758
+7582,Remboursements sinistres et dégâts assurés,7582,7582,758
+7583,Revenus des immeubles de placement,7583,7583,758
+7586,Produits des exercices antérieurs (en cours d'exercice),7586,7586,758
+7588,Autres produits divers de gestion courante,7588,7588,758
+76,Produits financiers,76,76,7
+761,Produits de participations,761,761,76
+762,Revenus des actifs financiers,762,762,76
+763,Revenus de créances,763,763,76
+765,Ecart d’évaluation sur actifs financiers – Plus-values,765,765,76
+766,Gains de change,766,766,76
+767,Profits nets sur cessions d’actifs financiers,767,767,76
+768,Autres produits financiers,768,768,76
+77,Eléments extraordinaires (Produits),77,77,7
+78,Reprises sur pertes de valeurs et provisions,78,78,7
+781,Reprise d'exploitation sur pertes de valeur et provisions - actifs non courants,781,781,78
+7811,Reprises sur amortissements : Immobilisations incorporelles,7811,7811,781
+7812,Reprises sur perte de valeur : Immobilisations incorporelles,7812,7812,781
+7813,Reprises sur amortissements : Immobilisations corporelles,7813,7813,781
+7814,Reprises sur perte de valeur : Immobilisations corporelles,7814,7814,781
+7815,Reprises sur écarts de réévaluation : Immobilisations corporelles,7815,7815,781
+7817,Reprises sur plus values à réinvestir,7817,7817,781
+785,Reprise d'exploitation sur pertes de valeur et provisions - actifs courants,785,785,78
+7853,Reprise sur pertes de valeurs – Stocks et encours,7853,7853,785
+7854,Reprise sur pertes de valeurs – Créances,7854,7854,785
+7858,Reprise sur provisions pour pertes et charges – PNC,7858,7858,785
+786,Reprises financières sur pertes de valeur et provisions,786,786,78
+18141,Créances commerciales,18141,18141,1814
+18151,Dettes commerciales,18151,18151,1815
+37178,Achats d'autres fournitures accessoires,37178,37178,371
+38111,Matières (ou groupe) A,38111,38111,3811
+38112,Matières (ou groupe) B,38112,38112,3811
+38118,Autres matières premières,38118,38118,3811
+38171,Achats de Fournitures A,38171,38171,3817
+38172,Achats de Fournitures B,38172,38172,3817
+400,Fournisseurs et comptes rattachés,400,400,40
+40131,Fournisseurs de stocks : Nationaux – Publics,40131,40131,4013
+40132,Fournisseurs de stocks : Nationaux – Privés,40132,40132,4013
+40133,Fournisseurs de stocks : Etrangers,40133,40133,4013
+40161,Fournisseurs de services : Nationaux – Publics,40161,40161,4016
+40162,Fournisseurs de services : Nationaux – Privés,40162,40162,4016
+40163,Fournisseurs de services : Etrangers,40163,40163,4016
+40171,Fournisseurs : Retenues de garantie – Publics,40171,40171,4017
+40172,Fournisseurs : Retenues de garantie – Privés,40172,40172,4017
+40173,Fournisseurs : Retenues de garantie – Etrangers,40173,40173,4017
+410,Clients et comptes rattachés,410,410,41
+44551,TVA à décaisser (à payer sur G.50),44551,44551,4455
+44552,Obligations cautionnées (au profit des Douanes),44552,44552,4455
+44562,TVA récupérable sur immobilisations,44562,44562,4456
+44563,TVA transférée par d'autres entreprises,44563,44563,4456
+44566,TVA récupérable sur achats de stocks et de services,44566,44566,4456
+44568,Crédit de TVA à reporter (Précompte),44568,44568,4456
+44571,TVA collectée sur Ventes – (livraisons juridiques ou matérielles),44571,44571,4457
+44572,TVA collectée sur les encaissements,44572,44572,4457
+44575,Droits de timbre perçus au profit du Trésor,44575,44575,4457
+44583,Remboursement de TVA demandé,44583,44583,4458
+44584,TVA récupérée d’avance ou en attente de régularisation,44584,44584,4458
+44586,TVA sur factures d’achats non parvenues,44586,44586,4458
+44587,TVA sur factures de ventes ou de prestations à établir,44587,44587,4458
+45611,Associés : Comptes d’apport en société,45611,45611,4561
+45615,Associés : Apports en numéraires,45615,45615,4561
+5031,Actions détenues en vue de la revente,5031,5031,503
+5061,Obligations à moins de 12 mois,5061,5061,506
+5062,Bons du Trésor à court terme,5062,5062,506
+5063,Bons de caisse à court terme,5063,5063,506
+5081,Autres valeurs mobilières,5081,5081,508
+5082,Bons de souscription,5082,5082,508
+5083,Intérêts courus,5083,5083,508
+5088,Intérêts courus,5088,5088,508
+5113,Effets à l'encaissement,5113,5113,511
+6011,Matières premières consommées,6011,6011,601
+60111,Matières (ou groupe) A,60111,60111,6011
+60112,Matières (ou groupe) B,60112,60112,6011
+60118,Autres matières premières consommées,60118,60118,6011
+60171,Fournitures A,60171,60171,6017
+60172,Fournitures B,60172,60172,6017
+60178,Autres fournitures accessoires consommées,60178,60178,6017
+60211,Matières (ou groupe) C,60211,60211,6021
+60212,Matières (ou groupe) D,60212,60212,6021
+60218,Autres matières consommées,60218,60218,6021
+60221,Carburant et lubrifiant – Véhicules,60221,60221,6022
+60222,Petit outillage et fournitures d'ateliers,60222,60222,6022
+60223,Droguerie et Produits d'entretien,60223,60223,6022
+60224,Pièces de rechange pour équipements et matériels techniques,60224,60224,6022
+60225,Pièces de rechange et pneumatique pour matériel de transport,60225,60225,6022
+60226,Quincaillerie générale et fournitures de magasin,60226,60226,6022
+60228,Autres fournitures consommées,60228,60228,6022
+60261,Emballages perdus consommés,60261,60261,6026
+60262,Emballages récupérables non identifiables consommés,60262,60262,6026
+60263,Emballages à usage mixte consommés,60263,60263,6026
+61311,Locations immobilières : Redevance de crédit bail immobilier,61311,61311,6131
+61312,Locations mobilières : Redevance de crédit bail mobilier,61312,61312,6131
+62551,Missions : intérieur du pays - Frais de voyage,62551,62551,6255
+62552,Missions : intérieur du pays - Frais de séjour,62552,62552,6255
+63111,"Traitements, salaires et appointements",63111,63111,6311
+63112,Présalaires et indemnités de stage et d’apprentissage,63112,63112,6311
+63113,Heures supplémentaires et IFSP,63113,63113,6311
+63114,Congés payés,63114,63114,6311
+63121,Prime de responsabilité,63121,63121,6312
+63122,Prime de panier,63122,63122,6312
+63123,Primes d’encouragement et de rendement individuel (PRI-PRC),63123,63123,6312
+63124,Primes sur résultats au profit des cadres dirigeants,63124,63124,6312
+63125,Primes de véhicule,63125,63125,6312
+63126,Prime de caisse et de bilan,63126,63126,6312
+63127,Prime de sujétion,63127,63127,6312
+63128,Primes spéciales,63128,63128,6312
+63131,Indemnité d'Expérience professionnelle (I.E.P),63131,63131,6313
+63132,Indemnité de nuisance,63132,63132,6313
+63133,Indemnité de travail posté,63133,63133,6313
+63134,Indemnités de fin de carrière et de départ à la retraite (IDR – IFC),63134,63134,6313
+63135,Indemnités kilométriques et de transport,63135,63135,6313
+63138,Autres Indemnités liées au salaire,63138,63138,6313
+63141,Bonifications,63141,63141,6314
+63142,"Supplément familial : Prime de scolarité, IPSU, ICAF",63142,63142,6314
+63148,Autres indemnités et avantages divers,63148,63148,6314
+7518,Autres droits et valeurs similaires,7518,7518,751
+78111,Reprises sur amortissements : Immobilisations incorporelles,78111,78111,7811
+78112,Reprises sur perte de valeur : Immobilisations incorporelles,78112,78112,7811
+78113,Reprises sur amortissements : Immobilisations corporelles,78113,78113,7811
+78114,Reprises sur perte de valeur : Immobilisations corporelles,78114,78114,7811
+78115,Reprises sur écarts de réévaluation : Immobilisations corporelles,78115,78115,7811
+78117,Reprises sur plus values à réinvestir,78117,78117,7811
