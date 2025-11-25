@@ -3,7 +3,6 @@
     <data noupdate="0">
         <record id="pcg_0" model="account.group">
             <field name="name">Système Comptable et Financier Algérien</field>
-            <field name="code_prefix_start">0</field>
         </record>
         <record id="pcg_1" model="account.group">
             <field name="name">CLASSE 1 : COMPTES DE CAPITAUX</field>
