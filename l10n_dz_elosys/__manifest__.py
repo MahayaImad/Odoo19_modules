@@ -46,7 +46,7 @@
     'data': [
         'data/accounting_group.xml',
         'data/l10n_dz_base_chart_data.xml',
-        'data/account_group.xml',
+        'data/account.group.csv',
         'data/account_account_template_data.xml',
         'data/account_chart_template_data.xml',
         'data/account_data.xml',
