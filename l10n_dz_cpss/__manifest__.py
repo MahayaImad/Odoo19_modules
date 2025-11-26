@@ -51,4 +51,5 @@ Ce module est basé sur les travaux de Osis et de la communauté Odoo Algérie.
     'license': 'LGPL-3',
     'installable': True,
     'application': False,
+    'post_init_hook': 'post_init_hook',
 }
