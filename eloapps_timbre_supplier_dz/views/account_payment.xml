@@ -13,16 +13,15 @@
             </xpath>
 
             <xpath expr="//div[@name='button_box']" position="inside">
-                <button name="button_open_invoice_supplier" type="object" class="oe_stat_button" icon="fa-bars" attrs="{'invisible':['|','|','|','|','|',
+                <button name="button_open_invoice_supplier" type="object" class="oe_stat_button" icon="fa-bars" attrs="{'invisible':['|','|','|','|',
                        ('for_based_on', '!=', True),
                        ('for_journal_id', '!=', True),
-                       ('is_internal_transfer', '=', True),
                        ('partner_type', '!=', 'supplier'),
                        ('supplier_move_id','=', False),
                        ('droit_timbre_supplier','=', 0)
                        ]}">
                     <span>Timbre fournisseur</span>
-                    
+
                 </button>
 
 
@@ -33,10 +32,9 @@
                 <field name="for_based_on" invisible="1"/>
                 <field name="for_journal_id" invisible="1"/>
 
-                <group name="group3" string="Timbre fournisseur" attrs="{'invisible':['|','|','|',
+                <group name="group3" string="Timbre fournisseur" attrs="{'invisible':['|','|',
                        ('for_based_on', '!=', True),
                        ('for_journal_id', '!=', True),
-                       ('is_internal_transfer', '=', True),
                        ('partner_type', '!=', 'supplier')
                        ]}">
 
@@ -44,10 +42,9 @@
 
                     <field name="add_droit_timbre"
                        widget="boolean_toggle"
-                       attrs="{'invisible':['|','|','|',
+                       attrs="{'invisible':['|','|',
                        ('for_based_on', '!=', True),
                        ('for_journal_id', '!=', True),
-                       ('is_internal_transfer', '=', True),
                        ('partner_type', '!=', 'supplier')
                        ]}"/>
 
