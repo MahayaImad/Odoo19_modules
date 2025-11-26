@@ -350,6 +350,7 @@ l10n_dz_298800,Pertes de valeur sur autres actifs financiers immobilisés,298800
 l10n_dz_300000,Stocks de marchandises,300000,asset_current,,True,Stocks de marchandises
 l10n_dz_301000,Marchandise(ou groupe) A,301000,asset_current,,True,Marchandise(ou groupe) A
 l10n_dz_302000,Marchandise(ou groupe) B,302000,asset_current,,True,Marchandise(ou groupe) B
+l10n_dz_31,Matières premières et fournitures,31,asset_current,,False,Matières premières et fournitures
 l10n_dz_310000,Matières premières et fourniture,310000,asset_current,,True,Matières premières et fourniture
 l10n_dz_311000,Matières premières,311000,asset_current,,True,Matières premières
 l10n_dz_311100,Matière (ou groupe) A,311100,asset_current,,True,Matière (ou groupe) A
@@ -473,6 +474,7 @@ l10n_dz_393000,Pertes de valeur sur En cours de production de biens,393000,asset
 l10n_dz_394000,Pertes de valeur sur En cours de production de services,394000,asset_current,,True,Pertes de valeur sur En cours de production de services
 l10n_dz_395000,Pertes de valeur sur stocks de produits,395000,asset_current,,True,Pertes de valeur sur stocks de produits
 l10n_dz_397000,Pertes de valeur sur Stocks à l'extérieur,397000,asset_current,,True,Pertes de valeur sur Stocks à l'extérieur
+l10n_dz_401,Fournisseurs,401,liability_payable,,True,Fournisseurs
 l10n_dz_401000,Fournisseurs de biens et services,401000,liability_payable,,True,Fournisseurs de biens et services
 l10n_dz_401300,Fournisseurs de stocks,401300,liability_payable,,True,Fournisseurs de stocks
 l10n_dz_401310,Fournisseurs de stocks : Compte fournisseur par défaut,401310,liability_payable,,True,Fournisseurs de stocks : Compte fournisseur par défaut
@@ -514,6 +516,8 @@ l10n_dz_411000,Clients,411000,asset_receivable,,True,Clients
 l10n_dz_411100,Clients - Ventes de biens ou de prestations de services (Compte client par défaut),411100,asset_receivable,,True,Clients - Ventes de biens ou de prestations de services (Compte client par défaut)
 l10n_dz_411400,Clients - Autres créances diverses,411400,asset_receivable,,True,Clients - Autres créances diverses
 l10n_dz_411700,Clients - Retenues de garantie,411700,asset_receivable,,True,Clients - Retenues de garantie
+l10n_dz_412,Clients - Retenues de garantie,412,asset_receivable,,True,Clients - Retenues de garantie
+l10n_dz_413,Clients - Effets à recevoir,413,asset_receivable,,True,Clients - Effets à recevoir
 l10n_dz_413000,Clients : Effets à recevoir,413000,asset_receivable,,True,Clients : Effets à recevoir
 l10n_dz_416000,Clients douteux ou litigieux,416000,asset_receivable,,True,Clients douteux ou litigieux
 l10n_dz_416100,Clients douteux ou litigieux : secteur public,416100,asset_receivable,,True,Clients douteux ou litigieux : secteur public
@@ -774,9 +778,11 @@ l10n_dz_588600,Achats au comptant,588600,asset_current,,True,Achats au comptant
 l10n_dz_588700,Ventes au comptant,588700,asset_current,,True,Ventes au comptant
 l10n_dz_591000,Pertes de valeur sur valeurs en banque et Etablissements financiers,591000,asset_current,,True,Pertes de valeur sur valeurs en banque et Etablissements financiers
 l10n_dz_594000,Pertes de valeurs sur régies d'avances et accréditifs,594000,asset_current,,True,Pertes de valeurs sur régies d'avances et accréditifs
+l10n_dz_600,Achats de marchandises vendues,600,expense,,False,Achats de marchandises vendues
 l10n_dz_600000,Achats de marchandises vendue,600000,expense,,False,Achats de marchandises vendue
 l10n_dz_600100,Marchandise (ou groupe) A,600100,expense,,False,Marchandise (ou groupe) A
 l10n_dz_600200,Marchandise (ou groupe) B,600200,expense,,False,Marchandise (ou groupe) B
+l10n_dz_601,Achats de matières premières,601,expense,,False,Achats de matières premières
 l10n_dz_601000,Matières premières et fournitures consommées,601000,expense,,False,Matières premières et fournitures consommées
 l10n_dz_601100,Matières premières consommées,601100,expense,,False,Matières premières consommées
 l10n_dz_601110,Matières (ou groupe) A,601110,expense,,False,Matières (ou groupe) A
@@ -804,6 +810,7 @@ l10n_dz_602600,Emballages consommés,602600,expense,,False,Emballages consommés
 l10n_dz_602610,Emballages perdus consommés,602610,expense,,False,Emballages perdus consommés
 l10n_dz_602620,Emballages récupérables non identifiables consommés,602620,expense,,False,Emballages récupérables non identifiables consommés
 l10n_dz_602630,Emballages récupérables non identifiables consommés,602630,expense,,False,Emballages récupérables non identifiables consommés
+l10n_dz_603,Variation des stocks de matières premières,603,expense,,False,Variation des stocks de matières premières
 l10n_dz_603000,Variations de stocks de marchandises,603000,expense,,False,Variations de stocks de marchandises
 l10n_dz_603100,Variation des stocks de matières premières (et fournitures),603100,expense,,False,Variation des stocks de matières premières (et fournitures)
 l10n_dz_603200,Variation des stocks des autres approvisionnements,603200,expense,,False,Variation des stocks des autres approvisionnements
@@ -825,6 +832,7 @@ l10n_dz_607500,Achats non stockés de fournitures d'atelier et de magasin,607500
 l10n_dz_607600,Achat non stocké de Tenues de travail et de sécurité,607600,expense,,False,Achat non stocké de Tenues de travail et de sécurité
 l10n_dz_607800,Achats Autres matières et fournitures non stockées,607800,expense,,False,Achats Autres matières et fournitures non stockées
 l10n_dz_608000,Frais accessoires incorporés aux achats (Inventaire intermitent),608000,expense,,False,Frais accessoires incorporés aux achats (Inventaire intermitent)
+l10n_dz_609,"Rabais, remises et ristournes obtenus sur achats",609,expense,,False,"Rabais, remises et ristournes obtenus sur achats"
 l10n_dz_609000,"Rabais, remises et ristournes obtenus sur achats",609000,expense,,False,"Rabais, remises et ristournes obtenus sur achats"
 l10n_dz_609100,R.R.R- sur acahts de marchandises,609100,expense,,False,R.R.R- sur acahts de marchandises
 l10n_dz_609200,R.R.R- sur achats de matières premières,609200,expense,,False,R.R.R- sur achats de matières premières
@@ -1024,6 +1032,7 @@ l10n_dz_656600,Dons et libéralités,656600,expense,,False,Dons et libéralités
 l10n_dz_656610,Dons au profit des associations caritatives agréées,656610,expense,,False,Dons au profit des associations caritatives agréées
 l10n_dz_656620,Frais de solidarité nationale et internationale,656620,expense,,False,Frais de solidarité nationale et internationale
 l10n_dz_656630,Autres dons et libéralités,656630,expense,,False,Autres dons et libéralités
+l10n_dz_657,Charges exceptionnelles de gestion courante,657,expense,,False,Charges exceptionnelles de gestion courante
 l10n_dz_657000,Charges exceptionnelles de gestion courante,657000,expense,,False,Charges exceptionnelles de gestion courante
 l10n_dz_657100,Ecart de stocks (négatif),657100,expense,,False,Ecart de stocks (négatif)
 l10n_dz_657200,"Ecart de stocks (négatif) de matières, fournitures et autres approvisionnements",657200,expense,,False,"Ecart de stocks (négatif) de matières, fournitures et autres approvisionnements"
@@ -1041,6 +1050,7 @@ l10n_dz_661800,Intérêts des autres dettes,661800,expense,,False,Intérêts des
 l10n_dz_664000,Pertes sur créances liées à des participations,664000,expense,,False,Pertes sur créances liées à des participations
 l10n_dz_665000,Ecart d’évaluation sur actifs financiers - Moins-values,665000,expense,,False,Ecart d’évaluation sur actifs financiers - Moins-values
 l10n_dz_665100,Mali provenant du rachat des actions propres,665100,expense,,False,Mali provenant du rachat des actions propres
+l10n_dz_666,Pertes de change,666,expense,,False,Pertes de change
 l10n_dz_666000,Pertes de change,666000,expense,,False,Pertes de change
 l10n_dz_667000,Pertes nettes sur cessions d’actifs financiers,667000,expense,,False,Pertes nettes sur cessions d’actifs financiers
 l10n_dz_668000,Autres charges financières,668000,expense,,False,Autres charges financières
@@ -1063,6 +1073,7 @@ l10n_dz_692000,Imposition différée actif,692000,expense,,False,Imposition diff
 l10n_dz_693000,Imposition différée passif,693000,expense,,False,Imposition différée passif
 l10n_dz_695000,Impôts sur les bénéfices basés sur le résultat desactivités ordinaires,695000,expense,,False,Impôts sur les bénéfices basés sur le résultat desactivités ordinaires
 l10n_dz_698000,Autres impôts sur les résultats,698000,expense,,False,Autres impôts sur les résultats
+l10n_dz_700,Ventes de marchandises,700,income,,False,Ventes de marchandises
 l10n_dz_700000,Ventes de marchandises,700000,income,,False,Ventes de marchandises
 l10n_dz_700100,Marchandises (ou groupe) A,700100,income,,False,Marchandises (ou groupe) A
 l10n_dz_700200,Marchandises (ou groupe) B,700200,income,,False,Marchandises (ou groupe) B
@@ -1103,6 +1114,7 @@ l10n_dz_708100,Cession de matières premières,708100,income,,False,Cession de m
 l10n_dz_708200,Cession d’autres approvisionnements,708200,income,,False,Cession d’autres approvisionnements
 l10n_dz_708600,Bonis sur reprises d'emballages consignés,708600,income,,False,Bonis sur reprises d'emballages consignés
 l10n_dz_708800,Autres produits des activités annexes,708800,income,,False,Autres produits des activités annexes
+l10n_dz_709,"Rabais, remises et ristournes accordés",709,income,,False,"Rabais, remises et ristournes accordés"
 l10n_dz_709000,"Rabais, remises et ristournes accordés",709000,income,,False,"Rabais, remises et ristournes accordés"
 l10n_dz_709200,Réduction sur ventes – Hors factures,709200,income,,False,Réduction sur ventes – Hors factures
 l10n_dz_709300,Réduction sur prestations – Hors factures,709300,income,,False,Réduction sur prestations – Hors factures
@@ -1138,6 +1150,7 @@ l10n_dz_757200,"Ecart de stocks (positif) de matières, fournitures et autres ap
 l10n_dz_757500,Dégrèvements d’impôts (autre qu’IBS),757500,income_other,,False,Dégrèvements d’impôts (autre qu’IBS)
 l10n_dz_757600,Produits des exercices antérieurs (en cours d'exercice),757600,income_other,,False,Produits des exercices antérieurs (en cours d'exercice)
 l10n_dz_757800,Autres produits exceptionnels,757800,income_other,,False,Autres produits exceptionnels
+l10n_dz_758,Produits exceptionnels de gestion courante,758,income_other,,False,Produits exceptionnels de gestion courante
 l10n_dz_758000,Autres produits de gestion courante,758000,income_other,,False,Autres produits de gestion courante
 l10n_dz_758100,Lots de bord et pièces de rechange gratuites,758100,income_other,,False,Lots de bord et pièces de rechange gratuites
 l10n_dz_758200,Remboursements sinistres et dégâts assurés,758200,income_other,,False,Remboursements sinistres et dégâts assurés
@@ -1148,6 +1161,7 @@ l10n_dz_761000,Produits de participations,761000,income_other,,False,Produits de
 l10n_dz_762000,Revenus des actifs financiers,762000,income_other,,False,Revenus des actifs financiers
 l10n_dz_763000,Revenus de créances,763000,income_other,,False,Revenus de créances
 l10n_dz_765000,Ecart d’évaluation sur actifs financiers – Plus-values,765000,income_other,,False,Ecart d’évaluation sur actifs financiers – Plus-values
+l10n_dz_766,Gains de change,766,income_other,,False,Gains de change
 l10n_dz_766000,Gains de change,766000,income_other,,False,Gains de change
 l10n_dz_767000,Profits nets sur cessions d’actifs financiers,767000,income_other,,False,Profits nets sur cessions d’actifs financiers
 l10n_dz_768000,Autres produits financiers,768000,income_other,,False,Autres produits financiers
