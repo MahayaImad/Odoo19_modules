@@ -120,7 +120,7 @@ class AccountPayment(models.Model):
             return
 
         if not any(field_name in changed_fields for field_name in (
-            'date', 'amount', 'payment_type', 'partner_type', 'payment_reference', 'is_internal_transfer',
+            'date', 'amount', 'payment_type', 'partner_type', 'payment_reference',
             'currency_id', 'partner_id', 'destination_account_id', 'partner_bank_id',
             )):
 
@@ -240,12 +240,12 @@ class AccountPayment(models.Model):
 
         res = super(AccountPayment, self)._synchronize_to_moves(changed_fields)
 
-    @api.depends('journal_id', 'is_internal_transfer', 'currency_id')
+    @api.depends('journal_id', 'currency_id', 'partner_type')
     def _visible_timbre(self):
 
         for payment in self:
             if payment.journal_id.type == 'cash' and payment.partner_type != "supplier" and payment.company_id.based_on == 'payment' \
-            and not payment.is_internal_transfer  and payment.company_id.currency_id == payment.currency_id:
+            and payment.company_id.currency_id == payment.currency_id:
                 payment.use_timbre = True
             else :
                 payment.use_timbre = False
