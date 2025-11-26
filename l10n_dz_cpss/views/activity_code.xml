@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="activity_code_view_form" model="ir.ui.view">
+        <field name="name">activity.code.view.form</field>
+        <field name="model">activity.code</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                        </group>
+                        <group>
+                            <field name="is_principal" widget="boolean_toggle"/>
+                            <field name="regulation" widget="radio"/>
+                        </group>
+                    </group><br/>
+                    <div invisible="regulation != 'regulated_activity'" style="border: solid 1px #e4e6e8; background-color: #e3faf3; text-align:center">
+                        <p style="margin-top:5px;">Toute activité ou profession soumise à inscription au registre du commerce et requérant par sa nature, son contenu, son objet et les moyens mis en ouvre, la réunion de conditions particulières pour autoriser son exercice.</p>
+                    </div>
+                    <div invisible="regulation != 'unauthorized_activity'" style="border: solid 1px #e4e6e8; background-color: #f9ded9; text-align:center">
+                        <p style="margin-top:5px;">Toute activité n'est pas soumise à la présentation d'une autorisation ou d'un agrément provisoire, délivré par l'administration ou l'institution habilitée.</p>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+    <record id="activity_code_view_tree" model="ir.ui.view">
+        <field name="name">activity.code.view.tree</field>
+        <field name="model">activity.code</field>
+        <field name="arch" type="xml">
+            <tree decoration-success="regulation=='regulated_activity'" decoration-danger="regulation=='unauthorized_activity'">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="regulation" invisible="1"/>
+            </tree>
+
+        </field>
+    </record>
+
+    <record id="activity_code_search_view" model="ir.ui.view">
+        <field name="name">activity.code.view.search</field>
+        <field name="model">activity.code</field>
+        <field name="arch" type="xml">
+             <search string = "Search Activity Code">
+                <field name="name"/>
+                <field name="code"/>
+                <filter string="Règlementé" name="regulation" domain="[('regulation', '=','regulated_activity')]"/>
+                <filter string="Non autorisé" name="regulation" domain="[('regulation', '=','unauthorized_activity')]"/>
+
+                <group string="Group By">
+                    <filter string="Réglementation" name="regulation" context="{'group_by': 'regulation'}"/>
+                </group>
+            </search>
+
+        </field>
+    </record>
+
+
+     <record id='activity_code_action' model='ir.actions.act_window'>
+        <field name="name">Code d'activité</field>
+        <field name="res_model">activity.code</field>
+        <field name="view_mode">tree,form,search</field>
+    </record>
+
+    <menuitem name="Code d'activité"
+    id="activity_code_id"
+    parent="account.account_account_menu"
+    action="activity_code_action"
+    sequence="4"/>
+
+
+</odoo>
