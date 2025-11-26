@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Vue de configuration : Synchronisation Inter-Sociétés -->
+        <record id="res_config_settings_view_form_inherit_sync" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.sync</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+
+                <!-- Insertion dans la section principale des paramètres -->
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block"
+                         string="Synchronisation Inter-Sociétés"
+                         data-string="Synchronisation Inter-Sociétés"
+                         data-key="cpss_sync_inter_company_base"
+                         groups="cpss_sync_inter_company_base.group_sync_manager">
+
+                        <h2>Configuration des Sociétés</h2>
+                        <div class="row mt16 o_settings_container" name="societes_setting_container">
+                            <div class="col-12 col-lg-6 o_setting_box" id="sync_societes">
+                                <div class="o_setting_left_pane">
+
+                                </div>
+                                <div class="o_setting_right_pane">
+                                    <label for="sync_societe_operationnelle_id" string="Sociétés liées"/>
+                                    <div class="text-muted">
+                                        Définissez les sociétés opérationnelle et fiscale utilisées dans la
+                                        synchronisation.
+                                    </div>
+                                    <div class="content-group mt16">
+                                        <div class="row mb8">
+                                            <label for="sync_societe_operationnelle_id" string="Société Opérationnelle"
+                                                   class="col-lg-3 o_light_label"/>
+                                            <field name="sync_societe_operationnelle_id"
+                                                   class="oe_inline"
+                                                   options="{'no_create': True, 'no_open': True}"/>
+                                        </div>
+                                        <div class="row mb8">
+                                            <label for="sync_societe_fiscale_id" string="Société Fiscale"
+                                                   class="col-lg-3 o_light_label"/>
+                                            <field name="sync_societe_fiscale_id"
+                                                   class="oe_inline"
+                                                   options="{'no_create': True, 'no_open': True}"/>
+                                        </div>
+                                        <div class="row mb8">
+                                            <label for="sync_utilisateur_intersocietes_id"
+                                                   string="Utilisateur Technique" class="col-lg-3 o_light_label"/>
+                                            <field name="sync_utilisateur_intersocietes_id"
+                                                   required="1"
+                                                   class="oe_inline"
+                                                   options="{'no_create': True}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <h2>Notifications</h2>
+                        <div class="row mt16 o_settings_container" name="notification_setting_container">
+                            <div class="col-12 col-lg-6 o_setting_box" id="sync_notifications">
+                                <div class="o_setting_left_pane">
+                                    <field name="sync_notifier_erreurs"/>
+                                </div>
+                                <div class="o_setting_right_pane">
+                                    <label for="sync_notifier_erreurs" string="Notifier les erreurs"/>
+                                    <div class="text-muted">
+                                        Activez les notifications lors d’échecs de synchronisation.
+                                    </div>
+                                    <div class="content-group mt16"
+                                         attrs="{'invisible': [('sync_notifier_erreurs', '=', False)]}">
+                                        <div class="row">
+                                            <label for="sync_utilisateurs_notification_ids"
+                                                   string="Utilisateurs à notifier" class="col-lg-3 o_light_label"/>
+                                            <field name="sync_utilisateurs_notification_ids"
+                                                   class="oe_inline"
+                                                   widget="many2many_tags"
+                                                   options="{'color_field': 'color', 'no_create_edit': True}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Action pour ouvrir la vue de configuration -->
+        <record id="action_open_sync_settings" model="ir.actions.act_window">
+            <field name="name">Configuration Synchronisation</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module': 'cpss_sync_inter_company_base'}</field>
+        </record>
+
+    </data>
+</odoo>

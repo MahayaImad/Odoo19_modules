@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Vue formulaire simplifiée pour la configuration -->
+        <record id="view_sync_config_form" model="ir.ui.view">
+            <field name="name">cpss.sync.config.form</field>
+            <field name="model">cpss.sync.config</field>
+            <field name="arch" type="xml">
+                <form string="Inter-Company Sync Configuration">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>Inter-Company Synchronization Configuration</h1>
+                            <p class="text-muted">Configure synchronization between operational and fiscal companies</p>
+                        </div>
+
+                        <!-- Configuration de base uniquement -->
+                        <group>
+                            <group string="Companies">
+                                <field name="societe_operationnelle_id"
+                                       options="{'no_create': True, 'no_open': True}"
+                                       required="1"/>
+                                <field name="societe_fiscale_id"
+                                       options="{'no_create': True, 'no_open': True}"
+                                       required="1"/>
+                                <field name="utilisateur_intersocietes_id"
+                                       required="1"
+                                       help="User with access to both companies for synchronization"/>
+                            </group>
+                            <group string="Configuration">
+                                <field name="journal_fiscal_defaut_id"
+                                       domain="[('company_id', '=', societe_fiscale_id)]"
+                                       context="{'default_company_id': societe_fiscale_id}"/>
+                                <field name="notifier_erreurs_sync"/>
+                                <field name="utilisateurs_notification_erreurs"
+                                       widget="many2many_tags"
+                                       attrs="{'invisible': [('notifier_erreurs_sync', '=', False)]}"
+                                       options="{'color_field': 'color', 'no_create_edit': True}"/>
+                            </group>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Vue liste simplifiée -->
+        <record id="view_sync_config_tree" model="ir.ui.view">
+            <field name="name">cpss.sync.config.tree</field>
+            <field name="model">cpss.sync.config</field>
+            <field name="arch" type="xml">
+                <tree string="Sync Configurations" create="false" delete="false">
+                    <field name="societe_operationnelle_id"/>
+                    <field name="societe_fiscale_id"/>
+                    <field name="utilisateur_intersocietes_id"/>
+                    <field name="notifier_erreurs_sync"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action pour la configuration -->
+        <record id="action_sync_config" model="ir.actions.act_window">
+            <field name="name">Sync Configuration</field>
+            <field name="res_model">cpss.sync.config</field>
+            <field name="view_mode">form</field>
+            <field name="target">current</field>
+            <field name="context">{'create': False}</field>
+        </record>
+
+    </data>
+</odoo>

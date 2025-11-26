@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
     <data>
         <template id="report_invoice_document_timbre" inherit_id="account.report_invoice_document">
 
-            <xpath expr="//div[@class='clearfix mb-4']" position="after">
-                <p t-if="o.montant_en_lettre" name="total_en_lettre">
-                    Montant à payer en lettre : <b><span t-esc="o.custom_amount_to_text(o.total_timbre)" /></b>
-                </p>
+            <!-- Remplacement du montant en lettres -->
+            <xpath expr="//p[@class='text-end lh-sm']//small[@class='text-muted lh-sm']/span" position="replace">
+                <span t-field="o.custom_amount_to_text(o.total_timbre)" />
             </xpath>
-     
-            <xpath expr="//table[@class='table table-sm']" position="after">
-                <table class="table table-sm" style="page-break-inside: avoid;">
+
+            <!-- Ajout des lignes Timbre et Total TTC après la table des totaux -->
+            <xpath expr="//table[@class='o_total_table table table-borderless avoid-page-break-inside']" position="after">
+                <table class="o_total_table table table-borderless avoid-page-break-inside">
                     <tr class="border-black o_total">
                         <t t-if="o.payment_mode_type == 'cash' and o.based_on_related == 'posted_invoices'">
                             <td><strong>Timbre</strong></td>
@@ -20,10 +19,10 @@
                             </td>
                         </t>
                     </tr>
-                    
+
                     <tr class="border-black o_total">
                         <t t-if="o.payment_mode_type == 'cash' and o.based_on_related == 'posted_invoices'">
-                            <td><strong>Total TTC </strong></td>
+                            <td><strong>Total TTC</strong></td>
                             <td class="text-end">
                                 <span t-esc="o.amount_total + o.amount_timbre" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
                             </td>
@@ -31,20 +30,16 @@
                     </tr>
 
                     <tr class="border-black o_total">
-                        <t t-if="o.payment_mode_type != 'cash' ">
-                            <td><strong>Total TTC </strong></td>
+                        <t t-if="o.payment_mode_type != 'cash'">
+                            <td><strong>Total TTC</strong></td>
                             <td class="text-end">
                                 <span t-field="o.amount_total" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
                             </td>
                         </t>
                     </tr>
                 </table>
-
-                
             </xpath>
-        </template>
-            
-           
-    </data>
 
+        </template>
+    </data>
 </odoo>

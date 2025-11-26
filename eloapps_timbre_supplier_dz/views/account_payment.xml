@@ -13,13 +13,13 @@
             </xpath>
 
             <xpath expr="//div[@name='button_box']" position="inside">
-                <button name="button_open_invoice_supplier" type="object" class="oe_stat_button" icon="fa-bars" attrs="{'invisible':['|','|','|','|',
-                       ('for_based_on', '!=', True),
-                       ('for_journal_id', '!=', True),
-                       ('partner_type', '!=', 'supplier'),
-                       ('supplier_move_id','=', False),
-                       ('droit_timbre_supplier','=', 0)
-                       ]}">
+                <button name="button_open_invoice_supplier" type="object" class="oe_stat_button" icon="fa-bars"
+                        invisible="not for_based_on
+                        or not for_journal_id
+                        or partner_type != 'supplier'
+                        or not supplier_move_id
+                        or droit_timbre_supplier == 0">
+
                     <span>Timbre fournisseur</span>
 
                 </button>
@@ -32,24 +32,19 @@
                 <field name="for_based_on" invisible="1"/>
                 <field name="for_journal_id" invisible="1"/>
 
-                <group name="group3" string="Timbre fournisseur" attrs="{'invisible':['|','|',
-                       ('for_based_on', '!=', True),
-                       ('for_journal_id', '!=', True),
-                       ('partner_type', '!=', 'supplier')
-                       ]}">
+                <group name="group3" string="Timbre fournisseur"
+                       invisible ="not for_based_on
+                       or not for_journal_id
+                       or partner_type != 'supplier'">
 
                     
 
                     <field name="add_droit_timbre"
                        widget="boolean_toggle"
-                       attrs="{'invisible':['|','|',
-                       ('for_based_on', '!=', True),
-                       ('for_journal_id', '!=', True),
-                       ('partner_type', '!=', 'supplier')
-                       ]}"/>
+                       invisible ="not for_based_on or not for_journal_id or partner_type != 'supplier'"/>
 
-                    <field name="droit_timbre_supplier" attrs="{'invisible':[
-                       ('add_droit_timbre', '!=', True)], 'readonly':[('state', '!=', 'draft')]}"/>
+                    <field name="droit_timbre_supplier" invisible ="not add_droit_timbre"
+                       readonly="state != 'draft'"/>
                    
 
                 </group>
@@ -58,7 +53,7 @@
      
 
             <xpath expr="//field[@name='droit_timbre']" position="replace">
-                <field name="droit_timbre" attrs="{'invisible': ['|','|',('use_timbre','=',False), ('based_on_related','=', 'posted_invoices'),('add_droit_timbre','=', True)]}" readonly="1" force_save="1"/>
+                <field name="droit_timbre" invisible= "use_timbre == False or based_on_related == 'posted_invoices' or add_droit_timbre" readonly="1" force_save="1"/>
                 
             </xpath>
             

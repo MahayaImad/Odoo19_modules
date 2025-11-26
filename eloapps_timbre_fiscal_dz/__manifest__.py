@@ -48,7 +48,7 @@
         'security/ir.model.access.csv',
 
         'data/paymment_mode.xml',
-        'data/accounting_group.xml',
+        #'data/accounting_group.xml',
     ],
 
 

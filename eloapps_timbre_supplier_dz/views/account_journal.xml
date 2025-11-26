@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="account.view_account_journal_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='type']" position="after">
-                    <field name="for_supplier_timbre" attrs="{'invisible': [('type','not in',['general'])]}"/>
+                    <field name="for_supplier_timbre" invisible="type not in ['general']"/>
                 </xpath>
             </field>
         </record>

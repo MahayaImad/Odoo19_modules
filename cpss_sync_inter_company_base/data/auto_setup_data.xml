@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- 1. Création automatique de la société fiscale -->
+        <record id="societe_fiscale_auto" model="res.company">
+            <field name="name">Société Fiscale</field>
+            <field name="currency_id" ref="base.DZD"/>
+            <field name="country_id" ref="base.dz"/>
+            <field name="email">fiscal@cpss.dz</field>
+            <field name="phone">+213 123 456 789</field>
+            <field name="website">https://fiscal.cpss.dz</field>
+            <field name="vat">12345678901234</field>
+            <field name="street">Zone Industrielle</field>
+            <field name="city">Alger</field>
+            <field name="zip">16000</field>
+        </record>
+
+        <!-- 2. Création d'un utilisateur technique inter-société avec tous les droits -->
+        <record id="utilisateur_sync_technique" model="res.users">
+            <field name="name">Utilisateur Sync Technique</field>
+            <field name="login">sync.technique@cpss.dz</field>
+            <field name="email">sync.technique@cpss.dz</field>
+            <field name="active" eval="True"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="company_ids" eval="[(6, 0, [ref('base.main_company'), ref('societe_fiscale_auto')])]"/>
+            <field name="groups_id" eval="[(6, 0, [
+                ref('base.group_system'),
+                ref('account.group_account_manager'),
+                ref('sales_team.group_sale_manager'),
+                ref('purchase.group_purchase_manager'),
+                ref('stock.group_stock_manager'),
+                ref('cpss_sync_inter_company_base.group_sync_admin')
+            ])]"/>
+        </record>
+
+        <!-- 3. Donner les droits multi-société à l'admin aussi -->
+        <record id="base.user_admin" model="res.users">
+            <field name="company_ids" eval="[(4, ref('societe_fiscale_auto'))]"/>
+            <field name="groups_id" eval="[(4, ref('cpss_sync_inter_company_base.group_sync_admin'))]"/>
+        </record>
+
+        <!-- 4. Séquences spéciales pour société opérationnelle (BL) -->
+        <record id="sequence_facture_op_vente" model="ir.sequence">
+            <field name="name">Factures Vente Opérationnelle</field>
+            <field name="code">account.move.customer.bl</field>
+            <field name="prefix">BL/%(year)s/</field>
+            <field name="padding">5</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="sequence_facture_op_achat" model="ir.sequence">
+            <field name="name">Factures Achat Opérationnelle</field>
+            <field name="code">account.move.supplier.bl</field>
+            <field name="prefix">BL/A/%(year)s/</field>
+            <field name="padding">5</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <!-- 5. Séquences pour numérotation des factures fiscales -->
+        <record id="sequence_vente_fiscal" model="ir.sequence">
+            <field name="name">Factures Vente Fiscales</field>
+            <field name="code">account.move</field>
+            <field name="prefix">FF/%(year)s/</field>
+            <field name="padding">5</field>
+            <field name="company_id" ref="societe_fiscale_auto"/>
+        </record>
+
+        <record id="sequence_achat_fiscal" model="ir.sequence">
+            <field name="name">Factures Achat Fiscales</field>
+            <field name="code">account.move</field>
+            <field name="prefix">FA/%(year)s/</field>
+            <field name="padding">5</field>
+            <field name="company_id" ref="societe_fiscale_auto"/>
+        </record>
+
+        <!-- 6. Journaux pour la société fiscale (SANS sequence_id direct) -->
+        <record id="journal_vente_fiscal" model="account.journal">
+            <field name="name">Ventes Fiscales</field>
+            <field name="code">VF</field>
+            <field name="type">sale</field>
+            <field name="company_id" ref="societe_fiscale_auto"/>
+        </record>
+
+        <record id="journal_achat_fiscal" model="account.journal">
+            <field name="name">Achats Fiscaux</field>
+            <field name="code">AF</field>
+            <field name="type">purchase</field>
+            <field name="company_id" ref="societe_fiscale_auto"/>
+        </record>
+
+        <!-- 8. Configuration automatique de la synchronisation -->
+        <record id="config_sync_auto" model="cpss.sync.config">
+            <field name="societe_operationnelle_id" ref="base.main_company"/>
+            <field name="societe_fiscale_id" ref="societe_fiscale_auto"/>
+            <field name="utilisateur_intersocietes_id" ref="utilisateur_sync_technique"/>
+            <field name="journal_fiscal_defaut_id" ref="journal_vente_fiscal"/>
+            <field name="notifier_erreurs_sync" eval="True"/>
+            <field name="utilisateurs_notification_erreurs" eval="[(6, 0, [ref('base.user_admin')])]"/>
+        </record>
+
+    </data>
+
+    <!-- 9. Configuration des données partagées (exécutée après installation) -->
+    <data noupdate="0">
+        <function model="cpss.sync.config" name="configurer_donnees_partagees"/>
+    </data>
+
+</odoo>

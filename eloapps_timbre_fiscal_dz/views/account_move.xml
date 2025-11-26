@@ -9,15 +9,17 @@
         <field name="arch" type="xml">
             <!-- Ajouter en dessous de Conditions de paiement -->
             <xpath expr="//div[@name='journal_div']" position="after">
-                <field name="payment_mode" attrs="{'invisible':[('move_type', 'not in', ['out_invoice', 'out_refund'])], 'required':[('move_type', 'in', ['out_invoice', 'out_refund'])], 'readonly':['|',('payment_state', 'in', ['paid']),('state', 'not in', ['draft'])]}"/>
+                <field name="payment_mode" invisible=" move_type not in ['out_invoice', 'out_refund']"
+                       required = "move_type in ['out_invoice', 'out_refund']"
+                       readonly="payment_state in ['paid'] or state not in ['draft']"/>
                 <field name="payment_mode_type" invisible="1"/>
                 <field name="montant_en_lettre" invisible="1"/>
             </xpath>
             <!-- Ajouter en dessous de Total -->
-            <xpath expr="//group[@class='oe_subtotal_footer oe_right']/field[@name='tax_totals']" position="after">
+            <xpath expr="//group[@class='oe_subtotal_footer']/field[@name='tax_totals']" position="after">
                 <field name="based_on_related" invisible="1"/>
-                <field name="amount_timbre" attrs="{'invisible':['|',('payment_mode_type', '!=', 'cash'),('based_on_related','!=', 'posted_invoices')]}"/>
-                <field name="total_timbre" attrs="{'invisible':['|',('payment_mode_type', '!=', 'cash'),('based_on_related','!=', 'posted_invoices')]}"/>
+                <field name="amount_timbre" invisible="payment_mode_type != 'cash' or based_on_related != 'posted_invoices'"/>
+                <field name="total_timbre"  invisible="payment_mode_type != 'cash' or based_on_related != 'posted_invoices'"/>
             </xpath>
         </field>
     </record>

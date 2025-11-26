@@ -10,7 +10,8 @@
                 <xpath expr="//field[@name='date']" position="before">
                     <field name="use_timbre" invisible="1"/>
                     <field name="based_on_related" invisible="1"/>
-                    <field name="droit_timbre" attrs="{'invisible': ['|',('use_timbre','=',False), ('based_on_related','=', 'posted_invoices')]}" readonly="1" force_save="1"/>
+                    <field name="droit_timbre" invisible =" not use_timbre or based_on_related == 'posted_invoices'"
+                           readonly="1" force_save="1"/>
 
                 </xpath>
             </field>
@@ -24,8 +25,8 @@
                 <xpath expr="//field[@name='payment_date']" position="before">
                     <field name="use_timbre" invisible="1"/>
                     <field name="based_on_related" invisible="1"/>
-                    <field name="droit_timbre" attrs="{'invisible': ['|',('use_timbre','=',False),('based_on_related','=', 'posted_invoices')]}"/>
-                    <field name="montant_avec_timbre" attrs="{'invisible': ['|',('use_timbre','=',False),('based_on_related','=', 'posted_invoices')]}"/>
+                    <field name="droit_timbre" invisible="not use_timbre or based_on_related == 'posted_invoices'"/>
+                    <field name="montant_avec_timbre" invisible ="not use_timbre or based_on_related == 'posted_invoices'"/>
                 </xpath>
             </field>
         </record>
