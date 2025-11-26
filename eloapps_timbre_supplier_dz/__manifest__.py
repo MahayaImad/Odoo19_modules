@@ -8,7 +8,7 @@
 
 
     'category': 'Accounting',
-    'version': '16.0.1.0',
+    'version': '19.0.1.0',
 
 
     "contributors": [
