@@ -18,6 +18,8 @@ This module applies to companies based in Algeria.
     ],
     'auto_install': ['account'],
     'data': [
+        'data/account_group_data.xml',
+        'data/account_account_data.xml',
         'data/tax_report.xml',
     ],
     'demo': [
