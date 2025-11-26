@@ -34,7 +34,7 @@ Ce module est basé sur les travaux de Osis et de la communauté Odoo Algérie.
         'sale',
         'sale_management',
     ],
-    'auto_install': ['account'],
+    'auto_install': False,
     'data': [
         'security/ir.model.access.csv',
         'data/company_function.xml',
