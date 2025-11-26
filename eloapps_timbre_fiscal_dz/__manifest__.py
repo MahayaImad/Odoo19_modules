@@ -5,7 +5,7 @@
     'summary': """Ce module permettant de gérer les droits de timbre pour les paiements en liquide sur les factures et les avoirs clients""",
     'description': """Gestion des droits de timbre client""",
 
-    'version': '16.0.2.0',
+    'version': '19.0.2.0',
     'category': 'Accounting/Accounting',
 
 
