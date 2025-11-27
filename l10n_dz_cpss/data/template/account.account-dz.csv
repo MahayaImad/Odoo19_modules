@@ -41,15 +41,15 @@ l10n_dz_117900,Impact d'assainissement comptable et financier : négatif,117900,
 l10n_dz_118000,Acompte sur dividendes,118000,equity,,True,Acompte sur dividendes
 l10n_dz_119000,Report à nouveau (Déficit),119000,equity,,True,Report à nouveau (Déficit)
 l10n_dz_120000,Résultat net de l’exercice – (BENEFICE),120000,equity_unaffected,,True,Résultat net de l’exercice – (BENEFICE)
-l10n_dz_121000,Marge commerciale,121000,equity_unaffected,,True,Marge commerciale
-l10n_dz_122000,Production de l'exercice,122000,equity_unaffected,,True,Production de l'exercice
-l10n_dz_123000,Valeur ajoutée d'exploitation,123000,equity_unaffected,,True,Valeur ajoutée d'exploitation
-l10n_dz_124000,Excédent (ou insuffisance) brut d’exploitation (EBE) – EBITDA,124000,equity_unaffected,,True,Excédent (ou insuffisance) brut d’exploitation (EBE) – EBITDA
-l10n_dz_125000,Résultat opérationnel,125000,equity_unaffected,,True,Résultat opérationnel
-l10n_dz_126000,Résultat ordinaire avant impôts,126000,equity_unaffected,,True,Résultat ordinaire avant impôts
-l10n_dz_127000,Résultat extraordinaire,127000,equity_unaffected,,True,Résultat extraordinaire
-l10n_dz_128000,Résultat brut de l’exercice,128000,equity_unaffected,,True,Résultat brut de l’exercice
-l10n_dz_129000,Résultat de l'exercice (perte),129000,equity_unaffected,,True,Résultat de l'exercice (perte)
+l10n_dz_121000,Marge commerciale,121000,equity,,True,Marge commerciale
+l10n_dz_122000,Production de l'exercice,122000,equity,,True,Production de l'exercice
+l10n_dz_123000,Valeur ajoutée d'exploitation,123000,equity,,True,Valeur ajoutée d'exploitation
+l10n_dz_124000,Excédent (ou insuffisance) brut d'exploitation (EBE) – EBITDA,124000,equity,,True,Excédent (ou insuffisance) brut d'exploitation (EBE) – EBITDA
+l10n_dz_125000,Résultat opérationnel,125000,equity,,True,Résultat opérationnel
+l10n_dz_126000,Résultat ordinaire avant impôts,126000,equity,,True,Résultat ordinaire avant impôts
+l10n_dz_127000,Résultat extraordinaire,127000,equity,,True,Résultat extraordinaire
+l10n_dz_128000,Résultat brut de l'exercice,128000,equity,,True,Résultat brut de l'exercice
+l10n_dz_129000,Résultat de l'exercice (perte),129000,equity,,True,Résultat de l'exercice (perte)
 l10n_dz_131000,Subventions d'équipement,131000,liability_current,,True,Subventions d'équipement
 l10n_dz_131100,Subventions d’équipements : Financement de l'Etat,131100,liability_current,,True,Subventions d’équipements : Financement de l'Etat
 l10n_dz_131200,Subventions d’équipements : Financement d'autres organismes,131200,liability_current,,True,Subventions d’équipements : Financement d'autres organismes
