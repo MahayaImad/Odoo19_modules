@@ -10,12 +10,13 @@
                 <field name="nif"/>
                 <field name="ai"/>
                 <field name="nis"/>
-                
-            </xpath>
-            <xpath expr="//field[@name='favicon']" position="after">
                 <field name="forme_juridique"/>
                 <field name="activity_code" widget="many2many_tags"/>
                 <field name="capital_social" widget="monetary"/>
+                
+            </xpath>
+            <xpath expr="//group[@name='social_media']" position="before">
+
             </xpath>
             <xpath expr="//field[@name='phone']" position="after">
                 <field name="fax" widget="phone"/>

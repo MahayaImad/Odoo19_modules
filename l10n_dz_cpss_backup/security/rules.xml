@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ========================================== -->
+        <!-- RÈGLES DE SÉCURITÉ POUR ACTIVITY.CODE    -->
+        <!-- ========================================== -->
+
+        <!-- Règle pour les utilisateurs normaux : voir seulement les codes de leur société -->
+        <record id="activity_code_company_rule" model="ir.rule">
+            <field name="name">Activity Code: Multi-Company Rule</field>
+            <field name="model_id" ref="model_activity_code"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- Règle pour les gestionnaires comptables : accès complet aux codes de leur société -->
+        <record id="activity_code_manager_rule" model="ir.rule">
+            <field name="name">Activity Code: Manager Rule</field>
+            <field name="model_id" ref="model_activity_code"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="groups" eval="[(4, ref('account.group_account_manager'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- Règle pour les comptables : lecture et écriture des codes de leur société -->
+        <record id="activity_code_accountant_rule" model="ir.rule">
+            <field name="name">Activity Code: Accountant Rule</field>
+            <field name="model_id" ref="model_activity_code"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="groups" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- ========================================== -->
+        <!-- RÈGLES DE SÉCURITÉ POUR FORME.JURIDIQUE  -->
+        <!-- ========================================== -->
+
+        <!-- Règle pour les utilisateurs normaux : voir seulement les formes juridiques de leur société -->
+        <record id="forme_juridique_company_rule" model="ir.rule">
+            <field name="name">Forme Juridique: Multi-Company Rule</field>
+            <field name="model_id" ref="model_forme_juridique"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- Règle pour les gestionnaires comptables : accès complet aux formes juridiques de leur société -->
+        <record id="forme_juridique_manager_rule" model="ir.rule">
+            <field name="name">Forme Juridique: Manager Rule</field>
+            <field name="model_id" ref="model_forme_juridique"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="groups" eval="[(4, ref('account.group_account_manager'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- Règle pour les comptables : lecture et écriture des formes juridiques de leur société -->
+        <record id="forme_juridique_accountant_rule" model="ir.rule">
+            <field name="name">Forme Juridique: Accountant Rule</field>
+            <field name="model_id" ref="model_forme_juridique"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="groups" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- ========================================== -->
+        <!-- RÈGLES GLOBALES POUR DONNÉES PARTAGÉES   -->
+        <!-- ========================================== -->
+
+        <!-- Règle pour permettre l'accès aux données partagées entre toutes les sociétés -->
+        <!-- Codes d'activité globaux (sans société spécifiée) -->
+        <record id="activity_code_global_rule" model="ir.rule">
+            <field name="name">Activity Code: Global Access Rule</field>
+            <field name="model_id" ref="model_activity_code"/>
+            <field name="domain_force">[('company_id', '=', False)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- Formes juridiques globales (sans société spécifiée) -->
+        <record id="forme_juridique_global_rule" model="ir.rule">
+            <field name="name">Forme Juridique: Global Access Rule</field>
+            <field name="model_id" ref="model_forme_juridique"/>
+            <field name="domain_force">[('company_id', '=', False)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- ========================================== -->
+        <!-- RÈGLES POUR SUPER UTILISATEURS           -->
+        <!-- ========================================== -->
+
+        <!-- Les administrateurs système ont accès à tout -->
+        <record id="activity_code_admin_rule" model="ir.rule">
+            <field name="name">Activity Code: Admin Full Access</field>
+            <field name="model_id" ref="model_activity_code"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('base.group_system'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <record id="forme_juridique_admin_rule" model="ir.rule">
+            <field name="name">Forme Juridique: Admin Full Access</field>
+            <field name="model_id" ref="model_forme_juridique"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('base.group_system'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- ========================================== -->
+        <!-- RÈGLES POUR PORTAIL CLIENTS              -->
+        <!-- ========================================== -->
+
+        <!-- Les utilisateurs portail ne peuvent voir que les codes d'activité publics -->
+        <record id="activity_code_portal_rule" model="ir.rule">
+            <field name="name">Activity Code: Portal Limited Access</field>
+            <field name="model_id" ref="model_activity_code"/>
+            <field name="domain_force">[('company_id', '=', False)]</field>
+            <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="forme_juridique_portal_rule" model="ir.rule">
+            <field name="name">Forme Juridique: Portal Limited Access</field>
+            <field name="model_id" ref="model_forme_juridique"/>
+            <field name="domain_force">[('company_id', '=', False)]</field>
+            <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- ========================================== -->
+        <!-- RÈGLES SPÉCIALES POUR MULTI-SOCIÉTÉ      -->
+        <!-- ========================================== -->
+
+        <!-- Règle pour permettre aux utilisateurs de voir les codes d'activité des sociétés parentes/enfants -->
+        <record id="activity_code_hierarchy_rule" model="ir.rule">
+            <field name="name">Activity Code: Company Hierarchy Rule</field>
+            <field name="model_id" ref="model_activity_code"/>
+            <field name="domain_force">[
+                '|', ('company_id', 'in', company_ids),
+                '|', ('company_id', 'child_of', company_ids),
+                ('company_id', 'parent_of', company_ids)
+            ]</field>
+            <field name="groups" eval="[(4, ref('account.group_account_invoice'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+            <field name="active" eval="False"/>  <!-- Désactivée par défaut -->
+        </record>
+
+    </data>
+</odoo>

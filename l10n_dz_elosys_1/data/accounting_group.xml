@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+        <!-- Removed: Modifying admin user groups directly is not recommended in Odoo 19 -->
+        <!-- The groups_id field is not accessible in the same way in Odoo 19 -->
+    </data>
+</odoo>

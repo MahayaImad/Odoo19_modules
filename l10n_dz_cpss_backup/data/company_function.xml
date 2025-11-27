@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <!--
+        Fonction de vérification des enregistrements juridiques
+        Cette fonction s'exécute lors de l'installation/mise à jour du module
+        pour valider et nettoyer les données juridiques des sociétés
+        -->
+        <function model="res.company" name="verifier_juridique_records"/>
+    </data>
+</odoo>

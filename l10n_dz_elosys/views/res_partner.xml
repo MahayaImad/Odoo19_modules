@@ -5,7 +5,7 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//group[@name='accounting_entries']" position="after">
+            <xpath expr="//group[@name='sale']" position="before">
 
                 <group string="Information fiscale" invisible="company_type not in ['company']" groups="account.group_account_invoice">
                     <field name="fiscal_position" options="{'no_edit' : True, 'no_create': True}" groups="account.group_account_invoice"/>
@@ -16,8 +16,8 @@
                     <field name="nis" class="oe_line" groups="account.group_account_invoice"/>
                 </group>
             </xpath>
-            <xpath expr="//field[@name='user_ids']" position="before">
-                <field name="fax" widget="phone" groups="account.group_account_invoice"/>
+            <xpath expr="//field[@name='phone']" position="after">
+                <field name="fax" widget="phone" class="w-100" groups="account.group_account_invoice"/>
             </xpath>
             <xpath expr="//field[@name='vat']" position="attributes">
                 <attribute name="invisible">True</attribute>

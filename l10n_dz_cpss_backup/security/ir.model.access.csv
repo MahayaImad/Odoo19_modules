@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_activity_code_user,activity.code.user,model_activity_code,base.group_user,1,0,0,0
+access_activity_code_manager,activity.code.manager,model_activity_code,account.group_account_manager,1,1,1,1
+access_forme_juridique_user,forme.juridique.user,model_forme_juridique,base.group_user,1,0,0,0
+access_forme_juridique_manager,forme.juridique.manager,model_forme_juridique,account.group_account_manager,1,1,1,1

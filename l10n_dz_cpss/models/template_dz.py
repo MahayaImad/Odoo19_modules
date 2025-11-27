@@ -6,16 +6,17 @@ from odoo.addons.account.models.chart_template import template
 class AccountChartTemplate(models.AbstractModel):
     _inherit = 'account.chart.template'
 
-    @template('dz')
+    @template('dz_cpss')
     def _get_dz_template_data(self):
         return {
+            'name': 'Plan Comptable Algérien CPSS',
             'property_account_receivable_id': 'l10n_dz_413',
             'property_account_payable_id': 'l10n_dz_401',
             'code_digits': 6,
             'display_invoice_amount_total_words': True,
         }
 
-    @template('dz', 'res.company')
+    @template('dz_cpss', 'res.company')
     def _get_dz_res_company(self):
         return {
             self.env.company.id: {
@@ -23,7 +24,7 @@ class AccountChartTemplate(models.AbstractModel):
                 'bank_account_code_prefix': '512',
                 'cash_account_code_prefix': '53',
                 'transfer_account_code_prefix': '58',
-                'account_default_pos_receivable_account_id': 'l10n_dz_412',
+                'account_default_pos_receivable_account_id': 'l10n_dz_413',
                 'income_currency_exchange_account_id': 'l10n_dz_766',
                 'expense_currency_exchange_account_id': 'l10n_dz_666',
                 'account_journal_early_pay_discount_loss_account_id': 'l10n_dz_709',
@@ -33,17 +34,6 @@ class AccountChartTemplate(models.AbstractModel):
                 'account_sale_tax_id': 'l10n_dz_vat_sale_19_prod',
                 'account_purchase_tax_id': 'l10n_dz_vat_purchase_19',
                 'expense_account_id': 'l10n_dz_600',
-                'income_account_id': 'l10n_dz_700',
-                'account_stock_journal_id': 'inventory_valuation',
-                'account_stock_valuation_id': 'l10n_dz_31',
-            },
-        }
-
-    @template('dz', 'account.account')
-    def _get_dz_account_account(self):
-        return {
-            'l10n_dz_31': {
-                'account_stock_expense_id': 'l10n_dz_601',
-                'account_stock_variation_id': 'l10n_dz_603',
+                'income_account_id': 'l10n_dz_700'
             },
         }

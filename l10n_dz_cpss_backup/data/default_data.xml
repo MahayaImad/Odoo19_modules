@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ============================================ -->
+        <!-- FORMES JURIDIQUES PAR DÉFAUT                -->
+        <!-- ============================================ -->
+
+        <record id="forme_juridique_sarl" model="forme.juridique">
+            <field name="code">SARL</field>
+            <field name="name">Société à Responsabilité Limitée</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="forme_juridique_spa" model="forme.juridique">
+            <field name="code">SPA</field>
+            <field name="name">Société Par Actions</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="forme_juridique_snc" model="forme.juridique">
+            <field name="code">SNC</field>
+            <field name="name">Société en Nom Collectif</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="forme_juridique_scs" model="forme.juridique">
+            <field name="code">SCS</field>
+            <field name="name">Société en Commandite Simple</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="forme_juridique_ei" model="forme.juridique">
+            <field name="code">EI</field>
+            <field name="name">Entreprise Individuelle</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="forme_juridique_eurl" model="forme.juridique">
+            <field name="code">EURL</field>
+            <field name="name">Entreprise Unipersonnelle à Responsabilité Limitée</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- ============================================ -->
+        <!-- CODES D'ACTIVITÉ PAR DÉFAUT                 -->
+        <!-- ============================================ -->
+
+        <!-- Commerce -->
+        <record id="activity_code_47110" model="activity.code">
+            <field name="code">47110</field>
+            <field name="name">Commerce de détail en magasin non spécialisé à prédominance alimentaire</field>
+            <field name="regulation">none</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="activity_code_47190" model="activity.code">
+            <field name="code">47190</field>
+            <field name="name">Autre commerce de détail en magasin non spécialisé</field>
+            <field name="regulation">none</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="activity_code_47210" model="activity.code">
+            <field name="code">47210</field>
+            <field name="name">Commerce de détail de fruits et légumes en magasin spécialisé</field>
+            <field name="regulation">none</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- Informatique -->
+        <record id="activity_code_62010" model="activity.code">
+            <field name="code">62010</field>
+            <field name="name">Programmation informatique</field>
+            <field name="regulation">none</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="activity_code_62020" model="activity.code">
+            <field name="code">62020</field>
+            <field name="name">Conseil en systèmes et logiciels informatiques</field>
+            <field name="regulation">none</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- Services -->
+        <record id="activity_code_68200" model="activity.code">
+            <field name="code">68200</field>
+            <field name="name">Location et exploitation de biens immobiliers propres ou loués</field>
+            <field name="regulation">regulated_activity</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="activity_code_69200" model="activity.code">
+            <field name="code">69200</field>
+            <field name="name">Activités comptables</field>
+            <field name="regulation">regulated_activity</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- BTP -->
+        <record id="activity_code_41200" model="activity.code">
+            <field name="code">41200</field>
+            <field name="name">Construction de bâtiments résidentiels et non résidentiels</field>
+            <field name="regulation">regulated_activity</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="activity_code_43210" model="activity.code">
+            <field name="code">43210</field>
+            <field name="name">Installation électrique</field>
+            <field name="regulation">regulated_activity</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- Transport -->
+        <record id="activity_code_49390" model="activity.code">
+            <field name="code">49390</field>
+            <field name="name">Autres transports terrestres de voyageurs</field>
+            <field name="regulation">regulated_activity</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- Agriculture -->
+        <record id="activity_code_01110" model="activity.code">
+            <field name="code">01110</field>
+            <field name="name">Culture de céréales (à l'exception du riz), de légumineuses et de graines oléagineuses</field>
+            <field name="regulation">none</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="activity_code_01190" model="activity.code">
+            <field name="code">01190</field>
+            <field name="name">Autres cultures non permanentes</field>
+            <field name="regulation">none</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- Industrie -->
+        <record id="activity_code_10710" model="activity.code">
+            <field name="code">10710</field>
+            <field name="name">Fabrication de pain et de pâtisserie fraîche</field>
+            <field name="regulation">regulated_activity</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="activity_code_23510" model="activity.code">
+            <field name="code">23510</field>
+            <field name="name">Fabrication de ciment</field>
+            <field name="regulation">regulated_activity</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- Santé -->
+        <record id="activity_code_86100" model="activity.code">
+            <field name="code">86100</field>
+            <field name="name">Activités hospitalières</field>
+            <field name="regulation">regulated_activity</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="activity_code_86210" model="activity.code">
+            <field name="code">86210</field>
+            <field name="name">Activité des médecins généralistes</field>
+            <field name="regulation">regulated_activity</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- Éducation -->
+        <record id="activity_code_85100" model="activity.code">
+            <field name="code">85100</field>
+            <field name="name">Enseignement préprimaire</field>
+            <field name="regulation">regulated_activity</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="activity_code_85200" model="activity.code">
+            <field name="code">85200</field>
+            <field name="name">Enseignement primaire</field>
+            <field name="regulation">regulated_activity</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

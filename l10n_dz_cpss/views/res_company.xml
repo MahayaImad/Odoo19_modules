@@ -12,7 +12,7 @@
                 <field name="nis"/>
 
             </xpath>
-            <xpath expr="//field[@name='favicon']" position="after">
+            <xpath expr="//field[@name='color']" position="after">
                 <field name="forme_juridique"/>
                 <field name="activity_code" widget="many2many_tags"/>
                 <field name="capital_social" widget="monetary"/>

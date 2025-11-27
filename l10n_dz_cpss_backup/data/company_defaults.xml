@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ============================================ -->
+        <!-- CONFIGURATION PAR DÉFAUT DES ENTREPRISES  -->
+        <!-- ============================================ -->
+
+        <!-- Hook d'installation pour configurer les comptes par défaut -->
+        <function model="res.company" name="_setup_dz_accounting_defaults">
+            <value eval="[]"/>
+        </function>
+
+    </data>
+</odoo>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ============================================ -->
+        <!-- TAGS COMPTABLES ALGÉRIENS                  -->
+        <!-- ============================================ -->
+
+        <record id="account_dz_tag_salaires" model="account.account.tag">
+            <field name="name">Salaires</field>
+            <field name="applicability">accounts</field>
+            <field name="country_id" ref="base.dz"/>
+        </record>
+
+        <record id="account_dz_tag_charges_sociales" model="account.account.tag">
+            <field name="name">Charges Sociales</field>
+            <field name="applicability">accounts</field>
+            <field name="country_id" ref="base.dz"/>
+        </record>
+
+        <record id="account_dz_tag_immobilisations" model="account.account.tag">
+            <field name="name">Immobilisations</field>
+            <field name="applicability">accounts</field>
+            <field name="country_id" ref="base.dz"/>
+        </record>
+
+        <record id="account_dz_tag_stocks" model="account.account.tag">
+            <field name="name">Stocks</field>
+            <field name="applicability">accounts</field>
+            <field name="country_id" ref="base.dz"/>
+        </record>
+
+        <!-- ============================================ -->
+        <!-- CONFIGURATION DU CHART TEMPLATE            -->
+        <!-- ============================================ -->
+
+        <!-- Configuration des comptes par défaut du plan comptable -->
+        <record id="l10n_dz_base_pcg_chart_template" model="account.chart.template">
+            <!-- Comptes clients et fournisseurs -->
+            <field name="property_account_receivable_id" ref="pcg_411000"/>
+            <field name="property_account_payable_id" ref="pcg_401000"/>
+
+            <!-- Comptes de produits et charges par défaut -->
+            <field name="property_account_expense_categ_id" ref="pcg_600000"/>
+            <field name="property_account_income_categ_id" ref="pcg_700000"/>
+
+            <!-- Comptes de change (optionnels, créés si nécessaire) -->
+            <field name="income_currency_exchange_account_id" ref="pcg_766000"/>
+            <field name="expense_currency_exchange_account_id" ref="pcg_666000"/>
+
+            <!-- Devise et pays -->
+            <field name="currency_id" ref="base.DZD"/>
+            <field name="country_id" ref="base.dz"/>
+        </record>
+
+        <!-- ============================================ -->
+        <!-- COMPTES DE CHANGE (SI NÉCESSAIRES)         -->
+        <!-- ============================================ -->
+
+        <!-- Gains de change -->
+        <record id="pcg_766000" model="account.account.template">
+            <field name="name">Gains de change</field>
+            <field name="code">766000</field>
+            <field name="chart_template_id" ref="l10n_dz_base_pcg_chart_template"/>
+            <field name="account_type">income_other</field>
+            <field name="reconcile">False</field>
+        </record>
+
+        <!-- Pertes de change -->
+        <record id="pcg_666000" model="account.account.template">
+            <field name="name">Pertes de change</field>
+            <field name="code">666000</field>
+            <field name="chart_template_id" ref="l10n_dz_base_pcg_chart_template"/>
+            <field name="account_type">expense</field>
+            <field name="reconcile">False</field>
+        </record>
+
+        <!-- ============================================ -->
+        <!-- ASSIGNATION DES TAGS AUX COMPTES          -->
+        <!-- ============================================ -->
+
+        <!-- Assigner le tag "Salaires" aux comptes de salaires -->
+        <record id="pcg_631000" model="account.account.template">
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_salaires'))]"/>
+        </record>
+
+        <!-- Assigner le tag "Charges Sociales" aux comptes de charges sociales -->
+        <record id="pcg_635000" model="account.account.template">
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_charges_sociales'))]"/>
+        </record>
+
+        <record id="pcg_635100" model="account.account.template">
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_charges_sociales'))]"/>
+        </record>
+
+        <record id="pcg_635200" model="account.account.template">
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_charges_sociales'))]"/>
+        </record>
+
+        <!-- Assigner le tag "Immobilisations" aux comptes d'immobilisations -->
+        <record id="pcg_211000" model="account.account.template">
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_immobilisations'))]"/>
+        </record>
+
+        <record id="pcg_213000" model="account.account.template">
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_immobilisations'))]"/>
+        </record>
+
+        <record id="pcg_215000" model="account.account.template">
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_immobilisations'))]"/>
+        </record>
+
+        <record id="pcg_218000" model="account.account.template">
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_immobilisations'))]"/>
+        </record>
+
+        <!-- Assigner le tag "Stocks" aux comptes de stocks -->
+        <record id="pcg_300000" model="account.account.template">
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_stocks'))]"/>
+        </record>
+
+        <record id="pcg_311000" model="account.account.template">
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_stocks'))]"/>
+        </record>
+
+        <record id="pcg_355000" model="account.account.template">
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_stocks'))]"/>
+        </record>
+
+    </data>
+</odoo>

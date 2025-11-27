@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_partner_form_l10n_dz_enhanced" model="ir.ui.view">
+        <field name="name">res.partner.form.l10n.dz.enhanced</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <!-- Ajouter les informations fiscales après la section comptabilité -->
+            <xpath expr="//page[@name='accounting']//group[@name='accounting_entries']" position="after">
+                <group string="Informations fiscales algériennes"
+                       invisible="company_type != 'company'"
+                       groups="account.group_account_invoice">
+                    <field name="fiscal_position"
+                           options="{'no_edit': True, 'no_create': True}"
+                           groups="account.group_account_invoice"/>
+                    <field name="activity_code" widget="many2many_tags"/>
+                    <field name="rc" groups="account.group_account_invoice"/>
+                    <field name="nif" groups="account.group_account_invoice"/>
+                    <field name="ai" groups="account.group_account_invoice"/>
+                    <field name="nis" groups="account.group_account_invoice"/>
+                </group>
+            </xpath>
+
+            <!-- Ajouter le fax dans les informations de contact -->
+            <xpath expr="//field[@name='phone']" position="after">
+                <field name="fax" widget="phone" groups="account.group_account_invoice"/>
+            </xpath>
+
+            <!-- Masquer le champ VAT standard -->
+            <xpath expr="//field[@name='vat']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+            <!-- Adapter le placeholder pour les wilayas -->
+            <xpath expr="//div[@class='o_address_format']//field[@name='state_id']" position="attributes">
+                <attribute name="placeholder">Wilaya</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Masquer la section fiscal_information du module account -->
+    <record id="account_view_partner_property_form_inherit" model="ir.ui.view">
+        <field name="name">account.view.partner.property.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.view_partner_property_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='fiscal_information']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

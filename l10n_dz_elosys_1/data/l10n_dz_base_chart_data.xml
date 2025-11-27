@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  	<!-- Chart template - Removed for Odoo 19 compatibility
+    The account.chart.template model no longer exists in Odoo 19.
+    Chart configuration is now handled differently. -->
+    <!--
+    <record id="l10n_dz_base_pcg_chart_template" model="account.chart.template">
+        <field name="name">SCF Algérie</field>
+        <field name="currency_id" ref="base.DZD"/>
+        <field name="code_digits" eval="6"/>
+        <field name="bank_account_code_prefix">512</field>
+        <field name="cash_account_code_prefix">53</field>
+        <field name="transfer_account_code_prefix">58</field>
+    </record>
+    -->
+</odoo>

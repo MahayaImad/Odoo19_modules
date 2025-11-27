@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ============================================ -->
+        <!-- COMPTES DE BASE DU PCG ALGÉRIEN           -->
+        <!-- ============================================ -->
+
+        <!-- Comptes de Capitaux (Classe 1) -->
+        <record id="pcg_101000" model="account.account">
+            <field name="code">101000</field>
+            <field name="name">Capital émis</field>
+            <field name="account_type">equity</field>
+            <field name="group_id" ref="account_group_class1"/>
+        </record>
+
+        <record id="pcg_106000" model="account.account">
+            <field name="code">106000</field>
+            <field name="name">Réserves</field>
+            <field name="account_type">equity</field>
+            <field name="group_id" ref="account_group_class1"/>
+        </record>
+
+        <record id="pcg_120000" model="account.account">
+            <field name="code">120000</field>
+            <field name="name">Résultat de l'exercice</field>
+            <field name="account_type">equity_unaffected</field>
+            <field name="group_id" ref="account_group_class1"/>
+        </record>
+
+        <!-- Comptes d'Immobilisations (Classe 2) -->
+        <record id="pcg_211000" model="account.account">
+            <field name="code">211000</field>
+            <field name="name">Terrains</field>
+            <field name="account_type">asset_fixed</field>
+            <field name="group_id" ref="account_group_class2"/>
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_immobilisations'))]"/>
+        </record>
+
+        <record id="pcg_213000" model="account.account">
+            <field name="code">213000</field>
+            <field name="name">Constructions</field>
+            <field name="account_type">asset_fixed</field>
+            <field name="group_id" ref="account_group_class2"/>
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_immobilisations'))]"/>
+        </record>
+
+        <record id="pcg_215000" model="account.account">
+            <field name="code">215000</field>
+            <field name="name">Installations techniques, matériel et outillage industriels</field>
+            <field name="account_type">asset_fixed</field>
+            <field name="group_id" ref="account_group_class2"/>
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_immobilisations'))]"/>
+        </record>
+
+        <record id="pcg_218000" model="account.account">
+            <field name="code">218000</field>
+            <field name="name">Autres immobilisations corporelles</field>
+            <field name="account_type">asset_fixed</field>
+            <field name="group_id" ref="account_group_class2"/>
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_immobilisations'))]"/>
+        </record>
+
+        <!-- Comptes de Stocks (Classe 3) -->
+        <record id="pcg_300000" model="account.account">
+            <field name="code">300000</field>
+            <field name="name">Stocks de marchandises</field>
+            <field name="account_type">asset_current</field>
+            <field name="group_id" ref="account_group_class3"/>
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_stocks'))]"/>
+        </record>
+
+        <record id="pcg_311000" model="account.account">
+            <field name="code">311000</field>
+            <field name="name">Matières premières</field>
+            <field name="account_type">asset_current</field>
+            <field name="group_id" ref="account_group_class3"/>
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_stocks'))]"/>
+        </record>
+
+        <record id="pcg_355000" model="account.account">
+            <field name="code">355000</field>
+            <field name="name">Stocks de produits finis</field>
+            <field name="account_type">asset_current</field>
+            <field name="group_id" ref="account_group_class3"/>
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_stocks'))]"/>
+        </record>
+
+        <!-- Comptes de Tiers (Classe 4) -->
+        <record id="pcg_401000" model="account.account">
+            <field name="code">401000</field>
+            <field name="name">Fournisseurs</field>
+            <field name="account_type">liability_payable</field>
+            <field name="group_id" ref="account_group_class4"/>
+            <field name="reconcile">True</field>
+        </record>
+
+        <record id="pcg_411000" model="account.account">
+            <field name="code">411000</field>
+            <field name="name">Clients</field>
+            <field name="account_type">asset_receivable</field>
+            <field name="group_id" ref="account_group_class4"/>
+            <field name="reconcile">True</field>
+        </record>
+
+        <record id="pcg_445610" model="account.account">
+            <field name="code">445610</field>
+            <field name="name">TVA déductible sur immobilisations</field>
+            <field name="account_type">asset_current</field>
+            <field name="group_id" ref="account_group_class4"/>
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_tva'))]"/>
+        </record>
+
+        <record id="pcg_445620" model="account.account">
+            <field name="code">445620</field>
+            <field name="name">TVA déductible sur achats</field>
+            <field name="account_type">asset_current</field>
+            <field name="group_id" ref="account_group_class4"/>
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_tva'))]"/>
+        </record>
+
+        <record id="pcg_445710" model="account.account">
+            <field name="code">445710</field>
+            <field name="name">TVA collectée</field>
+            <field name="account_type">liability_current</field>
+            <field name="group_id" ref="account_group_class4"/>
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_tva'))]"/>
+        </record>
+
+        <!-- Comptes Financiers (Classe 5) -->
+        <record id="pcg_512000" model="account.account">
+            <field name="code">512000</field>
+            <field name="name">Banques</field>
+            <field name="account_type">asset_cash</field>
+            <field name="group_id" ref="account_group_class5"/>
+        </record>
+
+        <record id="pcg_530000" model="account.account">
+            <field name="code">530000</field>
+            <field name="name">Caisse</field>
+            <field name="account_type">asset_cash</field>
+            <field name="group_id" ref="account_group_class5"/>
+        </record>
+
+        <record id="pcg_580000" model="account.account">
+            <field name="code">580000</field>
+            <field name="name">Virements internes</field>
+            <field name="account_type">asset_current</field>
+            <field name="group_id" ref="account_group_class5"/>
+        </record>
+
+        <!-- Comptes de Charges (Classe 6) -->
+        <record id="pcg_601000" model="account.account">
+            <field name="code">601000</field>
+            <field name="name">Achats de marchandises</field>
+            <field name="account_type">expense</field>
+            <field name="group_id" ref="account_group_class6"/>
+        </record>
+
+        <record id="pcg_631000" model="account.account">
+            <field name="code">631000</field>
+            <field name="name">Salaires bruts</field>
+            <field name="account_type">expense</field>
+            <field name="group_id" ref="account_group_class6"/>
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_salaires'))]"/>
+        </record>
+
+        <record id="pcg_635000" model="account.account">
+            <field name="code">635000</field>
+            <field name="name">Cotisations CNAS</field>
+            <field name="account_type">expense</field>
+            <field name="group_id" ref="account_group_class6"/>
+            <field name="tag_ids" eval="[(4, ref('account_dz_tag_charges_sociales'))]"/>
+        </record>
+
+        <!-- Comptes de Produits (Classe 7) -->
+        <record id="pcg_701000" model="account.account">
+            <field name="code">701000</field>
+            <field name="name">Ventes de marchandises</field>
+            <field name="account_type">income</field>
+            <field name="group_id" ref="account_group_class7"/>
+        </record>
+
+        <record id="pcg_706000" model="account.account">
+            <field name="code">706000</field>
+            <field name="name">Prestations de services</field>
+            <field name="account_type">income</field>
+            <field name="group_id" ref="account_group_class7"/>
+        </record>
+
+    </data>
+</odoo>

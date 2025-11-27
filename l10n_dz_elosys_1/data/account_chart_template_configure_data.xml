@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Odoo 19 Note: account.chart.template no longer exists.
+    Chart loading is now handled automatically when installing the module. -->
+    <!--
+    <data noupdate="1">
+        <function model="account.chart.template" name="try_loading">
+            <value eval="[ref('l10n_dz_elosys.l10n_dz_base_pcg_chart_template')]"/>
+        </function>
+    </data>
+    -->
+</odoo>

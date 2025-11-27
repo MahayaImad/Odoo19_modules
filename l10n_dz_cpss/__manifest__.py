@@ -37,6 +37,10 @@ Ce module est basé sur les travaux de Osis et de la communauté Odoo Algérie.
     'auto_install': ['account'],
     'data': [
         'security/ir.model.access.csv',
+        'data/template/account.group-dz.csv',
+        'data/template/account.account-dz.csv',
+        'data/template/account.tax.group-dz.csv',
+        'data/template/account.tax-dz.csv',
         'data/company_function.xml',
         'data/tax_report.xml',
         'views/forme_juridique.xml',
@@ -51,4 +55,6 @@ Ce module est basé sur les travaux de Osis et de la communauté Odoo Algérie.
     'license': 'LGPL-3',
     'installable': True,
     'application': False,
+    'post_init_hook': 'post_init_hook',
+
 }

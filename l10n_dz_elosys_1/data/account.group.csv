@@ -1,0 +1,1069 @@
+id,name,code_prefix_start,code_prefix_end,parent_id/id
+pcg_0,Système Comptable et Financier Algérien,0,0,
+pcg_1,CLASSE 1 : COMPTES DE CAPITAUX,1,1,
+pcg_10,"Capital, réserves et assimilés",10,10,l10n_dz_elosys.pcg_1
+pcg_101,"Capital émis ou capital social ou fonds de dotation, ou fonds d’exploitation",101,101,l10n_dz_elosys.pcg_10
+pcg_1011,Capital social,1011,1011,l10n_dz_elosys.pcg_101
+pcg_1012,Fonds de dotation,1012,1012,l10n_dz_elosys.pcg_101
+pcg_1013,Fonds d'exploitation,1013,1013,l10n_dz_elosys.pcg_101
+pcg_1018,Autres fonds propres,1018,1018,l10n_dz_elosys.pcg_101
+pcg_103,Primes liées au capital social,103,103,l10n_dz_elosys.pcg_10
+pcg_1031,Prime d’émission,1031,1031,l10n_dz_elosys.pcg_103
+pcg_1032,Prime de fusion,1032,1032,l10n_dz_elosys.pcg_103
+pcg_1033,Prime d’apports,1033,1033,l10n_dz_elosys.pcg_103
+pcg_1034,Prime de conversion d’obligations en actions,1034,1034,l10n_dz_elosys.pcg_103
+pcg_1035,Bons de souscription d’actions (BSA),1035,1035,l10n_dz_elosys.pcg_103
+pcg_104,Ecart d’évaluation,104,104,l10n_dz_elosys.pcg_10
+pcg_105,Ecart de réévaluation,105,105,l10n_dz_elosys.pcg_10
+pcg_1051,Ecart de réévaluation sur immobilisations corporelles,1051,1051,l10n_dz_elosys.pcg_105
+pcg_1059,Ecart de réévaluation rapporté au résultat de l’exercice,1059,1059,l10n_dz_elosys.pcg_105
+pcg_106,"Réserves (légale, statutaire, ordinaire, réglementée)",106,106,l10n_dz_elosys.pcg_10
+pcg_1061,Réserve légale,1061,1061,l10n_dz_elosys.pcg_106
+pcg_1062,Réserves réglementées,1062,1062,l10n_dz_elosys.pcg_106
+pcg_1063,Réserves statutaires ou contractuelles,1063,1063,l10n_dz_elosys.pcg_106
+pcg_1064,Réserves ordinaires,1064,1064,l10n_dz_elosys.pcg_106
+pcg_1065,Réserves Spéciales consécutive à l’octroi d’avantages,1065,1065,l10n_dz_elosys.pcg_106
+pcg_1066,Réserves facultatives,1066,1066,l10n_dz_elosys.pcg_106
+pcg_1068,Autres réserves,1068,1068,l10n_dz_elosys.pcg_106
+pcg_107,Ecart d'équivalence,107,107,l10n_dz_elosys.pcg_10
+pcg_108,Compte de l'exploitant,108,108,l10n_dz_elosys.pcg_10
+pcg_109,Actionnaires : Capital souscrit non appelé,109,109,l10n_dz_elosys.pcg_10
+pcg_11,Report à nouveau,11,11,l10n_dz_elosys.pcg_1
+pcg_110,Report à nouveau (bénéfice),110,110,l10n_dz_elosys.pcg_11
+pcg_115,Impact résultant du changement de la réglementation et des méthodes,115,115,l10n_dz_elosys.pcg_11
+pcg_1151,Impact d'ajustement positif (plus value),1151,1151,l10n_dz_elosys.pcg_115
+pcg_1159,Impact d'ajustement négatif (moins value),1159,1159,l10n_dz_elosys.pcg_115
+pcg_117,Impact résultant des corrections d’estimation et d’erreurs comptables,117,117,l10n_dz_elosys.pcg_11
+pcg_1171,Impact d'assainissement comptable et financier : positif,1171,1171,l10n_dz_elosys.pcg_117
+pcg_1175,Ajustement résultant de correction d'estimation,1175,1175,l10n_dz_elosys.pcg_117
+pcg_1176,Ajustement résultant de correction d'erreurs comptables,1176,1176,l10n_dz_elosys.pcg_117
+pcg_1179,Impact d'assainissement comptable et financier : négatif,1179,1179,l10n_dz_elosys.pcg_117
+pcg_118,Acompte sur dividendes,118,118,l10n_dz_elosys.pcg_11
+pcg_119,Report à nouveau (Déficit),119,119,l10n_dz_elosys.pcg_11
+pcg_12,Résultat de l'exercice,12,12,l10n_dz_elosys.pcg_1
+pcg_120,Résultat net de l’exercice – (BENEFICE),120,120,l10n_dz_elosys.pcg_12
+pcg_121,Marge commerciale,121,121,l10n_dz_elosys.pcg_12
+pcg_122,Production de l’exercice,122,122,l10n_dz_elosys.pcg_12
+pcg_123,Valeur Ajoutée d’exploitation,123,123,l10n_dz_elosys.pcg_12
+pcg_124,Excédent (ou insuffisance) brut d’exploitation (EBE) – EBITDA,124,124,l10n_dz_elosys.pcg_12
+pcg_125,Résultat opérationnel,125,125,l10n_dz_elosys.pcg_12
+pcg_126,Résultat ordinaire avant impôts,126,126,l10n_dz_elosys.pcg_12
+pcg_127,Résultat extraordinaire,127,127,l10n_dz_elosys.pcg_12
+pcg_128,Résultat brut de l’exercice,128,128,l10n_dz_elosys.pcg_12
+pcg_129,Résultat net de l’exercice – (DEFICIT),129,129,l10n_dz_elosys.pcg_12
+pcg_13,Produits et charges différés – hors cycle d’exploitation,13,13,l10n_dz_elosys.pcg_1
+pcg_131,Subventions d’équipement,131,131,l10n_dz_elosys.pcg_13
+pcg_1311,Subventions d’équipements : Financement de l'Etat,1311,1311,l10n_dz_elosys.pcg_131
+pcg_1312,Subventions d’équipements : Financement d'autres organismes,1312,1312,l10n_dz_elosys.pcg_131
+pcg_1313,Transfert gratuit d’immobilisations,1313,1313,l10n_dz_elosys.pcg_131
+pcg_1319,Subventions inscrites au compte de résultat,1319,1319,l10n_dz_elosys.pcg_131
+pcg_132,Autres subventions d’investissement,132,132,l10n_dz_elosys.pcg_13
+pcg_1321,Subventions d’investissement,1321,1321,l10n_dz_elosys.pcg_132
+pcg_1322,Subventions pour financement d'activités à long terme,1322,1322,l10n_dz_elosys.pcg_132
+pcg_1329,Autres subventions inscrites au compte de résultat,1329,1329,l10n_dz_elosys.pcg_132
+pcg_133,Impôts différés actif,133,133,l10n_dz_elosys.pcg_13
+pcg_134,Impôts différés passif,134,134,l10n_dz_elosys.pcg_13
+pcg_138,Autres produits et charges différés,138,138,l10n_dz_elosys.pcg_13
+pcg_1386,Charges différées – Passif non courant,1386,1386,l10n_dz_elosys.pcg_138
+pcg_1387,Produits différés – Passif non courant,1387,1387,l10n_dz_elosys.pcg_138
+pcg_15,Provisions pour charges - passifs non courants,15,15,l10n_dz_elosys.pcg_1
+pcg_153,Provisions pour pensions et obligations similaires,153,153,l10n_dz_elosys.pcg_15
+pcg_1531,Provisions pour avantages au personnel (IDR – IFC),1531,1539,l10n_dz_elosys.pcg_153
+pcg_155,Provisions pour impôts,155,155,l10n_dz_elosys.pcg_15
+pcg_1551,Provision pour rappel d'impôts et amendes fiscales,1551,1559,l10n_dz_elosys.pcg_155
+pcg_156,Provisions pour renouvellement des immobilisations (concession),156,156,l10n_dz_elosys.pcg_15
+pcg_158,Autres provisions pour charges - passifs non courants,158,158,l10n_dz_elosys.pcg_15
+pcg_1581,Provisions pour remise en l’état ou de démantèlement,1581,1581,l10n_dz_elosys.pcg_158
+pcg_1582,Provision pour perte à terminaison (contrats déficitaires),1582,1582,l10n_dz_elosys.pcg_158
+pcg_1583,Provision pour procès et litiges (au-delà de 12 mois),1583,1583,l10n_dz_elosys.pcg_158
+pcg_1584,Provision pour garantie données aux clients (au-delà de 12 mois),1584,1584,l10n_dz_elosys.pcg_158
+pcg_1588,Autres provisions résultant d’obligation légale ou implicite,1588,1588,l10n_dz_elosys.pcg_158
+pcg_16,Emprunts et dettes assimilés,16,16,l10n_dz_elosys.pcg_1
+pcg_161,Titres participatifs,161,161,l10n_dz_elosys.pcg_16
+pcg_1611,Emprunt Principal,1611,1611,l10n_dz_elosys.pcg_161
+pcg_1618,Intérêts courus et non échus,1618,1618,l10n_dz_elosys.pcg_161
+pcg_162,Emprunts obligataires convertibles,162,162,l10n_dz_elosys.pcg_16
+pcg_1621,Emprunt Principal,1621,1621,l10n_dz_elosys.pcg_162
+pcg_1628,Intérêts courus et non échus,1628,1628,l10n_dz_elosys.pcg_162
+pcg_163,Autres emprunts obligataires,163,163,l10n_dz_elosys.pcg_16
+pcg_1631,Emprunt Principal,1631,1631,l10n_dz_elosys.pcg_163
+pcg_1638,Intérêts courus et non échus,1638,1638,l10n_dz_elosys.pcg_163
+pcg_164,Emprunts auprès des établissements de crédit,164,164,l10n_dz_elosys.pcg_16
+pcg_1641,Emprunts à Court Terme,1641,1641,l10n_dz_elosys.pcg_164
+pcg_1642,Emprunts à Moyen  Terme,1642,1642,l10n_dz_elosys.pcg_164
+pcg_1643,Emprunts à Long Terme,1643,1643,l10n_dz_elosys.pcg_164
+pcg_1646,Intérêts intercalaires,1646,1646,l10n_dz_elosys.pcg_164
+pcg_1648,Intérêts courus et non échus,1648,1648,l10n_dz_elosys.pcg_164
+pcg_165,Dépôts et cautionnements reçus,165,165,l10n_dz_elosys.pcg_16
+pcg_1651,Dépôts reçus,1651,1651,l10n_dz_elosys.pcg_165
+pcg_1655,Cautionnements reçus,1655,1655,l10n_dz_elosys.pcg_165
+pcg_1658,Intérêts courus et non échus,1658,1658,l10n_dz_elosys.pcg_165
+pcg_167,Dettes sur contrat de location-financement,167,167,l10n_dz_elosys.pcg_16
+pcg_1671,Financement Principal,1671,1671,l10n_dz_elosys.pcg_167
+pcg_1678,Intérêts courus et non échus,1678,1678,l10n_dz_elosys.pcg_167
+pcg_168,Autres emprunts et dettes assimilés,168,168,l10n_dz_elosys.pcg_16
+pcg_1681,Emprunt Principal,1681,1681,l10n_dz_elosys.pcg_168
+pcg_1688,Intérêts courus et non échus,1688,1688,l10n_dz_elosys.pcg_168
+pcg_169,Primes de remboursement des obligations,169,169,l10n_dz_elosys.pcg_16
+pcg_17,Dettes rattachées à des participations,17,17,l10n_dz_elosys.pcg_1
+pcg_171,Dettes rattachées à des participations groupe,171,171,l10n_dz_elosys.pcg_17
+pcg_172,Dettes rattachés à des participations hors groupe,172,172,l10n_dz_elosys.pcg_17
+pcg_173,Dettes rattachés à des sociétés en participation,173,173,l10n_dz_elosys.pcg_17
+pcg_178,Autres dettes rattachés à des participations,178,178,l10n_dz_elosys.pcg_17
+pcg_18,Comptes de liaison des établissements et sociétés en participation,18,18,l10n_dz_elosys.pcg_1
+pcg_181,Comptes de liaison entre établissements,181,181,l10n_dz_elosys.pcg_18
+pcg_1814,Créances sur la participation ou GIE,1814,1814,l10n_dz_elosys.pcg_181
+pcg_1815,Dettes envers la participation ou GIE,1815,1815,l10n_dz_elosys.pcg_181
+pcg_1816,Charges inter-Unités (ou établissement),1816,1816,l10n_dz_elosys.pcg_181
+pcg_1817,Produis inter-Unités (ou établissement),1817,1817,l10n_dz_elosys.pcg_181
+pcg_188,Comptes de liaison entre sociétés en participation,188,188,l10n_dz_elosys.pcg_18
+pcg_2,CLASSE 2 : COMPTES D’IMMOBILISATIONS,2,2,
+pcg_20,Immobilisations incorporelles,20,20,l10n_dz_elosys.pcg_2
+pcg_203,Frais de développement immobilisables,203,203,l10n_dz_elosys.pcg_20
+pcg_204,Logiciels informatiques et assimilés,204,204,l10n_dz_elosys.pcg_20
+pcg_2041,Logiciels de traitements informatiques,2041,2041,l10n_dz_elosys.pcg_204
+pcg_2042,Hébergement site Web,2042,2042,l10n_dz_elosys.pcg_204
+pcg_205,"Concessions et droits similaires, brevets, licences, marques",205,205,l10n_dz_elosys.pcg_20
+pcg_2051,Droit à la propriété industrielle et commerciale,2051,2051,l10n_dz_elosys.pcg_205
+pcg_2058,Autres droits similaires (concession et franchise),2058,2058,l10n_dz_elosys.pcg_205
+pcg_207,Ecart d’acquisition – « goodwill »,207,207,l10n_dz_elosys.pcg_20
+pcg_2071,Ecart d'acquisition positif (goodwill),2071,2071,l10n_dz_elosys.pcg_207
+pcg_2072,Autres écarts d’acquisitions ou de fusions,2072,2072,l10n_dz_elosys.pcg_207
+pcg_2079,Ecart d'acquisition négatif (badwill),2079,2079,l10n_dz_elosys.pcg_207
+pcg_208,Autres immobilisations incorporelles,208,208,l10n_dz_elosys.pcg_20
+pcg_2081,Fonds de commerce,2081,2081,l10n_dz_elosys.pcg_208
+pcg_2082,Droit au bail,2082,2082,l10n_dz_elosys.pcg_208
+pcg_2087,Actif environnemental,2087,2087,l10n_dz_elosys.pcg_208
+pcg_21,Immobilisations corporelles,21,21,l10n_dz_elosys.pcg_2
+pcg_211,Terrains,211,211,l10n_dz_elosys.pcg_21
+pcg_2111,Terrains nus,2111,2111,l10n_dz_elosys.pcg_211
+pcg_2112,Terrains bâtis,2112,2112,l10n_dz_elosys.pcg_211
+pcg_2113,Terrains aménagés,2113,2113,l10n_dz_elosys.pcg_211
+pcg_2114,Terrains de gisement (carrières),2114,2114,l10n_dz_elosys.pcg_211
+pcg_212,Agencements et aménagements des terrains,212,212,l10n_dz_elosys.pcg_21
+pcg_2121,Aménagement d’espaces verts,2121,2121,l10n_dz_elosys.pcg_212
+pcg_2122,Autres agencements et aménagements de terrains,2122,2122,l10n_dz_elosys.pcg_212
+pcg_213,Constructions,213,213,l10n_dz_elosys.pcg_21
+pcg_2131,Bâtiments administratifs & commerciaux,2131,2131,l10n_dz_elosys.pcg_213
+pcg_2132,Bâtiments industriels (à décomposer en cas de besoin),2132,2132,l10n_dz_elosys.pcg_213
+pcg_2133,Bâtiments sociaux (CMS – CANTINE – REFECTOIRE),2133,2133,l10n_dz_elosys.pcg_213
+pcg_2134,Immeubles de placement,2134,2134,l10n_dz_elosys.pcg_213
+pcg_2135,Autres constructions,2135,2135,l10n_dz_elosys.pcg_213
+pcg_2136,"Agencements, aménagements et installations des bâtiments",2136,2136,l10n_dz_elosys.pcg_213
+pcg_2137,Ouvrages d’infrastructures : Voies de transport ou d'accès,2137,2137,l10n_dz_elosys.pcg_213
+pcg_2138,Autres travaux d'aménagement sur ouvrages d’infrastructures,2138,2138,l10n_dz_elosys.pcg_213
+pcg_215,"Installations techniques, matériel et outillage industriels",215,215,l10n_dz_elosys.pcg_21
+pcg_2151,Installations complexes spécialisées,2151,2151,l10n_dz_elosys.pcg_215
+pcg_2153,Installations à caractère spécifique,2153,2153,l10n_dz_elosys.pcg_215
+pcg_2154,Matériel industriel,2154,2154,l10n_dz_elosys.pcg_215
+pcg_2155,Outillage industriel,2155,2155,l10n_dz_elosys.pcg_215
+pcg_2157,Agencements et aménagements du matériel et outillage industriel,2157,2157,l10n_dz_elosys.pcg_215
+pcg_2158,Autres matériels et outillage industriel,2158,2158,l10n_dz_elosys.pcg_215
+pcg_218,Autres immobilisations corporelles,218,218,l10n_dz_elosys.pcg_21
+pcg_2181,"Installations générales, agencements et aménagements divers",2181,2181,l10n_dz_elosys.pcg_218
+pcg_2182,Matériel de transport,2182,2182,l10n_dz_elosys.pcg_218
+pcg_2183,Matériel de bureautique et d'informatique,2183,2183,l10n_dz_elosys.pcg_218
+pcg_2184,Mobilier,2184,2184,l10n_dz_elosys.pcg_218
+pcg_2185,Autres mobiliers et matériels divers,2185,2185,l10n_dz_elosys.pcg_218
+pcg_2186,Actifs biologiques,2186,2186,l10n_dz_elosys.pcg_218
+pcg_2187,Emballages récupérables,2187,2187,l10n_dz_elosys.pcg_218
+pcg_22,Immobilisations en concession,22,22,l10n_dz_elosys.pcg_2
+pcg_221,Terrains en concession,221,221,l10n_dz_elosys.pcg_22
+pcg_222,Agencements et aménagements de terrain en concession,222,222,l10n_dz_elosys.pcg_22
+pcg_223,Constructions en concession,223,223,l10n_dz_elosys.pcg_22
+pcg_225,Installations techniques en concession,225,225,l10n_dz_elosys.pcg_22
+pcg_228,Autres immobilisations corporelles en concession,228,228,l10n_dz_elosys.pcg_22
+pcg_229,Droits du concédant,229,229,l10n_dz_elosys.pcg_22
+pcg_23,Immobilisations en cours,23,23,l10n_dz_elosys.pcg_2
+pcg_232,Immobilisations corporelles en cours,232,232,l10n_dz_elosys.pcg_23
+pcg_2322,Terrains en cours,2322,2322,l10n_dz_elosys.pcg_232
+pcg_2323,Constructions en cours,2323,2323,l10n_dz_elosys.pcg_232
+pcg_2325,"Installations techniques, matériels et outillage industriels en cours",2325,2325,l10n_dz_elosys.pcg_232
+pcg_2328,Autres immobilisations corporelles en cours,2328,2328,l10n_dz_elosys.pcg_232
+pcg_237,Immobilisations incorporelles en cours,237,237,l10n_dz_elosys.pcg_23
+pcg_238,Avances et acomptes versés sur commandes d'immobilisations,238,238,l10n_dz_elosys.pcg_23
+pcg_2382,Avances sur commandes d’immobilisations incorporelles,2382,2382,l10n_dz_elosys.pcg_238
+pcg_2384,Avances sur commandes d’immobilisations corporelles,2384,2384,l10n_dz_elosys.pcg_238
+pcg_26,Participations et créances rattachées à des participations,26,26,l10n_dz_elosys.pcg_2
+pcg_261,Titres de filiales,261,261,l10n_dz_elosys.pcg_26
+pcg_262,Autres titres de participation,262,262,l10n_dz_elosys.pcg_26
+pcg_265,Titres de participation évalués par équivalence (entreprises associés),265,265,l10n_dz_elosys.pcg_26
+pcg_266,Créances rattachées à des participations groupe,266,266,l10n_dz_elosys.pcg_26
+pcg_267,Créances rattachés à des participations hors groupe,267,267,l10n_dz_elosys.pcg_26
+pcg_268,Créances rattachés à des sociétés en participation,268,268,l10n_dz_elosys.pcg_26
+pcg_269,Versements restant à effectuer sur titres de participation non libérés,269,269,l10n_dz_elosys.pcg_26
+pcg_27,Autres immobilisations financières,27,27,l10n_dz_elosys.pcg_2
+pcg_271,Titres immobilisés autres que les titres immobilisés de l'activité de portefeuille,271,271,l10n_dz_elosys.pcg_27
+pcg_272,"Titres représentatifs de droit de créance (obligations, bons)",272,272,l10n_dz_elosys.pcg_27
+pcg_2721,Obligations à terme,2721,2721,l10n_dz_elosys.pcg_272
+pcg_2722,Bons du Trésor,2722,2722,l10n_dz_elosys.pcg_272
+pcg_2723,Dépôts à terme (DAT > 12 mois),2723,2723,l10n_dz_elosys.pcg_272
+pcg_273,Titres immobilisés de l'activité de portefeuille – (T.I.A.P),273,273,l10n_dz_elosys.pcg_27
+pcg_274,Prêts et créances sur contrat de location-financement,274,274,l10n_dz_elosys.pcg_27
+pcg_2741,Prêts participatifs,2741,2741,l10n_dz_elosys.pcg_274
+pcg_2742,Prêts au personnel,2742,2742,l10n_dz_elosys.pcg_274
+pcg_2743,Autres prêts accordés,2743,2743,l10n_dz_elosys.pcg_274
+pcg_2744,Créances sur contrat de location-financement,2744,2744,l10n_dz_elosys.pcg_274
+pcg_2748,Intérêts courus sur prêts et créances de crédit bail,2748,2748,l10n_dz_elosys.pcg_274
+pcg_275,Dépôts et cautionnements versés,275,275,l10n_dz_elosys.pcg_27
+pcg_2751,Dépôts versés,2751,2751,l10n_dz_elosys.pcg_275
+pcg_2752,Cautionnements versés aux fonds de garantie,2752,2752,l10n_dz_elosys.pcg_275
+pcg_2753,Cautions de soumissions,2753,2753,l10n_dz_elosys.pcg_275
+pcg_2754,Cautions de bonne exécution ou de bonne fin,2754,2754,l10n_dz_elosys.pcg_275
+pcg_2755,Cautionnements versés sur loyers (Loyers d'avance),2755,2755,l10n_dz_elosys.pcg_275
+pcg_2756,"Cautionnements versés sur Téléphone, Eau, Gaz et électricité",2756,2756,l10n_dz_elosys.pcg_275
+pcg_2757,Cautionnements versés à la SONELGAZ,2757,2757,l10n_dz_elosys.pcg_275
+pcg_2758,Autres cautionnements versés,2758,2758,l10n_dz_elosys.pcg_275
+pcg_276,Autres créances immobilisées,276,276,l10n_dz_elosys.pcg_27
+pcg_2761,Créances diverses – Actifs non courants,2761,2761,l10n_dz_elosys.pcg_276
+pcg_2768,Intérêts courus et non échus sur actifs non courants,2768,2768,l10n_dz_elosys.pcg_276
+pcg_279,Versements restant à effectuer sur titres immobilisés non libérés,279,279,l10n_dz_elosys.pcg_27
+pcg_28,Amortissements des immobilisations,28,28,l10n_dz_elosys.pcg_2
+pcg_280,Amortissements des immobilisations incorporelles,280,280,l10n_dz_elosys.pcg_28
+pcg_2803,Amortissements des frais de développement immobilisables,2803,2803,l10n_dz_elosys.pcg_280
+pcg_2804,Amortissements des logiciels informatiques et assimilés,2804,2804,l10n_dz_elosys.pcg_280
+pcg_2805,"Amortissements concessions & droits similaires, brevets, licences, marques",2805,2805,l10n_dz_elosys.pcg_280
+pcg_2808,Amortissements des autres immobilisations incorporelles,2808,2808,l10n_dz_elosys.pcg_280
+pcg_281,Amortissements des immobilisations corporelles,281,281,l10n_dz_elosys.pcg_28
+pcg_2811,Amortissements des terrains de gisement (carrières …),2811,2811,l10n_dz_elosys.pcg_281
+pcg_2812,Amortissements des agencements et aménagements de terrains,2812,2812,l10n_dz_elosys.pcg_281
+pcg_2813,Amortissements des constructions,2813,2813,l10n_dz_elosys.pcg_281
+pcg_2815,"Amortissements des Installations techniques, matériels outillage industriels",2815,2815,l10n_dz_elosys.pcg_281
+pcg_2818,Amortissements des autres immobilisations corporelles,2818,2818,l10n_dz_elosys.pcg_281
+pcg_282,Amortissements des immobilisations mises en concession,282,282,l10n_dz_elosys.pcg_28
+pcg_2821,Amortissement : Terrains en concession,2821,2821,l10n_dz_elosys.pcg_282
+pcg_2822,Amortissement : Agencements et aménagements de terrains,2822,2822,l10n_dz_elosys.pcg_282
+pcg_2823,Amortissement : Constructions en concession,2823,2823,l10n_dz_elosys.pcg_282
+pcg_2825,Amortissement : Installations techniques en concession,2825,2825,l10n_dz_elosys.pcg_282
+pcg_2828,Amortissement : Autres immobilisations corporelles en concession,2828,2828,l10n_dz_elosys.pcg_282
+pcg_29,Pertes de valeur sur immobilisations,29,29,l10n_dz_elosys.pcg_2
+pcg_290,Pertes de valeur sur immobilisations incorporelles,290,290,l10n_dz_elosys.pcg_29
+pcg_2903,Pertes de valeur sur frais de développement immobilisables,2903,2903,l10n_dz_elosys.pcg_290
+pcg_2904,Pertes de valeur sur logiciels informatiques et assimilés,2904,2904,l10n_dz_elosys.pcg_290
+pcg_2905,"Pertes de valeur sur concessions & droits similaires, brevets, licences, marques",2905,2905,l10n_dz_elosys.pcg_290
+pcg_2907,Pertes de valeur sur écart d’acquisition (Goodwill),2907,2907,l10n_dz_elosys.pcg_290
+pcg_2908,Pertes de valeur sur autres immobilisations incorporelles,2908,2908,l10n_dz_elosys.pcg_290
+pcg_291,Pertes de valeur sur immobilisations corporelles,291,291,l10n_dz_elosys.pcg_29
+pcg_2911,Perte de valeur des terrains (autres que les terrains de gisement),2911,2911,l10n_dz_elosys.pcg_291
+pcg_2912,Pertes de valeur sur agencements et aménagements de terrain,2912,2912,l10n_dz_elosys.pcg_291
+pcg_2913,Pertes de valeur sur constructions,2913,2913,l10n_dz_elosys.pcg_291
+pcg_2914,Pertes de valeur sur immeubles de placement (Juste valeur),2914,2914,l10n_dz_elosys.pcg_291
+pcg_2915,"Pertes de valeur sur Installations techniques, matériel et outillage industriel",2915,2915,l10n_dz_elosys.pcg_291
+pcg_2916,Pertes de valeur sur actifs biologiques (Juste valeur),2916,2916,l10n_dz_elosys.pcg_291
+pcg_2918,Pertes de valeur sur autres immobilisations corporelles,2918,2918,l10n_dz_elosys.pcg_291
+pcg_292,Pertes de valeur sur immobilisations mises en concession,292,292,l10n_dz_elosys.pcg_29
+pcg_293,Pertes de valeur sur immobilisations en cours,293,293,l10n_dz_elosys.pcg_29
+pcg_2931,Pertes de valeurs sur immobilisations incorporelles en cours,2931,2931,l10n_dz_elosys.pcg_293
+pcg_2932,Pertes de valeurs sur immobilisations corporelles en cours,2932,2932,l10n_dz_elosys.pcg_293
+pcg_294,Pertes de valeurs sur les Unités Génératrices de Trésorerie,294,294,l10n_dz_elosys.pcg_29
+pcg_2941,Pertes de valeur sur U.G.T  (1),2941,2941,l10n_dz_elosys.pcg_294
+pcg_2942,Pertes de valeur sur U.G.T  (2),2942,2942,l10n_dz_elosys.pcg_294
+pcg_296,Pertes de valeur sur participations et créances rattachées à participations,296,296,l10n_dz_elosys.pcg_29
+pcg_2961,Pertes de valeur sur titres de filiales,2961,2961,l10n_dz_elosys.pcg_296
+pcg_2962,Pertes de valeur sur autres titres de participation,2962,2962,l10n_dz_elosys.pcg_296
+pcg_2966,Pertes de valeur sur créances rattachées à des participations – groupe,2966,2966,l10n_dz_elosys.pcg_296
+pcg_2967,Pertes de valeur sur créances rattachées à des participations – HG,2967,2967,l10n_dz_elosys.pcg_296
+pcg_2968,Pertes de valeur sur créances rattachées à des SEP,2968,2968,l10n_dz_elosys.pcg_296
+pcg_297,Pertes de valeur sur autres titres immobilisés,297,297,l10n_dz_elosys.pcg_29
+pcg_2971,Pertes de valeur sur titres de placement,2971,2971,l10n_dz_elosys.pcg_297
+pcg_2972,Pertes de valeurs sur les TIAP,2972,2972,l10n_dz_elosys.pcg_297
+pcg_298,Pertes de valeur sur autres actifs financiers immobilisés,298,298,l10n_dz_elosys.pcg_29
+pcg_2981,Pertes de valeur sur les titres participatifs,2981,2981,l10n_dz_elosys.pcg_298
+pcg_2982,Pertes de valeur sur les prêts ordinaires,2982,2982,l10n_dz_elosys.pcg_298
+pcg_2983,Pertes de valeur sur les dépôts et cautionnements versés,2983,2983,l10n_dz_elosys.pcg_298
+pcg_2988,Pertes de valeur sur autres actifs financiers immobilisés,2988,2988,l10n_dz_elosys.pcg_298
+pcg_3,CLASSE 3 : COMPTES DE STOCKS ET EN COURS,3,3,
+pcg_30,Stocks de marchandises,30,30,l10n_dz_elosys.pcg_3
+pcg_301,Marchandises (ou groupe) A,301,301,l10n_dz_elosys.pcg_30
+pcg_302,Marchandises (ou groupe) B,302,302,l10n_dz_elosys.pcg_30
+pcg_31,Matières premières et fournitures,31,31,l10n_dz_elosys.pcg_3
+pcg_311,Matières premières,311,311,l10n_dz_elosys.pcg_31
+pcg_3111,Matières (ou groupe) A,3111,3111,l10n_dz_elosys.pcg_311
+pcg_3112,Matières (ou groupe) B,3112,3112,l10n_dz_elosys.pcg_311
+pcg_3118,Autres matières premières,3118,3118,l10n_dz_elosys.pcg_311
+pcg_317,Fournitures Accessoires,317,317,l10n_dz_elosys.pcg_31
+pcg_3171,Fournitures A,3171,3171,l10n_dz_elosys.pcg_317
+pcg_3172,Fournitures B,3172,3172,l10n_dz_elosys.pcg_317
+pcg_3178,Autres fournitures accessoires,3178,3178,l10n_dz_elosys.pcg_317
+pcg_32,Autres approvisionnements,32,32,l10n_dz_elosys.pcg_3
+pcg_321,Matières consommables,321,321,l10n_dz_elosys.pcg_32
+pcg_3211,Matières (ou groupe) C,3211,3211,l10n_dz_elosys.pcg_321
+pcg_3212,Matières (ou groupe) D,3212,3212,l10n_dz_elosys.pcg_321
+pcg_3218,Autres matières consommables,3218,3218,l10n_dz_elosys.pcg_321
+pcg_322,Fournitures consommables,322,322,l10n_dz_elosys.pcg_32
+pcg_3221,Carburant et lubrifiant – Véhicules,3221,3221,l10n_dz_elosys.pcg_322
+pcg_3222,Petit outillage et fournitures d'ateliers,3222,3222,l10n_dz_elosys.pcg_322
+pcg_3223,Droguerie et Produits d'entretien,3223,3223,l10n_dz_elosys.pcg_322
+pcg_3224,Pièces de rechange pour équipements & matériels techniques,3224,3224,l10n_dz_elosys.pcg_322
+pcg_3225,Pièces de rechange et pneumatique pour matériel de transport,3225,3225,l10n_dz_elosys.pcg_322
+pcg_3226,Quincaillerie générale et fournitures de magasin,3226,3226,l10n_dz_elosys.pcg_322
+pcg_3227,Fournitures de bureau et imprimés,3227,3227,l10n_dz_elosys.pcg_322
+pcg_3228,Autres fournitures consommables,3228,3228,l10n_dz_elosys.pcg_322
+pcg_326,Emballages (non récupérables),326,326,l10n_dz_elosys.pcg_32
+pcg_3261,Emballages perdus,3261,3261,l10n_dz_elosys.pcg_326
+pcg_3262,Emballages récupérables non identifiables,3262,3262,l10n_dz_elosys.pcg_326
+pcg_3263,Emballages à usage mixte,3263,3263,l10n_dz_elosys.pcg_326
+pcg_33,En cours de production de biens,33,33,l10n_dz_elosys.pcg_3
+pcg_331,Produits en cours,331,331,l10n_dz_elosys.pcg_33
+pcg_3311,Produits en cours – P1,3311,3311,l10n_dz_elosys.pcg_331
+pcg_3312,Produits en cours – P2,3312,3312,l10n_dz_elosys.pcg_331
+pcg_3313,Produits en cours – P3,3313,3313,l10n_dz_elosys.pcg_331
+pcg_335,Travaux en cours,335,335,l10n_dz_elosys.pcg_33
+pcg_3351,Travaux en cours – T1,3351,3351,l10n_dz_elosys.pcg_335
+pcg_3352,Travaux en cours – T2,3352,3352,l10n_dz_elosys.pcg_335
+pcg_3353,Travaux en cours – T3,3353,3353,l10n_dz_elosys.pcg_335
+pcg_34,En cours de production de services,34,34,l10n_dz_elosys.pcg_3
+pcg_341,Etudes en cours,341,341,l10n_dz_elosys.pcg_34
+pcg_3411,Etudes en cours – E1,3411,3411,l10n_dz_elosys.pcg_341
+pcg_3412,Etudes en cours – E2,3412,3412,l10n_dz_elosys.pcg_341
+pcg_3413,Etudes en cours – E3,3413,3413,l10n_dz_elosys.pcg_341
+pcg_345,Prestations de services en cours,345,345,l10n_dz_elosys.pcg_34
+pcg_3451,Prestations de services en cours – S1,3451,3451,l10n_dz_elosys.pcg_345
+pcg_3452,Prestations de services en cours – S2,3452,3452,l10n_dz_elosys.pcg_345
+pcg_3453,Prestations de services en cours – S3,3453,3453,l10n_dz_elosys.pcg_345
+pcg_35,Stocks de produits,35,35,l10n_dz_elosys.pcg_3
+pcg_351,Produits intermédiaires,351,351,l10n_dz_elosys.pcg_35
+pcg_3511,Produits intermédiaires (ou groupe) – PI 1,3511,3511,l10n_dz_elosys.pcg_351
+pcg_3512,Produits intermédiaires (ou groupe) – PI 2,3512,3512,l10n_dz_elosys.pcg_351
+pcg_355,Produits finis,355,355,l10n_dz_elosys.pcg_35
+pcg_3551,Produits finis (ou groupe) – PF 1,3551,3551,l10n_dz_elosys.pcg_355
+pcg_3552,Produits finis (ou groupe) – PF 2,3552,3552,l10n_dz_elosys.pcg_355
+pcg_3553,Produits finis (ou groupe) – PF 3,3553,3553,l10n_dz_elosys.pcg_355
+pcg_358,"Produits résiduels ou matières de récupération (déchets, rebuts)",358,358,l10n_dz_elosys.pcg_35
+pcg_3581,Produits résiduels,3581,3581,l10n_dz_elosys.pcg_358
+pcg_3582,Matières de récupération (à recycler),3582,3582,l10n_dz_elosys.pcg_358
+pcg_3583,Déchets et rebuts divers destinés à être cédés ou détruits,3583,3583,l10n_dz_elosys.pcg_358
+pcg_36,Stocks provenant d’immobilisations,36,36,l10n_dz_elosys.pcg_3
+pcg_361,Lot de bord et pièces d’accompagnement,361,361,l10n_dz_elosys.pcg_36
+pcg_362,Organes et accessoires démantelés,362,362,l10n_dz_elosys.pcg_36
+pcg_365,Pièces de rechanges récupérées sur matériels,365,365,l10n_dz_elosys.pcg_36
+pcg_368,Actifs non courants destinés à être cédés (réformes),368,368,l10n_dz_elosys.pcg_36
+pcg_37,"Stocks à l'extérieur (en cours de route, en dépôt ou en consignation)",37,37,l10n_dz_elosys.pcg_3
+pcg_371,Matières premières en cours de réception,371,371,l10n_dz_elosys.pcg_37
+pcg_372,Autres approvisionnements à réceptionner,372,372,l10n_dz_elosys.pcg_37
+pcg_373,Stocks en dépôt ou en consignation,373,373,l10n_dz_elosys.pcg_37
+pcg_374,Stocks sous douanes,374,374,l10n_dz_elosys.pcg_37
+pcg_38,Achats stockés,38,38,l10n_dz_elosys.pcg_3
+pcg_380,Achats de Marchandises stockées,380,380,l10n_dz_elosys.pcg_38
+pcg_3801,Achats de Marchandises (ou groupe) A,3801,3801,l10n_dz_elosys.pcg_380
+pcg_3802,Achats de Marchandises (ou groupe) B,3802,3802,l10n_dz_elosys.pcg_380
+pcg_381,Achats de Matières premières et fournitures stockées,381,381,l10n_dz_elosys.pcg_38
+pcg_3811,Achats de Matières premières,3811,3811,l10n_dz_elosys.pcg_381
+pcg_3817,Achats de Fournitures Accessoires,3817,3817,l10n_dz_elosys.pcg_381
+pcg_382,Autres approvisionnements stockés,382,382,l10n_dz_elosys.pcg_38
+pcg_3821,Achat de Matières consommables stockées,3821,3821,l10n_dz_elosys.pcg_382
+pcg_3822,Achat de Fournitures consommables stockées,3822,3822,l10n_dz_elosys.pcg_382
+pcg_3826,Achat d'Emballages non récupérables,3826,3826,l10n_dz_elosys.pcg_382
+pcg_3827,Achat de Fournitures consommables non stockées,3827,3827,l10n_dz_elosys.pcg_382
+pcg_383,Frais Accessoires sur Achats (indirects) – incorporables,383,383,l10n_dz_elosys.pcg_38
+pcg_3830,Frais Accessoires sur Achats de marchandises,3830,3830,l10n_dz_elosys.pcg_383
+pcg_3831,Frais Accessoires sur Achats de matières premières et fournitures,3831,3831,l10n_dz_elosys.pcg_383
+pcg_3832,Frais Accessoires sur Achats d'autres approvisionnements,3832,3832,l10n_dz_elosys.pcg_383
+pcg_384,Achats sans paiements,384,384,l10n_dz_elosys.pcg_38
+pcg_3841,Achats locaux,3841,3841,l10n_dz_elosys.pcg_384
+pcg_3842,Achats à l'importation,3842,3842,l10n_dz_elosys.pcg_384
+pcg_39,Pertes de valeur sur stocks et en cours,39,39,l10n_dz_elosys.pcg_3
+pcg_390,Pertes de valeur sur Stocks de marchandises,390,390,l10n_dz_elosys.pcg_39
+pcg_391,Pertes de valeur sur Matières premières et fournitures,391,391,l10n_dz_elosys.pcg_39
+pcg_392,Pertes de valeur sur Autres approvisionnements,392,392,l10n_dz_elosys.pcg_39
+pcg_393,Pertes de valeur sur En cours de production de biens,393,393,l10n_dz_elosys.pcg_39
+pcg_394,Pertes de valeur sur En cours de production de services,394,394,l10n_dz_elosys.pcg_39
+pcg_395,Pertes de valeur sur stocks de produits,395,395,l10n_dz_elosys.pcg_39
+pcg_397,Pertes de valeur sur Stocks à l'extérieur,397,397,l10n_dz_elosys.pcg_39
+pcg_4,CLASSE 4 : COMPTES DE TIERS,4,4,
+pcg_40,Fournisseurs et comptes rattachés,40,40,l10n_dz_elosys.pcg_4
+pcg_401,Fournisseurs de biens et services,401,401,l10n_dz_elosys.pcg_40
+pcg_4013,Fournisseurs de stocks,4013,4013,l10n_dz_elosys.pcg_401
+pcg_4016,Fournisseurs de services,4016,4016,l10n_dz_elosys.pcg_401
+pcg_4017,Fournisseurs : Retenue de garantie sur stocks & services,4017,4017,l10n_dz_elosys.pcg_401
+pcg_403,Fournisseurs : Effets à payer,403,403,l10n_dz_elosys.pcg_40
+pcg_4031,Effets à payer aux fournisseurs de stocks,4031,4031,l10n_dz_elosys.pcg_403
+pcg_4032,Effets à payer aux fournisseurs de services,4032,4032,l10n_dz_elosys.pcg_403
+pcg_404,Fournisseurs d'immobilisations,404,404,l10n_dz_elosys.pcg_40
+pcg_4041,Fournisseurs d'immobilisations : Nationaux – Publics,4041,4041,l10n_dz_elosys.pcg_404
+pcg_4042,Fournisseurs d'immobilisations : Nationaux – Privés,4042,4042,l10n_dz_elosys.pcg_404
+pcg_4043,Fournisseurs d'immobilisations : Etrangers,4043,4043,l10n_dz_elosys.pcg_404
+pcg_4047,Fournisseurs d'immobilisations : Retenues de garantie,4047,4047,l10n_dz_elosys.pcg_404
+pcg_405,Fournisseurs d'immobilisations : Effets à payer,405,405,l10n_dz_elosys.pcg_40
+pcg_408,Fournisseurs factures non parvenues,408,408,l10n_dz_elosys.pcg_40
+pcg_4081,Fournisseurs de stocks nationaux : Factures non parvenues,4081,4081,l10n_dz_elosys.pcg_408
+pcg_4082,Fournisseurs de services – factures non parvenues,4082,4082,l10n_dz_elosys.pcg_408
+pcg_4083,Factures à recevoir des Fournisseurs d’immobilisations,4083,4083,l10n_dz_elosys.pcg_408
+pcg_4086,"Factures à recevoir des Consultants, CAC et Experts",4086,4086,l10n_dz_elosys.pcg_408
+pcg_4088,Fournisseurs : Intérêts courus à payer,4088,4088,l10n_dz_elosys.pcg_408
+pcg_4091,Fournisseurs : Avances et acomptes sur commandes,4091,4091,l10n_dz_elosys.pcg_40
+pcg_4094,"Autres avances et acomptes (Consultants, CAC et Experts)",4094,4094,l10n_dz_elosys.pcg_40
+pcg_4096,Fournisseurs : Créances pour emballages et matériels à rendre,4096,4096,l10n_dz_elosys.pcg_40
+pcg_4097,Fournisseurs à soldes débiteurs (à détailler par code Tiers),4097,4097,l10n_dz_elosys.pcg_40
+pcg_4098,R.R.R à obtenir,4098,4098,l10n_dz_elosys.pcg_40
+pcg_41,Clients et comptes rattachés,41,41,l10n_dz_elosys.pcg_4
+pcg_411,Clients,411,411,l10n_dz_elosys.pcg_41
+pcg_4111,Clients : Ventes de biens et services,4111,4111,l10n_dz_elosys.pcg_411
+pcg_4114,Clients : Autres créances diverses,4114,4114,l10n_dz_elosys.pcg_411
+pcg_4117,Clients : Retenues de garantie,4117,4117,l10n_dz_elosys.pcg_411
+pcg_413,Clients : effets à recevoir,413,413,l10n_dz_elosys.pcg_41
+pcg_416,Clients douteux (ou litigieux),416,416,l10n_dz_elosys.pcg_41
+pcg_4161,Clients douteux : secteur public,4161,4161,l10n_dz_elosys.pcg_416
+pcg_4162,Clients douteux : secteur privé,4162,4162,l10n_dz_elosys.pcg_416
+pcg_417,Créances sur travaux ou prestations en cours,417,417,l10n_dz_elosys.pcg_41
+pcg_4171,Créances sur travaux en cours (à l'avancement),4171,4171,l10n_dz_elosys.pcg_417
+pcg_4172,Créances sur prestations en cours (à l'avancement),4172,4172,l10n_dz_elosys.pcg_417
+pcg_418,Clients - produits (finis) non encore facturés,418,418,l10n_dz_elosys.pcg_41
+pcg_4181,Clients : Factures à établir – Secteur Public,4181,4181,l10n_dz_elosys.pcg_418
+pcg_4182,Clients : Factures à établir – Secteur Privé,4182,4182,l10n_dz_elosys.pcg_418
+pcg_4188,Clients : intérêts moratoires à facturer,4188,4188,l10n_dz_elosys.pcg_418
+pcg_419,Clients créditeurs – RRR à accorder et autres avoirs à établir,419,419,l10n_dz_elosys.pcg_41
+pcg_4191,Avances et acomptes perçus sur commandes,4191,4191,l10n_dz_elosys.pcg_419
+pcg_4196,Clients : dettes pour emballages et matériels consignés,4196,4196,l10n_dz_elosys.pcg_419
+pcg_4197,Clients à solde créditeur (à détailler par code Tiers),4197,4197,l10n_dz_elosys.pcg_419
+pcg_4198,R.R.R. à accorder,4198,4198,l10n_dz_elosys.pcg_419
+pcg_42,Personnel et comptes rattachés,42,42,l10n_dz_elosys.pcg_4
+pcg_421,Personnel : Rémunérations dues,421,421,l10n_dz_elosys.pcg_42
+pcg_4211,Salaires et appointements à payer,4211,4211,l10n_dz_elosys.pcg_421
+pcg_4212,Présalaires à payer,4212,4212,l10n_dz_elosys.pcg_421
+pcg_4213,Soldes de tout compte restant dus,4213,4213,l10n_dz_elosys.pcg_421
+pcg_422,Fonds des œuvres sociales,422,422,l10n_dz_elosys.pcg_42
+pcg_4221,Contributions annuelles à payer (3%),4221,4221,l10n_dz_elosys.pcg_422
+pcg_4229,Autres avances pour le compte des œuvres sociales,4229,4229,l10n_dz_elosys.pcg_422
+pcg_423,Participation des salariés au résultat,423,423,l10n_dz_elosys.pcg_42
+pcg_4231,Quote-part de bénéfice attribuée au personnel,4231,4239,l10n_dz_elosys.pcg_423
+pcg_425,Personnel : Avances et acomptes accordés,425,425,l10n_dz_elosys.pcg_42
+pcg_4251,Avances sur salaires,4251,4251,l10n_dz_elosys.pcg_425
+pcg_4256,Avances sur frais de mission,4256,4256,l10n_dz_elosys.pcg_425
+pcg_4258,Autres avances exceptionnelles,4258,4258,l10n_dz_elosys.pcg_425
+pcg_426,Personnel : Dépôts reçus,426,426,l10n_dz_elosys.pcg_42
+pcg_4261,Frais médicaux à rembourser,4261,4261,l10n_dz_elosys.pcg_426
+pcg_4268,Autres dépôts et prestations reçus au profit du personnel,4268,4268,l10n_dz_elosys.pcg_426
+pcg_427,Personnel : Oppositions,427,427,l10n_dz_elosys.pcg_42
+pcg_4271,Saisie-arrêt et cession de rémunération (sur décision de Justice),4271,4271,l10n_dz_elosys.pcg_427
+pcg_4272,Retenue sur prêts sociaux,4272,4272,l10n_dz_elosys.pcg_427
+pcg_4273,Retenue pour fonds de solidarité nationale et internationale,4273,4273,l10n_dz_elosys.pcg_427
+pcg_4274,Retenue sur loyers logements du personnel,4274,4274,l10n_dz_elosys.pcg_427
+pcg_4275,Salaires bloqués,4275,4275,l10n_dz_elosys.pcg_427
+pcg_4278,Autres retenues sur salaires,4278,4278,l10n_dz_elosys.pcg_427
+pcg_428,Personnel : Charges à payer et produits à recevoir,428,428,l10n_dz_elosys.pcg_42
+pcg_4281,Dettes provisionnées pour congés à payer,4281,4281,l10n_dz_elosys.pcg_428
+pcg_4286,Frais de mission à payer,4286,4286,l10n_dz_elosys.pcg_428
+pcg_4288,Personnel : Autres charges à payer,4288,4288,l10n_dz_elosys.pcg_428
+pcg_4289,Personnel : Produits à recevoir,4289,4289,l10n_dz_elosys.pcg_428
+pcg_43,Organismes sociaux et comptes rattachés,43,43,l10n_dz_elosys.pcg_4
+pcg_431,Sécurité sociale,431,431,l10n_dz_elosys.pcg_43
+pcg_4311,Retenue sécurité sociale (part des employés),4311,4311,l10n_dz_elosys.pcg_431
+pcg_4312,Cotisations FNPOS,4312,4312,l10n_dz_elosys.pcg_431
+pcg_4313,CNAS à payer (part employeur),4313,4313,l10n_dz_elosys.pcg_431
+pcg_4314,Cotisations CASNOS à payer,4314,4314,l10n_dz_elosys.pcg_431
+pcg_432,Autres organismes sociaux,432,432,l10n_dz_elosys.pcg_43
+pcg_4321,Cotisations Mutuelle à payer,4321,4321,l10n_dz_elosys.pcg_432
+pcg_4322,Cotisations OPREBAT à payer,4322,4322,l10n_dz_elosys.pcg_432
+pcg_4323,Cotisations CACOBATPH à payer,4323,4323,l10n_dz_elosys.pcg_432
+pcg_4326,Assurance groupe (Quote-part employeur) à payer,4326,4326,l10n_dz_elosys.pcg_432
+pcg_4327,Assurance groupe (Quote-part des travailleurs) à payer,4327,4327,l10n_dz_elosys.pcg_432
+pcg_4328,Autres organismes sociaux,4328,4328,l10n_dz_elosys.pcg_432
+pcg_438,"Organismes sociaux, charges à payer et produits à recevoir",438,438,l10n_dz_elosys.pcg_43
+pcg_4386,Organismes sociaux : Charges sociales sur congés à payer,4386,4386,l10n_dz_elosys.pcg_438
+pcg_4388,Organismes sociaux : Autres charges à payer,4388,4388,l10n_dz_elosys.pcg_438
+pcg_4389,Organismes sociaux : Produits à recevoir,4389,4389,l10n_dz_elosys.pcg_438
+pcg_44,"Etat, collectivités publiques, organismes internationaux et comptes rattachés",44,44,l10n_dz_elosys.pcg_4
+pcg_441,"Etat et autres collectivités publiques, subventions à recevoir",441,441,l10n_dz_elosys.pcg_44
+pcg_4411,Subventions d’investissements à recevoir,4411,4411,l10n_dz_elosys.pcg_441
+pcg_4412,Subventions d’exploitation à recevoir,4412,4412,l10n_dz_elosys.pcg_441
+pcg_4413,Subventions d’équilibre à recevoir,4413,4413,l10n_dz_elosys.pcg_441
+pcg_4414,Subventions certification ISO à recevoir,4414,4414,l10n_dz_elosys.pcg_441
+pcg_4418,Autres subventions et aides publiques à recevoir,4418,4418,l10n_dz_elosys.pcg_441
+pcg_4419,Avances sur subventions,4419,4419,l10n_dz_elosys.pcg_441
+pcg_442,"Etat, impôts et taxes recouvrables sur des tiers",442,442,l10n_dz_elosys.pcg_44
+pcg_4421,IRG retenu sur salaires (barème),4421,4421,l10n_dz_elosys.pcg_442
+pcg_4422,IRG – Libératoire sur rappels de salaires et participation,4422,4422,l10n_dz_elosys.pcg_442
+pcg_4423,IRG – Libératoire sur bénéfices distribués,4423,4423,l10n_dz_elosys.pcg_442
+pcg_4424,IRG – Libératoire sur revenus mobiliers,4424,4424,l10n_dz_elosys.pcg_442
+pcg_4425,IRG – Libératoire sur Jetons de présence et tantièmes,4425,4425,l10n_dz_elosys.pcg_442
+pcg_4426,IRG – Libératoire retenu à la source aux consultants,4426,4426,l10n_dz_elosys.pcg_442
+pcg_4428,Autres impôts retenus à la source,4428,4428,l10n_dz_elosys.pcg_442
+pcg_443,Opérations particulières avec l'Etat et les collectivités publiques,443,443,l10n_dz_elosys.pcg_44
+pcg_4431,Créances sur l'Etat – Indemnisations,4431,4431,l10n_dz_elosys.pcg_443
+pcg_4432,Avance pour compte ANEM – Emplois aidés (Quote part de l'Etat),4432,4432,l10n_dz_elosys.pcg_443
+pcg_4438,Créances ou dettes résultant du changement de la réglementation fiscale,4438,4438,l10n_dz_elosys.pcg_443
+pcg_444,"Etat, impôts sur les résultats",444,444,l10n_dz_elosys.pcg_44
+pcg_4441,Acomptes provisionnels sur I.B.S,4441,4441,l10n_dz_elosys.pcg_444
+pcg_4449,Impôts sur les bénéfices – I.B.S à payer,4449,4449,l10n_dz_elosys.pcg_444
+pcg_445,"Etat, taxes sur le chiffre d'affaires",445,445,l10n_dz_elosys.pcg_44
+pcg_4455,TVA à décaisser,4455,4455,l10n_dz_elosys.pcg_445
+pcg_4456,TVA récupérable & précompte,4456,4456,l10n_dz_elosys.pcg_445
+pcg_4457,TVA collectée,4457,4457,l10n_dz_elosys.pcg_445
+pcg_4458,TVA à régulariser,4458,4458,l10n_dz_elosys.pcg_445
+pcg_446,Organismes internationaux,446,446,l10n_dz_elosys.pcg_44
+pcg_4461,Fonds de solidarité internationale,4461,4461,l10n_dz_elosys.pcg_446
+pcg_4462,Subventions d’organismes étrangers,4462,4462,l10n_dz_elosys.pcg_446
+pcg_447,"Autres impôts, taxes et versements assimilés",447,447,l10n_dz_elosys.pcg_44
+pcg_4471,Taxe sur l’activité professionnelle – TAP  à payer (sur G.50),4471,4471,l10n_dz_elosys.pcg_447
+pcg_4472,Taxe sur l’apprentissage et la formation professionnelle,4472,4472,l10n_dz_elosys.pcg_447
+pcg_4473,Taxe sur l’environnement – (Écotaxe),4473,4473,l10n_dz_elosys.pcg_447
+pcg_4474,Droits d’enregistrement à payer,4474,4474,l10n_dz_elosys.pcg_447
+pcg_4475,Taxe foncière à payer,4475,4475,l10n_dz_elosys.pcg_447
+pcg_4476,Taxes spéciales (ou spécifiques) à payer,4476,4476,l10n_dz_elosys.pcg_447
+pcg_4478,"Autres droits, impôts et taxes à payer",4478,4478,l10n_dz_elosys.pcg_447
+pcg_448,"Etat, charges à payer et produits à recevoir (hors impôts)",448,448,l10n_dz_elosys.pcg_44
+pcg_4482,Etat – charges à payer : Charges fiscales sur congés à payer,4482,4482,l10n_dz_elosys.pcg_448
+pcg_4486,Rappels d'impôts à payer (hors IBS),4486,4486,l10n_dz_elosys.pcg_448
+pcg_4487,Etat – produits à recevoir : Trop versés sur impôts,4487,4487,l10n_dz_elosys.pcg_448
+pcg_4488,Etat – produits à recevoir : Dégrèvement d’impôts,4488,4488,l10n_dz_elosys.pcg_448
+pcg_45,Groupe et Associés,45,45,l10n_dz_elosys.pcg_4
+pcg_451,Opérations Groupe,451,451,l10n_dz_elosys.pcg_45
+pcg_4511,Avances de fonds,4511,4511,l10n_dz_elosys.pcg_451
+pcg_4518,Autres opérations,4518,4518,l10n_dz_elosys.pcg_451
+pcg_455,Associés – Comptes courants,455,455,l10n_dz_elosys.pcg_45
+pcg_4551,Associés – Comptes courants : Principal,4551,4551,l10n_dz_elosys.pcg_455
+pcg_4556,Associés – Comptes courants : Intérêts courus,4556,4556,l10n_dz_elosys.pcg_455
+pcg_456,Associés – Opérations sur le capital,456,456,l10n_dz_elosys.pcg_45
+pcg_4561,Associés : Comptes d’apport en société,4561,4561,l10n_dz_elosys.pcg_456
+pcg_4562,"Associés : Capital souscrit, appelé et non versé (apports à libérer)",4562,4562,l10n_dz_elosys.pcg_456
+pcg_4563,Associés : Versements reçus sur augmentation de Capital,4563,4563,l10n_dz_elosys.pcg_456
+pcg_4564,Associés : Versements anticipés,4564,4564,l10n_dz_elosys.pcg_456
+pcg_4566,Actionnaires défaillants,4566,4566,l10n_dz_elosys.pcg_456
+pcg_4567,Associés : Capital à rembourser,4567,4567,l10n_dz_elosys.pcg_456
+pcg_457,Associés – Dividendes à payer,457,457,l10n_dz_elosys.pcg_45
+pcg_4571,Coupons d’action,4571,4571,l10n_dz_elosys.pcg_457
+pcg_4572,Dividendes mis en paiement,4572,4572,l10n_dz_elosys.pcg_457
+pcg_4577,Tantièmes à payer aux administrateurs et gérants,4577,4577,l10n_dz_elosys.pcg_457
+pcg_458,Associés – Opérations faites en commun ou en groupement,458,458,l10n_dz_elosys.pcg_45
+pcg_4586,Opérations faites en commun : Charges à payer,4586,4586,l10n_dz_elosys.pcg_458
+pcg_4587,Opérations faites en commun : Produits à recevoir,4587,4587,l10n_dz_elosys.pcg_458
+pcg_4588,Intérêts courus,4588,4588,l10n_dz_elosys.pcg_458
+pcg_46,Débiteurs divers et créditeurs divers,46,46,l10n_dz_elosys.pcg_4
+pcg_462,Créances sur cessions d'immobilisations,462,462,l10n_dz_elosys.pcg_46
+pcg_4621,Fonds à recevoir sur cessions d’Actifs réformés,4621,4621,l10n_dz_elosys.pcg_462
+pcg_4622,Débiteurs sur cessions d’immobilisations,4622,4622,l10n_dz_elosys.pcg_462
+pcg_464,Dettes sur acquisitions de VMP et instruments financiers dérivés,464,464,l10n_dz_elosys.pcg_46
+pcg_465,Créances sur cessions de VMP et instruments financiers dérivés,465,465,l10n_dz_elosys.pcg_46
+pcg_467,Autres comptes débiteurs ou créditeurs,467,467,l10n_dz_elosys.pcg_46
+pcg_4671,"Fonds en dépôt chez les officiers ministériels (notaire, commis. priseurs)",4671,4671,l10n_dz_elosys.pcg_467
+pcg_4672,Avances sur frais divers,4672,4672,l10n_dz_elosys.pcg_467
+pcg_4673,Achats pour compte de tiers,4673,4673,l10n_dz_elosys.pcg_467
+pcg_4674,Autres avances pour compte,4674,4674,l10n_dz_elosys.pcg_467
+pcg_4675,Jetons de présence à payer aux Administrateurs,4675,4675,l10n_dz_elosys.pcg_467
+pcg_4676,Débiteurs divers (à détailler),4676,4676,l10n_dz_elosys.pcg_467
+pcg_4679,Créditeurs de frais divers (à détailler),4679,4679,l10n_dz_elosys.pcg_467
+pcg_468,Divers charges à payer et produits à recevoir,468,468,l10n_dz_elosys.pcg_46
+pcg_4686,Charges à payer,4686,4686,l10n_dz_elosys.pcg_468
+pcg_4687,Produits à recevoir,4687,4687,l10n_dz_elosys.pcg_468
+pcg_47,Comptes transitoires ou d'attente,47,47,l10n_dz_elosys.pcg_4
+pcg_476,Dépenses en attente d’imputation,476,476,l10n_dz_elosys.pcg_47
+pcg_477,Recettes en attente d’imputation,477,477,l10n_dz_elosys.pcg_47
+pcg_478,Autres opérations à régulariser,478,478,l10n_dz_elosys.pcg_47
+pcg_48,Charges ou produits constatés d'avance et provisions,48,48,l10n_dz_elosys.pcg_4
+pcg_481,Provisions - passifs courants,481,481,l10n_dz_elosys.pcg_48
+pcg_4811,Provisions pour procès et litiges (moins de 12 mois),4811,4811,l10n_dz_elosys.pcg_481
+pcg_4812,Provisions pour garanties données aux clients (moins de 12 mois),4812,4812,l10n_dz_elosys.pcg_481
+pcg_4815,Provisions pour amendes et pénalités,4815,4815,l10n_dz_elosys.pcg_481
+pcg_4816,Provisions pour pertes de change,4816,4816,l10n_dz_elosys.pcg_481
+pcg_4818,Autres provisions : Passifs courants,4818,4818,l10n_dz_elosys.pcg_481
+pcg_486,Charges constatées d'avance,486,486,l10n_dz_elosys.pcg_48
+pcg_4861,Loyers payés d’avance (autre que cautionnement),4861,4861,l10n_dz_elosys.pcg_486
+pcg_4862,Primes d’assurances payées d’avance,4862,4862,l10n_dz_elosys.pcg_486
+pcg_4863,Abonnements payés d’avance,4863,4863,l10n_dz_elosys.pcg_486
+pcg_4866,Charges financières différées,4866,4866,l10n_dz_elosys.pcg_486
+pcg_4868,Autres charges constatées d’avance,4868,4868,l10n_dz_elosys.pcg_486
+pcg_487,Produits constatés d'avance,487,487,l10n_dz_elosys.pcg_48
+pcg_4871,Loyers perçus d’avance (immeubles de placement),4871,4871,l10n_dz_elosys.pcg_487
+pcg_4877,Subventions à étaler,4877,4877,l10n_dz_elosys.pcg_487
+pcg_4878,Autres produits constatés d’avance,4878,4878,l10n_dz_elosys.pcg_487
+pcg_49,Pertes de valeur sur comptes de tiers,49,49,l10n_dz_elosys.pcg_4
+pcg_491,Pertes de valeur sur comptes de clients,491,491,l10n_dz_elosys.pcg_49
+pcg_4911,Pertes de valeurs sur comptes de clients,4911,4911,l10n_dz_elosys.pcg_491
+pcg_4912,Pertes de valeurs sur retenues de garanties,4912,4912,l10n_dz_elosys.pcg_491
+pcg_495,Pertes de valeur sur comptes du groupe et sur associés,495,495,l10n_dz_elosys.pcg_49
+pcg_4951,Pertes de valeur sur compte du groupe,4951,4951,l10n_dz_elosys.pcg_495
+pcg_4955,Pertes de valeur sur comptes courants des associés,4955,4955,l10n_dz_elosys.pcg_495
+pcg_4958,Pertes de valeur sur opérations faites en commun (SEP – GIE),4958,4958,l10n_dz_elosys.pcg_495
+pcg_496,Pertes de valeur sur comptes de débiteurs divers,496,496,l10n_dz_elosys.pcg_49
+pcg_4962,Pertes de valeur sur créances de cessions d'immobilisations,4962,4962,l10n_dz_elosys.pcg_496
+pcg_4965,Pertes de valeur sur créances de cessions de VMP,4965,4965,l10n_dz_elosys.pcg_496
+pcg_4967,Pertes de valeur sur autres comptes débiteurs,4967,4967,l10n_dz_elosys.pcg_496
+pcg_498,Pertes de valeur sur autres comptes de tiers,498,498,l10n_dz_elosys.pcg_49
+pcg_5,CLASSE 5 : COMPTES FINANCIERS,5,5,
+pcg_50,Valeurs mobilières de placement,50,50,l10n_dz_elosys.pcg_5
+pcg_501,Part dans des entreprises liées,501,501,l10n_dz_elosys.pcg_50
+pcg_502,Actions propres,502,502,l10n_dz_elosys.pcg_50
+pcg_503,Autres actions ou titres conférant un droit de propriété,503,503,l10n_dz_elosys.pcg_50
+pcg_506,"Obligations, bons du trésor et bons de caisse à court terme",506,506,l10n_dz_elosys.pcg_50
+pcg_508,Autres valeurs mobilières de placement et créances assimilés,508,508,l10n_dz_elosys.pcg_50
+pcg_509,Versements restant à effectuer sur VMP non libérées,509,509,l10n_dz_elosys.pcg_50
+pcg_51,"Banque, établissements financiers et assimilés",51,51,l10n_dz_elosys.pcg_5
+pcg_511,Valeurs à l'encaissement,511,511,l10n_dz_elosys.pcg_51
+pcg_5111,Chèques à encaisser,5111,5111,l10n_dz_elosys.pcg_511
+pcg_5112,Traites remises à l’escompte,5112,5112,l10n_dz_elosys.pcg_511
+pcg_5118,Autres valeurs à l’encaissement,5118,5118,l10n_dz_elosys.pcg_511
+pcg_512,Banques comptes courants,512,512,l10n_dz_elosys.pcg_51
+pcg_5121,Comptes bancaires : Dinars,5121,5121,l10n_dz_elosys.pcg_512
+pcg_5122,Comptes bancaires : Devises,5122,5122,l10n_dz_elosys.pcg_512
+pcg_515,Trésor Public et établissements publics,515,515,l10n_dz_elosys.pcg_51
+pcg_5151,Caisses du Trésor Public,5151,5151,l10n_dz_elosys.pcg_515
+pcg_5152,Caisses des établissements publics,5152,5152,l10n_dz_elosys.pcg_515
+pcg_517,Autres organismes financiers,517,517,l10n_dz_elosys.pcg_51
+pcg_5171,Banque postale (C.C.P),5171,5171,l10n_dz_elosys.pcg_517
+pcg_5172,Sociétés de leasing (crédit-bail),5172,5172,l10n_dz_elosys.pcg_517
+pcg_5173,Sociétés de factoring (affacturage),5173,5173,l10n_dz_elosys.pcg_517
+pcg_5176,Société de bourse,5176,5176,l10n_dz_elosys.pcg_517
+pcg_5178,Autres organismes et établissements financiers,5178,5178,l10n_dz_elosys.pcg_517
+pcg_518,Intérêts courus,518,518,l10n_dz_elosys.pcg_51
+pcg_5186,Intérêts courus à payer  (agios à payer),5186,5186,l10n_dz_elosys.pcg_518
+pcg_5187,Intérêts courus à recevoir (intérêts des dépôts créditeurs à recevoir),5187,5187,l10n_dz_elosys.pcg_518
+pcg_519,Concours bancaires courants,519,519,l10n_dz_elosys.pcg_51
+pcg_5191,Facilité de caisse,5191,5191,l10n_dz_elosys.pcg_519
+pcg_5192,Découvert bancaire,5192,5192,l10n_dz_elosys.pcg_519
+pcg_5193,Autres avances bancaires,5193,5193,l10n_dz_elosys.pcg_519
+pcg_5198,Intérêts courus sur concours bancaires courants,5198,5198,l10n_dz_elosys.pcg_519
+pcg_52,Instruments financiers dérivés,52,52,l10n_dz_elosys.pcg_5
+pcg_521,Instruments financiers dérivés : Actifs,521,521,l10n_dz_elosys.pcg_52
+pcg_529,Instruments financiers dérivés : Passifs,529,529,l10n_dz_elosys.pcg_52
+pcg_53,Caisse,53,53,l10n_dz_elosys.pcg_5
+pcg_531,Caisse siège social,531,531,l10n_dz_elosys.pcg_53
+pcg_5311,Caisse principale en Dinars,5311,5311,l10n_dz_elosys.pcg_531
+pcg_5314,Caisse principale en Devises,5314,5314,l10n_dz_elosys.pcg_531
+pcg_532,Caisse Auxiliaire,532,532,l10n_dz_elosys.pcg_53
+pcg_5321,Caisse auxiliaire : Succursale (ou Unité) A,5321,5321,l10n_dz_elosys.pcg_532
+pcg_5322,Caisse auxiliaire : Succursale (ou Unité) B,5322,5322,l10n_dz_elosys.pcg_532
+pcg_54,Régies d'avances et accréditifs,54,54,l10n_dz_elosys.pcg_5
+pcg_541,Régies d'avances,541,541,l10n_dz_elosys.pcg_54
+pcg_542,Accréditifs,542,542,l10n_dz_elosys.pcg_54
+pcg_58,Virements internes,58,58,l10n_dz_elosys.pcg_5
+pcg_581,Virements de fonds,581,581,l10n_dz_elosys.pcg_58
+pcg_5811,Virements interbancaires,5811,5811,l10n_dz_elosys.pcg_581
+pcg_5812,Versements d'espèces en banques,5812,5812,l10n_dz_elosys.pcg_581
+pcg_5813,Alimentation caisses,5813,5813,l10n_dz_elosys.pcg_581
+pcg_588,Autres virements internes,588,588,l10n_dz_elosys.pcg_58
+pcg_5886,Achats au comptant,5886,5886,l10n_dz_elosys.pcg_588
+pcg_5887,Ventes au comptant,5887,5887,l10n_dz_elosys.pcg_588
+pcg_5888,Autres virements internes - détails,5888,5888,l10n_dz_elosys.pcg_588
+pcg_59,Pertes de valeur sur actifs financiers courants,59,59,l10n_dz_elosys.pcg_5
+pcg_591,Pertes de valeur sur valeurs en banque et Etablissements financiers,591,591,l10n_dz_elosys.pcg_59
+pcg_594,Pertes de valeurs sur régies d'avances et accréditifs,594,594,l10n_dz_elosys.pcg_59
+pcg_6,CLASSE 6 : COMPTES DE CHARGES,6,6,
+pcg_60,Achats consommés,60,60,l10n_dz_elosys.pcg_6
+pcg_600,Achats de marchandises vendues,600,600,l10n_dz_elosys.pcg_60
+pcg_6001,Matières premières consommées,6001,6001,l10n_dz_elosys.pcg_600
+pcg_6002,Marchandises (ou groupe) B,6002,6002,l10n_dz_elosys.pcg_600
+pcg_601,Matières premières & fournitures consommées,601,601,l10n_dz_elosys.pcg_60
+pcg_6017,Fournitures accessoires consommées,6017,6017,l10n_dz_elosys.pcg_601
+pcg_602,Autres approvisionnements consommés,602,602,l10n_dz_elosys.pcg_60
+pcg_6021,Matières consommables,6021,6021,l10n_dz_elosys.pcg_602
+pcg_6022,Fournitures consommables,6022,6022,l10n_dz_elosys.pcg_602
+pcg_6026,Emballages consommés,6026,6026,l10n_dz_elosys.pcg_602
+pcg_603,Variations des stocks (inventaire intermittent),603,603,l10n_dz_elosys.pcg_60
+pcg_6030,Variations de stocks de marchandises,6030,6030,l10n_dz_elosys.pcg_603
+pcg_6031,Variations de stock de matières premières & Fournitures,6031,6031,l10n_dz_elosys.pcg_603
+pcg_6032,Variations de stock des autres approvisionnements,6032,6032,l10n_dz_elosys.pcg_603
+pcg_604,Achats d'études et de prestations de services,604,604,l10n_dz_elosys.pcg_60
+pcg_6041,Achats d'études,6041,6041,l10n_dz_elosys.pcg_604
+pcg_6042,Achats de prestations de services,6042,6042,l10n_dz_elosys.pcg_604
+pcg_605,"Achats de matériels, équipements et travaux",605,605,l10n_dz_elosys.pcg_60
+pcg_6051,Achats d’immobilisations de faible valeur : Petit matériel & outillage,6051,6051,l10n_dz_elosys.pcg_605
+pcg_6052,Achats d’immobilisations de faible valeur : Mobilier,6052,6052,l10n_dz_elosys.pcg_605
+pcg_6053,Achats d’immobilisations de faible valeur : Matériel informatique,6053,6053,l10n_dz_elosys.pcg_605
+pcg_6054,Achats d’immobilisations de faible valeur : Matériel de communicat.,6054,6054,l10n_dz_elosys.pcg_605
+pcg_6058,"Autres achats de matériels, d'équipements et de travaux",6058,6058,l10n_dz_elosys.pcg_605
+pcg_607,Achats non stockés de matières et fournitures,607,607,l10n_dz_elosys.pcg_60
+pcg_6071,Achat non stocké de carburant,6071,6071,l10n_dz_elosys.pcg_607
+pcg_6072,Achat non stocké d'énergie et de force motrice (ateliers),6072,6072,l10n_dz_elosys.pcg_607
+pcg_6073,"Fournitures non stockées : Eau, Gaz & Electricité (bureaux)",6073,6073,l10n_dz_elosys.pcg_607
+pcg_6074,Fournitures administratives et de bureautique non stockées,6074,6074,l10n_dz_elosys.pcg_607
+pcg_6075,Achats non stockés de fournitures d'atelier et de magasin,6075,6075,l10n_dz_elosys.pcg_607
+pcg_6076,Achat non stocké de Tenues de travail et de sécurité,6076,6076,l10n_dz_elosys.pcg_607
+pcg_6078,Achat : Autres fournitures consommables non stockées,6078,6078,l10n_dz_elosys.pcg_607
+pcg_608,Frais accessoires d’achat (inventaire intermittent),608,608,l10n_dz_elosys.pcg_60
+pcg_609,"Rabais, remises, ristournes obtenus sur achats",609,609,l10n_dz_elosys.pcg_60
+pcg_6090,R.R.R Obtenus sur achats de marchandises,6090,6090,l10n_dz_elosys.pcg_609
+pcg_6091,R.R.R Obtenus sur achats de matières premières,6091,6091,l10n_dz_elosys.pcg_609
+pcg_6092,R.R.R Obtenus sur achats d’autres approvisionnements,6092,6092,l10n_dz_elosys.pcg_609
+pcg_6094,R.R.R Obtenus sur achats sur études et prestations,6094,6094,l10n_dz_elosys.pcg_609
+pcg_6095,R.R.R Obtenus sur achats de petits matériels et équipements,6095,6095,l10n_dz_elosys.pcg_609
+pcg_61,Services extérieurs,61,61,l10n_dz_elosys.pcg_6
+pcg_611,Sous-traitance générale,611,611,l10n_dz_elosys.pcg_61
+pcg_6111,Sous traitance de spécialité,6111,6111,l10n_dz_elosys.pcg_611
+pcg_6112,Sous traitance de capacité,6112,6112,l10n_dz_elosys.pcg_611
+pcg_6113,Sous traitance de marché,6113,6113,l10n_dz_elosys.pcg_611
+pcg_613,Locations,613,613,l10n_dz_elosys.pcg_61
+pcg_6131,Contrats de location-financement (en crédit-bail),6131,6131,l10n_dz_elosys.pcg_613
+pcg_6137,Malis sur emballages rendus,6137,6137,l10n_dz_elosys.pcg_613
+pcg_614,Charges locatives et charges de copropriété,614,614,l10n_dz_elosys.pcg_61
+pcg_6141,Charges locatives d’immeubles,6141,6141,l10n_dz_elosys.pcg_614
+pcg_6142,Charges de copropriété logements de fonction,6142,6142,l10n_dz_elosys.pcg_614
+pcg_6143,Loyers garages et parking de stationnement de véhicules,6143,6143,l10n_dz_elosys.pcg_614
+pcg_6148,Autres charges locatives,6148,6148,l10n_dz_elosys.pcg_614
+pcg_615,"Entretien, réparations et maintenance",615,615,l10n_dz_elosys.pcg_61
+pcg_6151,Entretien et réparation sur biens immobiliers,6151,6151,l10n_dz_elosys.pcg_615
+pcg_6152,Entretien et réparation sur biens mobiliers,6152,6152,l10n_dz_elosys.pcg_615
+pcg_6156,Maintenance,6156,6156,l10n_dz_elosys.pcg_615
+pcg_616,Primes d'assurances,616,616,l10n_dz_elosys.pcg_61
+pcg_6161,Assurances multirisques professionnels,6161,6161,l10n_dz_elosys.pcg_616
+pcg_6162,Assurances transport,6162,6162,l10n_dz_elosys.pcg_616
+pcg_6163,Assurance responsabilité civile,6163,6163,l10n_dz_elosys.pcg_616
+pcg_6164,Assurance catastrophe naturelle,6164,6164,l10n_dz_elosys.pcg_616
+pcg_6165,Assurance couverture risque de Vie,6165,6165,l10n_dz_elosys.pcg_616
+pcg_6168,Autres assurances,6168,6168,l10n_dz_elosys.pcg_616
+pcg_617,Etudes et recherches,617,617,l10n_dz_elosys.pcg_61
+pcg_6171,Assistance technique,6171,6171,l10n_dz_elosys.pcg_617
+pcg_6178,Autres frais d’études et de recherches,6178,6178,l10n_dz_elosys.pcg_617
+pcg_618,Documentation et divers,618,618,l10n_dz_elosys.pcg_61
+pcg_6181,Documentation générale,6181,6181,l10n_dz_elosys.pcg_618
+pcg_6182,"Abonnements aux Journaux, revues et JO/BOAL/BOMOP ...etc.",6182,6182,l10n_dz_elosys.pcg_618
+pcg_6183,"Documentation technique (plans, schémas, maquettes, etc.)",6183,6183,l10n_dz_elosys.pcg_618
+pcg_6184,Frais de reprographie,6184,6184,l10n_dz_elosys.pcg_618
+pcg_6185,Frais de soumissions et de marchés,6185,6185,l10n_dz_elosys.pcg_618
+pcg_6186,Frais de conseils et assemblées,6186,6186,l10n_dz_elosys.pcg_618
+pcg_6187,"Frais de colloques, séminaires et conférences",6187,6187,l10n_dz_elosys.pcg_618
+pcg_619,"Rabais, remises, ristournes obtenus sur services extérieurs",619,619,l10n_dz_elosys.pcg_61
+pcg_62,Autres services extérieurs,62,62,l10n_dz_elosys.pcg_6
+pcg_621,Personnel extérieur a l'entreprise,621,621,l10n_dz_elosys.pcg_62
+pcg_6211,Personnel intérimaire,6211,6211,l10n_dz_elosys.pcg_621
+pcg_6212,Charges de sécurité et de gardiennage,6212,6212,l10n_dz_elosys.pcg_621
+pcg_6213,Charges de nettoyage et travaux d’insalubrité,6213,6213,l10n_dz_elosys.pcg_621
+pcg_6216,Personnel détaché ou prêté à l’entreprise,6216,6216,l10n_dz_elosys.pcg_621
+pcg_622,Rémunérations d'intermédiaires et honoraires,622,622,l10n_dz_elosys.pcg_62
+pcg_6222,Commissions sur ventes,6222,6222,l10n_dz_elosys.pcg_622
+pcg_6223,Rémunération de consultants,6223,6223,l10n_dz_elosys.pcg_622
+pcg_6225,Rémunération d’affacturage (factoring),6225,6225,l10n_dz_elosys.pcg_622
+pcg_6226,Honoraires (autres que ceux incorporés dans les coûts),6226,6226,l10n_dz_elosys.pcg_622
+pcg_6227,Frais d’actes et de contentieux,6227,6227,l10n_dz_elosys.pcg_622
+pcg_6228,Autres rémunérations divers (non incorporables aux coûts),6228,6228,l10n_dz_elosys.pcg_622
+pcg_623,"Publicité, publication, relations publiques",623,623,l10n_dz_elosys.pcg_62
+pcg_6231,Annonces et insertions,6231,6231,l10n_dz_elosys.pcg_623
+pcg_6232,Echantillons,6232,6232,l10n_dz_elosys.pcg_623
+pcg_6233,"Foires, expositions et festivités",6233,6233,l10n_dz_elosys.pcg_623
+pcg_6234,"Parrainage, Sponsoring et mécénat",6234,6234,l10n_dz_elosys.pcg_623
+pcg_6235,Cadeau à la clientèle,6235,6235,l10n_dz_elosys.pcg_623
+pcg_6236,Catalogues et imprimés,6236,6236,l10n_dz_elosys.pcg_623
+pcg_6237,Publications Autres publicités,6237,6237,l10n_dz_elosys.pcg_623
+pcg_6238,Autres frais de relations publiques,6238,6238,l10n_dz_elosys.pcg_623
+pcg_624,Transports de biens et transport collectif du personnel,624,624,l10n_dz_elosys.pcg_62
+pcg_6241,Transport sur ventes,6241,6241,l10n_dz_elosys.pcg_624
+pcg_6242,Transport collectif du personnel,6242,6242,l10n_dz_elosys.pcg_624
+pcg_6243,Transport entre établissements ou chantiers,6243,6243,l10n_dz_elosys.pcg_624
+pcg_6244,Transport administratif,6244,6244,l10n_dz_elosys.pcg_624
+pcg_6248,Autres transports divers,6248,6248,l10n_dz_elosys.pcg_624
+pcg_625,"Déplacements, missions et réceptions",625,625,l10n_dz_elosys.pcg_62
+pcg_6251,Voyages et déplacements à l’étranger,6251,6251,l10n_dz_elosys.pcg_625
+pcg_6252,Frais de déménagement,6252,6252,l10n_dz_elosys.pcg_625
+pcg_6255,Missions : intérieur du pays,6255,6255,l10n_dz_elosys.pcg_625
+pcg_6257,Réceptions et hébergement,6257,6257,l10n_dz_elosys.pcg_625
+pcg_626,Frais postaux et de télécommunications,626,626,l10n_dz_elosys.pcg_62
+pcg_6261,Affranchissement courrier,6261,6261,l10n_dz_elosys.pcg_626
+pcg_6262,Abonnement boite postale,6262,6262,l10n_dz_elosys.pcg_626
+pcg_6263,Abonnements et communications téléphonie mobile,6263,6263,l10n_dz_elosys.pcg_626
+pcg_6264,Abonnement internet,6264,6264,l10n_dz_elosys.pcg_626
+pcg_6265,Frais de télécommunication (fixe et fax),6265,6265,l10n_dz_elosys.pcg_626
+pcg_627,Services bancaires et assimilés,627,627,l10n_dz_elosys.pcg_62
+pcg_6271,Frais sur effets et sur titres,6271,6271,l10n_dz_elosys.pcg_627
+pcg_6272,Commissions bancaires,6272,6272,l10n_dz_elosys.pcg_627
+pcg_6276,Location de coffres,6276,6276,l10n_dz_elosys.pcg_627
+pcg_6278,Autres frais et commissions bancaires,6278,6278,l10n_dz_elosys.pcg_627
+pcg_628,Cotisations et divers,628,628,l10n_dz_elosys.pcg_62
+pcg_6281,Frais de recrutement de personnel,6281,6281,l10n_dz_elosys.pcg_628
+pcg_6282,Frais de formation externe du personnel,6282,6282,l10n_dz_elosys.pcg_628
+pcg_6283,Cotisations professionnelles,6283,6283,l10n_dz_elosys.pcg_628
+pcg_6284,Droits de stationnement parking privé,6284,6284,l10n_dz_elosys.pcg_628
+pcg_6288,Autres cotisations et dons courants divers,6288,6288,l10n_dz_elosys.pcg_628
+pcg_629,"Rabais, remises, ristournes obtenus sur autres services extérieurs",629,629,l10n_dz_elosys.pcg_62
+pcg_63,Charges de personnel,63,63,l10n_dz_elosys.pcg_6
+pcg_631,Rémunérations du personnel,631,631,l10n_dz_elosys.pcg_63
+pcg_6311,Traitements et Salaires,6311,6311,l10n_dz_elosys.pcg_631
+pcg_6312,Primes,6312,6312,l10n_dz_elosys.pcg_631
+pcg_6313,Indemnités,6313,6313,l10n_dz_elosys.pcg_631
+pcg_6314,Prestations directes,6314,6314,l10n_dz_elosys.pcg_631
+pcg_6315,Avantages et prestations en nature,6315,6315,l10n_dz_elosys.pcg_631
+pcg_634,Rémunération de l'exploitant,634,634,l10n_dz_elosys.pcg_63
+pcg_635,Cotisations aux organismes sociaux,635,635,l10n_dz_elosys.pcg_63
+pcg_6351,Cotisations de sécurité sociale – CNAS,6351,6351,l10n_dz_elosys.pcg_635
+pcg_6352,Cotisations au FNPOS,6352,6352,l10n_dz_elosys.pcg_635
+pcg_6353,Cotisations à la retraite – CNR,6353,6353,l10n_dz_elosys.pcg_635
+pcg_6354,Cotisations aux mutuelles,6354,6354,l10n_dz_elosys.pcg_635
+pcg_6355,Cotisations à la CACOBATPH,6355,6355,l10n_dz_elosys.pcg_635
+pcg_636,Cotisations sociales de l'exploitant,636,636,l10n_dz_elosys.pcg_63
+pcg_6361,Cotisation annuelle à la CASNOS,6361,6361,l10n_dz_elosys.pcg_636
+pcg_6368,Autres cotisations,6368,6368,l10n_dz_elosys.pcg_636
+pcg_637,Autres charges sociales,637,637,l10n_dz_elosys.pcg_63
+pcg_6374,Versements aux œuvres sociales,6374,6374,l10n_dz_elosys.pcg_637
+pcg_6375,Autres contributions sociales,6375,6375,l10n_dz_elosys.pcg_637
+pcg_638,Autres charges de personnel,638,638,l10n_dz_elosys.pcg_63
+pcg_6381,Médecine du travail et pharmacie,6381,6381,l10n_dz_elosys.pcg_638
+pcg_6382,Frais de formation et de perfectionnement du personnel (en interne),6382,6382,l10n_dz_elosys.pcg_638
+pcg_6383,Frais d’activités socioculturelles et sportives,6383,6383,l10n_dz_elosys.pcg_638
+pcg_6384,Avantages en nature accordés au personnel,6384,6384,l10n_dz_elosys.pcg_638
+pcg_6385,Médailles du mérite et Jubilé,6385,6385,l10n_dz_elosys.pcg_638
+pcg_6387,"Intéressement, primes et avantages liés aux résultats",6387,6387,l10n_dz_elosys.pcg_638
+pcg_6388,Autres charges de personnel,6388,6388,l10n_dz_elosys.pcg_638
+pcg_64,"Impôts, Taxes et versements assimilés",64,64,l10n_dz_elosys.pcg_6
+pcg_641,"Impôts, taxes et versements assimilés sur rémunérations",641,641,l10n_dz_elosys.pcg_64
+pcg_6412,Taxe d’apprentissage,6412,6412,l10n_dz_elosys.pcg_641
+pcg_6413,Taxe sur la formation professionnelle,6413,6413,l10n_dz_elosys.pcg_641
+pcg_6418,Autres taxes sur les salaires,6418,6418,l10n_dz_elosys.pcg_641
+pcg_642,Impôts et taxes non récupérables sur chiffre d’affaires,642,642,l10n_dz_elosys.pcg_64
+pcg_6421,Taxe sur l’activité professionnelle – T.A.P. (sur les débits),6421,6421,l10n_dz_elosys.pcg_642
+pcg_6422,Taxe sur l’activité professionnelle – T.A.P. (sur encaissements),6422,6422,l10n_dz_elosys.pcg_642
+pcg_645,Autres impôts et taxes (hors impôts sur les résultats),645,645,l10n_dz_elosys.pcg_64
+pcg_6451,Taxe foncière sur les propriétés bâties et non bâties,6451,6451,l10n_dz_elosys.pcg_645
+pcg_6452,Taxes spéciales et droits d'accises,6452,6452,l10n_dz_elosys.pcg_645
+pcg_6453,Taxe sur l’environnement (écotaxe),6453,6453,l10n_dz_elosys.pcg_645
+pcg_6454,Taxes sur les véhicules (Vignettes),6454,6454,l10n_dz_elosys.pcg_645
+pcg_6455,Droits de stationnement parking communal,6455,6455,l10n_dz_elosys.pcg_645
+pcg_6456,Droits d’enregistrement sur actes et marchés,6456,6456,l10n_dz_elosys.pcg_645
+pcg_6457,Droits de timbre,6457,6457,l10n_dz_elosys.pcg_645
+pcg_6458,"Autres droits, impôts et taxes divers",6458,6458,l10n_dz_elosys.pcg_645
+pcg_65,Autres charges opérationnelles,65,65,l10n_dz_elosys.pcg_6
+pcg_651,"Redevances pour concessions, brevets, licences, logiciels et valeurs similaires",651,651,l10n_dz_elosys.pcg_65
+pcg_6511,Redevances pour concessions,6511,6511,l10n_dz_elosys.pcg_651
+pcg_6512,Redevances pour brevets et licences de fabrication,6512,6512,l10n_dz_elosys.pcg_651
+pcg_6516,Redevances pour exploitation de logiciels et valeurs similaires,6516,6516,l10n_dz_elosys.pcg_651
+pcg_652,Moins values sur sortie d'actifs immobilisés non financiers,652,652,l10n_dz_elosys.pcg_65
+pcg_6521,Moins value sur cession matériel et outillage,6521,6521,l10n_dz_elosys.pcg_652
+pcg_6522,Moins value sur cession matériel de transport,6522,6522,l10n_dz_elosys.pcg_652
+pcg_6523,Moins value sur cession mobilier et matériel de bureau,6523,6523,l10n_dz_elosys.pcg_652
+pcg_6528,Moins value sur cession autres équipements et matériels,6528,6528,l10n_dz_elosys.pcg_652
+pcg_653,Jetons de présence,653,653,l10n_dz_elosys.pcg_65
+pcg_6531,Jetons de présence aux administrateurs,6531,6539,l10n_dz_elosys.pcg_653
+pcg_654,Pertes sur créances irrécouvrables,654,654,l10n_dz_elosys.pcg_65
+pcg_6541,Pertes sur créances de l'exercice,6541,6541,l10n_dz_elosys.pcg_654
+pcg_6542,Pertes sur créances des exercices antérieurs,6542,6542,l10n_dz_elosys.pcg_654
+pcg_655,Quote-part de résultat sur opérations faites en commun,655,655,l10n_dz_elosys.pcg_65
+pcg_6551,Quote-part de bénéfice transféré dans le cadre d'un GIE ou d'une SEP,6551,6551,l10n_dz_elosys.pcg_655
+pcg_6552,Quote-part de perte supportée dans le cadre d'un GIE ou d'une SEP,6552,6552,l10n_dz_elosys.pcg_655
+pcg_656,"Amendes et pénalités, subventions accordées, dons et libéralités",656,656,l10n_dz_elosys.pcg_65
+pcg_6562,"Amendes et pénalités (pénales, fiscales et parafiscales)",6562,6562,l10n_dz_elosys.pcg_656
+pcg_6563,Subventions accordées,6563,6563,l10n_dz_elosys.pcg_656
+pcg_6566,Dons et libéralités,6566,6566,l10n_dz_elosys.pcg_656
+pcg_657,Charges exceptionnelles de gestion courante,657,657,l10n_dz_elosys.pcg_65
+pcg_6571,Ecart de stocks (négatif) de marchandises,6571,6571,l10n_dz_elosys.pcg_657
+pcg_6572,"Ecart de stocks (négatif) de matières, fournitures et autres approvisionnements",6572,6572,l10n_dz_elosys.pcg_657
+pcg_6575,Rappel d’impôts (autre qu’IBS),6575,6575,l10n_dz_elosys.pcg_657
+pcg_6578,Autres charges exceptionnelles,6578,6578,l10n_dz_elosys.pcg_657
+pcg_658,Autres charges de gestion courante,658,658,l10n_dz_elosys.pcg_65
+pcg_6581,Charges sur exercices antérieurs (en cours d'exercice),6581,6581,l10n_dz_elosys.pcg_658
+pcg_6588,Autres charges diverses de gestion courante,6588,6588,l10n_dz_elosys.pcg_658
+pcg_66,Charges financières,66,66,l10n_dz_elosys.pcg_6
+pcg_661,Charges d'intérêts,661,661,l10n_dz_elosys.pcg_66
+pcg_6611,Intérêts des emprunts,6611,6611,l10n_dz_elosys.pcg_661
+pcg_6612,Intérêts des dettes,6612,6612,l10n_dz_elosys.pcg_661
+pcg_6616,Intérêts bancaires sur opérations de financement (découvert),6616,6616,l10n_dz_elosys.pcg_661
+pcg_6618,Intérêts des autres dettes,6618,6618,l10n_dz_elosys.pcg_661
+pcg_664,Pertes sur créances liées à des participations,664,664,l10n_dz_elosys.pcg_66
+pcg_665,Ecart d’évaluation sur actifs financiers - Moins-values,665,665,l10n_dz_elosys.pcg_66
+pcg_6651,Mali provenant du rachat des actions propres,6651,6659,l10n_dz_elosys.pcg_665
+pcg_666,Pertes de change,666,666,l10n_dz_elosys.pcg_66
+pcg_667,Pertes nettes sur cessions d’actifs financiers,667,667,l10n_dz_elosys.pcg_66
+pcg_668,Autres charges financières,668,668,l10n_dz_elosys.pcg_66
+pcg_67,Eléments extraordinaires (Charges),67,67,l10n_dz_elosys.pcg_6
+pcg_68,"Dotations aux amortissements, provisions et pertes de valeur",68,68,l10n_dz_elosys.pcg_6
+pcg_681,"Dotations aux amortissements, provisions et pertes de valeur - actifs non courants",681,681,l10n_dz_elosys.pcg_68
+pcg_6811,DAP-PDV : Immobilisations incorporelles,6811,6811,l10n_dz_elosys.pcg_681
+pcg_6812,DAP-PDV : Immobilisations corporelles,6812,6812,l10n_dz_elosys.pcg_681
+pcg_682,"Dotations aux amortissements, provisions et PDV des biens mis en concession",682,682,l10n_dz_elosys.pcg_68
+pcg_685,Dotations aux provisions et pertes de valeurs – Actifs courants,685,685,l10n_dz_elosys.pcg_68
+pcg_6853,Dotations pour pertes de valeurs sur stocks,6853,6853,l10n_dz_elosys.pcg_685
+pcg_6854,Dotations pour pertes de valeurs sur créances,6854,6854,l10n_dz_elosys.pcg_685
+pcg_6855,Dotation annuelle pour Indemnité de départ à la retraite et IFC,6855,6855,l10n_dz_elosys.pcg_685
+pcg_6856,Dotations aux provisions pour pertes et charges – PNC,6856,6856,l10n_dz_elosys.pcg_685
+pcg_6858,Dotations aux provisions – passifs courants,6858,6858,l10n_dz_elosys.pcg_685
+pcg_686,"Dotations aux amortissements, provisions et pertes de valeur, éléments financiers",686,686,l10n_dz_elosys.pcg_68
+pcg_6861,Dotations aux amortissements des primes de remboursement,6861,6861,l10n_dz_elosys.pcg_686
+pcg_6862,Pertes de valeur des immobilisations financières,6862,6862,l10n_dz_elosys.pcg_686
+pcg_69,Impôts sur les résultats et assimilés,69,69,l10n_dz_elosys.pcg_6
+pcg_691,Participation des travailleurs aux bénéfices,691,691,l10n_dz_elosys.pcg_69
+pcg_692,Imposition différée actif – Produits,692,692,l10n_dz_elosys.pcg_69
+pcg_693,Imposition différée passif – Charges,693,693,l10n_dz_elosys.pcg_69
+pcg_695,Impôts sur les bénéfices basés sur le résultat des activités ordinaires,695,695,l10n_dz_elosys.pcg_69
+pcg_698,Autres impôts sur les résultats,698,698,l10n_dz_elosys.pcg_69
+pcg_7,CLASSE 7 : COMPTES DE PRODUITS,7,7,
+pcg_70,"Ventes de marchandises et de produits fabriqués, vente de   prestations de services et produits annexes",70,70,l10n_dz_elosys.pcg_7
+pcg_700,Ventes de Marchandises,700,700,l10n_dz_elosys.pcg_70
+pcg_7001,Marchandises (ou groupe) A,7001,7001,l10n_dz_elosys.pcg_700
+pcg_7002,Marchandises (ou groupe) B,7002,7002,l10n_dz_elosys.pcg_700
+pcg_701,Ventes de produits finis,701,701,l10n_dz_elosys.pcg_70
+pcg_7011,Ventes de Produit fini (ou groupe) – PF1,7011,7011,l10n_dz_elosys.pcg_701
+pcg_7012,Ventes de Produit fini (ou groupe) – PF2,7012,7012,l10n_dz_elosys.pcg_701
+pcg_7013,Ventes de Produit fini (ou groupe) – PF3,7013,7013,l10n_dz_elosys.pcg_701
+pcg_702,Ventes de produits intermédiaires,702,702,l10n_dz_elosys.pcg_70
+pcg_7021,Ventes de Produits intermédiaires (ou groupe) – PI-1,7021,7021,l10n_dz_elosys.pcg_702
+pcg_7022,Ventes de Produits intermédiaires (ou groupe) – PI-2,7022,7022,l10n_dz_elosys.pcg_702
+pcg_7028,Ventes de sous produits (PR et accessoires fabriqués),7028,7028,l10n_dz_elosys.pcg_702
+pcg_703,Ventes de produits résiduels,703,703,l10n_dz_elosys.pcg_70
+pcg_7031,Ventes de déchets,7031,7031,l10n_dz_elosys.pcg_703
+pcg_7032,Ventes de rebuts,7032,7032,l10n_dz_elosys.pcg_703
+pcg_7033,Ventes de matières de récupération recyclables,7033,7033,l10n_dz_elosys.pcg_703
+pcg_704,Vente de travaux,704,704,l10n_dz_elosys.pcg_70
+pcg_7041,Travaux hydrauliques,7041,7041,l10n_dz_elosys.pcg_704
+pcg_7042,Travaux publics,7042,7042,l10n_dz_elosys.pcg_704
+pcg_7043,Travaux de constructions de bâtiments,7043,7043,l10n_dz_elosys.pcg_704
+pcg_7044,Travaux de restauration de sites et monuments,7044,7044,l10n_dz_elosys.pcg_704
+pcg_7045,Travaux de VRD et d'assainissement,7045,7045,l10n_dz_elosys.pcg_704
+pcg_7046,Travaux d'entretien et de nettoyage,7046,7046,l10n_dz_elosys.pcg_704
+pcg_7047,Travaux forestiers,7047,7047,l10n_dz_elosys.pcg_704
+pcg_7048,Autres travaux de réalisation,7048,7048,l10n_dz_elosys.pcg_704
+pcg_705,Vente d'études,705,705,l10n_dz_elosys.pcg_70
+pcg_7051,Etudes : E1,7051,7051,l10n_dz_elosys.pcg_705
+pcg_7058,Autres études techniques,7058,7058,l10n_dz_elosys.pcg_705
+pcg_706,Autres prestations de services,706,706,l10n_dz_elosys.pcg_70
+pcg_7061,Prestations de services fournis : S1,7061,7061,l10n_dz_elosys.pcg_706
+pcg_7068,Autres Prestations de services,7068,7068,l10n_dz_elosys.pcg_706
+pcg_708,Produits des activités annexes,708,708,l10n_dz_elosys.pcg_70
+pcg_7081,Cession de matières premières,7081,7081,l10n_dz_elosys.pcg_708
+pcg_7082,Cession d’autres approvisionnements,7082,7082,l10n_dz_elosys.pcg_708
+pcg_7086,Bonis sur reprise d’emballages consignés,7086,7086,l10n_dz_elosys.pcg_708
+pcg_7088,Autres produits des activités annexes,7088,7088,l10n_dz_elosys.pcg_708
+pcg_709,"Rabais, remises et ristournes accordés",709,709,l10n_dz_elosys.pcg_70
+pcg_7092,Réduction sur ventes – Hors factures,7092,7092,l10n_dz_elosys.pcg_709
+pcg_7093,Réduction sur prestations – Hors factures,7093,7093,l10n_dz_elosys.pcg_709
+pcg_72,Production stockée ou déstockée,72,72,l10n_dz_elosys.pcg_7
+pcg_723,Variation de stocks d'encours,723,723,l10n_dz_elosys.pcg_72
+pcg_7233,En-cours de production,7233,7233,l10n_dz_elosys.pcg_723
+pcg_7234,En-cours d'études et de services,7234,7234,l10n_dz_elosys.pcg_723
+pcg_724,Variation de stocks de produits,724,724,l10n_dz_elosys.pcg_72
+pcg_7241,Produits intermédiaires,7241,7241,l10n_dz_elosys.pcg_724
+pcg_7245,Produits finis,7245,7245,l10n_dz_elosys.pcg_724
+pcg_7248,Produits résiduels,7248,7248,l10n_dz_elosys.pcg_724
+pcg_729,Coût de la sous activité (différence d'imputation coût du chômage),729,729,l10n_dz_elosys.pcg_72
+pcg_73,Production immobilisée,73,73,l10n_dz_elosys.pcg_7
+pcg_731,Production immobilisée d'actifs incorporels (logiciels),731,731,l10n_dz_elosys.pcg_73
+pcg_732,Production immobilisée d'actifs corporels,732,732,l10n_dz_elosys.pcg_73
+pcg_74,Subventions d’exploitation,74,74,l10n_dz_elosys.pcg_7
+pcg_741,Subvention d'équilibre,741,741,l10n_dz_elosys.pcg_74
+pcg_748,Autres subventions d'exploitation,748,748,l10n_dz_elosys.pcg_74
+pcg_75,Autres produits opérationnels,75,75,l10n_dz_elosys.pcg_7
+pcg_751,"Redevances pour concessions, brevets, licences, logiciels et valeurs similaires",751,751,l10n_dz_elosys.pcg_75
+pcg_752,Plus values sur sorties d’actifs immobilisés non financiers,752,752,l10n_dz_elosys.pcg_75
+pcg_7521,Plus value sur cession d’éléments d’actifs mis à la réforme,7521,7521,l10n_dz_elosys.pcg_752
+pcg_7528,Plus value sur autres éléments d’actifs corporels cédés,7528,7528,l10n_dz_elosys.pcg_752
+pcg_753,Jetons de présence et rémunérations d'administrateurs ou de gérant,753,753,l10n_dz_elosys.pcg_75
+pcg_7531,Jetons de présence perçus,7531,7539,l10n_dz_elosys.pcg_753
+pcg_754,Quotes-parts de subventions d’investissement virées au résultat de l’exercice,754,754,l10n_dz_elosys.pcg_75
+pcg_755,Quote-part de résultat sur opérations faites en commun,755,755,l10n_dz_elosys.pcg_75
+pcg_7551,Quote-part de perte transférée (dans les SEP et GIE),7551,7551,l10n_dz_elosys.pcg_755
+pcg_7552,Quote-part de bénéfice attribué (dans les SEP et GIE),7552,7552,l10n_dz_elosys.pcg_755
+pcg_756,Rentrées sur créances amorties,756,756,l10n_dz_elosys.pcg_75
+pcg_757,Produits exceptionnels sur opérations de gestion,757,757,l10n_dz_elosys.pcg_75
+pcg_7571,Ecart de stocks (positif) de marchandises,7571,7571,l10n_dz_elosys.pcg_757
+pcg_7572,"Ecart de stocks (positif) de matières, fournitures et autres approvisionnements",7572,7572,l10n_dz_elosys.pcg_757
+pcg_7575,Dégrèvements d’impôts (autre qu’IBS),7575,7575,l10n_dz_elosys.pcg_757
+pcg_7578,Autres produits exceptionnels,7578,7578,l10n_dz_elosys.pcg_757
+pcg_758,Autres produits de gestion courante,758,758,l10n_dz_elosys.pcg_75
+pcg_7581,Lots de bord et pièces de rechange gratuites,7581,7581,l10n_dz_elosys.pcg_758
+pcg_7582,Remboursements sinistres et dégâts assurés,7582,7582,l10n_dz_elosys.pcg_758
+pcg_7583,Revenus des immeubles de placement,7583,7583,l10n_dz_elosys.pcg_758
+pcg_7586,Produits des exercices antérieurs (en cours d'exercice),7586,7586,l10n_dz_elosys.pcg_758
+pcg_7588,Autres produits divers de gestion courante,7588,7588,l10n_dz_elosys.pcg_758
+pcg_76,Produits financiers,76,76,l10n_dz_elosys.pcg_7
+pcg_761,Produits de participations,761,761,l10n_dz_elosys.pcg_76
+pcg_762,Revenus des actifs financiers,762,762,l10n_dz_elosys.pcg_76
+pcg_763,Revenus de créances,763,763,l10n_dz_elosys.pcg_76
+pcg_765,Ecart d’évaluation sur actifs financiers – Plus-values,765,765,l10n_dz_elosys.pcg_76
+pcg_766,Gains de change,766,766,l10n_dz_elosys.pcg_76
+pcg_767,Profits nets sur cessions d’actifs financiers,767,767,l10n_dz_elosys.pcg_76
+pcg_768,Autres produits financiers,768,768,l10n_dz_elosys.pcg_76
+pcg_77,Eléments extraordinaires (Produits),77,77,l10n_dz_elosys.pcg_7
+pcg_78,Reprises sur pertes de valeurs et provisions,78,78,l10n_dz_elosys.pcg_7
+pcg_781,Reprise d'exploitation sur pertes de valeur et provisions - actifs non courants,781,781,l10n_dz_elosys.pcg_78
+pcg_7811,Reprises sur amortissements : Immobilisations incorporelles,7811,7811,l10n_dz_elosys.pcg_781
+pcg_7812,Reprises sur perte de valeur : Immobilisations incorporelles,7812,7812,l10n_dz_elosys.pcg_781
+pcg_7813,Reprises sur amortissements : Immobilisations corporelles,7813,7813,l10n_dz_elosys.pcg_781
+pcg_7814,Reprises sur perte de valeur : Immobilisations corporelles,7814,7814,l10n_dz_elosys.pcg_781
+pcg_7815,Reprises sur écarts de réévaluation : Immobilisations corporelles,7815,7815,l10n_dz_elosys.pcg_781
+pcg_7817,Reprises sur plus values à réinvestir,7817,7817,l10n_dz_elosys.pcg_781
+pcg_785,Reprise d'exploitation sur pertes de valeur et provisions - actifs courants,785,785,l10n_dz_elosys.pcg_78
+pcg_7853,Reprise sur pertes de valeurs – Stocks et encours,7853,7853,l10n_dz_elosys.pcg_785
+pcg_7854,Reprise sur pertes de valeurs – Créances,7854,7854,l10n_dz_elosys.pcg_785
+pcg_7858,Reprise sur provisions pour pertes et charges – PNC,7858,7858,l10n_dz_elosys.pcg_785
+pcg_786,Reprises financières sur pertes de valeur et provisions,786,786,l10n_dz_elosys.pcg_78
+pcg_18141,Créances commerciales,18141,18149,l10n_dz_elosys.pcg_1814
+pcg_18151,Dettes commerciales,18151,18159,l10n_dz_elosys.pcg_1815
+pcg_37178,Achats d'autres fournitures accessoires,37178,37179,l10n_dz_elosys.pcg_371
+pcg_38111,Matières (ou groupe) A,38111,38111,l10n_dz_elosys.pcg_3811
+pcg_38112,Matières (ou groupe) B,38112,38112,l10n_dz_elosys.pcg_3811
+pcg_38118,Autres matières premières,38118,38118,l10n_dz_elosys.pcg_3811
+pcg_38171,Achats de Fournitures A,38171,38171,l10n_dz_elosys.pcg_3817
+pcg_38172,Achats de Fournitures B,38172,38172,l10n_dz_elosys.pcg_3817
+pcg_400,Fournisseurs et comptes rattachés,400,400,l10n_dz_elosys.pcg_40
+pcg_40131,Fournisseurs de stocks : Nationaux – Publics,40131,40131,l10n_dz_elosys.pcg_4013
+pcg_40132,Fournisseurs de stocks : Nationaux – Privés,40132,40132,l10n_dz_elosys.pcg_4013
+pcg_40133,Fournisseurs de stocks : Etrangers,40133,40133,l10n_dz_elosys.pcg_4013
+pcg_40161,Fournisseurs de services : Nationaux – Publics,40161,40161,l10n_dz_elosys.pcg_4016
+pcg_40162,Fournisseurs de services : Nationaux – Privés,40162,40162,l10n_dz_elosys.pcg_4016
+pcg_40163,Fournisseurs de services : Etrangers,40163,40163,l10n_dz_elosys.pcg_4016
+pcg_40171,Fournisseurs : Retenues de garantie – Publics,40171,40171,l10n_dz_elosys.pcg_4017
+pcg_40172,Fournisseurs : Retenues de garantie – Privés,40172,40172,l10n_dz_elosys.pcg_4017
+pcg_40173,Fournisseurs : Retenues de garantie – Etrangers,40173,40173,l10n_dz_elosys.pcg_4017
+pcg_410,Clients et comptes rattachés,410,410,l10n_dz_elosys.pcg_41
+pcg_44551,TVA à décaisser (à payer sur G.50),44551,44551,l10n_dz_elosys.pcg_4455
+pcg_44552,Obligations cautionnées (au profit des Douanes),44552,44552,l10n_dz_elosys.pcg_4455
+pcg_44562,TVA récupérable sur immobilisations,44562,44562,l10n_dz_elosys.pcg_4456
+pcg_44563,TVA transférée par d'autres entreprises,44563,44563,l10n_dz_elosys.pcg_4456
+pcg_44566,TVA récupérable sur achats de stocks et de services,44566,44566,l10n_dz_elosys.pcg_4456
+pcg_44568,Crédit de TVA à reporter (Précompte),44568,44568,l10n_dz_elosys.pcg_4456
+pcg_44571,TVA collectée sur Ventes – (livraisons juridiques ou matérielles),44571,44571,l10n_dz_elosys.pcg_4457
+pcg_44572,TVA collectée sur les encaissements,44572,44572,l10n_dz_elosys.pcg_4457
+pcg_44575,Droits de timbre perçus au profit du Trésor,44575,44575,l10n_dz_elosys.pcg_4457
+pcg_44583,Remboursement de TVA demandé,44583,44583,l10n_dz_elosys.pcg_4458
+pcg_44584,TVA récupérée d’avance ou en attente de régularisation,44584,44584,l10n_dz_elosys.pcg_4458
+pcg_44586,TVA sur factures d’achats non parvenues,44586,44586,l10n_dz_elosys.pcg_4458
+pcg_44587,TVA sur factures de ventes ou de prestations à établir,44587,44587,l10n_dz_elosys.pcg_4458
+pcg_45611,Associés : Comptes d’apport en société,45611,45611,l10n_dz_elosys.pcg_4561
+pcg_45615,Associés : Apports en numéraires,45615,45615,l10n_dz_elosys.pcg_4561
+pcg_5031,Actions détenues en vue de la revente,5031,5039,l10n_dz_elosys.pcg_503
+pcg_5061,Obligations à moins de 12 mois,5061,5061,l10n_dz_elosys.pcg_506
+pcg_5062,Bons du Trésor à court terme,5062,5062,l10n_dz_elosys.pcg_506
+pcg_5063,Bons de caisse à court terme,5063,5063,l10n_dz_elosys.pcg_506
+pcg_5081,Autres valeurs mobilières,5081,5081,l10n_dz_elosys.pcg_508
+pcg_5082,Bons de souscription,5082,5082,l10n_dz_elosys.pcg_508
+pcg_5083,Intérêts courus,5083,5083,l10n_dz_elosys.pcg_508
+pcg_5088,Intérêts courus,5088,5088,l10n_dz_elosys.pcg_508
+pcg_5113,Effets à l'encaissement,5113,5113,l10n_dz_elosys.pcg_511
+pcg_6011,Matières premières consommées,6011,6011,l10n_dz_elosys.pcg_601
+pcg_60111,Matières (ou groupe) A,60111,60111,l10n_dz_elosys.pcg_6011
+pcg_60112,Matières (ou groupe) B,60112,60112,l10n_dz_elosys.pcg_6011
+pcg_60118,Autres matières premières consommées,60118,60118,l10n_dz_elosys.pcg_6011
+pcg_60171,Fournitures A,60171,60171,l10n_dz_elosys.pcg_6017
+pcg_60172,Fournitures B,60172,60172,l10n_dz_elosys.pcg_6017
+pcg_60178,Autres fournitures accessoires consommées,60178,60178,l10n_dz_elosys.pcg_6017
+pcg_60211,Matières (ou groupe) C,60211,60211,l10n_dz_elosys.pcg_6021
+pcg_60212,Matières (ou groupe) D,60212,60212,l10n_dz_elosys.pcg_6021
+pcg_60218,Autres matières consommées,60218,60218,l10n_dz_elosys.pcg_6021
+pcg_60221,Carburant et lubrifiant – Véhicules,60221,60221,l10n_dz_elosys.pcg_6022
+pcg_60222,Petit outillage et fournitures d'ateliers,60222,60222,l10n_dz_elosys.pcg_6022
+pcg_60223,Droguerie et Produits d'entretien,60223,60223,l10n_dz_elosys.pcg_6022
+pcg_60224,Pièces de rechange pour équipements et matériels techniques,60224,60224,l10n_dz_elosys.pcg_6022
+pcg_60225,Pièces de rechange et pneumatique pour matériel de transport,60225,60225,l10n_dz_elosys.pcg_6022
+pcg_60226,Quincaillerie générale et fournitures de magasin,60226,60226,l10n_dz_elosys.pcg_6022
+pcg_60228,Autres fournitures consommées,60228,60228,l10n_dz_elosys.pcg_6022
+pcg_60261,Emballages perdus consommés,60261,60261,l10n_dz_elosys.pcg_6026
+pcg_60262,Emballages récupérables non identifiables consommés,60262,60262,l10n_dz_elosys.pcg_6026
+pcg_60263,Emballages à usage mixte consommés,60263,60263,l10n_dz_elosys.pcg_6026
+pcg_61311,Locations immobilières : Redevance de crédit bail immobilier,61311,61311,l10n_dz_elosys.pcg_6131
+pcg_61312,Locations mobilières : Redevance de crédit bail mobilier,61312,61312,l10n_dz_elosys.pcg_6131
+pcg_62551,Missions : intérieur du pays - Frais de voyage,62551,62551,l10n_dz_elosys.pcg_6255
+pcg_62552,Missions : intérieur du pays - Frais de séjour,62552,62552,l10n_dz_elosys.pcg_6255
+pcg_63111,"Traitements, salaires et appointements",63111,63111,l10n_dz_elosys.pcg_6311
+pcg_63112,Présalaires et indemnités de stage et d’apprentissage,63112,63112,l10n_dz_elosys.pcg_6311
+pcg_63113,Heures supplémentaires et IFSP,63113,63113,l10n_dz_elosys.pcg_6311
+pcg_63114,Congés payés,63114,63114,l10n_dz_elosys.pcg_6311
+pcg_63121,Prime de responsabilité,63121,63121,l10n_dz_elosys.pcg_6312
+pcg_63122,Prime de panier,63122,63122,l10n_dz_elosys.pcg_6312
+pcg_63123,Primes d’encouragement et de rendement individuel (PRI-PRC),63123,63123,l10n_dz_elosys.pcg_6312
+pcg_63124,Primes sur résultats au profit des cadres dirigeants,63124,63124,l10n_dz_elosys.pcg_6312
+pcg_63125,Primes de véhicule,63125,63125,l10n_dz_elosys.pcg_6312
+pcg_63126,Prime de caisse et de bilan,63126,63126,l10n_dz_elosys.pcg_6312
+pcg_63127,Prime de sujétion,63127,63127,l10n_dz_elosys.pcg_6312
+pcg_63128,Primes spéciales,63128,63128,l10n_dz_elosys.pcg_6312
+pcg_63131,Indemnité d'Expérience professionnelle (I.E.P),63131,63131,l10n_dz_elosys.pcg_6313
+pcg_63132,Indemnité de nuisance,63132,63132,l10n_dz_elosys.pcg_6313
+pcg_63133,Indemnité de travail posté,63133,63133,l10n_dz_elosys.pcg_6313
+pcg_63134,Indemnités de fin de carrière et de départ à la retraite (IDR – IFC),63134,63134,l10n_dz_elosys.pcg_6313
+pcg_63135,Indemnités kilométriques et de transport,63135,63135,l10n_dz_elosys.pcg_6313
+pcg_63138,Autres Indemnités liées au salaire,63138,63138,l10n_dz_elosys.pcg_6313
+pcg_63141,Bonifications,63141,63141,l10n_dz_elosys.pcg_6314
+pcg_63142,"Supplément familial : Prime de scolarité, IPSU, ICAF",63142,63142,l10n_dz_elosys.pcg_6314
+pcg_63148,Autres indemnités et avantages divers,63148,63148,l10n_dz_elosys.pcg_6314
+pcg_7518,Autres droits et valeurs similaires,7518,7519,l10n_dz_elosys.pcg_751
+pcg_78111,Reprises sur amortissements : Immobilisations incorporelles,78111,78111,l10n_dz_elosys.pcg_7811
+pcg_78112,Reprises sur perte de valeur : Immobilisations incorporelles,78112,78112,l10n_dz_elosys.pcg_7811
+pcg_78113,Reprises sur amortissements : Immobilisations corporelles,78113,78113,l10n_dz_elosys.pcg_7811
+pcg_78114,Reprises sur perte de valeur : Immobilisations corporelles,78114,78114,l10n_dz_elosys.pcg_7811
+pcg_78115,Reprises sur écarts de réévaluation : Immobilisations corporelles,78115,78115,l10n_dz_elosys.pcg_7811
+pcg_78117,Reprises sur plus values à réinvestir,78117,78117,l10n_dz_elosys.pcg_7811
