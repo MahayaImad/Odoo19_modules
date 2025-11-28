@@ -731,6 +731,9 @@ l10n_dz_511100,Chèques à encaisser,511100,asset_cash,,True,Chèques à encaiss
 l10n_dz_511200,Traite remises à l'escompte,511200,asset_cash,,True,Traite remises à l'escompte
 l10n_dz_511800,Autres valeurs à l'encaissement,511800,asset_cash,,True,Autres valeurs à l'encaissement
 l10n_dz_512000,Banque,512000,asset_cash,,True,Banque
+l10n_dz_512001,Compte d'attente de la banque,512001,asset_cash,,False,Compte d'attente de la banque
+l10n_dz_512002,Paiements entrants en suspens,512002,asset_cash,,True,Paiements entrants en suspens
+l10n_dz_512003,Paiements sortants en suspens,512003,asset_cash,,True,Paiements sortants en suspens
 l10n_dz_512005,020 0005 17465342002 65 (copie),512005,asset_cash,,False,020 0005 17465342002 65 (copie)
 l10n_dz_512006,020 0005 17465342001 68,512006,asset_cash,,False,020 0005 17465342001 68
 l10n_dz_512007,1212,512007,asset_cash,,False,1212
@@ -1175,3 +1178,5 @@ l10n_dz_785300,Reprise sur pertes de valeurs – Stocks et encours,785300,income
 l10n_dz_785400,Reprise sur pertes de valeurs – Créances,785400,income_other,,False,Reprise sur pertes de valeurs – Créances
 l10n_dz_785800,Reprise sur provisions pour pertes et charges – PNC,785800,income_other,,False,Reprise sur provisions pour pertes et charges – PNC
 l10n_dz_786000,Reprises financières sur pertes de valeur et provisions,786000,income_other,,False,Reprises financières sur pertes de valeur et provisions
+l10n_dz_999997,Gain d'escompte,999997,income_other,,False,Gain d'escompte
+l10n_dz_999998,Perte d'escompte,999998,expense,,False,Perte d'escompte
