@@ -6,7 +6,7 @@ class ActivityCode(models.Model):
 
     _name = "activity.code"
     _description = "Code d'activité"
-
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Char(string="Nom", required=True, index=True, tracking=True)
     company_id = fields.Many2one('res.company', string='Société', default=lambda self: self.env.company.id)

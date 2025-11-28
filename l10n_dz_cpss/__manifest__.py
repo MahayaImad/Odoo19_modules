@@ -31,6 +31,7 @@ Ce module est basé sur les travaux de Osis et de la communauté Odoo Algérie.
     'depends': [
         'base_vat',
         'account',
+        'mail',
         'sale',
         'sale_management',
     ],
