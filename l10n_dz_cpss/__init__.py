@@ -57,6 +57,33 @@ def post_init_hook(env):
     except Exception as e:
         _logger.warning(f"Erreur lors de la configuration du pays pour les groupes de taxes: {e}")
 
+    # Configurer les comptes par défaut de la société
+    try:
+        companies = env['res.company'].search([('chart_template', '=', 'dz_cpss')])
+        for company in companies:
+            vals = {}
+            # Comptes de base
+            if env.ref('l10n_dz_cpss.l10n_dz_413', raise_if_not_found=False):
+                vals['account_default_pos_receivable_account_id'] = env.ref('l10n_dz_cpss.l10n_dz_413').id
+            if env.ref('l10n_dz_cpss.l10n_dz_766', raise_if_not_found=False):
+                vals['income_currency_exchange_account_id'] = env.ref('l10n_dz_cpss.l10n_dz_766').id
+            if env.ref('l10n_dz_cpss.l10n_dz_666', raise_if_not_found=False):
+                vals['expense_currency_exchange_account_id'] = env.ref('l10n_dz_cpss.l10n_dz_666').id
+            if env.ref('l10n_dz_cpss.l10n_dz_709', raise_if_not_found=False):
+                vals['account_journal_early_pay_discount_loss_account_id'] = env.ref('l10n_dz_cpss.l10n_dz_709').id
+            if env.ref('l10n_dz_cpss.l10n_dz_609', raise_if_not_found=False):
+                vals['account_journal_early_pay_discount_gain_account_id'] = env.ref('l10n_dz_cpss.l10n_dz_609').id
+            if env.ref('l10n_dz_cpss.l10n_dz_758', raise_if_not_found=False):
+                vals['default_cash_difference_income_account_id'] = env.ref('l10n_dz_cpss.l10n_dz_758').id
+            if env.ref('l10n_dz_cpss.l10n_dz_657', raise_if_not_found=False):
+                vals['default_cash_difference_expense_account_id'] = env.ref('l10n_dz_cpss.l10n_dz_657').id
+
+            if vals:
+                company.write(vals)
+                _logger.info(f"Comptes par défaut configurés pour la société {company.name}")
+    except Exception as e:
+        _logger.warning(f"Erreur lors de la configuration des comptes: {e}")
+
     _logger.info("=" * 70)
     _logger.info("l10n_dz_cpss: post_init_hook appelé")
     _logger.info("Template 'dz_cpss' enregistré pour le plan comptable algérien")
