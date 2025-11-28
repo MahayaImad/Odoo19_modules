@@ -78,9 +78,15 @@ def post_init_hook(env):
             if env.ref('l10n_dz_cpss.l10n_dz_657', raise_if_not_found=False):
                 vals['default_cash_difference_expense_account_id'] = env.ref('l10n_dz_cpss.l10n_dz_657').id
 
+            # Taxes par défaut
+            if env.ref('l10n_dz_cpss.l10n_dz_vat_sale_19_prod', raise_if_not_found=False):
+                vals['account_sale_tax_id'] = env.ref('l10n_dz_cpss.l10n_dz_vat_sale_19_prod').id
+            if env.ref('l10n_dz_cpss.l10n_dz_vat_purchase_19', raise_if_not_found=False):
+                vals['account_purchase_tax_id'] = env.ref('l10n_dz_cpss.l10n_dz_vat_purchase_19').id
+
             if vals:
                 company.write(vals)
-                _logger.info(f"Comptes par défaut configurés pour la société {company.name}")
+                _logger.info(f"Comptes et taxes par défaut configurés pour la société {company.name}")
     except Exception as e:
         _logger.warning(f"Erreur lors de la configuration des comptes: {e}")
 
