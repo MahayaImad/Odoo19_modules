@@ -14,7 +14,6 @@ class AccountChartTemplate(models.AbstractModel):
             'property_account_payable_id': 'l10n_dz_401',
             'property_account_expense_categ_id': 'l10n_dz_600',
             'property_account_income_categ_id': 'l10n_dz_700',
-            'account_code_prefix_equity_unaffected': '120000',
             'code_digits': 6,
             'display_invoice_amount_total_words': True,
         }
