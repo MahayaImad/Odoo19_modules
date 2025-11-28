@@ -604,6 +604,8 @@ l10n_dz_445000,État - Taxes sur le chiffre d'affaires,445000,liability_current,
 l10n_dz_445500,TVA à décaisser,445500,liability_current,,True,TVA à décaisser
 l10n_dz_445510,TVA à décaisser (à payer sur G.50),445510,liability_current,,True,TVA à décaisser (à payer sur G.50)
 l10n_dz_445520,Obligations cautionnées (au profit des douanes),445520,liability_current,,True,Obligations cautionnées (au profit des douanes)
+l10n_dz_4456,TVA récupérable,4456,liability_current,,True,TVA récupérable
+l10n_dz_4457,TVA collectée,4457,liability_current,,True,TVA collectée
 l10n_dz_445600,TVA récupérable et précompte,445600,liability_current,,True,TVA récupérable et précompte
 l10n_dz_445620,TVA récupérable sur immobilisations,445620,liability_current,,True,TVA récupérable sur immobilisations
 l10n_dz_445630,TVA transférée par d'autres entreprises,445630,liability_current,,True,TVA transférée par d'autres entreprises
