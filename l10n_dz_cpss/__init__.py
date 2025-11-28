@@ -37,6 +37,26 @@ def post_init_hook(env):
             account_120000.account_type = 'equity_unaffected'
             _logger.info("Compte 120000 configuré comme equity_unaffected")
 
+    # Configurer le pays pour les groupes de taxes
+    try:
+        country_dz = env.ref('base.dz', raise_if_not_found=False)
+        if country_dz:
+            tax_groups = env['account.tax.group'].search([
+                ('id', 'in', [
+                    env.ref('l10n_dz_cpss.l10n_dz_tax_group_vat_0', raise_if_not_found=False).id,
+                    env.ref('l10n_dz_cpss.l10n_dz_tax_group_vat_9', raise_if_not_found=False).id,
+                    env.ref('l10n_dz_cpss.l10n_dz_tax_group_vat_19', raise_if_not_found=False).id,
+                ]),
+                ('country_id', '=', False)
+            ])
+            if tax_groups:
+                tax_groups.write({'country_id': country_dz.id})
+                _logger.info(f"Pays (Algérie) configuré pour {len(tax_groups)} groupes de taxes")
+        else:
+            _logger.warning("Pays 'base.dz' (Algérie) non trouvé")
+    except Exception as e:
+        _logger.warning(f"Erreur lors de la configuration du pays pour les groupes de taxes: {e}")
+
     _logger.info("=" * 70)
     _logger.info("l10n_dz_cpss: post_init_hook appelé")
     _logger.info("Template 'dz_cpss' enregistré pour le plan comptable algérien")
