@@ -272,7 +272,7 @@ l10n_dz_2988,2988,Pertes de valeur sur autres actifs financiers immobilisés,Per
 l10n_dz_30,30,Stocks de marchandises,Stocks de marchandises
 l10n_dz_301,301,Marchandises (ou groupe) A,Marchandises (ou groupe) A
 l10n_dz_302,302,Marchandises (ou groupe) B,Marchandises (ou groupe) B
-l10n_dz_31,31,Matières premières et fournitures,Matières premières et fournitures
+l10n_dz_31_group,31,Matières premières et fournitures,Matières premières et fournitures
 l10n_dz_311,311,Matières premières,Matières premières
 l10n_dz_3111,3111,Matières (ou groupe) A,Matières (ou groupe) A
 l10n_dz_3112,3112,Matières (ou groupe) B,Matières (ou groupe) B
@@ -367,7 +367,7 @@ l10n_dz_394,394,Pertes de valeur sur En cours de production de services,Pertes d
 l10n_dz_395,395,Pertes de valeur sur stocks de produits,Pertes de valeur sur stocks de produits
 l10n_dz_397,397,Pertes de valeur sur Stocks à l'extérieur,Pertes de valeur sur Stocks à l'extérieur
 l10n_dz_40,40,Fournisseurs et comptes rattachés,Fournisseurs et comptes rattachés
-l10n_dz_401,401,Fournisseurs de biens et services,Fournisseurs de biens et services
+l10n_dz_401_group,401,Fournisseurs de biens et services,Fournisseurs de biens et services
 l10n_dz_4013,4013,Fournisseurs de stocks,Fournisseurs de stocks
 l10n_dz_4016,4016,Fournisseurs de services,Fournisseurs de services
 l10n_dz_4017,4017,Fournisseurs : Retenue de garantie sur stocks & services,Fournisseurs : Retenue de garantie sur stocks & services
@@ -396,7 +396,7 @@ l10n_dz_411,411,Clients,Clients
 l10n_dz_4111,4111,Clients : Ventes de biens et services,Clients : Ventes de biens et services
 l10n_dz_4114,4114,Clients : Autres créances diverses,Clients : Autres créances diverses
 l10n_dz_4117,4117,Clients : Retenues de garantie,Clients : Retenues de garantie
-l10n_dz_413,413,Clients : effets à recevoir,Clients : effets à recevoir
+l10n_dz_413_group,413,Clients : effets à recevoir,Clients : effets à recevoir
 l10n_dz_416,416,Clients douteux (ou litigieux),Clients douteux (ou litigieux)
 l10n_dz_4161,4161,Clients douteux : secteur public,Clients douteux : secteur public
 l10n_dz_4162,4162,Clients douteux : secteur privé,Clients douteux : secteur privé
@@ -633,16 +633,16 @@ l10n_dz_59,59,Pertes de valeur sur actifs financiers courants,Pertes de valeur s
 l10n_dz_591,591,Pertes de valeur sur valeurs en banque et Etablissements financiers,Pertes de valeur sur valeurs en banque et Etablissements financiers
 l10n_dz_594,594,Pertes de valeurs sur régies d'avances et accréditifs,Pertes de valeurs sur régies d'avances et accréditifs
 l10n_dz_60,60,Achats consommés,Achats consommés
-l10n_dz_600,600,Achats de marchandises vendues,Achats de marchandises vendues
+l10n_dz_600_group,600,Achats de marchandises vendues,Achats de marchandises vendues
 l10n_dz_6001,6001,Matières premières consommées,Matières premières consommées
 l10n_dz_6002,6002,Marchandises (ou groupe) B,Marchandises (ou groupe) B
-l10n_dz_601,601,Matières premières & fournitures consommées,Matières premières & fournitures consommées
+l10n_dz_601_group,601,Matières premières & fournitures consommées,Matières premières & fournitures consommées
 l10n_dz_6017,6017,Fournitures accessoires consommées,Fournitures accessoires consommées
 l10n_dz_602,602,Autres approvisionnements consommés,Autres approvisionnements consommés
 l10n_dz_6021,6021,Matières consommables,Matières consommables
 l10n_dz_6022,6022,Fournitures consommables,Fournitures consommables
 l10n_dz_6026,6026,Emballages consommés,Emballages consommés
-l10n_dz_603,603,Variations des stocks (inventaire intermittent),Variations des stocks (inventaire intermittent)
+l10n_dz_603_group,603,Variations des stocks (inventaire intermittent),Variations des stocks (inventaire intermittent)
 l10n_dz_6030,6030,Variations de stocks de marchandises,Variations de stocks de marchandises
 l10n_dz_6031,6031,Variations de stock de matières premières & Fournitures,Variations de stock de matières premières & Fournitures
 l10n_dz_6032,6032,Variations de stock des autres approvisionnements,Variations de stock des autres approvisionnements
@@ -664,7 +664,7 @@ l10n_dz_6075,6075,Achats non stockés de fournitures d'atelier et de magasin,Ach
 l10n_dz_6076,6076,Achat non stocké de Tenues de travail et de sécurité,Achat non stocké de Tenues de travail et de sécurité
 l10n_dz_6078,6078,Achat : Autres fournitures consommables non stockées,Achat : Autres fournitures consommables non stockées
 l10n_dz_608,608,Frais accessoires d’achat (inventaire intermittent),Frais accessoires d’achat (inventaire intermittent)
-l10n_dz_609,609,"Rabais, remises, ristournes obtenus sur achats","Rabais, remises, ristournes obtenus sur achats"
+l10n_dz_609_group,609,"Rabais, remises, ristournes obtenus sur achats","Rabais, remises, ristournes obtenus sur achats"
 l10n_dz_6090,6090,R.R.R Obtenus sur achats de marchandises,R.R.R Obtenus sur achats de marchandises
 l10n_dz_6091,6091,R.R.R Obtenus sur achats de matières premières,R.R.R Obtenus sur achats de matières premières
 l10n_dz_6092,6092,R.R.R Obtenus sur achats d’autres approvisionnements,R.R.R Obtenus sur achats d’autres approvisionnements
@@ -824,7 +824,7 @@ l10n_dz_656,656,"Amendes et pénalités, subventions accordées, dons et libéra
 l10n_dz_6562,6562,"Amendes et pénalités (pénales, fiscales et parafiscales)","Amendes et pénalités (pénales, fiscales et parafiscales)"
 l10n_dz_6563,6563,Subventions accordées,Subventions accordées
 l10n_dz_6566,6566,Dons et libéralités,Dons et libéralités
-l10n_dz_657,657,Charges exceptionnelles de gestion courante,Charges exceptionnelles de gestion courante
+l10n_dz_657_group,657,Charges exceptionnelles de gestion courante,Charges exceptionnelles de gestion courante
 l10n_dz_6571,6571,Ecart de stocks (négatif) de marchandises,Ecart de stocks (négatif) de marchandises
 l10n_dz_6572,6572,"Ecart de stocks (négatif) de matières, fournitures et autres approvisionnements","Ecart de stocks (négatif) de matières, fournitures et autres approvisionnements"
 l10n_dz_6575,6575,Rappel d’impôts (autre qu’IBS),Rappel d’impôts (autre qu’IBS)
@@ -841,7 +841,7 @@ l10n_dz_6618,6618,Intérêts des autres dettes,Intérêts des autres dettes
 l10n_dz_664,664,Pertes sur créances liées à des participations,Pertes sur créances liées à des participations
 l10n_dz_665,665,Ecart d’évaluation sur actifs financiers - Moins-values,Ecart d’évaluation sur actifs financiers - Moins-values
 l10n_dz_6651,6651,Mali provenant du rachat des actions propres,Mali provenant du rachat des actions propres
-l10n_dz_666,666,Pertes de change,Pertes de change
+l10n_dz_666_group,666,Pertes de change,Pertes de change
 l10n_dz_667,667,Pertes nettes sur cessions d’actifs financiers,Pertes nettes sur cessions d’actifs financiers
 l10n_dz_668,668,Autres charges financières,Autres charges financières
 l10n_dz_67,67,Eléments extraordinaires (Charges),Eléments extraordinaires (Charges)
@@ -866,7 +866,7 @@ l10n_dz_693,693,Imposition différée passif – Charges,Imposition différée p
 l10n_dz_695,695,Impôts sur les bénéfices basés sur le résultat des activités ordinaires,Impôts sur les bénéfices basés sur le résultat des activités ordinaires
 l10n_dz_698,698,Autres impôts sur les résultats,Autres impôts sur les résultats
 l10n_dz_70,70,"Ventes de marchandises et de produits fabriqués, vente de   prestations de services et produits annexes","Ventes de marchandises et de produits fabriqués, vente de   prestations de services et produits annexes"
-l10n_dz_700,700,Ventes de Marchandises,Ventes de Marchandises
+l10n_dz_700_group,700,Ventes de Marchandises,Ventes de Marchandises
 l10n_dz_7001,7001,Marchandises (ou groupe) A,Marchandises (ou groupe) A
 l10n_dz_7002,7002,Marchandises (ou groupe) B,Marchandises (ou groupe) B
 l10n_dz_701,701,Ventes de produits finis,Ventes de produits finis
@@ -901,7 +901,7 @@ l10n_dz_7081,7081,Cession de matières premières,Cession de matières première
 l10n_dz_7082,7082,Cession d’autres approvisionnements,Cession d’autres approvisionnements
 l10n_dz_7086,7086,Bonis sur reprise d’emballages consignés,Bonis sur reprise d’emballages consignés
 l10n_dz_7088,7088,Autres produits des activités annexes,Autres produits des activités annexes
-l10n_dz_709,709,"Rabais, remises et ristournes accordés","Rabais, remises et ristournes accordés"
+l10n_dz_709_group,709,"Rabais, remises et ristournes accordés","Rabais, remises et ristournes accordés"
 l10n_dz_7092,7092,Réduction sur ventes – Hors factures,Réduction sur ventes – Hors factures
 l10n_dz_7093,7093,Réduction sur prestations – Hors factures,Réduction sur prestations – Hors factures
 l10n_dz_72,72,Production stockée ou déstockée,Production stockée ou déstockée
@@ -936,7 +936,7 @@ l10n_dz_7571,7571,Ecart de stocks (positif) de marchandises,Ecart de stocks (pos
 l10n_dz_7572,7572,"Ecart de stocks (positif) de matières, fournitures et autres approvisionnements","Ecart de stocks (positif) de matières, fournitures et autres approvisionnements"
 l10n_dz_7575,7575,Dégrèvements d’impôts (autre qu’IBS),Dégrèvements d’impôts (autre qu’IBS)
 l10n_dz_7578,7578,Autres produits exceptionnels,Autres produits exceptionnels
-l10n_dz_758,758,Autres produits de gestion courante,Autres produits de gestion courante
+l10n_dz_758_group,758,Autres produits de gestion courante,Autres produits de gestion courante
 l10n_dz_7581,7581,Lots de bord et pièces de rechange gratuites,Lots de bord et pièces de rechange gratuites
 l10n_dz_7582,7582,Remboursements sinistres et dégâts assurés,Remboursements sinistres et dégâts assurés
 l10n_dz_7583,7583,Revenus des immeubles de placement,Revenus des immeubles de placement
@@ -947,7 +947,7 @@ l10n_dz_761,761,Produits de participations,Produits de participations
 l10n_dz_762,762,Revenus des actifs financiers,Revenus des actifs financiers
 l10n_dz_763,763,Revenus de créances,Revenus de créances
 l10n_dz_765,765,Ecart d’évaluation sur actifs financiers – Plus-values,Ecart d’évaluation sur actifs financiers – Plus-values
-l10n_dz_766,766,Gains de change,Gains de change
+l10n_dz_766_group,766,Gains de change,Gains de change
 l10n_dz_767,767,Profits nets sur cessions d’actifs financiers,Profits nets sur cessions d’actifs financiers
 l10n_dz_768,768,Autres produits financiers,Autres produits financiers
 l10n_dz_77,77,Eléments extraordinaires (Produits),Eléments extraordinaires (Produits)
