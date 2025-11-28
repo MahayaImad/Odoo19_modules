@@ -11,11 +11,11 @@ class ResCompany(models.Model):
     activity_code = fields.Many2many("activity.code", string="Code d'activité", index=True, ondelete="cascade")
 
     # Les configurations qui permettent d'afficher le code/secteur d'activité sur les rapports (Devis/Facture)
-    industry_id_in_invoice = fields.Boolean(string="Secteur d'activité")
-    activity_code_in_invoice = fields.Boolean(string="Code d'activité")
+    industry_id_in_invoice = fields.Boolean(string="Secteur d'activité sur facture")
+    activity_code_in_invoice = fields.Boolean(string="Code d'activité sur facture")
 
-    industry_id_in_quotation = fields.Boolean(string="Secteur d'activité")
-    activity_code_in_quotation = fields.Boolean(string="Code d'activité")
+    industry_id_in_quotation = fields.Boolean(string="Secteur d'activité sur devis")
+    activity_code_in_quotation = fields.Boolean(string="Code d'activité sur devis")
 
 
     transfer_tax_journal = fields.Many2one("account.journal", string="Journal de transfert de taxe", default=lambda self: self.env['account.journal'].search([('type', '=', 'general')], limit=1).id)
@@ -177,11 +177,11 @@ class ResConfigSettings(models.TransientModel):
     _inherit = 'res.config.settings'
 
 
-    industry_id_in_invoice = fields.Boolean(string="Secteur d'activité")
-    activity_code_in_invoice = fields.Boolean(string="Code d'activité")
+    industry_id_in_invoice = fields.Boolean(string="Secteur d'activité sur facture")
+    activity_code_in_invoice = fields.Boolean(string="Code d'activité sur facture")
 
-    industry_id_in_quotation = fields.Boolean(string="Secteur d'activité")
-    activity_code_in_quotation = fields.Boolean(string="Code d'activité")
+    industry_id_in_quotation = fields.Boolean(string="Secteur d'activité sur devis")
+    activity_code_in_quotation = fields.Boolean(string="Code d'activité sur devis")
 
 
     transfer_tax_journal = fields.Many2one("account.journal", string="Journal de transfert de taxe")
