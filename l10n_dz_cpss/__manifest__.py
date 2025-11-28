@@ -39,7 +39,7 @@ Ce module est basé sur les travaux de Osis et de la communauté Odoo Algérie.
         'security/ir.model.access.csv',
         'data/template/account.group-dz.csv',
         'data/template/account.account-dz.csv',
-        'data/template/account.tax.group-dz.csv',
+        'data/template/account_tax_group.xml',
         'data/template/account.tax-dz.csv',
         'data/company_function.xml',
         'data/tax_report.xml',
