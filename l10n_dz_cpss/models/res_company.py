@@ -107,29 +107,29 @@ class BaseDocumentLayout2(models.TransientModel):
     _inherit = 'base.document.layout'
 
     street = fields.Char(
-        string=_('street'),
+        string='Street',
     )
 
     street2 = fields.Char(
-        string=_('street2'),
+        string='Street 2',
     )
 
     zip = fields.Char(
-        string=_('zip'),
+        string='Zip',
     )
 
     city = fields.Char(
-        string=_('city'),
+        string='City',
     )
 
     state_id = fields.Many2one(
         'res.country.state',
-        string=_('state'),
+        string='State',
     )
 
     country_id = fields.Many2one(
         'res.country',
-        string=_('country'),
+        string='Country',
     )
 
 
