@@ -18,7 +18,7 @@ class ResCompany(models.Model):
     activity_code_in_quotation = fields.Boolean(string="Code d'activité")
 
 
-    transfer_tax_journal = fields.Many2one("account.journal", string="Journal de transfert de taxe", default=lambda self: self.env['account.journal'].search([('type', '=', 'general')], limit=1))
+    transfer_tax_journal = fields.Many2one("account.journal", string="Journal de transfert de taxe", default=lambda self: self.env['account.journal'].search([('type', '=', 'general')], limit=1).id)
     temporary_tax_account = fields.Many2one("account.account", string="Compte temporaire de taxe")
     based_on = fields.Selection(
         [('posted_invoices', 'Factures validées'),
