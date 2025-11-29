@@ -5,7 +5,7 @@
     'name': "Custom Partner",
     'summary': """ Résumé du module""",
     'description' : "RESUME DU MODULE QUI N'apparais que sur l'installation de odoo",
-    'version': '16.0.1.0',
+    'version': '19.0.1.0',
     'category': 'Sales/CRM',
 #
     'company': 'Elosys',
