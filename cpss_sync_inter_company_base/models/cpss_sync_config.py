@@ -12,8 +12,15 @@ class CpssSyncConfig(models.Model):
     _name = 'cpss.sync.config'
     _description = 'Configuration Synchronisation Inter-Sociétés'
     _rec_name = 'societe_operationnelle_id'
+    _check_company_auto = True
 
     # Configuration de base
+    company_id = fields.Many2one(
+        'res.company',
+        string="Société",
+        default=lambda self: self.env.company,
+        help="Société à laquelle appartient cette configuration"
+    )
     societe_operationnelle_id = fields.Many2one(
         'res.company',
         string="Société Opérationnelle",
@@ -51,6 +58,7 @@ class CpssSyncConfig(models.Model):
     journal_fiscal_defaut_id = fields.Many2one(
         'account.journal',
         string="Journal Fiscal par Défaut",
+        check_company=True,
         help="Journal par défaut pour les factures fiscales"
     )
 

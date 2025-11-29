@@ -7,6 +7,7 @@ from odoo.exceptions import UserError
 
 class AccountPayment(models.Model):
     _inherit = 'account.payment'
+    _check_company_auto = True
 
     partage = fields.Selection([
         ('not_shared', 'Non Partagé'),
@@ -20,6 +21,7 @@ class AccountPayment(models.Model):
         string="Paiement Société Fiscale",
         copy=False,
         readonly=True,
+        check_company=False,  # Permet de lier des paiements de sociétés différentes
         help="Le paiement correspondant dans la société fiscale"
     )
 
@@ -28,6 +30,7 @@ class AccountPayment(models.Model):
         string="Paiement Origine",
         copy=False,
         readonly=True,
+        check_company=False,  # Permet de lier des paiements de sociétés différentes
         help="Le paiement d'origine de la société opérationnelle"
     )
 

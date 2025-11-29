@@ -1,6 +1,14 @@
 # CPSS Inter-Company Sync Base
 
-Module Odoo 16 pour la synchronisation inter-sociétés en conformité avec les exigences fiscales algériennes.
+Module Odoo 19 pour la synchronisation inter-sociétés en conformité avec les exigences fiscales algériennes.
+
+## Compatibilité Odoo 19
+
+Ce module a été mis à jour pour Odoo 19 avec les améliorations suivantes :
+- ✅ Utilisation native du partage multi-company (`company_id = False`)
+- ✅ Vérification automatique de cohérence multi-company (`_check_company_auto`)
+- ✅ Migration complète des attributs `attrs` vers la nouvelle syntaxe (invisible, readonly, required)
+- ✅ Attribut `check_company` sur les champs relationnels
 
 ## Fonctionnalités
 

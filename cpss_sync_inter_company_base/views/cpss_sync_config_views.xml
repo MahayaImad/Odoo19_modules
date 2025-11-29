@@ -34,7 +34,7 @@
                                 <field name="notifier_erreurs_sync"/>
                                 <field name="utilisateurs_notification_erreurs"
                                        widget="many2many_tags"
-                                       attrs="{'invisible': [('notifier_erreurs_sync', '=', False)]}"
+                                       invisible="not notifier_erreurs_sync"
                                        options="{'color_field': 'color', 'no_create_edit': True}"/>
                             </group>
                         </group>

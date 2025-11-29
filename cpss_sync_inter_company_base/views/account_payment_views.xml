@@ -19,27 +19,23 @@
                             type="object"
                             string="Partager avec Société Fiscale"
                             class="btn-primary"
-                            attrs="{'invisible': ['|', '|', '|',
-                                    ('state', '!=', 'posted'),
-                                    ('partage', 'in', ['shared', 'error']),
-                                    ('is_operational_company', '!=', True),
-                                    ('reconciled_invoice_ids', '=', False)]}"
+                            invisible="state != 'posted' or partage in ['shared', 'error'] or not is_operational_company or not reconciled_invoice_ids"
                             groups="cpss_sync_inter_company_base.group_sync_executor"/>
 
                     <button name="action_retry_partage"
                             type="object"
                             string="Réessayer le Partage"
                             class="btn-warning"
-                            attrs="{'invisible': ['|', ('partage', '!=', 'error'), ('is_operational_company', '!=', True)]}"
+                            invisible="partage != 'error' or not is_operational_company"
                             groups="cpss_sync_inter_company_base.group_sync_executor"/>
                 </xpath>
 
                 <xpath expr="//field[@name='ref']" position="after">
                     <field name="is_operational_company"
-                           attrs="{'invisible': True}" />
+                           invisible="1" />
 
                     <field name="partage"
-                           attrs="{'invisible': [('is_operational_company', '!=', True)]}"
+                           invisible="not is_operational_company"
                            readonly="1"
                            widget="badge"
                            decoration-info="partage == 'not_shared'"
@@ -51,17 +47,17 @@
                 <!-- Ajouter les liens inter-sociétés -->
                 <xpath expr="//field[@name='partner_id']" position="after">
                     <field name="paiement_societe_fiscale_id"
-                           attrs="{'invisible': ['|', ('paiement_societe_fiscale_id', '=', False), ('is_operational_company', '!=', True)]}"
+                           invisible="not paiement_societe_fiscale_id or not is_operational_company"
                            readonly="1"/>
                     <field name="paiement_origine_operationnelle_id"
-                           attrs="{'invisible': ['|', ('paiement_origine_operationnelle_id', '=', False), ('is_operational_company', '=', True)]}"
+                           invisible="not paiement_origine_operationnelle_id or is_operational_company"
                            readonly="1"/>
                 </xpath>
 
                 <!-- Message d'erreur si échec -->
                 <xpath expr="//sheet" position="inside">
                     <div class="alert alert-danger" role="alert"
-                         attrs="{'invisible': [('partage', '!=', 'error')]}">
+                         invisible="partage != 'error'">
                         <strong>Erreur de partage :</strong>
                         <field name="partage_error_message" readonly="1"/>
                     </div>
