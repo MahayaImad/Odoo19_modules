@@ -4,6 +4,7 @@ from odoo.exceptions import UserError
 
 class AccountMove(models.Model):
     _inherit = 'account.move'
+    _check_company_auto = True
 
     partage = fields.Selection([
         ('not_shared', 'Non Partagée'),
@@ -12,10 +13,20 @@ class AccountMove(models.Model):
         ('refused', 'Refusée'),
     ], string="État de Partage", default='not_shared', copy=False, readonly=True)
 
-    facture_societe_fiscale_id = fields.Many2one('account.move', string="Facture Société Fiscale", copy=False,
-                                                 readonly=True)
-    facture_origine_operationnelle_id = fields.Many2one('account.move', string="Facture Origine", copy=False,
-                                                        readonly=True)
+    facture_societe_fiscale_id = fields.Many2one(
+        'account.move',
+        string="Facture Société Fiscale",
+        copy=False,
+        readonly=True,
+        check_company=False  # Permet de lier des factures de sociétés différentes
+    )
+    facture_origine_operationnelle_id = fields.Many2one(
+        'account.move',
+        string="Facture Origine",
+        copy=False,
+        readonly=True,
+        check_company=False  # Permet de lier des factures de sociétés différentes
+    )
     is_operational_company = fields.Boolean(string="Est Société Opérationnelle",
                                             compute="_compute_is_operational_company")
     active_company_ids = fields.Many2many('res.company', string="Sociétés actives",

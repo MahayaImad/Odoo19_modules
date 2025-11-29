@@ -70,7 +70,7 @@
                                         Activez les notifications lors d’échecs de synchronisation.
                                     </div>
                                     <div class="content-group mt16"
-                                         attrs="{'invisible': [('sync_notifier_erreurs', '=', False)]}">
+                                         invisible="not sync_notifier_erreurs">
                                         <div class="row">
                                             <label for="sync_utilisateurs_notification_ids"
                                                    string="Utilisateurs à notifier" class="col-lg-3 o_light_label"/>

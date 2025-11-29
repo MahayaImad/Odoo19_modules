@@ -41,7 +41,7 @@
                                 <field name="target_document_ref"/>
                             </group>
                         </group>
-                        <group string="Details" attrs="{'invisible': [('error_message', '=', False)]}">
+                        <group string="Details" invisible="not error_message">
                             <field name="error_message"/>
                             <field name="operation_details"/>
                         </group>

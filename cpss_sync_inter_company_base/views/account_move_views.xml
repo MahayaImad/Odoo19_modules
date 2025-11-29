@@ -11,14 +11,14 @@
 
                 <!-- Boutons du workflow -->
                 <xpath expr="//header" position="inside">
-                    <field name="is_operational_company" attrs="{'invisible': True}" />
+                    <field name="is_operational_company" invisible="1" />
 
                     <!-- Bouton Proposer pour Sync -->
                     <button name="action_proposer_sync"
                         type="object"
                         string="Proposer pour Partage"
                         class="btn-secondary"
-                        attrs="{'invisible': ['|', '|', '|', ('state', '!=', 'posted'), ('partage', 'in', ['proposed', 'shared']), ('facture_societe_fiscale_id', '!=', False), ('is_operational_company', '!=', True)]}"
+                        invisible="state != 'posted' or partage in ['proposed', 'shared'] or facture_societe_fiscale_id or not is_operational_company"
                         groups="cpss_sync_inter_company_base.group_sync_proposer"/>
 
                     <!-- Bouton Synchroniser -->
@@ -26,14 +26,14 @@
                         type="object"
                         string="Partager avec Société Fiscale"
                         class="btn-primary"
-                        attrs="{'invisible': ['|',('partage', '!=', 'proposed'), ('is_operational_company', '!=', True)]}"
+                        invisible="partage != 'proposed' or not is_operational_company"
                         groups="cpss_sync_inter_company_base.group_sync_executor"/>
 
                     <button name="action_refuser_partage"
                         type="object"
                         string="Refuser le Partage"
                         class="btn-danger"
-                        attrs="{'invisible': ['|',('partage', '!=', 'proposed'), ('is_operational_company', '!=', True)]}"
+                        invisible="partage != 'proposed' or not is_operational_company"
                         groups="cpss_sync_inter_company_base.group_sync_executor"/>
 
                 </xpath>
@@ -43,14 +43,14 @@
 
                     <!-- Liens inter-sociétés -->
                     <field name="facture_societe_fiscale_id"
-                           attrs="{'invisible': ['|', ('facture_societe_fiscale_id', '=', False), ('is_operational_company', '!=', True)]}"
+                           invisible="not facture_societe_fiscale_id or not is_operational_company"
                            readonly="1"/>
                     <field name="facture_origine_operationnelle_id"
-                           attrs="{'invisible': ['|', ('facture_origine_operationnelle_id', '=', False), ('is_operational_company', '=', True)]}"
+                           invisible="not facture_origine_operationnelle_id or is_operational_company"
                            readonly="1"/>
                     <field name="active_company_ids" widget="many2many_tags"/>
                     <field name="partage"
-                           attrs="{'invisible': [('is_operational_company', '!=', True)]}"
+                           invisible="not is_operational_company"
                            readonly="1"
                            widget="badge"
                            decoration-info="partage == 'not_shared'"
@@ -73,9 +73,9 @@
                 <!-- Ajouter le champ partage après la colonne 'state' -->
                 <xpath expr="//field[@name='state']" position="after">
                     <field name="is_operational_company"
-                           attrs="{'column_invisible': True}" />
+                           column_invisible="1" />
                     <field name="partage"
-                           attrs="{'column_invisible': [('is_operational_company', '!=', True)]}"
+                           column_invisible="not parent.is_operational_company"
                            optional="show"
                            widget="badge"
                            decoration-info="partage == 'not_shared'"
