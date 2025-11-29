@@ -52,16 +52,7 @@ class ResPartner(models.Model):
 
     @api.depends('is_company', 'name', 'compte_tiers', 'parent_id.name', 'type', 'company_name')
     def _compute_display_name(self):
-        return super(ResPartner, self)._compute_display_name()
-
-    @api.depends('name', 'compte_tiers')
-    def name_get(self):
-        res = super(ResPartner, self).name_get()
-        data = []
+        super(ResPartner, self)._compute_display_name()
         for partner in self:
             if partner.compte_tiers:
-                display_value = '[' + partner.compte_tiers + '] ' + partner.name
-            else:
-                display_value = partner.name
-            data.append((partner.id, display_value))
-        return data
+                partner.display_name = '[' + partner.compte_tiers + '] ' + partner.display_name
