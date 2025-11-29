@@ -23,7 +23,6 @@
         'eloapps_custom_partner',
     ],
     'data': [
-        'data/accounting_group.xml',
         'data/sequences.xml',
         'views/res_partner.xml',
     ],
