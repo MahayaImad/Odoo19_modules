@@ -10,7 +10,7 @@
             <field name="email">fiscal@cpss.dz</field>
             <field name="phone">+213 123 456 789</field>
             <field name="website">https://fiscal.cpss.dz</field>
-            <field name="vat">12345678901234</field>
+            <!-- VAT removed: set it manually after installation with valid format -->
             <field name="street">Zone Industrielle</field>
             <field name="city">Alger</field>
             <field name="zip">16000</field>
@@ -91,6 +91,7 @@
 
         <!-- 8. Configuration automatique de la synchronisation -->
         <record id="config_sync_auto" model="cpss.sync.config">
+            <field name="company_id" ref="base.main_company"/>
             <field name="societe_operationnelle_id" ref="base.main_company"/>
             <field name="societe_fiscale_id" ref="societe_fiscale_auto"/>
             <field name="utilisateur_intersocietes_id" ref="utilisateur_sync_technique"/>
