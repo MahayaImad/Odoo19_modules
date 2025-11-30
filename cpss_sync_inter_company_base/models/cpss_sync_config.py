@@ -58,7 +58,7 @@ class CpssSyncConfig(models.Model):
     journal_fiscal_defaut_id = fields.Many2one(
         'account.journal',
         string="Journal Fiscal par Défaut",
-        check_company=True,
+        check_company=False,  # Peut appartenir à une autre société (société fiscale)
         help="Journal par défaut pour les factures fiscales"
     )
 
