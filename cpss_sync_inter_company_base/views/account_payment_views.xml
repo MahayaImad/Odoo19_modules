@@ -30,7 +30,7 @@
                             groups="cpss_sync_inter_company_base.group_sync_executor"/>
                 </xpath>
 
-                <xpath expr="//field[@name='ref']" position="after">
+                <xpath expr="//field[@name='date']" position="after">
                     <field name="is_operational_company"
                            invisible="1" />
 
@@ -94,21 +94,21 @@
         <record id="action_paiements_non_partages" model="ir.actions.act_window">
             <field name="name">Paiements Non Partagés</field>
             <field name="res_model">account.payment</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">list,form</field>
             <field name="domain">[('partage', '=', 'not_shared'), ('state', '=', 'posted')]</field>
         </record>
 
         <record id="action_paiements_partages" model="ir.actions.act_window">
             <field name="name">Paiements Partagés</field>
             <field name="res_model">account.payment</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">list,form</field>
             <field name="domain">[('partage', '=', 'shared')]</field>
         </record>
 
         <record id="action_paiements_erreur" model="ir.actions.act_window">
             <field name="name">Paiements en Erreur</field>
             <field name="res_model">account.payment</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">list,form</field>
             <field name="domain">[('partage', '=', 'error')]</field>
         </record>
 

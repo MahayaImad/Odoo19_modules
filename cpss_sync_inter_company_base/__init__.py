@@ -22,10 +22,3 @@ def post_init_hook(env):
 
     except Exception as e:
         _logger.error("❌ Erreur lors de la configuration post-installation : %s", str(e))
-
-
-
-
-
-
-

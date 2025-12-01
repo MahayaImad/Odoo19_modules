@@ -2,102 +2,142 @@
 <odoo>
     <data>
 
-        <!-- Vue de configuration : Synchronisation Inter-Sociétés -->
+        <!-- Vue de configuration : Synchronisation Inter-Sociétés - Odoo 19 -->
         <record id="res_config_settings_view_form_inherit_sync" model="ir.ui.view">
             <field name="name">res.config.settings.view.form.inherit.sync</field>
             <field name="model">res.config.settings</field>
             <field name="inherit_id" ref="base.res_config_settings_view_form"/>
             <field name="arch" type="xml">
 
-                <!-- Insertion dans la section principale des paramètres -->
-                <xpath expr="//div[hasclass('settings')]" position="inside">
-                    <div class="app_settings_block"
-                         string="Synchronisation Inter-Sociétés"
-                         data-string="Synchronisation Inter-Sociétés"
-                         data-key="cpss_sync_inter_company_base"
+                <!-- Insertion dans les paramètres avec la nouvelle structure Odoo 19 -->
+                <xpath expr="//form" position="inside">
+
+                    <!-- Application Synchronisation Inter-Sociétés -->
+                    <app string="Synchronisation Inter-Sociétés"
+                         name="cpss_sync_inter_company_base"
                          groups="cpss_sync_inter_company_base.group_sync_manager">
 
-                        <h2>Configuration des Sociétés</h2>
-                        <div class="row mt16 o_settings_container" name="societes_setting_container">
-                            <div class="col-12 col-lg-6 o_setting_box" id="sync_societes">
-                                <div class="o_setting_left_pane">
+                        <!-- Bloc Configuration des Sociétés -->
+                        <block title="Configuration des Sociétés"
+                               help="Configurez les sociétés opérationnelle et fiscale pour la synchronisation">
 
-                                </div>
-                                <div class="o_setting_right_pane">
-                                    <label for="sync_societe_operationnelle_id" string="Sociétés liées"/>
-                                    <div class="text-muted">
-                                        Définissez les sociétés opérationnelle et fiscale utilisées dans la
-                                        synchronisation.
-                                    </div>
-                                    <div class="content-group mt16">
-                                        <div class="row mb8">
-                                            <label for="sync_societe_operationnelle_id" string="Société Opérationnelle"
-                                                   class="col-lg-3 o_light_label"/>
-                                            <field name="sync_societe_operationnelle_id"
-                                                   class="oe_inline"
-                                                   options="{'no_create': True, 'no_open': True}"/>
-                                        </div>
-                                        <div class="row mb8">
-                                            <label for="sync_societe_fiscale_id" string="Société Fiscale"
-                                                   class="col-lg-3 o_light_label"/>
-                                            <field name="sync_societe_fiscale_id"
-                                                   class="oe_inline"
-                                                   options="{'no_create': True, 'no_open': True}"/>
-                                        </div>
-                                        <div class="row mb8">
-                                            <label for="sync_utilisateur_intersocietes_id"
-                                                   string="Utilisateur Technique" class="col-lg-3 o_light_label"/>
-                                            <field name="sync_utilisateur_intersocietes_id"
-                                                   required="1"
-                                                   class="oe_inline"
-                                                   options="{'no_create': True}"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <!-- Paramètre Société Opérationnelle -->
+                            <setting title="Société Opérationnelle"
+                                     help="Définissez la société opérationnelle utilisée dans la synchronisation">
+                                <field name="sync_societe_operationnelle_id"
+                                       class="oe_inline"
+                                       options="{'no_create': True, 'no_open': True}"/>
+                            </setting>
 
-                        </div>
+                            <!-- Paramètre Société Fiscale -->
+                            <setting title="Société Fiscale"
+                                     help="Définissez la société fiscale utilisée dans la synchronisation">
+                                <field name="sync_societe_fiscale_id"
+                                       class="oe_inline"
+                                       options="{'no_create': True, 'no_open': True}"/>
+                            </setting>
 
-                        <h2>Notifications</h2>
-                        <div class="row mt16 o_settings_container" name="notification_setting_container">
-                            <div class="col-12 col-lg-6 o_setting_box" id="sync_notifications">
-                                <div class="o_setting_left_pane">
-                                    <field name="sync_notifier_erreurs"/>
-                                </div>
-                                <div class="o_setting_right_pane">
-                                    <label for="sync_notifier_erreurs" string="Notifier les erreurs"/>
-                                    <div class="text-muted">
-                                        Activez les notifications lors d’échecs de synchronisation.
+                            <!-- Paramètre Utilisateur Technique -->
+                            <setting title="Utilisateur Technique"
+                                     help="Utilisateur technique utilisé pour les opérations de synchronisation"
+                                     required="1">
+                                <field name="sync_utilisateur_intersocietes_id"
+                                       required="1"
+                                       class="oe_inline"
+                                       options="{'no_create': True}"/>
+                            </setting>
+
+                        </block>
+
+                        <!-- Bloc Notifications -->
+                        <block title="Gestion des Notifications"
+                               help="Configurez les notifications en cas d'erreurs de synchronisation">
+
+                            <!-- Paramètre Principal : Activer les notifications -->
+                            <setting type="boolean"
+                                     title="Notifier les erreurs de synchronisation"
+                                     help="Activez les notifications automatiques en cas d'échec de synchronisation">
+                                <field name="sync_notifier_erreurs"/>
+
+                                <!-- Configuration conditionnelle visible uniquement si les notifications sont activées -->
+                                <div class="content-group mt16"
+                                     invisible="not sync_notifier_erreurs">
+
+                                    <!-- Sous-paramètre : Utilisateurs à notifier -->
+                                    <div class="row mt8">
+                                        <label string="Utilisateurs à notifier"
+                                               for="sync_utilisateurs_notification_ids"
+                                               class="col-lg-3 o_light_label"/>
+                                        <field name="sync_utilisateurs_notification_ids"
+                                               class="oe_inline col-lg-9"
+                                               widget="many2many_tags"
+                                               placeholder="Sélectionnez les utilisateurs..."
+                                               options="{'color_field': 'color', 'no_create_edit': True}"/>
                                     </div>
-                                    <div class="content-group mt16"
-                                         invisible="not sync_notifier_erreurs">
-                                        <div class="row">
-                                            <label for="sync_utilisateurs_notification_ids"
-                                                   string="Utilisateurs à notifier" class="col-lg-3 o_light_label"/>
-                                            <field name="sync_utilisateurs_notification_ids"
-                                                   class="oe_inline"
-                                                   widget="many2many_tags"
-                                                   options="{'color_field': 'color', 'no_create_edit': True}"/>
+
+                                    <!-- Information supplémentaire -->
+                                    <div class="row mt8">
+                                        <div class="col-12 text-muted">
+                                            <i class="fa fa-info-circle"/>
+                                            Les utilisateurs sélectionnés recevront des notifications par email
+                                            en cas d'erreurs lors de la synchronisation inter-sociétés.
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </setting>
 
-                    </div>
+                        </block>
+
+                        <!-- Bloc Actions rapides (optionnel) -->
+                       <!-- <block title="Actions Rapides"
+                               help="Actions de maintenance et de diagnostic">
+
+                            <setting title="Diagnostic de Synchronisation"
+                                     help="Vérifiez l'état de la configuration et testez la connectivité">
+                                <div class="text-muted mb16">
+                                    Utilisez ces outils pour diagnostiquer et tester votre configuration de synchronisation.
+                                </div>
+                                <div class="o_setting_action_buttons">
+                                    <button type="object"
+                                            name="action_test_sync_config"
+                                            string="Tester la Configuration"
+                                            class="btn-secondary"
+                                            help="Teste la connectivité entre les sociétés configurées"/>
+                                    <button type="object"
+                                            name="action_view_sync_logs"
+                                            string="Voir les Logs"
+                                            class="btn-link"
+                                            help="Affiche l'historique des synchronisations"/>
+                                </div>
+                            </setting>
+
+                        </block>-->
+
+                    </app>
 
                 </xpath>
             </field>
         </record>
 
-        <!-- Action pour ouvrir la vue de configuration -->
+        <!-- Action pour ouvrir la vue de configuration - mise à jour pour Odoo 19 -->
         <record id="action_open_sync_settings" model="ir.actions.act_window">
             <field name="name">Configuration Synchronisation</field>
             <field name="res_model">res.config.settings</field>
             <field name="view_mode">form</field>
-            <field name="target">inline</field>
-            <field name="context">{'module': 'cpss_sync_inter_company_base'}</field>
+            <field name="target">current</field>
+            <field name="context">{
+                'module': 'cpss_sync_inter_company_base',
+                'bin_size': False
+            }</field>
         </record>
+
+        <!-- Menu pour accéder aux paramètres -->
+        <menuitem id="menu_sync_configuration"
+                  name="Configuration Synchronisation"
+                  parent="base.menu_administration"
+                  action="action_open_sync_settings"
+                  sequence="50"
+                  groups="cpss_sync_inter_company_base.group_sync_manager"/>
 
     </data>
 </odoo>

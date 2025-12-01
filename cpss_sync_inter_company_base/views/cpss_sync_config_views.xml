@@ -49,12 +49,12 @@
             <field name="name">cpss.sync.config.tree</field>
             <field name="model">cpss.sync.config</field>
             <field name="arch" type="xml">
-                <tree string="Sync Configurations" create="false" delete="false">
+                <list string="Sync Configurations" create="false" delete="false">
                     <field name="societe_operationnelle_id"/>
                     <field name="societe_fiscale_id"/>
                     <field name="utilisateur_intersocietes_id"/>
                     <field name="notifier_erreurs_sync"/>
-                </tree>
+                </list>
             </field>
         </record>
 

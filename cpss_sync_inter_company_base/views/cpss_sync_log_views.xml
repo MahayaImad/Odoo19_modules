@@ -7,7 +7,7 @@
             <field name="name">cpss.sync.log.tree</field>
             <field name="model">cpss.sync.log</field>
             <field name="arch" type="xml">
-                <tree string="Sync Logs" default_order="create_date desc">
+                <list string="Sync Logs" default_order="create_date desc">
                     <field name="create_date"/>
                     <field name="operation_name"/>
                     <field name="status" decoration-success="status == 'success'" decoration-danger="status == 'error'"/>
@@ -16,7 +16,7 @@
                     <field name="target_document_name"/>
                     <field name="societe_operationnelle_id"/>
                     <field name="societe_fiscale_id"/>
-                </tree>
+                </list>
             </field>
         </record>
 
@@ -54,14 +54,14 @@
         <record id="action_sync_logs" model="ir.actions.act_window">
             <field name="name">Synchronization Logs</field>
             <field name="res_model">cpss.sync.log</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">list,form</field>
             <field name="context">{'search_default_today': 1}</field>
         </record>
 
         <record id="action_sync_logs_errors" model="ir.actions.act_window">
             <field name="name">Error Logs</field>
             <field name="res_model">cpss.sync.log</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">list,form</field>
             <field name="domain">[('status', '=', 'error')]</field>
         </record>
 
