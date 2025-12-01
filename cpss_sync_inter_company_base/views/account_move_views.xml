@@ -71,11 +71,9 @@
             <field name="arch" type="xml">
 
                 <!-- Ajouter le champ partage après la colonne 'state' -->
-                <xpath expr="//field[@name='state']" position="after">
-                    <field name="is_operational_company"
-                           column_invisible="1" />
+<xpath expr="//field[@name='state']" position="after">
+                    <field name="is_operational_company" column_invisible="1" />
                     <field name="partage"
-                           column_invisible="not parent.is_operational_company"
                            optional="show"
                            widget="badge"
                            decoration-info="partage == 'not_shared'"
