@@ -431,6 +431,7 @@ class AccountInvoiceLine(models.Model):
             }
             if not line.tax_repartition_line_id:
                 line.compute_all_tax[frozendict({'id': line.id})] = {
+                    'move_id': line.move_id.id,
                     'tax_tag_ids': [(6, 0, compute_all_currency['base_tags'])],
                 }
 
