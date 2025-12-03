@@ -45,10 +45,13 @@ class ResCompany(models.Model):
         required=True,
         default=0.0,
     )
-    _sql_constraints = [
-        ('Montant_check', 'CHECK(mnt_max >= mnt_min)','Le montant maximal doit être supérieur au montant minimal ')
-        ]
 
+    @api.constrains('mnt_min', 'mnt_max')
+    def _check_montant_range(self):
+        """Vérifie que le montant maximal est supérieur au montant minimal"""
+        for record in self:
+            if record.mnt_max < record.mnt_min:
+                raise UserError(_('Le montant maximal doit être supérieur au montant minimal.'))
 
     montant_en_lettre = fields.Boolean(
         string="Afficher le montant en lettre sur l’impression des factures",

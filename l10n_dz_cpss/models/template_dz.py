@@ -30,12 +30,19 @@ class AccountChartTemplate(models.AbstractModel):
         res = super()._load_data(template_code, company, install_demo)
 
         if template_code == 'dz_cpss':
+            print("fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff")
             self._configure_dz_default_accounts(company)
 
         return res
 
     def _configure_dz_default_accounts(self, company):
         """Configure default accounts for Algerian chart of accounts"""
+
+        company = company.ensure_one()
+
+        if not company.id:
+            raise UserError("Company not yet created; cannot configure accounts.")
+
         # Find accounts by code
         accounts = self.env['account.account'].search([
             ('company_id', '=', company.id),

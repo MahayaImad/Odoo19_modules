@@ -367,7 +367,7 @@ class AccountInvoiceLine(models.Model):
 
         for line in self:
             if line.display_type == 'timbre' and line.company_id.based_on == "posted_invoices" :
-                account_timbre_id  = self.company_id.purchase_offset_account 
+                account_timbre_id  = self.company_id.purchase_offset_account
                 line.timbre_supplier_key = frozendict({
                     'account_id': line.account_id.id,
                     'move_id': line.move_id.id,
@@ -376,7 +376,7 @@ class AccountInvoiceLine(models.Model):
                 })
             else:
                 line.timbre_supplier_key = False
-       
+
 
     #Override original function
     @api.depends('tax_ids', 'currency_id', 'partner_id', 'analytic_distribution', 'balance', 'partner_id', 'move_id.partner_id', 'price_unit')

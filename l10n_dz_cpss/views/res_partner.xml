@@ -17,6 +17,7 @@
                 </group>
             </xpath>
             <xpath expr="//field[@name='phone']" position="after">
+                 <i class="fa fa-fw me-1 fa-phone text-primary" title="Fax"/>
                 <field name="fax" widget="phone" class="w-100" groups="account.group_account_invoice"/>
             </xpath>
             <xpath expr="//field[@name='vat']" position="attributes">

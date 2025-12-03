@@ -363,6 +363,15 @@ class AccountInvoiceLine(models.Model):
 
     timbre_key = fields.Binary(compute='_compute_timbre_key')
 
+    # Fields for tax line synchronization
+    compute_all_tax = fields.Binary(compute='_compute_all_tax')
+    compute_all_tax_dirty = fields.Boolean(compute='_compute_all_tax')
+    tax_key = fields.Binary(compute='_compute_tax_key')
+
+    # Fields for EPD line synchronization
+    epd_needed = fields.Binary(compute='_compute_epd_needed')
+    epd_dirty = fields.Boolean(compute='_compute_epd_needed')
+
     display_type = fields.Selection(
         selection_add=[
             ('timbre', 'Timbre'),
@@ -383,7 +392,30 @@ class AccountInvoiceLine(models.Model):
                 })
             else:
                 line.timbre_key = False
-       
+
+        # Compute tax_key for identifying existing tax lines
+
+    @api.depends('tax_repartition_line_id', 'account_id', 'move_id', 'display_type')
+    def _compute_tax_key(self):
+        for line in self:
+            if line.display_type == 'tax':
+                line.tax_key = frozendict({
+                    'tax_repartition_line_id': line.tax_repartition_line_id.id,
+                    'group_tax_id': line.group_tax_id.id if line.group_tax_id else False,
+                    'account_id': line.account_id.id,
+                    'currency_id': line.currency_id.id,
+                    'partner_id': line.partner_id.id,
+                    'move_id': line.move_id.id,
+                })
+            else:
+                line.tax_key = False
+
+    # Compute EPD needed values (placeholder - needs proper implementation)
+    @api.depends('move_id.invoice_payment_term_id')
+    def _compute_epd_needed(self):
+        for line in self:
+            line.epd_needed = {}
+            line.epd_dirty = True
 
     #Override original function
     @api.depends('tax_ids', 'currency_id', 'partner_id', 'analytic_distribution', 'balance', 'partner_id', 'move_id.partner_id', 'price_unit')

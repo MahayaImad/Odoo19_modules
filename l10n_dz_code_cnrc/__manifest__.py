@@ -29,7 +29,7 @@
     
     'depends': [
         'base',
-        'l10n_dz_elosys',
+        'l10n_dz_cpss',
     ],
 
     'data': [

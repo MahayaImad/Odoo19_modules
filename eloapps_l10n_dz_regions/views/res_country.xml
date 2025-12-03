@@ -67,7 +67,7 @@
     <record id="l10n_commune_action" model="ir.actions.act_window">
         <field name="name">Communes</field>
         <field name="res_model">res.country.state.commune</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="view_id" ref="l10n_commune_tree"/>
     </record>
   
@@ -94,7 +94,7 @@
     <record id="l10n_localite_action" model="ir.actions.act_window">
         <field name="name">Localités</field>
         <field name="res_model">res.country.state.localite</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="view_id" ref="l10n_localite_tree"/>
     </record>
   

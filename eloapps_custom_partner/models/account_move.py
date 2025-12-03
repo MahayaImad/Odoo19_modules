@@ -19,7 +19,6 @@ class AccountMove(models.Model):
         'res.partner',
         readonly=True,
         tracking=True,
-        states={'draft': [('readonly', False)]},
         domain=get_domain,
         string='Partner',
         change_default=True

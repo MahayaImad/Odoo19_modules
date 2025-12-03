@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields, api
+from odoo import models, fields, api, _
+from odoo.exceptions import ValidationError
 
 import logging
 
@@ -10,9 +11,18 @@ class ResPartner(models.Model):
         string="Compte tiers",
     )
 
-    _sql_constraints = [
-        ('compte_tiers', 'UNIQUE (compte_tiers)', 'Compte tiers existe déjà'),
-    ]
+    @api.constrains('compte_tiers')
+    def _check_compte_tiers_unique(self):
+        """Vérifie que le compte tiers est unique"""
+        for record in self:
+            if record.compte_tiers:
+                existing = self.search([
+                    ('compte_tiers', '=', record.compte_tiers),
+                    ('id', '!=', record.id)
+                ], limit=1)
+                if existing:
+                    raise ValidationError(_('Le compte tiers "%s" existe déjà.') % record.compte_tiers)
+
 
     @api.model_create_multi
     def create(self, vals_list):
