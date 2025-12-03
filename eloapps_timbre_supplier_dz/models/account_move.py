@@ -80,24 +80,22 @@ class AccountMove(models.Model):
 
             if invoice.is_invoice(True) and invoice.for_based_on_in_move == True and invoice.payment_mode_supplier and invoice.payment_mode_supplier.mode_type == 'cash': 
       
-                account_timbre_id  = invoice.company_id.purchase_offset_account 
+                account_timbre_id  = invoice.company_id.purchase_offset_account
                 invoice.needed_timbre_supplier = {
                 frozendict({
                     'move_id': invoice.id,
                     'account_id': account_timbre_id.id,
-
-
+                    'display_type': 'timbre',
                     }): {
                     'name': 'Droit de timbre fournisseur',
+                    'move_id': invoice.id,
                     'quantity': 1.0,
                     'currency_id': invoice.currency_id.id ,
                     'balance': invoice.amount_timbre_supplier ,
                     'amount_currency':  invoice.amount_timbre_supplier ,
                     'account_id': account_timbre_id.id,
                     'display_type': 'timbre',
-
                     }
-
                 }
   
     # override the function that create/edit line of terms
