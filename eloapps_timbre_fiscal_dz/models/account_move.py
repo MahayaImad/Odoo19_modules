@@ -105,18 +105,16 @@ class AccountInvoice(models.Model):
                     'move_id': invoice.id,
                     'account_id': account_timbre_id.id,
                     'display_type': 'timbre',
-
                     }): {
                     'name': 'Timbre' if invoice.move_type == 'out_invoice' else 'Droit de timbre',
+                    'move_id': invoice.id,
                     'quantity': 1.0,
                     'currency_id': invoice.currency_id.id ,
                     'balance': -1 * invoice.amount_timbre ,
                     'amount_currency': -1 * invoice.amount_timbre ,
                     'account_id': account_timbre_id.id,
                     'display_type': 'timbre',
-
                     }
-
                 }
 
     # override the function that create/edit line of terms
