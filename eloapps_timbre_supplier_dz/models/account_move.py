@@ -426,7 +426,7 @@ class AccountInvoiceLine(models.Model):
                     'name': tax['name'],
                     'balance': tax['amount'] / rate,
                     'amount_currency': tax['amount'],
-                    'tax_base_amount': tax['base'] / rate * (-1 if line.tax_tag_invert else 1),
+                    'tax_base_amount': tax['base'] / rate,
                 }
                 for tax in compute_all_currency['taxes']
                 if tax['amount']
