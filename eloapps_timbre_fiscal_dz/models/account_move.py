@@ -447,7 +447,6 @@ class AccountInvoiceLine(models.Model):
                 is_refund=line.is_refund,
                 handle_price_include=handle_price_include,
                 include_caba_tags=line.move_id.always_tax_exigible,
-                fixed_multiplicator=sign,
             )
             rate = line.amount_currency / line.balance if line.balance else 1
             line.compute_all_tax_dirty = True
