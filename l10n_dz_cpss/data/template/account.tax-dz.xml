@@ -12,11 +12,13 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_19"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B21_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B21_balance')])]"/>
@@ -24,11 +26,13 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B21_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B21_balance')])]"/>
@@ -46,21 +50,25 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_0"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B21_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B21_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
@@ -76,11 +84,13 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_9"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B11_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B11_balance')])]"/>
@@ -88,11 +98,13 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B11_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B11_balance')])]"/>
@@ -110,21 +122,25 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_0"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B11_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B11_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
@@ -140,11 +156,13 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_9"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B12_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B12_balance')])]"/>
@@ -152,11 +170,13 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B12_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B12_balance')])]"/>
@@ -174,21 +194,25 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_0"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B12_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B12_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
@@ -205,11 +229,13 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_9"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B13_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B13_balance')])]"/>
@@ -217,11 +243,13 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B13_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B13_balance')])]"/>
@@ -240,21 +268,25 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_0"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B13_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B13_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
@@ -271,11 +303,13 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_9"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B14_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B14_balance')])]"/>
@@ -283,11 +317,13 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B14_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B14_balance')])]"/>
@@ -306,21 +342,25 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_0"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B14_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B14_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
@@ -337,11 +377,13 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_9"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B15_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B15_balance')])]"/>
@@ -349,11 +391,13 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B15_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B15_balance')])]"/>
@@ -372,21 +416,25 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_0"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B15_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B15_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
@@ -403,11 +451,13 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_9"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B16_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B16_balance')])]"/>
@@ -415,11 +465,13 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B16_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B16_balance')])]"/>
@@ -438,21 +490,25 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_0"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B16_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B16_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
@@ -468,11 +524,13 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_19"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B22_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B22_balance')])]"/>
@@ -480,11 +538,13 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B22_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B22_balance')])]"/>
@@ -502,21 +562,25 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_0"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B22_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B22_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
@@ -533,11 +597,13 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_19"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B23_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B23_balance')])]"/>
@@ -545,11 +611,13 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B23_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B23_balance')])]"/>
@@ -568,21 +636,25 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_0"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B23_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B23_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
@@ -599,11 +671,13 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_19"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B24_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B24_balance')])]"/>
@@ -611,11 +685,13 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B24_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B24_balance')])]"/>
@@ -634,21 +710,25 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_0"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B24_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B24_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
@@ -665,11 +745,13 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_19"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B25_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B25_balance')])]"/>
@@ -677,11 +759,13 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B25_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B25_balance')])]"/>
@@ -700,21 +784,25 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_0"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B25_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B25_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
@@ -731,11 +819,13 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_19"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B26_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B26_balance')])]"/>
@@ -743,11 +833,13 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B26_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B26_balance')])]"/>
@@ -766,21 +858,25 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_0"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B26_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B26_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
@@ -796,11 +892,13 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_19"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B28_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B28_balance')])]"/>
@@ -808,11 +906,13 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B28_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B28_balance')])]"/>
@@ -830,21 +930,25 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_0"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B28_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B28_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
@@ -861,11 +965,13 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_19"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B31_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B31_balance')])]"/>
@@ -873,11 +979,13 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B31_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B31_balance')])]"/>
@@ -896,21 +1004,25 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_0"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B31_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B31_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
@@ -927,11 +1039,13 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_19"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B34_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B34_balance')])]"/>
@@ -939,11 +1053,13 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B34_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B34_balance')])]"/>
@@ -962,21 +1078,25 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_0"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B34_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B34_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
@@ -993,11 +1113,13 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_19"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B35_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B35_balance')])]"/>
@@ -1005,11 +1127,13 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B35_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B35_balance')])]"/>
@@ -1028,21 +1152,25 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_0"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B35_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B35_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
@@ -1059,11 +1187,13 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_19"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B36_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B36_balance')])]"/>
@@ -1071,11 +1201,13 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B36_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B36_balance')])]"/>
@@ -1094,21 +1226,25 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_0"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B36_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B36_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
@@ -1125,11 +1261,13 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_19"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B37_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B37_balance')])]"/>
@@ -1137,11 +1275,13 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B37_taxable_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4457"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B37_balance')])]"/>
@@ -1160,21 +1300,25 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_0"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B37_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B37_exempt_turnover')])]"/>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
@@ -1190,10 +1334,12 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_19"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4456"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B92_balance')])]"/>
@@ -1201,10 +1347,12 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4456"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B92_balance')])]"/>
@@ -1222,10 +1370,12 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_9"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4456"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B92_balance')])]"/>
@@ -1233,10 +1383,12 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4456"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B92_balance')])]"/>
@@ -1254,19 +1406,23 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_0"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
@@ -1282,10 +1438,12 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_19"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4456"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B93_balance')])]"/>
@@ -1293,10 +1451,12 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4456"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B93_balance')])]"/>
@@ -1314,10 +1474,12 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_9"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4456"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B93_balance')])]"/>
@@ -1325,10 +1487,12 @@
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
                 <field name="account_id" ref="l10n_dz_4456"/>
                 <field name="tag_ids" eval="[(6,0,[ref('E3B93_balance')])]"/>
@@ -1346,19 +1510,23 @@
         <field name="tax_group_id" ref="l10n_dz_tax_group_vat_0"/>
         <field name="invoice_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">invoice</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
         <field name="refund_repartition_line_ids">
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">base</field>
                 <field name="factor_percent">100</field>
             </record>
             <record model="account.tax.repartition.line">
+                <field name="document_type">refund</field>
                 <field name="repartition_type">tax</field>
             </record>
         </field>
