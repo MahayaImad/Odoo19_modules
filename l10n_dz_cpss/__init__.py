@@ -90,6 +90,85 @@ def post_init_hook(env):
     except Exception as e:
         _logger.warning(f"Erreur lors de la configuration des comptes: {e}")
 
+    # Configurer les comptes par défaut sur les catégories de produits
+    try:
+        companies = env['res.company'].search([('chart_template', '=', 'dz_cpss')])
+        for company in companies:
+            # Get the root product category
+            ProductCategory = env['product.category'].with_company(company)
+            all_category = ProductCategory.search([
+                '|', ('parent_id', '=', False),
+                ('name', '=', 'All')
+            ], limit=1)
+
+            if not all_category:
+                # Create root category if it doesn't exist
+                all_category = ProductCategory.create({
+                    'name': 'All',
+                    'parent_id': False,
+                })
+
+            # Set default accounts on the root category
+            category_vals = {}
+
+            # Default income account (Sales of goods)
+            account_income = env.ref('l10n_dz_cpss.l10n_dz_700000', raise_if_not_found=False)
+            if account_income and account_income.company_id == company:
+                category_vals['property_account_income_categ_id'] = account_income.id
+
+            # Default expense account (Purchase of goods)
+            account_expense = env.ref('l10n_dz_cpss.l10n_dz_600000', raise_if_not_found=False)
+            if account_expense and account_expense.company_id == company:
+                category_vals['property_account_expense_categ_id'] = account_expense.id
+
+            # Default stock accounts
+            account_stock_output = env.ref('l10n_dz_cpss.l10n_dz_355000', raise_if_not_found=False)
+            if account_stock_output and account_stock_output.company_id == company:
+                category_vals['property_stock_account_output_categ_id'] = account_stock_output.id
+
+            account_stock_input = env.ref('l10n_dz_cpss.l10n_dz_380000', raise_if_not_found=False)
+            if account_stock_input and account_stock_input.company_id == company:
+                category_vals['property_stock_account_input_categ_id'] = account_stock_input.id
+
+            # Stock valuation account (finished products)
+            account_stock_valuation = env.ref('l10n_dz_cpss.l10n_dz_355000', raise_if_not_found=False)
+            if account_stock_valuation and account_stock_valuation.company_id == company:
+                category_vals['property_stock_valuation_account_id'] = account_stock_valuation.id
+
+            if category_vals:
+                all_category.write(category_vals)
+                _logger.info(f"Comptes par défaut configurés pour la catégorie racine de produits (société {company.name})")
+    except Exception as e:
+        _logger.warning(f"Erreur lors de la configuration des catégories de produits: {e}")
+
+    # Configurer les comptes par défaut pour les partenaires
+    try:
+        companies = env['res.company'].search([('chart_template', '=', 'dz_cpss')])
+        for company in companies:
+            # Default receivable account (Clients)
+            account_receivable = env.ref('l10n_dz_cpss.l10n_dz_411100', raise_if_not_found=False)
+            if account_receivable and account_receivable.company_id == company:
+                env['ir.property']._set_default(
+                    'property_account_receivable_id',
+                    'res.partner',
+                    account_receivable,
+                    company
+                )
+
+            # Default payable account (Fournisseurs)
+            account_payable = env.ref('l10n_dz_cpss.l10n_dz_401310', raise_if_not_found=False)
+            if account_payable and account_payable.company_id == company:
+                env['ir.property']._set_default(
+                    'property_account_payable_id',
+                    'res.partner',
+                    account_payable,
+                    company
+                )
+
+            _logger.info(f"Comptes partenaires par défaut configurés (société {company.name})")
+    except Exception as e:
+        _logger.warning(f"Erreur lors de la configuration des comptes partenaires: {e}")
+
     _logger.info("=" * 70)
     _logger.info("l10n_dz_cpss: post_init_hook appelé")
     _logger.info("Template 'dz_cpss' enregistré pour le plan comptable algérien")
