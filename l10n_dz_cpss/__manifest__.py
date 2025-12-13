@@ -42,7 +42,7 @@ Ce module est basé sur les travaux de Osis et de la communauté Odoo Algérie.
         'data/template/account.account-dz.csv',
         'data/template/account.tax.group-dz.csv',
         'data/template/account.fiscal.position-dz.csv',
-        'data/template/account.tax-dz.csv',
+        'data/template/account.tax-dz.xml',
         'data/company_function.xml',
         'data/tax_report.xml',
         'views/forme_juridique.xml',
