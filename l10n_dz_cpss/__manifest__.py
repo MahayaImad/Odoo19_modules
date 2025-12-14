@@ -52,9 +52,6 @@ Ce module est basé sur les travaux de Osis et de la communauté Odoo Algérie.
         'views/res_partner.xml',
         'views/configuration_settings.xml',
     ],
-    'demo': [
-        'demo/demo_company.xml',
-    ],
     'license': 'LGPL-3',
     'installable': True,
     'application': False,

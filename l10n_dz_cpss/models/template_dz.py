@@ -28,14 +28,13 @@ class AccountChartTemplate(models.AbstractModel):
             },
         }
 
-    def _load_data(self, template_code, company, install_demo):
+    def _load(self, template_code, company, install_demo, force_create=True):
         """Override to configure default accounts after chart is loaded"""
-        res = super()._load_data(template_code, company, install_demo)
+        res = super()._load(template_code, company, install_demo, force_create=True)
 
-        if template_code == 'dz_cpss':
+        if template_code.get('code') == 'dz_cpss':
             print("fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff")
             self._configure_dz_default_accounts(company)
-
         return res
 
     def _configure_dz_default_accounts(self, company):
