@@ -1,0 +1,53 @@
+id,sequence,description,name,invoice_label,amount,amount_type,type_tax_use,tax_group_id/id,active,price_include,repartition_line_ids/repartition_type,repartition_line_ids/document_type,repartition_line_ids/tag_ids/id,repartition_line_ids/account_id/id,repartition_line_ids/factor_percent
+tva_normale_19,9,TVA 19%,TVA collectée (vente) 19.0%,TVA 19%,19.0,percent,sale,l10n_dz_tax_group_vat_19,True,False,base,invoice,,,100
+,,,,,,,,,,,tax,invoice,,l10n_dz_445710,100
+,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,tax,refund,,l10n_dz_445710,100
+tva_intermediaire_9,252,TVA 9%,TVA collectée (vente) 9.0%,TVA 9%,9.0,percent,sale,l10n_dz_tax_group_vat_9,True,False,base,invoice,,,100
+,,,,,,,,,,,tax,invoice,,l10n_dz_445720,100
+,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,tax,refund,,l10n_dz_445720,100
+tva_normale_19_ttc,9,TVA 19% TTC,TVA collectée (vente) 19.0% TTC,TVA 19% TTC,19.0,percent,sale,l10n_dz_tax_group_vat_19,True,True,base,invoice,,,100
+,,,,,,,,,,,tax,invoice,,l10n_dz_445710,100
+,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,tax,refund,,l10n_dz_445710,100
+tva_intermediaire_9_ttc,254,TVA 9% TTC,TVA collectée (vente) 9.0% TTC,TVA 9% TTC,9.0,percent,sale,l10n_dz_tax_group_vat_9,True,True,base,invoice,,,100
+,,,,,,,,,,,tax,invoice,,l10n_dz_445720,100
+,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,tax,refund,,l10n_dz_445720,100
+tva_acq_normale_19,9,ACH-19.0,TVA déductible (achat) 19.0%,ACH-19.0,19.0,percent,purchase,l10n_dz_tax_group_vat_19,True,False,base,invoice,,,100
+,,,,,,,,,,,tax,invoice,,l10n_dz_445660,100
+,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,tax,refund,,l10n_dz_445660,100
+tva_acq_normale_9,256,ACH-9.0,TVA déductible (achat) 9.0%,ACH-9.0,9.0,percent,purchase,l10n_dz_tax_group_vat_9,True,False,base,invoice,,,100
+,,,,,,,,,,,tax,invoice,,l10n_dz_445660,100
+,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,tax,refund,,l10n_dz_445660,100
+tva_acq_normale_TTC_19,10,ACH-19.0-TTC,TVA déductible (achat) 19.0% TTC,ACH-19.0-TTC,19.0,percent,purchase,l10n_dz_tax_group_vat_19,True,True,base,invoice,,,100
+,,,,,,,,,,,tax,invoice,,l10n_dz_445620,100
+,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,tax,refund,,l10n_dz_445620,100
+tva_acq_normale_TTC_9,258,ACH-9.0-TTC,TVA déductible (achat) 9.0% TTC,ACH-9.0-TTC,9.0,percent,purchase,l10n_dz_tax_group_vat_9,True,True,base,invoice,,,100
+,,,,,,,,,,,tax,invoice,,l10n_dz_445620,100
+,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,tax,refund,,l10n_dz_445620,100
+tva_imm_normale_19,259,IMMO-19.0,TVA déd./immobilisation (achat) 19.0%,IMMO-19.0,19.0,percent,purchase,l10n_dz_tax_group_vat_19,True,False,base,invoice,,,100
+,,,,,,,,,,,tax,invoice,,l10n_dz_445620,100
+,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,tax,refund,,l10n_dz_445620,100
+tva_imm_intermediaire_9,260,IMMO-9.0,TVA déd./immobilisation (achat) 9.0%,IMMO-9.0,9.0,percent,purchase,l10n_dz_tax_group_vat_9,True,False,base,invoice,,,100
+,,,,,,,,,,,tax,invoice,,l10n_dz_445620,100
+,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,tax,refund,,l10n_dz_445620,100
+tva_0,10,EXO-0,TVA 0% autres opérations non imposables (vente),EXO-0,0.0,percent,sale,l10n_dz_tax_group_vat_0,True,False,base,invoice,,,100
+,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,tax,refund,,,100
+tva_export_0,10,TVA 0% Export,TVA 0% export (vente),TVA 0% Export,0.0,percent,sale,l10n_dz_tax_group_vat_0,True,False,base,invoice,,,100
+,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,tax,refund,,,100
+tva_import_0,260,IMPORT-0,TVA 0% import (achat),IMPORT-0,0.0,percent,purchase,l10n_dz_tax_group_vat_0,True,False,base,invoice,,,100
+,,,,,,,,,,,tax,invoice,,,100
+,,,,,,,,,,,base,refund,,,100
+,,,,,,,,,,,tax,refund,,,100
