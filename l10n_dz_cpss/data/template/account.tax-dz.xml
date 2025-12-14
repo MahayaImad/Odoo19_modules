@@ -216,12 +216,12 @@
         <field name="country_id" ref="base.dz"/>
         <field name="sequence">9</field>
         <field name="invoice_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100, 'tag_ids': [Command.set([ref('tag_dz_98'), ref('tag_dz_99')])]}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100, 'account_id': ref('l10n_dz_445710')}),
+            Command.create({'repartition_type': 'base', 'document_type': 'invoice', 'factor_percent': 100, 'tag_ids': [Command.set([ref('tag_dz_98'), ref('tag_dz_99')])]}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'invoice', 'factor_percent': 100, 'account_id': ref('l10n_dz_445710')}),
         ]"/>
         <field name="refund_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100, 'tag_ids': [Command.set([ref('tag_dz_98'), ref('tag_dz_99')])]}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100, 'account_id': ref('l10n_dz_445710')}),
+            Command.create({'repartition_type': 'base', 'document_type': 'refund', 'factor_percent': 100, 'tag_ids': [Command.set([ref('tag_dz_98'), ref('tag_dz_99')])]}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'refund', 'factor_percent': 100, 'account_id': ref('l10n_dz_445710')}),
         ]"/>
     </record>
 
@@ -236,12 +236,12 @@
         <field name="country_id" ref="base.dz"/>
         <field name="sequence">252</field>
         <field name="invoice_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100, 'tag_ids': [Command.set([ref('tag_dz_100'), ref('tag_dz_101')])]}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100, 'account_id': ref('l10n_dz_445720')}),
+            Command.create({'repartition_type': 'base', 'document_type': 'invoice', 'factor_percent': 100, 'tag_ids': [Command.set([ref('tag_dz_100'), ref('tag_dz_101')])]}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'invoice', 'factor_percent': 100, 'account_id': ref('l10n_dz_445720')}),
         ]"/>
         <field name="refund_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100, 'tag_ids': [Command.set([ref('tag_dz_100'), ref('tag_dz_101')])]}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100, 'account_id': ref('l10n_dz_445720')}),
+            Command.create({'repartition_type': 'base', 'document_type': 'refund', 'factor_percent': 100, 'tag_ids': [Command.set([ref('tag_dz_100'), ref('tag_dz_101')])]}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'refund', 'factor_percent': 100, 'account_id': ref('l10n_dz_445720')}),
         ]"/>
     </record>
 
@@ -257,12 +257,12 @@
         <field name="country_id" ref="base.dz"/>
         <field name="sequence">9</field>
         <field name="invoice_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100, 'account_id': ref('l10n_dz_445710')}),
+            Command.create({'repartition_type': 'base', 'document_type': 'invoice', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'invoice', 'factor_percent': 100, 'account_id': ref('l10n_dz_445710')}),
         ]"/>
         <field name="refund_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100, 'account_id': ref('l10n_dz_445710')}),
+            Command.create({'repartition_type': 'base', 'document_type': 'refund', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'refund', 'factor_percent': 100, 'account_id': ref('l10n_dz_445710')}),
         ]"/>
     </record>
 
@@ -278,12 +278,12 @@
         <field name="country_id" ref="base.dz"/>
         <field name="sequence">254</field>
         <field name="invoice_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100, 'account_id': ref('l10n_dz_445720')}),
+            Command.create({'repartition_type': 'base', 'document_type': 'invoice', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'invoice', 'factor_percent': 100, 'account_id': ref('l10n_dz_445720')}),
         ]"/>
         <field name="refund_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100, 'account_id': ref('l10n_dz_445720')}),
+            Command.create({'repartition_type': 'base', 'document_type': 'refund', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'refund', 'factor_percent': 100, 'account_id': ref('l10n_dz_445720')}),
         ]"/>
     </record>
     
@@ -303,12 +303,12 @@
         <field name="country_id" ref="base.dz"/>
         <field name="sequence">9</field>
         <field name="invoice_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100, 'account_id': ref('l10n_dz_445660')}),
+            Command.create({'repartition_type': 'base', 'document_type': 'invoice', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'invoice', 'factor_percent': 100, 'account_id': ref('l10n_dz_445660')}),
         ]"/>
         <field name="refund_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100, 'account_id': ref('l10n_dz_445660')}),
+            Command.create({'repartition_type': 'base', 'document_type': 'refund', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'refund', 'factor_percent': 100, 'account_id': ref('l10n_dz_445660')}),
         ]"/>
     </record>
 
@@ -323,12 +323,12 @@
         <field name="country_id" ref="base.dz"/>
         <field name="sequence">256</field>
         <field name="invoice_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100, 'account_id': ref('l10n_dz_445660')}),
+            Command.create({'repartition_type': 'base', 'document_type': 'invoice', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'invoice', 'factor_percent': 100, 'account_id': ref('l10n_dz_445660')}),
         ]"/>
         <field name="refund_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100, 'account_id': ref('l10n_dz_445660')}),
+            Command.create({'repartition_type': 'base', 'document_type': 'refund', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'refund', 'factor_percent': 100, 'account_id': ref('l10n_dz_445660')}),
         ]"/>
     </record>
 
@@ -344,12 +344,12 @@
         <field name="country_id" ref="base.dz"/>
         <field name="sequence">10</field>
         <field name="invoice_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100, 'account_id': ref('l10n_dz_445620')}),
+            Command.create({'repartition_type': 'base', 'document_type': 'invoice', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'invoice', 'factor_percent': 100, 'account_id': ref('l10n_dz_445620')}),
         ]"/>
         <field name="refund_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100, 'account_id': ref('l10n_dz_445620')}),
+            Command.create({'repartition_type': 'base', 'document_type': 'refund', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'refund', 'factor_percent': 100, 'account_id': ref('l10n_dz_445620')}),
         ]"/>
     </record>
 
@@ -365,12 +365,12 @@
         <field name="country_id" ref="base.dz"/>
         <field name="sequence">258</field>
         <field name="invoice_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100, 'account_id': ref('l10n_dz_445620')}),
+            Command.create({'repartition_type': 'base', 'document_type': 'invoice', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'invoice', 'factor_percent': 100, 'account_id': ref('l10n_dz_445620')}),
         ]"/>
         <field name="refund_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100, 'account_id': ref('l10n_dz_445620')}),
+            Command.create({'repartition_type': 'base', 'document_type': 'refund', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'refund', 'factor_percent': 100, 'account_id': ref('l10n_dz_445620')}),
         ]"/>
     </record>
     
@@ -389,12 +389,12 @@
         <field name="country_id" ref="base.dz"/>
         <field name="sequence">259</field>
         <field name="invoice_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100, 'account_id': ref('l10n_dz_445620')}),
+            Command.create({'repartition_type': 'base', 'document_type': 'invoice', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'invoice', 'factor_percent': 100, 'account_id': ref('l10n_dz_445620')}),
         ]"/>
         <field name="refund_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100, 'account_id': ref('l10n_dz_445620')}),
+            Command.create({'repartition_type': 'base', 'document_type': 'refund', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'refund', 'factor_percent': 100, 'account_id': ref('l10n_dz_445620')}),
         ]"/>
     </record>
 
@@ -409,12 +409,12 @@
         <field name="country_id" ref="base.dz"/>
         <field name="sequence">260</field>
         <field name="invoice_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100, 'account_id': ref('l10n_dz_445620')}),
+            Command.create({'repartition_type': 'base', 'document_type': 'invoice', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'invoice', 'factor_percent': 100, 'account_id': ref('l10n_dz_445620')}),
         ]"/>
         <field name="refund_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100, 'account_id': ref('l10n_dz_445620')}),
+            Command.create({'repartition_type': 'base', 'document_type': 'refund', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'refund', 'factor_percent': 100, 'account_id': ref('l10n_dz_445620')}),
         ]"/>
     </record>
     
@@ -434,12 +434,12 @@
         <field name="country_id" ref="base.dz"/>
         <field name="sequence">10</field>
         <field name="invoice_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100, 'tag_ids': [Command.set([ref('tag_dz_95')])]}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'base', 'document_type': 'invoice', 'factor_percent': 100, 'tag_ids': [Command.set([ref('tag_dz_95')])]}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'invoice', 'factor_percent': 100}),
         ]"/>
         <field name="refund_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100, 'tag_ids': [Command.set([ref('tag_dz_95')])]}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'base', 'document_type': 'refund', 'factor_percent': 100, 'tag_ids': [Command.set([ref('tag_dz_95')])]}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'refund', 'factor_percent': 100}),
         ]"/>
     </record>
 
@@ -454,12 +454,12 @@
         <field name="country_id" ref="base.dz"/>
         <field name="sequence">10</field>
         <field name="invoice_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100, 'tag_ids': [Command.set([ref('tag_dz_93')])]}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'base', 'document_type': 'invoice', 'factor_percent': 100, 'tag_ids': [Command.set([ref('tag_dz_93')])]}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'invoice', 'factor_percent': 100}),
         ]"/>
         <field name="refund_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100, 'tag_ids': [Command.set([ref('tag_dz_93')])]}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'base', 'document_type': 'refund', 'factor_percent': 100, 'tag_ids': [Command.set([ref('tag_dz_93')])]}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'refund', 'factor_percent': 100}),
         ]"/>
     </record>
 
@@ -474,12 +474,12 @@
         <field name="country_id" ref="base.dz"/>
         <field name="sequence">260</field>
         <field name="invoice_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100, 'tag_ids': [Command.set([ref('tag_dz_97')])]}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'base', 'document_type': 'invoice', 'factor_percent': 100, 'tag_ids': [Command.set([ref('tag_dz_97')])]}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'invoice', 'factor_percent': 100}),
         ]"/>
         <field name="refund_repartition_line_ids" eval="[
-            Command.create({'repartition_type': 'base', 'factor_percent': 100, 'tag_ids': [Command.set([ref('tag_dz_97')])]}),
-            Command.create({'repartition_type': 'tax', 'factor_percent': 100}),
+            Command.create({'repartition_type': 'base', 'document_type': 'refund', 'factor_percent': 100, 'tag_ids': [Command.set([ref('tag_dz_97')])]}),
+            Command.create({'repartition_type': 'tax', 'document_type': 'refund', 'factor_percent': 100}),
         ]"/>
     </record>
 
