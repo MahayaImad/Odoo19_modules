@@ -33,6 +33,7 @@ Complete CPSS Solution    →  1,454 accounts, full functionality
 - **With extensions**: 1,454 accounts (full CPSS)
 - Complete coverage of Algerian financial accounting standards
 - Detailed expense, revenue, asset, liability, and equity accounts
+- **Note**: Uses native account groups (68 groups) - accounts auto-assign based on code prefixes
 
 ### 🏢 Activity Code Management
 
@@ -152,8 +153,7 @@ l10n_dz_cpss_ext/
 │   └── template_dz.py          # Chart template extensions
 ├── data/
 │   ├── template/
-│   │   ├── account.account-dz.csv   # 1,160 additional accounts
-│   │   └── account.group-dz.csv     # 973 account groups
+│   │   └── account.account-dz.csv   # 1,160 additional accounts
 │   └── company_function.xml         # Legal forms initialization
 ├── views/
 │   ├── activity_code.xml
@@ -195,6 +195,7 @@ l10n_dz_cpss_ext/
 | **Approach** | Replacement | Extension |
 | **Depends on l10n_dz** | ❌ No | ✅ Yes |
 | **Total Accounts** | 1,176 | 1,454 (294+1,160) |
+| **Account Groups** | 973 custom | 68 native (reused) |
 | **Tax Report** | Custom (142 records) | Native (simpler) |
 | **Post-Init Hook** | ✅ Complex | ❌ None (simple) |
 | **Modularity** | Standalone | Modular |
