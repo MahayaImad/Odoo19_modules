@@ -1,0 +1,974 @@
+id,code_prefix_start,name,name@fr
+l10n_dz_10,10,"Capital, réserves et assimilés","Capital, réserves et assimilés"
+l10n_dz_101,101,"Capital émis ou capital social ou fonds de dotation, ou fonds d’exploitation","Capital émis ou capital social ou fonds de dotation, ou fonds d’exploitation"
+l10n_dz_1011,1011,Capital social,Capital social
+l10n_dz_1012,1012,Fonds de dotation,Fonds de dotation
+l10n_dz_1013,1013,Fonds d'exploitation,Fonds d'exploitation
+l10n_dz_1018,1018,Autres fonds propres,Autres fonds propres
+l10n_dz_103,103,Primes liées au capital social,Primes liées au capital social
+l10n_dz_1031,1031,Prime d’émission,Prime d’émission
+l10n_dz_1032,1032,Prime de fusion,Prime de fusion
+l10n_dz_1033,1033,Prime d’apports,Prime d’apports
+l10n_dz_1034,1034,Prime de conversion d’obligations en actions,Prime de conversion d’obligations en actions
+l10n_dz_1035,1035,Bons de souscription d’actions (BSA),Bons de souscription d’actions (BSA)
+l10n_dz_104,104,Ecart d’évaluation,Ecart d’évaluation
+l10n_dz_105,105,Ecart de réévaluation,Ecart de réévaluation
+l10n_dz_1051,1051,Ecart de réévaluation sur immobilisations corporelles,Ecart de réévaluation sur immobilisations corporelles
+l10n_dz_1059,1059,Ecart de réévaluation rapporté au résultat de l’exercice,Ecart de réévaluation rapporté au résultat de l’exercice
+l10n_dz_106,106,"Réserves (légale, statutaire, ordinaire, réglementée)","Réserves (légale, statutaire, ordinaire, réglementée)"
+l10n_dz_1061,1061,Réserve légale,Réserve légale
+l10n_dz_1062,1062,Réserves réglementées,Réserves réglementées
+l10n_dz_1063,1063,Réserves statutaires ou contractuelles,Réserves statutaires ou contractuelles
+l10n_dz_1064,1064,Réserves ordinaires,Réserves ordinaires
+l10n_dz_1065,1065,Réserves Spéciales consécutive à l’octroi d’avantages,Réserves Spéciales consécutive à l’octroi d’avantages
+l10n_dz_1066,1066,Réserves facultatives,Réserves facultatives
+l10n_dz_1068,1068,Autres réserves,Autres réserves
+l10n_dz_107,107,Ecart d'équivalence,Ecart d'équivalence
+l10n_dz_108,108,Compte de l'exploitant,Compte de l'exploitant
+l10n_dz_109,109,Actionnaires : Capital souscrit non appelé,Actionnaires : Capital souscrit non appelé
+l10n_dz_11,11,Report à nouveau,Report à nouveau
+l10n_dz_110,110,Report à nouveau (bénéfice),Report à nouveau (bénéfice)
+l10n_dz_115,115,Impact résultant du changement de la réglementation et des méthodes,Impact résultant du changement de la réglementation et des méthodes
+l10n_dz_1151,1151,Impact d'ajustement positif (plus value),Impact d'ajustement positif (plus value)
+l10n_dz_1159,1159,Impact d'ajustement négatif (moins value),Impact d'ajustement négatif (moins value)
+l10n_dz_117,117,Impact résultant des corrections d’estimation et d’erreurs comptables,Impact résultant des corrections d’estimation et d’erreurs comptables
+l10n_dz_1171,1171,Impact d'assainissement comptable et financier : positif,Impact d'assainissement comptable et financier : positif
+l10n_dz_1175,1175,Ajustement résultant de correction d'estimation,Ajustement résultant de correction d'estimation
+l10n_dz_1176,1176,Ajustement résultant de correction d'erreurs comptables,Ajustement résultant de correction d'erreurs comptables
+l10n_dz_1179,1179,Impact d'assainissement comptable et financier : négatif,Impact d'assainissement comptable et financier : négatif
+l10n_dz_118,118,Acompte sur dividendes,Acompte sur dividendes
+l10n_dz_119,119,Report à nouveau (Déficit),Report à nouveau (Déficit)
+l10n_dz_12,12,Résultat de l'exercice,Résultat de l'exercice
+l10n_dz_120,120,Résultat net de l’exercice – (BENEFICE),Résultat net de l’exercice – (BENEFICE)
+l10n_dz_121,121,Marge commerciale,Marge commerciale
+l10n_dz_122,122,Production de l’exercice,Production de l’exercice
+l10n_dz_123,123,Valeur Ajoutée d’exploitation,Valeur Ajoutée d’exploitation
+l10n_dz_124,124,Excédent (ou insuffisance) brut d’exploitation (EBE) – EBITDA,Excédent (ou insuffisance) brut d’exploitation (EBE) – EBITDA
+l10n_dz_125,125,Résultat opérationnel,Résultat opérationnel
+l10n_dz_126,126,Résultat ordinaire avant impôts,Résultat ordinaire avant impôts
+l10n_dz_127,127,Résultat extraordinaire,Résultat extraordinaire
+l10n_dz_128,128,Résultat brut de l’exercice,Résultat brut de l’exercice
+l10n_dz_129,129,Résultat net de l’exercice – (DEFICIT),Résultat net de l’exercice – (DEFICIT)
+l10n_dz_13,13,Produits et charges différés – hors cycle d’exploitation,Produits et charges différés – hors cycle d’exploitation
+l10n_dz_131,131,Subventions d’équipement,Subventions d’équipement
+l10n_dz_1311,1311,Subventions d’équipements : Financement de l'Etat,Subventions d’équipements : Financement de l'Etat
+l10n_dz_1312,1312,Subventions d’équipements : Financement d'autres organismes,Subventions d’équipements : Financement d'autres organismes
+l10n_dz_1313,1313,Transfert gratuit d’immobilisations,Transfert gratuit d’immobilisations
+l10n_dz_1319,1319,Subventions inscrites au compte de résultat,Subventions inscrites au compte de résultat
+l10n_dz_132,132,Autres subventions d’investissement,Autres subventions d’investissement
+l10n_dz_1321,1321,Subventions d’investissement,Subventions d’investissement
+l10n_dz_1322,1322,Subventions pour financement d'activités à long terme,Subventions pour financement d'activités à long terme
+l10n_dz_1329,1329,Autres subventions inscrites au compte de résultat,Autres subventions inscrites au compte de résultat
+l10n_dz_133,133,Impôts différés actif,Impôts différés actif
+l10n_dz_134,134,Impôts différés passif,Impôts différés passif
+l10n_dz_138,138,Autres produits et charges différés,Autres produits et charges différés
+l10n_dz_1386,1386,Charges différées – Passif non courant,Charges différées – Passif non courant
+l10n_dz_1387,1387,Produits différés – Passif non courant,Produits différés – Passif non courant
+l10n_dz_15,15,Provisions pour charges - passifs non courants,Provisions pour charges - passifs non courants
+l10n_dz_153,153,Provisions pour pensions et obligations similaires,Provisions pour pensions et obligations similaires
+l10n_dz_1531,1531,Provisions pour avantages au personnel (IDR – IFC),Provisions pour avantages au personnel (IDR – IFC)
+l10n_dz_155,155,Provisions pour impôts,Provisions pour impôts
+l10n_dz_1551,1551,Provision pour rappel d'impôts et amendes fiscales,Provision pour rappel d'impôts et amendes fiscales
+l10n_dz_156,156,Provisions pour renouvellement des immobilisations (concession),Provisions pour renouvellement des immobilisations (concession)
+l10n_dz_158,158,Autres provisions pour charges - passifs non courants,Autres provisions pour charges - passifs non courants
+l10n_dz_1581,1581,Provisions pour remise en l’état ou de démantèlement,Provisions pour remise en l’état ou de démantèlement
+l10n_dz_1582,1582,Provision pour perte à terminaison (contrats déficitaires),Provision pour perte à terminaison (contrats déficitaires)
+l10n_dz_1583,1583,Provision pour procès et litiges (au-delà de 12 mois),Provision pour procès et litiges (au-delà de 12 mois)
+l10n_dz_1584,1584,Provision pour garantie données aux clients (au-delà de 12 mois),Provision pour garantie données aux clients (au-delà de 12 mois)
+l10n_dz_1588,1588,Autres provisions résultant d’obligation légale ou implicite,Autres provisions résultant d’obligation légale ou implicite
+l10n_dz_16,16,Emprunts et dettes assimilés,Emprunts et dettes assimilés
+l10n_dz_161,161,Titres participatifs,Titres participatifs
+l10n_dz_1611,1611,Emprunt Principal,Emprunt Principal
+l10n_dz_1618,1618,Intérêts courus et non échus,Intérêts courus et non échus
+l10n_dz_162,162,Emprunts obligataires convertibles,Emprunts obligataires convertibles
+l10n_dz_1621,1621,Emprunt Principal,Emprunt Principal
+l10n_dz_1628,1628,Intérêts courus et non échus,Intérêts courus et non échus
+l10n_dz_163,163,Autres emprunts obligataires,Autres emprunts obligataires
+l10n_dz_1631,1631,Emprunt Principal,Emprunt Principal
+l10n_dz_1638,1638,Intérêts courus et non échus,Intérêts courus et non échus
+l10n_dz_164,164,Emprunts auprès des établissements de crédit,Emprunts auprès des établissements de crédit
+l10n_dz_1641,1641,Emprunts à Court Terme,Emprunts à Court Terme
+l10n_dz_1642,1642,Emprunts à Moyen  Terme,Emprunts à Moyen  Terme
+l10n_dz_1643,1643,Emprunts à Long Terme,Emprunts à Long Terme
+l10n_dz_1646,1646,Intérêts intercalaires,Intérêts intercalaires
+l10n_dz_1648,1648,Intérêts courus et non échus,Intérêts courus et non échus
+l10n_dz_165,165,Dépôts et cautionnements reçus,Dépôts et cautionnements reçus
+l10n_dz_1651,1651,Dépôts reçus,Dépôts reçus
+l10n_dz_1655,1655,Cautionnements reçus,Cautionnements reçus
+l10n_dz_1658,1658,Intérêts courus et non échus,Intérêts courus et non échus
+l10n_dz_167,167,Dettes sur contrat de location-financement,Dettes sur contrat de location-financement
+l10n_dz_1671,1671,Financement Principal,Financement Principal
+l10n_dz_1678,1678,Intérêts courus et non échus,Intérêts courus et non échus
+l10n_dz_168,168,Autres emprunts et dettes assimilés,Autres emprunts et dettes assimilés
+l10n_dz_1681,1681,Emprunt Principal,Emprunt Principal
+l10n_dz_1688,1688,Intérêts courus et non échus,Intérêts courus et non échus
+l10n_dz_169,169,Primes de remboursement des obligations,Primes de remboursement des obligations
+l10n_dz_17,17,Dettes rattachées à des participations,Dettes rattachées à des participations
+l10n_dz_171,171,Dettes rattachées à des participations groupe,Dettes rattachées à des participations groupe
+l10n_dz_172,172,Dettes rattachés à des participations hors groupe,Dettes rattachés à des participations hors groupe
+l10n_dz_173,173,Dettes rattachés à des sociétés en participation,Dettes rattachés à des sociétés en participation
+l10n_dz_178,178,Autres dettes rattachés à des participations,Autres dettes rattachés à des participations
+l10n_dz_18,18,Comptes de liaison des établissements et sociétés en participation,Comptes de liaison des établissements et sociétés en participation
+l10n_dz_181,181,Comptes de liaison entre établissements,Comptes de liaison entre établissements
+l10n_dz_1814,1814,Créances sur la participation ou GIE,Créances sur la participation ou GIE
+l10n_dz_1815,1815,Dettes envers la participation ou GIE,Dettes envers la participation ou GIE
+l10n_dz_1816,1816,Charges inter-Unités (ou établissement),Charges inter-Unités (ou établissement)
+l10n_dz_1817,1817,Produis inter-Unités (ou établissement),Produis inter-Unités (ou établissement)
+l10n_dz_188,188,Comptes de liaison entre sociétés en participation,Comptes de liaison entre sociétés en participation
+l10n_dz_20,20,Immobilisations incorporelles,Immobilisations incorporelles
+l10n_dz_203,203,Frais de développement immobilisables,Frais de développement immobilisables
+l10n_dz_204,204,Logiciels informatiques et assimilés,Logiciels informatiques et assimilés
+l10n_dz_2041,2041,Logiciels de traitements informatiques,Logiciels de traitements informatiques
+l10n_dz_2042,2042,Hébergement site Web,Hébergement site Web
+l10n_dz_205,205,"Concessions et droits similaires, brevets, licences, marques","Concessions et droits similaires, brevets, licences, marques"
+l10n_dz_2051,2051,Droit à la propriété industrielle et commerciale,Droit à la propriété industrielle et commerciale
+l10n_dz_2058,2058,Autres droits similaires (concession et franchise),Autres droits similaires (concession et franchise)
+l10n_dz_207,207,Ecart d’acquisition – « goodwill »,Ecart d’acquisition – « goodwill »
+l10n_dz_2071,2071,Ecart d'acquisition positif (goodwill),Ecart d'acquisition positif (goodwill)
+l10n_dz_2072,2072,Autres écarts d’acquisitions ou de fusions,Autres écarts d’acquisitions ou de fusions
+l10n_dz_2079,2079,Ecart d'acquisition négatif (badwill),Ecart d'acquisition négatif (badwill)
+l10n_dz_208,208,Autres immobilisations incorporelles,Autres immobilisations incorporelles
+l10n_dz_2081,2081,Fonds de commerce,Fonds de commerce
+l10n_dz_2082,2082,Droit au bail,Droit au bail
+l10n_dz_2087,2087,Actif environnemental,Actif environnemental
+l10n_dz_21,21,Immobilisations corporelles,Immobilisations corporelles
+l10n_dz_211,211,Terrains,Terrains
+l10n_dz_2111,2111,Terrains nus,Terrains nus
+l10n_dz_2112,2112,Terrains bâtis,Terrains bâtis
+l10n_dz_2113,2113,Terrains aménagés,Terrains aménagés
+l10n_dz_2114,2114,Terrains de gisement (carrières),Terrains de gisement (carrières)
+l10n_dz_212,212,Agencements et aménagements des terrains,Agencements et aménagements des terrains
+l10n_dz_2121,2121,Aménagement d’espaces verts,Aménagement d’espaces verts
+l10n_dz_2122,2122,Autres agencements et aménagements de terrains,Autres agencements et aménagements de terrains
+l10n_dz_213,213,Constructions,Constructions
+l10n_dz_2131,2131,Bâtiments administratifs & commerciaux,Bâtiments administratifs & commerciaux
+l10n_dz_2132,2132,Bâtiments industriels (à décomposer en cas de besoin),Bâtiments industriels (à décomposer en cas de besoin)
+l10n_dz_2133,2133,Bâtiments sociaux (CMS – CANTINE – REFECTOIRE),Bâtiments sociaux (CMS – CANTINE – REFECTOIRE)
+l10n_dz_2134,2134,Immeubles de placement,Immeubles de placement
+l10n_dz_2135,2135,Autres constructions,Autres constructions
+l10n_dz_2136,2136,"Agencements, aménagements et installations des bâtiments","Agencements, aménagements et installations des bâtiments"
+l10n_dz_2137,2137,Ouvrages d’infrastructures : Voies de transport ou d'accès,Ouvrages d’infrastructures : Voies de transport ou d'accès
+l10n_dz_2138,2138,Autres travaux d'aménagement sur ouvrages d’infrastructures,Autres travaux d'aménagement sur ouvrages d’infrastructures
+l10n_dz_215,215,"Installations techniques, matériel et outillage industriels","Installations techniques, matériel et outillage industriels"
+l10n_dz_2151,2151,Installations complexes spécialisées,Installations complexes spécialisées
+l10n_dz_2153,2153,Installations à caractère spécifique,Installations à caractère spécifique
+l10n_dz_2154,2154,Matériel industriel,Matériel industriel
+l10n_dz_2155,2155,Outillage industriel,Outillage industriel
+l10n_dz_2157,2157,Agencements et aménagements du matériel et outillage industriel,Agencements et aménagements du matériel et outillage industriel
+l10n_dz_2158,2158,Autres matériels et outillage industriel,Autres matériels et outillage industriel
+l10n_dz_218,218,Autres immobilisations corporelles,Autres immobilisations corporelles
+l10n_dz_2181,2181,"Installations générales, agencements et aménagements divers","Installations générales, agencements et aménagements divers"
+l10n_dz_2182,2182,Matériel de transport,Matériel de transport
+l10n_dz_2183,2183,Matériel de bureautique et d'informatique,Matériel de bureautique et d'informatique
+l10n_dz_2184,2184,Mobilier,Mobilier
+l10n_dz_2185,2185,Autres mobiliers et matériels divers,Autres mobiliers et matériels divers
+l10n_dz_2186,2186,Actifs biologiques,Actifs biologiques
+l10n_dz_2187,2187,Emballages récupérables,Emballages récupérables
+l10n_dz_22,22,Immobilisations en concession,Immobilisations en concession
+l10n_dz_221,221,Terrains en concession,Terrains en concession
+l10n_dz_222,222,Agencements et aménagements de terrain en concession,Agencements et aménagements de terrain en concession
+l10n_dz_223,223,Constructions en concession,Constructions en concession
+l10n_dz_225,225,Installations techniques en concession,Installations techniques en concession
+l10n_dz_228,228,Autres immobilisations corporelles en concession,Autres immobilisations corporelles en concession
+l10n_dz_229,229,Droits du concédant,Droits du concédant
+l10n_dz_23,23,Immobilisations en cours,Immobilisations en cours
+l10n_dz_232,232,Immobilisations corporelles en cours,Immobilisations corporelles en cours
+l10n_dz_2322,2322,Terrains en cours,Terrains en cours
+l10n_dz_2323,2323,Constructions en cours,Constructions en cours
+l10n_dz_2325,2325,"Installations techniques, matériels et outillage industriels en cours","Installations techniques, matériels et outillage industriels en cours"
+l10n_dz_2328,2328,Autres immobilisations corporelles en cours,Autres immobilisations corporelles en cours
+l10n_dz_237,237,Immobilisations incorporelles en cours,Immobilisations incorporelles en cours
+l10n_dz_238,238,Avances et acomptes versés sur commandes d'immobilisations,Avances et acomptes versés sur commandes d'immobilisations
+l10n_dz_2382,2382,Avances sur commandes d’immobilisations incorporelles,Avances sur commandes d’immobilisations incorporelles
+l10n_dz_2384,2384,Avances sur commandes d’immobilisations corporelles,Avances sur commandes d’immobilisations corporelles
+l10n_dz_26,26,Participations et créances rattachées à des participations,Participations et créances rattachées à des participations
+l10n_dz_261,261,Titres de filiales,Titres de filiales
+l10n_dz_262,262,Autres titres de participation,Autres titres de participation
+l10n_dz_265,265,Titres de participation évalués par équivalence (entreprises associés),Titres de participation évalués par équivalence (entreprises associés)
+l10n_dz_266,266,Créances rattachées à des participations groupe,Créances rattachées à des participations groupe
+l10n_dz_267,267,Créances rattachés à des participations hors groupe,Créances rattachés à des participations hors groupe
+l10n_dz_268,268,Créances rattachés à des sociétés en participation,Créances rattachés à des sociétés en participation
+l10n_dz_269,269,Versements restant à effectuer sur titres de participation non libérés,Versements restant à effectuer sur titres de participation non libérés
+l10n_dz_27,27,Autres immobilisations financières,Autres immobilisations financières
+l10n_dz_271,271,Titres immobilisés autres que les titres immobilisés de l'activité de portefeuille,Titres immobilisés autres que les titres immobilisés de l'activité de portefeuille
+l10n_dz_272,272,"Titres représentatifs de droit de créance (obligations, bons)","Titres représentatifs de droit de créance (obligations, bons)"
+l10n_dz_2721,2721,Obligations à terme,Obligations à terme
+l10n_dz_2722,2722,Bons du Trésor,Bons du Trésor
+l10n_dz_2723,2723,Dépôts à terme (DAT > 12 mois),Dépôts à terme (DAT > 12 mois)
+l10n_dz_273,273,Titres immobilisés de l'activité de portefeuille – (T.I.A.P),Titres immobilisés de l'activité de portefeuille – (T.I.A.P)
+l10n_dz_274,274,Prêts et créances sur contrat de location-financement,Prêts et créances sur contrat de location-financement
+l10n_dz_2741,2741,Prêts participatifs,Prêts participatifs
+l10n_dz_2742,2742,Prêts au personnel,Prêts au personnel
+l10n_dz_2743,2743,Autres prêts accordés,Autres prêts accordés
+l10n_dz_2744,2744,Créances sur contrat de location-financement,Créances sur contrat de location-financement
+l10n_dz_2748,2748,Intérêts courus sur prêts et créances de crédit bail,Intérêts courus sur prêts et créances de crédit bail
+l10n_dz_275,275,Dépôts et cautionnements versés,Dépôts et cautionnements versés
+l10n_dz_2751,2751,Dépôts versés,Dépôts versés
+l10n_dz_2752,2752,Cautionnements versés aux fonds de garantie,Cautionnements versés aux fonds de garantie
+l10n_dz_2753,2753,Cautions de soumissions,Cautions de soumissions
+l10n_dz_2754,2754,Cautions de bonne exécution ou de bonne fin,Cautions de bonne exécution ou de bonne fin
+l10n_dz_2755,2755,Cautionnements versés sur loyers (Loyers d'avance),Cautionnements versés sur loyers (Loyers d'avance)
+l10n_dz_2756,2756,"Cautionnements versés sur Téléphone, Eau, Gaz et électricité","Cautionnements versés sur Téléphone, Eau, Gaz et électricité"
+l10n_dz_2757,2757,Cautionnements versés à la SONELGAZ,Cautionnements versés à la SONELGAZ
+l10n_dz_2758,2758,Autres cautionnements versés,Autres cautionnements versés
+l10n_dz_276,276,Autres créances immobilisées,Autres créances immobilisées
+l10n_dz_2761,2761,Créances diverses – Actifs non courants,Créances diverses – Actifs non courants
+l10n_dz_2768,2768,Intérêts courus et non échus sur actifs non courants,Intérêts courus et non échus sur actifs non courants
+l10n_dz_279,279,Versements restant à effectuer sur titres immobilisés non libérés,Versements restant à effectuer sur titres immobilisés non libérés
+l10n_dz_28,28,Amortissements des immobilisations,Amortissements des immobilisations
+l10n_dz_280,280,Amortissements des immobilisations incorporelles,Amortissements des immobilisations incorporelles
+l10n_dz_2803,2803,Amortissements des frais de développement immobilisables,Amortissements des frais de développement immobilisables
+l10n_dz_2804,2804,Amortissements des logiciels informatiques et assimilés,Amortissements des logiciels informatiques et assimilés
+l10n_dz_2805,2805,"Amortissements concessions & droits similaires, brevets, licences, marques","Amortissements concessions & droits similaires, brevets, licences, marques"
+l10n_dz_2808,2808,Amortissements des autres immobilisations incorporelles,Amortissements des autres immobilisations incorporelles
+l10n_dz_281,281,Amortissements des immobilisations corporelles,Amortissements des immobilisations corporelles
+l10n_dz_2811,2811,Amortissements des terrains de gisement (carrières …),Amortissements des terrains de gisement (carrières …)
+l10n_dz_2812,2812,Amortissements des agencements et aménagements de terrains,Amortissements des agencements et aménagements de terrains
+l10n_dz_2813,2813,Amortissements des constructions,Amortissements des constructions
+l10n_dz_2815,2815,"Amortissements des Installations techniques, matériels outillage industriels","Amortissements des Installations techniques, matériels outillage industriels"
+l10n_dz_2818,2818,Amortissements des autres immobilisations corporelles,Amortissements des autres immobilisations corporelles
+l10n_dz_282,282,Amortissements des immobilisations mises en concession,Amortissements des immobilisations mises en concession
+l10n_dz_2821,2821,Amortissement : Terrains en concession,Amortissement : Terrains en concession
+l10n_dz_2822,2822,Amortissement : Agencements et aménagements de terrains,Amortissement : Agencements et aménagements de terrains
+l10n_dz_2823,2823,Amortissement : Constructions en concession,Amortissement : Constructions en concession
+l10n_dz_2825,2825,Amortissement : Installations techniques en concession,Amortissement : Installations techniques en concession
+l10n_dz_2828,2828,Amortissement : Autres immobilisations corporelles en concession,Amortissement : Autres immobilisations corporelles en concession
+l10n_dz_29,29,Pertes de valeur sur immobilisations,Pertes de valeur sur immobilisations
+l10n_dz_290,290,Pertes de valeur sur immobilisations incorporelles,Pertes de valeur sur immobilisations incorporelles
+l10n_dz_2903,2903,Pertes de valeur sur frais de développement immobilisables,Pertes de valeur sur frais de développement immobilisables
+l10n_dz_2904,2904,Pertes de valeur sur logiciels informatiques et assimilés,Pertes de valeur sur logiciels informatiques et assimilés
+l10n_dz_2905,2905,"Pertes de valeur sur concessions & droits similaires, brevets, licences, marques","Pertes de valeur sur concessions & droits similaires, brevets, licences, marques"
+l10n_dz_2907,2907,Pertes de valeur sur écart d’acquisition (Goodwill),Pertes de valeur sur écart d’acquisition (Goodwill)
+l10n_dz_2908,2908,Pertes de valeur sur autres immobilisations incorporelles,Pertes de valeur sur autres immobilisations incorporelles
+l10n_dz_291,291,Pertes de valeur sur immobilisations corporelles,Pertes de valeur sur immobilisations corporelles
+l10n_dz_2911,2911,Perte de valeur des terrains (autres que les terrains de gisement),Perte de valeur des terrains (autres que les terrains de gisement)
+l10n_dz_2912,2912,Pertes de valeur sur agencements et aménagements de terrain,Pertes de valeur sur agencements et aménagements de terrain
+l10n_dz_2913,2913,Pertes de valeur sur constructions,Pertes de valeur sur constructions
+l10n_dz_2914,2914,Pertes de valeur sur immeubles de placement (Juste valeur),Pertes de valeur sur immeubles de placement (Juste valeur)
+l10n_dz_2915,2915,"Pertes de valeur sur Installations techniques, matériel et outillage industriel","Pertes de valeur sur Installations techniques, matériel et outillage industriel"
+l10n_dz_2916,2916,Pertes de valeur sur actifs biologiques (Juste valeur),Pertes de valeur sur actifs biologiques (Juste valeur)
+l10n_dz_2918,2918,Pertes de valeur sur autres immobilisations corporelles,Pertes de valeur sur autres immobilisations corporelles
+l10n_dz_292,292,Pertes de valeur sur immobilisations mises en concession,Pertes de valeur sur immobilisations mises en concession
+l10n_dz_293,293,Pertes de valeur sur immobilisations en cours,Pertes de valeur sur immobilisations en cours
+l10n_dz_2931,2931,Pertes de valeurs sur immobilisations incorporelles en cours,Pertes de valeurs sur immobilisations incorporelles en cours
+l10n_dz_2932,2932,Pertes de valeurs sur immobilisations corporelles en cours,Pertes de valeurs sur immobilisations corporelles en cours
+l10n_dz_294,294,Pertes de valeurs sur les Unités Génératrices de Trésorerie,Pertes de valeurs sur les Unités Génératrices de Trésorerie
+l10n_dz_2941,2941,Pertes de valeur sur U.G.T  (1),Pertes de valeur sur U.G.T  (1)
+l10n_dz_2942,2942,Pertes de valeur sur U.G.T  (2),Pertes de valeur sur U.G.T  (2)
+l10n_dz_296,296,Pertes de valeur sur participations et créances rattachées à participations,Pertes de valeur sur participations et créances rattachées à participations
+l10n_dz_2961,2961,Pertes de valeur sur titres de filiales,Pertes de valeur sur titres de filiales
+l10n_dz_2962,2962,Pertes de valeur sur autres titres de participation,Pertes de valeur sur autres titres de participation
+l10n_dz_2966,2966,Pertes de valeur sur créances rattachées à des participations – groupe,Pertes de valeur sur créances rattachées à des participations – groupe
+l10n_dz_2967,2967,Pertes de valeur sur créances rattachées à des participations – HG,Pertes de valeur sur créances rattachées à des participations – HG
+l10n_dz_2968,2968,Pertes de valeur sur créances rattachées à des SEP,Pertes de valeur sur créances rattachées à des SEP
+l10n_dz_297,297,Pertes de valeur sur autres titres immobilisés,Pertes de valeur sur autres titres immobilisés
+l10n_dz_2971,2971,Pertes de valeur sur titres de placement,Pertes de valeur sur titres de placement
+l10n_dz_2972,2972,Pertes de valeurs sur les TIAP,Pertes de valeurs sur les TIAP
+l10n_dz_298,298,Pertes de valeur sur autres actifs financiers immobilisés,Pertes de valeur sur autres actifs financiers immobilisés
+l10n_dz_2981,2981,Pertes de valeur sur les titres participatifs,Pertes de valeur sur les titres participatifs
+l10n_dz_2982,2982,Pertes de valeur sur les prêts ordinaires,Pertes de valeur sur les prêts ordinaires
+l10n_dz_2983,2983,Pertes de valeur sur les dépôts et cautionnements versés,Pertes de valeur sur les dépôts et cautionnements versés
+l10n_dz_2988,2988,Pertes de valeur sur autres actifs financiers immobilisés,Pertes de valeur sur autres actifs financiers immobilisés
+l10n_dz_30,30,Stocks de marchandises,Stocks de marchandises
+l10n_dz_301,301,Marchandises (ou groupe) A,Marchandises (ou groupe) A
+l10n_dz_302,302,Marchandises (ou groupe) B,Marchandises (ou groupe) B
+l10n_dz_311,311,Matières premières,Matières premières
+l10n_dz_3111,3111,Matières (ou groupe) A,Matières (ou groupe) A
+l10n_dz_3112,3112,Matières (ou groupe) B,Matières (ou groupe) B
+l10n_dz_3118,3118,Autres matières premières,Autres matières premières
+l10n_dz_317,317,Fournitures Accessoires,Fournitures Accessoires
+l10n_dz_3171,3171,Fournitures A,Fournitures A
+l10n_dz_3172,3172,Fournitures B,Fournitures B
+l10n_dz_3178,3178,Autres fournitures accessoires,Autres fournitures accessoires
+l10n_dz_31_group,31,Matières premières et fournitures,Matières premières et fournitures
+l10n_dz_32,32,Autres approvisionnements,Autres approvisionnements
+l10n_dz_321,321,Matières consommables,Matières consommables
+l10n_dz_3211,3211,Matières (ou groupe) C,Matières (ou groupe) C
+l10n_dz_3212,3212,Matières (ou groupe) D,Matières (ou groupe) D
+l10n_dz_3218,3218,Autres matières consommables,Autres matières consommables
+l10n_dz_322,322,Fournitures consommables,Fournitures consommables
+l10n_dz_3221,3221,Carburant et lubrifiant – Véhicules,Carburant et lubrifiant – Véhicules
+l10n_dz_3222,3222,Petit outillage et fournitures d'ateliers,Petit outillage et fournitures d'ateliers
+l10n_dz_3223,3223,Droguerie et Produits d'entretien,Droguerie et Produits d'entretien
+l10n_dz_3224,3224,Pièces de rechange pour équipements & matériels techniques,Pièces de rechange pour équipements & matériels techniques
+l10n_dz_3225,3225,Pièces de rechange et pneumatique pour matériel de transport,Pièces de rechange et pneumatique pour matériel de transport
+l10n_dz_3226,3226,Quincaillerie générale et fournitures de magasin,Quincaillerie générale et fournitures de magasin
+l10n_dz_3227,3227,Fournitures de bureau et imprimés,Fournitures de bureau et imprimés
+l10n_dz_3228,3228,Autres fournitures consommables,Autres fournitures consommables
+l10n_dz_326,326,Emballages (non récupérables),Emballages (non récupérables)
+l10n_dz_3261,3261,Emballages perdus,Emballages perdus
+l10n_dz_3262,3262,Emballages récupérables non identifiables,Emballages récupérables non identifiables
+l10n_dz_3263,3263,Emballages à usage mixte,Emballages à usage mixte
+l10n_dz_33,33,En cours de production de biens,En cours de production de biens
+l10n_dz_331,331,Produits en cours,Produits en cours
+l10n_dz_3311,3311,Produits en cours – P1,Produits en cours – P1
+l10n_dz_3312,3312,Produits en cours – P2,Produits en cours – P2
+l10n_dz_3313,3313,Produits en cours – P3,Produits en cours – P3
+l10n_dz_335,335,Travaux en cours,Travaux en cours
+l10n_dz_3351,3351,Travaux en cours – T1,Travaux en cours – T1
+l10n_dz_3352,3352,Travaux en cours – T2,Travaux en cours – T2
+l10n_dz_3353,3353,Travaux en cours – T3,Travaux en cours – T3
+l10n_dz_34,34,En cours de production de services,En cours de production de services
+l10n_dz_341,341,Etudes en cours,Etudes en cours
+l10n_dz_3411,3411,Etudes en cours – E1,Etudes en cours – E1
+l10n_dz_3412,3412,Etudes en cours – E2,Etudes en cours – E2
+l10n_dz_3413,3413,Etudes en cours – E3,Etudes en cours – E3
+l10n_dz_345,345,Prestations de services en cours,Prestations de services en cours
+l10n_dz_3451,3451,Prestations de services en cours – S1,Prestations de services en cours – S1
+l10n_dz_3452,3452,Prestations de services en cours – S2,Prestations de services en cours – S2
+l10n_dz_3453,3453,Prestations de services en cours – S3,Prestations de services en cours – S3
+l10n_dz_35,35,Stocks de produits,Stocks de produits
+l10n_dz_351,351,Produits intermédiaires,Produits intermédiaires
+l10n_dz_3511,3511,Produits intermédiaires (ou groupe) – PI 1,Produits intermédiaires (ou groupe) – PI 1
+l10n_dz_3512,3512,Produits intermédiaires (ou groupe) – PI 2,Produits intermédiaires (ou groupe) – PI 2
+l10n_dz_355,355,Produits finis,Produits finis
+l10n_dz_3551,3551,Produits finis (ou groupe) – PF 1,Produits finis (ou groupe) – PF 1
+l10n_dz_3552,3552,Produits finis (ou groupe) – PF 2,Produits finis (ou groupe) – PF 2
+l10n_dz_3553,3553,Produits finis (ou groupe) – PF 3,Produits finis (ou groupe) – PF 3
+l10n_dz_358,358,"Produits résiduels ou matières de récupération (déchets, rebuts)","Produits résiduels ou matières de récupération (déchets, rebuts)"
+l10n_dz_3581,3581,Produits résiduels,Produits résiduels
+l10n_dz_3582,3582,Matières de récupération (à recycler),Matières de récupération (à recycler)
+l10n_dz_3583,3583,Déchets et rebuts divers destinés à être cédés ou détruits,Déchets et rebuts divers destinés à être cédés ou détruits
+l10n_dz_36,36,Stocks provenant d’immobilisations,Stocks provenant d’immobilisations
+l10n_dz_361,361,Lot de bord et pièces d’accompagnement,Lot de bord et pièces d’accompagnement
+l10n_dz_362,362,Organes et accessoires démantelés,Organes et accessoires démantelés
+l10n_dz_365,365,Pièces de rechanges récupérées sur matériels,Pièces de rechanges récupérées sur matériels
+l10n_dz_368,368,Actifs non courants destinés à être cédés (réformes),Actifs non courants destinés à être cédés (réformes)
+l10n_dz_37,37,"Stocks à l'extérieur (en cours de route, en dépôt ou en consignation)","Stocks à l'extérieur (en cours de route, en dépôt ou en consignation)"
+l10n_dz_371,371,Matières premières en cours de réception,Matières premières en cours de réception
+l10n_dz_372,372,Autres approvisionnements à réceptionner,Autres approvisionnements à réceptionner
+l10n_dz_373,373,Stocks en dépôt ou en consignation,Stocks en dépôt ou en consignation
+l10n_dz_374,374,Stocks sous douanes,Stocks sous douanes
+l10n_dz_38,38,Achats stockés,Achats stockés
+l10n_dz_380,380,Achats de Marchandises stockées,Achats de Marchandises stockées
+l10n_dz_3801,3801,Achats de Marchandises (ou groupe) A,Achats de Marchandises (ou groupe) A
+l10n_dz_3802,3802,Achats de Marchandises (ou groupe) B,Achats de Marchandises (ou groupe) B
+l10n_dz_381,381,Achats de Matières premières et fournitures stockées,Achats de Matières premières et fournitures stockées
+l10n_dz_3811,3811,Achats de Matières premières,Achats de Matières premières
+l10n_dz_3817,3817,Achats de Fournitures Accessoires,Achats de Fournitures Accessoires
+l10n_dz_382,382,Autres approvisionnements stockés,Autres approvisionnements stockés
+l10n_dz_3821,3821,Achat de Matières consommables stockées,Achat de Matières consommables stockées
+l10n_dz_3822,3822,Achat de Fournitures consommables stockées,Achat de Fournitures consommables stockées
+l10n_dz_3826,3826,Achat d'Emballages non récupérables,Achat d'Emballages non récupérables
+l10n_dz_3827,3827,Achat de Fournitures consommables non stockées,Achat de Fournitures consommables non stockées
+l10n_dz_383,383,Frais Accessoires sur Achats (indirects) – incorporables,Frais Accessoires sur Achats (indirects) – incorporables
+l10n_dz_3830,3830,Frais Accessoires sur Achats de marchandises,Frais Accessoires sur Achats de marchandises
+l10n_dz_3831,3831,Frais Accessoires sur Achats de matières premières et fournitures,Frais Accessoires sur Achats de matières premières et fournitures
+l10n_dz_3832,3832,Frais Accessoires sur Achats d'autres approvisionnements,Frais Accessoires sur Achats d'autres approvisionnements
+l10n_dz_384,384,Achats sans paiements,Achats sans paiements
+l10n_dz_3841,3841,Achats locaux,Achats locaux
+l10n_dz_3842,3842,Achats à l'importation,Achats à l'importation
+l10n_dz_39,39,Pertes de valeur sur stocks et en cours,Pertes de valeur sur stocks et en cours
+l10n_dz_390,390,Pertes de valeur sur Stocks de marchandises,Pertes de valeur sur Stocks de marchandises
+l10n_dz_391,391,Pertes de valeur sur Matières premières et fournitures,Pertes de valeur sur Matières premières et fournitures
+l10n_dz_392,392,Pertes de valeur sur Autres approvisionnements,Pertes de valeur sur Autres approvisionnements
+l10n_dz_393,393,Pertes de valeur sur En cours de production de biens,Pertes de valeur sur En cours de production de biens
+l10n_dz_394,394,Pertes de valeur sur En cours de production de services,Pertes de valeur sur En cours de production de services
+l10n_dz_395,395,Pertes de valeur sur stocks de produits,Pertes de valeur sur stocks de produits
+l10n_dz_397,397,Pertes de valeur sur Stocks à l'extérieur,Pertes de valeur sur Stocks à l'extérieur
+l10n_dz_40,40,Fournisseurs et comptes rattachés,Fournisseurs et comptes rattachés
+l10n_dz_4013,4013,Fournisseurs de stocks,Fournisseurs de stocks
+l10n_dz_4016,4016,Fournisseurs de services,Fournisseurs de services
+l10n_dz_4017,4017,Fournisseurs : Retenue de garantie sur stocks & services,Fournisseurs : Retenue de garantie sur stocks & services
+l10n_dz_401_group,401,Fournisseurs de biens et services,Fournisseurs de biens et services
+l10n_dz_403,403,Fournisseurs : Effets à payer,Fournisseurs : Effets à payer
+l10n_dz_4031,4031,Effets à payer aux fournisseurs de stocks,Effets à payer aux fournisseurs de stocks
+l10n_dz_4032,4032,Effets à payer aux fournisseurs de services,Effets à payer aux fournisseurs de services
+l10n_dz_404,404,Fournisseurs d'immobilisations,Fournisseurs d'immobilisations
+l10n_dz_4041,4041,Fournisseurs d'immobilisations : Nationaux – Publics,Fournisseurs d'immobilisations : Nationaux – Publics
+l10n_dz_4042,4042,Fournisseurs d'immobilisations : Nationaux – Privés,Fournisseurs d'immobilisations : Nationaux – Privés
+l10n_dz_4043,4043,Fournisseurs d'immobilisations : Etrangers,Fournisseurs d'immobilisations : Etrangers
+l10n_dz_4047,4047,Fournisseurs d'immobilisations : Retenues de garantie,Fournisseurs d'immobilisations : Retenues de garantie
+l10n_dz_405,405,Fournisseurs d'immobilisations : Effets à payer,Fournisseurs d'immobilisations : Effets à payer
+l10n_dz_408,408,Fournisseurs factures non parvenues,Fournisseurs factures non parvenues
+l10n_dz_4081,4081,Fournisseurs de stocks nationaux : Factures non parvenues,Fournisseurs de stocks nationaux : Factures non parvenues
+l10n_dz_4082,4082,Fournisseurs de services – factures non parvenues,Fournisseurs de services – factures non parvenues
+l10n_dz_4083,4083,Factures à recevoir des Fournisseurs d’immobilisations,Factures à recevoir des Fournisseurs d’immobilisations
+l10n_dz_4086,4086,"Factures à recevoir des Consultants, CAC et Experts","Factures à recevoir des Consultants, CAC et Experts"
+l10n_dz_4088,4088,Fournisseurs : Intérêts courus à payer,Fournisseurs : Intérêts courus à payer
+l10n_dz_4091,4091,Fournisseurs : Avances et acomptes sur commandes,Fournisseurs : Avances et acomptes sur commandes
+l10n_dz_4094,4094,"Autres avances et acomptes (Consultants, CAC et Experts)","Autres avances et acomptes (Consultants, CAC et Experts)"
+l10n_dz_4096,4096,Fournisseurs : Créances pour emballages et matériels à rendre,Fournisseurs : Créances pour emballages et matériels à rendre
+l10n_dz_4097,4097,Fournisseurs à soldes débiteurs (à détailler par code Tiers),Fournisseurs à soldes débiteurs (à détailler par code Tiers)
+l10n_dz_4098,4098,R.R.R à obtenir,R.R.R à obtenir
+l10n_dz_41,41,Clients et comptes rattachés,Clients et comptes rattachés
+l10n_dz_411,411,Clients,Clients
+l10n_dz_4111,4111,Clients : Ventes de biens et services,Clients : Ventes de biens et services
+l10n_dz_4114,4114,Clients : Autres créances diverses,Clients : Autres créances diverses
+l10n_dz_4117,4117,Clients : Retenues de garantie,Clients : Retenues de garantie
+l10n_dz_413_group,413,Clients : effets à recevoir,Clients : effets à recevoir
+l10n_dz_416,416,Clients douteux (ou litigieux),Clients douteux (ou litigieux)
+l10n_dz_4161,4161,Clients douteux : secteur public,Clients douteux : secteur public
+l10n_dz_4162,4162,Clients douteux : secteur privé,Clients douteux : secteur privé
+l10n_dz_417,417,Créances sur travaux ou prestations en cours,Créances sur travaux ou prestations en cours
+l10n_dz_4171,4171,Créances sur travaux en cours (à l'avancement),Créances sur travaux en cours (à l'avancement)
+l10n_dz_4172,4172,Créances sur prestations en cours (à l'avancement),Créances sur prestations en cours (à l'avancement)
+l10n_dz_418,418,Clients - produits (finis) non encore facturés,Clients - produits (finis) non encore facturés
+l10n_dz_4181,4181,Clients : Factures à établir – Secteur Public,Clients : Factures à établir – Secteur Public
+l10n_dz_4182,4182,Clients : Factures à établir – Secteur Privé,Clients : Factures à établir – Secteur Privé
+l10n_dz_4188,4188,Clients : intérêts moratoires à facturer,Clients : intérêts moratoires à facturer
+l10n_dz_419,419,Clients créditeurs – RRR à accorder et autres avoirs à établir,Clients créditeurs – RRR à accorder et autres avoirs à établir
+l10n_dz_4191,4191,Avances et acomptes perçus sur commandes,Avances et acomptes perçus sur commandes
+l10n_dz_4196,4196,Clients : dettes pour emballages et matériels consignés,Clients : dettes pour emballages et matériels consignés
+l10n_dz_4197,4197,Clients à solde créditeur (à détailler par code Tiers),Clients à solde créditeur (à détailler par code Tiers)
+l10n_dz_4198,4198,R.R.R. à accorder,R.R.R. à accorder
+l10n_dz_42,42,Personnel et comptes rattachés,Personnel et comptes rattachés
+l10n_dz_421,421,Personnel : Rémunérations dues,Personnel : Rémunérations dues
+l10n_dz_4211,4211,Salaires et appointements à payer,Salaires et appointements à payer
+l10n_dz_4212,4212,Présalaires à payer,Présalaires à payer
+l10n_dz_4213,4213,Soldes de tout compte restant dus,Soldes de tout compte restant dus
+l10n_dz_422,422,Fonds des œuvres sociales,Fonds des œuvres sociales
+l10n_dz_4221,4221,Contributions annuelles à payer (3%),Contributions annuelles à payer (3%)
+l10n_dz_4229,4229,Autres avances pour le compte des œuvres sociales,Autres avances pour le compte des œuvres sociales
+l10n_dz_423,423,Participation des salariés au résultat,Participation des salariés au résultat
+l10n_dz_4231,4231,Quote-part de bénéfice attribuée au personnel,Quote-part de bénéfice attribuée au personnel
+l10n_dz_425,425,Personnel : Avances et acomptes accordés,Personnel : Avances et acomptes accordés
+l10n_dz_4251,4251,Avances sur salaires,Avances sur salaires
+l10n_dz_4256,4256,Avances sur frais de mission,Avances sur frais de mission
+l10n_dz_4258,4258,Autres avances exceptionnelles,Autres avances exceptionnelles
+l10n_dz_426,426,Personnel : Dépôts reçus,Personnel : Dépôts reçus
+l10n_dz_4261,4261,Frais médicaux à rembourser,Frais médicaux à rembourser
+l10n_dz_4268,4268,Autres dépôts et prestations reçus au profit du personnel,Autres dépôts et prestations reçus au profit du personnel
+l10n_dz_427,427,Personnel : Oppositions,Personnel : Oppositions
+l10n_dz_4271,4271,Saisie-arrêt et cession de rémunération (sur décision de Justice),Saisie-arrêt et cession de rémunération (sur décision de Justice)
+l10n_dz_4272,4272,Retenue sur prêts sociaux,Retenue sur prêts sociaux
+l10n_dz_4273,4273,Retenue pour fonds de solidarité nationale et internationale,Retenue pour fonds de solidarité nationale et internationale
+l10n_dz_4274,4274,Retenue sur loyers logements du personnel,Retenue sur loyers logements du personnel
+l10n_dz_4275,4275,Salaires bloqués,Salaires bloqués
+l10n_dz_4278,4278,Autres retenues sur salaires,Autres retenues sur salaires
+l10n_dz_428,428,Personnel : Charges à payer et produits à recevoir,Personnel : Charges à payer et produits à recevoir
+l10n_dz_4281,4281,Dettes provisionnées pour congés à payer,Dettes provisionnées pour congés à payer
+l10n_dz_4286,4286,Frais de mission à payer,Frais de mission à payer
+l10n_dz_4288,4288,Personnel : Autres charges à payer,Personnel : Autres charges à payer
+l10n_dz_4289,4289,Personnel : Produits à recevoir,Personnel : Produits à recevoir
+l10n_dz_43,43,Organismes sociaux et comptes rattachés,Organismes sociaux et comptes rattachés
+l10n_dz_431,431,Sécurité sociale,Sécurité sociale
+l10n_dz_4311,4311,Retenue sécurité sociale (part des employés),Retenue sécurité sociale (part des employés)
+l10n_dz_4312,4312,Cotisations FNPOS,Cotisations FNPOS
+l10n_dz_4313,4313,CNAS à payer (part employeur),CNAS à payer (part employeur)
+l10n_dz_4314,4314,Cotisations CASNOS à payer,Cotisations CASNOS à payer
+l10n_dz_432,432,Autres organismes sociaux,Autres organismes sociaux
+l10n_dz_4321,4321,Cotisations Mutuelle à payer,Cotisations Mutuelle à payer
+l10n_dz_4322,4322,Cotisations OPREBAT à payer,Cotisations OPREBAT à payer
+l10n_dz_4323,4323,Cotisations CACOBATPH à payer,Cotisations CACOBATPH à payer
+l10n_dz_4326,4326,Assurance groupe (Quote-part employeur) à payer,Assurance groupe (Quote-part employeur) à payer
+l10n_dz_4327,4327,Assurance groupe (Quote-part des travailleurs) à payer,Assurance groupe (Quote-part des travailleurs) à payer
+l10n_dz_4328,4328,Autres organismes sociaux,Autres organismes sociaux
+l10n_dz_438,438,"Organismes sociaux, charges à payer et produits à recevoir","Organismes sociaux, charges à payer et produits à recevoir"
+l10n_dz_4386,4386,Organismes sociaux : Charges sociales sur congés à payer,Organismes sociaux : Charges sociales sur congés à payer
+l10n_dz_4388,4388,Organismes sociaux : Autres charges à payer,Organismes sociaux : Autres charges à payer
+l10n_dz_4389,4389,Organismes sociaux : Produits à recevoir,Organismes sociaux : Produits à recevoir
+l10n_dz_44,44,"Etat, collectivités publiques, organismes internationaux et comptes rattachés","Etat, collectivités publiques, organismes internationaux et comptes rattachés"
+l10n_dz_441,441,"Etat et autres collectivités publiques, subventions à recevoir","Etat et autres collectivités publiques, subventions à recevoir"
+l10n_dz_4411,4411,Subventions d’investissements à recevoir,Subventions d’investissements à recevoir
+l10n_dz_4412,4412,Subventions d’exploitation à recevoir,Subventions d’exploitation à recevoir
+l10n_dz_4413,4413,Subventions d’équilibre à recevoir,Subventions d’équilibre à recevoir
+l10n_dz_4414,4414,Subventions certification ISO à recevoir,Subventions certification ISO à recevoir
+l10n_dz_4418,4418,Autres subventions et aides publiques à recevoir,Autres subventions et aides publiques à recevoir
+l10n_dz_4419,4419,Avances sur subventions,Avances sur subventions
+l10n_dz_442,442,"Etat, impôts et taxes recouvrables sur des tiers","Etat, impôts et taxes recouvrables sur des tiers"
+l10n_dz_4421,4421,IRG retenu sur salaires (barème),IRG retenu sur salaires (barème)
+l10n_dz_4422,4422,IRG – Libératoire sur rappels de salaires et participation,IRG – Libératoire sur rappels de salaires et participation
+l10n_dz_4423,4423,IRG – Libératoire sur bénéfices distribués,IRG – Libératoire sur bénéfices distribués
+l10n_dz_4424,4424,IRG – Libératoire sur revenus mobiliers,IRG – Libératoire sur revenus mobiliers
+l10n_dz_4425,4425,IRG – Libératoire sur Jetons de présence et tantièmes,IRG – Libératoire sur Jetons de présence et tantièmes
+l10n_dz_4426,4426,IRG – Libératoire retenu à la source aux consultants,IRG – Libératoire retenu à la source aux consultants
+l10n_dz_4428,4428,Autres impôts retenus à la source,Autres impôts retenus à la source
+l10n_dz_443,443,Opérations particulières avec l'Etat et les collectivités publiques,Opérations particulières avec l'Etat et les collectivités publiques
+l10n_dz_4431,4431,Créances sur l'Etat – Indemnisations,Créances sur l'Etat – Indemnisations
+l10n_dz_4432,4432,Avance pour compte ANEM – Emplois aidés (Quote part de l'Etat),Avance pour compte ANEM – Emplois aidés (Quote part de l'Etat)
+l10n_dz_4438,4438,Créances ou dettes résultant du changement de la réglementation fiscale,Créances ou dettes résultant du changement de la réglementation fiscale
+l10n_dz_444,444,"Etat, impôts sur les résultats","Etat, impôts sur les résultats"
+l10n_dz_4441,4441,Acomptes provisionnels sur I.B.S,Acomptes provisionnels sur I.B.S
+l10n_dz_4449,4449,Impôts sur les bénéfices – I.B.S à payer,Impôts sur les bénéfices – I.B.S à payer
+l10n_dz_445,445,"Etat, taxes sur le chiffre d'affaires","Etat, taxes sur le chiffre d'affaires"
+l10n_dz_4455,4455,TVA à décaisser,TVA à décaisser
+l10n_dz_4456_group,4456,TVA récupérable & précompte,TVA récupérable & précompte
+l10n_dz_4457_group,4457,TVA collectée,TVA collectée
+l10n_dz_4458,4458,TVA à régulariser,TVA à régulariser
+l10n_dz_446,446,Organismes internationaux,Organismes internationaux
+l10n_dz_4461,4461,Fonds de solidarité internationale,Fonds de solidarité internationale
+l10n_dz_4462,4462,Subventions d’organismes étrangers,Subventions d’organismes étrangers
+l10n_dz_447,447,"Autres impôts, taxes et versements assimilés","Autres impôts, taxes et versements assimilés"
+l10n_dz_4471,4471,Taxe sur l’activité professionnelle – TAP  à payer (sur G.50),Taxe sur l’activité professionnelle – TAP  à payer (sur G.50)
+l10n_dz_4472,4472,Taxe sur l’apprentissage et la formation professionnelle,Taxe sur l’apprentissage et la formation professionnelle
+l10n_dz_4473,4473,Taxe sur l’environnement – (Écotaxe),Taxe sur l’environnement – (Écotaxe)
+l10n_dz_4474,4474,Droits d’enregistrement à payer,Droits d’enregistrement à payer
+l10n_dz_4475,4475,Taxe foncière à payer,Taxe foncière à payer
+l10n_dz_4476,4476,Taxes spéciales (ou spécifiques) à payer,Taxes spéciales (ou spécifiques) à payer
+l10n_dz_4478,4478,"Autres droits, impôts et taxes à payer","Autres droits, impôts et taxes à payer"
+l10n_dz_448,448,"Etat, charges à payer et produits à recevoir (hors impôts)","Etat, charges à payer et produits à recevoir (hors impôts)"
+l10n_dz_4482,4482,Etat – charges à payer : Charges fiscales sur congés à payer,Etat – charges à payer : Charges fiscales sur congés à payer
+l10n_dz_4486,4486,Rappels d'impôts à payer (hors IBS),Rappels d'impôts à payer (hors IBS)
+l10n_dz_4487,4487,Etat – produits à recevoir : Trop versés sur impôts,Etat – produits à recevoir : Trop versés sur impôts
+l10n_dz_4488,4488,Etat – produits à recevoir : Dégrèvement d’impôts,Etat – produits à recevoir : Dégrèvement d’impôts
+l10n_dz_45,45,Groupe et Associés,Groupe et Associés
+l10n_dz_451,451,Opérations Groupe,Opérations Groupe
+l10n_dz_4511,4511,Avances de fonds,Avances de fonds
+l10n_dz_4518,4518,Autres opérations,Autres opérations
+l10n_dz_455,455,Associés – Comptes courants,Associés – Comptes courants
+l10n_dz_4551,4551,Associés – Comptes courants : Principal,Associés – Comptes courants : Principal
+l10n_dz_4556,4556,Associés – Comptes courants : Intérêts courus,Associés – Comptes courants : Intérêts courus
+l10n_dz_456,456,Associés – Opérations sur le capital,Associés – Opérations sur le capital
+l10n_dz_4561,4561,Associés : Comptes d’apport en société,Associés : Comptes d’apport en société
+l10n_dz_4562,4562,"Associés : Capital souscrit, appelé et non versé (apports à libérer)","Associés : Capital souscrit, appelé et non versé (apports à libérer)"
+l10n_dz_4563,4563,Associés : Versements reçus sur augmentation de Capital,Associés : Versements reçus sur augmentation de Capital
+l10n_dz_4564,4564,Associés : Versements anticipés,Associés : Versements anticipés
+l10n_dz_4566,4566,Actionnaires défaillants,Actionnaires défaillants
+l10n_dz_4567,4567,Associés : Capital à rembourser,Associés : Capital à rembourser
+l10n_dz_457,457,Associés – Dividendes à payer,Associés – Dividendes à payer
+l10n_dz_4571,4571,Coupons d’action,Coupons d’action
+l10n_dz_4572,4572,Dividendes mis en paiement,Dividendes mis en paiement
+l10n_dz_4577,4577,Tantièmes à payer aux administrateurs et gérants,Tantièmes à payer aux administrateurs et gérants
+l10n_dz_458,458,Associés – Opérations faites en commun ou en groupement,Associés – Opérations faites en commun ou en groupement
+l10n_dz_4586,4586,Opérations faites en commun : Charges à payer,Opérations faites en commun : Charges à payer
+l10n_dz_4587,4587,Opérations faites en commun : Produits à recevoir,Opérations faites en commun : Produits à recevoir
+l10n_dz_4588,4588,Intérêts courus,Intérêts courus
+l10n_dz_46,46,Débiteurs divers et créditeurs divers,Débiteurs divers et créditeurs divers
+l10n_dz_462,462,Créances sur cessions d'immobilisations,Créances sur cessions d'immobilisations
+l10n_dz_4621,4621,Fonds à recevoir sur cessions d’Actifs réformés,Fonds à recevoir sur cessions d’Actifs réformés
+l10n_dz_4622,4622,Débiteurs sur cessions d’immobilisations,Débiteurs sur cessions d’immobilisations
+l10n_dz_464,464,Dettes sur acquisitions de VMP et instruments financiers dérivés,Dettes sur acquisitions de VMP et instruments financiers dérivés
+l10n_dz_465,465,Créances sur cessions de VMP et instruments financiers dérivés,Créances sur cessions de VMP et instruments financiers dérivés
+l10n_dz_467,467,Autres comptes débiteurs ou créditeurs,Autres comptes débiteurs ou créditeurs
+l10n_dz_4671,4671,"Fonds en dépôt chez les officiers ministériels (notaire, commis. priseurs)","Fonds en dépôt chez les officiers ministériels (notaire, commis. priseurs)"
+l10n_dz_4672,4672,Avances sur frais divers,Avances sur frais divers
+l10n_dz_4673,4673,Achats pour compte de tiers,Achats pour compte de tiers
+l10n_dz_4674,4674,Autres avances pour compte,Autres avances pour compte
+l10n_dz_4675,4675,Jetons de présence à payer aux Administrateurs,Jetons de présence à payer aux Administrateurs
+l10n_dz_4676,4676,Débiteurs divers (à détailler),Débiteurs divers (à détailler)
+l10n_dz_4679,4679,Créditeurs de frais divers (à détailler),Créditeurs de frais divers (à détailler)
+l10n_dz_468,468,Divers charges à payer et produits à recevoir,Divers charges à payer et produits à recevoir
+l10n_dz_4686,4686,Charges à payer,Charges à payer
+l10n_dz_4687,4687,Produits à recevoir,Produits à recevoir
+l10n_dz_47,47,Comptes transitoires ou d'attente,Comptes transitoires ou d'attente
+l10n_dz_476,476,Dépenses en attente d’imputation,Dépenses en attente d’imputation
+l10n_dz_477,477,Recettes en attente d’imputation,Recettes en attente d’imputation
+l10n_dz_478,478,Autres opérations à régulariser,Autres opérations à régulariser
+l10n_dz_48,48,Charges ou produits constatés d'avance et provisions,Charges ou produits constatés d'avance et provisions
+l10n_dz_481,481,Provisions - passifs courants,Provisions - passifs courants
+l10n_dz_4811,4811,Provisions pour procès et litiges (moins de 12 mois),Provisions pour procès et litiges (moins de 12 mois)
+l10n_dz_4812,4812,Provisions pour garanties données aux clients (moins de 12 mois),Provisions pour garanties données aux clients (moins de 12 mois)
+l10n_dz_4815,4815,Provisions pour amendes et pénalités,Provisions pour amendes et pénalités
+l10n_dz_4816,4816,Provisions pour pertes de change,Provisions pour pertes de change
+l10n_dz_4818,4818,Autres provisions : Passifs courants,Autres provisions : Passifs courants
+l10n_dz_486,486,Charges constatées d'avance,Charges constatées d'avance
+l10n_dz_4861,4861,Loyers payés d’avance (autre que cautionnement),Loyers payés d’avance (autre que cautionnement)
+l10n_dz_4862,4862,Primes d’assurances payées d’avance,Primes d’assurances payées d’avance
+l10n_dz_4863,4863,Abonnements payés d’avance,Abonnements payés d’avance
+l10n_dz_4866,4866,Charges financières différées,Charges financières différées
+l10n_dz_4868,4868,Autres charges constatées d’avance,Autres charges constatées d’avance
+l10n_dz_487,487,Produits constatés d'avance,Produits constatés d'avance
+l10n_dz_4871,4871,Loyers perçus d’avance (immeubles de placement),Loyers perçus d’avance (immeubles de placement)
+l10n_dz_4877,4877,Subventions à étaler,Subventions à étaler
+l10n_dz_4878,4878,Autres produits constatés d’avance,Autres produits constatés d’avance
+l10n_dz_49,49,Pertes de valeur sur comptes de tiers,Pertes de valeur sur comptes de tiers
+l10n_dz_491,491,Pertes de valeur sur comptes de clients,Pertes de valeur sur comptes de clients
+l10n_dz_4911,4911,Pertes de valeurs sur comptes de clients,Pertes de valeurs sur comptes de clients
+l10n_dz_4912,4912,Pertes de valeurs sur retenues de garanties,Pertes de valeurs sur retenues de garanties
+l10n_dz_495,495,Pertes de valeur sur comptes du groupe et sur associés,Pertes de valeur sur comptes du groupe et sur associés
+l10n_dz_4951,4951,Pertes de valeur sur compte du groupe,Pertes de valeur sur compte du groupe
+l10n_dz_4955,4955,Pertes de valeur sur comptes courants des associés,Pertes de valeur sur comptes courants des associés
+l10n_dz_4958,4958,Pertes de valeur sur opérations faites en commun (SEP – GIE),Pertes de valeur sur opérations faites en commun (SEP – GIE)
+l10n_dz_496,496,Pertes de valeur sur comptes de débiteurs divers,Pertes de valeur sur comptes de débiteurs divers
+l10n_dz_4962,4962,Pertes de valeur sur créances de cessions d'immobilisations,Pertes de valeur sur créances de cessions d'immobilisations
+l10n_dz_4965,4965,Pertes de valeur sur créances de cessions de VMP,Pertes de valeur sur créances de cessions de VMP
+l10n_dz_4967,4967,Pertes de valeur sur autres comptes débiteurs,Pertes de valeur sur autres comptes débiteurs
+l10n_dz_498,498,Pertes de valeur sur autres comptes de tiers,Pertes de valeur sur autres comptes de tiers
+l10n_dz_50,50,Valeurs mobilières de placement,Valeurs mobilières de placement
+l10n_dz_501,501,Part dans des entreprises liées,Part dans des entreprises liées
+l10n_dz_502,502,Actions propres,Actions propres
+l10n_dz_503,503,Autres actions ou titres conférant un droit de propriété,Autres actions ou titres conférant un droit de propriété
+l10n_dz_506,506,"Obligations, bons du trésor et bons de caisse à court terme","Obligations, bons du trésor et bons de caisse à court terme"
+l10n_dz_508,508,Autres valeurs mobilières de placement et créances assimilés,Autres valeurs mobilières de placement et créances assimilés
+l10n_dz_509,509,Versements restant à effectuer sur VMP non libérées,Versements restant à effectuer sur VMP non libérées
+l10n_dz_51,51,"Banque, établissements financiers et assimilés","Banque, établissements financiers et assimilés"
+l10n_dz_511,511,Valeurs à l'encaissement,Valeurs à l'encaissement
+l10n_dz_5111,5111,Chèques à encaisser,Chèques à encaisser
+l10n_dz_5112,5112,Traites remises à l’escompte,Traites remises à l’escompte
+l10n_dz_5118,5118,Autres valeurs à l’encaissement,Autres valeurs à l’encaissement
+l10n_dz_512,512,Banques comptes courants,Banques comptes courants
+l10n_dz_5121,5121,Comptes bancaires : Dinars,Comptes bancaires : Dinars
+l10n_dz_5122,5122,Comptes bancaires : Devises,Comptes bancaires : Devises
+l10n_dz_515,515,Trésor Public et établissements publics,Trésor Public et établissements publics
+l10n_dz_5151,5151,Caisses du Trésor Public,Caisses du Trésor Public
+l10n_dz_5152,5152,Caisses des établissements publics,Caisses des établissements publics
+l10n_dz_517,517,Autres organismes financiers,Autres organismes financiers
+l10n_dz_5171,5171,Banque postale (C.C.P),Banque postale (C.C.P)
+l10n_dz_5172,5172,Sociétés de leasing (crédit-bail),Sociétés de leasing (crédit-bail)
+l10n_dz_5173,5173,Sociétés de factoring (affacturage),Sociétés de factoring (affacturage)
+l10n_dz_5176,5176,Société de bourse,Société de bourse
+l10n_dz_5178,5178,Autres organismes et établissements financiers,Autres organismes et établissements financiers
+l10n_dz_518,518,Intérêts courus,Intérêts courus
+l10n_dz_5186,5186,Intérêts courus à payer  (agios à payer),Intérêts courus à payer  (agios à payer)
+l10n_dz_5187,5187,Intérêts courus à recevoir (intérêts des dépôts créditeurs à recevoir),Intérêts courus à recevoir (intérêts des dépôts créditeurs à recevoir)
+l10n_dz_519,519,Concours bancaires courants,Concours bancaires courants
+l10n_dz_5191,5191,Facilité de caisse,Facilité de caisse
+l10n_dz_5192,5192,Découvert bancaire,Découvert bancaire
+l10n_dz_5193,5193,Autres avances bancaires,Autres avances bancaires
+l10n_dz_5198,5198,Intérêts courus sur concours bancaires courants,Intérêts courus sur concours bancaires courants
+l10n_dz_52,52,Instruments financiers dérivés,Instruments financiers dérivés
+l10n_dz_521,521,Instruments financiers dérivés : Actifs,Instruments financiers dérivés : Actifs
+l10n_dz_529,529,Instruments financiers dérivés : Passifs,Instruments financiers dérivés : Passifs
+l10n_dz_53,53,Caisse,Caisse
+l10n_dz_531,531,Caisse siège social,Caisse siège social
+l10n_dz_5311,5311,Caisse principale en Dinars,Caisse principale en Dinars
+l10n_dz_5314,5314,Caisse principale en Devises,Caisse principale en Devises
+l10n_dz_532,532,Caisse Auxiliaire,Caisse Auxiliaire
+l10n_dz_5321,5321,Caisse auxiliaire : Succursale (ou Unité) A,Caisse auxiliaire : Succursale (ou Unité) A
+l10n_dz_5322,5322,Caisse auxiliaire : Succursale (ou Unité) B,Caisse auxiliaire : Succursale (ou Unité) B
+l10n_dz_54,54,Régies d'avances et accréditifs,Régies d'avances et accréditifs
+l10n_dz_541,541,Régies d'avances,Régies d'avances
+l10n_dz_542,542,Accréditifs,Accréditifs
+l10n_dz_58,58,Virements internes,Virements internes
+l10n_dz_581,581,Virements de fonds,Virements de fonds
+l10n_dz_5811,5811,Virements interbancaires,Virements interbancaires
+l10n_dz_5812,5812,Versements d'espèces en banques,Versements d'espèces en banques
+l10n_dz_5813,5813,Alimentation caisses,Alimentation caisses
+l10n_dz_588,588,Autres virements internes,Autres virements internes
+l10n_dz_5886,5886,Achats au comptant,Achats au comptant
+l10n_dz_5887,5887,Ventes au comptant,Ventes au comptant
+l10n_dz_5888,5888,Autres,Autres
+l10n_dz_59,59,Pertes de valeur sur actifs financiers courants,Pertes de valeur sur actifs financiers courants
+l10n_dz_591,591,Pertes de valeur sur valeurs en banque et Etablissements financiers,Pertes de valeur sur valeurs en banque et Etablissements financiers
+l10n_dz_594,594,Pertes de valeurs sur régies d'avances et accréditifs,Pertes de valeurs sur régies d'avances et accréditifs
+l10n_dz_60,60,Achats consommés,Achats consommés
+l10n_dz_6001,6001,Matières premières consommées,Matières premières consommées
+l10n_dz_6002,6002,Marchandises (ou groupe) B,Marchandises (ou groupe) B
+l10n_dz_600_group,600,Achats de marchandises vendues,Achats de marchandises vendues
+l10n_dz_6017,6017,Fournitures accessoires consommées,Fournitures accessoires consommées
+l10n_dz_601_group,601,Matières premières & fournitures consommées,Matières premières & fournitures consommées
+l10n_dz_602,602,Autres approvisionnements consommés,Autres approvisionnements consommés
+l10n_dz_6021,6021,Matières consommables,Matières consommables
+l10n_dz_6022,6022,Fournitures consommables,Fournitures consommables
+l10n_dz_6026,6026,Emballages consommés,Emballages consommés
+l10n_dz_6030,6030,Variations de stocks de marchandises,Variations de stocks de marchandises
+l10n_dz_6031,6031,Variations de stock de matières premières & Fournitures,Variations de stock de matières premières & Fournitures
+l10n_dz_6032,6032,Variations de stock des autres approvisionnements,Variations de stock des autres approvisionnements
+l10n_dz_603_group,603,Variations des stocks (inventaire intermittent),Variations des stocks (inventaire intermittent)
+l10n_dz_604,604,Achats d'études et de prestations de services,Achats d'études et de prestations de services
+l10n_dz_6041,6041,Achats d'études,Achats d'études
+l10n_dz_6042,6042,Achats de prestations de services,Achats de prestations de services
+l10n_dz_605,605,"Achats de matériels, équipements et travaux","Achats de matériels, équipements et travaux"
+l10n_dz_6051,6051,Achats d’immobilisations de faible valeur : Petit matériel & outillage,Achats d’immobilisations de faible valeur : Petit matériel & outillage
+l10n_dz_6052,6052,Achats d’immobilisations de faible valeur : Mobilier,Achats d’immobilisations de faible valeur : Mobilier
+l10n_dz_6053,6053,Achats d’immobilisations de faible valeur : Matériel informatique,Achats d’immobilisations de faible valeur : Matériel informatique
+l10n_dz_6054,6054,Achats d’immobilisations de faible valeur : Matériel de communicat.,Achats d’immobilisations de faible valeur : Matériel de communicat.
+l10n_dz_6058,6058,"Autres achats de matériels, d'équipements et de travaux","Autres achats de matériels, d'équipements et de travaux"
+l10n_dz_607,607,Achats non stockés de matières et fournitures,Achats non stockés de matières et fournitures
+l10n_dz_6071,6071,Achat non stocké de carburant,Achat non stocké de carburant
+l10n_dz_6072,6072,Achat non stocké d'énergie et de force motrice (ateliers),Achat non stocké d'énergie et de force motrice (ateliers)
+l10n_dz_6073,6073,"Fournitures non stockées : Eau, Gaz & Electricité (bureaux)","Fournitures non stockées : Eau, Gaz & Electricité (bureaux)"
+l10n_dz_6074,6074,Fournitures administratives et de bureautique non stockées,Fournitures administratives et de bureautique non stockées
+l10n_dz_6075,6075,Achats non stockés de fournitures d'atelier et de magasin,Achats non stockés de fournitures d'atelier et de magasin
+l10n_dz_6076,6076,Achat non stocké de Tenues de travail et de sécurité,Achat non stocké de Tenues de travail et de sécurité
+l10n_dz_6078,6078,Achat : Autres fournitures consommables non stockées,Achat : Autres fournitures consommables non stockées
+l10n_dz_608,608,Frais accessoires d’achat (inventaire intermittent),Frais accessoires d’achat (inventaire intermittent)
+l10n_dz_6090,6090,R.R.R Obtenus sur achats de marchandises,R.R.R Obtenus sur achats de marchandises
+l10n_dz_6091,6091,R.R.R Obtenus sur achats de matières premières,R.R.R Obtenus sur achats de matières premières
+l10n_dz_6092,6092,R.R.R Obtenus sur achats d’autres approvisionnements,R.R.R Obtenus sur achats d’autres approvisionnements
+l10n_dz_6094,6094,R.R.R Obtenus sur achats sur études et prestations,R.R.R Obtenus sur achats sur études et prestations
+l10n_dz_6095,6095,R.R.R Obtenus sur achats de petits matériels et équipements,R.R.R Obtenus sur achats de petits matériels et équipements
+l10n_dz_609_group,609,"Rabais, remises, ristournes obtenus sur achats","Rabais, remises, ristournes obtenus sur achats"
+l10n_dz_61,61,Services extérieurs,Services extérieurs
+l10n_dz_611,611,Sous-traitance générale,Sous-traitance générale
+l10n_dz_6111,6111,Sous traitance de spécialité,Sous traitance de spécialité
+l10n_dz_6112,6112,Sous traitance de capacité,Sous traitance de capacité
+l10n_dz_6113,6113,Sous traitance de marché,Sous traitance de marché
+l10n_dz_613,613,Locations,Locations
+l10n_dz_6131,6131,Contrats de location-financement (en crédit-bail),Contrats de location-financement (en crédit-bail)
+l10n_dz_6137,6137,Malis sur emballages rendus,Malis sur emballages rendus
+l10n_dz_614,614,Charges locatives et charges de copropriété,Charges locatives et charges de copropriété
+l10n_dz_6141,6141,Charges locatives d’immeubles,Charges locatives d’immeubles
+l10n_dz_6142,6142,Charges de copropriété logements de fonction,Charges de copropriété logements de fonction
+l10n_dz_6143,6143,Loyers garages et parking de stationnement de véhicules,Loyers garages et parking de stationnement de véhicules
+l10n_dz_6148,6148,Autres charges locatives,Autres charges locatives
+l10n_dz_615,615,"Entretien, réparations et maintenance","Entretien, réparations et maintenance"
+l10n_dz_6151,6151,Entretien et réparation sur biens immobiliers,Entretien et réparation sur biens immobiliers
+l10n_dz_6152,6152,Entretien et réparation sur biens mobiliers,Entretien et réparation sur biens mobiliers
+l10n_dz_6156,6156,Maintenance,Maintenance
+l10n_dz_616,616,Primes d'assurances,Primes d'assurances
+l10n_dz_6161,6161,Assurances multirisques professionnels,Assurances multirisques professionnels
+l10n_dz_6162,6162,Assurances transport,Assurances transport
+l10n_dz_6163,6163,Assurance responsabilité civile,Assurance responsabilité civile
+l10n_dz_6164,6164,Assurance catastrophe naturelle,Assurance catastrophe naturelle
+l10n_dz_6165,6165,Assurance couverture risque de Vie,Assurance couverture risque de Vie
+l10n_dz_6168,6168,Autres assurances,Autres assurances
+l10n_dz_617,617,Etudes et recherches,Etudes et recherches
+l10n_dz_6171,6171,Assistance technique,Assistance technique
+l10n_dz_6178,6178,Autres frais d’études et de recherches,Autres frais d’études et de recherches
+l10n_dz_618,618,Documentation et divers,Documentation et divers
+l10n_dz_6181,6181,Documentation générale,Documentation générale
+l10n_dz_6182,6182,"Abonnements aux Journaux, revues et JO/BOAL/BOMOP ...etc.","Abonnements aux Journaux, revues et JO/BOAL/BOMOP ...etc."
+l10n_dz_6183,6183,"Documentation technique (plans, schémas, maquettes, etc.)","Documentation technique (plans, schémas, maquettes, etc.)"
+l10n_dz_6184,6184,Frais de reprographie,Frais de reprographie
+l10n_dz_6185,6185,Frais de soumissions et de marchés,Frais de soumissions et de marchés
+l10n_dz_6186,6186,Frais de conseils et assemblées,Frais de conseils et assemblées
+l10n_dz_6187,6187,"Frais de colloques, séminaires et conférences","Frais de colloques, séminaires et conférences"
+l10n_dz_619,619,"Rabais, remises, ristournes obtenus sur services extérieurs","Rabais, remises, ristournes obtenus sur services extérieurs"
+l10n_dz_62,62,Autres services extérieurs,Autres services extérieurs
+l10n_dz_621,621,Personnel extérieur a l'entreprise,Personnel extérieur a l'entreprise
+l10n_dz_6211,6211,Personnel intérimaire,Personnel intérimaire
+l10n_dz_6212,6212,Charges de sécurité et de gardiennage,Charges de sécurité et de gardiennage
+l10n_dz_6213,6213,Charges de nettoyage et travaux d’insalubrité,Charges de nettoyage et travaux d’insalubrité
+l10n_dz_6216,6216,Personnel détaché ou prêté à l’entreprise,Personnel détaché ou prêté à l’entreprise
+l10n_dz_622,622,Rémunérations d'intermédiaires et honoraires,Rémunérations d'intermédiaires et honoraires
+l10n_dz_6222,6222,Commissions sur ventes,Commissions sur ventes
+l10n_dz_6223,6223,Rémunération de consultants,Rémunération de consultants
+l10n_dz_6225,6225,Rémunération d’affacturage (factoring),Rémunération d’affacturage (factoring)
+l10n_dz_6226,6226,Honoraires (autres que ceux incorporés dans les coûts),Honoraires (autres que ceux incorporés dans les coûts)
+l10n_dz_6227,6227,Frais d’actes et de contentieux,Frais d’actes et de contentieux
+l10n_dz_6228,6228,Autres rémunérations divers (non incorporables aux coûts),Autres rémunérations divers (non incorporables aux coûts)
+l10n_dz_623,623,"Publicité, publication, relations publiques","Publicité, publication, relations publiques"
+l10n_dz_6231,6231,Annonces et insertions,Annonces et insertions
+l10n_dz_6232,6232,Echantillons,Echantillons
+l10n_dz_6233,6233,"Foires, expositions et festivités","Foires, expositions et festivités"
+l10n_dz_6234,6234,"Parrainage, Sponsoring et mécénat","Parrainage, Sponsoring et mécénat"
+l10n_dz_6235,6235,Cadeau à la clientèle,Cadeau à la clientèle
+l10n_dz_6236,6236,Catalogues et imprimés,Catalogues et imprimés
+l10n_dz_6237,6237,Publications Autres publicités,Publications Autres publicités
+l10n_dz_6238,6238,Autres frais de relations publiques,Autres frais de relations publiques
+l10n_dz_624,624,Transports de biens et transport collectif du personnel,Transports de biens et transport collectif du personnel
+l10n_dz_6241,6241,Transport sur ventes,Transport sur ventes
+l10n_dz_6242,6242,Transport collectif du personnel,Transport collectif du personnel
+l10n_dz_6243,6243,Transport entre établissements ou chantiers,Transport entre établissements ou chantiers
+l10n_dz_6244,6244,Transport administratif,Transport administratif
+l10n_dz_6248,6248,Autres transports divers,Autres transports divers
+l10n_dz_625,625,"Déplacements, missions et réceptions","Déplacements, missions et réceptions"
+l10n_dz_6251,6251,Voyages et déplacements à l’étranger,Voyages et déplacements à l’étranger
+l10n_dz_6252,6252,Frais de déménagement,Frais de déménagement
+l10n_dz_6255,6255,Missions : intérieur du pays,Missions : intérieur du pays
+l10n_dz_6257,6257,Réceptions et hébergement,Réceptions et hébergement
+l10n_dz_626,626,Frais postaux et de télécommunications,Frais postaux et de télécommunications
+l10n_dz_6261,6261,Affranchissement courrier,Affranchissement courrier
+l10n_dz_6262,6262,Abonnement boite postale,Abonnement boite postale
+l10n_dz_6263,6263,Abonnements et communications téléphonie mobile,Abonnements et communications téléphonie mobile
+l10n_dz_6264,6264,Abonnement internet,Abonnement internet
+l10n_dz_6265,6265,Frais de télécommunication (fixe et fax),Frais de télécommunication (fixe et fax)
+l10n_dz_627,627,Services bancaires et assimilés,Services bancaires et assimilés
+l10n_dz_6271,6271,Frais sur effets et sur titres,Frais sur effets et sur titres
+l10n_dz_6272,6272,Commissions bancaires,Commissions bancaires
+l10n_dz_6276,6276,Location de coffres,Location de coffres
+l10n_dz_6278,6278,Autres frais et commissions bancaires,Autres frais et commissions bancaires
+l10n_dz_628,628,Cotisations et divers,Cotisations et divers
+l10n_dz_6281,6281,Frais de recrutement de personnel,Frais de recrutement de personnel
+l10n_dz_6282,6282,Frais de formation externe du personnel,Frais de formation externe du personnel
+l10n_dz_6283,6283,Cotisations professionnelles,Cotisations professionnelles
+l10n_dz_6284,6284,Droits de stationnement parking privé,Droits de stationnement parking privé
+l10n_dz_6288,6288,Autres cotisations et dons courants divers,Autres cotisations et dons courants divers
+l10n_dz_629,629,"Rabais, remises, ristournes obtenus sur autres services extérieurs","Rabais, remises, ristournes obtenus sur autres services extérieurs"
+l10n_dz_63,63,Charges de personnel,Charges de personnel
+l10n_dz_631,631,Rémunérations du personnel,Rémunérations du personnel
+l10n_dz_6311,6311,Traitements et Salaires,Traitements et Salaires
+l10n_dz_6312,6312,Primes,Primes
+l10n_dz_6313,6313,Indemnités,Indemnités
+l10n_dz_6314,6314,Prestations directes,Prestations directes
+l10n_dz_6315,6315,Avantages et prestations en nature,Avantages et prestations en nature
+l10n_dz_634,634,Rémunération de l'exploitant,Rémunération de l'exploitant
+l10n_dz_635,635,Cotisations aux organismes sociaux,Cotisations aux organismes sociaux
+l10n_dz_6351,6351,Cotisations de sécurité sociale – CNAS,Cotisations de sécurité sociale – CNAS
+l10n_dz_6352,6352,Cotisations au FNPOS,Cotisations au FNPOS
+l10n_dz_6353,6353,Cotisations à la retraite – CNR,Cotisations à la retraite – CNR
+l10n_dz_6354,6354,Cotisations aux mutuelles,Cotisations aux mutuelles
+l10n_dz_6355,6355,Cotisations à la CACOBATPH,Cotisations à la CACOBATPH
+l10n_dz_636,636,Cotisations sociales de l'exploitant,Cotisations sociales de l'exploitant
+l10n_dz_6361,6361,Cotisation annuelle à la CASNOS,Cotisation annuelle à la CASNOS
+l10n_dz_6368,6368,Autres cotisations,Autres cotisations
+l10n_dz_637,637,Autres charges sociales,Autres charges sociales
+l10n_dz_6374,6374,Versements aux œuvres sociales,Versements aux œuvres sociales
+l10n_dz_6375,6375,Autres contributions sociales,Autres contributions sociales
+l10n_dz_638,638,Autres charges de personnel,Autres charges de personnel
+l10n_dz_6381,6381,Médecine du travail et pharmacie,Médecine du travail et pharmacie
+l10n_dz_6382,6382,Frais de formation et de perfectionnement du personnel (en interne),Frais de formation et de perfectionnement du personnel (en interne)
+l10n_dz_6383,6383,Frais d’activités socioculturelles et sportives,Frais d’activités socioculturelles et sportives
+l10n_dz_6384,6384,Avantages en nature accordés au personnel,Avantages en nature accordés au personnel
+l10n_dz_6385,6385,Médailles du mérite et Jubilé,Médailles du mérite et Jubilé
+l10n_dz_6387,6387,"Intéressement, primes et avantages liés aux résultats","Intéressement, primes et avantages liés aux résultats"
+l10n_dz_6388,6388,Autres charges de personnel,Autres charges de personnel
+l10n_dz_64,64,"Impôts, Taxes et versements assimilés","Impôts, Taxes et versements assimilés"
+l10n_dz_641,641,"Impôts, taxes et versements assimilés sur rémunérations","Impôts, taxes et versements assimilés sur rémunérations"
+l10n_dz_6412,6412,Taxe d’apprentissage,Taxe d’apprentissage
+l10n_dz_6413,6413,Taxe sur la formation professionnelle,Taxe sur la formation professionnelle
+l10n_dz_6418,6418,Autres taxes sur les salaires,Autres taxes sur les salaires
+l10n_dz_642,642,Impôts et taxes non récupérables sur chiffre d’affaires,Impôts et taxes non récupérables sur chiffre d’affaires
+l10n_dz_6421,6421,Taxe sur l’activité professionnelle – T.A.P. (sur les débits),Taxe sur l’activité professionnelle – T.A.P. (sur les débits)
+l10n_dz_6422,6422,Taxe sur l’activité professionnelle – T.A.P. (sur encaissements),Taxe sur l’activité professionnelle – T.A.P. (sur encaissements)
+l10n_dz_645,645,Autres impôts et taxes (hors impôts sur les résultats),Autres impôts et taxes (hors impôts sur les résultats)
+l10n_dz_6451,6451,Taxe foncière sur les propriétés bâties et non bâties,Taxe foncière sur les propriétés bâties et non bâties
+l10n_dz_6452,6452,Taxes spéciales et droits d'accises,Taxes spéciales et droits d'accises
+l10n_dz_6453,6453,Taxe sur l’environnement (écotaxe),Taxe sur l’environnement (écotaxe)
+l10n_dz_6454,6454,Taxes sur les véhicules (Vignettes),Taxes sur les véhicules (Vignettes)
+l10n_dz_6455,6455,Droits de stationnement parking communal,Droits de stationnement parking communal
+l10n_dz_6456,6456,Droits d’enregistrement sur actes et marchés,Droits d’enregistrement sur actes et marchés
+l10n_dz_6457,6457,Droits de timbre,Droits de timbre
+l10n_dz_6458,6458,"Autres droits, impôts et taxes divers","Autres droits, impôts et taxes divers"
+l10n_dz_65,65,Autres charges opérationnelles,Autres charges opérationnelles
+l10n_dz_651,651,"Redevances pour concessions, brevets, licences, logiciels et valeurs similaires","Redevances pour concessions, brevets, licences, logiciels et valeurs similaires"
+l10n_dz_6511,6511,Redevances pour concessions,Redevances pour concessions
+l10n_dz_6512,6512,Redevances pour brevets et licences de fabrication,Redevances pour brevets et licences de fabrication
+l10n_dz_6516,6516,Redevances pour exploitation de logiciels et valeurs similaires,Redevances pour exploitation de logiciels et valeurs similaires
+l10n_dz_652,652,Moins values sur sortie d'actifs immobilisés non financiers,Moins values sur sortie d'actifs immobilisés non financiers
+l10n_dz_6521,6521,Moins value sur cession matériel et outillage,Moins value sur cession matériel et outillage
+l10n_dz_6522,6522,Moins value sur cession matériel de transport,Moins value sur cession matériel de transport
+l10n_dz_6523,6523,Moins value sur cession mobilier et matériel de bureau,Moins value sur cession mobilier et matériel de bureau
+l10n_dz_6528,6528,Moins value sur cession autres équipements et matériels,Moins value sur cession autres équipements et matériels
+l10n_dz_653,653,Jetons de présence,Jetons de présence
+l10n_dz_6531,6531,Jetons de présence aux administrateurs,Jetons de présence aux administrateurs
+l10n_dz_654,654,Pertes sur créances irrécouvrables,Pertes sur créances irrécouvrables
+l10n_dz_6541,6541,Pertes sur créances de l'exercice,Pertes sur créances de l'exercice
+l10n_dz_6542,6542,Pertes sur créances des exercices antérieurs,Pertes sur créances des exercices antérieurs
+l10n_dz_655,655,Quote-part de résultat sur opérations faites en commun,Quote-part de résultat sur opérations faites en commun
+l10n_dz_6551,6551,Quote-part de bénéfice transféré dans le cadre d'un GIE ou d'une SEP,Quote-part de bénéfice transféré dans le cadre d'un GIE ou d'une SEP
+l10n_dz_6552,6552,Quote-part de perte supportée dans le cadre d'un GIE ou d'une SEP,Quote-part de perte supportée dans le cadre d'un GIE ou d'une SEP
+l10n_dz_656,656,"Amendes et pénalités, subventions accordées, dons et libéralités","Amendes et pénalités, subventions accordées, dons et libéralités"
+l10n_dz_6562,6562,"Amendes et pénalités (pénales, fiscales et parafiscales)","Amendes et pénalités (pénales, fiscales et parafiscales)"
+l10n_dz_6563,6563,Subventions accordées,Subventions accordées
+l10n_dz_6566,6566,Dons et libéralités,Dons et libéralités
+l10n_dz_6571,6571,Ecart de stocks (négatif) de marchandises,Ecart de stocks (négatif) de marchandises
+l10n_dz_6572,6572,"Ecart de stocks (négatif) de matières, fournitures et autres approvisionnements","Ecart de stocks (négatif) de matières, fournitures et autres approvisionnements"
+l10n_dz_6575,6575,Rappel d’impôts (autre qu’IBS),Rappel d’impôts (autre qu’IBS)
+l10n_dz_6578,6578,Autres charges exceptionnelles,Autres charges exceptionnelles
+l10n_dz_657_group,657,Charges exceptionnelles de gestion courante,Charges exceptionnelles de gestion courante
+l10n_dz_658,658,Autres charges de gestion courante,Autres charges de gestion courante
+l10n_dz_6581,6581,Charges sur exercices antérieurs (en cours d'exercice),Charges sur exercices antérieurs (en cours d'exercice)
+l10n_dz_6588,6588,Autres charges diverses de gestion courante,Autres charges diverses de gestion courante
+l10n_dz_66,66,Charges financières,Charges financières
+l10n_dz_661,661,Charges d'intérêts,Charges d'intérêts
+l10n_dz_6611,6611,Intérêts des emprunts,Intérêts des emprunts
+l10n_dz_6612,6612,Intérêts des dettes,Intérêts des dettes
+l10n_dz_6616,6616,Intérêts bancaires sur opérations de financement (découvert),Intérêts bancaires sur opérations de financement (découvert)
+l10n_dz_6618,6618,Intérêts des autres dettes,Intérêts des autres dettes
+l10n_dz_664,664,Pertes sur créances liées à des participations,Pertes sur créances liées à des participations
+l10n_dz_665,665,Ecart d’évaluation sur actifs financiers - Moins-values,Ecart d’évaluation sur actifs financiers - Moins-values
+l10n_dz_6651,6651,Mali provenant du rachat des actions propres,Mali provenant du rachat des actions propres
+l10n_dz_666_group,666,Pertes de change,Pertes de change
+l10n_dz_667,667,Pertes nettes sur cessions d’actifs financiers,Pertes nettes sur cessions d’actifs financiers
+l10n_dz_668,668,Autres charges financières,Autres charges financières
+l10n_dz_67,67,Eléments extraordinaires (Charges),Eléments extraordinaires (Charges)
+l10n_dz_68,68,"Dotations aux amortissements, provisions et pertes de valeur","Dotations aux amortissements, provisions et pertes de valeur"
+l10n_dz_681,681,"Dotations aux amortissements, provisions et pertes de valeur - actifs non courants","Dotations aux amortissements, provisions et pertes de valeur - actifs non courants"
+l10n_dz_6811,6811,DAP-PDV : Immobilisations incorporelles,DAP-PDV : Immobilisations incorporelles
+l10n_dz_6812,6812,DAP-PDV : Immobilisations corporelles,DAP-PDV : Immobilisations corporelles
+l10n_dz_682,682,"Dotations aux amortissements, provisions et PDV des biens mis en concession","Dotations aux amortissements, provisions et PDV des biens mis en concession"
+l10n_dz_685,685,Dotations aux provisions et pertes de valeurs – Actifs courants,Dotations aux provisions et pertes de valeurs – Actifs courants
+l10n_dz_6853,6853,Dotations pour pertes de valeurs sur stocks,Dotations pour pertes de valeurs sur stocks
+l10n_dz_6854,6854,Dotations pour pertes de valeurs sur créances,Dotations pour pertes de valeurs sur créances
+l10n_dz_6855,6855,Dotation annuelle pour Indemnité de départ à la retraite et IFC,Dotation annuelle pour Indemnité de départ à la retraite et IFC
+l10n_dz_6856,6856,Dotations aux provisions pour pertes et charges – PNC,Dotations aux provisions pour pertes et charges – PNC
+l10n_dz_6858,6858,Dotations aux provisions – passifs courants,Dotations aux provisions – passifs courants
+l10n_dz_686,686,"Dotations aux amortissements, provisions et pertes de valeur, éléments financiers","Dotations aux amortissements, provisions et pertes de valeur, éléments financiers"
+l10n_dz_6861,6861,Dotations aux amortissements des primes de remboursement,Dotations aux amortissements des primes de remboursement
+l10n_dz_6862,6862,Pertes de valeur des immobilisations financières,Pertes de valeur des immobilisations financières
+l10n_dz_69,69,Impôts sur les résultats et assimilés,Impôts sur les résultats et assimilés
+l10n_dz_691,691,Participation des travailleurs aux bénéfices,Participation des travailleurs aux bénéfices
+l10n_dz_692,692,Imposition différée actif – Produits,Imposition différée actif – Produits
+l10n_dz_693,693,Imposition différée passif – Charges,Imposition différée passif – Charges
+l10n_dz_695,695,Impôts sur les bénéfices basés sur le résultat des activités ordinaires,Impôts sur les bénéfices basés sur le résultat des activités ordinaires
+l10n_dz_698,698,Autres impôts sur les résultats,Autres impôts sur les résultats
+l10n_dz_70,70,"Ventes de marchandises et de produits fabriqués, vente de   prestations de services et produits annexes","Ventes de marchandises et de produits fabriqués, vente de   prestations de services et produits annexes"
+l10n_dz_7001,7001,Marchandises (ou groupe) A,Marchandises (ou groupe) A
+l10n_dz_7002,7002,Marchandises (ou groupe) B,Marchandises (ou groupe) B
+l10n_dz_700_group,700,Ventes de Marchandises,Ventes de Marchandises
+l10n_dz_701,701,Ventes de produits finis,Ventes de produits finis
+l10n_dz_7011,7011,Ventes de Produit fini (ou groupe) – PF1,Ventes de Produit fini (ou groupe) – PF1
+l10n_dz_7012,7012,Ventes de Produit fini (ou groupe) – PF2,Ventes de Produit fini (ou groupe) – PF2
+l10n_dz_7013,7013,Ventes de Produit fini (ou groupe) – PF3,Ventes de Produit fini (ou groupe) – PF3
+l10n_dz_702,702,Ventes de produits intermédiaires,Ventes de produits intermédiaires
+l10n_dz_7021,7021,Ventes de Produits intermédiaires (ou groupe) – PI-1,Ventes de Produits intermédiaires (ou groupe) – PI-1
+l10n_dz_7022,7022,Ventes de Produits intermédiaires (ou groupe) – PI-2,Ventes de Produits intermédiaires (ou groupe) – PI-2
+l10n_dz_7028,7028,Ventes de sous produits (PR et accessoires fabriqués),Ventes de sous produits (PR et accessoires fabriqués)
+l10n_dz_703,703,Ventes de produits résiduels,Ventes de produits résiduels
+l10n_dz_7031,7031,Ventes de déchets,Ventes de déchets
+l10n_dz_7032,7032,Ventes de rebuts,Ventes de rebuts
+l10n_dz_7033,7033,Ventes de matières de récupération recyclables,Ventes de matières de récupération recyclables
+l10n_dz_704,704,Vente de travaux,Vente de travaux
+l10n_dz_7041,7041,Travaux hydrauliques,Travaux hydrauliques
+l10n_dz_7042,7042,Travaux publics,Travaux publics
+l10n_dz_7043,7043,Travaux de constructions de bâtiments,Travaux de constructions de bâtiments
+l10n_dz_7044,7044,Travaux de restauration de sites et monuments,Travaux de restauration de sites et monuments
+l10n_dz_7045,7045,Travaux de VRD et d'assainissement,Travaux de VRD et d'assainissement
+l10n_dz_7046,7046,Travaux d'entretien et de nettoyage,Travaux d'entretien et de nettoyage
+l10n_dz_7047,7047,Travaux forestiers,Travaux forestiers
+l10n_dz_7048,7048,Autres travaux de réalisation,Autres travaux de réalisation
+l10n_dz_705,705,Vente d'études,Vente d'études
+l10n_dz_7051,7051,Etudes : E1,Etudes : E1
+l10n_dz_7058,7058,Autres études techniques,Autres études techniques
+l10n_dz_706,706,Autres prestations de services,Autres prestations de services
+l10n_dz_7061,7061,Prestations de services fournis : S1,Prestations de services fournis : S1
+l10n_dz_7068,7068,Autres Prestations de services,Autres Prestations de services
+l10n_dz_708,708,Produits des activités annexes,Produits des activités annexes
+l10n_dz_7081,7081,Cession de matières premières,Cession de matières premières
+l10n_dz_7082,7082,Cession d’autres approvisionnements,Cession d’autres approvisionnements
+l10n_dz_7086,7086,Bonis sur reprise d’emballages consignés,Bonis sur reprise d’emballages consignés
+l10n_dz_7088,7088,Autres produits des activités annexes,Autres produits des activités annexes
+l10n_dz_7092,7092,Réduction sur ventes – Hors factures,Réduction sur ventes – Hors factures
+l10n_dz_7093,7093,Réduction sur prestations – Hors factures,Réduction sur prestations – Hors factures
+l10n_dz_709_group,709,"Rabais, remises et ristournes accordés","Rabais, remises et ristournes accordés"
+l10n_dz_72,72,Production stockée ou déstockée,Production stockée ou déstockée
+l10n_dz_723,723,Variation de stocks d'encours,Variation de stocks d'encours
+l10n_dz_7233,7233,En-cours de production,En-cours de production
+l10n_dz_7234,7234,En-cours d'études et de services,En-cours d'études et de services
+l10n_dz_724,724,Variation de stocks de produits,Variation de stocks de produits
+l10n_dz_7241,7241,Produits intermédiaires,Produits intermédiaires
+l10n_dz_7245,7245,Produits finis,Produits finis
+l10n_dz_7248,7248,Produits résiduels,Produits résiduels
+l10n_dz_729,729,Coût de la sous activité (différence d'imputation coût du chômage),Coût de la sous activité (différence d'imputation coût du chômage)
+l10n_dz_73,73,Production immobilisée,Production immobilisée
+l10n_dz_731,731,Production immobilisée d'actifs incorporels (logiciels),Production immobilisée d'actifs incorporels (logiciels)
+l10n_dz_732,732,Production immobilisée d'actifs corporels,Production immobilisée d'actifs corporels
+l10n_dz_74,74,Subventions d’exploitation,Subventions d’exploitation
+l10n_dz_741,741,Subvention d'équilibre,Subvention d'équilibre
+l10n_dz_748,748,Autres subventions d'exploitation,Autres subventions d'exploitation
+l10n_dz_75,75,Autres produits opérationnels,Autres produits opérationnels
+l10n_dz_751,751,"Redevances pour concessions, brevets, licences, logiciels et valeurs similaires","Redevances pour concessions, brevets, licences, logiciels et valeurs similaires"
+l10n_dz_752,752,Plus values sur sorties d’actifs immobilisés non financiers,Plus values sur sorties d’actifs immobilisés non financiers
+l10n_dz_7521,7521,Plus value sur cession d’éléments d’actifs mis à la réforme,Plus value sur cession d’éléments d’actifs mis à la réforme
+l10n_dz_7528,7528,Plus value sur autres éléments d’actifs corporels cédés,Plus value sur autres éléments d’actifs corporels cédés
+l10n_dz_753,753,Jetons de présence et rémunérations d'administrateurs ou de gérant,Jetons de présence et rémunérations d'administrateurs ou de gérant
+l10n_dz_7531,7531,Jetons de présence perçus,Jetons de présence perçus
+l10n_dz_754,754,Quotes-parts de subventions d’investissement virées au résultat de l’exercice,Quotes-parts de subventions d’investissement virées au résultat de l’exercice
+l10n_dz_755,755,Quote-part de résultat sur opérations faites en commun,Quote-part de résultat sur opérations faites en commun
+l10n_dz_7551,7551,Quote-part de perte transférée (dans les SEP et GIE),Quote-part de perte transférée (dans les SEP et GIE)
+l10n_dz_7552,7552,Quote-part de bénéfice attribué (dans les SEP et GIE),Quote-part de bénéfice attribué (dans les SEP et GIE)
+l10n_dz_756,756,Rentrées sur créances amorties,Rentrées sur créances amorties
+l10n_dz_757,757,Produits exceptionnels sur opérations de gestion,Produits exceptionnels sur opérations de gestion
+l10n_dz_7571,7571,Ecart de stocks (positif) de marchandises,Ecart de stocks (positif) de marchandises
+l10n_dz_7572,7572,"Ecart de stocks (positif) de matières, fournitures et autres approvisionnements","Ecart de stocks (positif) de matières, fournitures et autres approvisionnements"
+l10n_dz_7575,7575,Dégrèvements d’impôts (autre qu’IBS),Dégrèvements d’impôts (autre qu’IBS)
+l10n_dz_7578,7578,Autres produits exceptionnels,Autres produits exceptionnels
+l10n_dz_7581,7581,Lots de bord et pièces de rechange gratuites,Lots de bord et pièces de rechange gratuites
+l10n_dz_7582,7582,Remboursements sinistres et dégâts assurés,Remboursements sinistres et dégâts assurés
+l10n_dz_7583,7583,Revenus des immeubles de placement,Revenus des immeubles de placement
+l10n_dz_7586,7586,Produits des exercices antérieurs (en cours d'exercice),Produits des exercices antérieurs (en cours d'exercice)
+l10n_dz_7588,7588,Autres produits divers de gestion courante,Autres produits divers de gestion courante
+l10n_dz_758_group,758,Autres produits de gestion courante,Autres produits de gestion courante
+l10n_dz_76,76,Produits financiers,Produits financiers
+l10n_dz_761,761,Produits de participations,Produits de participations
+l10n_dz_762,762,Revenus des actifs financiers,Revenus des actifs financiers
+l10n_dz_763,763,Revenus de créances,Revenus de créances
+l10n_dz_765,765,Ecart d’évaluation sur actifs financiers – Plus-values,Ecart d’évaluation sur actifs financiers – Plus-values
+l10n_dz_766_group,766,Gains de change,Gains de change
+l10n_dz_767,767,Profits nets sur cessions d’actifs financiers,Profits nets sur cessions d’actifs financiers
+l10n_dz_768,768,Autres produits financiers,Autres produits financiers
+l10n_dz_77,77,Eléments extraordinaires (Produits),Eléments extraordinaires (Produits)
+l10n_dz_78,78,Reprises sur pertes de valeurs et provisions,Reprises sur pertes de valeurs et provisions
+l10n_dz_781,781,Reprise d'exploitation sur pertes de valeur et provisions - actifs non courants,Reprise d'exploitation sur pertes de valeur et provisions - actifs non courants
+l10n_dz_7811,7811,Reprises sur amortissements : Immobilisations incorporelles,Reprises sur amortissements : Immobilisations incorporelles
+l10n_dz_7812,7812,Reprises sur perte de valeur : Immobilisations incorporelles,Reprises sur perte de valeur : Immobilisations incorporelles
+l10n_dz_7813,7813,Reprises sur amortissements : Immobilisations corporelles,Reprises sur amortissements : Immobilisations corporelles
+l10n_dz_7814,7814,Reprises sur perte de valeur : Immobilisations corporelles,Reprises sur perte de valeur : Immobilisations corporelles
+l10n_dz_7815,7815,Reprises sur écarts de réévaluation : Immobilisations corporelles,Reprises sur écarts de réévaluation : Immobilisations corporelles
+l10n_dz_7817,7817,Reprises sur plus values à réinvestir,Reprises sur plus values à réinvestir
+l10n_dz_785,785,Reprise d'exploitation sur pertes de valeur et provisions - actifs courants,Reprise d'exploitation sur pertes de valeur et provisions - actifs courants
+l10n_dz_7853,7853,Reprise sur pertes de valeurs – Stocks et encours,Reprise sur pertes de valeurs – Stocks et encours
+l10n_dz_7854,7854,Reprise sur pertes de valeurs – Créances,Reprise sur pertes de valeurs – Créances
+l10n_dz_7858,7858,Reprise sur provisions pour pertes et charges – PNC,Reprise sur provisions pour pertes et charges – PNC
+l10n_dz_786,786,Reprises financières sur pertes de valeur et provisions,Reprises financières sur pertes de valeur et provisions
+l10n_dz_Classe_1,Classe 1,CLASSE 1 : COMPTES DE CAPITAUX,CLASSE 1 : COMPTES DE CAPITAUX
+l10n_dz_Classe_2,Classe 2,CLASSE 2 : COMPTES D’IMMOBILISATIONS,CLASSE 2 : COMPTES D’IMMOBILISATIONS
+l10n_dz_Classe_3,Classe 3,CLASSE 3 : COMPTES DE STOCKS ET EN COURS,CLASSE 3 : COMPTES DE STOCKS ET EN COURS
+l10n_dz_Classe_4,Classe 4,CLASSE 4 : COMPTES DE TIERS,CLASSE 4 : COMPTES DE TIERS
+l10n_dz_Classe_5,Classe 5,CLASSE 5 : COMPTES FINANCIERS,CLASSE 5 : COMPTES FINANCIERS
+l10n_dz_Classe_6,Classe 6,CLASSE 6 : COMPTES DE CHARGES,CLASSE 6 : COMPTES DE CHARGES
+l10n_dz_Classe_7,Classe 7,CLASSE 7 : COMPTES DE PRODUITS,CLASSE 7 : COMPTES DE PRODUITS
+l10n_dz_Classes_1_a_5,Classes 1 à 5,Comptes de bilan,Comptes de bilan
