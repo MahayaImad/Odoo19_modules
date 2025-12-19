@@ -100,7 +100,8 @@ For issues or questions, please contact the module maintainer.
         'security/ir.model.access.csv',
 
         # Data - Chart of Accounts Extensions
-        'data/template/account.group-dz.csv',
+        # Note: account groups are already provided by native l10n_dz
+        # Only load additional accounts that extend the base chart
         'data/template/account.account-dz.csv',
 
         # Data - Configuration
