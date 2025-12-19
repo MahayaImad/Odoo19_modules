@@ -1,0 +1,1161 @@
+id,name,code,account_type,tag_ids,reconcile,name@fr
+l10n_dz_101000,"Capital émis ou capital social ou fonds de dotation, ou fonds d’exploitation",101000,equity,,True,"Capital émis ou capital social ou fonds de dotation, ou fonds d’exploitation"
+l10n_dz_101100,Capital social,101100,equity,,True,Capital social
+l10n_dz_101110,Capital souscrit - non appelé,101110,equity,,True,Capital souscrit - non appelé
+l10n_dz_101120,Capital souscrit - appelé non versé,101120,equity,,True,Capital souscrit - appelé non versé
+l10n_dz_101130,Capital souscrit - appelé versé,101130,equity,,True,Capital souscrit - appelé versé
+l10n_dz_101200,Fonds de dotation,101200,equity,,True,Fonds de dotation
+l10n_dz_101300,Fonds d'exploitation,101300,equity,,True,Fonds d'exploitation
+l10n_dz_101800,Autres fonds propres,101800,equity,,True,Autres fonds propres
+l10n_dz_103000,Primes liées au capital social,103000,equity,,True,Primes liées au capital social
+l10n_dz_103100,Primes d'émission,103100,equity,,True,Primes d'émission
+l10n_dz_103200,Primes de fusion,103200,equity,,True,Primes de fusion
+l10n_dz_103300,Primes d'apport,103300,equity,,True,Primes d'apport
+l10n_dz_103400,Primes de conversion d'obligations en actions,103400,equity,,True,Primes de conversion d'obligations en actions
+l10n_dz_103500,Bons de souscription d'actions,103500,equity,,True,Bons de souscription d'actions
+l10n_dz_104000,Ecart d’évaluation,104000,equity,,True,Ecart d’évaluation
+l10n_dz_105000,Écarts de réévaluation,105000,equity,,True,Écarts de réévaluation
+l10n_dz_105100,Ecart de réévaluation sur immobilisations corporelles,105100,equity,,True,Ecart de réévaluation sur immobilisations corporelles
+l10n_dz_105900,Ecart de réévaluation rapporté au résultat de l’exercice,105900,equity,,True,Ecart de réévaluation rapporté au résultat de l’exercice
+l10n_dz_106000,"Réserves (légale, statutaire, ordinaire, réglementée)",106000,equity,,True,"Réserves (légale, statutaire, ordinaire, réglementée)"
+l10n_dz_106100,Réserve légale,106100,equity,,True,Réserve légale
+l10n_dz_106210,Réserves réglementées : Bénéfice taxé au taux réduit,106210,equity,,True,Réserves réglementées : Bénéfice taxé au taux réduit
+l10n_dz_106220,Réserves réglementées : Plus value de cession à réinvestir,106220,equity,,True,Réserves réglementées : Plus value de cession à réinvestir
+l10n_dz_106300,Réserves statutaires ou contractuelles,106300,equity,,True,Réserves statutaires ou contractuelles
+l10n_dz_106400,Réserves ordinaires,106400,equity,,True,Réserves ordinaires
+l10n_dz_106500,Réserves Spéciales consécutive à l’octroi d’avantages,106500,equity,,True,Réserves Spéciales consécutive à l’octroi d’avantages
+l10n_dz_106600,Réserves facultatives,106600,equity,,True,Réserves facultatives
+l10n_dz_106800,Autres réserves,106800,equity,,True,Autres réserves
+l10n_dz_107000,Écarts d'équivalence,107000,equity,,True,Écarts d'équivalence
+l10n_dz_108000,Compte de l'exploitant,108000,equity,,True,Compte de l'exploitant
+l10n_dz_109000,Actionnaires: capital souscrit - non appelé,109000,equity,,True,Actionnaires: capital souscrit - non appelé
+l10n_dz_110000,Report à nouveau (bénéfice),110000,equity,,True,Report à nouveau (bénéfice)
+l10n_dz_115000,Impact résultant du changement de la réglementation et des méthodes,115000,equity,,True,Impact résultant du changement de la réglementation et des méthodes
+l10n_dz_115100,Impact positif (plus value),115100,equity,,True,Impact positif (plus value)
+l10n_dz_115900,Impact négatif (moins value),115900,equity,,True,Impact négatif (moins value)
+l10n_dz_117000,Impact résultant des corrections d’estimation et d’erreurs comptables,117000,equity,,True,Impact résultant des corrections d’estimation et d’erreurs comptables
+l10n_dz_117100,Impact d'assainissement comptable et financier : positif,117100,equity,,True,Impact d'assainissement comptable et financier : positif
+l10n_dz_117500,Ajustement résultant de correction d'estimation,117500,equity,,True,Ajustement résultant de correction d'estimation
+l10n_dz_117600,Ajustement résultant de correction d'erreurs comptables,117600,equity,,True,Ajustement résultant de correction d'erreurs comptables
+l10n_dz_117900,Impact d'assainissement comptable et financier : négatif,117900,equity,,True,Impact d'assainissement comptable et financier : négatif
+l10n_dz_118000,Acompte sur dividendes,118000,equity,,True,Acompte sur dividendes
+l10n_dz_119000,Report à nouveau (Déficit),119000,equity,,True,Report à nouveau (Déficit)
+l10n_dz_120000,Résultat net de l’exercice – (BENEFICE),120000,equity,,True,Résultat net de l’exercice – (BENEFICE)
+l10n_dz_121000,Marge commerciale,121000,equity,,True,Marge commerciale
+l10n_dz_122000,Production de l'exercice,122000,equity,,True,Production de l'exercice
+l10n_dz_123000,Valeur ajoutée d'exploitation,123000,equity,,True,Valeur ajoutée d'exploitation
+l10n_dz_124000,Excédent (ou insuffisance) brut d'exploitation (EBE) – EBITDA,124000,equity,,True,Excédent (ou insuffisance) brut d'exploitation (EBE) – EBITDA
+l10n_dz_125000,Résultat opérationnel,125000,equity,,True,Résultat opérationnel
+l10n_dz_126000,Résultat ordinaire avant impôts,126000,equity,,True,Résultat ordinaire avant impôts
+l10n_dz_127000,Résultat extraordinaire,127000,equity,,True,Résultat extraordinaire
+l10n_dz_128000,Résultat brut de l'exercice,128000,equity,,True,Résultat brut de l'exercice
+l10n_dz_129000,Résultat de l'exercice (perte),129000,equity,,True,Résultat de l'exercice (perte)
+l10n_dz_131000,Subventions d'équipement,131000,liability_current,,True,Subventions d'équipement
+l10n_dz_131100,Subventions d’équipements : Financement de l'Etat,131100,liability_current,,True,Subventions d’équipements : Financement de l'Etat
+l10n_dz_131200,Subventions d’équipements : Financement d'autres organismes,131200,liability_current,,True,Subventions d’équipements : Financement d'autres organismes
+l10n_dz_131300,Transfert gratuit d’immobilisations,131300,liability_current,,True,Transfert gratuit d’immobilisations
+l10n_dz_131900,Subventions d'investissement inscrites au compte de résultat,131900,liability_current,,True,Subventions d'investissement inscrites au compte de résultat
+l10n_dz_132000,Autres subventions d’investissement,132000,liability_current,,True,Autres subventions d’investissement
+l10n_dz_132100,Subventions d’investissement,132100,liability_current,,True,Subventions d’investissement
+l10n_dz_132200,Subventions pour financement d'activités à long terme,132200,liability_current,,True,Subventions pour financement d'activités à long terme
+l10n_dz_132900,Autres subventions inscrites au compte de résultat,132900,liability_current,,True,Autres subventions inscrites au compte de résultat
+l10n_dz_133000,Impôts différés actif,133000,liability_current,,True,Impôts différés actif
+l10n_dz_134000,Impôts différés passif,134000,liability_current,,True,Impôts différés passif
+l10n_dz_138000,Autres produits et charges différés,138000,liability_current,,True,Autres produits et charges différés
+l10n_dz_138600,Charges différées – Passif non courant,138600,liability_current,,True,Charges différées – Passif non courant
+l10n_dz_138700,Produits différés – Passif non courant,138700,liability_current,,True,Produits différés – Passif non courant
+l10n_dz_153000,Provisions pour pensions et obligations similaires,153000,liability_non_current,,True,Provisions pour pensions et obligations similaires
+l10n_dz_153100,Provisions pour avantages au personnel (IDR – IFC),153100,liability_non_current,,True,Provisions pour avantages au personnel (IDR – IFC)
+l10n_dz_155000,Provisions pour impôts,155000,liability_non_current,,True,Provisions pour impôts
+l10n_dz_155100,Provision pour rappel d'impôts et amendes fiscales,155100,liability_non_current,,True,Provision pour rappel d'impôts et amendes fiscales
+l10n_dz_156000,Provisions pour renouvellement des immobilisations (concession),156000,liability_non_current,,True,Provisions pour renouvellement des immobilisations (concession)
+l10n_dz_158000,Autres provisions pour charges - passifs non courants,158000,liability_non_current,,True,Autres provisions pour charges - passifs non courants
+l10n_dz_158100,Provisions pour remise en l’état ou de démantèlement,158100,liability_non_current,,True,Provisions pour remise en l’état ou de démantèlement
+l10n_dz_158200,Provision pour perte à terminaison (contrats déficitaires),158200,liability_non_current,,True,Provision pour perte à terminaison (contrats déficitaires)
+l10n_dz_158300,Provision pour procès et litiges (au-delà de 12 mois),158300,liability_non_current,,True,Provision pour procès et litiges (au-delà de 12 mois)
+l10n_dz_158400,Provision pour garantie données aux clients (au-delà de 12 mois),158400,liability_non_current,,True,Provision pour garantie données aux clients (au-delà de 12 mois)
+l10n_dz_158800,Autres provisions résultant d’obligation légale ou implicite,158800,liability_non_current,,True,Autres provisions résultant d’obligation légale ou implicite
+l10n_dz_161000,Titres participatifs,161000,liability_current,,True,Titres participatifs
+l10n_dz_161100,Emprunt Principal,161100,liability_current,,True,Emprunt Principal
+l10n_dz_161800,Intérêts courus et non échus,161800,liability_current,,True,Intérêts courus et non échus
+l10n_dz_162000,Emprunts obligataires convertibles,162000,liability_current,,True,Emprunts obligataires convertibles
+l10n_dz_162100,Principal,162100,liability_current,,True,Principal
+l10n_dz_162800,Intérêts courus et non échus,162800,liability_current,,True,Intérêts courus et non échus
+l10n_dz_163000,Autres emprunts obligataires,163000,liability_current,,True,Autres emprunts obligataires
+l10n_dz_163100,Principal,163100,liability_current,,True,Principal
+l10n_dz_163800,Intérêts courus et non échus,163800,liability_current,,True,Intérêts courus et non échus
+l10n_dz_164000,Emprunts auprès des établissements de crédit,164000,liability_current,,True,Emprunts auprès des établissements de crédit
+l10n_dz_164100,Emprunts à Court Terme,164100,liability_current,,True,Emprunts à Court Terme
+l10n_dz_164200,Emprunts à Moyen Terme,164200,liability_current,,True,Emprunts à Moyen Terme
+l10n_dz_164300,Emprunts à Long Terme,164300,liability_current,,True,Emprunts à Long Terme
+l10n_dz_164600,Intérêts intercalaires,164600,liability_current,,True,Intérêts intercalaires
+l10n_dz_164800,Intérêts courus et non échus,164800,liability_current,,True,Intérêts courus et non échus
+l10n_dz_165000,Dépôts et cautionnements reçus,165000,liability_current,,True,Dépôts et cautionnements reçus
+l10n_dz_165100,Dépôts reçus,165100,liability_current,,True,Dépôts reçus
+l10n_dz_165500,Cautionnements reçus,165500,liability_current,,True,Cautionnements reçus
+l10n_dz_165800,Intérêts courus et non échus,165800,liability_current,,True,Intérêts courus et non échus
+l10n_dz_167000,Dettes sur contrat de location-financement,167000,liability_current,,True,Dettes sur contrat de location-financement
+l10n_dz_167100,Principal,167100,liability_current,,True,Principal
+l10n_dz_167800,Intérêts courus et non échus,167800,liability_current,,True,Intérêts courus et non échus
+l10n_dz_168000,Autres emprunts et dettes assimilées,168000,liability_current,,True,Autres emprunts et dettes assimilées
+l10n_dz_168100,Principal,168100,liability_current,,True,Principal
+l10n_dz_168800,Intérêts courus et non échus,168800,liability_current,,True,Intérêts courus et non échus
+l10n_dz_169000,Primes de remboursement des obligations,169000,liability_current,,True,Primes de remboursement des obligations
+l10n_dz_171000,Dettes rattachées à des participations groupe,171000,liability_current,,True,Dettes rattachées à des participations groupe
+l10n_dz_172000,Dettes rattachées à des participations hors groupe,172000,liability_current,,True,Dettes rattachées à des participations hors groupe
+l10n_dz_173000,Dettes rattachés à des sociétés en participation,173000,liability_current,,True,Dettes rattachés à des sociétés en participation
+l10n_dz_178000,Autres dettes rattachés à des participations,178000,liability_current,,True,Autres dettes rattachés à des participations
+l10n_dz_181000,Comptes de liaison entre établissements,181000,liability_current,,True,Comptes de liaison entre établissements
+l10n_dz_181400,Créances inter-Unités (ou établissement),181400,liability_current,,True,Créances inter-Unités (ou établissement)
+l10n_dz_181500,Dettes inter-Unités (ou établissement),181500,liability_current,,True,Dettes inter-Unités (ou établissement)
+l10n_dz_181600,Charges inter-Unités (ou établissement),181600,liability_current,,True,Charges inter-Unités (ou établissement)
+l10n_dz_181700,Produis inter-Unités (ou établissement),181700,liability_current,,True,Produis inter-Unités (ou établissement)
+l10n_dz_188000,Comptes de liaison entre sociétés en participation,188000,liability_current,,True,Comptes de liaison entre sociétés en participation
+l10n_dz_188400,Créances sur la participation ou GIE,188400,liability_current,,True,Créances sur la participation ou GIE
+l10n_dz_188410,Créances commerciales,188410,liability_current,,True,Créances commerciales
+l10n_dz_188420,Créances financières,188420,liability_current,,True,Créances financières
+l10n_dz_188500,Dettes envers la participation ou GIE,188500,liability_current,,True,Dettes envers la participation ou GIE
+l10n_dz_188510,Dettes commerciales,188510,liability_current,,True,Dettes commerciales
+l10n_dz_188520,Dettes financières,188520,liability_current,,True,Dettes financières
+l10n_dz_203000,Frais de développement immobilisables,203000,asset_fixed,,True,Frais de développement immobilisables
+l10n_dz_204000,Logiciels de traitements informatiques,204000,asset_fixed,,True,Logiciels de traitements informatiques
+l10n_dz_205000,"Concessions et droits similaires, brevets, licences, marques",205000,asset_fixed,,True,"Concessions et droits similaires, brevets, licences, marques"
+l10n_dz_205100,Droit à la propriété industrielle et commerciale,205100,asset_fixed,,True,Droit à la propriété industrielle et commerciale
+l10n_dz_205800,Autres droits similaires (concession et franchise),205800,asset_fixed,,True,Autres droits similaires (concession et franchise)
+l10n_dz_207000,Ecart d’acquisition – « goodwill »,207000,asset_fixed,,True,Ecart d’acquisition – « goodwill »
+l10n_dz_207100,Ecart d'acquisition positif (goodwill),207100,asset_fixed,,True,Ecart d'acquisition positif (goodwill)
+l10n_dz_207200,Autres écarts d’acquisitions ou de fusions,207200,asset_fixed,,True,Autres écarts d’acquisitions ou de fusions
+l10n_dz_207900,Ecart d'acquisition négatif (badwill),207900,asset_fixed,,True,Ecart d'acquisition négatif (badwill)
+l10n_dz_208000,Autres immobilisations incorporelles,208000,asset_fixed,,True,Autres immobilisations incorporelles
+l10n_dz_208100,Fonds de commerce,208100,asset_fixed,,True,Fonds de commerce
+l10n_dz_208200,Droit au bail,208200,asset_fixed,,True,Droit au bail
+l10n_dz_208700,Actif environnemental,208700,asset_fixed,,True,Actif environnemental
+l10n_dz_211000,Terrains,211000,asset_fixed,,True,Terrains
+l10n_dz_211100,Terrains nus,211100,asset_fixed,,True,Terrains nus
+l10n_dz_211200,Terrains bâtis,211200,asset_fixed,,True,Terrains bâtis
+l10n_dz_211210,Terrains administratifs et commerciaux,211210,asset_fixed,,True,Terrains administratifs et commerciaux
+l10n_dz_211220,Terrains industriels,211220,asset_fixed,,True,Terrains industriels
+l10n_dz_211300,Terrains aménagés,211300,asset_fixed,,True,Terrains aménagés
+l10n_dz_211310,Terrains aménagés en aires de stockage,211310,asset_fixed,,True,Terrains aménagés en aires de stockage
+l10n_dz_211320,Terrains aménagés en aires de stationnement et parking,211320,asset_fixed,,True,Terrains aménagés en aires de stationnement et parking
+l10n_dz_211400,Terrains de gisement(carrières),211400,asset_fixed,,True,Terrains de gisement(carrières)
+l10n_dz_212000,Agencements et aménagements des terrains,212000,asset_fixed,,True,Agencements et aménagements des terrains
+l10n_dz_212100,Aménagement d’espaces verts,212100,asset_fixed,,True,Aménagement d’espaces verts
+l10n_dz_212200,Autres agencements et aménagements de terrains,212200,asset_fixed,,True,Autres agencements et aménagements de terrains
+l10n_dz_213000,Constructions,213000,asset_fixed,,True,Constructions
+l10n_dz_213100,Bâtiments administratifs et commerciaux,213100,asset_fixed,,True,Bâtiments administratifs et commerciaux
+l10n_dz_213110,Bâtiment Structure,213110,asset_fixed,,True,Bâtiment Structure
+l10n_dz_213120,Bâtiment composant A,213120,asset_fixed,,True,Bâtiment composant A
+l10n_dz_213130,Bâtiment composant B,213130,asset_fixed,,True,Bâtiment composant B
+l10n_dz_213140,Bâtiment composant C,213140,asset_fixed,,True,Bâtiment composant C
+l10n_dz_213200,Bâtiments industriels (à décomposer en cas de besoin),213200,asset_fixed,,True,Bâtiments industriels (à décomposer en cas de besoin)
+l10n_dz_213300,Bâtiments sociaux (CMS – CANTINE – REFECTOIRE),213300,asset_fixed,,True,Bâtiments sociaux (CMS – CANTINE – REFECTOIRE)
+l10n_dz_213400,Immeubles de placement,213400,asset_fixed,,True,Immeubles de placement
+l10n_dz_213410,Logements du personnel,213410,asset_fixed,,True,Logements du personnel
+l10n_dz_213480,Autres immeubles de placement,213480,asset_fixed,,True,Autres immeubles de placement
+l10n_dz_213500,"Agencements, aménagements et installations des bâtiments",213500,asset_fixed,,True,"Agencements, aménagements et installations des bâtiments"
+l10n_dz_213600,Ouvrages d’infrastructures : Voies de transport ou d'accès,213600,asset_fixed,,True,Ouvrages d’infrastructures : Voies de transport ou d'accès
+l10n_dz_213700,Ouvrages d’infrastructures : Voies de transport ou d'accès,213700,asset_fixed,,True,Ouvrages d’infrastructures : Voies de transport ou d'accès
+l10n_dz_213800,Autres travaux d'aménagement sur ouvrages d’infrastructures,213800,asset_fixed,,True,Autres travaux d'aménagement sur ouvrages d’infrastructures
+l10n_dz_215000,"Installations techniques, matériel et outillage industriels",215000,asset_fixed,,True,"Installations techniques, matériel et outillage industriels"
+l10n_dz_215100,Installations complexes spécialisées,215100,asset_fixed,,True,Installations complexes spécialisées
+l10n_dz_215300,Installations à caractère spécifique,215300,asset_fixed,,True,Installations à caractère spécifique
+l10n_dz_215400,Matériel industriel,215400,asset_fixed,,True,Matériel industriel
+l10n_dz_215500,Outillage industriel,215500,asset_fixed,,True,Outillage industriel
+l10n_dz_215700,Agencements et aménagements du matériel et outillage industriels,215700,asset_fixed,,True,Agencements et aménagements du matériel et outillage industriels
+l10n_dz_215800,Autres matériels et outillage industriel,215800,asset_fixed,,True,Autres matériels et outillage industriel
+l10n_dz_218000,Autres immobilisations corporelles,218000,asset_fixed,,True,Autres immobilisations corporelles
+l10n_dz_218100,Installations générales agencements aménagements divers,218100,asset_fixed,,True,Installations générales agencements aménagements divers
+l10n_dz_218200,Matériel de transport,218200,asset_fixed,,True,Matériel de transport
+l10n_dz_218210,Matériel de transport : Véhicules Lourds,218210,asset_fixed,,True,Matériel de transport : Véhicules Lourds
+l10n_dz_218220,"Matériel de transport : Véhicules Utilitaires inférieurs à 3,5 T",218220,asset_fixed,,True,"Matériel de transport : Véhicules Utilitaires inférieurs à 3,5 T"
+l10n_dz_218230,Matériel de transport : Véhicules Légers de tourisme,218230,asset_fixed,,True,Matériel de transport : Véhicules Légers de tourisme
+l10n_dz_218240,Matériels de transport en commun,218240,asset_fixed,,True,Matériels de transport en commun
+l10n_dz_218300,Matériel de bureau et matériel informatique,218300,asset_fixed,,True,Matériel de bureau et matériel informatique
+l10n_dz_218310,Matériel de bureau,218310,asset_fixed,,True,Matériel de bureau
+l10n_dz_218320,Matériel informatique,218320,asset_fixed,,True,Matériel informatique
+l10n_dz_218340,"Matériel de communication, de projection et d’insonorisation",218340,asset_fixed,,True,"Matériel de communication, de projection et d’insonorisation"
+l10n_dz_218350,Matériel didactique de formation,218350,asset_fixed,,True,Matériel didactique de formation
+l10n_dz_218380,Autres équipements de bureau,218380,asset_fixed,,True,Autres équipements de bureau
+l10n_dz_218400,Mobilier,218400,asset_fixed,,True,Mobilier
+l10n_dz_218410,Mobilier de bureau,218410,asset_fixed,,True,Mobilier de bureau
+l10n_dz_218480,Autres mobiliers d'ameublement ou d'accueil,218480,asset_fixed,,True,Autres mobiliers d'ameublement ou d'accueil
+l10n_dz_218500,Autres mobiliers et matériels divers,218500,asset_fixed,,True,Autres mobiliers et matériels divers
+l10n_dz_218510,Mobilier et équipements ménagers,218510,asset_fixed,,True,Mobilier et équipements ménagers
+l10n_dz_218520,Mobilier et matériel médical de secours,218520,asset_fixed,,True,Mobilier et matériel médical de secours
+l10n_dz_218530,Mobilier et matériel de cantine et réfectoire,218530,asset_fixed,,True,Mobilier et matériel de cantine et réfectoire
+l10n_dz_218540,Mobiliers et équipements ménagers des logements de fonction,218540,asset_fixed,,True,Mobiliers et équipements ménagers des logements de fonction
+l10n_dz_218580,Autres mobiliers et matériels divers,218580,asset_fixed,,True,Autres mobiliers et matériels divers
+l10n_dz_218600,Actifs biologiques,218600,asset_fixed,,True,Actifs biologiques
+l10n_dz_218700,Emballages récupérables,218700,asset_fixed,,True,Emballages récupérables
+l10n_dz_221000,Terrains en concession,221000,asset_fixed,,True,Terrains en concession
+l10n_dz_222000,Agencements et aménagements de terrain en concession,222000,asset_fixed,,True,Agencements et aménagements de terrain en concession
+l10n_dz_223000,Constructions en concession,223000,asset_fixed,,True,Constructions en concession
+l10n_dz_225000,Installations techniques en concession,225000,asset_fixed,,True,Installations techniques en concession
+l10n_dz_228000,Autres immobilisations corporelles en concession,228000,asset_fixed,,True,Autres immobilisations corporelles en concession
+l10n_dz_229000,Droits du concédant,229000,asset_fixed,,True,Droits du concédant
+l10n_dz_232000,Immobilisations corporelles en cours,232000,asset_fixed,,True,Immobilisations corporelles en cours
+l10n_dz_232200,Terrains en cours,232200,asset_fixed,,True,Terrains en cours
+l10n_dz_232300,Constructions en cours,232300,asset_fixed,,True,Constructions en cours
+l10n_dz_232500,Installations techniques matériel et outillage industriels en cours,232500,asset_fixed,,True,Installations techniques matériel et outillage industriels en cours
+l10n_dz_232800,Autres immobilisations corporelles,232800,asset_fixed,,True,Autres immobilisations corporelles
+l10n_dz_237000,Immobilisations incorporelles en cours,237000,asset_fixed,,True,Immobilisations incorporelles en cours
+l10n_dz_238000,Avances et acomptes versés sur commandes d'immobilisations corporelles,238000,asset_fixed,,True,Avances et acomptes versés sur commandes d'immobilisations corporelles
+l10n_dz_238200,Avances sur commandes d’immobilisations incorporelles,238200,asset_fixed,,True,Avances sur commandes d’immobilisations incorporelles
+l10n_dz_238210,Avances sur acquisitions de logiciels,238210,asset_fixed,,True,Avances sur acquisitions de logiciels
+l10n_dz_238280,Avances sur acquisitions d'autres immobilisations incorporelles,238280,asset_fixed,,True,Avances sur acquisitions d'autres immobilisations incorporelles
+l10n_dz_238400,Avances sur commandes d’immobilisations corporelles,238400,asset_fixed,,True,Avances sur commandes d’immobilisations corporelles
+l10n_dz_238410,Avances et acomptes sur acquisitions de terrains,238410,asset_fixed,,True,Avances et acomptes sur acquisitions de terrains
+l10n_dz_238420,Avances et acomptes sur constructions,238420,asset_fixed,,True,Avances et acomptes sur constructions
+l10n_dz_238430,Avances sur acquisitions d'installations techniques,238430,asset_fixed,,True,Avances sur acquisitions d'installations techniques
+l10n_dz_238440,Avances sur acquisitions de matériels et outillages industriels,238440,asset_fixed,,True,Avances sur acquisitions de matériels et outillages industriels
+l10n_dz_238450,Avances sur acquisitions autres mobiliers et matériels,238450,asset_fixed,,True,Avances sur acquisitions autres mobiliers et matériels
+l10n_dz_238480,Avances sur commandes d’autres immobilisations corporelles,238480,asset_fixed,,True,Avances sur commandes d’autres immobilisations corporelles
+l10n_dz_261000,Titres de filiales,261000,asset_non_current,,True,Titres de filiales
+l10n_dz_262000,Autres titres de participation,262000,asset_non_current,,True,Autres titres de participation
+l10n_dz_265000,Titres de participation évalués par équivalence (entreprises associés),265000,asset_non_current,,True,Titres de participation évalués par équivalence (entreprises associés)
+l10n_dz_266000,Créances rattachées à des participations groupe,266000,asset_non_current,,True,Créances rattachées à des participations groupe
+l10n_dz_267000,Créances rattachés à des participations hors groupe,267000,asset_non_current,,True,Créances rattachés à des participations hors groupe
+l10n_dz_268000,Créances rattachées à des sociétés en participation,268000,asset_non_current,,True,Créances rattachées à des sociétés en participation
+l10n_dz_269000,Versements restant à effectuer sur titres de participation non libérés,269000,asset_non_current,,True,Versements restant à effectuer sur titres de participation non libérés
+l10n_dz_271000,Titres immobilisés autres que les titres immobilisés de l'activité de portefeuille,271000,asset_non_current,,True,Titres immobilisés autres que les titres immobilisés de l'activité de portefeuille
+l10n_dz_272000,"Titres représentatifs de droit de créance (obligations, bons)",272000,asset_non_current,,True,"Titres représentatifs de droit de créance (obligations, bons)"
+l10n_dz_272100,Obligations à terme,272100,asset_non_current,,True,Obligations à terme
+l10n_dz_272200,Bons du Trésor,272200,asset_non_current,,True,Bons du Trésor
+l10n_dz_272300,Dépôt à terme (DAT > 12 mois),272300,asset_non_current,,True,Dépôt à terme (DAT > 12 mois)
+l10n_dz_273000,Titres immobilisés de l'activité de portefeuille (TIAP),273000,asset_non_current,,True,Titres immobilisés de l'activité de portefeuille (TIAP)
+l10n_dz_274000,Prêts et créances sur contrat de location-financement,274000,asset_non_current,,True,Prêts et créances sur contrat de location-financement
+l10n_dz_274100,Prêts participatifs,274100,asset_non_current,,True,Prêts participatifs
+l10n_dz_274200,Prêts au personnel,274200,asset_non_current,,True,Prêts au personnel
+l10n_dz_274300,Autres prêts accordés,274300,asset_non_current,,True,Autres prêts accordés
+l10n_dz_274400,Créances sur contrat de location-financement,274400,asset_non_current,,True,Créances sur contrat de location-financement
+l10n_dz_274800,Intérêts courus sur prêts et créances de crédit bail,274800,asset_non_current,,True,Intérêts courus sur prêts et créances de crédit bail
+l10n_dz_275000,Dépôts et cautionnements versés,275000,asset_non_current,,True,Dépôts et cautionnements versés
+l10n_dz_275100,Dépôts versés,275100,asset_non_current,,True,Dépôts versés
+l10n_dz_275200,Cautionnements versés aux fonds de garantie,275200,asset_non_current,,True,Cautionnements versés aux fonds de garantie
+l10n_dz_275300,Cautions de soumissions,275300,asset_non_current,,True,Cautions de soumissions
+l10n_dz_275400,Cautions de bonne exécution ou de bonne fin,275400,asset_non_current,,True,Cautions de bonne exécution ou de bonne fin
+l10n_dz_275500,Cautionnements versés sur loyers,275500,asset_non_current,,True,Cautionnements versés sur loyers
+l10n_dz_275600,Cautionnements versés sur Téléphone,275600,asset_non_current,,True,Cautionnements versés sur Téléphone
+l10n_dz_275700,Cautionnements versés à la SONELGAZ,275700,asset_non_current,,True,Cautionnements versés à la SONELGAZ
+l10n_dz_275800,Autres cautionnements versés,275800,asset_non_current,,True,Autres cautionnements versés
+l10n_dz_276000,Autres créances immobilisées,276000,asset_non_current,,True,Autres créances immobilisées
+l10n_dz_276100,Créances diverses – Actifs non courants,276100,asset_non_current,,True,Créances diverses – Actifs non courants
+l10n_dz_276110,Billet de fonds à recevoir,276110,asset_non_current,,True,Billet de fonds à recevoir
+l10n_dz_276800,Intérêts courus et non échus sur actifs non courants,276800,asset_non_current,,True,Intérêts courus et non échus sur actifs non courants
+l10n_dz_279000,Versements restant à effectuer sur titres immobilisés non libérés,279000,asset_non_current,,True,Versements restant à effectuer sur titres immobilisés non libérés
+l10n_dz_280000,Amortissements des immobilisations incorporelles,280000,asset_fixed,,True,Amortissements des immobilisations incorporelles
+l10n_dz_280300,Amortissements des frais de développement immobilisables,280300,asset_fixed,,True,Amortissements des frais de développement immobilisables
+l10n_dz_280400,Amortissements des logiciels informatiques et assimilés,280400,asset_fixed,,True,Amortissements des logiciels informatiques et assimilés
+l10n_dz_280410,Amortissement : Logiciels de traitements informatiques,280410,asset_fixed,,True,Amortissement : Logiciels de traitements informatiques
+l10n_dz_280420,Amortissement : Hébergement site Web,280420,asset_fixed,,True,Amortissement : Hébergement site Web
+l10n_dz_280500,"Amortissements concessions et droits similaires, brevets, licences, marques",280500,asset_fixed,,True,"Amortissements concessions et droits similaires, brevets, licences, marques"
+l10n_dz_280510,Amortissement du droit à la propriété industrielle et commerciale,280510,asset_fixed,,True,Amortissement du droit à la propriété industrielle et commerciale
+l10n_dz_280580,Amortissement des autres droits similaires (concession et franchise),280580,asset_fixed,,True,Amortissement des autres droits similaires (concession et franchise)
+l10n_dz_280700,Amortissement écart d’acquisition (goodwill),280700,asset_fixed,,True,Amortissement écart d’acquisition (goodwill)
+l10n_dz_280800,Amortissements des autres immobilisations incorporelles,280800,asset_fixed,,True,Amortissements des autres immobilisations incorporelles
+l10n_dz_280810,Amortissements du fonds de commerce (acquis à durée limitée),280810,asset_fixed,,True,Amortissements du fonds de commerce (acquis à durée limitée)
+l10n_dz_280870,Amortissements des actifs environnementaux,280870,asset_fixed,,True,Amortissements des actifs environnementaux
+l10n_dz_281000,Amortissements des immobilisations corporelles,281000,asset_fixed,,True,Amortissements des immobilisations corporelles
+l10n_dz_281100,Amortissements des terrains de gisement (carrières),281100,asset_fixed,,True,Amortissements des terrains de gisement (carrières)
+l10n_dz_281200,Amortissements des agencements et aménagements de terrains,281200,asset_fixed,,True,Amortissements des agencements et aménagements de terrains
+l10n_dz_281210,Amortissement des aménagements d'espaces verts,281210,asset_fixed,,True,Amortissement des aménagements d'espaces verts
+l10n_dz_281220,Amortissement des autres agencements et aménagements de terrains,281220,asset_fixed,,True,Amortissement des autres agencements et aménagements de terrains
+l10n_dz_281300,Amortissements des constructions,281300,asset_fixed,,True,Amortissements des constructions
+l10n_dz_281310,Amortissements des bâtiments administratifs et commerciaux,281310,asset_fixed,,True,Amortissements des bâtiments administratifs et commerciaux
+l10n_dz_281311,Amortissement : Bâtiment Structure,281311,asset_fixed,,True,Amortissement : Bâtiment Structure
+l10n_dz_281312,Amortissement : Bâtiments composant A,281312,asset_fixed,,True,Amortissement : Bâtiments composant A
+l10n_dz_281313,Amortissement : Bâtiments composant B,281313,asset_fixed,,True,Amortissement : Bâtiments composant B
+l10n_dz_281314,Amortissement : Bâtiments composant C,281314,asset_fixed,,True,Amortissement : Bâtiments composant C
+l10n_dz_281320,Amortissement des bâtiments industriels (à décomposer),281320,asset_fixed,,True,Amortissement des bâtiments industriels (à décomposer)
+l10n_dz_281330,Amortissements : Bâtiments sociaux (CMS-CANTINE-REFECTOIRE),281330,asset_fixed,,True,Amortissements : Bâtiments sociaux (CMS-CANTINE-REFECTOIRE)
+l10n_dz_281340,Amortissements des immeubles de placement (au coût amorti),281340,asset_fixed,,True,Amortissements des immeubles de placement (au coût amorti)
+l10n_dz_281350,Amortissements des agencements et aménagements de bâtiments,281350,asset_fixed,,True,Amortissements des agencements et aménagements de bâtiments
+l10n_dz_281360,Amortissements des ouvrages d’infrastructure : Voies de transport,281360,asset_fixed,,True,Amortissements des ouvrages d’infrastructure : Voies de transport
+l10n_dz_281380,Amortissements des travaux d’aménagement : Autres ouvrages,281380,asset_fixed,,True,Amortissements des travaux d’aménagement : Autres ouvrages
+l10n_dz_281500,"Amortissements des Installations techniques, matériels outillage industriels",281500,asset_fixed,,True,"Amortissements des Installations techniques, matériels outillage industriels"
+l10n_dz_281510,Amortissement des installations complexes spécialisées,281510,asset_fixed,,True,Amortissement des installations complexes spécialisées
+l10n_dz_281530,Amortissement des installations à caractère spécifique,281530,asset_fixed,,True,Amortissement des installations à caractère spécifique
+l10n_dz_281540,Amortissement du Matériel industriel,281540,asset_fixed,,True,Amortissement du Matériel industriel
+l10n_dz_281550,Amortissement de l'outillage industriel,281550,asset_fixed,,True,Amortissement de l'outillage industriel
+l10n_dz_281570,Amortissement des agencements et aménagements du matériel et outillage,281570,asset_fixed,,True,Amortissement des agencements et aménagements du matériel et outillage
+l10n_dz_281580,Amortissement des Autres matériels et outillage industriel,281580,asset_fixed,,True,Amortissement des Autres matériels et outillage industriel
+l10n_dz_281800,Amortissements autres immobilisations corporelles,281800,asset_fixed,,True,Amortissements autres immobilisations corporelles
+l10n_dz_281810,"Amort. Installations générales, agencements et aménagements divers",281810,asset_fixed,,True,"Amort. Installations générales, agencements et aménagements divers"
+l10n_dz_281820,Amortissements du matériel de transport,281820,asset_fixed,,True,Amortissements du matériel de transport
+l10n_dz_281821,Amortissement du Matériel de transport : Véhicules Lourds,281821,asset_fixed,,True,Amortissement du Matériel de transport : Véhicules Lourds
+l10n_dz_281822,Amortissement du Matériel de transport : Véhicules Utilitaires,281822,asset_fixed,,True,Amortissement du Matériel de transport : Véhicules Utilitaires
+l10n_dz_281823,Amortissement du Matériel de transport : Véhicules Légers,281823,asset_fixed,,True,Amortissement du Matériel de transport : Véhicules Légers
+l10n_dz_281824,Amortissement du Matériel de transport en commun,281824,asset_fixed,,True,Amortissement du Matériel de transport en commun
+l10n_dz_281828,Amortissement : Autres matériels roulants,281828,asset_fixed,,True,Amortissement : Autres matériels roulants
+l10n_dz_281830,Amortissements du matériel bureautique et informatique,281830,asset_fixed,,True,Amortissements du matériel bureautique et informatique
+l10n_dz_281831,Amortissement du Matériel de bureau,281831,asset_fixed,,True,Amortissement du Matériel de bureau
+l10n_dz_281832,Amortissement du Matériel informatique,281832,asset_fixed,,True,Amortissement du Matériel informatique
+l10n_dz_281834,"Amort. du matériel de communication, projection et d’insonorisation",281834,asset_fixed,,True,"Amort. du matériel de communication, projection et d’insonorisation"
+l10n_dz_281835,Amortissement du matériel didactique de formation,281835,asset_fixed,,True,Amortissement du matériel didactique de formation
+l10n_dz_281838,Amortissement des Autres équipements de bureau,281838,asset_fixed,,True,Amortissement des Autres équipements de bureau
+l10n_dz_281840,Amortissements du mobilier,281840,asset_fixed,,True,Amortissements du mobilier
+l10n_dz_281841,Amortissement du Mobilier de bureau,281841,asset_fixed,,True,Amortissement du Mobilier de bureau
+l10n_dz_281848,Amortissement des Autres mobiliers d'ameublement ou d'accueil,281848,asset_fixed,,True,Amortissement des Autres mobiliers d'ameublement ou d'accueil
+l10n_dz_281850,Amortissements des autres mobiliers et matériels divers,281850,asset_fixed,,True,Amortissements des autres mobiliers et matériels divers
+l10n_dz_281851,Amortis.: Mobiliers et équipements ménagers des logements de fonction,281851,asset_fixed,,True,Amortis.: Mobiliers et équipements ménagers des logements de fonction
+l10n_dz_281852,Amortissement : Mobilier et matériel médical de secours,281852,asset_fixed,,True,Amortissement : Mobilier et matériel médical de secours
+l10n_dz_281853,Amortissement : Mobilier et matériel de cantine et réfectoire,281853,asset_fixed,,True,Amortissement : Mobilier et matériel de cantine et réfectoire
+l10n_dz_281858,Amortissement : Autres mobiliers et matériels divers,281858,asset_fixed,,True,Amortissement : Autres mobiliers et matériels divers
+l10n_dz_281860,Amortissement des Emballages récupérables,281860,asset_fixed,,True,Amortissement des Emballages récupérables
+l10n_dz_282000,Amortissements des immobilisations mises en concession,282000,asset_fixed,,True,Amortissements des immobilisations mises en concession
+l10n_dz_282100,Amortissement : Terrains en concession,282100,asset_fixed,,True,Amortissement : Terrains en concession
+l10n_dz_282200,Amortissement : Agencements et aménagements de terrains,282200,asset_fixed,,True,Amortissement : Agencements et aménagements de terrains
+l10n_dz_282300,Amortissement : Constructions en concession,282300,asset_fixed,,True,Amortissement : Constructions en concession
+l10n_dz_282500,Amortissement : Installations techniques en concession,282500,asset_fixed,,True,Amortissement : Installations techniques en concession
+l10n_dz_282800,Amortissement : Autres immobilisations corporelles en concession,282800,asset_fixed,,True,Amortissement : Autres immobilisations corporelles en concession
+l10n_dz_290000,Pertes de valeur sur immobilisations incorporelles,290000,asset_fixed,,True,Pertes de valeur sur immobilisations incorporelles
+l10n_dz_290300,Pertes de valeur sur frais de développement immobilisables,290300,asset_fixed,,True,Pertes de valeur sur frais de développement immobilisables
+l10n_dz_290400,Pertes de valeur sur logiciels informatiques et assimilés,290400,asset_fixed,,True,Pertes de valeur sur logiciels informatiques et assimilés
+l10n_dz_290500,"Pertes de valeur sur concessions et droits similaires, brevets, licences, marques",290500,asset_fixed,,True,"Pertes de valeur sur concessions et droits similaires, brevets, licences, marques"
+l10n_dz_290700,Pertes de valeur sur écart d’acquisition (Goodwill),290700,asset_fixed,,True,Pertes de valeur sur écart d’acquisition (Goodwill)
+l10n_dz_290800,Autres immobilisations incorporelles,290800,asset_fixed,,True,Autres immobilisations incorporelles
+l10n_dz_290810,Perte de valeur sur fonds de commerce,290810,asset_fixed,,True,Perte de valeur sur fonds de commerce
+l10n_dz_290820,Perte de valeur sur droit au bail,290820,asset_fixed,,True,Perte de valeur sur droit au bail
+l10n_dz_290870,Perte de valeur sur actifs environnementaux,290870,asset_fixed,,True,Perte de valeur sur actifs environnementaux
+l10n_dz_291000,Pertes de valeur sur immobilisations corporelles,291000,asset_fixed,,True,Pertes de valeur sur immobilisations corporelles
+l10n_dz_291100,Perte de valeur des terrains (autres que les terrains de gisement),291100,asset_fixed,,True,Perte de valeur des terrains (autres que les terrains de gisement)
+l10n_dz_291200,Perte de valeur sur agencements et aménagements de terrains,291200,asset_fixed,,True,Perte de valeur sur agencements et aménagements de terrains
+l10n_dz_291300,Pertes de valeur sur constructions,291300,asset_fixed,,True,Pertes de valeur sur constructions
+l10n_dz_291400,Pertes de valeur sur immeubles de placement (Juste valeur),291400,asset_fixed,,True,Pertes de valeur sur immeubles de placement (Juste valeur)
+l10n_dz_291500,"Pertes de valeur sur Installations techniques, matériel et outillage industriel",291500,asset_fixed,,True,"Pertes de valeur sur Installations techniques, matériel et outillage industriel"
+l10n_dz_291600,Pertes de valeur sur actifs biologiques (Juste valeur),291600,asset_fixed,,True,Pertes de valeur sur actifs biologiques (Juste valeur)
+l10n_dz_291800,Pertes de valeur sur autres immobilisations corporelles,291800,asset_fixed,,True,Pertes de valeur sur autres immobilisations corporelles
+l10n_dz_292000,Pertes de valeur sur immobilisations mises en concession,292000,asset_fixed,,True,Pertes de valeur sur immobilisations mises en concession
+l10n_dz_293000,Pertes de valeur sur immobilisations en cours,293000,asset_fixed,,True,Pertes de valeur sur immobilisations en cours
+l10n_dz_293100,Pertes de valeurs sur immobilisations incorporelles en cours,293100,asset_fixed,,True,Pertes de valeurs sur immobilisations incorporelles en cours
+l10n_dz_293200,Pertes de valeurs sur immobilisations corporelles en cours,293200,asset_fixed,,True,Pertes de valeurs sur immobilisations corporelles en cours
+l10n_dz_294000,Pertes de valeurs sur les Unités Génératrices de Trésorerie,294000,asset_fixed,,True,Pertes de valeurs sur les Unités Génératrices de Trésorerie
+l10n_dz_294100,Pertes de valeur sur U.G.T (1),294100,asset_fixed,,True,Pertes de valeur sur U.G.T (1)
+l10n_dz_294200,Pertes de valeur sur U.G.T (2),294200,asset_fixed,,True,Pertes de valeur sur U.G.T (2)
+l10n_dz_296000,Pertes de valeur sur participations et créances rattachées à participations,296000,asset_fixed,,True,Pertes de valeur sur participations et créances rattachées à participations
+l10n_dz_296100,Pertes de valeur sur titres de filiales,296100,asset_fixed,,True,Pertes de valeur sur titres de filiales
+l10n_dz_296200,Pertes de valeur sur autres titres de participation,296200,asset_fixed,,True,Pertes de valeur sur autres titres de participation
+l10n_dz_296600,Pertes de valeur sur créances rattachées à des participations – groupe,296600,asset_fixed,,True,Pertes de valeur sur créances rattachées à des participations – groupe
+l10n_dz_296700,Pertes de valeur sur créances rattachées à des participations – hors groupe,296700,asset_fixed,,True,Pertes de valeur sur créances rattachées à des participations – hors groupe
+l10n_dz_296800,Pertes de valeur sur créances rattachées à des SEP,296800,asset_fixed,,True,Pertes de valeur sur créances rattachées à des SEP
+l10n_dz_297000,Pertes de valeur sur autres titres immobilisés,297000,asset_fixed,,True,Pertes de valeur sur autres titres immobilisés
+l10n_dz_297100,Pertes de valeur sur titres de placement,297100,asset_fixed,,True,Pertes de valeur sur titres de placement
+l10n_dz_297200,Pertes de valeurs sur les TIAP,297200,asset_fixed,,True,Pertes de valeurs sur les TIAP
+l10n_dz_298000,Pertes de valeur sur autres actifs financiers immobilisés,298000,asset_fixed,,True,Pertes de valeur sur autres actifs financiers immobilisés
+l10n_dz_298100,Pertes de valeur sur les titres participatifs,298100,asset_fixed,,True,Pertes de valeur sur les titres participatifs
+l10n_dz_298200,Pertes de valeur sur les prêts ordinaires,298200,asset_fixed,,True,Pertes de valeur sur les prêts ordinaires
+l10n_dz_298300,Pertes de valeur sur les dépôts et cautionnements versés,298300,asset_fixed,,True,Pertes de valeur sur les dépôts et cautionnements versés
+l10n_dz_298800,Pertes de valeur sur autres actifs financiers immobilisés,298800,asset_fixed,,True,Pertes de valeur sur autres actifs financiers immobilisés
+l10n_dz_300000,Stocks de marchandises,300000,asset_current,,True,Stocks de marchandises
+l10n_dz_301000,Marchandise(ou groupe) A,301000,asset_current,,True,Marchandise(ou groupe) A
+l10n_dz_302000,Marchandise(ou groupe) B,302000,asset_current,,True,Marchandise(ou groupe) B
+l10n_dz_310000,Matières premières et fourniture,310000,asset_current,,True,Matières premières et fourniture
+l10n_dz_311000,Matières premières,311000,asset_current,,True,Matières premières
+l10n_dz_311100,Matière (ou groupe) A,311100,asset_current,,True,Matière (ou groupe) A
+l10n_dz_311200,Matière (ou groupe) B,311200,asset_current,,True,Matière (ou groupe) B
+l10n_dz_311800,Autres matières premières,311800,asset_current,,True,Autres matières premières
+l10n_dz_317000,Fournitures Accessoires,317000,asset_current,,True,Fournitures Accessoires
+l10n_dz_317100,Fournitures A,317100,asset_current,,True,Fournitures A
+l10n_dz_317200,Fournitures B,317200,asset_current,,True,Fournitures B
+l10n_dz_317800,Autres fournitures accessoires,317800,asset_current,,True,Autres fournitures accessoires
+l10n_dz_320000,Autres approvisionnements,320000,asset_current,,True,Autres approvisionnements
+l10n_dz_321000,Matières consommables,321000,asset_current,,True,Matières consommables
+l10n_dz_321100,Matière (ou groupe) C,321100,asset_current,,True,Matière (ou groupe) C
+l10n_dz_321200,Matière (ou groupe) D,321200,asset_current,,True,Matière (ou groupe) D
+l10n_dz_321800,Autres matières consommables,321800,asset_current,,True,Autres matières consommables
+l10n_dz_322000,Fournitures consommables,322000,asset_current,,True,Fournitures consommables
+l10n_dz_322100,Carburant et lubrifiant – Véhicules,322100,asset_current,,True,Carburant et lubrifiant – Véhicules
+l10n_dz_322200,Petit outillage et fournitures d'ateliers,322200,asset_current,,True,Petit outillage et fournitures d'ateliers
+l10n_dz_322300,Droguerie et Produits d'entretien,322300,asset_current,,True,Droguerie et Produits d'entretien
+l10n_dz_322400,Pièces de rechange pour équipements et matériels techniques,322400,asset_current,,True,Pièces de rechange pour équipements et matériels techniques
+l10n_dz_322500,Pièces de rechange et pneumatique pour matériel de transport,322500,asset_current,,True,Pièces de rechange et pneumatique pour matériel de transport
+l10n_dz_322600,Quincaillerie générale et fournitures de magasin,322600,asset_current,,True,Quincaillerie générale et fournitures de magasin
+l10n_dz_322700,Fournitures de bureau et imprimés,322700,asset_current,,True,Fournitures de bureau et imprimés
+l10n_dz_322800,Autres fournitures consommables,322800,asset_current,,True,Autres fournitures consommables
+l10n_dz_326000,Emballages,326000,asset_current,,True,Emballages
+l10n_dz_326100,Emballages perdus,326100,asset_current,,True,Emballages perdus
+l10n_dz_326200,Emballages récupérables non identifiables,326200,asset_current,,True,Emballages récupérables non identifiables
+l10n_dz_326300,Emballages à usage mixte,326300,asset_current,,True,Emballages à usage mixte
+l10n_dz_331000,Produits en cours,331000,asset_current,,True,Produits en cours
+l10n_dz_331100,Produit en cours P 1,331100,asset_current,,True,Produit en cours P 1
+l10n_dz_331200,Produit en cours P 2,331200,asset_current,,True,Produit en cours P 2
+l10n_dz_331300,Produit en cours P 3,331300,asset_current,,True,Produit en cours P 3
+l10n_dz_335000,Travaux en cours,335000,asset_current,,True,Travaux en cours
+l10n_dz_335100,Travaux en cours T 1,335100,asset_current,,True,Travaux en cours T 1
+l10n_dz_335200,Travaux en cours T 2,335200,asset_current,,True,Travaux en cours T 2
+l10n_dz_335300,Travaux en cours T 3,335300,asset_current,,True,Travaux en cours T 3
+l10n_dz_341000,Études en cours,341000,asset_current,,True,Études en cours
+l10n_dz_341100,Études en cours E 1,341100,asset_current,,True,Études en cours E 1
+l10n_dz_341200,Études en cours E 2,341200,asset_current,,True,Études en cours E 2
+l10n_dz_341300,Études en cours E 3,341300,asset_current,,True,Études en cours E 3
+l10n_dz_345000,Prestations de services en cours,345000,asset_current,,True,Prestations de services en cours
+l10n_dz_345100,Prestations de services S 1,345100,asset_current,,True,Prestations de services S 1
+l10n_dz_345200,Prestations de services S 2,345200,asset_current,,True,Prestations de services S 2
+l10n_dz_345300,Prestations de services S 3,345300,asset_current,,True,Prestations de services S 3
+l10n_dz_351000,Produits intermédiaires,351000,asset_current,,True,Produits intermédiaires
+l10n_dz_351100,Produits intermédiaires (ou groupe) – PI 1,351100,asset_current,,True,Produits intermédiaires (ou groupe) – PI 1
+l10n_dz_351200,Produits intermédiaires (ou groupe) – PI 2,351200,asset_current,,True,Produits intermédiaires (ou groupe) – PI 2
+l10n_dz_355000,Produits finis,355000,asset_current,,True,Produits finis
+l10n_dz_355100,Produits finis (ou groupe) – PF 1,355100,asset_current,,True,Produits finis (ou groupe) – PF 1
+l10n_dz_355200,Produits finis (ou groupe) – PF 2,355200,asset_current,,True,Produits finis (ou groupe) – PF 2
+l10n_dz_355300,Produits finis (ou groupe) – PF 3,355300,asset_current,,True,Produits finis (ou groupe) – PF 3
+l10n_dz_358000,"Produits résiduels ou matières de récupération (déchets, rebuts)",358000,asset_current,,True,"Produits résiduels ou matières de récupération (déchets, rebuts)"
+l10n_dz_358100,Produits résiduels,358100,asset_current,,True,Produits résiduels
+l10n_dz_358200,Matières de récupération (à recycler),358200,asset_current,,True,Matières de récupération (à recycler)
+l10n_dz_358300,Déchets et rebuts divers destinés à être cédés ou détruits,358300,asset_current,,True,Déchets et rebuts divers destinés à être cédés ou détruits
+l10n_dz_360000,Stocks provenant d'immobilisations,360000,asset_current,,True,Stocks provenant d'immobilisations
+l10n_dz_361000,Lot de bord et pièces d'accompagnement,361000,asset_current,,True,Lot de bord et pièces d'accompagnement
+l10n_dz_362000,Organes et accessoires démantelés,362000,asset_current,,True,Organes et accessoires démantelés
+l10n_dz_365000,Pièces de rechange récupérées sur matériels,365000,asset_current,,True,Pièces de rechange récupérées sur matériels
+l10n_dz_368000,Actifs non courants destinés à être cédés(réformes),368000,asset_current,,True,Actifs non courants destinés à être cédés(réformes)
+l10n_dz_370000,"Stocks à l'extérieur (en cours de route, en dépôt ou en consignation)",370000,asset_current,,True,"Stocks à l'extérieur (en cours de route, en dépôt ou en consignation)"
+l10n_dz_371000,Matières premières en cours de réception,371000,asset_current,,True,Matières premières en cours de réception
+l10n_dz_372000,Autres approvisionnements à réceptionner,372000,asset_current,,True,Autres approvisionnements à réceptionner
+l10n_dz_373000,Stocks en dépôt ou en consignation,373000,asset_current,,True,Stocks en dépôt ou en consignation
+l10n_dz_374000,Stocks sous douanes,374000,asset_current,,True,Stocks sous douanes
+l10n_dz_380000,Achat de matières premières et fournitures stockées,380000,asset_current,,True,Achat de matières premières et fournitures stockées
+l10n_dz_380100,Achats de Marchandises (ou groupe) A,380100,asset_current,,True,Achats de Marchandises (ou groupe) A
+l10n_dz_380200,Achats de Marchandises (ou groupe) B,380200,asset_current,,True,Achats de Marchandises (ou groupe) B
+l10n_dz_381000,Achats de Matières premières et fournitures stockées,381000,asset_current,,True,Achats de Matières premières et fournitures stockées
+l10n_dz_381100,Achats de matières premières,381100,asset_current,,True,Achats de matières premières
+l10n_dz_381110,Matières (ou groupe A),381110,asset_current,,True,Matières (ou groupe A)
+l10n_dz_381120,Matières (ou groupe B),381120,asset_current,,True,Matières (ou groupe B)
+l10n_dz_381180,Autres matières premières,381180,asset_current,,True,Autres matières premières
+l10n_dz_381700,Achats de Fournitures et Accessoires,381700,asset_current,,True,Achats de Fournitures et Accessoires
+l10n_dz_381710,Achats de Fournitures A,381710,asset_current,,True,Achats de Fournitures A
+l10n_dz_381720,Achats de Fournitures B,381720,asset_current,,True,Achats de Fournitures B
+l10n_dz_381780,Achats d'autres fournitures accessoires,381780,asset_current,,True,Achats d'autres fournitures accessoires
+l10n_dz_382000,Autres approvisionnements stockés,382000,asset_current,,True,Autres approvisionnements stockés
+l10n_dz_382100,Achat de Matières consommables stockées,382100,asset_current,,True,Achat de Matières consommables stockées
+l10n_dz_382110,Achat : Matières (ou groupe) C,382110,asset_current,,True,Achat : Matières (ou groupe) C
+l10n_dz_382120,Achat : Matières (ou groupe) D,382120,asset_current,,True,Achat : Matières (ou groupe) D
+l10n_dz_382180,Achat : Autres matières consommables,382180,asset_current,,True,Achat : Autres matières consommables
+l10n_dz_382200,Achat de Fournitures consommables stockées,382200,asset_current,,True,Achat de Fournitures consommables stockées
+l10n_dz_382210,Achat : Carburant et lubrifiant – Véhicules,382210,asset_current,,True,Achat : Carburant et lubrifiant – Véhicules
+l10n_dz_382220,Achat : Petit outillage et fournitures d'ateliers,382220,asset_current,,True,Achat : Petit outillage et fournitures d'ateliers
+l10n_dz_382230,Achat : Droguerie et Produits d'entretien,382230,asset_current,,True,Achat : Droguerie et Produits d'entretien
+l10n_dz_382240,Achat : Pièces de rechange pour équipements et matériels techniques,382240,asset_current,,True,Achat : Pièces de rechange pour équipements et matériels techniques
+l10n_dz_382250,Achat : Pièces de rechange et pneumatique pour matériel de transport,382250,asset_current,,True,Achat : Pièces de rechange et pneumatique pour matériel de transport
+l10n_dz_382260,Achat : Quincaillerie générale et fournitures de magasin,382260,asset_current,,True,Achat : Quincaillerie générale et fournitures de magasin
+l10n_dz_382270,Achat : Fournitures de bureau et imprimés,382270,asset_current,,True,Achat : Fournitures de bureau et imprimés
+l10n_dz_382280,Achat : Autres fournitures consommables,382280,asset_current,,True,Achat : Autres fournitures consommables
+l10n_dz_382500,Achat de Fournitures consommables non stockées,382500,asset_current,,True,Achat de Fournitures consommables non stockées
+l10n_dz_382510,Achat non stocké de carburant,382510,asset_current,,True,Achat non stocké de carburant
+l10n_dz_382520,Achat non stocké d'énergie et de force motrice,382520,asset_current,,True,Achat non stocké d'énergie et de force motrice
+l10n_dz_382530,"Fournitures non stockées : Eau, Gaz  Electricité (bureaux)",382530,asset_current,,True,"Fournitures non stockées : Eau, Gaz  Electricité (bureaux)"
+l10n_dz_382540,Fournitures administratives et de bureautique non stockées,382540,asset_current,,True,Fournitures administratives et de bureautique non stockées
+l10n_dz_382550,Achats non stockés de fournitures d'atelier et de magasin,382550,asset_current,,True,Achats non stockés de fournitures d'atelier et de magasin
+l10n_dz_382560,Achat non stocké de Tenues de travail et de sécurité,382560,asset_current,,True,Achat non stocké de Tenues de travail et de sécurité
+l10n_dz_382580,Achat : Autres fournitures consommables non stockées,382580,asset_current,,True,Achat : Autres fournitures consommables non stockées
+l10n_dz_382600,Achat d'emballage non récupérable,382600,asset_current,,True,Achat d'emballage non récupérable
+l10n_dz_382610,Achat d'emballage perdus,382610,asset_current,,True,Achat d'emballage perdus
+l10n_dz_382620,Achat d'emballage récupérables non identifiables,382620,asset_current,,True,Achat d'emballage récupérables non identifiables
+l10n_dz_382630,Achat d'emballage à usage mixte,382630,asset_current,,True,Achat d'emballage à usage mixte
+l10n_dz_382700,Achat de Fournitures consommables non stockées,382700,asset_current,,True,Achat de Fournitures consommables non stockées
+l10n_dz_382710,Achat non stocké de carburant,382710,asset_current,,True,Achat non stocké de carburant
+l10n_dz_382720,Achat non stocké d'énergie et de force motrice (ateliers),382720,asset_current,,True,Achat non stocké d'énergie et de force motrice (ateliers)
+l10n_dz_382730,"Fournitures non stockées : Eau, Gaz & Electricité (bureaux)",382730,asset_current,,True,"Fournitures non stockées : Eau, Gaz & Electricité (bureaux)"
+l10n_dz_382740,Fournitures administratives et de bureautique non stockées,382740,asset_current,,True,Fournitures administratives et de bureautique non stockées
+l10n_dz_382750,Achats non stockés de fournitures d'atelier et de magasin,382750,asset_current,,True,Achats non stockés de fournitures d'atelier et de magasin
+l10n_dz_382760,Achat non stocké de Tenues de travail et de sécurité,382760,asset_current,,True,Achat non stocké de Tenues de travail et de sécurité
+l10n_dz_382780,Achat : Autres fournitures consommables non stockées,382780,asset_current,,True,Achat : Autres fournitures consommables non stockées
+l10n_dz_383000,Frais Accessoires sur Achats de marchandises,383000,asset_current,,True,Frais Accessoires sur Achats de marchandises
+l10n_dz_383100,Frais Accessoires sur Achats de matières premières et fournitures,383100,asset_current,,True,Frais Accessoires sur Achats de matières premières et fournitures
+l10n_dz_383200,Frais Accessoires sur Achats d'autres approvisionnements,383200,asset_current,,True,Frais Accessoires sur Achats d'autres approvisionnements
+l10n_dz_384000,Achats sans paiements,384000,asset_current,,True,Achats sans paiements
+l10n_dz_384100,Achats locaux,384100,asset_current,,True,Achats locaux
+l10n_dz_384200,Achats à l'importation,384200,asset_current,,True,Achats à l'importation
+l10n_dz_390000,Pertes de valeur sur Stocks de marchandises,390000,asset_current,,True,Pertes de valeur sur Stocks de marchandises
+l10n_dz_391000,Pertes de valeur sur Matières premières et fournitures,391000,asset_current,,True,Pertes de valeur sur Matières premières et fournitures
+l10n_dz_392000,Pertes de valeur sur Autres approvisionnements,392000,asset_current,,True,Pertes de valeur sur Autres approvisionnements
+l10n_dz_393000,Pertes de valeur sur En cours de production de biens,393000,asset_current,,True,Pertes de valeur sur En cours de production de biens
+l10n_dz_394000,Pertes de valeur sur En cours de production de services,394000,asset_current,,True,Pertes de valeur sur En cours de production de services
+l10n_dz_395000,Pertes de valeur sur stocks de produits,395000,asset_current,,True,Pertes de valeur sur stocks de produits
+l10n_dz_397000,Pertes de valeur sur Stocks à l'extérieur,397000,asset_current,,True,Pertes de valeur sur Stocks à l'extérieur
+l10n_dz_401000,Fournisseurs de biens et services,401000,liability_payable,,True,Fournisseurs de biens et services
+l10n_dz_401300,Fournisseurs de stocks,401300,liability_payable,,True,Fournisseurs de stocks
+l10n_dz_401310,Fournisseurs de stocks : Compte fournisseur par défaut,401310,liability_payable,,True,Fournisseurs de stocks : Compte fournisseur par défaut
+l10n_dz_401320,Fournisseurs de stocks : Nationaux publics,401320,liability_payable,,True,Fournisseurs de stocks : Nationaux publics
+l10n_dz_401330,Fournisseurs de stocks : Nationaux privés,401330,liability_payable,,True,Fournisseurs de stocks : Nationaux privés
+l10n_dz_401340,Fournisseurs de stocks : Etrangers,401340,liability_payable,,True,Fournisseurs de stocks : Etrangers
+l10n_dz_401600,Fournisseurs de services,401600,liability_payable,,True,Fournisseurs de services
+l10n_dz_401610,Fournisseurs de services : Nationaux publics,401610,liability_payable,,True,Fournisseurs de services : Nationaux publics
+l10n_dz_401620,Fournisseurs de services : Nationaux privés,401620,liability_payable,,True,Fournisseurs de services : Nationaux privés
+l10n_dz_401630,Fournisseurs de services : Etrangers,401630,liability_payable,,True,Fournisseurs de services : Etrangers
+l10n_dz_401700,Fournisseurs : Retenue de garantie sur stocks et services,401700,liability_payable,,True,Fournisseurs : Retenue de garantie sur stocks et services
+l10n_dz_401710,Fournisseurs : Retenue de garantie sur stocks  et services : Nationaux publics,401710,liability_payable,,True,Fournisseurs : Retenue de garantie sur stocks  et services : Nationaux publics
+l10n_dz_401720,Fournisseurs : Retenue de garantie sur stocks  et services : Nationaux privés,401720,liability_payable,,True,Fournisseurs : Retenue de garantie sur stocks  et services : Nationaux privés
+l10n_dz_401730,Fournisseurs : Retenue de garantie sur stocks  et services : Etrangers,401730,liability_payable,,True,Fournisseurs : Retenue de garantie sur stocks  et services : Etrangers
+l10n_dz_403000,Fournisseurs - Effets à payer,403000,liability_payable,,True,Fournisseurs - Effets à payer
+l10n_dz_403100,Effets à payer aux fournisseurs de stocks-,403100,liability_payable,,True,Effets à payer aux fournisseurs de stocks-
+l10n_dz_403200,Effets à payer aux fournisseurs de services-,403200,liability_payable,,True,Effets à payer aux fournisseurs de services-
+l10n_dz_404000,Fournisseurs d'immobilisations,404000,liability_payable,,True,Fournisseurs d'immobilisations
+l10n_dz_404100,Fournisseurs - Achats d'immobilisations : Nationaux – Publics,404100,liability_payable,,True,Fournisseurs - Achats d'immobilisations : Nationaux – Publics
+l10n_dz_404200,Fournisseurs - Achats d'immobilisations : Nationaux – Privés,404200,liability_payable,,True,Fournisseurs - Achats d'immobilisations : Nationaux – Privés
+l10n_dz_404300,Fournisseurs d'immobilisations : Etrangers,404300,liability_payable,,True,Fournisseurs d'immobilisations : Etrangers
+l10n_dz_404700,Fournisseurs d'immobilisations - Retenues de garantie,404700,liability_payable,,True,Fournisseurs d'immobilisations - Retenues de garantie
+l10n_dz_405000,Fournisseurs d'immobilisations - Effets à payer,405000,liability_payable,,True,Fournisseurs d'immobilisations - Effets à payer
+l10n_dz_408000,Fournisseurs - Factures non parvenues,408000,liability_payable,,True,Fournisseurs - Factures non parvenues
+l10n_dz_408100,Fournisseurs de stocks - Factures non parvenues,408100,liability_payable,,True,Fournisseurs de stocks - Factures non parvenues
+l10n_dz_408200,Fournisseurs de services - Factures non parvenues,408200,liability_payable,,True,Fournisseurs de services - Factures non parvenues
+l10n_dz_408300,Fournisseurs d'immobilisations - Factures non parvenues,408300,liability_payable,,True,Fournisseurs d'immobilisations - Factures non parvenues
+l10n_dz_408600,"Factures à recevoir des Consultants, CAC et Experts",408600,liability_payable,,True,"Factures à recevoir des Consultants, CAC et Experts"
+l10n_dz_408800,Fournisseurs - Intérêts courus à payer,408800,liability_payable,,True,Fournisseurs - Intérêts courus à payer
+l10n_dz_409000,"Fournisseurs débiteurs : avances et acomptes, RRR à obtenir",409000,liability_payable,,True,"Fournisseurs débiteurs : avances et acomptes, RRR à obtenir"
+l10n_dz_409100,Fournisseurs - Avances et acomptes  sur commandes,409100,liability_payable,,True,Fournisseurs - Avances et acomptes  sur commandes
+l10n_dz_409130,Avances et acomptes  sur acquisition de Stocks,409130,liability_payable,,True,Avances et acomptes  sur acquisition de Stocks
+l10n_dz_409160,Avances et acomptes  sur acquisition de Services,409160,liability_payable,,True,Avances et acomptes  sur acquisition de Services
+l10n_dz_409400,"Autres avances et acomptes (Consultants, CAC, Experts)",409400,liability_payable,,True,"Autres avances et acomptes (Consultants, CAC, Experts)"
+l10n_dz_409600,Fournisseurs - Créances pour emballages et matériel à rendre,409600,liability_payable,,True,Fournisseurs - Créances pour emballages et matériel à rendre
+l10n_dz_409700,Fournisseurs - à solde débiteurs,409700,liability_payable,,True,Fournisseurs - à solde débiteurs
+l10n_dz_409800,"Rabais, remises, ristournes à obtenir",409800,liability_payable,,True,"Rabais, remises, ristournes à obtenir"
+l10n_dz_411000,Clients,411000,asset_receivable,,True,Clients
+l10n_dz_411100,Clients - Ventes de biens ou de prestations de services (Compte client par défaut),411100,asset_receivable,,True,Clients - Ventes de biens ou de prestations de services (Compte client par défaut)
+l10n_dz_411400,Clients - Autres créances diverses,411400,asset_receivable,,True,Clients - Autres créances diverses
+l10n_dz_411700,Clients - Retenues de garantie,411700,asset_receivable,,True,Clients - Retenues de garantie
+l10n_dz_413000,Clients : Effets à recevoir,413000,asset_receivable,,True,Clients : Effets à recevoir
+l10n_dz_416000,Clients douteux ou litigieux,416000,asset_receivable,,True,Clients douteux ou litigieux
+l10n_dz_416100,Clients douteux ou litigieux : secteur public,416100,asset_receivable,,True,Clients douteux ou litigieux : secteur public
+l10n_dz_416200,Clients douteux ou litigieux : secteur privé,416200,asset_receivable,,True,Clients douteux ou litigieux : secteur privé
+l10n_dz_417000,Créances sur travaux ou prestations en cours,417000,asset_receivable,,True,Créances sur travaux ou prestations en cours
+l10n_dz_417100,Créances sur travaux en cours ( à l'avancement),417100,asset_receivable,,True,Créances sur travaux en cours ( à l'avancement)
+l10n_dz_417200,Créances sur travaux prestations cours (à l'avanacement),417200,asset_receivable,,True,Créances sur travaux prestations cours (à l'avanacement)
+l10n_dz_418000,Clients - Produits finis  non encore facturés,418000,asset_receivable,,True,Clients - Produits finis  non encore facturés
+l10n_dz_418100,Clients - Factures à établir : Secteur Public,418100,asset_receivable,,True,Clients - Factures à établir : Secteur Public
+l10n_dz_418200,Clients - Factures à établir : Secteur Privé,418200,asset_receivable,,True,Clients - Factures à établir : Secteur Privé
+l10n_dz_418800,Clients - Intérêts moratoires à facturer,418800,asset_receivable,,True,Clients - Intérêts moratoires à facturer
+l10n_dz_419000,Clients créditeurs - RRR à accorder et autres avoirs à établir,419000,asset_receivable,,True,Clients créditeurs - RRR à accorder et autres avoirs à établir
+l10n_dz_419100,Clients - Avances et acomptes reçus sur commandes,419100,asset_receivable,,True,Clients - Avances et acomptes reçus sur commandes
+l10n_dz_419600,Clients - Dettes pour emballages et matériels consignés,419600,asset_receivable,,True,Clients - Dettes pour emballages et matériels consignés
+l10n_dz_419700,Clients à solde créditeurs  ( a détaillé par code Tiers (est ce  nécéssaire?),419700,asset_receivable,,True,Clients à solde créditeurs  ( a détaillé par code Tiers (est ce  nécéssaire?)
+l10n_dz_419800,"Rabais, remises, ristournes à accorder et autres avoirs à établir",419800,asset_receivable,,True,"Rabais, remises, ristournes à accorder et autres avoirs à établir"
+l10n_dz_421000,Personnel - Rémunérations dues,421000,liability_current,,True,Personnel - Rémunérations dues
+l10n_dz_421100,Salaires et appointements à payer,421100,liability_current,,True,Salaires et appointements à payer
+l10n_dz_421200,Présalaires à payer,421200,liability_current,,True,Présalaires à payer
+l10n_dz_421300,Soldes de tout compte restant dus,421300,liability_current,,True,Soldes de tout compte restant dus
+l10n_dz_422000,Fonds des œuvres sociales,422000,liability_current,,True,Fonds des œuvres sociales
+l10n_dz_422100,Contributions annuelles à payer (3%),422100,liability_current,,True,Contributions annuelles à payer (3%)
+l10n_dz_422900,Autres avances pour le compte des oeuvres sociales,422900,liability_current,,True,Autres avances pour le compte des oeuvres sociales
+l10n_dz_423000,Participation des salariés au résultat,423000,liability_current,,True,Participation des salariés au résultat
+l10n_dz_423100,Quote-part de bénéfice à répartir,423100,liability_current,,True,Quote-part de bénéfice à répartir
+l10n_dz_425000,Personnel - Avances et acomptes,425000,liability_current,,True,Personnel - Avances et acomptes
+l10n_dz_425100,Avances sur salaires,425100,liability_current,,True,Avances sur salaires
+l10n_dz_425600,Avances sur frais de mission,425600,liability_current,,True,Avances sur frais de mission
+l10n_dz_425800,Autres avances exceptionelles,425800,liability_current,,True,Autres avances exceptionelles
+l10n_dz_426000,Personnel - Dépôts reçu,426000,liability_current,,True,Personnel - Dépôts reçu
+l10n_dz_426100,Frais médicaux à rembourser,426100,liability_current,,True,Frais médicaux à rembourser
+l10n_dz_426800,Autres dépots et prestations reçus au profit du personel,426800,liability_current,,True,Autres dépots et prestations reçus au profit du personel
+l10n_dz_427000,Personnel - Oppositions,427000,liability_current,,True,Personnel - Oppositions
+l10n_dz_427100,Saisie-arrêt et cession de rémunération (sur décision de Justice),427100,liability_current,,True,Saisie-arrêt et cession de rémunération (sur décision de Justice)
+l10n_dz_427200,Retenue sur prêts sociaux,427200,liability_current,,True,Retenue sur prêts sociaux
+l10n_dz_427300,Retenue pour fonds de solidarité nationale et internationale,427300,liability_current,,True,Retenue pour fonds de solidarité nationale et internationale
+l10n_dz_427400,Retenue sur loyers logements du personnel,427400,liability_current,,True,Retenue sur loyers logements du personnel
+l10n_dz_427500,Salaires bloqués,427500,liability_current,,True,Salaires bloqués
+l10n_dz_427800,Autres retenues sur salaires,427800,liability_current,,True,Autres retenues sur salaires
+l10n_dz_428000,Personnel - Charges à payer et produits à recevoir,428000,liability_current,,True,Personnel - Charges à payer et produits à recevoir
+l10n_dz_428100,Dettes provisionnées pour congés à payer,428100,liability_current,,True,Dettes provisionnées pour congés à payer
+l10n_dz_428600,Frais de mission à payer,428600,liability_current,,True,Frais de mission à payer
+l10n_dz_428800,Personnel : Autres charges à payer,428800,liability_current,,True,Personnel : Autres charges à payer
+l10n_dz_428900,Personnel : Produits à recevoir,428900,liability_current,,True,Personnel : Produits à recevoir
+l10n_dz_431000,Sécurité Sociale,431000,liability_current,,True,Sécurité Sociale
+l10n_dz_431100,Retenue sécurité sociale part( des employés),431100,liability_current,,True,Retenue sécurité sociale part( des employés)
+l10n_dz_431200,Cotisations FNPOS,431200,liability_current,,True,Cotisations FNPOS
+l10n_dz_431300,CNAS à payer ( part employeur),431300,liability_current,,True,CNAS à payer ( part employeur)
+l10n_dz_431400,Cotisations CASNOS à payer,431400,liability_current,,True,Cotisations CASNOS à payer
+l10n_dz_432000,Autres organismes sociaux,432000,liability_current,,True,Autres organismes sociaux
+l10n_dz_432100,Cotisations Mutuelle à payer,432100,liability_current,,True,Cotisations Mutuelle à payer
+l10n_dz_432200,Cotisations OPREBAT à payer,432200,liability_current,,True,Cotisations OPREBAT à payer
+l10n_dz_432300,Cotisations CACOBATPH à payer,432300,liability_current,,True,Cotisations CACOBATPH à payer
+l10n_dz_432600,Assurance groupe (Quote-part employeur) à payer,432600,liability_current,,True,Assurance groupe (Quote-part employeur) à payer
+l10n_dz_432700,Assurance groupe (Quote-part des travailleurs) à payer,432700,liability_current,,True,Assurance groupe (Quote-part des travailleurs) à payer
+l10n_dz_432800,Autres organismes sociaux,432800,liability_current,,True,Autres organismes sociaux
+l10n_dz_438000,Organismes sociaux - Charges à payer et produits à recevoir,438000,liability_current,,True,Organismes sociaux - Charges à payer et produits à recevoir
+l10n_dz_438600,Organismes sociaux : charges sociales sur congés à payer,438600,liability_current,,True,Organismes sociaux : charges sociales sur congés à payer
+l10n_dz_438800,Organismes sociaux : Autres charges à payer,438800,liability_current,,True,Organismes sociaux : Autres charges à payer
+l10n_dz_438900,"Organismes sociaux, produits à recevoir",438900,liability_current,,True,"Organismes sociaux, produits à recevoir"
+l10n_dz_441000,"État et collectivités publiques, subventions à recevoir",441000,liability_current,,True,"État et collectivités publiques, subventions à recevoir"
+l10n_dz_441100,Subventions d'investissement à recevoir,441100,liability_current,,True,Subventions d'investissement à recevoir
+l10n_dz_441200,Subventions d'exploitation à recevoir,441200,liability_current,,True,Subventions d'exploitation à recevoir
+l10n_dz_441300,Subventions d'équilibre à recevoir,441300,liability_current,,True,Subventions d'équilibre à recevoir
+l10n_dz_441400,Subventions certification ISO à recevoir,441400,liability_current,,True,Subventions certification ISO à recevoir
+l10n_dz_441800,Autres subventions et aides publiques à recevoir,441800,liability_current,,True,Autres subventions et aides publiques à recevoir
+l10n_dz_441900,Avances sur subventions à recevoir,441900,liability_current,,True,Avances sur subventions à recevoir
+l10n_dz_442000,État -Impôts et taxes recouvrables sur des tiers,442000,liability_current,,True,État -Impôts et taxes recouvrables sur des tiers
+l10n_dz_442100,IRG retenu sur salaires (barème),442100,liability_current,,True,IRG retenu sur salaires (barème)
+l10n_dz_442200,IRG – Libératoire sur rappels de salaires et participation,442200,liability_current,,True,IRG – Libératoire sur rappels de salaires et participation
+l10n_dz_442300,IRG – Libératoire sur bénéfices distribués,442300,liability_current,,True,IRG – Libératoire sur bénéfices distribués
+l10n_dz_442400,IRG – Libératoire sur revenus mobiliers,442400,liability_current,,True,IRG – Libératoire sur revenus mobiliers
+l10n_dz_442500,IRG – Libératoire sur Jetons de présence et tantièmes,442500,liability_current,,True,IRG – Libératoire sur Jetons de présence et tantièmes
+l10n_dz_442600,IRG – Libératoire retenu à la source aux consultants,442600,liability_current,,True,IRG – Libératoire retenu à la source aux consultants
+l10n_dz_442800,Autres impôts retenus à la source,442800,liability_current,,True,Autres impôts retenus à la source
+l10n_dz_443000,Opérations particulières avec l'Etat et les collectivités publiques,443000,liability_current,,True,Opérations particulières avec l'Etat et les collectivités publiques
+l10n_dz_443100,Créances sur l'Etat - Indeminisation,443100,liability_current,,True,Créances sur l'Etat - Indeminisation
+l10n_dz_443200,Avances pour compte ANEM - Emplois aidés,443200,liability_current,,True,Avances pour compte ANEM - Emplois aidés
+l10n_dz_443800,Créances ou dettes résultant du changement de la réglementation fiscale,443800,liability_current,,True,Créances ou dettes résultant du changement de la réglementation fiscale
+l10n_dz_444000,État - Impôts sur les résultats,444000,liability_current,,True,État - Impôts sur les résultats
+l10n_dz_444100,Acomptes provisionnels sur IBS,444100,liability_current,,True,Acomptes provisionnels sur IBS
+l10n_dz_444900,Impôts sur les bénéfices – IBS à payer,444900,liability_current,,True,Impôts sur les bénéfices – IBS à payer
+l10n_dz_445000,État - Taxes sur le chiffre d'affaires,445000,liability_current,,True,État - Taxes sur le chiffre d'affaires
+l10n_dz_445500,TVA à décaisser,445500,liability_current,,True,TVA à décaisser
+l10n_dz_445510,TVA à décaisser (à payer sur G.50),445510,liability_current,,True,TVA à décaisser (à payer sur G.50)
+l10n_dz_445520,Obligations cautionnées (au profit des douanes),445520,liability_current,,True,Obligations cautionnées (au profit des douanes)
+l10n_dz_445600,TVA récupérable et précompte,445600,liability_current,,True,TVA récupérable et précompte
+l10n_dz_445620,TVA récupérable sur immobilisations,445620,liability_current,,True,TVA récupérable sur immobilisations
+l10n_dz_445630,TVA transférée par d'autres entreprises,445630,liability_current,,True,TVA transférée par d'autres entreprises
+l10n_dz_445660,TVA récupérable sur achats de stocks et de services,445660,liability_current,,True,TVA récupérable sur achats de stocks et de services
+l10n_dz_445680,Crédit de TVA à reporter (précompte),445680,liability_current,,True,Crédit de TVA à reporter (précompte)
+l10n_dz_445700,TVA Collectée,445700,liability_current,,True,TVA Collectée
+l10n_dz_445710,TVA collectée (Taux Normal :19%),445710,liability_current,,True,TVA collectée (Taux Normal :19%)
+l10n_dz_445720,TVA collectée (Taux Réduit : 9%),445720,liability_current,,True,TVA collectée (Taux Réduit : 9%)
+l10n_dz_445750,Droit de timbre perçus au profit du trésor,445750,liability_current,,True,Droit de timbre perçus au profit du trésor
+l10n_dz_445800,TVA à régulariser,445800,liability_current,,True,TVA à régulariser
+l10n_dz_445830,Remboursement de TVA demandé,445830,liability_current,,True,Remboursement de TVA demandé
+l10n_dz_445840,TVA récupérée d'avance ou en attente de régularisation,445840,liability_current,,True,TVA récupérée d'avance ou en attente de régularisation
+l10n_dz_445860,TVA sur facture d'achats non parvenues,445860,liability_current,,True,TVA sur facture d'achats non parvenues
+l10n_dz_445870,TVA sur factures de ventes ou de préstations à établir,445870,liability_current,,True,TVA sur factures de ventes ou de préstations à établir
+l10n_dz_446000,Organismes internationaux,446000,liability_current,,True,Organismes internationaux
+l10n_dz_446100,Fonds de solidarité internationale,446100,liability_current,,True,Fonds de solidarité internationale
+l10n_dz_446200,Subventions d’organismes étrangers,446200,liability_current,,True,Subventions d’organismes étrangers
+l10n_dz_447000,"Autres impôts, taxes et versements assimilés",447000,liability_current,,True,"Autres impôts, taxes et versements assimilés"
+l10n_dz_447100,Taxe sur l’activité professionnelle – TAP  à payer (sur G.50),447100,liability_current,,True,Taxe sur l’activité professionnelle – TAP  à payer (sur G.50)
+l10n_dz_447200,Taxe sur l’apprentissage et la formation professionnelle,447200,liability_current,,True,Taxe sur l’apprentissage et la formation professionnelle
+l10n_dz_447300,Taxe sur l’environnement – (Écotaxe),447300,liability_current,,True,Taxe sur l’environnement – (Écotaxe)
+l10n_dz_447400,Droits d’enregistrement à payer,447400,liability_current,,True,Droits d’enregistrement à payer
+l10n_dz_447500,Taxe foncière à payer,447500,liability_current,,True,Taxe foncière à payer
+l10n_dz_447600,Taxes spéciales (ou spécifiques) à payer,447600,liability_current,,True,Taxes spéciales (ou spécifiques) à payer
+l10n_dz_447800,"Autres droits, impôts et taxes à payer",447800,liability_current,,True,"Autres droits, impôts et taxes à payer"
+l10n_dz_448000,État - Charges à payer et produits à recevoir (hors impôts),448000,liability_current,,True,État - Charges à payer et produits à recevoir (hors impôts)
+l10n_dz_448200,Etats Charges à payer : charges fiscales sur congés à payer,448200,liability_current,,True,Etats Charges à payer : charges fiscales sur congés à payer
+l10n_dz_448600,Rappel d'impôts à payer hors IBS,448600,liability_current,,True,Rappel d'impôts à payer hors IBS
+l10n_dz_448700,"Etat, Produits à recevoir : Trop versés sur impôts",448700,liability_current,,True,"Etat, Produits à recevoir : Trop versés sur impôts"
+l10n_dz_448800,"Etat, Produits à recevoir : Dégrèvement d'impôts",448800,liability_current,,True,"Etat, Produits à recevoir : Dégrèvement d'impôts"
+l10n_dz_451000,Opérations Groupe,451000,liability_current,,True,Opérations Groupe
+l10n_dz_451100,Avances de fonds,451100,liability_current,,True,Avances de fonds
+l10n_dz_451800,Autres opérations,451800,liability_current,,True,Autres opérations
+l10n_dz_455000,Associés - Comptes courants,455000,liability_current,,True,Associés - Comptes courants
+l10n_dz_455100,Associés - Comptes courants: Principal,455100,liability_current,,True,Associés - Comptes courants: Principal
+l10n_dz_455600,Associés - Comptes courants: Intérêts courus,455600,liability_current,,True,Associés - Comptes courants: Intérêts courus
+l10n_dz_456000,Associés - Opérations sur le capital,456000,liability_current,,True,Associés - Opérations sur le capital
+l10n_dz_456100,Associés - Comptes d'apport en société,456100,liability_current,,True,Associés - Comptes d'apport en société
+l10n_dz_456110,Associés: Apports en nature,456110,liability_current,,True,Associés: Apports en nature
+l10n_dz_456150,Associés: Apports en numéraire,456150,liability_current,,True,Associés: Apports en numéraire
+l10n_dz_456200,"Associés  - Capital souscrit, appelé, non versé",456200,liability_current,,True,"Associés  - Capital souscrit, appelé, non versé"
+l10n_dz_456300,Associés - Versements reçus sur augmentation de capital,456300,liability_current,,True,Associés - Versements reçus sur augmentation de capital
+l10n_dz_456400,Associés - Versements anticipés,456400,liability_current,,True,Associés - Versements anticipés
+l10n_dz_456600,Actionnaires défaillants,456600,liability_current,,True,Actionnaires défaillants
+l10n_dz_456700,Associés - Capital à rembourser,456700,liability_current,,True,Associés - Capital à rembourser
+l10n_dz_457000,Associés - Dividendes à payer,457000,liability_current,,True,Associés - Dividendes à payer
+l10n_dz_457100,Coupons d'action (Intérêts statuaires),457100,liability_current,,True,Coupons d'action (Intérêts statuaires)
+l10n_dz_457200,Dividende mis en paiement,457200,liability_current,,True,Dividende mis en paiement
+l10n_dz_457700,Tantièmes à payer aux administrateurs et gérants,457700,liability_current,,True,Tantièmes à payer aux administrateurs et gérants
+l10n_dz_458000,Associés – opérations faites en commun ou en groupement,458000,liability_current,,True,Associés – opérations faites en commun ou en groupement
+l10n_dz_458600,Opérations faites en commun : Charges à payer,458600,liability_current,,True,Opérations faites en commun : Charges à payer
+l10n_dz_458700,Opérations faites en commun : Produits à recevoir,458700,liability_current,,True,Opérations faites en commun : Produits à recevoir
+l10n_dz_458800,Intérêts courus,458800,liability_current,,True,Intérêts courus
+l10n_dz_462000,Créances sur cessions d'immobilisations,462000,asset_current,,True,Créances sur cessions d'immobilisations
+l10n_dz_462100,Fonds à recevoir sur cession d'actifs réformées,462100,asset_current,,True,Fonds à recevoir sur cession d'actifs réformées
+l10n_dz_462200,Débiteurs sur cessions d'immobilisations,462200,asset_current,,True,Débiteurs sur cessions d'immobilisations
+l10n_dz_464000,Dettes sur acquisitions de VMP et instruments financiers dérivés,464000,asset_current,,True,Dettes sur acquisitions de VMP et instruments financiers dérivés
+l10n_dz_465000,Créances sur cessions de VMP et instruments financiers dérivés,465000,asset_current,,True,Créances sur cessions de VMP et instruments financiers dérivés
+l10n_dz_467000,Autres comptes débiteurs ou créditeurs,467000,asset_current,,True,Autres comptes débiteurs ou créditeurs
+l10n_dz_467100,"Fonds en dépôt chez les officiers ministériels (notaires, commis, priseurs)",467100,asset_current,,True,"Fonds en dépôt chez les officiers ministériels (notaires, commis, priseurs)"
+l10n_dz_467200,Avances sur frais divers,467200,asset_current,,True,Avances sur frais divers
+l10n_dz_467300,Achats pour compte de tiers,467300,asset_current,,True,Achats pour compte de tiers
+l10n_dz_467400,Autres avances pour compte,467400,asset_current,,True,Autres avances pour compte
+l10n_dz_467500,Jetons de présence à payer aux Administrateurs,467500,asset_current,,True,Jetons de présence à payer aux Administrateurs
+l10n_dz_467600,Débiteurs divers (à détailler),467600,asset_current,,True,Débiteurs divers (à détailler)
+l10n_dz_467900,Créditeurs divers à détailler,467900,asset_current,,True,Créditeurs divers à détailler
+l10n_dz_468000,Divers - Charges à payer et produits à recevoir,468000,asset_current,,True,Divers - Charges à payer et produits à recevoir
+l10n_dz_468600,Charges à payer,468600,asset_current,,True,Charges à payer
+l10n_dz_468610,Amendes et pénalités à payer,468610,asset_current,,True,Amendes et pénalités à payer
+l10n_dz_468620,Autres charges opérationnelles à payer,468620,asset_current,,True,Autres charges opérationnelles à payer
+l10n_dz_468700,Produits à recevoir,468700,asset_current,,True,Produits à recevoir
+l10n_dz_468710,Remboursement indémnisations d'assurances à percevoir,468710,asset_current,,True,Remboursement indémnisations d'assurances à percevoir
+l10n_dz_468720,Autres produits opérationnels à recevoir,468720,asset_current,,True,Autres produits opérationnels à recevoir
+l10n_dz_470000,Comptes transitoires ou d'attente,470000,asset_current,,True,Comptes transitoires ou d'attente
+l10n_dz_476000,Dépenses en attente d'imputation,476000,asset_current,,True,Dépenses en attente d'imputation
+l10n_dz_477000,Recettes en attente d'imputation,477000,asset_current,,True,Recettes en attente d'imputation
+l10n_dz_478000,Autres opérations à régulariser,478000,asset_current,,True,Autres opérations à régulariser
+l10n_dz_481000,Provisions - passifs courants,481000,asset_prepayments,,True,Provisions - passifs courants
+l10n_dz_481100,Provisions pour procès et litiges (moins de 12 mois),481100,asset_prepayments,,True,Provisions pour procès et litiges (moins de 12 mois)
+l10n_dz_481200,Provisions pour garanties données aux clients(moins de 12 mois),481200,asset_prepayments,,True,Provisions pour garanties données aux clients(moins de 12 mois)
+l10n_dz_481500,Provisions pour amendes et pénalités,481500,asset_prepayments,,True,Provisions pour amendes et pénalités
+l10n_dz_481600,Provisions pour pertes de change,481600,asset_prepayments,,True,Provisions pour pertes de change
+l10n_dz_481800,Autres provisions : Passifs courants,481800,asset_prepayments,,True,Autres provisions : Passifs courants
+l10n_dz_486000,Charges constatées d'avance,486000,asset_prepayments,,True,Charges constatées d'avance
+l10n_dz_486100,Loyers payés d’avance (autre que cautionnement),486100,asset_prepayments,,True,Loyers payés d’avance (autre que cautionnement)
+l10n_dz_486200,Primes d’assurances payées d’avance,486200,asset_prepayments,,True,Primes d’assurances payées d’avance
+l10n_dz_486300,Abonnements payés d’avance,486300,asset_prepayments,,True,Abonnements payés d’avance
+l10n_dz_486600,Charges financières différées,486600,asset_prepayments,,True,Charges financières différées
+l10n_dz_486800,Autres charges constatées d’avance,486800,asset_prepayments,,True,Autres charges constatées d’avance
+l10n_dz_487000,Produits constatés d'avance,487000,asset_prepayments,,True,Produits constatés d'avance
+l10n_dz_487100,Loyers perçus d’avance  (immeubles de placement),487100,asset_prepayments,,True,Loyers perçus d’avance  (immeubles de placement)
+l10n_dz_487700,Subventions à étaler,487700,asset_prepayments,,True,Subventions à étaler
+l10n_dz_487800,Autres produits constatés d’avance,487800,asset_prepayments,,True,Autres produits constatés d’avance
+l10n_dz_491000,Pertes de valeur sur comptes de clients,491000,asset_current,,True,Pertes de valeur sur comptes de clients
+l10n_dz_491100,Pertes de valeurs sur comptes de clients,491100,asset_current,,True,Pertes de valeurs sur comptes de clients
+l10n_dz_491200,Pertes de valeurs sur retenues de garanties,491200,asset_current,,True,Pertes de valeurs sur retenues de garanties
+l10n_dz_495000,Pertes de valeur sur comptes du groupe et sur associés,495000,asset_current,,True,Pertes de valeur sur comptes du groupe et sur associés
+l10n_dz_495100,Pertes de valeur sur compte du groupe,495100,asset_current,,True,Pertes de valeur sur compte du groupe
+l10n_dz_495500,Pertes de valeur sur comptes courants des associés,495500,asset_current,,True,Pertes de valeur sur comptes courants des associés
+l10n_dz_495800,Pertes de valeur sur opérations faites en commun (SEP – GIE),495800,asset_current,,True,Pertes de valeur sur opérations faites en commun (SEP – GIE)
+l10n_dz_496000,Pertes de valeur sur comptes de débiteurs divers,496000,asset_current,,True,Pertes de valeur sur comptes de débiteurs divers
+l10n_dz_496200,Pertes de valeur sur créances de cessions d'immobilisations,496200,asset_current,,True,Pertes de valeur sur créances de cessions d'immobilisations
+l10n_dz_496500,Pertes de valeur sur créances de cessions de VMP,496500,asset_current,,True,Pertes de valeur sur créances de cessions de VMP
+l10n_dz_496700,Pertes de valeur sur autres comptes débiteurs,496700,asset_current,,True,Pertes de valeur sur autres comptes débiteurs
+l10n_dz_498000,Pertes de valeur sur autres comptes de tiers,498000,asset_current,,True,Pertes de valeur sur autres comptes de tiers
+l10n_dz_501000,Parts dans entreprises liées,501000,asset_current,,True,Parts dans entreprises liées
+l10n_dz_502000,Actions propres,502000,asset_current,,True,Actions propres
+l10n_dz_503000,Autres actions ou titres conférant un droit de propriété,503000,asset_current,,True,Autres actions ou titres conférant un droit de propriété
+l10n_dz_503100,Actions détenues en vue de la revente,503100,asset_current,,True,Actions détenues en vue de la revente
+l10n_dz_506000,"Obligations, bons du trésor et bons de caisse à court terme",506000,asset_current,,True,"Obligations, bons du trésor et bons de caisse à court terme"
+l10n_dz_506100,Obligations à moins de 12 mois,506100,asset_current,,True,Obligations à moins de 12 mois
+l10n_dz_506200,Bons du Trésor à court terme,506200,asset_current,,True,Bons du Trésor à court terme
+l10n_dz_506300,Bons de caisse à court terme,506300,asset_current,,True,Bons de caisse à court terme
+l10n_dz_508000,Autres valeurs mobilières de placement et autres créances assimilées,508000,asset_current,,True,Autres valeurs mobilières de placement et autres créances assimilées
+l10n_dz_508100,Autres valeurs mobilières,508100,asset_current,,True,Autres valeurs mobilières
+l10n_dz_508200,Bons de souscription et instruments financiers composés,508200,asset_current,,True,Bons de souscription et instruments financiers composés
+l10n_dz_508300,Certificat d'investissement (Art. 715-61 bis du C.Com),508300,asset_current,,True,Certificat d'investissement (Art. 715-61 bis du C.Com)
+l10n_dz_508400,Certificat de droit de vote (Art. 715-61 bis du C.Com),508400,asset_current,,True,Certificat de droit de vote (Art. 715-61 bis du C.Com)
+l10n_dz_508800,Intérêts courus,508800,asset_current,,True,Intérêts courus
+l10n_dz_509000,Versements restant à effectuer sur valeurs mobilières de placement non libérées,509000,asset_current,,True,Versements restant à effectuer sur valeurs mobilières de placement non libérées
+l10n_dz_511000,Valeurs à l'encaissement,511000,asset_cash,,True,Valeurs à l'encaissement
+l10n_dz_511100,Chèques à encaisser,511100,asset_cash,,True,Chèques à encaisser
+l10n_dz_511200,Traite remises à l'escompte,511200,asset_cash,,True,Traite remises à l'escompte
+l10n_dz_511800,Autres valeurs à l'encaissement,511800,asset_cash,,True,Autres valeurs à l'encaissement
+l10n_dz_512000,Banque,512000,asset_cash,,True,Banque
+l10n_dz_512005,020 0005 17465342002 65 (copie),512005,asset_cash,,False,020 0005 17465342002 65 (copie)
+l10n_dz_512006,020 0005 17465342001 68,512006,asset_cash,,False,020 0005 17465342001 68
+l10n_dz_512007,1212,512007,asset_cash,,False,1212
+l10n_dz_512100,Compte bancaire : Dinars,512100,asset_cash,,True,Compte bancaire : Dinars
+l10n_dz_512200,Compte bancaire : Devise,512200,asset_cash,,True,Compte bancaire : Devise
+l10n_dz_515000,Trésor Public et établissements publics,515000,asset_cash,,True,Trésor Public et établissements publics
+l10n_dz_515100,Caisses du Trésor Public,515100,asset_cash,,True,Caisses du Trésor Public
+l10n_dz_515200,Caisses des établissements publics,515200,asset_cash,,True,Caisses des établissements publics
+l10n_dz_517000,Autres organismes financiers,517000,asset_cash,,True,Autres organismes financiers
+l10n_dz_517100,Banque postale (C.C.P),517100,asset_cash,,True,Banque postale (C.C.P)
+l10n_dz_517200,Sociétés de leasing (crédit-bail),517200,asset_cash,,True,Sociétés de leasing (crédit-bail)
+l10n_dz_517300,Sociétés de factoring (affacturage),517300,asset_cash,,True,Sociétés de factoring (affacturage)
+l10n_dz_517600,Société de bourse,517600,asset_cash,,True,Société de bourse
+l10n_dz_517800,Société de bourse,517800,asset_cash,,True,Société de bourse
+l10n_dz_518000,Intérêts courus,518000,asset_cash,,True,Intérêts courus
+l10n_dz_518600,Intérêts courus à payer (agios à payer),518600,asset_cash,,True,Intérêts courus à payer (agios à payer)
+l10n_dz_518700,Intérêts courus à recevoir(intérêts des dépôts créditeurs à recevoir),518700,asset_cash,,True,Intérêts courus à recevoir(intérêts des dépôts créditeurs à recevoir)
+l10n_dz_519000,Concours bancaires courants,519000,asset_cash,,True,Concours bancaires courants
+l10n_dz_519100,Facilité de caisse,519100,asset_cash,,True,Facilité de caisse
+l10n_dz_519200,Découvert bancaire,519200,asset_cash,,True,Découvert bancaire
+l10n_dz_519300,Autres avances bancaires,519300,asset_cash,,True,Autres avances bancaires
+l10n_dz_519800,Intérêts courus sur concours bancaires courants,519800,asset_cash,,True,Intérêts courus sur concours bancaires courants
+l10n_dz_521000,Instruments financiers dérivés : Actifs,521000,asset_current,,True,Instruments financiers dérivés : Actifs
+l10n_dz_529000,Instruments financiers dérivés : Passifs,529000,asset_current,,True,Instruments financiers dérivés : Passifs
+l10n_dz_530000,Liquidités,530000,asset_cash,,True,Liquidités
+l10n_dz_530001,Espèces,530001,asset_cash,,False,Espèces
+l10n_dz_531000,Caisse siège social,531000,asset_cash,,True,Caisse siège social
+l10n_dz_531100,Caisse principale en DA,531100,asset_cash,,True,Caisse principale en DA
+l10n_dz_531400,Caisse principale en devises,531400,asset_cash,,True,Caisse principale en devises
+l10n_dz_532000,Caisse Auxiliaire,532000,asset_cash,,True,Caisse Auxiliaire
+l10n_dz_532100,Caisse succursale (ou usine) A,532100,asset_cash,,True,Caisse succursale (ou usine) A
+l10n_dz_532200,Caisse succursale (ou usine) B,532200,asset_cash,,True,Caisse succursale (ou usine) B
+l10n_dz_541000,Régies d'avances,541000,asset_cash,,True,Régies d'avances
+l10n_dz_542000,Accréditifs,542000,asset_cash,,True,Accréditifs
+l10n_dz_580000,Transfert de liquidités,580000,asset_current,,True,Transfert de liquidités
+l10n_dz_581000,Virements de fonds,581000,asset_current,,True,Virements de fonds
+l10n_dz_581100,Virements interbancaires,581100,asset_current,,True,Virements interbancaires
+l10n_dz_581200,Versements d'espèces en banques,581200,asset_current,,True,Versements d'espèces en banques
+l10n_dz_581300,Alimentation caisses,581300,asset_current,,True,Alimentation caisses
+l10n_dz_588000,Autres virements internes,588000,asset_current,,True,Autres virements internes
+l10n_dz_588600,Achats au comptant,588600,asset_current,,True,Achats au comptant
+l10n_dz_588700,Ventes au comptant,588700,asset_current,,True,Ventes au comptant
+l10n_dz_591000,Pertes de valeur sur valeurs en banque et Etablissements financiers,591000,asset_current,,True,Pertes de valeur sur valeurs en banque et Etablissements financiers
+l10n_dz_594000,Pertes de valeurs sur régies d'avances et accréditifs,594000,asset_current,,True,Pertes de valeurs sur régies d'avances et accréditifs
+l10n_dz_600000,Achats de marchandises vendue,600000,expense,,False,Achats de marchandises vendue
+l10n_dz_600100,Marchandise (ou groupe) A,600100,expense,,False,Marchandise (ou groupe) A
+l10n_dz_600200,Marchandise (ou groupe) B,600200,expense,,False,Marchandise (ou groupe) B
+l10n_dz_601000,Matières premières et fournitures consommées,601000,expense,,False,Matières premières et fournitures consommées
+l10n_dz_601100,Matières premières consommées,601100,expense,,False,Matières premières consommées
+l10n_dz_601110,Matières (ou groupe) A,601110,expense,,False,Matières (ou groupe) A
+l10n_dz_601120,Matières (ou groupe) B,601120,expense,,False,Matières (ou groupe) B
+l10n_dz_601180,Autres matières premières consommées,601180,expense,,False,Autres matières premières consommées
+l10n_dz_601700,Fournitures accessoires consommées,601700,expense,,False,Fournitures accessoires consommées
+l10n_dz_601710,Fournitures A,601710,expense,,False,Fournitures A
+l10n_dz_601720,Fournitures B,601720,expense,,False,Fournitures B
+l10n_dz_601780,Autres fournitures accessoires consommées,601780,expense,,False,Autres fournitures accessoires consommées
+l10n_dz_602000,Autres approvisionnements consommés,602000,expense,,False,Autres approvisionnements consommés
+l10n_dz_602100,Matières consommables,602100,expense,,False,Matières consommables
+l10n_dz_602110,Matières (ou groupe) C,602110,expense,,False,Matières (ou groupe) C
+l10n_dz_602120,Matières (ou groupe) D,602120,expense,,False,Matières (ou groupe) D
+l10n_dz_602180,Autres matières consommées,602180,expense,,False,Autres matières consommées
+l10n_dz_602200,Fournitures consommables,602200,expense,,False,Fournitures consommables
+l10n_dz_602210,Carburant et lubrifiant – Véhicules,602210,expense,,False,Carburant et lubrifiant – Véhicules
+l10n_dz_602220,Petit outillage et fournitures d'ateliers,602220,expense,,False,Petit outillage et fournitures d'ateliers
+l10n_dz_602230,Droguerie et Produits d'entretien,602230,expense,,False,Droguerie et Produits d'entretien
+l10n_dz_602240,Pièces de rechange pour équipements et matériels techniques,602240,expense,,False,Pièces de rechange pour équipements et matériels techniques
+l10n_dz_602250,Pièces de rechange et pneumatique pour matériel de transport,602250,expense,,False,Pièces de rechange et pneumatique pour matériel de transport
+l10n_dz_602260,Quincaillerie générale et fournitures de magasin,602260,expense,,False,Quincaillerie générale et fournitures de magasin
+l10n_dz_602270,Fournitures de bureau et imprimés,602270,expense,,False,Fournitures de bureau et imprimés
+l10n_dz_602280,Autres fournitures consommées,602280,expense,,False,Autres fournitures consommées
+l10n_dz_602600,Emballages consommés,602600,expense,,False,Emballages consommés
+l10n_dz_602610,Emballages perdus consommés,602610,expense,,False,Emballages perdus consommés
+l10n_dz_602620,Emballages récupérables non identifiables consommés,602620,expense,,False,Emballages récupérables non identifiables consommés
+l10n_dz_602630,Emballages récupérables non identifiables consommés,602630,expense,,False,Emballages récupérables non identifiables consommés
+l10n_dz_603000,Variations de stocks de marchandises,603000,expense,,False,Variations de stocks de marchandises
+l10n_dz_603100,Variation des stocks de matières premières (et fournitures),603100,expense,,False,Variation des stocks de matières premières (et fournitures)
+l10n_dz_603200,Variation des stocks des autres approvisionnements,603200,expense,,False,Variation des stocks des autres approvisionnements
+l10n_dz_604000,Achats d'études et prestations de services,604000,expense,,False,Achats d'études et prestations de services
+l10n_dz_604100,Achats d'études,604100,expense,,False,Achats d'études
+l10n_dz_604200,Achats de prestations de services,604200,expense,,False,Achats de prestations de services
+l10n_dz_605000,Achats de matériel équipements et travaux,605000,expense,,False,Achats de matériel équipements et travaux
+l10n_dz_605100,Achats d’immobilisations de faible valeur : Petit matériel et outillage,605100,expense,,False,Achats d’immobilisations de faible valeur : Petit matériel et outillage
+l10n_dz_605200,Achats d’immobilisations de faible valeur : Mobilier,605200,expense,,False,Achats d’immobilisations de faible valeur : Mobilier
+l10n_dz_605300,Achats d’immobilisations de faible valeur : Matériel informatique,605300,expense,,False,Achats d’immobilisations de faible valeur : Matériel informatique
+l10n_dz_605400,Achats d’immobilisations de faible valeur : Matériel de communication,605400,expense,,False,Achats d’immobilisations de faible valeur : Matériel de communication
+l10n_dz_605800,"Autres achats de matériels, d'équipements et de travaux",605800,expense,,False,"Autres achats de matériels, d'équipements et de travaux"
+l10n_dz_607000,Achats non stockés de matières et fournitures,607000,expense,,False,Achats non stockés de matières et fournitures
+l10n_dz_607100,Achat non stocké de carburant,607100,expense,,False,Achat non stocké de carburant
+l10n_dz_607200,"Fournitures non stockées : Eau, Gaz et Electricité(énergie)",607200,expense,,False,"Fournitures non stockées : Eau, Gaz et Electricité(énergie)"
+l10n_dz_607300,Fournitures administratives et de bureautique non stockées,607300,expense,,False,Fournitures administratives et de bureautique non stockées
+l10n_dz_607400,Fournitures administratives et de bureautique non stockées,607400,expense,,False,Fournitures administratives et de bureautique non stockées
+l10n_dz_607500,Achats non stockés de fournitures d'atelier et de magasin,607500,expense,,False,Achats non stockés de fournitures d'atelier et de magasin
+l10n_dz_607600,Achat non stocké de Tenues de travail et de sécurité,607600,expense,,False,Achat non stocké de Tenues de travail et de sécurité
+l10n_dz_607800,Achats Autres matières et fournitures non stockées,607800,expense,,False,Achats Autres matières et fournitures non stockées
+l10n_dz_608000,Frais accessoires incorporés aux achats (Inventaire intermitent),608000,expense,,False,Frais accessoires incorporés aux achats (Inventaire intermitent)
+l10n_dz_609000,"Rabais, remises et ristournes obtenus sur achats",609000,expense,,False,"Rabais, remises et ristournes obtenus sur achats"
+l10n_dz_609100,R.R.R- sur acahts de marchandises,609100,expense,,False,R.R.R- sur acahts de marchandises
+l10n_dz_609200,R.R.R- sur achats de matières premières,609200,expense,,False,R.R.R- sur achats de matières premières
+l10n_dz_609300,R.R.R- sur achat d'autres approvisionnements stockés,609300,expense,,False,R.R.R- sur achat d'autres approvisionnements stockés
+l10n_dz_609400,R.R.R - d'études et prestations de services,609400,expense,,False,R.R.R - d'études et prestations de services
+l10n_dz_609500,R.R.R - sur achat de petits matériels et équipements et travaux,609500,expense,,False,R.R.R - sur achat de petits matériels et équipements et travaux
+l10n_dz_611000,Sous-traitance générale,611000,expense,,False,Sous-traitance générale
+l10n_dz_611100,Sous-traitance spécialisé,611100,expense,,False,Sous-traitance spécialisé
+l10n_dz_611200,Sous-traitance de capacité,611200,expense,,False,Sous-traitance de capacité
+l10n_dz_611300,Sous-traitance de marché,611300,expense,,False,Sous-traitance de marché
+l10n_dz_613000,Locations,613000,expense,,False,Locations
+l10n_dz_613100,Locations immobilières :  Redevances de crédit bail immobilier,613100,expense,,False,Locations immobilières :  Redevances de crédit bail immobilier
+l10n_dz_613110,Locations immobilières : Redevance de crédit bail immobilier,613110,expense,,False,Locations immobilières : Redevance de crédit bail immobilier
+l10n_dz_613120,Locations mobilières : Redevance de crédit bail mobilier,613120,expense,,False,Locations mobilières : Redevance de crédit bail mobilier
+l10n_dz_613210,Location de matériel et outillage industriel,613210,expense,,False,Location de matériel et outillage industriel
+l10n_dz_613220,Location matériel de transport,613220,expense,,False,Location matériel de transport
+l10n_dz_613280,Autres locations,613280,expense,,False,Autres locations
+l10n_dz_613700,Malis sur emballages,613700,expense,,False,Malis sur emballages
+l10n_dz_614000,Charges locatives et de copropriété,614000,expense,,False,Charges locatives et de copropriété
+l10n_dz_614100,Charges locatives d’immeubles,614100,expense,,False,Charges locatives d’immeubles
+l10n_dz_614200,Charges de copropriété logements de fonction,614200,expense,,False,Charges de copropriété logements de fonction
+l10n_dz_614300,Loyers garages et parking de stationnement de véhicules,614300,expense,,False,Loyers garages et parking de stationnement de véhicules
+l10n_dz_614800,Autres charges locatives,614800,expense,,False,Autres charges locatives
+l10n_dz_615000,"Entretien, réparations et maintenance",615000,expense,,False,"Entretien, réparations et maintenance"
+l10n_dz_615100,Entretien et réparation sur bien mobiliers,615100,expense,,False,Entretien et réparation sur bien mobiliers
+l10n_dz_615200,Entretien et réparation sur biens mobiliers,615200,expense,,False,Entretien et réparation sur biens mobiliers
+l10n_dz_615600,Maintenance,615600,expense,,False,Maintenance
+l10n_dz_616000,Primes d'assurance,616000,expense,,False,Primes d'assurance
+l10n_dz_616100,Assurances multirisques professionnels,616100,expense,,False,Assurances multirisques professionnels
+l10n_dz_616200,Assurances transport,616200,expense,,False,Assurances transport
+l10n_dz_616300,Assurance responsabilité civile,616300,expense,,False,Assurance responsabilité civile
+l10n_dz_616400,Assurance catastrophe naturelle,616400,expense,,False,Assurance catastrophe naturelle
+l10n_dz_616500,Assurance couverture risque de Vie,616500,expense,,False,Assurance couverture risque de Vie
+l10n_dz_616800,Autres assurances,616800,expense,,False,Autres assurances
+l10n_dz_617000,Études et recherches,617000,expense,,False,Études et recherches
+l10n_dz_617100,Assistance technique,617100,expense,,False,Assistance technique
+l10n_dz_617800,Autres frais d'études et de recherches,617800,expense,,False,Autres frais d'études et de recherches
+l10n_dz_618000,Documentation et divers,618000,expense,,False,Documentation et divers
+l10n_dz_618100,Documentation générale,618100,expense,,False,Documentation générale
+l10n_dz_618200,"Abonnements aux Journaux, revues et JO/BOAL/BOMOP ...etc.",618200,expense,,False,"Abonnements aux Journaux, revues et JO/BOAL/BOMOP ...etc."
+l10n_dz_618300,"Documentation technique (plans, schémas, maquettes, etc.)",618300,expense,,False,"Documentation technique (plans, schémas, maquettes, etc.)"
+l10n_dz_618400,Frais de reprographie,618400,expense,,False,Frais de reprographie
+l10n_dz_618500,Frais de soumissions et de marchés,618500,expense,,False,Frais de soumissions et de marchés
+l10n_dz_618600,Frais de conseils et assemblées,618600,expense,,False,Frais de conseils et assemblées
+l10n_dz_618700,"Frais de colloques, séminaires et conférences",618700,expense,,False,"Frais de colloques, séminaires et conférences"
+l10n_dz_619000,"Rabais, remises et ristournes obtenus sur services extérieurs",619000,expense,,False,"Rabais, remises et ristournes obtenus sur services extérieurs"
+l10n_dz_621000,Personnel extérieur à l'entreprise,621000,expense,,False,Personnel extérieur à l'entreprise
+l10n_dz_621100,Personnel intérimaire(placé dans le cadre de l’ANEM),621100,expense,,False,Personnel intérimaire(placé dans le cadre de l’ANEM)
+l10n_dz_621200,Charges de sécurité et de gardiennage,621200,expense,,False,Charges de sécurité et de gardiennage
+l10n_dz_621300,Charges de nettoyage et travaux d’insalubrité,621300,expense,,False,Charges de nettoyage et travaux d’insalubrité
+l10n_dz_621600,Personnel détaché ou prêté à l’entreprise,621600,expense,,False,Personnel détaché ou prêté à l’entreprise
+l10n_dz_622000,Rémunérations d'intermédiaires et honoraires,622000,expense,,False,Rémunérations d'intermédiaires et honoraires
+l10n_dz_622200,Commissions sur ventes,622200,expense,,False,Commissions sur ventes
+l10n_dz_622300,Rémunération de consultants,622300,expense,,False,Rémunération de consultants
+l10n_dz_622500,Rémunérations d'affacturage,622500,expense,,False,Rémunérations d'affacturage
+l10n_dz_622600,Honoraires (autres que ceux incorporés dans les coûts),622600,expense,,False,Honoraires (autres que ceux incorporés dans les coûts)
+l10n_dz_622700,Frais d’actes et de contentieux,622700,expense,,False,Frais d’actes et de contentieux
+l10n_dz_622800,Autres rémunérations divers(non incorporables aux coûts),622800,expense,,False,Autres rémunérations divers(non incorporables aux coûts)
+l10n_dz_623000,"Publicité, publications, relations publiques",623000,expense,,False,"Publicité, publications, relations publiques"
+l10n_dz_623100,Annonces et insertions,623100,expense,,False,Annonces et insertions
+l10n_dz_623200,Échantillons,623200,expense,,False,Échantillons
+l10n_dz_623300,"Foires, expositions et festivités",623300,expense,,False,"Foires, expositions et festivités"
+l10n_dz_623400,Sponsoring et mécénat,623400,expense,,False,Sponsoring et mécénat
+l10n_dz_623500,Catalogues et imprimés,623500,expense,,False,Catalogues et imprimés
+l10n_dz_623600,Catalogues et imprimés,623600,expense,,False,Catalogues et imprimés
+l10n_dz_623700,Publications Autres publicités,623700,expense,,False,Publications Autres publicités
+l10n_dz_623800,Autres frais de relations publiques,623800,expense,,False,Autres frais de relations publiques
+l10n_dz_624000,Transports de biens et transport collectif du personnel,624000,expense,,False,Transports de biens et transport collectif du personnel
+l10n_dz_624100,Transport sur ventes,624100,expense,,False,Transport sur ventes
+l10n_dz_624200,Transport collectif du personnel,624200,expense,,False,Transport collectif du personnel
+l10n_dz_624300,Transport entre établissements ou chantiers,624300,expense,,False,Transport entre établissements ou chantiers
+l10n_dz_624400,Transports administratifs,624400,expense,,False,Transports administratifs
+l10n_dz_624800,Autres transports divers,624800,expense,,False,Autres transports divers
+l10n_dz_625000,"Déplacements, missions et réceptions",625000,expense,,False,"Déplacements, missions et réceptions"
+l10n_dz_625100,Voyages et déplacements à l’étranger,625100,expense,,False,Voyages et déplacements à l’étranger
+l10n_dz_625200,Frais de déménagement,625200,expense,,False,Frais de déménagement
+l10n_dz_625500,Missions: intérieur du pays,625500,expense,,False,Missions: intérieur du pays
+l10n_dz_625510,Missions: intérieur du pays - frais de voayage,625510,expense,,False,Missions: intérieur du pays - frais de voayage
+l10n_dz_625520,Missions: intérieur du pays - frais de sejour,625520,expense,,False,Missions: intérieur du pays - frais de sejour
+l10n_dz_625700,Réceptions et hébergements,625700,expense,,False,Réceptions et hébergements
+l10n_dz_625710,Réceptions internes,625710,expense,,False,Réceptions internes
+l10n_dz_625720,Réceptions externes,625720,expense,,False,Réceptions externes
+l10n_dz_625730,Hébergements,625730,expense,,False,Hébergements
+l10n_dz_626000,Frais postaux et de télécommunications,626000,expense,,False,Frais postaux et de télécommunications
+l10n_dz_626100,Affranchissement courrier,626100,expense,,False,Affranchissement courrier
+l10n_dz_626200,Abonnement boite postale,626200,expense,,False,Abonnement boite postale
+l10n_dz_626300,Abonnements et communications téléphonie mobile,626300,expense,,False,Abonnements et communications téléphonie mobile
+l10n_dz_626400,Abonnement internet,626400,expense,,False,Abonnement internet
+l10n_dz_626500,Frais de télécommunication (fixe et fax),626500,expense,,False,Frais de télécommunication (fixe et fax)
+l10n_dz_627000,Services bancaires et assimilés,627000,expense,,False,Services bancaires et assimilés
+l10n_dz_627100,Frais sur effets et sur titres,627100,expense,,False,Frais sur effets et sur titres
+l10n_dz_627200,Commissions bancaires,627200,expense,,False,Commissions bancaires
+l10n_dz_627210,Commissions et frais sur émission d’emprunts,627210,expense,,False,Commissions et frais sur émission d’emprunts
+l10n_dz_627220,Commissions sur ouverture de crédit,627220,expense,,False,Commissions sur ouverture de crédit
+l10n_dz_627230,Commissions sur aval et cautions,627230,expense,,False,Commissions sur aval et cautions
+l10n_dz_627250,Frais sur effets et sur titres,627250,expense,,False,Frais sur effets et sur titres
+l10n_dz_627260,Location de coffres,627260,expense,,False,Location de coffres
+l10n_dz_627280,Autres frais et commissions bancaires,627280,expense,,False,Autres frais et commissions bancaires
+l10n_dz_628000,Cotisations et divers,628000,expense,,False,Cotisations et divers
+l10n_dz_628100,Dons au profit des associations caritatives agréées,628100,expense,,False,Dons au profit des associations caritatives agréées
+l10n_dz_628200,Frais de solidarité nationale et internationale,628200,expense,,False,Frais de solidarité nationale et internationale
+l10n_dz_628300,Cotisations professionnelles,628300,expense,,False,Cotisations professionnelles
+l10n_dz_628400,Frais de recrutement de personnel,628400,expense,,False,Frais de recrutement de personnel
+l10n_dz_628500,Frais de formation externe du personnel,628500,expense,,False,Frais de formation externe du personnel
+l10n_dz_628800,Autres cotisations et dons courants divers,628800,expense,,False,Autres cotisations et dons courants divers
+l10n_dz_629000,"Rabais, remises et ristournes obtenus sur autres services extérieurs",629000,expense,,False,"Rabais, remises et ristournes obtenus sur autres services extérieurs"
+l10n_dz_631000,Rémunérations du personnel,631000,expense,,False,Rémunérations du personnel
+l10n_dz_631100,Traitements et salaires,631100,expense,,False,Traitements et salaires
+l10n_dz_631110,"Traitements, salaires et appointements",631110,expense,,False,"Traitements, salaires et appointements"
+l10n_dz_631120,Présalaires et indemnités de stage et d’apprentissage,631120,expense,,False,Présalaires et indemnités de stage et d’apprentissage
+l10n_dz_631130,Heures supplémentaires et IFSP,631130,expense,,False,Heures supplémentaires et IFSP
+l10n_dz_631140,Congés payés,631140,expense,,False,Congés payés
+l10n_dz_631200,Primes,631200,expense,,False,Primes
+l10n_dz_631210,Prime de responsabilité,631210,expense,,False,Prime de responsabilité
+l10n_dz_631220,Prime de panier,631220,expense,,False,Prime de panier
+l10n_dz_631230,Prime de d'encouragement et de rendement individuel (PRI-PRC),631230,expense,,False,Prime de d'encouragement et de rendement individuel (PRI-PRC)
+l10n_dz_631240,Prime sur résultats au profit des cadres dirigeants,631240,expense,,False,Prime sur résultats au profit des cadres dirigeants
+l10n_dz_631250,Prime de véhicule,631250,expense,,False,Prime de véhicule
+l10n_dz_631260,Prime de caisse et bilan,631260,expense,,False,Prime de caisse et bilan
+l10n_dz_631270,Prime de sujétion,631270,expense,,False,Prime de sujétion
+l10n_dz_631280,Prime spéciales,631280,expense,,False,Prime spéciales
+l10n_dz_631300,Indemnités,631300,expense,,False,Indemnités
+l10n_dz_631310,Indemnité d'Expérience professionnelle (I.E.P),631310,expense,,False,Indemnité d'Expérience professionnelle (I.E.P)
+l10n_dz_631320,Indemnité de nuisance,631320,expense,,False,Indemnité de nuisance
+l10n_dz_631330,Indemnité de travail posté,631330,expense,,False,Indemnité de travail posté
+l10n_dz_631340,Indemnités de fin de carrière et de départ à la retraite  (IDR – IFC),631340,expense,,False,Indemnités de fin de carrière et de départ à la retraite  (IDR – IFC)
+l10n_dz_631350,Indemnités kilométriques et de transport,631350,expense,,False,Indemnités kilométriques et de transport
+l10n_dz_631380,Autres Indemnités liées au salaire,631380,expense,,False,Autres Indemnités liées au salaire
+l10n_dz_631400,Prestations directes,631400,expense,,False,Prestations directes
+l10n_dz_631410,Bonifications,631410,expense,,False,Bonifications
+l10n_dz_631420,"Supplément familial : Prime de scolarité, IPSU, ICAF",631420,expense,,False,"Supplément familial : Prime de scolarité, IPSU, ICAF"
+l10n_dz_631480,Autres indemnités et avantages divers,631480,expense,,False,Autres indemnités et avantages divers
+l10n_dz_634000,Rémunération de l'exploitant,634000,expense,,False,Rémunération de l'exploitant
+l10n_dz_635000,Cotisations aux organismes sociaux,635000,expense,,False,Cotisations aux organismes sociaux
+l10n_dz_635100,Cotisations de sécurité sociale – CNAS,635100,expense,,False,Cotisations de sécurité sociale – CNAS
+l10n_dz_635200,Cotisations au FNPOS,635200,expense,,False,Cotisations au FNPOS
+l10n_dz_635300,Cotisations à la retraite – CNR,635300,expense,,False,Cotisations à la retraite – CNR
+l10n_dz_635400,Cotisations aux mutuelles,635400,expense,,False,Cotisations aux mutuelles
+l10n_dz_635500,Cotisations à la CACOBATPH,635500,expense,,False,Cotisations à la CACOBATPH
+l10n_dz_636000,Cotisations sociales de l'exploitant,636000,expense,,False,Cotisations sociales de l'exploitant
+l10n_dz_636100,Cotisation annuelle à la CASNOS,636100,expense,,False,Cotisation annuelle à la CASNOS
+l10n_dz_636800,Autres cotisations,636800,expense,,False,Autres cotisations
+l10n_dz_637000,Autres charges sociales,637000,expense,,False,Autres charges sociales
+l10n_dz_637400,Versements aux œuvres sociales,637400,expense,,False,Versements aux œuvres sociales
+l10n_dz_637500,Autres contributions sociales,637500,expense,,False,Autres contributions sociales
+l10n_dz_638000,Autres charges de personnel,638000,expense,,False,Autres charges de personnel
+l10n_dz_638100,Médecine du travail et pharmacie,638100,expense,,False,Médecine du travail et pharmacie
+l10n_dz_638200,Frais de formation et de perfectionnement du personnel (en interne),638200,expense,,False,Frais de formation et de perfectionnement du personnel (en interne)
+l10n_dz_638300,Frais d’activités socio-culturelles et sportives,638300,expense,,False,Frais d’activités socio-culturelles et sportives
+l10n_dz_638400,Avantages en nature accordés au personnel,638400,expense,,False,Avantages en nature accordés au personnel
+l10n_dz_638500,Médailles du mérite et Jubilé,638500,expense,,False,Médailles du mérite et Jubilé
+l10n_dz_638700,"Intéressement, primes et avantages liés aux résultats",638700,expense,,False,"Intéressement, primes et avantages liés aux résultats"
+l10n_dz_638800,Autres charges de personnel,638800,expense,,False,Autres charges de personnel
+l10n_dz_641000,"Impôts, taxes et versements assimilés sur rémunérations",641000,expense,,False,"Impôts, taxes et versements assimilés sur rémunérations"
+l10n_dz_641200,Taxe d’apprentissage,641200,expense,,False,Taxe d’apprentissage
+l10n_dz_641300,Taxe sur la formation professionnelle,641300,expense,,False,Taxe sur la formation professionnelle
+l10n_dz_641800,Autres taxes sur les salaires,641800,expense,,False,Autres taxes sur les salaires
+l10n_dz_642000,Impôts et taxes non récupérables sur chiffre d’affaires,642000,expense,,False,Impôts et taxes non récupérables sur chiffre d’affaires
+l10n_dz_642100,Taxe sur l’activité professionnelle – T.A.P. (sur les débits),642100,expense,,False,Taxe sur l’activité professionnelle – T.A.P. (sur les débits)
+l10n_dz_642200,Taxe sur l’activité professionnelle – T.A.P. (sur encaissements),642200,expense,,False,Taxe sur l’activité professionnelle – T.A.P. (sur encaissements)
+l10n_dz_645000,Autres impôts et taxes (hors impôts sur les résultats),645000,expense,,False,Autres impôts et taxes (hors impôts sur les résultats)
+l10n_dz_645100,Taxe foncière sur les propriétés bâties et non bâties,645100,expense,,False,Taxe foncière sur les propriétés bâties et non bâties
+l10n_dz_645200,Taxes spéciales,645200,expense,,False,Taxes spéciales
+l10n_dz_645300,Taxe sur l’environnement (écotaxe),645300,expense,,False,Taxe sur l’environnement (écotaxe)
+l10n_dz_645400,Taxes sur les véhicules (Vignettes),645400,expense,,False,Taxes sur les véhicules (Vignettes)
+l10n_dz_645500,Droits de stationnement parking communal,645500,expense,,False,Droits de stationnement parking communal
+l10n_dz_645600,Droits d’enregistrement sur actes et marchés,645600,expense,,False,Droits d’enregistrement sur actes et marchés
+l10n_dz_645700,Droits de timbre,645700,expense,,False,Droits de timbre
+l10n_dz_645800,"Autres droits, impôts et taxes divers",645800,expense,,False,"Autres droits, impôts et taxes divers"
+l10n_dz_651000,Redevances pour concessions,651000,expense,,False,Redevances pour concessions
+l10n_dz_651100,Redevances pour concessions,651100,expense,,False,Redevances pour concessions
+l10n_dz_651110,Redevances de concession de services publics,651110,expense,,False,Redevances de concession de services publics
+l10n_dz_651120,Redevances d'exploitation de carrières et gisements,651120,expense,,False,Redevances d'exploitation de carrières et gisements
+l10n_dz_651140,Redevances pour brevets et licences de fabrication,651140,expense,,False,Redevances pour brevets et licences de fabrication
+l10n_dz_651180,Autres redevances de gestion,651180,expense,,False,Autres redevances de gestion
+l10n_dz_651200,Redevances pour brevets et licences de fabrication,651200,expense,,False,Redevances pour brevets et licences de fabrication
+l10n_dz_651600,Redevances pour exploitation de logiciels et valeurs similaires,651600,expense,,False,Redevances pour exploitation de logiciels et valeurs similaires
+l10n_dz_652000,Moins-values sur sortie d'actifs immobilisés non financiers,652000,expense,,False,Moins-values sur sortie d'actifs immobilisés non financiers
+l10n_dz_652100,Moins value sur cession matériel et outillage,652100,expense,,False,Moins value sur cession matériel et outillage
+l10n_dz_652200,Moins value sur cession matériel de transport,652200,expense,,False,Moins value sur cession matériel de transport
+l10n_dz_652300,Moins value sur cession mobilier et matériel de bureau,652300,expense,,False,Moins value sur cession mobilier et matériel de bureau
+l10n_dz_652800,Moins value sur cession autres équipements et matériels,652800,expense,,False,Moins value sur cession autres équipements et matériels
+l10n_dz_653000,Jetons de présence,653000,expense,,False,Jetons de présence
+l10n_dz_653100,Jetons de présence aux administrateurs,653100,expense,,False,Jetons de présence aux administrateurs
+l10n_dz_654000,Pertes sur créances irrécouvrables,654000,expense,,False,Pertes sur créances irrécouvrables
+l10n_dz_654100,Pertes sur créances de l'exercice,654100,expense,,False,Pertes sur créances de l'exercice
+l10n_dz_654200,Pertes sur créances des exercices antérieurs,654200,expense,,False,Pertes sur créances des exercices antérieurs
+l10n_dz_655000,Quote-part de résultat sur opérations faites en commun,655000,expense,,False,Quote-part de résultat sur opérations faites en commun
+l10n_dz_655100,Quote-part de bénéfice transféré dans le cadre d'unGIE ou d'une SEP,655100,expense,,False,Quote-part de bénéfice transféré dans le cadre d'unGIE ou d'une SEP
+l10n_dz_655200,Quote-part de perte supportée dans le cadre d'un GIE ou d'une SEP,655200,expense,,False,Quote-part de perte supportée dans le cadre d'un GIE ou d'une SEP
+l10n_dz_655300,Subventions accordées,655300,expense,,False,Subventions accordées
+l10n_dz_655600,Dons et libéralités,655600,expense,,False,Dons et libéralités
+l10n_dz_656000,"Amendes et pénalités, subventions accordées, dons et libéralités",656000,expense,,False,"Amendes et pénalités, subventions accordées, dons et libéralités"
+l10n_dz_656200,"Amendes et pénalités(pénales, fiscales et parafisacles)",656200,expense,,False,"Amendes et pénalités(pénales, fiscales et parafisacles)"
+l10n_dz_656300,Subventions accordées,656300,expense,,False,Subventions accordées
+l10n_dz_656600,Dons et libéralités,656600,expense,,False,Dons et libéralités
+l10n_dz_656610,Dons au profit des associations caritatives agréées,656610,expense,,False,Dons au profit des associations caritatives agréées
+l10n_dz_656620,Frais de solidarité nationale et internationale,656620,expense,,False,Frais de solidarité nationale et internationale
+l10n_dz_656630,Autres dons et libéralités,656630,expense,,False,Autres dons et libéralités
+l10n_dz_657000,Charges exceptionnelles de gestion courante,657000,expense,,False,Charges exceptionnelles de gestion courante
+l10n_dz_657100,Ecart de stocks (négatif),657100,expense,,False,Ecart de stocks (négatif)
+l10n_dz_657200,"Ecart de stocks (négatif) de matières, fournitures et autres approvisionnements",657200,expense,,False,"Ecart de stocks (négatif) de matières, fournitures et autres approvisionnements"
+l10n_dz_657500,Rappel d’impôts  (autre qu’IBS)),657500,expense,,False,Rappel d’impôts  (autre qu’IBS))
+l10n_dz_657600,Charges sur exercices antérieurs (en cours d'exercice),657600,expense,,False,Charges sur exercices antérieurs (en cours d'exercice)
+l10n_dz_657800,Autres charges exceptionnelles,657800,expense,,False,Autres charges exceptionnelles
+l10n_dz_658000,Autres charges de gestion courante,658000,expense,,False,Autres charges de gestion courante
+l10n_dz_658100,Charges sur exercices antérieurs (en cours d'exercice),658100,expense,,False,Charges sur exercices antérieurs (en cours d'exercice)
+l10n_dz_658800,Autres charges diverses de gestion courante,658800,expense,,False,Autres charges diverses de gestion courante
+l10n_dz_661000,Charges d'intérêts,661000,expense,,False,Charges d'intérêts
+l10n_dz_661100,Intérêts des emprunts,661100,expense,,False,Intérêts des emprunts
+l10n_dz_661200,Intérêts des dettes,661200,expense,,False,Intérêts des dettes
+l10n_dz_661600,Intérêts bancaires sur opérations de financement (découvert),661600,expense,,False,Intérêts bancaires sur opérations de financement (découvert)
+l10n_dz_661800,Intérêts des autres dettes,661800,expense,,False,Intérêts des autres dettes
+l10n_dz_664000,Pertes sur créances liées à des participations,664000,expense,,False,Pertes sur créances liées à des participations
+l10n_dz_665000,Ecart d’évaluation sur actifs financiers - Moins-values,665000,expense,,False,Ecart d’évaluation sur actifs financiers - Moins-values
+l10n_dz_665100,Mali provenant du rachat des actions propres,665100,expense,,False,Mali provenant du rachat des actions propres
+l10n_dz_666000,Pertes de change,666000,expense,,False,Pertes de change
+l10n_dz_667000,Pertes nettes sur cessions d’actifs financiers,667000,expense,,False,Pertes nettes sur cessions d’actifs financiers
+l10n_dz_668000,Autres charges financières,668000,expense,,False,Autres charges financières
+l10n_dz_670000,Eléments extraordinaires  (Charges),670000,expense,,False,Eléments extraordinaires  (Charges)
+l10n_dz_681000,"Dotations aux amortissements, provisions et pertes de valeur - actifs non courants",681000,expense_depreciation,,False,"Dotations aux amortissements, provisions et pertes de valeur - actifs non courants"
+l10n_dz_681100,DAP-PDV : Immobilisations incorporelles,681100,expense_depreciation,,False,DAP-PDV : Immobilisations incorporelles
+l10n_dz_681200,DAP-PDV : Immobilisations corporelles,681200,expense_depreciation,,False,DAP-PDV : Immobilisations corporelles
+l10n_dz_682000,"Dotations aux amortissements, provisions et PDV des biens mis en concession",682000,expense_depreciation,,False,"Dotations aux amortissements, provisions et PDV des biens mis en concession"
+l10n_dz_685000,Dotations aux provisions et pertes de valeurs – actifs courants,685000,expense_depreciation,,False,Dotations aux provisions et pertes de valeurs – actifs courants
+l10n_dz_685300,Dotations pour pertes de valeurs sur stocks,685300,expense_depreciation,,False,Dotations pour pertes de valeurs sur stocks
+l10n_dz_685400,Dotations pour pertes de valeurs sur créances,685400,expense_depreciation,,False,Dotations pour pertes de valeurs sur créances
+l10n_dz_685500,Dotation annuelle pour Indemnité de départ à la retraite et IFC,685500,expense_depreciation,,False,Dotation annuelle pour Indemnité de départ à la retraite et IFC
+l10n_dz_685600,Dotations aux provisions pour pertes et charges – PNC,685600,expense_depreciation,,False,Dotations aux provisions pour pertes et charges – PNC
+l10n_dz_685800,Dotations aux provisions – passifs courants,685800,expense_depreciation,,False,Dotations aux provisions – passifs courants
+l10n_dz_686000,"Dotations aux amortissements, provisions et pertes de valeur, éléments financiers",686000,expense_depreciation,,False,"Dotations aux amortissements, provisions et pertes de valeur, éléments financiers"
+l10n_dz_686100,Dotations aux amortissements des primes de remboursement,686100,expense_depreciation,,False,Dotations aux amortissements des primes de remboursement
+l10n_dz_686200,Dotations aux provisions pour risques et charges financiers,686200,expense_depreciation,,False,Dotations aux provisions pour risques et charges financiers
+l10n_dz_691000,Participation des travailleurs aux bénéfices,691000,expense,,False,Participation des travailleurs aux bénéfices
+l10n_dz_692000,Imposition différée actif,692000,expense,,False,Imposition différée actif
+l10n_dz_693000,Imposition différée passif,693000,expense,,False,Imposition différée passif
+l10n_dz_695000,Impôts sur les bénéfices basés sur le résultat desactivités ordinaires,695000,expense,,False,Impôts sur les bénéfices basés sur le résultat desactivités ordinaires
+l10n_dz_698000,Autres impôts sur les résultats,698000,expense,,False,Autres impôts sur les résultats
+l10n_dz_700000,Ventes de marchandises,700000,income,,False,Ventes de marchandises
+l10n_dz_700100,Marchandises (ou groupe) A,700100,income,,False,Marchandises (ou groupe) A
+l10n_dz_700200,Marchandises (ou groupe) B,700200,income,,False,Marchandises (ou groupe) B
+l10n_dz_701000,Ventes de produits finis,701000,income,,False,Ventes de produits finis
+l10n_dz_701100,Ventes de Produit fini (ou groupe) – PF1,701100,income,,False,Ventes de Produit fini (ou groupe) – PF1
+l10n_dz_701200,Ventes de Produit fini (ou groupe) – PF1,701200,income,,False,Ventes de Produit fini (ou groupe) – PF1
+l10n_dz_701300,Ventes de Produit fini (ou groupe) – PF3,701300,income,,False,Ventes de Produit fini (ou groupe) – PF3
+l10n_dz_702000,Ventes de produits intermédiaires,702000,income,,False,Ventes de produits intermédiaires
+l10n_dz_702100,Ventes de Produits intermédiaires (ou groupe) – PI-1,702100,income,,False,Ventes de Produits intermédiaires (ou groupe) – PI-1
+l10n_dz_702200,Ventes de Produits intermédiaires (ou groupe) – PI-2,702200,income,,False,Ventes de Produits intermédiaires (ou groupe) – PI-2
+l10n_dz_702800,Ventes de sous produits (PR et accessoires fabriqués),702800,income,,False,Ventes de sous produits (PR et accessoires fabriqués)
+l10n_dz_703000,Ventes de produits résiduels,703000,income,,False,Ventes de produits résiduels
+l10n_dz_703100,Ventes de déchets,703100,income,,False,Ventes de déchets
+l10n_dz_703200,Ventes de rebuts,703200,income,,False,Ventes de rebuts
+l10n_dz_703300,Ventes de matières de récupération recyclables,703300,income,,False,Ventes de matières de récupération recyclables
+l10n_dz_704000,Travaux,704000,income,,False,Travaux
+l10n_dz_704100,Travaux hydrauliques,704100,income,,False,Travaux hydrauliques
+l10n_dz_704200,Travaux publics,704200,income,,False,Travaux publics
+l10n_dz_704210,Routes et voies d'accès,704210,income,,False,Routes et voies d'accès
+l10n_dz_704220,Ouvrages d'art,704220,income,,False,Ouvrages d'art
+l10n_dz_704300,Travaux de constructions de bâtiments,704300,income,,False,Travaux de constructions de bâtiments
+l10n_dz_704310,Travaux de réalisation en T.C.E,704310,income,,False,Travaux de réalisation en T.C.E
+l10n_dz_704320,Travaux de réalisation en Génie civil et  Gros Œuvres,704320,income,,False,Travaux de réalisation en Génie civil et  Gros Œuvres
+l10n_dz_704330,Travaux de réalisation en CES,704330,income,,False,Travaux de réalisation en CES
+l10n_dz_704400,Travaux de restauration de sites et monuments,704400,income,,False,Travaux de restauration de sites et monuments
+l10n_dz_704500,Travaux de VRD et d'assainissement,704500,income,,False,Travaux de VRD et d'assainissement
+l10n_dz_704600,Travaux d'entretien et de nettoyage,704600,income,,False,Travaux d'entretien et de nettoyage
+l10n_dz_704700,Travaux forestier,704700,income,,False,Travaux forestier
+l10n_dz_704800,Autres travaux de réalisation,704800,income,,False,Autres travaux de réalisation
+l10n_dz_705000,Vente d'études,705000,income,,False,Vente d'études
+l10n_dz_705100,Etudes : E1,705100,income,,False,Etudes : E1
+l10n_dz_705800,Autres études techniques,705800,income,,False,Autres études techniques
+l10n_dz_706000,Autres prestations de services,706000,income,,False,Autres prestations de services
+l10n_dz_706100,Prestations de services fournis : S1,706100,income,,False,Prestations de services fournis : S1
+l10n_dz_706800,Autres Prestations de services,706800,income,,False,Autres Prestations de services
+l10n_dz_708000,Produits des activités annexes,708000,income,,False,Produits des activités annexes
+l10n_dz_708100,Cession de matières premières,708100,income,,False,Cession de matières premières
+l10n_dz_708200,Cession d’autres approvisionnements,708200,income,,False,Cession d’autres approvisionnements
+l10n_dz_708600,Bonis sur reprises d'emballages consignés,708600,income,,False,Bonis sur reprises d'emballages consignés
+l10n_dz_708800,Autres produits des activités annexes,708800,income,,False,Autres produits des activités annexes
+l10n_dz_709000,"Rabais, remises et ristournes accordés",709000,income,,False,"Rabais, remises et ristournes accordés"
+l10n_dz_709200,Réduction sur ventes – Hors factures,709200,income,,False,Réduction sur ventes – Hors factures
+l10n_dz_709300,Réduction sur prestations – Hors factures,709300,income,,False,Réduction sur prestations – Hors factures
+l10n_dz_723300,En-cours de production,723300,income,,False,En-cours de production
+l10n_dz_723310,Produits en cours,723310,income,,False,Produits en cours
+l10n_dz_723350,Travaux en cours,723350,income,,False,Travaux en cours
+l10n_dz_723400,En-cours d'études et de services,723400,income,,False,En-cours d'études et de services
+l10n_dz_723410,Études en cours,723410,income,,False,Études en cours
+l10n_dz_723420,Prestations de services en cours,723420,income,,False,Prestations de services en cours
+l10n_dz_724000,Variation de stocks de produits,724000,income,,False,Variation de stocks de produits
+l10n_dz_724100,Produits intermédiaires,724100,income,,False,Produits intermédiaires
+l10n_dz_724500,Produits finis,724500,income,,False,Produits finis
+l10n_dz_724800,Produits résiduels,724800,income,,False,Produits résiduels
+l10n_dz_729000,Coût de la sous activité (non prévu par le SCF),729000,income,,False,Coût de la sous activité (non prévu par le SCF)
+l10n_dz_731000,Production immobilisée d'actifs incorporels(logiciels),731000,income,,False,Production immobilisée d'actifs incorporels(logiciels)
+l10n_dz_732000,Production immobilisée d'actifs corporels,732000,income,,False,Production immobilisée d'actifs corporels
+l10n_dz_741000,Subvention d'équilibre,741000,income,,False,Subvention d'équilibre
+l10n_dz_748000,Autres subventions d'exploitation,748000,income,,False,Autres subventions d'exploitation
+l10n_dz_751000,"Redevances pour concessions, brevets, licences, logiciels et valeurs similaires",751000,income_other,,False,"Redevances pour concessions, brevets, licences, logiciels et valeurs similaires"
+l10n_dz_752000,PLUS VALUES SUR SORTIES D’ACTIFS IMMOBILISÉS NON FINANCIERS,752000,income_other,,False,PLUS VALUES SUR SORTIES D’ACTIFS IMMOBILISÉS NON FINANCIERS
+l10n_dz_752100,Plus value sur cession d’éléments d’actifs mis à la réforme,752100,income_other,,False,Plus value sur cession d’éléments d’actifs mis à la réforme
+l10n_dz_752800,Plus value sur autres éléments d’actifs corporels cédés,752800,income_other,,False,Plus value sur autres éléments d’actifs corporels cédés
+l10n_dz_753000,Jetons de présence et rémunérations d'administrateurs ou de gérant,753000,income_other,,False,Jetons de présence et rémunérations d'administrateurs ou de gérant
+l10n_dz_753100,Jetons de présence perçus,753100,income_other,,False,Jetons de présence perçus
+l10n_dz_754000,Quotes-parts de subventions d’investissement viréesau résultat de l’exercice,754000,income_other,,False,Quotes-parts de subventions d’investissement viréesau résultat de l’exercice
+l10n_dz_755000,Quote-part de résultat sur opérations faites en commun,755000,income_other,,False,Quote-part de résultat sur opérations faites en commun
+l10n_dz_755100,Quote-part de perte transférée,755100,income_other,,False,Quote-part de perte transférée
+l10n_dz_755200,Quote-part de bénéfice attribué,755200,income_other,,False,Quote-part de bénéfice attribué
+l10n_dz_756000,Rentrées sur créances amorties,756000,income_other,,False,Rentrées sur créances amorties
+l10n_dz_757000,Produits exceptionnels sur opérations de gestion,757000,income_other,,False,Produits exceptionnels sur opérations de gestion
+l10n_dz_757100,Ecart de stocks (positif),757100,income_other,,False,Ecart de stocks (positif)
+l10n_dz_757200,"Ecart de stocks (positif) de matières, fournitures et autres approvisionnements",757200,income_other,,False,"Ecart de stocks (positif) de matières, fournitures et autres approvisionnements"
+l10n_dz_757500,Dégrèvements d’impôts (autre qu’IBS),757500,income_other,,False,Dégrèvements d’impôts (autre qu’IBS)
+l10n_dz_757600,Produits des exercices antérieurs (en cours d'exercice),757600,income_other,,False,Produits des exercices antérieurs (en cours d'exercice)
+l10n_dz_757800,Autres produits exceptionnels,757800,income_other,,False,Autres produits exceptionnels
+l10n_dz_758000,Autres produits de gestion courante,758000,income_other,,False,Autres produits de gestion courante
+l10n_dz_758100,Lots de bord et pièces de rechange gratuites,758100,income_other,,False,Lots de bord et pièces de rechange gratuites
+l10n_dz_758200,Remboursements sinistres et dégâts assurés,758200,income_other,,False,Remboursements sinistres et dégâts assurés
+l10n_dz_758300,Revenus des immeubles de placement,758300,income_other,,False,Revenus des immeubles de placement
+l10n_dz_758600,Produits des exercices antérieurs (en cours d'exercice),758600,income_other,,False,Produits des exercices antérieurs (en cours d'exercice)
+l10n_dz_758800,Autres produits divers de gestion courante,758800,income_other,,False,Autres produits divers de gestion courante
+l10n_dz_761000,Produits de participations,761000,income_other,,False,Produits de participations
+l10n_dz_762000,Revenus des actifs financiers,762000,income_other,,False,Revenus des actifs financiers
+l10n_dz_763000,Revenus de créances,763000,income_other,,False,Revenus de créances
+l10n_dz_765000,Ecart d’évaluation sur actifs financiers – Plus-values,765000,income_other,,False,Ecart d’évaluation sur actifs financiers – Plus-values
+l10n_dz_766000,Gains de change,766000,income_other,,False,Gains de change
+l10n_dz_767000,Profits nets sur cessions d’actifs financiers,767000,income_other,,False,Profits nets sur cessions d’actifs financiers
+l10n_dz_768000,Autres produits financiers,768000,income_other,,False,Autres produits financiers
+l10n_dz_770000,Eléments extraordinaires (Produits),770000,income_other,,False,Eléments extraordinaires (Produits)
+l10n_dz_781000,Reprise d'exploitation sur pertes de valeur et provisions - actifs non courants,781000,income_other,,False,Reprise d'exploitation sur pertes de valeur et provisions - actifs non courants
+l10n_dz_781100,Reprises sur amortissements : Immobilisations incorporelles,781100,income_other,,False,Reprises sur amortissements : Immobilisations incorporelles
+l10n_dz_781200,Reprises sur perte de valeur : Immobilisations incorporelles,781200,income_other,,False,Reprises sur perte de valeur : Immobilisations incorporelles
+l10n_dz_781300,Reprises sur amortissements : Immobilisations corporelles,781300,income_other,,False,Reprises sur amortissements : Immobilisations corporelles
+l10n_dz_781400,Reprises sur perte de valeur : Immobilisations corporelles,781400,income_other,,False,Reprises sur perte de valeur : Immobilisations corporelles
+l10n_dz_781500,Reprises sur écarts de réévaluation : Immobilisations corporelles,781500,income_other,,False,Reprises sur écarts de réévaluation : Immobilisations corporelles
+l10n_dz_781700,Reprises sur plus values à  réinvestir,781700,income_other,,False,Reprises sur plus values à  réinvestir
+l10n_dz_785000,Reprise d'exploitation sur pertes de valeur et provisions - actifs courants,785000,income_other,,False,Reprise d'exploitation sur pertes de valeur et provisions - actifs courants
+l10n_dz_785300,Reprise sur pertes de valeurs – Stocks et encours,785300,income_other,,False,Reprise sur pertes de valeurs – Stocks et encours
+l10n_dz_785400,Reprise sur pertes de valeurs – Créances,785400,income_other,,False,Reprise sur pertes de valeurs – Créances
+l10n_dz_785800,Reprise sur provisions pour pertes et charges – PNC,785800,income_other,,False,Reprise sur provisions pour pertes et charges – PNC
+l10n_dz_786000,Reprises financières sur pertes de valeur et provisions,786000,income_other,,False,Reprises financières sur pertes de valeur et provisions
