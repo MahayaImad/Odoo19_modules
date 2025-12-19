@@ -100,9 +100,8 @@ For issues or questions, please contact the module maintainer.
         'security/ir.model.access.csv',
 
         # Data - Chart of Accounts Extensions
-        # Note: account groups are already provided by native l10n_dz
-        # Only load additional accounts that extend the base chart
-        'data/template/account.account-dz.csv',
+        # Note: Accounts are loaded via post_init_hook to avoid duplicates
+        # See __init__.py for account loading logic
 
         # Data - Configuration
         'data/company_function.xml',
@@ -120,4 +119,5 @@ For issues or questions, please contact the module maintainer.
     'installable': True,
     'application': False,
     'auto_install': False,
+    'post_init_hook': 'post_init_hook',
 }
