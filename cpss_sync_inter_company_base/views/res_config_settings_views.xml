@@ -88,30 +88,27 @@
 
                         </block>
 
-                        <!-- Bloc Actions rapides (optionnel) -->
-                       <!-- <block title="Actions Rapides"
-                               help="Actions de maintenance et de diagnostic">
+                        <!-- Bloc Actions rapides -->
+                        <block title="Actions de Synchronisation"
+                               help="Actions de maintenance et de synchronisation">
 
-                            <setting title="Diagnostic de Synchronisation"
-                                     help="Vérifiez l'état de la configuration et testez la connectivité">
+                            <setting title="Synchronisation des Plans Comptables"
+                                     help="Synchronise les comptes de la société opérationnelle vers la société fiscale">
                                 <div class="text-muted mb16">
-                                    Utilisez ces outils pour diagnostiquer et tester votre configuration de synchronisation.
+                                    <i class="fa fa-info-circle"/> Copie automatiquement tous les comptes manquants
+                                    (incluant l10n_dz_cpss_ext) vers la société fiscale.
                                 </div>
                                 <div class="o_setting_action_buttons">
                                     <button type="object"
-                                            name="action_test_sync_config"
-                                            string="Tester la Configuration"
-                                            class="btn-secondary"
-                                            help="Teste la connectivité entre les sociétés configurées"/>
-                                    <button type="object"
-                                            name="action_view_sync_logs"
-                                            string="Voir les Logs"
-                                            class="btn-link"
-                                            help="Affiche l'historique des synchronisations"/>
+                                            name="action_synchroniser_plans_comptables"
+                                            string="Synchroniser les Comptes"
+                                            class="btn-primary"
+                                            icon="fa-refresh"
+                                            help="Copie les comptes manquants vers la société fiscale"/>
                                 </div>
                             </setting>
 
-                        </block>-->
+                        </block>
 
                     </app>
 
