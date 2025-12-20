@@ -1,12 +1,4 @@
 # -*- coding: utf-8 -*-
-# Original module by OPENNEXT Technology (http://www.opennext-dz.com)
-# Adapted and maintained for Odoo 19 by CPSS
-{
-    'name': "Timbre fiscal - Algérie",
-    'summary': "Gestion automatique du timbre fiscal selon la LF 2025",
-    'description': """
-Timbre Fiscal - Algérie (LF 2025)
-=================================
 
 Ce module permet de gérer automatiquement le timbre fiscal pour les paiements
 en espèce sur les factures et avoirs clients/fournisseurs en Algérie,
@@ -40,6 +32,14 @@ Adaptation Odoo 19:
     'company': 'CPSS',
     'maintainer': 'CPSS',
     'website': 'https://www.cpss.dz',
+{
+    'name': "Timbre fiscal",
+    'summary': "Timbre fiscal",
+    'description': "Module de calcule du timbre fiscal selon la LF 2025 algérie",
+    'author': "OPENNEXT Technology",
+    'website': "http://www.opennext-dz.com",
+    'category': 'Accounting',
+    'version': '18.0.0.1.0',
 
     'depends': ['base',
                 'account',
@@ -58,19 +58,15 @@ Adaptation Odoo 19:
     ],
     
     'images': [
-        'static/description//banner.png',
+        'static/description//banner.png',         
         'static/description//icone.ico',
     ],
 
-    # Licence - Conservée de l'original
     "license": "LGPL-3",
     'price': 0.0,
     'currency': 'USD',
-
+    
     'installable': True,
     'application': False,
     'auto_install': False,
-
-    # Odoo 19 compatibility
-    'odoo_version': '19.0',
 }

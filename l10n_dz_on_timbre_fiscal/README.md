@@ -1,19 +1,17 @@
-# 📦 Timbre Fiscal – Calcul et comptabilisation automatique
+# 📦 Timbre Fiscal – Calcul et comptabilisation automatique  
 ### *Conforme à la Loi de Finances 2025 (Algérie)*
 
 [![License: LGPL-3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
-[![Odoo Version](https://img.shields.io/badge/Odoo-19.0-orange)](https://www.odoo.com)
-[![Maintainer](https://img.shields.io/badge/Maintainer-CPSS-875A7B)](https://www.cpss.dz)
-[![Original Author](https://img.shields.io/badge/Original%20Author-OPENNEXT%20Technology-blue)](https://www.opennext-dz.com)
+[![Odoo Version](https://img.shields.io/badge/Odoo-18.0-orange)](https://www.odoo.com)
+[![Maintainer](https://img.shields.io/badge/Maintainer-OPENNEXT%20Technology-875A7B)](https://www.opennext-dz.com)
+[![Support](https://img.shields.io/badge/Support-support@opennext--dz.com-blue)](mailto:support@opennext-dz.com)
 
 
-> **Module Odoo 19 – Maintained by [CPSS](https://www.cpss.dz)**
->
-> **Originally developed by [OPENNEXT Technology](https://www.opennext-dz.com)**
+> **Module Odoo 18 – by [OPENNEXT Technology](https://www.opennext-dz.com)**
 
 ---
 
-Ce module permet la **gestion automatique du timbre fiscal** sur Odoo 19, selon les dispositions de la **Loi de Finances 2025**.
+Ce module permet la **gestion automatique du timbre fiscal** sur Odoo 18, selon les dispositions de la **Loi de Finances 2025**.
 Il permet de:
 - 💰 Calculer automatiquement le **montant du timbre** si le mode de paiement est "Espèce".
 - 🧾 L'intègrer à la **facture client / fournisseur / avoir**.
@@ -23,7 +21,7 @@ Il permet de:
 ---
 
 
-Ce module permet la gestion automatique du timbre fiscal sur Odoo 19 selon les dispositions de la Loi de Finances 2025. Il calcule le timbre en fonction du montant de la facture et du mode de paiement, et ajoute automatiquement les écritures comptables correspondantes dans les factures concernées (paiement en espèce). Le montant du timbre est aussi affiché clairement sur la facture client et fournisseur.
+Ce module permet la gestion automatique du timbre fiscal sur odoo 18 selon les dispositions de la Loi de Finances 2025. Il calcule le timbre en fonction du montant de la facture et du mode de paiement, et ajoute automatiquement les écritures comptables correspondantes dans les factures concernées (paiement en espèce). Le montant du timbre est aussi affiché clairement sur la facture client et fournisseur.
 
 
 **Configuration**
@@ -82,24 +80,12 @@ Ce module constitue une version fonctionnelle centrée sur la gestion automatiqu
 L’objectif est d’évoluer vers une solution complète, personnalisable et conforme aux exigences réglementaires algériennes tout en s’adaptant aux besoins spécifiques de chaque entreprise.
 
 
-## 🛠 Mainteneurs et Crédits :
+## 🛠 Mainteneurs :
 
-### Maintenance Odoo 19
-Ce module est maintenu pour **Odoo 19** par **[CPSS](https://www.cpss.dz)**, intégrateur de solutions informatiques, spécialisé dans la mise en place, le développement et l'intégration de solutions de gestion d'entreprise basées sur **Odoo**.
+Ce module est maintenu par **[OPENNEXT Technology](https://www.opennext-dz.com)**, intégrateur de solutions informatiques, spécialisé dans la mise en place, le développement et l’intégration de solutions de gestion d’entreprise basées sur **Odoo**.
 
 Nous accompagnons les entreprises dans leur transformation numérique à travers des solutions adaptées, robustes et conformes à la législation algérienne.
 
-### Auteur Original
-Module originalement développé par **[OPENNEXT Technology](https://www.opennext-dz.com)** pour Odoo 18.
-
-Nous remercions OPENNEXT Technology pour leur excellent travail initial qui a servi de base à cette adaptation pour Odoo 19.
-
----
-
-📧 Pour toute demande de support, personnalisation ou contribution :
-**CPSS** : contact@cpss.dz
-🌐 [www.cpss.dz](https://www.cpss.dz)
-
-**OPENNEXT Technology** (auteur original) :
-📧 contact@opennext-dz.com
+📧 Pour toute demande de support, personnalisation ou contribution :  
+**contact@opennext-dz.com**  
 🌐 [www.opennext-dz.com](https://www.opennext-dz.com)
