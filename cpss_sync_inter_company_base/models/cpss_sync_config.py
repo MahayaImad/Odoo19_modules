@@ -141,6 +141,9 @@ class CpssSyncConfig(models.Model):
 
             company_ids = [config.societe_operationnelle_id.id, config.societe_fiscale_id.id]
 
+            # 🆕 NOUVEAU: Synchroniser les plans comptables
+            self._synchroniser_plans_comptables(config)
+
             # 1. Partners partagés (sauf les sociétés elles-mêmes)
             # Odoo 19: Utilise company_ids pour partage explicite
             partners = self.env['res.partner'].search([
@@ -196,6 +199,77 @@ class CpssSyncConfig(models.Model):
         except Exception as e:
             _logger.error(f"❌ Erreur lors de la configuration des données partagées : {str(e)}")
             return False
+
+    def _synchroniser_plans_comptables(self, config):
+        """
+        Synchronise les plans comptables entre sociétés (Odoo 19)
+        Copie les comptes manquants de la société opérationnelle vers la société fiscale
+        """
+        _logger.info("🔄 Synchronisation des plans comptables...")
+
+        # Récupérer tous les comptes de la société opérationnelle
+        comptes_op = self.env['account.account'].sudo().search([
+            ('company_ids', 'in', [config.societe_operationnelle_id.id])
+        ])
+
+        comptes_crees = 0
+        comptes_existants = 0
+
+        for compte_op in comptes_op:
+            # Vérifier si le compte existe déjà dans la société fiscale
+            compte_fiscal = self.env['account.account'].sudo().search([
+                ('code', '=', compte_op.code),
+                ('company_ids', 'in', [config.societe_fiscale_id.id])
+            ], limit=1)
+
+            if compte_fiscal:
+                comptes_existants += 1
+                continue
+
+            # Créer le compte dans la société fiscale
+            try:
+                vals = {
+                    'code': compte_op.code,
+                    'name': compte_op.name,
+                    'account_type': compte_op.account_type,
+                    'company_ids': [(6, 0, [config.societe_fiscale_id.id])],
+                    'reconcile': compte_op.reconcile,
+                    'note': compte_op.note or '',
+                }
+
+                # Ajouter le groupe de compte si existe
+                if compte_op.group_id:
+                    # Chercher ou créer le groupe dans la société fiscale
+                    groupe_fiscal = self.env['account.group'].sudo().search([
+                        ('code_prefix_start', '=', compte_op.group_id.code_prefix_start),
+                        ('company_id', '=', config.societe_fiscale_id.id)
+                    ], limit=1)
+
+                    if not groupe_fiscal and compte_op.group_id:
+                        # Créer le groupe dans la société fiscale
+                        groupe_fiscal = self.env['account.group'].sudo().create({
+                            'name': compte_op.group_id.name,
+                            'code_prefix_start': compte_op.group_id.code_prefix_start,
+                            'code_prefix_end': compte_op.group_id.code_prefix_end,
+                            'company_id': config.societe_fiscale_id.id,
+                        })
+
+                    if groupe_fiscal:
+                        vals['group_id'] = groupe_fiscal.id
+
+                self.env['account.account'].sudo().create(vals)
+                comptes_crees += 1
+
+            except Exception as e:
+                _logger.warning(f"⚠️  Impossible de créer le compte {compte_op.code}: {str(e)}")
+                continue
+
+        _logger.info(f"✅ Synchronisation terminée:")
+        _logger.info(f"   • {comptes_existants} comptes déjà présents")
+        _logger.info(f"   • {comptes_crees} comptes créés")
+        _logger.info(f"   • Total: {comptes_existants + comptes_crees} comptes dans société fiscale")
+
+        return True
 
     def action_test_synchronisation(self):
         """Test de la configuration de synchronisation"""

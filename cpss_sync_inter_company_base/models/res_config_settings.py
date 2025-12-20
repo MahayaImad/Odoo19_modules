@@ -134,6 +134,53 @@ class ResConfigSettings(models.TransientModel):
                 }
             }
 
+    def action_synchroniser_plans_comptables(self):
+        """Synchronise les plans comptables entre les sociétés"""
+        try:
+            config = self.env['cpss.sync.config'].search([], limit=1)
+            if not config:
+                return {
+                    'type': 'ir.actions.client',
+                    'tag': 'display_notification',
+                    'params': {
+                        'title': _('❌ Erreur'),
+                        'message': _('Configuration de synchronisation non trouvée.'),
+                        'type': 'danger',
+                    }
+                }
+
+            # Lancer la synchronisation
+            config._synchroniser_plans_comptables(config)
+
+            return {
+                'type': 'ir.actions.client',
+                'tag': 'display_notification',
+                'params': {
+                    'title': _('✅ Synchronisation Terminée'),
+                    'message': _(
+                        'Les plans comptables ont été synchronisés.\n\n'
+                        'Tous les comptes de %s ont été copiés vers %s.\n\n'
+                        'Vous pouvez maintenant partager vos factures!'
+                    ) % (
+                        config.societe_operationnelle_id.name,
+                        config.societe_fiscale_id.name
+                    ),
+                    'type': 'success',
+                    'sticky': False,
+                }
+            }
+
+        except Exception as e:
+            return {
+                'type': 'ir.actions.client',
+                'tag': 'display_notification',
+                'params': {
+                    'title': _('❌ Synchronisation Échouée'),
+                    'message': str(e),
+                    'type': 'danger',
+                }
+            }
+
     @api.onchange('sync_societe_operationnelle_id', 'sync_societe_fiscale_id',
                   'sync_utilisateur_intersocietes_id', 'sync_journal_fiscal_defaut_id',
                   'sync_notifier_erreurs', 'sync_utilisateurs_notification_ids')
