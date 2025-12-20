@@ -335,7 +335,7 @@ class AccountMove(models.Model):
 
     def _mapper_taxes_vers_societe_fiscale_safe(self, taxes_operationnelles, config):
         """
-        Mapper les taxes de manière ULTRA SAFE : ne JAMAIS lever d'exception
+        Mapper les taxes de manière ULTRA SAFE avec fallback intelligent (Odoo 19)
         Retourne toujours un recordset (vide si aucune taxe trouvée)
         """
         if not taxes_operationnelles:
@@ -346,17 +346,44 @@ class AccountMove(models.Model):
 
         for taxe in taxes_operationnelles:
             try:
-                taxe_fiscale = self.env['account.tax'].sudo().search([
-                    ('name', '=', taxe.name),
-                    ('amount', '=', taxe.amount),
-                    ('type_tax_use', '=', taxe.type_tax_use),
-                    ('company_id', '=', config.societe_fiscale_id.id)
-                ], limit=1)
+                taxe_fiscale = None
+
+                # 🔍 Stratégie 1: Recherche exacte par description (code interne)
+                if taxe.description:
+                    taxe_fiscale = self.env['account.tax'].sudo().search([
+                        ('description', '=', taxe.description),
+                        ('type_tax_use', '=', taxe.type_tax_use),
+                        '|',
+                        ('company_id', '=', config.societe_fiscale_id.id),
+                        ('company_ids', 'in', [config.societe_fiscale_id.id])
+                    ], limit=1)
+
+                # 🔍 Stratégie 2: Recherche par nom + montant exact
+                if not taxe_fiscale:
+                    taxe_fiscale = self.env['account.tax'].sudo().search([
+                        ('name', '=', taxe.name),
+                        ('amount', '=', taxe.amount),
+                        ('type_tax_use', '=', taxe.type_tax_use),
+                        '|',
+                        ('company_id', '=', config.societe_fiscale_id.id),
+                        ('company_ids', 'in', [config.societe_fiscale_id.id])
+                    ], limit=1)
+
+                # 🔍 Stratégie 3: Fallback - Recherche par montant + type uniquement
+                if not taxe_fiscale:
+                    taxe_fiscale = self.env['account.tax'].sudo().search([
+                        ('amount', '=', taxe.amount),
+                        ('type_tax_use', '=', taxe.type_tax_use),
+                        '|',
+                        ('company_id', '=', config.societe_fiscale_id.id),
+                        ('company_ids', 'in', [config.societe_fiscale_id.id])
+                    ], limit=1)
 
                 if taxe_fiscale:
                     taxes_fiscales |= taxe_fiscale
                 else:
                     taxes_manquantes.append(f"{taxe.name} ({taxe.amount}%)")
+
             except Exception as e:
                 # ✅ AUCUNE exception ne doit sortir de cette fonction
                 taxes_manquantes.append(f"{taxe.name} (erreur: {str(e)})")
@@ -388,13 +415,51 @@ class AccountMove(models.Model):
         return journal
 
     def _mapper_compte_vers_societe_fiscale(self, compte_operationnel, config):
+        """
+        Mapper un compte avec recherche intelligente et fallback (Odoo 19)
+        """
+        compte = None
+
+        # 🔍 Stratégie 1: Recherche exacte par code
         compte = self.env['account.account'].sudo().search([
             ('code', '=', compte_operationnel.code),
             ('company_ids', 'in', [config.societe_fiscale_id.id])
         ], limit=1)
+
+        # 🔍 Stratégie 2: Fallback - Code avec padding différent
+        # Ex: 700000 (6 digits) → 70000 (5 digits) ou 7000 (4 digits)
+        if not compte and len(compte_operationnel.code) >= 4:
+            for longueur in [6, 5, 4]:  # Essayer différentes longueurs
+                if len(compte_operationnel.code) != longueur:
+                    code_tronque = compte_operationnel.code[:longueur].ljust(longueur, '0')
+                    compte = self.env['account.account'].sudo().search([
+                        ('code', '=', code_tronque),
+                        ('account_type', '=', compte_operationnel.account_type),
+                        ('company_ids', 'in', [config.societe_fiscale_id.id])
+                    ], limit=1)
+                    if compte:
+                        break
+
+        # 🔍 Stratégie 3: Fallback - Recherche par préfixe (premiers 3 chiffres)
+        if not compte and len(compte_operationnel.code) >= 3:
+            code_prefixe = compte_operationnel.code[:3]
+            compte = self.env['account.account'].sudo().search([
+                ('code', '=like', f'{code_prefixe}%'),
+                ('account_type', '=', compte_operationnel.account_type),
+                ('company_ids', 'in', [config.societe_fiscale_id.id])
+            ], limit=1)
+
         if not compte:
-            raise UserError(_("Compte %s introuvable dans %s") % (
-                compte_operationnel.code, config.societe_fiscale_id.name))
+            raise UserError(_(
+                "Compte %s introuvable dans %s\n\n"
+                "Type de compte: %s\n"
+                "Vérifiez que le plan comptable est installé dans la société fiscale."
+            ) % (
+                compte_operationnel.code,
+                config.societe_fiscale_id.name,
+                compte_operationnel.account_type
+            ))
+
         return compte
 
     def _trouver_paiements_rapproches(self):
