@@ -48,7 +48,7 @@
                                context="{'partner_id': partner_id, 'move_type': parent.move_type}"
                                groups="account.group_account_readonly"
                                options="{'no_quick_create': True}"
-                               domain="[('deprecated', '=', False), ('company_ids', 'parent_of', company_id), ('account_type', 'not in', ('asset_receivable', 'liability_payable', 'off_balance'))]"
+                               domain="[('company_ids', 'parent_of', company_id), ('account_type', 'not in', ('asset_receivable', 'liability_payable', 'off_balance'))]"
                                required="display_type not in ('line_note', 'line_section')"/>
                         <field name="analytic_distribution" widget="analytic_distribution"
                                string="Analytic"
@@ -115,7 +115,7 @@
                                context="{'partner_id': partner_id, 'move_type': parent.move_type}"
                                groups="account.group_account_readonly"
                                options="{'no_quick_create': True}"
-                               domain="[('deprecated', '=', False), ('company_ids', 'parent_of', company_id), ('account_type', 'not in', ('asset_receivable', 'liability_payable', 'off_balance'))]"
+                               domain="[('company_ids', 'parent_of', company_id), ('account_type', 'not in', ('asset_receivable', 'liability_payable', 'off_balance'))]"
                                required="display_type not in ('line_note', 'line_section')"/>
                         <field name="analytic_distribution" widget="analytic_distribution"
                                string="Analytic"
