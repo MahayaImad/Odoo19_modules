@@ -449,18 +449,78 @@ class AccountMove(models.Model):
                 ('company_ids', 'in', [config.societe_fiscale_id.id])
             ], limit=1)
 
+        # 🔍 Stratégie 4: Fallback - Premier compte du même type
         if not compte:
+            compte = self.env['account.account'].sudo().search([
+                ('account_type', '=', compte_operationnel.account_type),
+                ('company_ids', 'in', [config.societe_fiscale_id.id])
+            ], limit=1)
+
+        if not compte:
+            # Diagnostic détaillé pour aider l'utilisateur
+            diagnostic = self._diagnostiquer_comptes_manquants(compte_operationnel, config)
             raise UserError(_(
-                "Compte %s introuvable dans %s\n\n"
-                "Type de compte: %s\n"
-                "Vérifiez que le plan comptable est installé dans la société fiscale."
+                "❌ Compte %s introuvable dans %s\n\n"
+                "Type de compte: %s\n\n"
+                "🔍 Diagnostic:\n%s\n\n"
+                "💡 Solutions:\n"
+                "1. Installer le plan comptable dans la société fiscale\n"
+                "2. Créer manuellement le compte %s (type: %s)\n"
+                "3. Vérifier que les deux sociétés utilisent le même plan comptable"
             ) % (
                 compte_operationnel.code,
                 config.societe_fiscale_id.name,
+                compte_operationnel.account_type,
+                diagnostic,
+                compte_operationnel.code,
                 compte_operationnel.account_type
             ))
 
         return compte
+
+    def _diagnostiquer_comptes_manquants(self, compte_op, config):
+        """Diagnostic détaillé des comptes disponibles"""
+        lignes = []
+
+        # Vérifier si des comptes existent dans la société fiscale
+        total_comptes = self.env['account.account'].sudo().search_count([
+            ('company_ids', 'in', [config.societe_fiscale_id.id])
+        ])
+
+        if total_comptes == 0:
+            lignes.append("⚠️  AUCUN compte trouvé dans la société fiscale!")
+            lignes.append("   → Le plan comptable n'est probablement pas installé")
+        else:
+            lignes.append(f"✅ {total_comptes} comptes trouvés dans la société fiscale")
+
+            # Chercher des comptes similaires
+            code_prefixe = compte_op.code[:2] if len(compte_op.code) >= 2 else compte_op.code
+            comptes_similaires = self.env['account.account'].sudo().search([
+                ('code', '=like', f'{code_prefixe}%'),
+                ('company_ids', 'in', [config.societe_fiscale_id.id])
+            ], limit=5)
+
+            if comptes_similaires:
+                lignes.append(f"\n📋 Comptes similaires trouvés (code commençant par {code_prefixe}):")
+                for c in comptes_similaires:
+                    lignes.append(f"   • {c.code} - {c.name} (type: {c.account_type})")
+            else:
+                lignes.append(f"\n⚠️  Aucun compte trouvé commençant par {code_prefixe}")
+
+            # Chercher par type de compte
+            comptes_meme_type = self.env['account.account'].sudo().search([
+                ('account_type', '=', compte_op.account_type),
+                ('company_ids', 'in', [config.societe_fiscale_id.id])
+            ], limit=3)
+
+            if comptes_meme_type:
+                lignes.append(f"\n📊 Comptes du même type ({compte_op.account_type}):")
+                for c in comptes_meme_type:
+                    lignes.append(f"   • {c.code} - {c.name}")
+            else:
+                lignes.append(f"\n⚠️  Aucun compte de type '{compte_op.account_type}' trouvé")
+
+        return "\n".join(lignes)
 
     def _trouver_paiements_rapproches(self):
         self.ensure_one()
