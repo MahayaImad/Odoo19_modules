@@ -130,30 +130,66 @@ class CpssSyncConfig(models.Model):
     @api.model
     def configurer_donnees_partagees(self):
         """
-        Configure les données pour qu'elles soient partagées
-        entre les sociétés (company_id = False)
+        Configure les données pour qu'elles soient partagées entre les sociétés
+        en utilisant company_ids (Odoo 19)
         """
         try:
+            config = self.search([], limit=1)
+            if not config or not config.societe_operationnelle_id or not config.societe_fiscale_id:
+                _logger.warning("⚠️  Configuration sync manquante - partage impossible")
+                return False
+
+            company_ids = [config.societe_operationnelle_id.id, config.societe_fiscale_id.id]
+
             # 1. Partners partagés (sauf les sociétés elles-mêmes)
+            # Odoo 19: Utilise company_ids pour partage explicite
             partners = self.env['res.partner'].search([
+                '|',
                 ('company_id', '!=', False),
+                ('company_ids', '!=', False),
                 ('is_company', '=', False)  # Ne pas partager les sociétés
             ])
             if partners:
-                partners.write({'company_id': False})
-                _logger.info(f"✅ {len(partners)} contacts configurés comme partagés")
+                # ✅ Odoo 19: Partage explicite avec company_ids
+                partners.write({
+                    'company_id': False,  # Rétrocompatibilité
+                    'company_ids': [(6, 0, company_ids)]  # Partage explicite
+                })
+                _logger.info(f"✅ {len(partners)} contacts partagés entre {len(company_ids)} sociétés")
 
             # 2. Produits partagés
-            produits = self.env['product.product'].search([('company_id', '!=', False)])
+            produits = self.env['product.product'].search([
+                '|',
+                ('company_id', '!=', False),
+                ('company_ids', '!=', False)
+            ])
             if produits:
-                produits.write({'company_id': False})
-                _logger.info(f"✅ {len(produits)} produits configurés comme partagés")
+                # ✅ Odoo 19: Partage explicite avec company_ids
+                produits.write({
+                    'company_id': False,  # Rétrocompatibilité
+                    'company_ids': [(6, 0, company_ids)]  # Partage explicite
+                })
+                _logger.info(f"✅ {len(produits)} produits partagés entre {len(company_ids)} sociétés")
 
-            # 3. IMPORTANT : Ne PAS partager les comptes et taxes
+            # 3. Templates de produits partagés
+            templates = self.env['product.template'].search([
+                '|',
+                ('company_id', '!=', False),
+                ('company_ids', '!=', False)
+            ])
+            if templates:
+                templates.write({
+                    'company_id': False,
+                    'company_ids': [(6, 0, company_ids)]
+                })
+                _logger.info(f"✅ {len(templates)} templates produits partagés")
+
+            # 4. IMPORTANT : Ne PAS partager les comptes et taxes
             # Ils doivent rester spécifiques à chaque société pour la conformité comptable
             # Le mapping sera fait automatiquement lors de la synchronisation
 
-            _logger.info("🎯 Configuration des données partagées terminée avec succès")
+            _logger.info("🎯 Configuration des données partagées terminée avec succès (Odoo 19)")
+            _logger.info(f"   Sociétés : {config.societe_operationnelle_id.name} ↔ {config.societe_fiscale_id.name}")
             _logger.info("⚠️  Les comptes et taxes restent spécifiques par société (mapping automatique)")
             return True
 
