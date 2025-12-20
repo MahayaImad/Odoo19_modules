@@ -122,14 +122,14 @@ class AccountMove(models.Model):
                             'move_id': invoice.id,
                             'date_maturity': fields.Date.to_date(term.get('date')),
                             'discount_date': term.get('discount_date'),
-                            'discount_percentage': term.get('discount_percentage'),
+                            # 'discount_percentage' removed - not a valid field in Odoo 19
                         })
-                        # add the value of amount_timbre to keep th balance 
+                        # add the value of amount_timbre to keep th balance
                         balance = term['company_amount']
                         amount_currency = term['foreign_amount']
 
                         if invoice.company_id.based_on == 'posted_invoices':
-                            balance += invoice.amount_timbre - invoice.amount_timbre_supplier 
+                            balance += invoice.amount_timbre - invoice.amount_timbre_supplier
                             amount_currency += invoice.amount_timbre - invoice.amount_timbre_supplier
 
                         values = {
@@ -139,7 +139,7 @@ class AccountMove(models.Model):
                             'discount_amount_currency': term['discount_amount_currency'] or 0.0,
                             'discount_balance': term['discount_balance'] or 0.0,
                             'discount_date': term['discount_date'],
-                            'discount_percentage': term['discount_percentage'],
+                            # 'discount_percentage' removed - not a valid field in Odoo 19
                         }
                         if key not in invoice.needed_terms:
                             invoice.needed_terms[key] = values
@@ -155,12 +155,12 @@ class AccountMove(models.Model):
                         balance2 += invoice.amount_timbre -  invoice.amount_timbre_supplier
                         amount_currency2 += invoice.amount_timbre -  invoice.amount_timbre_supplier
 
-                    # add the value of amount_timbre to keep th balance 
+                    # add the value of amount_timbre to keep th balance
                     invoice.needed_terms[frozendict({
                         'move_id': invoice.id,
                         'date_maturity': fields.Date.to_date(invoice.invoice_date_due),
                         'discount_date': False,
-                        'discount_percentage': 0
+                        # 'discount_percentage' removed - not a valid field in Odoo 19
                     })] = {
                         'balance': balance2,
                         'amount_currency': amount_currency2 ,
