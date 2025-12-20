@@ -390,7 +390,7 @@ class AccountMove(models.Model):
     def _mapper_compte_vers_societe_fiscale(self, compte_operationnel, config):
         compte = self.env['account.account'].sudo().search([
             ('code', '=', compte_operationnel.code),
-            ('company_id', '=', config.societe_fiscale_id.id)
+            ('company_ids', 'in', [config.societe_fiscale_id.id])
         ], limit=1)
         if not compte:
             raise UserError(_("Compte %s introuvable dans %s") % (
