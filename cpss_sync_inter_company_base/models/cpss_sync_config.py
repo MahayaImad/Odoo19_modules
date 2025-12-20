@@ -203,11 +203,30 @@ class CpssSyncConfig(models.Model):
     def _synchroniser_plans_comptables(self, config):
         """
         Synchronise les plans comptables entre sociétés (Odoo 19)
-        Copie les comptes manquants de la société opérationnelle vers la société fiscale
+        Copie les comptes, taxes et conditions de paiement manquants
         """
         _logger.info("🔄 Synchronisation des plans comptables...")
 
-        # Récupérer tous les comptes de la société opérationnelle
+        # 1️⃣ Synchroniser les comptes
+        comptes_crees, comptes_existants = self._synchroniser_comptes(config)
+
+        # 2️⃣ Synchroniser les taxes
+        taxes_creees, taxes_existantes = self._synchroniser_taxes(config)
+
+        # 3️⃣ Synchroniser les conditions de paiement
+        paiements_crees, paiements_existants = self._synchroniser_conditions_paiement(config)
+
+        _logger.info(f"✅ Synchronisation terminée:")
+        _logger.info(f"   Comptes: {comptes_existants} existants, {comptes_crees} créés")
+        _logger.info(f"   Taxes: {taxes_existantes} existantes, {taxes_creees} créées")
+        _logger.info(f"   Conditions paiement: {paiements_existants} existantes, {paiements_crees} créées")
+
+        return True
+
+    def _synchroniser_comptes(self, config):
+        """Synchronise les comptes comptables"""
+        _logger.info("  📊 Synchronisation des comptes...")
+
         comptes_op = self.env['account.account'].sudo().search([
             ('company_ids', 'in', [config.societe_operationnelle_id.id])
         ])
@@ -216,7 +235,6 @@ class CpssSyncConfig(models.Model):
         comptes_existants = 0
 
         for compte_op in comptes_op:
-            # Vérifier si le compte existe déjà dans la société fiscale
             compte_fiscal = self.env['account.account'].sudo().search([
                 ('code', '=', compte_op.code),
                 ('company_ids', 'in', [config.societe_fiscale_id.id])
@@ -226,7 +244,6 @@ class CpssSyncConfig(models.Model):
                 comptes_existants += 1
                 continue
 
-            # Créer le compte dans la société fiscale
             try:
                 vals = {
                     'code': compte_op.code,
@@ -237,16 +254,13 @@ class CpssSyncConfig(models.Model):
                     'note': compte_op.note or '',
                 }
 
-                # Ajouter le groupe de compte si existe
                 if compte_op.group_id:
-                    # Chercher ou créer le groupe dans la société fiscale
                     groupe_fiscal = self.env['account.group'].sudo().search([
                         ('code_prefix_start', '=', compte_op.group_id.code_prefix_start),
                         ('company_id', '=', config.societe_fiscale_id.id)
                     ], limit=1)
 
-                    if not groupe_fiscal and compte_op.group_id:
-                        # Créer le groupe dans la société fiscale
+                    if not groupe_fiscal:
                         groupe_fiscal = self.env['account.group'].sudo().create({
                             'name': compte_op.group_id.name,
                             'code_prefix_start': compte_op.group_id.code_prefix_start,
@@ -261,15 +275,158 @@ class CpssSyncConfig(models.Model):
                 comptes_crees += 1
 
             except Exception as e:
-                _logger.warning(f"⚠️  Impossible de créer le compte {compte_op.code}: {str(e)}")
+                _logger.warning(f"⚠️  Compte {compte_op.code}: {str(e)}")
                 continue
 
-        _logger.info(f"✅ Synchronisation terminée:")
-        _logger.info(f"   • {comptes_existants} comptes déjà présents")
-        _logger.info(f"   • {comptes_crees} comptes créés")
-        _logger.info(f"   • Total: {comptes_existants + comptes_crees} comptes dans société fiscale")
+        return comptes_crees, comptes_existants
 
-        return True
+    def _synchroniser_taxes(self, config):
+        """Synchronise les taxes (TVA, etc.)"""
+        _logger.info("  💰 Synchronisation des taxes...")
+
+        taxes_op = self.env['account.tax'].sudo().search([
+            '|',
+            ('company_id', '=', config.societe_operationnelle_id.id),
+            ('company_ids', 'in', [config.societe_operationnelle_id.id])
+        ])
+
+        taxes_creees = 0
+        taxes_existantes = 0
+
+        for taxe_op in taxes_op:
+            # Vérifier si la taxe existe déjà
+            taxe_fiscal = self.env['account.tax'].sudo().search([
+                ('name', '=', taxe_op.name),
+                ('amount', '=', taxe_op.amount),
+                ('type_tax_use', '=', taxe_op.type_tax_use),
+                '|',
+                ('company_id', '=', config.societe_fiscale_id.id),
+                ('company_ids', 'in', [config.societe_fiscale_id.id])
+            ], limit=1)
+
+            if taxe_fiscal:
+                taxes_existantes += 1
+                continue
+
+            try:
+                vals = {
+                    'name': taxe_op.name,
+                    'amount': taxe_op.amount,
+                    'amount_type': taxe_op.amount_type,
+                    'type_tax_use': taxe_op.type_tax_use,
+                    'description': taxe_op.description or taxe_op.name,
+                    'company_id': config.societe_fiscale_id.id,
+                }
+
+                # Copier les comptes de taxe si définis
+                if taxe_op.invoice_repartition_line_ids:
+                    repartition_lines = []
+                    for line in taxe_op.invoice_repartition_line_ids:
+                        line_vals = {
+                            'repartition_type': line.repartition_type,
+                            'factor_percent': line.factor_percent,
+                        }
+
+                        # Mapper le compte vers la société fiscale
+                        if line.account_id:
+                            compte_fiscal = self.env['account.account'].sudo().search([
+                                ('code', '=', line.account_id.code),
+                                ('company_ids', 'in', [config.societe_fiscale_id.id])
+                            ], limit=1)
+                            if compte_fiscal:
+                                line_vals['account_id'] = compte_fiscal.id
+
+                        repartition_lines.append((0, 0, line_vals))
+
+                    if repartition_lines:
+                        vals['invoice_repartition_line_ids'] = repartition_lines
+
+                if taxe_op.refund_repartition_line_ids:
+                    repartition_lines = []
+                    for line in taxe_op.refund_repartition_line_ids:
+                        line_vals = {
+                            'repartition_type': line.repartition_type,
+                            'factor_percent': line.factor_percent,
+                        }
+
+                        if line.account_id:
+                            compte_fiscal = self.env['account.account'].sudo().search([
+                                ('code', '=', line.account_id.code),
+                                ('company_ids', 'in', [config.societe_fiscale_id.id])
+                            ], limit=1)
+                            if compte_fiscal:
+                                line_vals['account_id'] = compte_fiscal.id
+
+                        repartition_lines.append((0, 0, line_vals))
+
+                    if repartition_lines:
+                        vals['refund_repartition_line_ids'] = repartition_lines
+
+                self.env['account.tax'].sudo().create(vals)
+                taxes_creees += 1
+
+            except Exception as e:
+                _logger.warning(f"⚠️  Taxe {taxe_op.name}: {str(e)}")
+                continue
+
+        return taxes_creees, taxes_existantes
+
+    def _synchroniser_conditions_paiement(self, config):
+        """Synchronise les conditions de paiement (incluant timbre)"""
+        _logger.info("  📝 Synchronisation des conditions de paiement...")
+
+        conditions_op = self.env['account.payment.term'].sudo().search([
+            '|',
+            ('company_id', '=', config.societe_operationnelle_id.id),
+            ('company_id', '=', False)
+        ])
+
+        paiements_crees = 0
+        paiements_existants = 0
+
+        for condition_op in conditions_op:
+            # Vérifier si la condition existe déjà
+            condition_fiscal = self.env['account.payment.term'].sudo().search([
+                ('name', '=', condition_op.name),
+                '|',
+                ('company_id', '=', config.societe_fiscale_id.id),
+                ('company_id', '=', False)
+            ], limit=1)
+
+            if condition_fiscal:
+                paiements_existants += 1
+                continue
+
+            try:
+                vals = {
+                    'name': condition_op.name,
+                    'company_id': config.societe_fiscale_id.id,
+                    'note': condition_op.note or '',
+                }
+
+                # Copier le type de paiement (timbre) si existe
+                if hasattr(condition_op, 'payment_type'):
+                    vals['payment_type'] = condition_op.payment_type
+
+                # Copier les lignes de condition
+                if condition_op.line_ids:
+                    line_vals = []
+                    for line in condition_op.line_ids:
+                        line_vals.append((0, 0, {
+                            'value': line.value,
+                            'value_amount': line.value_amount,
+                            'nb_days': line.nb_days,
+                        }))
+                    vals['line_ids'] = line_vals
+
+                self.env['account.payment.term'].sudo().create(vals)
+                paiements_crees += 1
+
+            except Exception as e:
+                _logger.warning(f"⚠️  Condition paiement {condition_op.name}: {str(e)}")
+                continue
+
+        return paiements_crees, paiements_existants
 
     def action_test_synchronisation(self):
         """Test de la configuration de synchronisation"""
