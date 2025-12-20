@@ -200,8 +200,8 @@ class ResConfigSettings(models.TransientModel):
 
         company and res.update(
 
-            transfer_tax_journal=company.transfer_tax_journal,
-            temporary_tax_account=company.temporary_tax_account,
+            transfer_tax_journal=company.transfer_tax_journal.id,
+            temporary_tax_account=company.temporary_tax_account.id,
             based_on=company.based_on,
             industry_id_in_invoice=company.industry_id_in_invoice,
             activity_code_in_invoice=company.activity_code_in_invoice,
@@ -219,8 +219,8 @@ class ResConfigSettings(models.TransientModel):
         company = self.env.company
         company and company.write({
 
-            'transfer_tax_journal': self.transfer_tax_journal,
-            'temporary_tax_account': self.temporary_tax_account,
+            'transfer_tax_journal': self.transfer_tax_journal.id,
+            'temporary_tax_account': self.temporary_tax_account.id,
             'based_on': self.based_on,
             'industry_id_in_invoice': self.industry_id_in_invoice,
             'activity_code_in_invoice': self.activity_code_in_invoice,
