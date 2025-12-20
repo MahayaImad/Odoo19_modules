@@ -17,9 +17,12 @@ class AccountMove(models.Model):
 
     payment_mode_supplier_type = fields.Selection(related='payment_mode_supplier.mode_type')
 
-    amount_timbre_supplier = fields.Monetary(string = "Droit de timbre", digits = (2))
-    amount_with_timbre_supplier = fields.Monetary(string = "Montant avec timbre",compute='_compute_amount_timbre_supplier' , digits = (2))
-    
+    amount_timbre_supplier = fields.Monetary(string="Droit de timbre")
+    amount_with_timbre_supplier = fields.Monetary(
+        string="Montant avec timbre",
+        compute='_compute_amount_timbre_supplier'
+    )
+
     """Un champ boolean utilisé pour la visibilté d'autre champs en fonction de la valeur de champ  'Se basé sur' """
     for_based_on_in_move = fields.Boolean(string="Pour le champ 'Se basé sur'")
 
