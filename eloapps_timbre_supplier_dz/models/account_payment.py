@@ -219,8 +219,7 @@ class AccountPaymentRegister(models.TransientModel):
 
     use_timbre_supplier = fields.Boolean(compute='_visible_timbre_fiscal')
 
-    amount_timbre_supplier = fields.Monetary(string = "Droit de timbre fournisseur", digits = (2))
-
+    amount_timbre_supplier = fields.Monetary(string="Droit de timbre fournisseur")
 
     def _create_payment_vals_from_wizard(self, batch_result):
 
