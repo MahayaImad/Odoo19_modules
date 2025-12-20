@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-
+{
+    """
 Ce module permet de gérer automatiquement le timbre fiscal pour les paiements
 en espèce sur les factures et avoirs clients/fournisseurs en Algérie,
 conformément à la Loi de Finances 2025.
