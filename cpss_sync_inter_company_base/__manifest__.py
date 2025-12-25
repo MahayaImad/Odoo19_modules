@@ -29,12 +29,20 @@
 
         # Views
         'views/res_config_settings_views.xml',
+        'views/res_company_views.xml',
         'views/cpss_sync_log_views.xml',
         'views/cpss_company_data_config_views.xml',
         'views/account_move_views.xml',
         'views/account_payment_views.xml',
         'views/sync_menus.xml',
     ],
+
+    "assets": {
+        "web.assets_backend": [
+            "cpss_sync_inter_company_base/static/src/scss/navbar_color.scss",
+            "cpss_sync_inter_company_base/static/src/js/navbar_color.js",
+        ],
+    },
 
     "external_dependencies": {
         "python": [],
