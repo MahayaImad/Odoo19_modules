@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Form View for Company Data Sharing Configuration -->
+        <record id="view_company_data_config_form" model="ir.ui.view">
+            <field name="name">cpss.company.data.config.form</field>
+            <field name="model">cpss.company.data.config</field>
+            <field name="arch" type="xml">
+                <form string="Company Data Sharing Configuration">
+                    <header>
+                        <button name="action_apply_sharing_configuration"
+                                string="Apply Configuration"
+                                type="object"
+                                class="oe_highlight"
+                                help="Apply the sharing configuration to all relevant data"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>Company Data Sharing Configuration</h1>
+                            <p class="text-muted">
+                                Configure which functional and fiscal data should be shared between operational and fiscal companies.
+                                Shared data appears only once and is accessible from both companies, avoiding duplication.
+                            </p>
+                        </div>
+
+                        <group>
+                            <group string="Functional Data Sharing">
+                                <field name="share_taxes"
+                                       help="Enable to share taxes between companies. Same tax applies to both companies."/>
+                                <field name="share_payment_terms"
+                                       help="Enable to share payment terms (including stamp taxes)."/>
+                                <field name="share_fiscal_positions"
+                                       help="Enable to share fiscal positions."/>
+                                <field name="share_pricelist"
+                                       help="Enable to share pricelists."/>
+                            </group>
+
+                            <group string="Master Data Sharing">
+                                <field name="share_products"
+                                       help="Enable to share products and product templates."/>
+                                <field name="share_partners"
+                                       help="Enable to share customer and supplier contacts."/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group string="Chart of Accounts">
+                                <field name="sync_chart_of_accounts"
+                                       help="Synchronize chart of accounts from operational to fiscal company. Accounts remain company-specific for compliance."/>
+                                <p class="text-muted" colspan="2">
+                                    Note: Chart of accounts remains company-specific for accounting compliance,
+                                    but is automatically synchronized between companies.
+                                </p>
+                            </group>
+                        </group>
+
+                        <separator string="Sharing Statistics"/>
+                        <group>
+                            <group string="Current Shared Data">
+                                <field name="nb_shared_taxes" readonly="1"/>
+                                <field name="nb_shared_payment_terms" readonly="1"/>
+                                <field name="nb_shared_products" readonly="1"/>
+                                <field name="nb_shared_partners" readonly="1"/>
+                            </group>
+                        </group>
+
+                        <div class="alert alert-info" role="alert">
+                            <h4>How It Works</h4>
+                            <ul>
+                                <li><strong>Shared Data:</strong> Configured in the main (operational) company and automatically available in the fiscal company</li>
+                                <li><strong>Taxes:</strong> When shared, the same tax can be used on invoice lines in both companies without mapping</li>
+                                <li><strong>Chart of Accounts:</strong> Synchronized but kept separate per company for accounting compliance</li>
+                                <li><strong>Apply Configuration:</strong> Click the button above to apply these settings to existing data</li>
+                            </ul>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_company_data_config_tree" model="ir.ui.view">
+            <field name="name">cpss.company.data.config.tree</field>
+            <field name="model">cpss.company.data.config</field>
+            <field name="arch" type="xml">
+                <list string="Company Data Sharing" create="false" delete="false">
+                    <field name="name"/>
+                    <field name="share_taxes"/>
+                    <field name="share_payment_terms"/>
+                    <field name="share_products"/>
+                    <field name="share_partners"/>
+                    <field name="nb_shared_taxes"/>
+                    <field name="nb_shared_partners"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_company_data_config" model="ir.actions.act_window">
+            <field name="name">Company Data Sharing</field>
+            <field name="res_model">cpss.company.data.config</field>
+            <field name="view_mode">form</field>
+            <field name="target">current</field>
+            <field name="context">{'create': False}</field>
+        </record>
+
+    </data>
+</odoo>

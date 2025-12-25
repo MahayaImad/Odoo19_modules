@@ -2,6 +2,9 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_cpss_sync_config_user,cpss.sync.config.user,model_cpss_sync_config,cpss_sync_inter_company_base.group_sync_user,1,0,0,0
 access_cpss_sync_config_manager,cpss.sync.config.manager,model_cpss_sync_config,cpss_sync_inter_company_base.group_sync_manager,1,1,1,0
 access_cpss_sync_config_admin,cpss.sync.config.admin,model_cpss_sync_config,cpss_sync_inter_company_base.group_sync_admin,1,1,1,1
+access_cpss_company_data_config_user,cpss.company.data.config.user,model_cpss_company_data_config,cpss_sync_inter_company_base.group_sync_user,1,0,0,0
+access_cpss_company_data_config_manager,cpss.company.data.config.manager,model_cpss_company_data_config,cpss_sync_inter_company_base.group_sync_manager,1,1,1,0
+access_cpss_company_data_config_admin,cpss.company.data.config.admin,model_cpss_company_data_config,cpss_sync_inter_company_base.group_sync_admin,1,1,1,1
 access_cpss_sync_log_user,cpss.sync.log.user,model_cpss_sync_log,cpss_sync_inter_company_base.group_sync_user,1,0,0,0
 access_cpss_sync_log_proposer,cpss.sync.log.proposer,model_cpss_sync_log,cpss_sync_inter_company_base.group_sync_proposer,1,0,1,0
 access_cpss_sync_log_executor,cpss.sync.log.executor,model_cpss_sync_log,cpss_sync_inter_company_base.group_sync_executor,1,1,1,0

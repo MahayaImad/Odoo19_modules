@@ -43,3 +43,55 @@ class ResCompany(models.Model):
         'user_id',
         string="Utilisateurs à Notifier"
     )
+
+    # Navbar Color Customization
+    navbar_color = fields.Char(
+        string='Navbar Background Color',
+        help='Navbar background color for this company (hex code, e.g., #1f2937). '
+             'If not set, uses primary_color or default color.',
+        default='#1f2937'
+    )
+
+    navbar_text_color = fields.Char(
+        string='Navbar Text Color',
+        help='Navbar text color for this company (hex code, e.g., #ffffff). '
+             'If not set, uses white color.',
+        default='#ffffff'
+    )
+
+    use_navbar_color = fields.Boolean(
+        string='Use Custom Navbar Color',
+        default=False,
+        help='Enable custom navbar color for this company. Helps distinguish between companies visually.'
+    )
+
+    @api.model
+    def get_navbar_colors(self, company_id=None):
+        """
+        Get navbar colors for a specific company.
+        Returns dict with background and text colors.
+        """
+        if not company_id:
+            company_id = self.env.company.id
+
+        company = self.browse(company_id)
+
+        if company.use_navbar_color and company.navbar_color:
+            return {
+                'navbar_bg': company.navbar_color,
+                'navbar_text': company.navbar_text_color or '#ffffff',
+                'use_custom': True
+            }
+        elif company.primary_color:
+            # Fallback to primary color if custom navbar color not set
+            return {
+                'navbar_bg': company.primary_color,
+                'navbar_text': company.navbar_text_color or '#ffffff',
+                'use_custom': True
+            }
+        else:
+            return {
+                'navbar_bg': '#1f2937',  # Default Odoo navbar color
+                'navbar_text': '#ffffff',
+                'use_custom': False
+            }

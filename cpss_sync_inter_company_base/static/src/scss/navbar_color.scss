@@ -1,0 +1,146 @@
+/**
+ * Company-specific Navbar Color Customization
+ * Applies custom colors to Odoo navbar based on current company
+ */
+
+// Default values (can be overridden by JavaScript)
+:root {
+    --cpss-navbar-bg: #1f2937;
+    --cpss-navbar-text: #ffffff;
+}
+
+// Apply custom navbar colors when enabled
+body.cpss-custom-navbar-colors {
+
+    // Main navbar / header
+    .o_main_navbar,
+    .o_navbar_apps_menu,
+    nav.o_main_navbar {
+        background-color: var(--cpss-navbar-bg) !important;
+        color: var(--cpss-navbar-text) !important;
+    }
+
+    // Navbar items
+    .o_main_navbar .o_menu_sections,
+    .o_main_navbar .o_menu_systray {
+        .dropdown-toggle,
+        .btn,
+        .o_menu_item,
+        a {
+            color: var(--cpss-navbar-text) !important;
+
+            &:hover,
+            &:focus {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    // Company switcher button
+    .o_main_navbar .o_switch_company_menu {
+        .dropdown-toggle {
+            color: var(--cpss-navbar-text) !important;
+
+            &::after {
+                border-top-color: var(--cpss-navbar-text) !important;
+            }
+        }
+    }
+
+    // User menu
+    .o_main_navbar .o_user_menu {
+        .dropdown-toggle {
+            color: var(--cpss-navbar-text) !important;
+        }
+    }
+
+    // App switcher
+    .o_navbar_apps_menu {
+        .dropdown-toggle {
+            color: var(--cpss-navbar-text) !important;
+        }
+    }
+
+    // Menu items
+    .o_main_navbar {
+        .o_menu_sections .dropdown > a,
+        .o_menu_sections .dropdown > button {
+            color: var(--cpss-navbar-text) !important;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+            }
+        }
+    }
+
+    // Icons in navbar
+    .o_main_navbar {
+        i, .fa {
+            color: var(--cpss-navbar-text) !important;
+        }
+    }
+
+    // Search bar (if exists)
+    .o_main_navbar .o_menu_search {
+        input {
+            color: var(--cpss-navbar-text);
+            border-color: rgba(255, 255, 255, 0.3);
+
+            &::placeholder {
+                color: rgba(var(--cpss-navbar-text), 0.7);
+            }
+        }
+    }
+
+    // Active menu item
+    .o_main_navbar .o_menu_sections {
+        .dropdown.show > a,
+        .dropdown.show > button,
+        .o_menu_item.active {
+            background-color: rgba(255, 255, 255, 0.15) !important;
+        }
+    }
+
+    // Ensure dropdown menus remain readable (they shouldn't be colored)
+    .o_main_navbar .dropdown-menu {
+        background-color: white !important;
+        color: #000000 !important;
+
+        .dropdown-item {
+            color: #000000 !important;
+
+            &:hover {
+                background-color: #f8f9fa !important;
+            }
+        }
+    }
+}
+
+// Optional: Add a subtle transition when switching companies
+body {
+    .o_main_navbar {
+        transition: background-color 0.3s ease;
+    }
+
+    .o_main_navbar * {
+        transition: color 0.3s ease;
+    }
+}
+
+// Company color indicator badge (optional visual enhancement)
+body.cpss-custom-navbar-colors .o_switch_company_menu {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: -8px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 20px;
+        background-color: var(--cpss-navbar-text);
+        opacity: 0.5;
+        border-radius: 2px;
+    }
+}
