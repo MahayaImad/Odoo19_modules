@@ -25,10 +25,12 @@
 
         # Data
         "data/auto_setup_data.xml",
+        "data/company_data_config_data.xml",
 
         # Views
         'views/res_config_settings_views.xml',
         'views/cpss_sync_log_views.xml',
+        'views/cpss_company_data_config_views.xml',
         'views/account_move_views.xml',
         'views/account_payment_views.xml',
         'views/sync_menus.xml',

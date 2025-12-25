@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Default Company Data Sharing Configuration -->
+        <record id="default_company_data_config" model="cpss.company.data.config">
+            <field name="name">Company Data Sharing</field>
+            <field name="share_taxes" eval="True"/>
+            <field name="share_payment_terms" eval="True"/>
+            <field name="share_fiscal_positions" eval="True"/>
+            <field name="share_products" eval="True"/>
+            <field name="share_partners" eval="True"/>
+            <field name="share_pricelist" eval="False"/>
+            <field name="sync_chart_of_accounts" eval="True"/>
+        </record>
+    </data>
+</odoo>
