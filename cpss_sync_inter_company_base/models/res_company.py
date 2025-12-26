@@ -65,31 +65,112 @@ class ResCompany(models.Model):
         help='Enable custom navbar color for this company. Helps distinguish between companies visually.'
     )
 
+    is_fiscal_company = fields.Boolean(
+        string='Is Fiscal Company',
+        compute='_compute_is_fiscal_company',
+        store=False,
+        help='Indicates if this company is configured as a fiscal company in sync settings'
+    )
+
+    @api.depends('id')
+    def _compute_is_fiscal_company(self):
+        """Determine if this company is a fiscal company"""
+        for company in self:
+            # Check if this company is set as fiscal company in any sync config
+            config = self.env['cpss.sync.config'].sudo().search([
+                ('societe_fiscale_id', '=', company.id)
+            ], limit=1)
+            company.is_fiscal_company = bool(config)
+
+    def action_configure_navbar_colors(self):
+        """
+        Auto-configure navbar colors based on company type:
+        - Operational company: Default Odoo color (no custom color)
+        - Fiscal company: Distinctive color (orange) to warn users
+        """
+        self.ensure_one()
+
+        config = self.env['cpss.sync.config'].sudo().search([], limit=1)
+        if not config:
+            return {
+                'type': 'ir.actions.client',
+                'tag': 'display_notification',
+                'params': {
+                    'title': 'Configuration Required',
+                    'message': 'Please configure sync settings first (operational and fiscal companies).',
+                    'type': 'warning',
+                }
+            }
+
+        # Check if this is the fiscal company
+        if self == config.societe_fiscale_id:
+            # Fiscal company: Distinctive orange color
+            self.write({
+                'use_navbar_color': True,
+                'navbar_color': '#ea580c',  # Orange
+                'navbar_text_color': '#ffffff',
+            })
+            message = f'✅ Fiscal company navbar configured with distinctive orange color'
+        elif self == config.societe_operationnelle_id:
+            # Operational company: Default Odoo color (disable custom color)
+            self.write({
+                'use_navbar_color': False,
+                'navbar_color': '#1f2937',
+                'navbar_text_color': '#ffffff',
+            })
+            message = f'✅ Operational company navbar set to default Odoo color'
+        else:
+            return {
+                'type': 'ir.actions.client',
+                'tag': 'display_notification',
+                'params': {
+                    'title': 'Not Configured',
+                    'message': 'This company is not configured as operational or fiscal company.',
+                    'type': 'info',
+                }
+            }
+
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'display_notification',
+            'params': {
+                'title': 'Navbar Colors Configured',
+                'message': message,
+                'type': 'success',
+            }
+        }
+
     @api.model
     def get_navbar_colors(self, company_id=None):
         """
         Get navbar colors for a specific company.
         Returns dict with background and text colors.
+
+        Strategy:
+        - Operational company: Default Odoo color (use_navbar_color = False)
+        - Fiscal company: Custom distinctive color (use_navbar_color = True)
         """
         if not company_id:
             company_id = self.env.company.id
 
         company = self.browse(company_id)
 
+        # Only use custom colors if explicitly enabled
         if company.use_navbar_color and company.navbar_color:
             return {
                 'navbar_bg': company.navbar_color,
                 'navbar_text': company.navbar_text_color or '#ffffff',
                 'use_custom': True
             }
-        elif company.primary_color:
-            # Fallback to primary color if custom navbar color not set
+        elif company.use_navbar_color and company.primary_color:
+            # Fallback to primary color if custom navbar color not set but enabled
             return {
                 'navbar_bg': company.primary_color,
                 'navbar_text': company.navbar_text_color or '#ffffff',
                 'use_custom': True
             }
         else:
+            # Default Odoo navbar color (operational company default)
             return {
                 'navbar_bg': '#1f2937',  # Default Odoo navbar color
                 'navbar_text': '#ffffff',

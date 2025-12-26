@@ -12,6 +12,14 @@
                 <!-- Add Navbar Color section after General Information -->
                 <xpath expr="//sheet" position="inside">
                     <group string="Navbar Customization" name="navbar_customization">
+                        <field name="is_fiscal_company" invisible="1"/>
+                        <group>
+                            <button name="action_configure_navbar_colors"
+                                    string="Auto-Configure Colors"
+                                    type="object"
+                                    class="btn-primary"
+                                    help="Automatically configure navbar colors based on company type (operational/fiscal)"/>
+                        </group>
                         <group>
                             <field name="use_navbar_color"
                                    widget="boolean_toggle"
@@ -27,15 +35,38 @@
                                    invisible="not use_navbar_color"
                                    help="Text color for the navbar (usually white or dark)"/>
                         </group>
-                        <div class="alert alert-info" role="alert" invisible="not use_navbar_color">
+
+                        <!-- Info for Operational Company -->
+                        <div class="alert alert-success" role="alert"
+                             invisible="use_navbar_color or is_fiscal_company">
+                            <p>
+                                <strong>✅ Operational Company - Default Navbar</strong><br/>
+                                This company uses the default Odoo navbar color (dark gray).
+                                Users will work here normally without visual warnings.
+                            </p>
+                        </div>
+
+                        <!-- Info for Fiscal Company -->
+                        <div class="alert alert-warning" role="alert"
+                             invisible="not use_navbar_color or not is_fiscal_company">
+                            <p>
+                                <strong>⚠️ Fiscal Company - Distinctive Navbar</strong><br/>
+                                This company uses a distinctive navbar color (orange) to alert users
+                                they are working in the fiscal company context.
+                            </p>
+                        </div>
+
+                        <!-- General Info when custom color enabled -->
+                        <div class="alert alert-info" role="alert"
+                             invisible="not use_navbar_color or is_fiscal_company">
                             <p>
                                 <strong>Navbar Color Customization:</strong>
                                 The navbar color will change automatically when you switch to this company,
                                 helping you visually identify which company you're working in.
                             </p>
                             <ul>
-                                <li><strong>Operational Company:</strong> Consider using a blue/green color</li>
-                                <li><strong>Fiscal Company:</strong> Consider using an orange/red color</li>
+                                <li><strong>Operational Company:</strong> Keep default (disabled) or use subtle color</li>
+                                <li><strong>Fiscal Company:</strong> Use distinctive color (orange/red) as warning</li>
                             </ul>
                         </div>
                     </group>

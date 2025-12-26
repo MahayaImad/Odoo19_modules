@@ -70,19 +70,27 @@ Lorsque le partage de taxes est activé :
 - ✅ Les lignes de facture utilisent **directement** les mêmes taxes
 
 ### 🎨 Configuration des Couleurs de Navbar
+
+**Configuration Automatique (Recommandée):**
 1. Aller à **Paramètres > Utilisateurs & Sociétés > Sociétés**
-2. Ouvrir la société que vous voulez personnaliser
-3. Dans la section **"Navbar Customization"** :
-   - ✅ Activer **"Use Custom Navbar Color"**
-   - 🎨 Choisir **"Navbar Background Color"** (exemple: bleu pour société opérationnelle)
-   - 🎨 Choisir **"Navbar Text Color"** (généralement blanc #ffffff)
+2. Ouvrir chaque société (opérationnelle et fiscale)
+3. Dans la section **"Navbar Customization"**, cliquer sur **"Auto-Configure Colors"**
+4. Le système configurera automatiquement :
+   - ✅ **Société Opérationnelle** : Couleur par défaut d'Odoo (gris foncé, pas d'alerte)
+   - ⚠️ **Société Fiscale** : Couleur orange distinctive (alerte visuelle)
+
+**Configuration Manuelle (Optionnelle):**
+1. Activer **"Use Custom Navbar Color"**
+2. Choisir **"Navbar Background Color"** (code hex)
+3. Choisir **"Navbar Text Color"** (généralement blanc #ffffff)
 4. Enregistrer
 
-**Suggestions de couleurs :**
-- **Société Opérationnelle** : Bleu (#1e40af) ou Vert (#059669)
-- **Société Fiscale** : Orange (#ea580c) ou Rouge (#dc2626)
-- **Production** : Vert foncé (#065f46)
-- **Test/Staging** : Orange (#f59e0b)
+**Philosophie des Couleurs :**
+- **Société Opérationnelle** : Couleur par défaut (travail normal, pas d'alerte)
+- **Société Fiscale** : Couleur orange/rouge (avertissement visuel immédiat)
+- **Autres environnements** :
+  - Production : Vert foncé (#065f46)
+  - Test/Staging : Orange (#f59e0b)
 
 ## Utilisation
 
