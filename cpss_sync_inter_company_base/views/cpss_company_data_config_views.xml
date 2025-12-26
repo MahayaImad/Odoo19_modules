@@ -47,7 +47,7 @@
                         <group>
                             <group string="Chart of Accounts">
                                 <field name="sync_chart_of_accounts"
-                                       help="Synchronize chart of accounts from operational to fiscal company. Accounts remain company-specific for compliance."/>
+                                       help="Synchronize chart of accounts from operational to service comptabilité. Accounts remain company-specific for compliance."/>
                                 <p class="text-muted" colspan="2">
                                     Note: Chart of accounts remains company-specific for accounting compliance,
                                     but is automatically synchronized between companies.
@@ -68,7 +68,7 @@
                         <div class="alert alert-info" role="alert">
                             <h4>How It Works</h4>
                             <ul>
-                                <li><strong>Shared Data:</strong> Configured in the main (operational) company and automatically available in the fiscal company</li>
+                                <li><strong>Shared Data:</strong> Configured in the main (operational) company and automatically available in the service comptabilité</li>
                                 <li><strong>Taxes:</strong> When shared, the same tax can be used on invoice lines in both companies without mapping</li>
                                 <li><strong>Chart of Accounts:</strong> Synchronized but kept separate per company for accounting compliance</li>
                                 <li><strong>Apply Configuration:</strong> Click the button above to apply these settings to existing data</li>

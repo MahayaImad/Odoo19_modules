@@ -17,7 +17,7 @@
                     <!-- Bouton Partager Paiement -->
                     <button name="action_partager_paiement"
                             type="object"
-                            string="Partager avec Société Fiscale"
+                            string="Partager avec Service Comptabilité"
                             class="btn-primary"
                             invisible="state != 'posted' or partage in ['shared', 'error'] or not is_operational_company or not reconciled_invoice_ids"
                             groups="cpss_sync_inter_company_base.group_sync_executor"/>

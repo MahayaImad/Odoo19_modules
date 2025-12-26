@@ -18,7 +18,7 @@ class ResConfigSettings(models.TransientModel):
 
     sync_societe_fiscale_id = fields.Many2one(
         'res.company',
-        string="Société Fiscale",
+        string="Service Comptabilité",
         related='company_id.sync_societe_fiscale_id',
         readonly=False,
         help="Société qui gère uniquement les opérations déclarées"
@@ -34,7 +34,7 @@ class ResConfigSettings(models.TransientModel):
 
     sync_journal_fiscal_defaut_id = fields.Many2one(
         'account.journal',
-        string="Journal Fiscal par Défaut",
+        string="Journal Comptable par Défaut",
         related='company_id.sync_journal_fiscal_defaut_id',
         readonly=False,
         domain="[('company_id', '=', sync_societe_fiscale_id)]"

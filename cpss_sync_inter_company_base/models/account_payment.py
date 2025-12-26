@@ -14,15 +14,15 @@ class AccountPayment(models.Model):
         ('shared', 'Partagé'),
         ('error', 'Erreur de Partage'),
     ], string="État de Partage", default='not_shared', copy=False, readonly=True,
-        help="Indique l'état de partage du paiement avec la société fiscale")
+        help="Indique l'état de partage du paiement avec la service comptabilité")
 
     paiement_societe_fiscale_id = fields.Many2one(
         'account.payment',
-        string="Paiement Société Fiscale",
+        string="Paiement Service Comptabilité",
         copy=False,
         readonly=True,
         check_company=False,  # Permet de lier des paiements de sociétés différentes
-        help="Le paiement correspondant dans la société fiscale"
+        help="Le paiement correspondant dans la service comptabilité"
     )
 
     paiement_origine_operationnelle_id = fields.Many2one(
@@ -93,42 +93,42 @@ class AccountPayment(models.Model):
         return False
 
     def _synchroniser_paiement_automatique(self):
-        """Synchronise automatiquement le paiement vers la société fiscale"""
+        """Synchronise automatiquement le paiement vers la service comptabilité"""
         self.ensure_one()
 
         config = self.env['cpss.sync.config'].get_config()
 
-        ctx_fiscal = {
+        ctx_comptable = {
             'allowed_company_ids': [config.societe_operationnelle_id.id, config.societe_fiscale_id.id],
             'check_move_validity': False,
             'bypass_company_validation': True,
         }
 
         self_sync = self.with_company(config.societe_fiscale_id).with_context(
-            ctx_fiscal
+            ctx_comptable
         ).with_user(config.utilisateur_intersocietes_id).sudo()
 
-        paiement_fiscal = self_sync._creer_paiement_fiscal_simple(config)
+        paiement_comptable = self_sync._creer_paiement_comptable_simple(config)
 
         self.write({
             'partage': 'shared',
-            'paiement_societe_fiscale_id': paiement_fiscal.id,
+            'paiement_societe_fiscale_id': paiement_comptable.id,
             'partage_error_message': False,
         })
 
-        self._log_partage_success(paiement_fiscal, config)
+        self._log_partage_success(paiement_comptable, config)
 
         self.message_post(
-            body=_("✅ Paiement partagé automatiquement avec la société fiscale : %s") % paiement_fiscal.name
+            body=_("✅ Paiement partagé automatiquement avec la service comptabilité : %s") % paiement_comptable.name
         )
 
-        return paiement_fiscal
+        return paiement_comptable
 
-    def _creer_paiement_fiscal_simple(self, config):
-        """Crée un paiement simple dans la société fiscale SANS lien avec les factures"""
+    def _creer_paiement_comptable_simple(self, config):
+        """Crée un paiement simple dans la service comptabilité SANS lien avec les factures"""
         self.ensure_one()
 
-        journal_fiscal = self._obtenir_journal_paiement_fiscal(config)
+        journal_comptable = self._obtenir_journal_paiement_comptable(config)
 
         vals_paiement = {
             'payment_type': self.payment_type,
@@ -138,54 +138,54 @@ class AccountPayment(models.Model):
             'currency_id': self.currency_id.id,
             'date': self.date,
             'ref': f"SYNC-{self.name}",
-            'journal_id': journal_fiscal.id,
+            'journal_id': journal_comptable.id,
             'company_id': config.societe_fiscale_id.id,
-            'payment_method_line_id': self._obtenir_methode_paiement_fiscale(journal_fiscal).id,
+            'payment_method_line_id': self._obtenir_methode_paiement_comptablee(journal_comptable).id,
             'paiement_origine_operationnelle_id': self.id,
         }
 
-        paiement_fiscal = self.env['account.payment'].create(vals_paiement)
-        paiement_fiscal.action_post()
+        paiement_comptable = self.env['account.payment'].create(vals_paiement)
+        paiement_comptable.action_post()
 
-        paiement_fiscal.sudo().write({
+        paiement_comptable.sudo().write({
             'paiement_origine_operationnelle_id': self.id
         })
 
-        return paiement_fiscal
+        return paiement_comptable
 
-    def _obtenir_journal_paiement_fiscal(self, config):
-        """Trouve le journal de paiement équivalent dans la société fiscale"""
+    def _obtenir_journal_paiement_comptable(self, config):
+        """Trouve le journal de paiement équivalent dans la service comptabilité"""
         self.ensure_one()
 
-        journal_fiscal = self.env['account.journal'].sudo().search([
+        journal_comptable = self.env['account.journal'].sudo().search([
             ('type', '=', self.journal_id.type),
             ('company_id', '=', config.societe_fiscale_id.id)
         ], limit=1)
 
-        if not journal_fiscal:
+        if not journal_comptable:
             raise UserError(_(
-                "Aucun journal de type '%s' trouvé dans la société fiscale."
+                "Aucun journal de type '%s' trouvé dans la service comptabilité."
             ) % self.journal_id.type)
 
-        return journal_fiscal
+        return journal_comptable
 
-    def _obtenir_methode_paiement_fiscale(self, journal_fiscal):
-        """Trouve la méthode de paiement dans le journal fiscal"""
+    def _obtenir_methode_paiement_comptablee(self, journal_comptable):
+        """Trouve la méthode de paiement dans le journal comptable"""
         self.ensure_one()
 
         if self.payment_type == 'inbound':
-            methode = journal_fiscal.inbound_payment_method_line_ids[:1]
+            methode = journal_comptable.inbound_payment_method_line_ids[:1]
         else:
-            methode = journal_fiscal.outbound_payment_method_line_ids[:1]
+            methode = journal_comptable.outbound_payment_method_line_ids[:1]
 
         if not methode:
             raise UserError(_(
-                "Aucune méthode de paiement trouvée pour le journal fiscal %s"
-            ) % journal_fiscal.name)
+                "Aucune méthode de paiement trouvée pour le journal comptable %s"
+            ) % journal_comptable.name)
 
         return methode
 
-    def _log_partage_success(self, paiement_fiscal, config):
+    def _log_partage_success(self, paiement_comptable, config):
         """Log de succès du partage"""
         self.ensure_one()
 
@@ -194,7 +194,7 @@ class AccountPayment(models.Model):
             status='success',
             sync_type='automatic',
             source_doc=self,
-            target_doc=paiement_fiscal,
+            target_doc=paiement_comptable,
             config=config,
             details=f"Montant: {self.amount} {self.currency_id.name}"
         )
@@ -228,7 +228,7 @@ class AccountPayment(models.Model):
             raise UserError(_("Échec de la synchronisation : %s") % str(e))
 
     def action_partager_paiement(self):
-        """Partager manuellement un paiement vers la société fiscale"""
+        """Partager manuellement un paiement vers la service comptabilité"""
         self.ensure_one()
 
         if not self.is_operational_company:
@@ -238,32 +238,32 @@ class AccountPayment(models.Model):
             raise UserError(_("Seuls les paiements validés peuvent être partagés."))
 
         if self.partage == 'shared':
-            raise UserError(_("Ce paiement est déjà partagé avec la société fiscale."))
+            raise UserError(_("Ce paiement est déjà partagé avec la service comptabilité."))
 
         config = self.env['cpss.sync.config'].get_config()
 
         try:
-            ctx_fiscal = {
+            ctx_comptable = {
                 'allowed_company_ids': [config.societe_operationnelle_id.id, config.societe_fiscale_id.id],
                 'check_move_validity': False,
             }
 
             self_sync = self.with_company(config.societe_fiscale_id).with_context(
-                ctx_fiscal
+                ctx_comptable
             ).with_user(config.utilisateur_intersocietes_id).sudo()
 
-            paiement_fiscal = self_sync._creer_paiement_fiscal_simple(config)
+            paiement_comptable = self_sync._creer_paiement_comptable_simple(config)
 
             self.write({
                 'partage': 'shared',
-                'paiement_societe_fiscale_id': paiement_fiscal.id,
+                'paiement_societe_fiscale_id': paiement_comptable.id,
                 'partage_error_message': False,
             })
 
-            self._log_partage_success(paiement_fiscal, config)
+            self._log_partage_success(paiement_comptable, config)
 
             self.message_post(
-                body=_("✅ Paiement partagé manuellement avec la société fiscale : %s") % paiement_fiscal.name
+                body=_("✅ Paiement partagé manuellement avec la service comptabilité : %s") % paiement_comptable.name
             )
 
             return {
@@ -273,13 +273,13 @@ class AccountPayment(models.Model):
                     'title': _('✅ Partage Réussi'),
                     'message': _(
                         'Paiement "%s" partagé avec succès !\n\n'
-                        '🏢 Société fiscale : %s\n'
-                        '💰 Paiement fiscal : %s\n'
+                        '🏢 Service comptabilité : %s\n'
+                        '💰 Paiement comptable : %s\n'
                         '💵 Montant : %s %s'
                     ) % (
                         self.name,
                         config.societe_fiscale_id.name,
-                        paiement_fiscal.name,
+                        paiement_comptable.name,
                         self.amount,
                         self.currency_id.name
                     ),

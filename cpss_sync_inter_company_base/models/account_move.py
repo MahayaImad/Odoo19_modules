@@ -15,7 +15,7 @@ class AccountMove(models.Model):
 
     facture_societe_fiscale_id = fields.Many2one(
         'account.move',
-        string="Facture Société Fiscale",
+        string="Facture Service Comptabilité",
         copy=False,
         readonly=True,
         check_company=False  # Permet de lier des factures de sociétés différentes
@@ -63,16 +63,16 @@ class AccountMove(models.Model):
 
         try:
             utilisateur_sync = config.utilisateur_intersocietes_id
-            ctx_fiscal = {
+            ctx_comptable = {
                 'allowed_company_ids': [config.societe_operationnelle_id.id, config.societe_fiscale_id.id],
                 'check_move_validity': False,
                 'bypass_company_validation': True,
             }
 
-            self_sync = self.with_context(ctx_fiscal).with_user(utilisateur_sync).sudo()
-            facture_fiscale = self_sync._synchroniser_chaine_complete(config)
+            self_sync = self.with_context(ctx_comptable).with_user(utilisateur_sync).sudo()
+            facture_comptable = self_sync._synchroniser_chaine_complete(config)
 
-            self.write({'partage': 'shared', 'facture_societe_fiscale_id': facture_fiscale.id})
+            self.write({'partage': 'shared', 'facture_societe_fiscale_id': facture_comptable.id})
 
             paiements_existants = self._trouver_paiements_rapproches()
             for paiement in paiements_existants.filtered(lambda p: p.partage == 'not_shared'):
@@ -81,15 +81,15 @@ class AccountMove(models.Model):
                 except Exception:
                     paiement.write({'partage': 'error'})
 
-            self._log_sync_success(facture_fiscale, config)
+            self._log_sync_success(facture_comptable, config)
 
             return {
                 'type': 'ir.actions.client',
                 'tag': 'display_notification',
                 'params': {
                     'title': _('✅ Synchronisation Terminée'),
-                    'message': _('Facture "%s" synchronisée\n📄 Facture fiscale : %s\n💰 %d paiement(s)') % (
-                        self.name, facture_fiscale.name, len(paiements_existants)),
+                    'message': _('Facture "%s" synchronisée\n📄 Facture comptable : %s\n💰 %d paiement(s)') % (
+                        self.name, facture_comptable.name, len(paiements_existants)),
                     'type': 'success',
                     'sticky': False,
                     'next': {'type': 'ir.actions.act_window_close'},
@@ -112,37 +112,37 @@ class AccountMove(models.Model):
         elif self.move_type in ['in_invoice', 'in_refund']:
             return self._synchroniser_chaine_achat(config)
         else:
-            return self._creer_facture_fiscale(config)
+            return self._creer_facture_comptable(config)
 
     def _synchroniser_chaine_vente(self, config):
         commande_origine = None
         if self.invoice_origin:
             commande_origine = self.env['sale.order'].sudo().search([('name', '=', self.invoice_origin)], limit=1)
         if not commande_origine:
-            return self._creer_facture_fiscale(config)
-        commande_fiscale = self._creer_commande_vente_fiscale(commande_origine, config)
-        commande_fiscale.action_confirm()
-        if commande_fiscale.picking_ids:
-            for picking in commande_fiscale.picking_ids:
-                self._traiter_livraison_fiscale(picking)
-        return self._creer_facture_depuis_commande(commande_fiscale, config)
+            return self._creer_facture_comptable(config)
+        commande_comptable = self._creer_commande_vente_comptable(commande_origine, config)
+        commande_comptable.action_confirm()
+        if commande_comptable.picking_ids:
+            for picking in commande_comptable.picking_ids:
+                self._traiter_livraison_comptable(picking)
+        return self._creer_facture_depuis_commande(commande_comptable, config)
 
     def _synchroniser_chaine_achat(self, config):
         commande_origine = None
         if self.invoice_origin:
             commande_origine = self.env['purchase.order'].sudo().search([('name', '=', self.invoice_origin)], limit=1)
         if not commande_origine:
-            return self._creer_facture_fiscale(config)
-        commande_fiscale = self._creer_commande_achat_fiscale(commande_origine, config)
-        commande_fiscale.button_confirm()
-        if commande_fiscale.picking_ids:
-            for picking in commande_fiscale.picking_ids:
-                self._traiter_reception_fiscale(picking)
-        facture_fiscale = self._creer_facture_fiscale(config)
-        facture_fiscale.invoice_origin = commande_fiscale.name
-        return facture_fiscale
+            return self._creer_facture_comptable(config)
+        commande_comptable = self._creer_commande_achat_comptable(commande_origine, config)
+        commande_comptable.button_confirm()
+        if commande_comptable.picking_ids:
+            for picking in commande_comptable.picking_ids:
+                self._traiter_reception_comptable(picking)
+        facture_comptable = self._creer_facture_comptable(config)
+        facture_comptable.invoice_origin = commande_comptable.name
+        return facture_comptable
 
-    def _creer_commande_vente_fiscale(self, commande_origine, config):
+    def _creer_commande_vente_comptable(self, commande_origine, config):
         ctx = {'allowed_company_ids': [config.societe_operationnelle_id.id, config.societe_fiscale_id.id]}
         vals = {
             'partner_id': commande_origine.partner_id.id,
@@ -152,18 +152,18 @@ class AccountMove(models.Model):
             'order_line': []
         }
         for ligne in commande_origine.order_line:
-            taxes_fiscales = self._mapper_taxes_vers_societe_fiscale_safe(ligne.tax_id, config)
+            taxes_comptables = self._mapper_taxes_vers_service_comptable_safe(ligne.tax_id, config)
             vals['order_line'].append((0, 0, {
                 'product_id': ligne.product_id.id,
                 'name': ligne.name,
                 'product_uom_qty': ligne.product_uom_qty,
                 'price_unit': ligne.price_unit,
-                'tax_id': [(6, 0, taxes_fiscales.ids)],
+                'tax_id': [(6, 0, taxes_comptables.ids)],
             }))
         return self.env['sale.order'].with_company(config.societe_fiscale_id.id).with_context(
             ctx).with_user(config.utilisateur_intersocietes_id).sudo().create(vals)
 
-    def _creer_commande_achat_fiscale(self, commande_origine, config):
+    def _creer_commande_achat_comptable(self, commande_origine, config):
         ctx = {'allowed_company_ids': [config.societe_operationnelle_id.id, config.societe_fiscale_id.id]}
         vals = {
             'partner_id': commande_origine.partner_id.id,
@@ -173,19 +173,19 @@ class AccountMove(models.Model):
             'order_line': []
         }
         for ligne in commande_origine.order_line:
-            taxes_fiscales = self._mapper_taxes_vers_societe_fiscale_safe(ligne.taxes_id, config)
+            taxes_comptables = self._mapper_taxes_vers_service_comptable_safe(ligne.taxes_id, config)
             vals['order_line'].append((0, 0, {
                 'product_id': ligne.product_id.id,
                 'name': ligne.name,
                 'product_qty': ligne.product_qty,
                 'price_unit': ligne.price_unit,
-                'taxes_id': [(6, 0, taxes_fiscales.ids)],
+                'taxes_id': [(6, 0, taxes_comptables.ids)],
                 'date_planned': ligne.date_planned,
             }))
         return self.env['purchase.order'].with_company(config.societe_fiscale_id.id).with_context(
             ctx).with_user(config.utilisateur_intersocietes_id).sudo().create(vals)
 
-    def _traiter_livraison_fiscale(self, picking):
+    def _traiter_livraison_comptable(self, picking):
         if picking.state in ['draft', 'waiting', 'confirmed', 'assigned']:
             if picking.state in ['draft', 'waiting', 'confirmed']:
                 picking.action_assign()
@@ -193,7 +193,7 @@ class AccountMove(models.Model):
                 move.quantity_done = move.product_uom_qty
             picking.button_validate()
 
-    def _traiter_reception_fiscale(self, picking):
+    def _traiter_reception_comptable(self, picking):
         if picking.state in ['draft', 'waiting', 'confirmed', 'assigned']:
             if picking.state in ['draft', 'waiting', 'confirmed']:
                 picking.action_assign()
@@ -201,22 +201,22 @@ class AccountMove(models.Model):
                 move.quantity_done = move.product_uom_qty
             picking.button_validate()
 
-    def _creer_facture_depuis_commande(self, commande_fiscale, config):
+    def _creer_facture_depuis_commande(self, commande_comptable, config):
         ctx = {'allowed_company_ids': [config.societe_operationnelle_id.id, config.societe_fiscale_id.id]}
-        facture_vals = commande_fiscale._prepare_invoice()
+        facture_vals = commande_comptable._prepare_invoice()
         facture_vals.update({
             'ref': f"SYNC-{self.name}",
-            'invoice_origin': commande_fiscale.name,
+            'invoice_origin': commande_comptable.name,
             'narration': f"Synchronisé depuis {config.societe_operationnelle_id.name}: {self.name}",
         })
         return self.env['account.move'].with_company(config.societe_fiscale_id.id).with_context(
             ctx).with_user(config.utilisateur_intersocietes_id).sudo().create(facture_vals)
 
-    def _creer_facture_fiscale(self, config):
-        """Crée la facture dans la société fiscale"""
+    def _creer_facture_comptable(self, config):
+        """Crée la facture dans la service comptabilité"""
         utilisateur_sync = config.utilisateur_intersocietes_id
 
-        ctx_fiscal = {
+        ctx_comptable = {
             'allowed_company_ids': [config.societe_operationnelle_id.id, config.societe_fiscale_id.id],
             'check_move_validity': False,
             'bypass_company_validation': True,
@@ -226,26 +226,26 @@ class AccountMove(models.Model):
             'default_invoice_line_tax_ids': False,
         }
 
-        vals_facture = self._preparer_vals_facture_fiscale(config)
+        vals_facture = self._preparer_vals_facture_comptable(config)
 
         if not vals_facture.get('invoice_line_ids'):
             raise UserError(_(
-                "Impossible de créer la facture fiscale : aucune ligne valide.\n\n"
+                "Impossible de créer la facture comptable : aucune ligne valide.\n\n"
                 "Causes possibles :\n"
-                "• Comptes comptables manquants dans la société fiscale\n"
+                "• Comptes comptables manquants dans la service comptabilité\n"
                 "• Taxes modifiées manuellement sans équivalent fiscal\n"
                 "• Plan comptable non installé"
             ))
 
-        facture_fiscale = self.env['account.move'].with_context(
-            ctx_fiscal
+        facture_comptable = self.env['account.move'].with_context(
+            ctx_comptable
         ).with_user(utilisateur_sync).sudo().create(vals_facture)
 
-        facture_fiscale.sudo().write({'facture_origine_operationnelle_id': self.id})
-        return facture_fiscale
+        facture_comptable.sudo().write({'facture_origine_operationnelle_id': self.id})
+        return facture_comptable
 
-    def _preparer_vals_facture_fiscale(self, config):
-        """Prépare les données pour la facture fiscale - VERSION ULTRA SAFE"""
+    def _preparer_vals_facture_comptable(self, config):
+        """Prépare les données pour la facture comptable - VERSION ULTRA SAFE"""
         journal_fiscal = self._obtenir_journal_fiscal(config)
 
         vals = {
@@ -283,10 +283,10 @@ class AccountMove(models.Model):
             # Aucune ligne créée - erreur bloquante
             details_erreurs = "\n".join(lignes_ignorees) if lignes_ignorees else "Aucune ligne valide"
             raise UserError(_(
-                "Impossible de créer la facture fiscale : aucune ligne valide.\n\n"
+                "Impossible de créer la facture comptable : aucune ligne valide.\n\n"
                 "Détails des erreurs :\n%s\n\n"
                 "Vérifiez :\n"
-                "• Les comptes comptables existent dans la société fiscale\n"
+                "• Les comptes comptables existent dans la service comptabilité\n"
                 "• Le plan comptable est installé"
             ) % details_erreurs)
 
@@ -306,7 +306,7 @@ class AccountMove(models.Model):
         return vals
 
     def _preparer_ligne_fiscale(self, ligne, config):
-        """Prépare une ligne de facture fiscale - VERSION ULTRA SAFE"""
+        """Prépare une ligne de facture comptable - VERSION ULTRA SAFE"""
         try:
             # Mapping du compte
             compte_fiscal = self._mapper_compte_vers_societe_fiscale(ligne.account_id, config)
@@ -315,7 +315,7 @@ class AccountMove(models.Model):
             raise UserError(_("Compte %s manquant : %s") % (ligne.account_id.code, str(e)))
 
         # ✅ Mapping des taxes (ne lève JAMAIS d'exception)
-        taxes_fiscales = self._mapper_taxes_vers_societe_fiscale_safe(ligne.tax_ids, config)
+        taxes_comptables = self._mapper_taxes_vers_service_comptable_safe(ligne.tax_ids, config)
 
         vals_ligne = {
             'product_id': ligne.product_id.id if ligne.product_id else False,
@@ -323,7 +323,7 @@ class AccountMove(models.Model):
             'name': ligne.name,
             'quantity': ligne.quantity,
             'price_unit': ligne.price_unit,
-            'tax_ids': [(6, 0, taxes_fiscales.ids)],
+            'tax_ids': [(6, 0, taxes_comptables.ids)],
         }
 
         if ligne.discount:
@@ -333,7 +333,7 @@ class AccountMove(models.Model):
 
         return vals_ligne
 
-    def _mapper_taxes_vers_societe_fiscale_safe(self, taxes_operationnelles, config):
+    def _mapper_taxes_vers_service_comptable_safe(self, taxes_operationnelles, config):
         """
         Mapper les taxes de manière ULTRA SAFE avec support des taxes partagées (Odoo 19)
         Retourne toujours un recordset (vide si aucune taxe trouvée)
@@ -344,23 +344,23 @@ class AccountMove(models.Model):
         if not taxes_operationnelles:
             return self.env['account.tax']
 
-        taxes_fiscales = self.env['account.tax']
+        taxes_comptables = self.env['account.tax']
         taxes_manquantes = []
 
         for taxe in taxes_operationnelles:
             try:
-                taxe_fiscale = None
+                taxe_comptable = None
 
                 # 🆕 AMÉLIORATION 1: Si la taxe est partagée, l'utiliser directement
                 if not taxe.company_id or config.societe_fiscale_id.id in taxe.company_ids.ids:
-                    # Taxe déjà partagée ou accessible depuis la société fiscale
-                    taxe_fiscale = taxe
-                    taxes_fiscales |= taxe_fiscale
+                    # Taxe déjà partagée ou accessible depuis la service comptabilité
+                    taxe_comptable = taxe
+                    taxes_comptables |= taxe_comptable
                     continue
 
                 # 🔍 Stratégie 1: Recherche exacte par description (code interne)
                 if taxe.description:
-                    taxe_fiscale = self.env['account.tax'].sudo().search([
+                    taxe_comptable = self.env['account.tax'].sudo().search([
                         ('description', '=', taxe.description),
                         ('type_tax_use', '=', taxe.type_tax_use),
                         '|',
@@ -369,8 +369,8 @@ class AccountMove(models.Model):
                     ], limit=1)
 
                 # 🔍 Stratégie 2: Recherche par nom + montant exact
-                if not taxe_fiscale:
-                    taxe_fiscale = self.env['account.tax'].sudo().search([
+                if not taxe_comptable:
+                    taxe_comptable = self.env['account.tax'].sudo().search([
                         ('name', '=', taxe.name),
                         ('amount', '=', taxe.amount),
                         ('type_tax_use', '=', taxe.type_tax_use),
@@ -380,8 +380,8 @@ class AccountMove(models.Model):
                     ], limit=1)
 
                 # 🔍 Stratégie 3: Fallback - Recherche par montant + type uniquement
-                if not taxe_fiscale:
-                    taxe_fiscale = self.env['account.tax'].sudo().search([
+                if not taxe_comptable:
+                    taxe_comptable = self.env['account.tax'].sudo().search([
                         ('amount', '=', taxe.amount),
                         ('type_tax_use', '=', taxe.type_tax_use),
                         '|',
@@ -389,8 +389,8 @@ class AccountMove(models.Model):
                         ('company_ids', 'in', [config.societe_fiscale_id.id])
                     ], limit=1)
 
-                if taxe_fiscale:
-                    taxes_fiscales |= taxe_fiscale
+                if taxe_comptable:
+                    taxes_comptables |= taxe_comptable
                 else:
                     taxes_manquantes.append(f"{taxe.name} ({taxe.amount}%)")
 
@@ -413,7 +413,7 @@ class AccountMove(models.Model):
                 pass
 
         # ✅ Toujours retourner un recordset (vide ou rempli)
-        return taxes_fiscales
+        return taxes_comptables
 
     def _obtenir_journal_fiscal(self, config):
         env_sync = self.env(user=config.utilisateur_intersocietes_id.id)
@@ -477,7 +477,7 @@ class AccountMove(models.Model):
                 "Type de compte: %s\n\n"
                 "🔍 Diagnostic:\n%s\n\n"
                 "💡 Solutions:\n"
-                "1. Installer le plan comptable dans la société fiscale\n"
+                "1. Installer le plan comptable dans la service comptabilité\n"
                 "2. Créer manuellement le compte %s (type: %s)\n"
                 "3. Vérifier que les deux sociétés utilisent le même plan comptable"
             ) % (
@@ -495,16 +495,16 @@ class AccountMove(models.Model):
         """Diagnostic détaillé des comptes disponibles"""
         lignes = []
 
-        # Vérifier si des comptes existent dans la société fiscale
+        # Vérifier si des comptes existent dans la service comptabilité
         total_comptes = self.env['account.account'].sudo().search_count([
             ('company_ids', 'in', [config.societe_fiscale_id.id])
         ])
 
         if total_comptes == 0:
-            lignes.append("⚠️  AUCUN compte trouvé dans la société fiscale!")
+            lignes.append("⚠️  AUCUN compte trouvé dans la service comptabilité!")
             lignes.append("   → Le plan comptable n'est probablement pas installé")
         else:
-            lignes.append(f"✅ {total_comptes} comptes trouvés dans la société fiscale")
+            lignes.append(f"✅ {total_comptes} comptes trouvés dans la service comptabilité")
 
             # Chercher des comptes similaires
             code_prefixe = compte_op.code[:2] if len(compte_op.code) >= 2 else compte_op.code
@@ -555,16 +555,16 @@ class AccountMove(models.Model):
                         paiements |= rline.payment_id
         return paiements
 
-    def _log_sync_success(self, facture_fiscale, config):
+    def _log_sync_success(self, facture_comptable, config):
         self.env['cpss.sync.log']._log_sync_event(
             operation_name='Synchronisation Facture',
             status='success',
             sync_type='manual',
             source_doc=self,
-            target_doc=facture_fiscale,
+            target_doc=facture_comptable,
             config=config
         )
-        self.message_post(body=_("Facture synchronisée : %s") % facture_fiscale.name)
+        self.message_post(body=_("Facture synchronisée : %s") % facture_comptable.name)
 
     def _log_sync_error(self, message_erreur, config):
         self.env['cpss.sync.log']._log_sync_event(

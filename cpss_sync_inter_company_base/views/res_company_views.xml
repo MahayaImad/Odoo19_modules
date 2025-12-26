@@ -46,13 +46,13 @@
                             </p>
                         </div>
 
-                        <!-- Info for Fiscal Company -->
+                        <!-- Info for Service Comptabilité -->
                         <div class="alert alert-warning" role="alert"
                              invisible="not use_navbar_color or not is_fiscal_company">
                             <p>
-                                <strong>⚠️ Fiscal Company - Distinctive Navbar</strong><br/>
+                                <strong>⚠️ Service Comptabilité - Distinctive Navbar</strong><br/>
                                 This company uses a distinctive navbar color (orange) to alert users
-                                they are working in the fiscal company context.
+                                they are working in the accounting service context.
                             </p>
                         </div>
 
@@ -66,7 +66,7 @@
                             </p>
                             <ul>
                                 <li><strong>Operational Company:</strong> Keep default (disabled) or use subtle color</li>
-                                <li><strong>Fiscal Company:</strong> Use distinctive color (orange/red) as warning</li>
+                                <li><strong>Service Comptabilité:</strong> Use distinctive color (orange/red) as warning</li>
                             </ul>
                         </div>
                     </group>

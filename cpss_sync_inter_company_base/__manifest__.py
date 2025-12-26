@@ -1,7 +1,7 @@
 
 {
     "name": "CPSS Sync Inter Company Base",
-    "summary": "Base module for synchronization between operational and fiscal companies",
+    "summary": "Base module for synchronization between operational company and accounting service",
     "version": "19.0.1.0.0",
     "category": "Accounting & Finance",
     "website": "https://github.com/cpss/odoo-modules",

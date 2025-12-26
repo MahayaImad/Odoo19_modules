@@ -16,7 +16,7 @@ Ce module a été mis à jour pour Odoo 19 avec les améliorations suivantes :
 - **Brouillon** : Facture en cours de création
 - **Validé** : Facture validée (ancien "Comptabilisé")
 - **Proposé pour Sync** : Facture proposée pour synchronisation
-- **Comptabilisé** : Facture synchronisée vers société fiscale
+- **Comptabilisé** : Facture synchronisée vers service comptabilité
 
 ### Synchronisation complète
 - Synchronisation automatique de toute la chaîne documentaire
@@ -73,11 +73,11 @@ Lorsque le partage de taxes est activé :
 
 **Configuration Automatique (Recommandée):**
 1. Aller à **Paramètres > Utilisateurs & Sociétés > Sociétés**
-2. Ouvrir chaque société (opérationnelle et fiscale)
+2. Ouvrir chaque société (opérationnelle et service comptabilité)
 3. Dans la section **"Navbar Customization"**, cliquer sur **"Auto-Configure Colors"**
 4. Le système configurera automatiquement :
    - ✅ **Société Opérationnelle** : Couleur par défaut d'Odoo (gris foncé, pas d'alerte)
-   - ⚠️ **Société Fiscale** : Couleur orange distinctive (alerte visuelle)
+   - ⚠️ **Service Comptabilité** : Couleur orange distinctive (alerte visuelle)
 
 **Configuration Manuelle (Optionnelle):**
 1. Activer **"Use Custom Navbar Color"**
@@ -87,7 +87,7 @@ Lorsque le partage de taxes est activé :
 
 **Philosophie des Couleurs :**
 - **Société Opérationnelle** : Couleur par défaut (travail normal, pas d'alerte)
-- **Société Fiscale** : Couleur orange/rouge (avertissement visuel immédiat)
+- **Service Comptabilité** : Couleur orange/rouge (avertissement visuel immédiat)
 - **Autres environnements** :
   - Production : Vert foncé (#065f46)
   - Test/Staging : Orange (#f59e0b)
@@ -96,8 +96,8 @@ Lorsque le partage de taxes est activé :
 
 1. Créer et valider une facture
 2. Marquer "À déclarer" = Vrai
-3. Cliquer "Synchroniser vers Société Fiscale"
-4. Vérifier la chaîne complète dans la société fiscale
+3. Cliquer "Synchroniser vers Service Comptabilité"
+4. Vérifier la chaîne complète dans la service comptabilité
 
 ## Notes Importantes
 
@@ -107,6 +107,6 @@ Lorsque le partage de taxes est activé :
 
 ### Synchronisation du Plan Comptable
 Le plan comptable est **synchronisé** mais reste **spécifique à chaque société** :
-- Les comptes sont automatiquement copiés de la société opérationnelle vers la fiscale
+- Les comptes sont automatiquement copiés de la société opérationnelle vers le service comptabilité
 - Chaque société garde son propre plan comptable pour la conformité
 - Le mapping des comptes est fait automatiquement lors de la synchronisation

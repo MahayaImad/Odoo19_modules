@@ -23,7 +23,7 @@ class CpssCompanyDataConfig(models.Model):
     share_taxes = fields.Boolean(
         string="Share Taxes",
         default=True,
-        help="Share taxes between operational and fiscal companies. "
+        help="Share taxes between operational company and accounting service. "
              "When enabled, taxes will be available in both companies without duplication."
     )
 
@@ -217,7 +217,7 @@ class CpssCompanyDataConfig(models.Model):
         """Share taxes between companies"""
         _logger.info("🔄 Applying tax sharing configuration...")
 
-        # Find all taxes in the operational and fiscal companies
+        # Find all taxes in the operational company and accounting service
         taxes = self.env['account.tax'].sudo().search([
             '|',
             ('company_id', 'in', company_ids),

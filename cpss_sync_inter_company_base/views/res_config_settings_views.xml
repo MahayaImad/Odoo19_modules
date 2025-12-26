@@ -29,9 +29,9 @@
                                        options="{'no_create': True, 'no_open': True}"/>
                             </setting>
 
-                            <!-- Paramètre Société Fiscale -->
-                            <setting title="Société Fiscale"
-                                     help="Définissez la société fiscale utilisée dans la synchronisation">
+                            <!-- Paramètre Service Comptabilité -->
+                            <setting title="Service Comptabilité"
+                                     help="Définissez la service comptabilité utilisée dans la synchronisation">
                                 <field name="sync_societe_fiscale_id"
                                        class="oe_inline"
                                        options="{'no_create': True, 'no_open': True}"/>
@@ -93,10 +93,10 @@
                                help="Actions de maintenance et de synchronisation">
 
                             <setting title="Synchronisation des Plans Comptables"
-                                     help="Synchronise les comptes de la société opérationnelle vers la société fiscale">
+                                     help="Synchronise les comptes de la société opérationnelle vers la service comptabilité">
                                 <div class="text-muted mb16">
                                     <i class="fa fa-info-circle"/> Copie automatiquement tous les comptes manquants
-                                    (incluant l10n_dz_cpss_ext) vers la société fiscale.
+                                    (incluant l10n_dz_cpss_ext) vers la service comptabilité.
                                 </div>
                                 <div class="o_setting_action_buttons">
                                     <button type="object"
@@ -104,7 +104,7 @@
                                             string="Synchroniser les Comptes"
                                             class="btn-primary"
                                             icon="fa-refresh"
-                                            help="Copie les comptes manquants vers la société fiscale"/>
+                                            help="Copie les comptes manquants vers la service comptabilité"/>
                                 </div>
                             </setting>
 

@@ -2,14 +2,14 @@
 <odoo>
     <data noupdate="1">
 
-        <!-- 1. Création automatique de la société fiscale -->
+        <!-- 1. Création automatique de la service comptabilité -->
         <record id="societe_fiscale_auto" model="res.company">
-            <field name="name">Société Fiscale</field>
+            <field name="name">Service Comptabilité</field>
             <field name="currency_id" ref="base.DZD"/>
             <field name="country_id" ref="base.dz"/>
-            <field name="email">fiscal@cpss.dz</field>
+            <field name="email">comptabilite@cpss.dz</field>
             <field name="phone">+213 123 456 789</field>
-            <field name="website">https://fiscal.cpss.dz</field>
+            <field name="website">https://comptabilite.cpss.dz</field>
             <!-- VAT removed: set it manually after installation with valid format -->
             <field name="street">Zone Industrielle</field>
             <field name="city">Alger</field>
@@ -58,7 +58,7 @@
         </record>
 
         <!-- 5. Séquences pour numérotation des factures fiscales -->
-        <record id="sequence_vente_fiscal" model="ir.sequence">
+        <record id="sequence_vente_comptable" model="ir.sequence">
             <field name="name">Factures Vente Fiscales</field>
             <field name="code">account.move</field>
             <field name="prefix">FF/%(year)s/</field>
@@ -66,7 +66,7 @@
             <field name="company_id" ref="societe_fiscale_auto"/>
         </record>
 
-        <record id="sequence_achat_fiscal" model="ir.sequence">
+        <record id="sequence_achat_comptable" model="ir.sequence">
             <field name="name">Factures Achat Fiscales</field>
             <field name="code">account.move</field>
             <field name="prefix">FA/%(year)s/</field>
@@ -74,15 +74,15 @@
             <field name="company_id" ref="societe_fiscale_auto"/>
         </record>
 
-        <!-- 6. Journaux pour la société fiscale (SANS sequence_id direct) -->
-        <record id="journal_vente_fiscal" model="account.journal">
+        <!-- 6. Journaux pour la service comptabilité (SANS sequence_id direct) -->
+        <record id="journal_vente_comptable" model="account.journal">
             <field name="name">Ventes Fiscales</field>
             <field name="code">VF</field>
             <field name="type">sale</field>
             <field name="company_id" ref="societe_fiscale_auto"/>
         </record>
 
-        <record id="journal_achat_fiscal" model="account.journal">
+        <record id="journal_achat_comptable" model="account.journal">
             <field name="name">Achats Fiscaux</field>
             <field name="code">AF</field>
             <field name="type">purchase</field>
@@ -95,7 +95,7 @@
             <field name="societe_operationnelle_id" ref="base.main_company"/>
             <field name="societe_fiscale_id" ref="societe_fiscale_auto"/>
             <field name="utilisateur_intersocietes_id" ref="utilisateur_sync_technique"/>
-            <field name="journal_fiscal_defaut_id" ref="journal_vente_fiscal"/>
+            <field name="journal_fiscal_defaut_id" ref="journal_vente_comptable"/>
             <field name="notifier_erreurs_sync" eval="True"/>
             <field name="utilisateurs_notification_erreurs" eval="[(6, 0, [ref('base.user_admin')])]"/>
         </record>

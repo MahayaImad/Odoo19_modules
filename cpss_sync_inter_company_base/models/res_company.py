@@ -16,7 +16,7 @@ class ResCompany(models.Model):
 
     sync_societe_fiscale_id = fields.Many2one(
         'res.company',
-        string="Société Fiscale",
+        string="Service Comptabilité",
         help="Société qui gère uniquement les opérations déclarées"
     )
 
@@ -66,17 +66,17 @@ class ResCompany(models.Model):
     )
 
     is_fiscal_company = fields.Boolean(
-        string='Is Fiscal Company',
+        string='Is Service Comptabilité',
         compute='_compute_is_fiscal_company',
         store=False,
-        help='Indicates if this company is configured as a fiscal company in sync settings'
+        help='Indicates if this company is configured as a service comptabilité in sync settings'
     )
 
     @api.depends('id')
     def _compute_is_fiscal_company(self):
-        """Determine if this company is a fiscal company"""
+        """Determine if this company is a service comptabilité"""
         for company in self:
-            # Check if this company is set as fiscal company in any sync config
+            # Check if this company is set as service comptabilité in any sync config
             config = self.env['cpss.sync.config'].sudo().search([
                 ('societe_fiscale_id', '=', company.id)
             ], limit=1)
@@ -86,7 +86,7 @@ class ResCompany(models.Model):
         """
         Auto-configure navbar colors based on company type:
         - Operational company: Default Odoo color (no custom color)
-        - Fiscal company: Distinctive color (orange) to warn users
+        - Service Comptabilité: Distinctive color (orange) to warn users
         """
         self.ensure_one()
 
@@ -97,20 +97,20 @@ class ResCompany(models.Model):
                 'tag': 'display_notification',
                 'params': {
                     'title': 'Configuration Required',
-                    'message': 'Please configure sync settings first (operational and fiscal companies).',
+                    'message': 'Please configure sync settings first (operational company and accounting service).',
                     'type': 'warning',
                 }
             }
 
-        # Check if this is the fiscal company
+        # Check if this is the service comptabilité
         if self == config.societe_fiscale_id:
-            # Fiscal company: Distinctive orange color
+            # Service Comptabilité: Distinctive orange color
             self.write({
                 'use_navbar_color': True,
                 'navbar_color': '#ea580c',  # Orange
                 'navbar_text_color': '#ffffff',
             })
-            message = f'✅ Fiscal company navbar configured with distinctive orange color'
+            message = f'✅ Service Comptabilité navbar configured with distinctive orange color'
         elif self == config.societe_operationnelle_id:
             # Operational company: Default Odoo color (disable custom color)
             self.write({
@@ -125,7 +125,7 @@ class ResCompany(models.Model):
                 'tag': 'display_notification',
                 'params': {
                     'title': 'Not Configured',
-                    'message': 'This company is not configured as operational or fiscal company.',
+                    'message': 'This company is not configured as operational or service comptabilité.',
                     'type': 'info',
                 }
             }
@@ -148,7 +148,7 @@ class ResCompany(models.Model):
 
         Strategy:
         - Operational company: Default Odoo color (use_navbar_color = False)
-        - Fiscal company: Custom distinctive color (use_navbar_color = True)
+        - Service Comptabilité: Custom distinctive color (use_navbar_color = True)
         """
         if not company_id:
             company_id = self.env.company.id

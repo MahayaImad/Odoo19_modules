@@ -29,7 +29,7 @@ class CpssSyncConfig(models.Model):
     )
     societe_fiscale_id = fields.Many2one(
         'res.company',
-        string="Société Fiscale",
+        string="Service Comptabilité",
         required=True,
         help="Société qui gère uniquement les opérations déclarées"
     )
@@ -57,9 +57,9 @@ class CpssSyncConfig(models.Model):
     # Journal par défaut
     journal_fiscal_defaut_id = fields.Many2one(
         'account.journal',
-        string="Journal Fiscal par Défaut",
+        string="Journal Comptable par Défaut",
         check_company=False,
-        help="Journal par défaut pour les factures fiscales"
+        help="Journal par défaut pour les factures comptables"
     )
 
     # Champs informatifs (lecture seule)
@@ -103,7 +103,7 @@ class CpssSyncConfig(models.Model):
         for config in self:
             if config.societe_operationnelle_id == config.societe_fiscale_id:
                 raise ValidationError(_(
-                    "La société opérationnelle et la société fiscale doivent être différentes."
+                    "La société opérationnelle et la service comptabilité doivent être différentes."
                 ))
 
     @api.constrains('utilisateur_intersocietes_id', 'societe_operationnelle_id', 'societe_fiscale_id')
@@ -235,12 +235,12 @@ class CpssSyncConfig(models.Model):
         comptes_existants = 0
 
         for compte_op in comptes_op:
-            compte_fiscal = self.env['account.account'].sudo().search([
+            compte_comptable = self.env['account.account'].sudo().search([
                 ('code', '=', compte_op.code),
                 ('company_ids', 'in', [config.societe_fiscale_id.id])
             ], limit=1)
 
-            if compte_fiscal:
+            if compte_comptable:
                 comptes_existants += 1
                 continue
 
@@ -255,21 +255,21 @@ class CpssSyncConfig(models.Model):
                 }
 
                 if compte_op.group_id:
-                    groupe_fiscal = self.env['account.group'].sudo().search([
+                    groupe_comptable = self.env['account.group'].sudo().search([
                         ('code_prefix_start', '=', compte_op.group_id.code_prefix_start),
                         ('company_id', '=', config.societe_fiscale_id.id)
                     ], limit=1)
 
-                    if not groupe_fiscal:
-                        groupe_fiscal = self.env['account.group'].sudo().create({
+                    if not groupe_comptable:
+                        groupe_comptable = self.env['account.group'].sudo().create({
                             'name': compte_op.group_id.name,
                             'code_prefix_start': compte_op.group_id.code_prefix_start,
                             'code_prefix_end': compte_op.group_id.code_prefix_end,
                             'company_id': config.societe_fiscale_id.id,
                         })
 
-                    if groupe_fiscal:
-                        vals['group_id'] = groupe_fiscal.id
+                    if groupe_comptable:
+                        vals['group_id'] = groupe_comptable.id
 
                 self.env['account.account'].sudo().create(vals)
                 comptes_crees += 1
@@ -321,7 +321,7 @@ class CpssSyncConfig(models.Model):
         return taxes_partagees, 0
 
     def _copier_taxes(self, config):
-        """Copie les taxes vers la société fiscale (ancien système)"""
+        """Copie les taxes vers la service comptabilité (ancien système)"""
         taxes_op = self.env['account.tax'].sudo().search([
             '|',
             ('company_id', '=', config.societe_operationnelle_id.id),
@@ -333,7 +333,7 @@ class CpssSyncConfig(models.Model):
 
         for taxe_op in taxes_op:
             # Vérifier si la taxe existe déjà
-            taxe_fiscal = self.env['account.tax'].sudo().search([
+            taxe_comptable = self.env['account.tax'].sudo().search([
                 ('name', '=', taxe_op.name),
                 ('amount', '=', taxe_op.amount),
                 ('type_tax_use', '=', taxe_op.type_tax_use),
@@ -342,7 +342,7 @@ class CpssSyncConfig(models.Model):
                 ('company_ids', 'in', [config.societe_fiscale_id.id])
             ], limit=1)
 
-            if taxe_fiscal:
+            if taxe_comptable:
                 taxes_existantes += 1
                 continue
 
@@ -365,14 +365,14 @@ class CpssSyncConfig(models.Model):
                             'factor_percent': line.factor_percent,
                         }
 
-                        # Mapper le compte vers la société fiscale
+                        # Mapper le compte vers la service comptabilité
                         if line.account_id:
-                            compte_fiscal = self.env['account.account'].sudo().search([
+                            compte_comptable = self.env['account.account'].sudo().search([
                                 ('code', '=', line.account_id.code),
                                 ('company_ids', 'in', [config.societe_fiscale_id.id])
                             ], limit=1)
-                            if compte_fiscal:
-                                line_vals['account_id'] = compte_fiscal.id
+                            if compte_comptable:
+                                line_vals['account_id'] = compte_comptable.id
 
                         repartition_lines.append((0, 0, line_vals))
 
@@ -388,12 +388,12 @@ class CpssSyncConfig(models.Model):
                         }
 
                         if line.account_id:
-                            compte_fiscal = self.env['account.account'].sudo().search([
+                            compte_comptable = self.env['account.account'].sudo().search([
                                 ('code', '=', line.account_id.code),
                                 ('company_ids', 'in', [config.societe_fiscale_id.id])
                             ], limit=1)
-                            if compte_fiscal:
-                                line_vals['account_id'] = compte_fiscal.id
+                            if compte_comptable:
+                                line_vals['account_id'] = compte_comptable.id
 
                         repartition_lines.append((0, 0, line_vals))
 
@@ -424,14 +424,14 @@ class CpssSyncConfig(models.Model):
 
         for condition_op in conditions_op:
             # Vérifier si la condition existe déjà
-            condition_fiscal = self.env['account.payment.term'].sudo().search([
+            condition_comptable = self.env['account.payment.term'].sudo().search([
                 ('name', '=', condition_op.name),
                 '|',
                 ('company_id', '=', config.societe_fiscale_id.id),
                 ('company_id', '=', False)
             ], limit=1)
 
-            if condition_fiscal:
+            if condition_comptable:
                 paiements_existants += 1
                 continue
 

@@ -15,7 +15,7 @@ def post_init_hook(env):
 
         # 2. Message de confirmation
         _logger.info("✅ Module CPSS Sync installé avec succès !")
-        _logger.info("- Société fiscale créée automatiquement")
+        _logger.info("- Service comptabilité créé automatiquement")
         _logger.info("- Utilisateur technique configuré")
         _logger.info("- Données partagées entre sociétés")
         _logger.info("- Configuration de synchronisation prête")

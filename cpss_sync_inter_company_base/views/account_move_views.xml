@@ -24,7 +24,7 @@
                     <!-- Bouton Synchroniser -->
                     <button name="action_synchroniser"
                         type="object"
-                        string="Partager avec Société Fiscale"
+                        string="Partager avec Service Comptabilité"
                         class="btn-primary"
                         invisible="partage != 'proposed' or not is_operational_company"
                         groups="cpss_sync_inter_company_base.group_sync_executor"/>
