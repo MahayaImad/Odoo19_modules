@@ -47,20 +47,20 @@
         <field name="name">Liste des communes</field>
         <field name="model">res.country.state.commune</field>
         <field name="arch" type="xml">
-            <list default_order='state_id, code'>
+            <tree default_order='state_id, code'>
                 <field name='name' string="Commune"/>
                 <field name='code' string="Code"/>
                 <field name='state_id' string="Wilaya"/>
                 <field name='country_id' string="Pays"/>
                 <button name="action_read_commune" type="object" icon="fa-external-link" class="oe_highlight"/>
-            </list>
+            </tree>
         </field>
     </record>
 
     <record id="l10n_commune_action" model="ir.actions.act_window">
         <field name="name">Communes</field>
         <field name="res_model">res.country.state.commune</field>
-        <field name="view_mode">list,form</field>
+        <field name="view_mode">tree,form</field>
         <field name="view_id" ref="l10n_commune_tree"/>
     </record>
 
@@ -74,20 +74,20 @@
         <field name="name">Liste des localites</field>
         <field name="model">res.country.state.localite</field>
         <field name="arch" type="xml">
-            <list default_order='state_id, code'>
+            <tree default_order='state_id, code'>
                 <field name='name' string="Localité"/>
                 <field name='code' string="Code"/>
                 <field name='state_id' string="Wilaya"/>
                 <field name='country_id' string="Pays"/>
                 <button name="action_read_localite" type="object" icon="fa-external-link" class="oe_highlight"/>
-            </list>
+            </tree>
         </field>
     </record>
 
     <record id="l10n_localite_action" model="ir.actions.act_window">
         <field name="name">Localités</field>
         <field name="res_model">res.country.state.localite</field>
-        <field name="view_mode">list,form</field>
+        <field name="view_mode">tree,form</field>
         <field name="view_id" ref="l10n_localite_tree"/>
     </record>
 
