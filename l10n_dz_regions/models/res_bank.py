@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
-from odoo import models, fields, api, _
-from odoo.exceptions import ValidationError
+from odoo import models, fields, api
 
 
 class ResBank(models.Model):
@@ -18,34 +17,8 @@ class ResBank(models.Model):
         domain="[('state_id', '=', state)]"
     )
 
-    # Le champ country existe déjà dans res.bank (Odoo 17), on l'étend seulement
-    country = fields.Many2one(
-        'res.country',
-        string='Pays',
-        required=True,
-    )
-
-    # Le champ code existe déjà dans res.bank d'Odoo 17/19
-    # On le redéfinit pour ajouter nos contraintes
-    code = fields.Char(
-        string='Code Banque',
-        help='Le code de la banque (obligatoire).',
-        required=True,
-    )
-
-    @api.constrains('code')
-    def _check_code_length(self):
-        """Vérifie que le code fait maximum 5 caractères"""
-        for record in self:
-            if record.code and len(record.code) > 5:
-                raise ValidationError(_('Le code de la banque ne peut pas dépasser 5 caractères.'))
-
-    @api.constrains('code')
-    def _check_code_required(self):
-        """S'assure que le code est toujours renseigné"""
-        for record in self:
-            if not record.code:
-                raise ValidationError(_('Le code de la banque est obligatoire.'))
+    # Note: country and bic fields already exist in res.bank (Odoo 17)
+    # We don't need to redefine them, just use them in our logic
 
     # Set state to False if another country gets selected
     @api.onchange('country')
@@ -73,31 +46,3 @@ class ResBank(models.Model):
                 self.zip = self.localite_id.code
         else:
             self.zip = False
-
-    @api.model
-    def create(self, vals):
-        """S'assure qu'un code est généré si manquant"""
-        if not vals.get('code'):
-            # Génère un code automatique si manquant
-            vals['code'] = self._generate_bank_code(vals.get('name', ''))
-        return super(ResBank, self).create(vals)
-
-    def _generate_bank_code(self, bank_name):
-        """Génère automatiquement un code de banque"""
-        if not bank_name:
-            bank_name = 'BANK'
-
-        # Génère un code basé sur le nom
-        code = ''.join(c for c in bank_name.upper() if c.isalnum())[:5]
-
-        # S'assurer de l'unicité
-        counter = 1
-        original_code = code
-        while self.search([('code', '=', code)]):
-            code = f"{original_code[:3]}{counter:02d}"
-            counter += 1
-            if counter > 99:  # Évite les boucles infinies
-                code = f"BK{self.env['ir.sequence'].next_by_code('res.bank') or '001'}"[:5]
-                break
-
-        return code
