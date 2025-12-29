@@ -11,12 +11,12 @@ def pre_init_hook(env):
 
     cr = env.cr
 
-    # Fix NULL country_id values
-    _logger.info("Fixing NULL country_id values in res.bank...")
+    # Fix NULL country values (Odoo 17 uses 'country' field instead of 'country_id')
+    _logger.info("Fixing NULL country values in res.bank...")
     cr.execute("""
         UPDATE res_bank
-        SET country_id = (SELECT id FROM res_country WHERE code = 'DZ' LIMIT 1)
-        WHERE country_id IS NULL
+        SET country = (SELECT id FROM res_country WHERE code = 'DZ' LIMIT 1)
+        WHERE country IS NULL
     """)
     updated_country = cr.rowcount
     _logger.info(f"Updated {updated_country} banks with default country (DZ)")
