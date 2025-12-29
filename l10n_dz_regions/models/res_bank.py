@@ -5,6 +5,15 @@ from odoo import models, fields, api
 class ResBank(models.Model):
     _inherit = 'res.bank'
 
+    def _default_country(self):
+        """Set Algeria as default country"""
+        return self.env.ref('base.dz', raise_if_not_found=False)
+
+    country = fields.Many2one(
+        'res.country',
+        default=_default_country
+    )
+
     commune_id = fields.Many2one(
         "res.country.state.commune",
         string='Commune',
@@ -16,9 +25,6 @@ class ResBank(models.Model):
         string='Localité',
         domain="[('state_id', '=', state)]"
     )
-
-    # Note: country and bic fields already exist in res.bank (Odoo 17)
-    # We don't need to redefine them, just use them in our logic
 
     # Set state to False if another country gets selected
     @api.onchange('country')

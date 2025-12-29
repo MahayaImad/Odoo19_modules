@@ -5,6 +5,15 @@ from odoo import models, fields, api
 class ResCompany(models.Model):
     _inherit = 'res.company'
 
+    def _default_country(self):
+        """Set Algeria as default country"""
+        return self.env.ref('base.dz', raise_if_not_found=False)
+
+    country_id = fields.Many2one(
+        'res.country',
+        default=_default_country
+    )
+
     commune_id = fields.Many2one(
         "res.country.state.commune",
         'Commune',
