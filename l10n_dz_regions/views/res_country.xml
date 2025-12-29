@@ -37,15 +37,9 @@
         <field name="model">res.country.state</field>
         <field name="inherit_id" ref="base.view_country_state_tree"/>
         <field name="arch" type="xml">
-            <xpath expr="//list" position='replace'>
-                <list string="State">
-                    <field name="name"/>
-                    <field name="name_ar"/>
-                    <field name="code"/>
-                    <field name="country_id" options="{'no_create': True, 'no_open': True}"/>
-                    <button name="action_read_state" type="object" icon="fa-external-link" class="oe_highlight"/>
-                </list>
-            </xpath>
+            <field name="name" position='after'>
+                <field name="name_ar"/>
+            </field>
         </field>
     </record>
 
