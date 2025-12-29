@@ -37,13 +37,13 @@ class ResCountryCommune(models.Model):
     country_id = fields.Many2one('res.country', 'Pays', required=True, related='state_id.country_id')
 
     @api.model
-    def _name_search(self, name, args=None, operator='ilike', limit=100, name_get_uid=None):
+    def _name_search(self, name, args=None, operator='ilike', limit=100, order=None, name_get_uid=None):
         args = args or []
         domain = []
         if name:
             domain = ['|', ('name', operator, name), ('code', operator, name)]
 
-        return self._search(domain + args, limit=limit, access_rights_uid=name_get_uid)
+        return self._search(domain + args, limit=limit, order=order, access_rights_uid=name_get_uid)
 
     def action_read_commune(self):
         self.ensure_one()
@@ -66,13 +66,13 @@ class ResCountryLocalite(models.Model):
     country_id = fields.Many2one('res.country', 'Pays', required=True, related='state_id.country_id')
 
     @api.model
-    def _name_search(self, name, args=None, operator='ilike', limit=100, name_get_uid=None):
+    def _name_search(self, name, args=None, operator='ilike', limit=100, order=None, name_get_uid=None):
         args = args or []
         domain = []
         if name:
             domain = ['|', ('name', operator, name), ('code', operator, name)]
 
-        return self._search(domain + args, limit=limit, access_rights_uid=name_get_uid)
+        return self._search(domain + args, limit=limit, order=order, access_rights_uid=name_get_uid)
 
     def action_read_localite(self):
         self.ensure_one()
