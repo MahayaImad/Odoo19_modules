@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-# Init for CPSS product categories module
+from . import models
