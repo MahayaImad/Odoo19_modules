@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Formulaire product.category avec les nouveaux champs -->
+        <record id="product_category_form_view_inherit" model="ir.ui.view">
+            <field name="name">product.category.form.inherit</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='parent_id']" position="after">
+                    <group string="Informations de soutien (Engrais)">
+                        <field name="prix_reference"/>
+                        <field name="prix_soutien"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Vue liste product.category avec les nouveaux champs -->
+        <record id="product_category_list_view_inherit" model="ir.ui.view">
+            <field name="name">product.category.list.inherit</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_list_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='complete_name']" position="after">
+                    <field name="prix_reference"/>
+                    <field name="prix_soutien"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

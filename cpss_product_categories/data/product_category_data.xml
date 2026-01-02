@@ -27,21 +27,51 @@
         <record id="cat_engrais" model="product.category">
             <field name="name">Engrais et amendements</field>
         </record>
-        <record id="cat_engrais_chimiques" model="product.category">
-            <field name="name">Engrais chimiques</field>
+
+        <!-- Engrais Solides (DA)/q. «HT» dont -->
+        <record id="cat_engrais_azotes" model="product.category">
+            <field name="name">1-Engrais Azotés</field>
             <field name="parent_id" ref="cat_engrais"/>
+            <field name="prix_reference">7473</field>
+            <field name="prix_soutien">3737</field>
         </record>
-        <record id="cat_engrais_organiques" model="product.category">
-            <field name="name">Engrais organiques</field>
+        <record id="cat_engrais_phosphates" model="product.category">
+            <field name="name">2-Engrais Phosphatés</field>
             <field name="parent_id" ref="cat_engrais"/>
+            <field name="prix_reference">13844</field>
+            <field name="prix_soutien">6922</field>
         </record>
-        <record id="cat_amendements" model="product.category">
-            <field name="name">Amendements calcaires</field>
+        <record id="cat_engrais_potassiques" model="product.category">
+            <field name="name">3-Engrais potassiques</field>
             <field name="parent_id" ref="cat_engrais"/>
+            <field name="prix_reference">21000</field>
+            <field name="prix_soutien">10500</field>
         </record>
-        <record id="cat_engrais_foliaires" model="product.category">
-            <field name="name">Engrais foliaires</field>
+        <record id="cat_engrais_composes" model="product.category">
+            <field name="name">4-Engrais Composés</field>
             <field name="parent_id" ref="cat_engrais"/>
+            <field name="prix_reference">11057</field>
+            <field name="prix_soutien">5528</field>
+        </record>
+        <record id="cat_engrais_binaires" model="product.category">
+            <field name="name">5-Engrais Binaires</field>
+            <field name="parent_id" ref="cat_engrais"/>
+            <field name="prix_reference">11206</field>
+            <field name="prix_soutien">5603</field>
+        </record>
+
+        <!-- Engrais Solubles et Liquides -->
+        <record id="cat_engrais_solubles" model="product.category">
+            <field name="name">Engrais Solubles (DA/kg)</field>
+            <field name="parent_id" ref="cat_engrais"/>
+            <field name="prix_reference">681</field>
+            <field name="prix_soutien">341</field>
+        </record>
+        <record id="cat_engrais_liquides" model="product.category">
+            <field name="name">Engrais Liquides (DA/L)</field>
+            <field name="parent_id" ref="cat_engrais"/>
+            <field name="prix_reference">2180</field>
+            <field name="prix_soutien">1090</field>
         </record>
 
         <!-- 3. Semences et plants -->

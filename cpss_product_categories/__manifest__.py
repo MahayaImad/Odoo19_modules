@@ -9,6 +9,7 @@
     "license": "LGPL-3",
     "depends": ["product", "point_of_sale"],
     "data": [
+        "views/product_category_views.xml",
         "data/product_category_data.xml",
         "data/product_category_data_pos.xml"
     ],
