@@ -8,7 +8,7 @@
             <field name="inherit_id" ref="base.view_company_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='company_registry']" position="after">
-                    <field name="num_agrement" placeholder="ex: AGR-2024-001"/>
+                    <field name="num_agrement" placeholder="ex: 0001/2026"/>
                 </xpath>
             </field>
         </record>
