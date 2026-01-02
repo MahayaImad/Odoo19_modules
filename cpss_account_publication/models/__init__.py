@@ -5,3 +5,5 @@ from . import res_config_settings
 from . import account_move
 from . import account_payment_register
 from . import account_move_advanced
+from . import stock_quant
+from . import stock_move
