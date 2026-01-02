@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Menu principal CPSS Agro -->
+        <menuitem id="menu_cpss_agro_root"
+                  name="CPSS Agro"
+                  sequence="100"/>
+
+        <!-- Menu Configuration -->
+        <menuitem id="menu_cpss_agro_config"
+                  name="Configuration"
+                  parent="menu_cpss_agro_root"
+                  sequence="100"/>
+
+        <!-- Menu Subdivisions -->
+        <menuitem id="menu_cpss_subdivision"
+                  name="Subdivisions"
+                  parent="menu_cpss_agro_config"
+                  action="action_cpss_subdivision"
+                  sequence="10"/>
+
+        <!-- Menu Daïras -->
+        <menuitem id="menu_cpss_daira"
+                  name="Daïras"
+                  parent="menu_cpss_agro_config"
+                  action="action_cpss_daira"
+                  sequence="20"/>
+
+    </data>
+</odoo>
