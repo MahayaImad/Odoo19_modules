@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "CPSS Agro Base",
-    'version': '18.0.1.0.0',
+    'version': '19.0.1.0.0',
     'summary': "Extension des contacts pour les données agricoles",
     'description': """
 Extension du module contacts pour ajouter des informations agricoles spécifiques.

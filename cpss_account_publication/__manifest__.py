@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Gestion des Factures Publiées',
-    'version': '18.0.1.0.0',
+    'version': '19.0.1.0.0',
     'category': 'Accounting',
     'summary': 'Gestion des factures avec statut de publication et séquence spécifique',
     'description': """
