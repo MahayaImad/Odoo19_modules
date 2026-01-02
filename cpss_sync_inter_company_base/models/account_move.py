@@ -335,11 +335,8 @@ class AccountMove(models.Model):
 
     def _mapper_taxes_vers_societe_fiscale_safe(self, taxes_operationnelles, config):
         """
-        Mapper les taxes de manière ULTRA SAFE avec support des taxes partagées (Odoo 19)
+        Mapper les taxes de manière ULTRA SAFE avec fallback intelligent (Odoo 19)
         Retourne toujours un recordset (vide si aucune taxe trouvée)
-
-        AMÉLIORATION: Si les taxes sont partagées (company_id=False), elles sont directement
-        utilisables sans mapping. Sinon, fallback sur l'ancien système de mapping.
         """
         if not taxes_operationnelles:
             return self.env['account.tax']
@@ -350,13 +347,6 @@ class AccountMove(models.Model):
         for taxe in taxes_operationnelles:
             try:
                 taxe_fiscale = None
-
-                # 🆕 AMÉLIORATION 1: Si la taxe est partagée, l'utiliser directement
-                if not taxe.company_id or config.societe_fiscale_id.id in taxe.company_ids.ids:
-                    # Taxe déjà partagée ou accessible depuis la société fiscale
-                    taxe_fiscale = taxe
-                    taxes_fiscales |= taxe_fiscale
-                    continue
 
                 # 🔍 Stratégie 1: Recherche exacte par description (code interne)
                 if taxe.description:
@@ -402,11 +392,8 @@ class AccountMove(models.Model):
         # ✅ Avertissement dans le chatter (ne bloque rien)
         if taxes_manquantes and hasattr(self, 'message_post'):
             try:
-                message = _(
-                    "⚠️ Taxes sans équivalent (lignes créées SANS ces taxes) :\n%s\n\n"
-                    "💡 Conseil: Utilisez la configuration 'Company Data Sharing' pour partager les taxes "
-                    "entre sociétés et éviter ce problème."
-                ) % "\n".join([f"  • {t}" for t in taxes_manquantes])
+                message = _("⚠️ Taxes sans équivalent (lignes créées SANS ces taxes) :\n%s") % "\n".join(
+                    [f"  • {t}" for t in taxes_manquantes])
                 self.message_post(body=message, message_type='notification', subtype_xmlid='mail.mt_note')
             except Exception:
                 # ✅ Même le message_post ne doit pas bloquer

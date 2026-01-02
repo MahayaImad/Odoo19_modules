@@ -6,13 +6,13 @@
             <field name="name">cpss.daira.tree</field>
             <field name="model">cpss.daira</field>
             <field name="arch" type="xml">
-                <tree string="Daïras">
+                <list string="Daïras">
                     <field name="code"/>
                     <field name="name"/>
                     <field name="subdivision_id"/>
                     <field name="state_id"/>
                     <field name="commune_count"/>
-                </tree>
+                </list>
             </field>
         </record>
 
@@ -37,10 +37,10 @@
                         <notebook>
                             <page string="Communes" name="communes">
                                 <field name="commune_ids">
-                                    <tree>
+                                    <list>
                                         <field name="code"/>
                                         <field name="name"/>
-                                    </tree>
+                                    </list>
                                 </field>
                             </page>
                         </notebook>
@@ -69,7 +69,7 @@
         <record id="action_cpss_daira" model="ir.actions.act_window">
             <field name="name">Daïras</field>
             <field name="res_model">cpss.daira</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">list,form</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Créer une nouvelle daïra

@@ -281,47 +281,9 @@ class CpssSyncConfig(models.Model):
         return comptes_crees, comptes_existants
 
     def _synchroniser_taxes(self, config):
-        """
-        Synchronise les taxes (TVA, etc.)
-
-        🆕 AMÉLIORATION: Si la configuration de partage est activée, les taxes sont partagées
-        au lieu d'être dupliquées. Sinon, utilise l'ancien système de copie.
-        """
+        """Synchronise les taxes (TVA, etc.)"""
         _logger.info("  💰 Synchronisation des taxes...")
 
-        # Vérifier si le partage de taxes est activé
-        data_config = self.env['cpss.company.data.config'].search([], limit=1)
-        if data_config and data_config.share_taxes:
-            _logger.info("  ℹ️  Partage de taxes activé - les taxes seront partagées au lieu d'être copiées")
-            return self._partager_taxes(config)
-        else:
-            _logger.info("  ℹ️  Partage de taxes désactivé - utilisation du système de copie")
-            return self._copier_taxes(config)
-
-    def _partager_taxes(self, config):
-        """Partage les taxes entre sociétés (company_id = False)"""
-        company_ids = [config.societe_operationnelle_id.id, config.societe_fiscale_id.id]
-
-        taxes_op = self.env['account.tax'].sudo().search([
-            '|',
-            ('company_id', '=', config.societe_operationnelle_id.id),
-            ('company_ids', 'in', [config.societe_operationnelle_id.id])
-        ])
-
-        taxes_partagees = 0
-        for taxe in taxes_op:
-            # Rendre la taxe partagée
-            taxe.sudo().write({
-                'company_id': False,
-                'company_ids': [(6, 0, company_ids)]
-            })
-            taxes_partagees += 1
-
-        _logger.info(f"  ✅ {taxes_partagees} taxes partagées entre les sociétés")
-        return taxes_partagees, 0
-
-    def _copier_taxes(self, config):
-        """Copie les taxes vers la société fiscale (ancien système)"""
         taxes_op = self.env['account.tax'].sudo().search([
             '|',
             ('company_id', '=', config.societe_operationnelle_id.id),

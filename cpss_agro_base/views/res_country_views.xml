@@ -10,21 +10,21 @@
                 <xpath expr="//page[@name='communes']" position="after">
                     <page string="Subdivisions" name="subdivisions">
                         <field name="subdivision_ids">
-                            <tree>
+                            <list>
                                 <field name="code"/>
                                 <field name="name"/>
                                 <field name="daira_count"/>
-                            </tree>
+                            </list>
                         </field>
                     </page>
                     <page string="Daïras" name="dairas">
                         <field name="daira_ids">
-                            <tree>
+                            <list>
                                 <field name="code"/>
                                 <field name="name"/>
                                 <field name="subdivision_id"/>
                                 <field name="commune_count"/>
-                            </tree>
+                            </list>
                         </field>
                     </page>
                 </xpath>

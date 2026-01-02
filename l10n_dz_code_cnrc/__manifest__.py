@@ -29,7 +29,7 @@
     
     'depends': [
         'base',
-        'l10n_dz_cpss',
+        'l10n_dz_cpss_ext',
     ],
 
     'data': [
