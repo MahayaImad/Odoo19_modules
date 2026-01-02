@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Vue Tree pour Daïra -->
+        <record id="view_cpss_daira_tree" model="ir.ui.view">
+            <field name="name">cpss.daira.tree</field>
+            <field name="model">cpss.daira</field>
+            <field name="arch" type="xml">
+                <tree string="Daïras">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="subdivision_id"/>
+                    <field name="state_id"/>
+                    <field name="commune_count"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vue Form pour Daïra -->
+        <record id="view_cpss_daira_form" model="ir.ui.view">
+            <field name="name">cpss.daira.form</field>
+            <field name="model">cpss.daira</field>
+            <field name="arch" type="xml">
+                <form string="Daïra">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" placeholder="Nom de la daïra"/>
+                                <field name="code" placeholder="Code"/>
+                            </group>
+                            <group>
+                                <field name="subdivision_id"/>
+                                <field name="state_id"/>
+                                <field name="country_id"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Communes" name="communes">
+                                <field name="commune_ids">
+                                    <tree>
+                                        <field name="code"/>
+                                        <field name="name"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Vue Search pour Daïra -->
+        <record id="view_cpss_daira_search" model="ir.ui.view">
+            <field name="name">cpss.daira.search</field>
+            <field name="model">cpss.daira</field>
+            <field name="arch" type="xml">
+                <search string="Daïras">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="subdivision_id"/>
+                    <field name="state_id"/>
+                    <filter string="Subdivision" name="group_by_subdivision" context="{'group_by':'subdivision_id'}"/>
+                    <filter string="Wilaya" name="group_by_state" context="{'group_by':'state_id'}"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action pour Daïra -->
+        <record id="action_cpss_daira" model="ir.actions.act_window">
+            <field name="name">Daïras</field>
+            <field name="res_model">cpss.daira</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Créer une nouvelle daïra
+                </p>
+                <p>
+                    Les daïras regroupent plusieurs communes au sein d'une subdivision.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

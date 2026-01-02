@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Vue Tree pour Subdivision -->
+        <record id="view_cpss_subdivision_tree" model="ir.ui.view">
+            <field name="name">cpss.subdivision.tree</field>
+            <field name="model">cpss.subdivision</field>
+            <field name="arch" type="xml">
+                <tree string="Subdivisions">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="state_id"/>
+                    <field name="daira_count"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vue Form pour Subdivision -->
+        <record id="view_cpss_subdivision_form" model="ir.ui.view">
+            <field name="name">cpss.subdivision.form</field>
+            <field name="model">cpss.subdivision</field>
+            <field name="arch" type="xml">
+                <form string="Subdivision">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" placeholder="Nom de la subdivision"/>
+                                <field name="code" placeholder="Code"/>
+                            </group>
+                            <group>
+                                <field name="state_id"/>
+                                <field name="country_id"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Daïras" name="dairas">
+                                <field name="daira_ids">
+                                    <tree>
+                                        <field name="code"/>
+                                        <field name="name"/>
+                                        <field name="commune_count"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Vue Search pour Subdivision -->
+        <record id="view_cpss_subdivision_search" model="ir.ui.view">
+            <field name="name">cpss.subdivision.search</field>
+            <field name="model">cpss.subdivision</field>
+            <field name="arch" type="xml">
+                <search string="Subdivisions">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="state_id"/>
+                    <filter string="Wilaya" name="group_by_state" context="{'group_by':'state_id'}"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action pour Subdivision -->
+        <record id="action_cpss_subdivision" model="ir.actions.act_window">
+            <field name="name">Subdivisions</field>
+            <field name="res_model">cpss.subdivision</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Créer une nouvelle subdivision
+                </p>
+                <p>
+                    Les subdivisions regroupent plusieurs daïras au sein d'une wilaya.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>
