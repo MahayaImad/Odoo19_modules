@@ -23,7 +23,7 @@ class AccountMove(models.Model):
         string="Numéro de publication",
         copy=False,
         readonly=True,
-        help="Numéro attribué lors de la publication de la facture"
+        help="Numéro de publication séparé (FC/AC/FF/AF) attribué lors de la publication"
     )
 
     publication_date = fields.Datetime(
@@ -38,13 +38,6 @@ class AccountMove(models.Model):
         string="Peut publier/dépublier"
     )
 
-    unpublished_number = fields.Char(
-        string="Numéro avant publication",
-        copy=False,
-        readonly=True,
-        help="Numéro de la facture avant publication (BL)"
-    )
-
     @api.depends_context('uid')
     def _compute_can_toggle_publication(self):
         """Vérifie si l'utilisateur actuel peut publier/dépublier"""
@@ -52,52 +45,52 @@ class AccountMove(models.Model):
         for move in self:
             move.can_toggle_publication = can_publish
 
-    def _get_sequence_code_for_move_type(self, move_type, is_published):
+    def _get_publication_sequence_code(self, move_type):
         """
-        Retourne le code de séquence approprié selon le type de facture et l'état de publication
+        Retourne le code de séquence pour la publication selon le type de facture
 
-        Séquences:
-        - Facture client non publiée: BLC/year (Bon de Livraison Client)
-        - Facture client publiée: FC/year (Facture Client)
-        - Avoir client non publié: AVC/year (Avoir Client)
-        - Avoir client publié: AC/year (Avoir Client Publié)
-        - Facture fournisseur non publiée: BLF/year (Bon de Livraison Fournisseur)
-        - Facture fournisseur publiée: FF/year (Facture Fournisseur)
-        - Avoir fournisseur non publié: AVF/year
-        - Avoir fournisseur publié: AF/year
+        Séquences de publication:
+        - Facture client: FC/year (Facture Client)
+        - Avoir client: AC/year (Avoir Client)
+        - Facture fournisseur: FF/year (Facture Fournisseur)
+        - Avoir fournisseur: AF/year (Avoir Fournisseur)
         """
         sequence_mapping = {
-            'out_invoice': {
-                False: 'account.move.out_invoice.unpublished',  # BLC
-                True: 'account.move.out_invoice.published',      # FC
-            },
-            'out_refund': {
-                False: 'account.move.out_refund.unpublished',   # AVC
-                True: 'account.move.out_refund.published',       # AC
-            },
-            'in_invoice': {
-                False: 'account.move.in_invoice.unpublished',   # BLF
-                True: 'account.move.in_invoice.published',       # FF
-            },
-            'in_refund': {
-                False: 'account.move.in_refund.unpublished',    # AVF
-                True: 'account.move.in_refund.published',        # AF
-            },
+            'out_invoice': 'account.move.out_invoice.published',   # FC
+            'out_refund': 'account.move.out_refund.published',     # AC
+            'in_invoice': 'account.move.in_invoice.published',     # FF
+            'in_refund': 'account.move.in_refund.published',       # AF
         }
+        return sequence_mapping.get(move_type)
 
-        return sequence_mapping.get(move_type, {}).get(is_published)
+    def _get_standard_sequence_code(self, move_type):
+        """
+        Retourne le code de séquence standard (non publié) selon le type de facture
+
+        Séquences standards (toujours utilisées pour name):
+        - Facture client: BLC/year (Bon de Livraison Client)
+        - Avoir client: AVC/year (Avoir Client)
+        - Facture fournisseur: BLF/year (Bon de Livraison Fournisseur)
+        - Avoir fournisseur: AVF/year (Avoir Fournisseur)
+        """
+        sequence_mapping = {
+            'out_invoice': 'account.move.out_invoice.unpublished',  # BLC
+            'out_refund': 'account.move.out_refund.unpublished',    # AVC
+            'in_invoice': 'account.move.in_invoice.unpublished',    # BLF
+            'in_refund': 'account.move.in_refund.unpublished',      # AVF
+        }
+        return sequence_mapping.get(move_type)
 
     def _get_sequence(self):
         """
-        Surcharge de la méthode standard pour utiliser nos séquences personnalisées
-        selon le type de facture et l'état de publication
+        Surcharge pour utiliser nos séquences BL personnalisées
+        Le numéro de facture (name) utilise TOUJOURS les séquences BL
         """
         self.ensure_one()
 
-        # Vérifier si c'est un type de facture géré par notre module
+        # Pour les factures gérées par notre module, utiliser les séquences BL
         if self.move_type in ['out_invoice', 'out_refund', 'in_invoice', 'in_refund']:
-            is_published = self.publication_state == 'published'
-            sequence_code = self._get_sequence_code_for_move_type(self.move_type, is_published)
+            sequence_code = self._get_standard_sequence_code(self.move_type)
 
             if sequence_code:
                 sequence = self.env['ir.sequence'].search([
@@ -113,28 +106,60 @@ class AccountMove(models.Model):
         # Sinon utiliser la séquence standard d'Odoo
         return super()._get_sequence()
 
-    def _set_next_sequence(self):
+    def _check_stock_availability_for_publication(self):
         """
-        Surcharge pour gérer les numéros de séquence selon l'état de publication
+        Vérifie si le stock publié est suffisant pour permettre la publication
+        Uniquement si la fonctionnalité est activée dans la configuration
         """
         self.ensure_one()
 
-        # Si la facture est déjà numérotée et qu'on change son statut de publication
-        # on garde le numéro actuel dans unpublished_number ou publication_number
-        if self.name and self.name != '/':
-            if self.publication_state == 'published' and not self.publication_number:
-                # On publie: sauvegarder le numéro BL et générer un nouveau numéro F
-                self.unpublished_number = self.name
-            elif self.publication_state == 'not_published' and self.unpublished_number:
-                # On dépublie: restaurer le numéro BL
-                self.name = self.unpublished_number
-                return
+        # Vérifier si la fonctionnalité est activée
+        if not self.company_id.enable_publication_stock_tracking:
+            return True
 
-        # Générer le nouveau numéro selon la séquence appropriée
-        return super()._set_next_sequence()
+        # Ne vérifier que pour les factures de vente
+        if self.move_type not in ['out_invoice', 'out_refund']:
+            return True
+
+        # Parcourir les lignes de la facture
+        insufficient_products = []
+        for line in self.invoice_line_ids.filtered(lambda l: l.product_id.type == 'product'):
+            product = line.product_id
+            quantity = line.quantity
+
+            # Calculer le stock publié disponible pour ce produit
+            quants = self.env['stock.quant'].search([
+                ('product_id', '=', product.id),
+                ('location_id.usage', '=', 'internal'),
+                ('company_id', '=', self.company_id.id)
+            ])
+
+            qty_published_available = sum(quants.mapped('qty_published'))
+
+            # Vérifier si suffisant
+            if self.move_type == 'out_invoice' and qty_published_available < quantity:
+                insufficient_products.append({
+                    'product': product.display_name,
+                    'required': quantity,
+                    'available': qty_published_available,
+                    'missing': quantity - qty_published_available
+                })
+
+        if insufficient_products:
+            message = _("Stock publié insuffisant pour les produits suivants:\n")
+            for item in insufficient_products:
+                message += _("\n• %s: Requis: %.2f, Disponible: %.2f, Manquant: %.2f") % (
+                    item['product'],
+                    item['required'],
+                    item['available'],
+                    item['missing']
+                )
+            raise UserError(message)
+
+        return True
 
     def action_publish(self):
-        """Publie la facture avec une séquence spécifique"""
+        """Publie la facture avec un numéro de publication séparé"""
         for move in self:
             if not self.env.user.has_group('account.group_account_manager'):
                 raise UserError(_("Seuls les comptables peuvent publier des factures."))
@@ -145,23 +170,22 @@ class AccountMove(models.Model):
             if move.state != 'posted':
                 raise UserError(_("Vous ne pouvez publier qu'une facture comptabilisée."))
 
-            # Sauvegarder le numéro actuel (BL) avant de publier
-            if move.name and move.name != '/':
-                move.unpublished_number = move.name
+            # Vérifier la disponibilité du stock publié si activé
+            move._check_stock_availability_for_publication()
 
-            # Générer le nouveau numéro de publication
-            sequence_code = move._get_sequence_code_for_move_type(move.move_type, True)
+            # Générer le numéro de publication (FC/AC/FF/AF)
+            sequence_code = move._get_publication_sequence_code(move.move_type)
 
             if sequence_code:
                 publication_number = self.env['ir.sequence'].next_by_code(sequence_code)
 
                 if not publication_number:
                     raise UserError(_(
-                        "La séquence '%s' n'existe pas. Veuillez vérifier la configuration du module.") % sequence_code)
+                        "La séquence de publication '%s' n'existe pas. Veuillez vérifier la configuration du module.") % sequence_code)
 
-                # Mettre à jour avec le nouveau numéro publié
+                # Mettre à jour uniquement le numéro de publication
+                # Le numéro de facture (name) reste inchangé (BLC/AVC/BLF/AVF)
                 move.write({
-                    'name': publication_number,
                     'publication_number': publication_number,
                     'publication_state': 'published',
                     'publication_date': fields.Datetime.now(),
@@ -190,21 +214,8 @@ class AccountMove(models.Model):
                     "Vous ne pouvez pas dépublier une facture qui a des paiements enregistrés. "
                     "Veuillez d'abord annuler les paiements."))
 
-            # Restaurer le numéro non publié (BL) si disponible
-            values = {'publication_state': 'not_published'}
-
-            if move.unpublished_number:
-                values['name'] = move.unpublished_number
-            else:
-                # Si pas de numéro BL sauvegardé, générer un nouveau
-                sequence_code = move._get_sequence_code_for_move_type(move.move_type, False)
-                if sequence_code:
-                    new_number = self.env['ir.sequence'].next_by_code(sequence_code)
-                    if new_number:
-                        values['name'] = new_number
-
-            move.write(values)
-            # Garder publication_number et publication_date pour l'historique
+            # Dépublier (garder publication_number et publication_date pour l'historique)
+            move.write({'publication_state': 'not_published'})
 
         return True
 

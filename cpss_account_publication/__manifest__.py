@@ -19,6 +19,9 @@
     'depends': [
         'account',
         'base',
+        'stock',
+        'purchase',
+        'sale',
     ],
     'data': [
         # Sécurité

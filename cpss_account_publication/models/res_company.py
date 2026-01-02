@@ -20,6 +20,13 @@ class ResCompany(models.Model):
         help="Séquence utilisée pour numéroter les factures publiées"
     )
 
+    enable_publication_stock_tracking = fields.Boolean(
+        string="Activer le suivi du stock publié/non publié",
+        default=False,
+        help="Si activé, le système suivra le stock publié et non publié séparément. "
+             "Lors de la publication d'une facture, il vérifiera que suffisamment de stock publié est disponible."
+    )
+
     @api.constrains('journal_publication_id')
     def _check_journal_publication(self):
         for company in self:
