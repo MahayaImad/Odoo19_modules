@@ -5,9 +5,9 @@
         <record id="view_country_state_form_inherit_subdivision" model="ir.ui.view">
             <field name="name">res.country.state.form.inherit.subdivision</field>
             <field name="model">res.country.state</field>
-            <field name="inherit_id" ref="eloapps_l10n_dz_regions.view_country_state_form_dz"/>
+            <field name="inherit_id" ref="eloapps_l10n_dz_regions.view_country_state_commune_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//page[@name='communes']" position="after">
+                <xpath expr="//notebook" position="inside">
                     <page string="Subdivisions" name="subdivisions">
                         <field name="subdivision_ids">
                             <list>
@@ -31,16 +31,27 @@
             </field>
         </record>
 
-        <!-- Vue Form de Commune avec Daïra -->
-        <record id="view_country_commune_form_inherit_daira" model="ir.ui.view">
-            <field name="name">res.country.state.commune.form.inherit.daira</field>
+        <!-- Vue Form de base pour Commune -->
+        <record id="view_country_commune_form" model="ir.ui.view">
+            <field name="name">res.country.state.commune.form</field>
             <field name="model">res.country.state.commune</field>
-            <field name="inherit_id" ref="eloapps_l10n_dz_regions.view_country_commune_form_dz"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='state_id']" position="after">
-                    <field name="daira_id" domain="[('state_id', '=', state_id)]"/>
-                    <field name="subdivision_id"/>
-                </xpath>
+                <form string="Commune">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="code"/>
+                            </group>
+                            <group>
+                                <field name="state_id"/>
+                                <field name="daira_id" domain="[('state_id', '=', state_id)]"/>
+                                <field name="subdivision_id"/>
+                                <field name="country_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
             </field>
         </record>
 
@@ -48,7 +59,7 @@
         <record id="view_country_commune_tree_inherit_daira" model="ir.ui.view">
             <field name="name">res.country.state.commune.tree.inherit.daira</field>
             <field name="model">res.country.state.commune</field>
-            <field name="inherit_id" ref="eloapps_l10n_dz_regions.view_country_commune_tree_dz"/>
+            <field name="inherit_id" ref="eloapps_l10n_dz_regions.l10n_commune_tree"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='state_id']" position="after">
                     <field name="daira_id"/>
