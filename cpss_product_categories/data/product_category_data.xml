@@ -30,31 +30,31 @@
 
         <!-- Engrais Solides (DA)/q. «HT» dont -->
         <record id="cat_engrais_azotes" model="product.category">
-            <field name="name">1-Engrais Azotés</field>
+            <field name="name">Engrais Azotés</field>
             <field name="parent_id" ref="cat_engrais"/>
             <field name="prix_reference">7473</field>
             <field name="prix_soutien">3737</field>
         </record>
         <record id="cat_engrais_phosphates" model="product.category">
-            <field name="name">2-Engrais Phosphatés</field>
+            <field name="name">Engrais Phosphatés</field>
             <field name="parent_id" ref="cat_engrais"/>
             <field name="prix_reference">13844</field>
             <field name="prix_soutien">6922</field>
         </record>
         <record id="cat_engrais_potassiques" model="product.category">
-            <field name="name">3-Engrais potassiques</field>
+            <field name="name">Engrais potassiques</field>
             <field name="parent_id" ref="cat_engrais"/>
             <field name="prix_reference">21000</field>
             <field name="prix_soutien">10500</field>
         </record>
         <record id="cat_engrais_composes" model="product.category">
-            <field name="name">4-Engrais Composés</field>
+            <field name="name">Engrais Composés</field>
             <field name="parent_id" ref="cat_engrais"/>
             <field name="prix_reference">11057</field>
             <field name="prix_soutien">5528</field>
         </record>
         <record id="cat_engrais_binaires" model="product.category">
-            <field name="name">5-Engrais Binaires</field>
+            <field name="name">Engrais Binaires</field>
             <field name="parent_id" ref="cat_engrais"/>
             <field name="prix_reference">11206</field>
             <field name="prix_soutien">5603</field>
