@@ -1,26 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="1">
-        <!-- Séquence pour les factures publiées -->
-        <record id="seq_account_move_publication" model="ir.sequence">
-            <field name="name">Factures Publiées</field>
-            <field name="code">account.move.publication</field>
-            <field name="prefix">PUB/%(year)s/</field>
+        <!-- ========================================= -->
+        <!-- FACTURES CLIENT (out_invoice) -->
+        <!-- ========================================= -->
+
+        <!-- Facture client NON publiée (Bon de Livraison Client) -->
+        <record id="seq_out_invoice_unpublished" model="ir.sequence">
+            <field name="name">Bon de Livraison Client</field>
+            <field name="code">account.move.out_invoice.unpublished</field>
+            <field name="prefix">BLC/%(year)s/</field>
             <field name="padding">5</field>
             <field name="number_increment">1</field>
             <field name="implementation">standard</field>
             <field name="use_date_range">True</field>
         </record>
 
-        <!-- Séquence alternative avec préfixe F (comme mentionné dans le cahier des charges) -->
-        <record id="seq_account_move_publication_f" model="ir.sequence">
-            <field name="name">Factures Publiées (F)</field>
-            <field name="code">account.move.publication.f</field>
-            <field name="prefix">F%(year)s/</field>
+        <!-- Facture client PUBLIÉE -->
+        <record id="seq_out_invoice_published" model="ir.sequence">
+            <field name="name">Facture Client Publiée</field>
+            <field name="code">account.move.out_invoice.published</field>
+            <field name="prefix">FC/%(year)s/</field>
             <field name="padding">5</field>
             <field name="number_increment">1</field>
             <field name="implementation">standard</field>
             <field name="use_date_range">True</field>
         </record>
+
+        <!-- ========================================= -->
+        <!-- AVOIRS CLIENT (out_refund) -->
+        <!-- ========================================= -->
+
+        <!-- Avoir client NON publié -->
+        <record id="seq_out_refund_unpublished" model="ir.sequence">
+            <field name="name">Avoir Client Non Publié</field>
+            <field name="code">account.move.out_refund.unpublished</field>
+            <field name="prefix">AVC/%(year)s/</field>
+            <field name="padding">5</field>
+            <field name="number_increment">1</field>
+            <field name="implementation">standard</field>
+            <field name="use_date_range">True</field>
+        </record>
+
+        <!-- Avoir client PUBLIÉ -->
+        <record id="seq_out_refund_published" model="ir.sequence">
+            <field name="name">Avoir Client Publié</field>
+            <field name="code">account.move.out_refund.published</field>
+            <field name="prefix">AC/%(year)s/</field>
+            <field name="padding">5</field>
+            <field name="number_increment">1</field>
+            <field name="implementation">standard</field>
+            <field name="use_date_range">True</field>
+        </record>
+
+        <!-- ========================================= -->
+        <!-- FACTURES FOURNISSEUR (in_invoice) -->
+        <!-- ========================================= -->
+
+        <!-- Facture fournisseur NON publiée (Bon de Livraison Fournisseur) -->
+        <record id="seq_in_invoice_unpublished" model="ir.sequence">
+            <field name="name">Bon de Livraison Fournisseur</field>
+            <field name="code">account.move.in_invoice.unpublished</field>
+            <field name="prefix">BLF/%(year)s/</field>
+            <field name="padding">5</field>
+            <field name="number_increment">1</field>
+            <field name="implementation">standard</field>
+            <field name="use_date_range">True</field>
+        </record>
+
+        <!-- Facture fournisseur PUBLIÉE -->
+        <record id="seq_in_invoice_published" model="ir.sequence">
+            <field name="name">Facture Fournisseur Publiée</field>
+            <field name="code">account.move.in_invoice.published</field>
+            <field name="prefix">FF/%(year)s/</field>
+            <field name="padding">5</field>
+            <field name="number_increment">1</field>
+            <field name="implementation">standard</field>
+            <field name="use_date_range">True</field>
+        </record>
+
+        <!-- ========================================= -->
+        <!-- AVOIRS FOURNISSEUR (in_refund) -->
+        <!-- ========================================= -->
+
+        <!-- Avoir fournisseur NON publié -->
+        <record id="seq_in_refund_unpublished" model="ir.sequence">
+            <field name="name">Avoir Fournisseur Non Publié</field>
+            <field name="code">account.move.in_refund.unpublished</field>
+            <field name="prefix">AVF/%(year)s/</field>
+            <field name="padding">5</field>
+            <field name="number_increment">1</field>
+            <field name="implementation">standard</field>
+            <field name="use_date_range">True</field>
+        </record>
+
+        <!-- Avoir fournisseur PUBLIÉ -->
+        <record id="seq_in_refund_published" model="ir.sequence">
+            <field name="name">Avoir Fournisseur Publié</field>
+            <field name="code">account.move.in_refund.published</field>
+            <field name="prefix">AF/%(year)s/</field>
+            <field name="padding">5</field>
+            <field name="number_increment">1</field>
+            <field name="implementation">standard</field>
+            <field name="use_date_range">True</field>
+        </record>
+
     </data>
 </odoo>

@@ -32,6 +32,9 @@
             <!-- Ajouter les informations de publication dans l'onglet "Autres informations" -->
             <xpath expr="//page[@name='other_info']//group[@name='misc_group']" position="inside">
                 <group string="Publication" name="publication_group">
+                    <field name="unpublished_number"
+                           readonly="1"
+                           invisible="not unpublished_number"/>
                     <field name="publication_number"
                            readonly="1"
                            invisible="publication_state == 'not_published'"/>
