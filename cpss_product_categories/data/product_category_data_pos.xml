@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ========================================================== -->
+    <!--  Catégories POS (pour l'écran du Point de Vente)           -->
+    <!-- ========================================================== -->
+
+    <record id="pos_cat_phytosanitaire" model="pos.category">
+        <field name="name">Engrais et Pesticides</field>
+    </record>
+
+    <record id="pos_cat_semences" model="pos.category">
+        <field name="name">Semences et Plantes</field>
+    </record>
+
+    <record id="pos_cat_irrigation" model="pos.category">
+        <field name="name">Irrigation et Arrosage</field>
+    </record>
+
+    <record id="pos_cat_materiel" model="pos.category">
+        <field name="name">Matériel et Outils</field>
+    </record>
+
+    <record id="pos_cat_elevage" model="pos.category">
+        <field name="name">Élevage et Alimentation</field>
+    </record>
+
+    <record id="pos_cat_divers" model="pos.category">
+        <field name="name">Produits Divers</field>
+    </record>
+
+</odoo>

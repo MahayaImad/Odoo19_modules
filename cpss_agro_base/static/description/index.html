@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPSS Agro Base - Extension Agricole pour Odoo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: 300;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #4CAF50;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .feature-card h3 {
+            color: #2E7D32;
+            margin-top: 0;
+            font-size: 1.3em;
+        }
+
+        .feature-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-card li {
+            padding: 5px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .feature-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .screenshot {
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .screenshot img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .installation {
+            background: #e8f5e8;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border: 1px solid #c8e6c9;
+        }
+
+        .installation h3 {
+            color: #2E7D32;
+            margin-top: 0;
+        }
+
+        .installation ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .installation li {
+            margin: 8px 0;
+        }
+
+        .tech-specs {
+            background: #fff3e0;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border: 1px solid #ffcc02;
+        }
+
+        .tech-specs h3 {
+            color: #f57c00;
+            margin-top: 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin: 5px 5px 5px 0;
+        }
+
+        .footer {
+            background: #2E7D32;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 2.2em;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌾 CPSS Agro Base</h1>
+            <p>Extension agricole pour la gestion des contacts dans Odoo 18</p>
+        </div>
+
+        <div class="content">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>📊 Données Agricoles</h3>
+                    <ul>
+                        <li>Surface exploitée (hectares)</li>
+                        <li>Type d'exploitation</li>
+                        <li>Nombre d'arbres</li>
+                        <li>Âge des arbres</li>
+                        <li>Calcul automatique de densité</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🎯 Interface Optimisée</h3>
+                    <ul>
+                        <li>Onglet dédié dans les contacts</li>
+                        <li>Positionnement intelligent</li>
+                        <li>Visibilité conditionnelle</li>
+                        <li>Alertes visuelles</li>
+                        <li>Design responsive</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🔍 Recherche Avancée</h3>
+                    <ul>
+                        <li>Filtres par type d'exploitation</li>
+                        <li>Recherche par surface</li>
+                        <li>Groupement intelligent</li>
+                        <li>Colonnes optionnelles</li>
+                        <li>Tri multicritère</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🛡️ Sécurité & Validation</h3>
+                    <ul>
+                        <li>Contraintes de validation</li>
+                        <li>Droits d'accès granulaires</li>
+                        <li>Valeurs cohérentes</li>
+                        <li>Protection des données</li>
+                        <li>Audit trail complet</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="screenshot">
+                <h3>📸 Aperçu de l'interface</h3>
+                <div style="background: #f5f5f5; padding: 40px; border: 2px dashed #ddd; border-radius: 10px;">
+                    <p style="color: #666; font-style: italic; margin: 0;">
+                        Capture d'écran de l'onglet "Données Agricoles"<br>
+                        (Remplacer par une vraie image : screenshot.png)
+                    </p>
+                </div>
+            </div>
+
+            <div class="installation">
+                <h3>🚀 Installation Rapide</h3>
+                <ol>
+                    <li>Téléchargez le module <strong>cpss_agro_base</strong></li>
+                    <li>Placez le dossier dans votre répertoire <code>addons</code></li>
+                    <li>Redémarrez votre serveur Odoo</li>
+                    <li>Mettez à jour la liste des applications</li>
+                    <li>Installez "CPSS Agro Base" depuis l'interface</li>
+                </ol>
+            </div>
+
+            <div class="tech-specs">
+                <h3>⚙️ Spécifications Techniques</h3>
+                <div>
+                    <span class="badge">Odoo 18.0</span>
+                    <span class="badge">Python 3.8+</span>
+                    <span class="badge">PostgreSQL</span>
+                    <span class="badge">LGPL-3</span>
+                    <span class="badge">Multi-langue</span>
+                </div>
+                <p><strong>Dépendances :</strong> base, contacts</p>
+                <p><strong>Taille :</strong> ~15 KB | <strong>Performance :</strong> Optimisé</p>
+            </div>
+
+            <div style="text-align: center; margin: 40px 0;">
+                <h3>🌟 Pourquoi choisir CPSS Agro Base ?</h3>
+                <p style="font-size: 1.1em; color: #666; max-width: 600px; margin: 0 auto;">
+                    Module spécialement conçu pour les professionnels agricoles.
+                    Interface intuitive, données structurées, et intégration parfaite
+                    avec l'écosystème Odoo pour une gestion complète de vos contacts agricoles.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Développé avec ❤️ par <strong>CPSS</strong> | Module Odoo Professionnel</p>
+            <p style="font-size: 0.9em; opacity: 0.8;">
+                Support technique et développements personnalisés disponibles
+            </p>
+        </div>
+    </div>
+</body>
+</html>

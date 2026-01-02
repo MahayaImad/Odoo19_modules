@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vue formulaire de la société -->
+    <record id="view_company_form_inherit_publication" model="ir.ui.view">
+        <field name="name">res.company.form.publication</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Factures Publiées" name="publication_settings">
+                    <group>
+                        <group string="Configuration des journaux">
+                            <field name="journal_publication_id"
+                                   options="{'no_create': True}"
+                                   domain="[('type', 'in', ['bank', 'cash']), ('company_id', '=', id)]"
+                                   help="Journal utilisé pour enregistrer les paiements des factures publiées"/>
+                        </group>
+                        <group string="Configuration des séquences">
+                            <field name="publication_sequence_id"
+                                   options="{'no_create': True}"
+                                   help="Séquence utilisée pour numéroter les factures publiées (laissez vide pour utiliser la séquence par défaut)"/>
+                        </group>
+                    </group>
+                    <group>
+                        <p class="text-muted">
+                            <i class="fa fa-info-circle"/> Les factures publiées utilisent une séquence spécifique et leurs paiements sont enregistrés dans un journal dédié.
+                        </p>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Vue des paramètres de configuration comptable -->
+    <record id="res_config_settings_view_form_inherit_publication" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.publication</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='account']" position="inside">
+                <h2>Factures Publiées</h2>
+                <div class="row mt16 o_settings_container" name="publication_setting_container">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <label for="journal_publication_id" string="Journal de Publication"/>
+                            <div class="text-muted">
+                                Configurez le journal utilisé pour les paiements des factures publiées
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <field name="journal_publication_id"
+                                           options="{'no_create': True}"
+                                           domain="[('type', 'in', ['bank', 'cash'])]"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <label for="publication_sequence_id" string="Séquence de Publication"/>
+                            <div class="text-muted">
+                                Séquence utilisée pour numéroter les factures publiées
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <field name="publication_sequence_id"
+                                           options="{'no_create': True}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

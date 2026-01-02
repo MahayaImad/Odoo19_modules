@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- 1. Produits phytosanitaires -->
+        <record id="cat_phytosanitaires" model="product.category">
+            <field name="name">Produits phytosanitaires</field>
+        </record>
+        <record id="cat_herbicides" model="product.category">
+            <field name="name">Herbicides</field>
+            <field name="parent_id" ref="cat_phytosanitaires"/>
+        </record>
+        <record id="cat_fongicides" model="product.category">
+            <field name="name">Fongicides</field>
+            <field name="parent_id" ref="cat_phytosanitaires"/>
+        </record>
+        <record id="cat_insecticides" model="product.category">
+            <field name="name">Insecticides</field>
+            <field name="parent_id" ref="cat_phytosanitaires"/>
+        </record>
+        <record id="cat_regulateurs" model="product.category">
+            <field name="name">Régulateurs de croissance</field>
+            <field name="parent_id" ref="cat_phytosanitaires"/>
+        </record>
+
+        <!-- 2. Engrais et amendements -->
+        <record id="cat_engrais" model="product.category">
+            <field name="name">Engrais et amendements</field>
+        </record>
+        <record id="cat_engrais_chimiques" model="product.category">
+            <field name="name">Engrais chimiques</field>
+            <field name="parent_id" ref="cat_engrais"/>
+        </record>
+        <record id="cat_engrais_organiques" model="product.category">
+            <field name="name">Engrais organiques</field>
+            <field name="parent_id" ref="cat_engrais"/>
+        </record>
+        <record id="cat_amendements" model="product.category">
+            <field name="name">Amendements calcaires</field>
+            <field name="parent_id" ref="cat_engrais"/>
+        </record>
+        <record id="cat_engrais_foliaires" model="product.category">
+            <field name="name">Engrais foliaires</field>
+            <field name="parent_id" ref="cat_engrais"/>
+        </record>
+
+        <!-- 3. Semences et plants -->
+        <record id="cat_semences" model="product.category">
+            <field name="name">Semences et plants</field>
+        </record>
+        <record id="cat_cereales" model="product.category">
+            <field name="name">Céréales</field>
+            <field name="parent_id" ref="cat_semences"/>
+        </record>
+        <record id="cat_legumineuses" model="product.category">
+            <field name="name">Légumineuses</field>
+            <field name="parent_id" ref="cat_semences"/>
+        </record>
+        <record id="cat_maraicheres" model="product.category">
+            <field name="name">Maraîchères</field>
+            <field name="parent_id" ref="cat_semences"/>
+        </record>
+        <record id="cat_fourrageres" model="product.category">
+            <field name="name">Fourragères</field>
+            <field name="parent_id" ref="cat_semences"/>
+        </record>
+
+        <!-- 4. Matériels et équipements agricoles -->
+        <record id="cat_materiels" model="product.category">
+            <field name="name">Matériels et équipements agricoles</field>
+        </record>
+        <record id="cat_motoculteurs" model="product.category">
+            <field name="name">Motoculteurs et accessoires</field>
+            <field name="parent_id" ref="cat_materiels"/>
+        </record>
+        <record id="cat_pulverisateurs" model="product.category">
+            <field name="name">Pulvérisateurs</field>
+            <field name="parent_id" ref="cat_materiels"/>
+        </record>
+        <record id="cat_recolte" model="product.category">
+            <field name="name">Matériel de récolte</field>
+            <field name="parent_id" ref="cat_materiels"/>
+        </record>
+        <record id="cat_protection" model="product.category">
+            <field name="name">Équipements de protection</field>
+            <field name="parent_id" ref="cat_materiels"/>
+        </record>
+
+        <!-- 5. Irrigation -->
+        <record id="cat_irrigation" model="product.category">
+            <field name="name">Irrigation</field>
+        </record>
+        <record id="cat_pompes" model="product.category">
+            <field name="name">Pompes</field>
+            <field name="parent_id" ref="cat_irrigation"/>
+        </record>
+        <record id="cat_tuyaux" model="product.category">
+            <field name="name">Tuyauterie et raccords</field>
+            <field name="parent_id" ref="cat_irrigation"/>
+        </record>
+        <record id="cat_goutteurs" model="product.category">
+            <field name="name">Goutteurs et asperseurs</field>
+            <field name="parent_id" ref="cat_irrigation"/>
+        </record>
+
+        <!-- 6. Élevage -->
+        <record id="cat_elevage" model="product.category">
+            <field name="name">Élevage</field>
+        </record>
+        <record id="cat_aliments" model="product.category">
+            <field name="name">Aliments pour bétail</field>
+            <field name="parent_id" ref="cat_elevage"/>
+        </record>
+        <record id="cat_equip_elevage" model="product.category">
+            <field name="name">Équipements d’élevage</field>
+            <field name="parent_id" ref="cat_elevage"/>
+        </record>
+        <record id="cat_veterinaires" model="product.category">
+            <field name="name">Produits vétérinaires</field>
+            <field name="parent_id" ref="cat_elevage"/>
+        </record>
+
+        <!-- 7. Outillage agricole -->
+        <record id="cat_outillage" model="product.category">
+            <field name="name">Outillage agricole</field>
+        </record>
+        <record id="cat_manuels" model="product.category">
+            <field name="name">Outils manuels</field>
+            <field name="parent_id" ref="cat_outillage"/>
+        </record>
+        <record id="cat_reparation" model="product.category">
+            <field name="name">Outils de réparation</field>
+            <field name="parent_id" ref="cat_outillage"/>
+        </record>
+
+        <!-- 8. Divers -->
+        <record id="cat_divers" model="product.category">
+            <field name="name">Divers / Consommables</field>
+        </record>
+        <record id="cat_emballage" model="product.category">
+            <field name="name">Produits d’emballage</field>
+            <field name="parent_id" ref="cat_divers"/>
+        </record>
+        <record id="cat_carburants" model="product.category">
+            <field name="name">Huiles et carburants</field>
+            <field name="parent_id" ref="cat_divers"/>
+        </record>
+
+    </data>
+</odoo>

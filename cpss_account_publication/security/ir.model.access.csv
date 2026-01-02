@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_move_publication_user,account.move.publication.user,account.model_account_move,account.group_account_invoice,1,0,0,0
+access_account_move_publication_manager,account.move.publication.manager,account.model_account_move,account.group_account_manager,1,1,1,1
+access_res_company_publication_user,res.company.publication.user,base.model_res_company,account.group_account_invoice,1,0,0,0
+access_res_company_publication_manager,res.company.publication.manager,base.model_res_company,account.group_account_manager,1,1,0,0
+access_account_move_publication_wizard,access_account_move_publication_wizard,model_account_move_publication_wizard,account.group_account_manager,1,1,1,1

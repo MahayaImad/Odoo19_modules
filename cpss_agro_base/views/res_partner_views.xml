@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ========================================== -->
+    <!-- Héritage de la vue formulaire res.partner -->
+    <!-- ========================================== -->
+    <record id="view_partner_form_agro" model="ir.ui.view">
+        <field name="name">res.partner.form.agro</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+            <!-- Ajout de l'onglet "Données Agricoles" avant "Contacts & Adresses" -->
+            <xpath expr="//page[@name='contact_addresses']" position="before">
+                <page name="donnees_agricoles" string="Données Agricoles"
+                      invisible="is_company == False">
+
+                    <group>
+                        <group name="exploitation_info" string="Informations sur l'exploitation">
+                            <field name="surface_exploitee"
+                                   widget="float"
+                                   options="{'digits': [False, 2]}"/>
+                            <field name="type_exploitation"/>
+                        </group>
+
+                        <group name="arbres_info" string="Informations sur les arbres">
+                            <field name="nombre_arbres"/>
+                            <field name="age_arbres"/>
+                            <field name="densite_arbres" readonly="1"
+                                   invisible="densite_arbres == 0"/>
+                        </group>
+                    </group>
+
+                    <!-- Zone d'informations complémentaires -->
+                    <group name="info_complementaires" string="Informations complémentaires"
+                           invisible="not surface_exploitee and not nombre_arbres">
+                        <div class="alert alert-info" role="alert"
+                             invisible="not densite_arbres or densite_arbres == 0">
+                            <strong>Densité:</strong>
+                            <field name="densite_arbres" readonly="1" nolabel="1"/> arbres/hectare
+                        </div>
+                        <div class="alert alert-warning" role="alert"
+                             invisible="not densite_arbres or densite_arbres &lt; 1000">
+                            <i class="fa fa-exclamation-triangle"/>
+                            Densité élevée détectée (> 1000 arbres/ha)
+                        </div>
+                    </group>
+
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+
+    <!-- ========================================== -->
+    <!-- Ajout des champs dans la vue liste        -->
+    <!-- ========================================== -->
+    <record id="view_partner_list_agro" model="ir.ui.view">
+        <field name="name">res.partner.list.agro</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+
+            <!-- Ajout de colonnes optionnelles dans la liste -->
+            <xpath expr="//field[@name='email']" position="after">
+                <field name="surface_exploitee" optional="hide"
+                       sum="Total Surface"/>
+                <field name="type_exploitation" optional="hide"/>
+                <field name="nombre_arbres" optional="hide"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <!-- ========================================== -->
+    <!-- Ajout des champs dans la recherche        -->
+    <!-- ========================================== -->
+    <record id="view_res_partner_filter_agro" model="ir.ui.view">
+        <field name="name">res.partner.search.agro</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+
+            <!-- Ajout de filtres et groupements -->
+            <xpath expr="//filter[@name='inactive']" position="after">
+                <separator/>
+                <filter name="avec_exploitation" string="Avec exploitation agricole"
+                        domain="[('surface_exploitee', '>', 0)]"/>
+                <filter name="exploitation_intensive" string="Exploitation intensive"
+                        domain="[('type_exploitation', '=', 'intensive')]"/>
+                <filter name="exploitation_traditionnelle" string="Exploitation traditionnelle"
+                        domain="[('type_exploitation', '=', 'traditionnelle')]"/>
+            </xpath>
+
+            <!-- Ajout de champs de recherche -->
+            <xpath expr="//field[@name='category_id']" position="after">
+                <field name="surface_exploitee"/>
+                <field name="type_exploitation"/>
+                <field name="nombre_arbres"/>
+            </xpath>
+
+            <!-- Ajout de groupements -->
+            <xpath expr="//filter[@name='group_country']" position="after">
+                <filter name="group_type_exploitation" string="Type d'exploitation"
+                        context="{'group_by': 'type_exploitation'}"/>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

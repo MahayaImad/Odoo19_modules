@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vue formulaire du wizard de publication -->
+    <record id="view_account_move_publication_wizard_form" model="ir.ui.view">
+        <field name="name">account.move.publication.wizard.form</field>
+        <field name="model">account.move.publication.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Gestion des paiements lors de la publication">
+                <group>
+                    <div class="alert alert-warning" role="alert">
+                        <i class="fa fa-warning"/> Cette facture a déjà des paiements enregistrés.
+                        Que souhaitez-vous faire ?
+                    </div>
+                </group>
+
+                <group>
+                    <field name="move_id" invisible="1"/>
+                    <field name="payment_ids" invisible="1"/>
+                </group>
+
+                <group string="Options disponibles">
+                    <field name="action" widget="radio"/>
+                </group>
+
+                <div class="oe_gray">
+                    <p><b>Explications des options :</b></p>
+                    <ul>
+                        <li><b>Migrer les paiements :</b> Créer des écritures de transfert pour déplacer les paiements vers le journal de publication</li>
+                        <li><b>Dissocier les paiements :</b> Annuler la réconciliation entre les paiements et la facture (la facture redeviendra impayée)</li>
+                        <li><b>Conserver :</b> Garder les paiements dans leur journal actuel (non conforme à la politique de publication)</li>
+                    </ul>
+                </div>
+
+                <footer>
+                    <button name="action_confirm"
+                            string="Confirmer et Publier"
+                            type="object"
+                            class="btn-primary"/>
+                    <button string="Annuler"
+                            class="btn-secondary"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action du wizard -->
+    <record id="action_account_move_publication_wizard" model="ir.actions.act_window">
+        <field name="name">Gestion des paiements</field>
+        <field name="res_model">account.move.publication.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Catégorie de sécurité -->
+        <record id="module_category_publication" model="ir.module.category">
+            <field name="name">Gestion des Publications</field>
+            <field name="description">Gestion des factures publiées</field>
+            <field name="sequence">100</field>
+        </record>
+
+        <!-- Groupe pour gérer les publications -->
+        <record id="group_publication_manager" model="res.groups">
+            <field name="name">Gestionnaire de Publications</field>
+            <field name="category_id" ref="module_category_publication"/>
+            <field name="implied_ids" eval="[(4, ref('account.group_account_invoice'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+        </record>
+
+        <!-- Règle de record pour limiter l'accès en écriture sur publication_state -->
+        <record id="account_move_publication_rule" model="ir.rule">
+            <field name="name">Factures Publication - Lecture pour tous</field>
+            <field name="model_id" ref="account.model_account_move"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- Règle spécifique pour empêcher la suppression de factures publiées -->
+        <record id="account_move_publication_delete_rule" model="ir.rule">
+            <field name="name">Factures publiées - Interdiction de suppression</field>
+            <field name="model_id" ref="account.model_account_move"/>
+            <field name="domain_force">[('publication_state', '=', 'not_published')]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+            <field name="groups" eval="[(4, ref('account.group_account_manager'))]"/>
+        </record>
+    </data>
+</odoo>
