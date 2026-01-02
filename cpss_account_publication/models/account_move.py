@@ -65,7 +65,7 @@ class AccountMove(models.Model):
 
     def _get_standard_sequence_code(self, move_type):
         """
-        Retourne le code de séquence standard (non publié) selon le type de facture
+        Retourne le code de séquence standard selon le type de facture
 
         Séquences standards (toujours utilisées pour name):
         - Facture client: BLC/year (Bon de Livraison Client)
@@ -74,10 +74,10 @@ class AccountMove(models.Model):
         - Avoir fournisseur: AVF/year (Avoir Fournisseur)
         """
         sequence_mapping = {
-            'out_invoice': 'account.move.out_invoice.unpublished',  # BLC
-            'out_refund': 'account.move.out_refund.unpublished',    # AVC
-            'in_invoice': 'account.move.in_invoice.unpublished',    # BLF
-            'in_refund': 'account.move.in_refund.unpublished',      # AVF
+            'out_invoice': 'account.move.out_invoice.standard',  # BLC
+            'out_refund': 'account.move.out_refund.standard',    # AVC
+            'in_invoice': 'account.move.in_invoice.standard',    # BLF
+            'in_refund': 'account.move.in_refund.standard',      # AVF
         }
         return sequence_mapping.get(move_type)
 

@@ -5,10 +5,10 @@
         <!-- FACTURES CLIENT (out_invoice) -->
         <!-- ========================================= -->
 
-        <!-- Facture client NON publiée (Bon de Livraison Client) -->
-        <record id="seq_out_invoice_unpublished" model="ir.sequence">
+        <!-- Facture client - Séquence standard (Bon de Livraison Client) -->
+        <record id="seq_out_invoice_standard" model="ir.sequence">
             <field name="name">Bon de Livraison Client</field>
-            <field name="code">account.move.out_invoice.unpublished</field>
+            <field name="code">account.move.out_invoice.standard</field>
             <field name="prefix">BLC/%(year)s/</field>
             <field name="padding">5</field>
             <field name="number_increment">1</field>
@@ -31,10 +31,10 @@
         <!-- AVOIRS CLIENT (out_refund) -->
         <!-- ========================================= -->
 
-        <!-- Avoir client NON publié -->
-        <record id="seq_out_refund_unpublished" model="ir.sequence">
-            <field name="name">Avoir Client Non Publié</field>
-            <field name="code">account.move.out_refund.unpublished</field>
+        <!-- Avoir client - Séquence standard -->
+        <record id="seq_out_refund_standard" model="ir.sequence">
+            <field name="name">Avoir Client</field>
+            <field name="code">account.move.out_refund.standard</field>
             <field name="prefix">AVC/%(year)s/</field>
             <field name="padding">5</field>
             <field name="number_increment">1</field>
@@ -57,10 +57,10 @@
         <!-- FACTURES FOURNISSEUR (in_invoice) -->
         <!-- ========================================= -->
 
-        <!-- Facture fournisseur NON publiée (Bon de Livraison Fournisseur) -->
-        <record id="seq_in_invoice_unpublished" model="ir.sequence">
+        <!-- Facture fournisseur - Séquence standard (Bon de Livraison Fournisseur) -->
+        <record id="seq_in_invoice_standard" model="ir.sequence">
             <field name="name">Bon de Livraison Fournisseur</field>
-            <field name="code">account.move.in_invoice.unpublished</field>
+            <field name="code">account.move.in_invoice.standard</field>
             <field name="prefix">BLF/%(year)s/</field>
             <field name="padding">5</field>
             <field name="number_increment">1</field>
@@ -83,10 +83,10 @@
         <!-- AVOIRS FOURNISSEUR (in_refund) -->
         <!-- ========================================= -->
 
-        <!-- Avoir fournisseur NON publié -->
-        <record id="seq_in_refund_unpublished" model="ir.sequence">
-            <field name="name">Avoir Fournisseur Non Publié</field>
-            <field name="code">account.move.in_refund.unpublished</field>
+        <!-- Avoir fournisseur - Séquence standard -->
+        <record id="seq_in_refund_standard" model="ir.sequence">
+            <field name="name">Avoir Fournisseur</field>
+            <field name="code">account.move.in_refund.standard</field>
             <field name="prefix">AVF/%(year)s/</field>
             <field name="padding">5</field>
             <field name="number_increment">1</field>
