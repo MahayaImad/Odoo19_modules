@@ -10,7 +10,8 @@ class ResCompany(models.Model):
         'account.account',
         string="Compte de Subvention FNDIA",
         help="Compte comptable utilisé pour enregistrer les subventions FNDIA",
-        domain="[('account_type', '=', 'asset_receivable'), ('company_id', '=', id)]"
+        domain="[('account_type', '=', 'asset_receivable')]",
+        check_company=True
     )
 
 

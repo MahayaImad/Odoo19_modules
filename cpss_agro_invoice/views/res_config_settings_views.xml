@@ -20,7 +20,7 @@
                             <div class="content-group mt16">
                                 <field name="fndia_subsidy_account_id"
                                        placeholder="Sélectionner un compte client..."
-                                       domain="[('account_type', '=', 'asset_receivable'), ('company_id', '=', company_id)]"
+                                       domain="[('account_type', '=', 'asset_receivable')]"
                                        context="{'default_account_type': 'asset_receivable'}"/>
                             </div>
                         </div>
