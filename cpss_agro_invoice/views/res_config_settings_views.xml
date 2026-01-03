@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vue de configuration - Ajout du compte FNDIA -->
+    <record id="res_config_settings_view_form_inherit_fndia" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.fndia</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <!-- Ajouter la configuration FNDIA dans la section Comptabilité -->
+            <xpath expr="//div[@id='customer_payments']" position="after">
+                <h2>Subvention FNDIA</h2>
+                <div class="row mt16 o_settings_container" id="fndia_settings">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <label for="fndia_subsidy_account_id" string="Compte de Subvention FNDIA"/>
+                            <div class="text-muted">
+                                Compte comptable utilisé pour enregistrer les subventions FNDIA
+                            </div>
+                            <div class="content-group mt16">
+                                <field name="fndia_subsidy_account_id"
+                                       placeholder="Sélectionner un compte client..."
+                                       domain="[('account_type', '=', 'asset_receivable'), ('company_id', '=', company_id)]"
+                                       context="{'default_account_type': 'asset_receivable'}"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
