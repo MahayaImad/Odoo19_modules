@@ -184,12 +184,14 @@ class AccountMove(models.Model):
                         stamp_line.credit = new_stamp_amount
                         stamp_line.balance = -new_stamp_amount
 
-    @api.constrains('fndia_subsidized', 'fndia_subsidy_total')
+    @api.constrains('fndia_subsidized', 'fndia_subsidy_total', 'amount_total')
     def _check_fndia_subsidy(self):
         """Vérifications sur la subvention FNDIA"""
         for move in self:
             if move.fndia_subsidized and move.move_type == 'out_invoice':
-                if move.fndia_subsidy_total > move.amount_total:
+                # Ne vérifier que si amount_total a été calculé (> 0)
+                # Pendant la création de la facture, amount_total peut être 0
+                if move.amount_total > 0 and move.fndia_subsidy_total > move.amount_total:
                     raise ValidationError(_(
                         "Le montant de la subvention FNDIA (%(subsidy)s) ne peut pas dépasser "
                         "le montant total de la facture (%(total)s).",
