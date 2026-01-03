@@ -156,45 +156,45 @@ class AccountMove(models.Model):
                         receivable_line.debit = move.fndia_amount_to_pay
                         receivable_line.amount_currency = move.fndia_amount_to_pay
 
-        # Modifier le calcul du timbre fiscal pour qu'il soit basé sur le montant à payer
-        self._recompute_stamp_tax_on_fndia_amount()
-
         return res
 
-    def _get_base_amount_for_stamp_tax(self):
+    def _compute_amount(self):
         """
-        Surcharge pour calculer la base du timbre fiscal.
-        Si FNDIA est activé, retourne le montant à payer (total - FNDIA)
-        au lieu du montant total.
+        Surcharge de la méthode du module l10n_dz_on_timbre_fiscal
+        pour calculer le timbre sur le montant après déduction FNDIA
         """
-        self.ensure_one()
+        # Appeler la méthode parente pour calculer le timbre
+        super()._compute_amount()
 
-        # Si FNDIA est activé, utiliser le montant à payer comme base
-        if self.fndia_subsidized and self.move_type == 'out_invoice' and self.fndia_subsidy_total > 0:
-            return self.fndia_amount_to_pay
-
-        # Sinon, utiliser la logique du module parent (l10n_dz_on_timbre_fiscal)
-        return super()._get_base_amount_for_stamp_tax() if hasattr(super(), '_get_base_amount_for_stamp_tax') else self.amount_total
-
-    def _recompute_stamp_tax_on_fndia_amount(self):
-        """
-        Recalcule le timbre fiscal en utilisant la logique du module l10n_dz_on_timbre_fiscal
-        mais avec le montant à payer (après déduction FNDIA) comme base.
-        """
+        # Si FNDIA est activé, recalculer le timbre sur la bonne base
         for move in self:
             if move.fndia_subsidized and move.move_type == 'out_invoice' and move.fndia_subsidy_total > 0:
-                # Le module l10n_dz_on_timbre_fiscal devrait avoir une méthode pour recalculer le timbre
-                # On va simplement recalculer les lignes dynamiques avec le nouveau montant de base
-                # qui sera retourné par notre méthode _get_base_amount_for_stamp_tax()
+                # Vérifier si on est en paiement comptant (condition du module parent)
+                if move.invoice_payment_term_id and move.invoice_payment_term_id.payment_type == 'cash':
+                    # Importer StampCalculator depuis le module parent
+                    try:
+                        from l10n_dz_on_timbre_fiscal.utils import StampCalculator
+                    except ImportError:
+                        # Si l'import échoue, continuer sans recalculer
+                        continue
 
-                # Si le module parent a une méthode de recalcul du timbre, l'appeler
-                if hasattr(super(), '_recompute_stamp_tax'):
-                    super()._recompute_stamp_tax()
-                else:
-                    # Sinon, forcer le recalcul en appelant _recompute_dynamic_lines
-                    # qui devrait déclencher le recalcul du timbre via le module parent
-                    pass
+                    # Recalculer la base du timbre en déduisant FNDIA
+                    # Base originale = HT + TVA
+                    # Nouvelle base = HT + TVA - FNDIA
+                    base_timbre = move.amount_untaxed + move.amount_tax - move.fndia_subsidy_total
 
+                    # Calculer le nouveau timbre avec StampCalculator
+                    c_timbre = StampCalculator(self.env).calculate(base_timbre)
+                    sign = move.direction_sign
+
+                    # Mettre à jour les montants avec le nouveau timbre
+                    move.timbre = c_timbre['timbre']
+                    move.timbre_signed = -sign * move.timbre
+                    move.amount_total = c_timbre['amount_timbre']
+                    move.amount_total_signed = -sign * move.amount_total
+                    move.amount_total_in_currency_signed = -sign * move.amount_total
+                    move.amount_residual = c_timbre['amount_timbre']
+                    move.amount_residual_signed = -sign * move.amount_residual
 
     @api.constrains('fndia_subsidized', 'fndia_subsidy_total', 'amount_total')
     def _check_fndia_subsidy(self):
