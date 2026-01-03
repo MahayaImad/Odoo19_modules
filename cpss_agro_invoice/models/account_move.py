@@ -183,43 +183,61 @@ class AccountMove(models.Model):
         Surcharge de la méthode du module l10n_dz_on_timbre_fiscal
         pour calculer le timbre sur le montant après déduction FNDIA
         """
+        import logging
+        _logger = logging.getLogger(__name__)
+
+        for move in self:
+            if move.fndia_subsidized and move.move_type == 'out_invoice':
+                _logger.info("=" * 80)
+                _logger.info(f"FNDIA _compute_amount DÉBUT - Facture {move.name}")
+                _logger.info(f"  AVANT super() - amount_untaxed: {move.amount_untaxed}")
+                _logger.info(f"  AVANT super() - amount_tax: {move.amount_tax}")
+                _logger.info(f"  AVANT super() - amount_total: {move.amount_total}")
+                _logger.info(f"  AVANT super() - timbre: {move.timbre}")
+                _logger.info(f"  AVANT super() - fndia_subsidy_total: {move.fndia_subsidy_total}")
+
         # Appeler la méthode parente pour calculer le timbre
         super()._compute_amount()
 
         # Si FNDIA est activé, recalculer le timbre sur la bonne base
         for move in self:
             if move.fndia_subsidized and move.move_type == 'out_invoice' and move.fndia_subsidy_total > 0:
+                _logger.info(f"  APRÈS super() - amount_untaxed: {move.amount_untaxed}")
+                _logger.info(f"  APRÈS super() - amount_tax: {move.amount_tax}")
+                _logger.info(f"  APRÈS super() - amount_total: {move.amount_total}")
+                _logger.info(f"  APRÈS super() - timbre: {move.timbre}")
+
                 # Vérifier si on est en paiement comptant (condition du module parent)
                 if move.invoice_payment_term_id and move.invoice_payment_term_id.payment_type == 'cash':
+                    _logger.info(f"  Type paiement: {move.invoice_payment_term_id.payment_type} ✓")
+
                     # Importer StampCalculator depuis le module parent
                     try:
                         from l10n_dz_on_timbre_fiscal.utils import StampCalculator
                     except ImportError:
-                        # Si l'import échoue, continuer sans recalculer
+                        _logger.error("  ERREUR: Impossible d'importer StampCalculator")
                         continue
 
                     # Recalculer la base du timbre en déduisant FNDIA
-                    # Base originale = HT + TVA
-                    # Nouvelle base = HT + TVA - FNDIA
-                    base_timbre = move.amount_untaxed + move.amount_tax - move.fndia_subsidy_total
+                    base_timbre_original = move.amount_untaxed + move.amount_tax
+                    base_timbre_fndia = move.amount_untaxed + move.amount_tax - move.fndia_subsidy_total
 
-                    # DEBUG: Afficher les valeurs
-                    import logging
-                    _logger = logging.getLogger(__name__)
-                    _logger.info(f"FNDIA DEBUG - Facture {move.name}:")
-                    _logger.info(f"  amount_untaxed: {move.amount_untaxed}")
-                    _logger.info(f"  amount_tax: {move.amount_tax}")
-                    _logger.info(f"  fndia_subsidy_total: {move.fndia_subsidy_total}")
-                    _logger.info(f"  base_timbre: {base_timbre}")
+                    _logger.info(f"  CALCUL base_timbre_original: {move.amount_untaxed} + {move.amount_tax} = {base_timbre_original}")
+                    _logger.info(f"  CALCUL base_timbre_fndia: {base_timbre_original} - {move.fndia_subsidy_total} = {base_timbre_fndia}")
 
                     # Calculer le nouveau timbre avec StampCalculator
-                    c_timbre = StampCalculator(self.env).calculate(base_timbre)
+                    c_timbre = StampCalculator(self.env).calculate(base_timbre_fndia)
                     sign = move.direction_sign
 
-                    _logger.info(f"  nouveau timbre: {c_timbre.get('timbre')}")
-                    _logger.info(f"  amount_timbre: {c_timbre.get('amount_timbre')}")
+                    _logger.info(f"  StampCalculator.calculate({base_timbre_fndia}) retourne:")
+                    _logger.info(f"    - timbre: {c_timbre.get('timbre')}")
+                    _logger.info(f"    - amount_timbre: {c_timbre.get('amount_timbre')}")
+                    _logger.info(f"  direction_sign: {sign}")
 
                     # Mettre à jour les montants avec le nouveau timbre
+                    old_timbre = move.timbre
+                    old_amount_total = move.amount_total
+
                     move.timbre = c_timbre['timbre']
                     move.timbre_signed = -sign * move.timbre
                     move.amount_total = c_timbre['amount_timbre']
@@ -228,31 +246,55 @@ class AccountMove(models.Model):
                     move.amount_residual = c_timbre['amount_timbre']
                     move.amount_residual_signed = -sign * move.amount_residual
 
+                    _logger.info(f"  MISE À JOUR:")
+                    _logger.info(f"    timbre: {old_timbre} → {move.timbre}")
+                    _logger.info(f"    amount_total: {old_amount_total} → {move.amount_total}")
+                else:
+                    _logger.warning(f"  Type paiement NON comptant: {move.invoice_payment_term_id.payment_type if move.invoice_payment_term_id else 'None'}")
+
+                _logger.info("FNDIA _compute_amount FIN")
+                _logger.info("=" * 80)
+
     def action_post(self):
         """
         Surcharge pour recalculer le timbre fiscal juste avant validation
         si FNDIA est activé
         """
+        import logging
+        _logger = logging.getLogger(__name__)
+
         # Recalculer le timbre pour les factures FNDIA avant validation
         for move in self:
             if move.fndia_subsidized and move.move_type == 'out_invoice' and move.fndia_subsidy_total > 0:
+                _logger.info("█" * 80)
+                _logger.info(f"FNDIA action_post DÉBUT - Facture {move.name}")
+                _logger.info(f"  AVANT recalcul - amount_untaxed: {move.amount_untaxed}")
+                _logger.info(f"  AVANT recalcul - amount_tax: {move.amount_tax}")
+                _logger.info(f"  AVANT recalcul - amount_total: {move.amount_total}")
+                _logger.info(f"  AVANT recalcul - timbre: {move.timbre}")
+                _logger.info(f"  AVANT recalcul - fndia_subsidy_total: {move.fndia_subsidy_total}")
+
                 if move.invoice_payment_term_id and move.invoice_payment_term_id.payment_type == 'cash':
+                    _logger.info(f"  Type paiement: {move.invoice_payment_term_id.payment_type} ✓")
                     try:
                         from l10n_dz_on_timbre_fiscal.utils import StampCalculator
 
                         # Recalculer la base du timbre
+                        base_timbre_original = move.amount_untaxed + move.amount_tax
                         base_timbre = move.amount_untaxed + move.amount_tax - move.fndia_subsidy_total
+
+                        _logger.info(f"  CALCUL base_timbre: {move.amount_untaxed} + {move.amount_tax} - {move.fndia_subsidy_total} = {base_timbre}")
 
                         # Calculer le nouveau timbre
                         c_timbre = StampCalculator(self.env).calculate(base_timbre)
                         sign = move.direction_sign
 
-                        # DEBUG
-                        import logging
-                        _logger = logging.getLogger(__name__)
-                        _logger.info(f"FNDIA action_post - Facture {move.name}:")
-                        _logger.info(f"  base_timbre: {base_timbre}")
-                        _logger.info(f"  nouveau timbre: {c_timbre.get('timbre')}")
+                        _logger.info(f"  StampCalculator.calculate({base_timbre}) retourne:")
+                        _logger.info(f"    - timbre: {c_timbre.get('timbre')}")
+                        _logger.info(f"    - amount_timbre: {c_timbre.get('amount_timbre')}")
+
+                        old_timbre = move.timbre
+                        old_amount_total = move.amount_total
 
                         # Mettre à jour AVANT l'appel à super()
                         move.timbre = c_timbre['timbre']
@@ -263,11 +305,47 @@ class AccountMove(models.Model):
                         move.amount_residual = c_timbre['amount_timbre']
                         move.amount_residual_signed = -sign * move.amount_residual
 
-                    except ImportError:
-                        pass
+                        _logger.info(f"  MISE À JOUR:")
+                        _logger.info(f"    timbre: {old_timbre} → {move.timbre}")
+                        _logger.info(f"    amount_total: {old_amount_total} → {move.amount_total}")
+
+                    except ImportError as e:
+                        _logger.error(f"  ERREUR: Impossible d'importer StampCalculator: {e}")
+                else:
+                    _logger.warning(f"  Type paiement NON comptant ou None")
+
+                _logger.info("FNDIA action_post FIN - Appel super()")
+                _logger.info("█" * 80)
 
         # Appeler le super pour créer les écritures avec le bon montant de timbre
-        return super().action_post()
+        result = super().action_post()
+
+        # Vérifier ce qui a été créé après super()
+        for move in self:
+            if move.fndia_subsidized and move.move_type == 'out_invoice' and move.fndia_subsidy_total > 0:
+                _logger.info("█" * 80)
+                _logger.info(f"FNDIA action_post APRÈS super() - Facture {move.name}")
+                _logger.info(f"  APRÈS super() - timbre: {move.timbre}")
+                _logger.info(f"  APRÈS super() - amount_total: {move.amount_total}")
+
+                # Afficher la ligne de timbre fiscal dans les écritures
+                try:
+                    from l10n_dz_on_timbre_fiscal.utils import StampCalculator
+                    timbre_account_id = StampCalculator(self.env).GetStampAccount(move.move_type)
+                    timbre_line = move.line_ids.filtered(lambda l: l.account_id.id == int(timbre_account_id))
+                    if timbre_line:
+                        _logger.info(f"  Ligne timbre fiscal trouvée:")
+                        _logger.info(f"    - debit: {timbre_line.debit}")
+                        _logger.info(f"    - credit: {timbre_line.credit}")
+                        _logger.info(f"    - balance: {timbre_line.balance}")
+                    else:
+                        _logger.warning("  Aucune ligne de timbre fiscal trouvée!")
+                except Exception as e:
+                    _logger.error(f"  Erreur lors de la vérification de la ligne timbre: {e}")
+
+                _logger.info("█" * 80)
+
+        return result
 
     @api.constrains('fndia_subsidized', 'fndia_subsidy_total', 'amount_total')
     def _check_fndia_subsidy(self):
