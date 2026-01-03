@@ -118,7 +118,7 @@
                 <field name="publication_state"/>
                 <field name="publication_number"/>
             </xpath>
-            <xpath expr="//field[hasclass('float-end')]" position="after">
+            <xpath expr="//field[hasclass('ms-auto')]" position="after">
                 <span t-if="record.publication_state.raw_value == 'published'"
                       class="badge badge-success">
                     <i class="fa fa-check"/> Publié
