@@ -38,6 +38,21 @@ class AccountMove(models.Model):
         string="Peut publier/dépublier"
     )
 
+    display_number = fields.Char(
+        compute='_compute_display_number',
+        string="Numéro à afficher",
+        help="Affiche le numéro de publication si publié, sinon le numéro BL"
+    )
+
+    @api.depends('publication_state', 'name', 'publication_number')
+    def _compute_display_number(self):
+        """Calcule le numéro à afficher selon l'état de publication"""
+        for move in self:
+            if move.publication_state == 'published' and move.publication_number:
+                move.display_number = move.publication_number
+            else:
+                move.display_number = move.name or ''
+
     @api.depends_context('uid')
     def _compute_can_toggle_publication(self):
         """Vérifie si l'utilisateur actuel peut publier/dépublier"""
