@@ -203,9 +203,21 @@ class AccountMove(models.Model):
                     # Nouvelle base = HT + TVA - FNDIA
                     base_timbre = move.amount_untaxed + move.amount_tax - move.fndia_subsidy_total
 
+                    # DEBUG: Afficher les valeurs
+                    import logging
+                    _logger = logging.getLogger(__name__)
+                    _logger.info(f"FNDIA DEBUG - Facture {move.name}:")
+                    _logger.info(f"  amount_untaxed: {move.amount_untaxed}")
+                    _logger.info(f"  amount_tax: {move.amount_tax}")
+                    _logger.info(f"  fndia_subsidy_total: {move.fndia_subsidy_total}")
+                    _logger.info(f"  base_timbre: {base_timbre}")
+
                     # Calculer le nouveau timbre avec StampCalculator
                     c_timbre = StampCalculator(self.env).calculate(base_timbre)
                     sign = move.direction_sign
+
+                    _logger.info(f"  nouveau timbre: {c_timbre.get('timbre')}")
+                    _logger.info(f"  amount_timbre: {c_timbre.get('amount_timbre')}")
 
                     # Mettre à jour les montants avec le nouveau timbre
                     move.timbre = c_timbre['timbre']
