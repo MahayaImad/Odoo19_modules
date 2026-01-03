@@ -29,12 +29,13 @@
                        statusbar_visible="not_published,published"/>
             </xpath>
 
-            <!-- Ajouter le badge "Publié" à côté du badge de paiement -->
-            <xpath expr="//field[@name='payment_state'][@widget='account_payment']" position="after">
-                <field name="publication_state"
-                       widget="badge"
-                       decoration-success="publication_state == 'published'"
-                       invisible="publication_state != 'published'"/>
+            <!-- Ajouter le ribbon "Publié" en haut à droite du formulaire -->
+            <xpath expr="//sheet" position="before">
+                <widget name="web_ribbon"
+                        text="Publié"
+                        bg_color="text-bg-success"
+                        invisible="publication_state != 'published'"
+                        tooltip="Cette facture a été publiée avec le numéro de publication"/>
             </xpath>
 
             <!-- Modifier le premier champ name pour utiliser display_number -->

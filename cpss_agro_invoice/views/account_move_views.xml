@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vue formulaire des factures - Ajout des champs FNDIA -->
+    <record id="view_move_form_inherit_fndia" model="ir.ui.view">
+        <field name="name">account.move.form.fndia</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <!-- Ajouter le champ "Subventionné FNDIA" après le partenaire -->
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="fndia_subsidized"
+                       invisible="move_type != 'out_invoice'"
+                       widget="boolean_toggle"/>
+            </xpath>
+
+            <!-- Ajouter les totaux FNDIA dans le groupe des totaux -->
+            <xpath expr="//group[@name='note_group']" position="before">
+                <group name="fndia_totals_group"
+                       invisible="not fndia_subsidized or move_type != 'out_invoice'">
+                    <group colspan="2">
+                        <group class="oe_subtotal_footer oe_right" name="fndia_monetary">
+                            <field name="fndia_subsidy_total"
+                                   widget="monetary"
+                                   class="oe_subtotal_footer_separator"
+                                   options="{'currency_field': 'currency_id'}"/>
+                            <field name="fndia_amount_to_pay"
+                                   widget="monetary"
+                                   class="oe_subtotal_footer_separator"
+                                   style="font-weight: bold; font-size: 1.2em;"
+                                   options="{'currency_field': 'currency_id'}"/>
+                        </group>
+                    </group>
+                </group>
+            </xpath>
+
+            <!-- Ajouter la colonne montant FNDIA dans les lignes de facture -->
+            <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='price_subtotal']" position="after">
+                <field name="fndia_subsidy_amount"
+                       string="Subvention FNDIA"
+                       optional="show"
+                       invisible="parent.move_type != 'out_invoice' or not parent.fndia_subsidized"
+                       widget="monetary"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Vue liste des factures - Ajout de la colonne FNDIA -->
+    <record id="view_invoice_tree_inherit_fndia" model="ir.ui.view">
+        <field name="name">account.move.tree.fndia</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_invoice_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='amount_total']" position="after">
+                <field name="fndia_subsidized"
+                       optional="hide"
+                       widget="boolean_toggle"/>
+                <field name="fndia_subsidy_total"
+                       optional="hide"
+                       widget="monetary"/>
+                <field name="fndia_amount_to_pay"
+                       string="Montant à Payer"
+                       optional="show"
+                       widget="monetary"
+                       invisible="not fndia_subsidized"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Vue recherche - Ajout de filtres FNDIA -->
+    <record id="view_account_invoice_filter_inherit_fndia" model="ir.ui.view">
+        <field name="name">account.invoice.search.fndia</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+        <field name="arch" type="xml">
+            <!-- Ajouter des filtres pour FNDIA -->
+            <xpath expr="//filter[@name='late']" position="after">
+                <separator/>
+                <filter name="fndia_subsidized"
+                        string="Subventionné FNDIA"
+                        domain="[('fndia_subsidized', '=', True), ('move_type', '=', 'out_invoice')]"/>
+                <filter name="fndia_not_subsidized"
+                        string="Non subventionné"
+                        domain="[('fndia_subsidized', '=', False), ('move_type', '=', 'out_invoice')]"/>
+            </xpath>
+
+            <!-- Ajouter un regroupement par statut FNDIA -->
+            <xpath expr="//group" position="inside">
+                <filter name="group_by_fndia"
+                        string="Subvention FNDIA"
+                        context="{'group_by': 'fndia_subsidized'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Compte comptable pour la subvention FNDIA -->
+        <!-- Ce compte sera un compte client de type receivable -->
+        <record id="account_fndia_subsidy" model="account.account">
+            <field name="name">Subvention FNDIA - Client</field>
+            <field name="code">411200</field>
+            <field name="account_type">asset_receivable</field>
+            <field name="reconcile">True</field>
+            <field name="note">Compte utilisé pour enregistrer les subventions FNDIA sur les factures de vente d'engrais</field>
+        </record>
+
+        <!-- Configurer le compte FNDIA par défaut pour la société -->
+        <function model="res.company" name="write">
+            <value eval="[ref('base.main_company')]"/>
+            <value eval="{'fndia_subsidy_account_id': ref('account_fndia_subsidy')}"/>
+        </function>
+    </data>
+</odoo>
