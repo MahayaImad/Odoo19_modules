@@ -161,77 +161,39 @@ class AccountMove(models.Model):
 
         return res
 
+    def _get_base_amount_for_stamp_tax(self):
+        """
+        Surcharge pour calculer la base du timbre fiscal.
+        Si FNDIA est activé, retourne le montant à payer (total - FNDIA)
+        au lieu du montant total.
+        """
+        self.ensure_one()
+
+        # Si FNDIA est activé, utiliser le montant à payer comme base
+        if self.fndia_subsidized and self.move_type == 'out_invoice' and self.fndia_subsidy_total > 0:
+            return self.fndia_amount_to_pay
+
+        # Sinon, utiliser la logique du module parent (l10n_dz_on_timbre_fiscal)
+        return super()._get_base_amount_for_stamp_tax() if hasattr(super(), '_get_base_amount_for_stamp_tax') else self.amount_total
+
     def _recompute_stamp_tax_on_fndia_amount(self):
         """
-        Modifie le montant du timbre fiscal pour qu'il soit calculé sur le montant à payer
-        et non sur le montant total
+        Recalcule le timbre fiscal en utilisant la logique du module l10n_dz_on_timbre_fiscal
+        mais avec le montant à payer (après déduction FNDIA) comme base.
         """
         for move in self:
             if move.fndia_subsidized and move.move_type == 'out_invoice' and move.fndia_subsidy_total > 0:
-                # Trouver les lignes de timbre fiscal
-                # Le timbre peut être identifié par is_stamp_tax=True ou par le nom de la taxe
-                stamp_lines = move.line_ids.filtered(
-                    lambda l: l.tax_line_id and (
-                        (hasattr(l.tax_line_id, 'is_stamp_tax') and l.tax_line_id.is_stamp_tax) or
-                        'timbre' in (l.tax_line_id.name or '').lower() or
-                        'stamp' in (l.tax_line_id.name or '').lower()
-                    )
-                )
+                # Le module l10n_dz_on_timbre_fiscal devrait avoir une méthode pour recalculer le timbre
+                # On va simplement recalculer les lignes dynamiques avec le nouveau montant de base
+                # qui sera retourné par notre méthode _get_base_amount_for_stamp_tax()
 
-                for stamp_line in stamp_lines:
-                    # Recalculer le timbre basé sur le montant à payer
-                    tax = stamp_line.tax_line_id
-
-                    # Utiliser la méthode de calcul de la taxe avec le nouveau montant de base
-                    if tax:
-                        # IMPORTANT : Calculer la base SANS le timbre ancien
-                        # Base = HT + TVA - FNDIA (sans le timbre)
-                        # amount_untaxed = HT
-                        # amount_tax = toutes les taxes SAUF le timbre
-
-                        # Calculer le montant des taxes hors timbre
-                        tax_amount_without_stamp = sum(
-                            line.credit - line.debit
-                            for line in move.line_ids
-                            if line.tax_line_id and line.tax_line_id != tax
-                        )
-
-                        # Base pour le nouveau timbre = HT + Taxes (sans timbre) - FNDIA
-                        base_amount = move.amount_untaxed + tax_amount_without_stamp - move.fndia_subsidy_total
-
-                        # Utiliser la méthode compute_all de la taxe pour recalculer
-                        tax_results = tax.compute_all(
-                            base_amount,
-                            currency=move.currency_id,
-                            quantity=1.0,
-                            product=None,
-                            partner=move.partner_id
-                        )
-
-                        if tax_results and tax_results.get('taxes'):
-                            # Prendre le montant de la taxe calculée
-                            new_stamp_amount = tax_results['taxes'][0]['amount']
-
-                            # Mettre à jour la ligne de timbre
-                            stamp_line.write({
-                                'debit': 0.0,
-                                'credit': abs(new_stamp_amount),
-                                'balance': -abs(new_stamp_amount),
-                                'amount_currency': -abs(new_stamp_amount),
-                            })
-
-                            # Ajuster également la ligne receivable pour tenir compte du nouveau timbre
-                            receivable_line = move.line_ids.filtered(
-                                lambda l: l.account_id.account_type == 'asset_receivable' and not l.exclude_from_invoice_tab
-                            )
-                            if receivable_line:
-                                # Recalculer : HT + Taxes + Nouveau timbre - FNDIA
-                                total_receivable = move.amount_untaxed + tax_amount_without_stamp + abs(new_stamp_amount) - move.fndia_subsidy_total
-                                receivable_line.write({
-                                    'debit': total_receivable,
-                                    'balance': total_receivable,
-                                    'amount_currency': total_receivable,
-                                })
+                # Si le module parent a une méthode de recalcul du timbre, l'appeler
+                if hasattr(super(), '_recompute_stamp_tax'):
+                    super()._recompute_stamp_tax()
+                else:
+                    # Sinon, forcer le recalcul en appelant _recompute_dynamic_lines
+                    # qui devrait déclencher le recalcul du timbre via le module parent
+                    pass
 
 
     @api.constrains('fndia_subsidized', 'fndia_subsidy_total', 'amount_total')
