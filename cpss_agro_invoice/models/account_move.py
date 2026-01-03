@@ -228,6 +228,47 @@ class AccountMove(models.Model):
                     move.amount_residual = c_timbre['amount_timbre']
                     move.amount_residual_signed = -sign * move.amount_residual
 
+    def action_post(self):
+        """
+        Surcharge pour recalculer le timbre fiscal juste avant validation
+        si FNDIA est activé
+        """
+        # Recalculer le timbre pour les factures FNDIA avant validation
+        for move in self:
+            if move.fndia_subsidized and move.move_type == 'out_invoice' and move.fndia_subsidy_total > 0:
+                if move.invoice_payment_term_id and move.invoice_payment_term_id.payment_type == 'cash':
+                    try:
+                        from l10n_dz_on_timbre_fiscal.utils import StampCalculator
+
+                        # Recalculer la base du timbre
+                        base_timbre = move.amount_untaxed + move.amount_tax - move.fndia_subsidy_total
+
+                        # Calculer le nouveau timbre
+                        c_timbre = StampCalculator(self.env).calculate(base_timbre)
+                        sign = move.direction_sign
+
+                        # DEBUG
+                        import logging
+                        _logger = logging.getLogger(__name__)
+                        _logger.info(f"FNDIA action_post - Facture {move.name}:")
+                        _logger.info(f"  base_timbre: {base_timbre}")
+                        _logger.info(f"  nouveau timbre: {c_timbre.get('timbre')}")
+
+                        # Mettre à jour AVANT l'appel à super()
+                        move.timbre = c_timbre['timbre']
+                        move.timbre_signed = -sign * move.timbre
+                        move.amount_total = c_timbre['amount_timbre']
+                        move.amount_total_signed = -sign * move.amount_total
+                        move.amount_total_in_currency_signed = -sign * move.amount_total
+                        move.amount_residual = c_timbre['amount_timbre']
+                        move.amount_residual_signed = -sign * move.amount_residual
+
+                    except ImportError:
+                        pass
+
+        # Appeler le super pour créer les écritures avec le bon montant de timbre
+        return super().action_post()
+
     @api.constrains('fndia_subsidized', 'fndia_subsidy_total', 'amount_total')
     def _check_fndia_subsidy(self):
         """Vérifications sur la subvention FNDIA"""
