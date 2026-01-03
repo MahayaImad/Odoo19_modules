@@ -2,6 +2,19 @@
 
 from odoo import models, fields, api, _
 from odoo.exceptions import UserError, ValidationError
+import logging
+
+_logger = logging.getLogger(__name__)
+
+# Importer StampCalculator au niveau du module plutôt que dans les méthodes
+try:
+    from odoo.addons.l10n_dz_on_timbre_fiscal.utils import StampCalculator
+    STAMP_CALCULATOR_AVAILABLE = True
+    _logger.info("✓ StampCalculator importé avec succès depuis odoo.addons.l10n_dz_on_timbre_fiscal.utils")
+except ImportError as e:
+    STAMP_CALCULATOR_AVAILABLE = False
+    _logger.error(f"✗ Impossible d'importer StampCalculator: {e}")
+    StampCalculator = None
 
 
 class AccountMoveLine(models.Model):
@@ -211,11 +224,9 @@ class AccountMove(models.Model):
                 if move.invoice_payment_term_id and move.invoice_payment_term_id.payment_type == 'cash':
                     _logger.info(f"  Type paiement: {move.invoice_payment_term_id.payment_type} ✓")
 
-                    # Importer StampCalculator depuis le module parent
-                    try:
-                        from l10n_dz_on_timbre_fiscal.utils import StampCalculator
-                    except ImportError:
-                        _logger.error("  ERREUR: Impossible d'importer StampCalculator")
+                    # Vérifier que StampCalculator est disponible
+                    if not STAMP_CALCULATOR_AVAILABLE or StampCalculator is None:
+                        _logger.error("  ERREUR: StampCalculator n'est pas disponible (import a échoué au chargement du module)")
                         continue
 
                     # Recalculer la base du timbre en déduisant FNDIA
@@ -276,9 +287,11 @@ class AccountMove(models.Model):
 
                 if move.invoice_payment_term_id and move.invoice_payment_term_id.payment_type == 'cash':
                     _logger.info(f"  Type paiement: {move.invoice_payment_term_id.payment_type} ✓")
-                    try:
-                        from l10n_dz_on_timbre_fiscal.utils import StampCalculator
 
+                    # Vérifier que StampCalculator est disponible
+                    if not STAMP_CALCULATOR_AVAILABLE or StampCalculator is None:
+                        _logger.error("  ERREUR: StampCalculator n'est pas disponible")
+                    else:
                         # Recalculer la base du timbre
                         base_timbre_original = move.amount_untaxed + move.amount_tax
                         base_timbre = move.amount_untaxed + move.amount_tax - move.fndia_subsidy_total
@@ -308,9 +321,6 @@ class AccountMove(models.Model):
                         _logger.info(f"  MISE À JOUR:")
                         _logger.info(f"    timbre: {old_timbre} → {move.timbre}")
                         _logger.info(f"    amount_total: {old_amount_total} → {move.amount_total}")
-
-                    except ImportError as e:
-                        _logger.error(f"  ERREUR: Impossible d'importer StampCalculator: {e}")
                 else:
                     _logger.warning(f"  Type paiement NON comptant ou None")
 
@@ -329,19 +339,21 @@ class AccountMove(models.Model):
                 _logger.info(f"  APRÈS super() - amount_total: {move.amount_total}")
 
                 # Afficher la ligne de timbre fiscal dans les écritures
-                try:
-                    from l10n_dz_on_timbre_fiscal.utils import StampCalculator
-                    timbre_account_id = StampCalculator(self.env).GetStampAccount(move.move_type)
-                    timbre_line = move.line_ids.filtered(lambda l: l.account_id.id == int(timbre_account_id))
-                    if timbre_line:
-                        _logger.info(f"  Ligne timbre fiscal trouvée:")
-                        _logger.info(f"    - debit: {timbre_line.debit}")
-                        _logger.info(f"    - credit: {timbre_line.credit}")
-                        _logger.info(f"    - balance: {timbre_line.balance}")
-                    else:
-                        _logger.warning("  Aucune ligne de timbre fiscal trouvée!")
-                except Exception as e:
-                    _logger.error(f"  Erreur lors de la vérification de la ligne timbre: {e}")
+                if STAMP_CALCULATOR_AVAILABLE and StampCalculator is not None:
+                    try:
+                        timbre_account_id = StampCalculator(self.env).GetStampAccount(move.move_type)
+                        timbre_line = move.line_ids.filtered(lambda l: l.account_id.id == int(timbre_account_id))
+                        if timbre_line:
+                            _logger.info(f"  Ligne timbre fiscal trouvée:")
+                            _logger.info(f"    - debit: {timbre_line.debit}")
+                            _logger.info(f"    - credit: {timbre_line.credit}")
+                            _logger.info(f"    - balance: {timbre_line.balance}")
+                        else:
+                            _logger.warning("  Aucune ligne de timbre fiscal trouvée!")
+                    except Exception as e:
+                        _logger.error(f"  Erreur lors de la vérification de la ligne timbre: {e}")
+                else:
+                    _logger.error("  StampCalculator non disponible pour vérifier la ligne timbre")
 
                 _logger.info("█" * 80)
 
