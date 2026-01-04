@@ -11,6 +11,18 @@ from ..utils.stamp_calculator import StampCalculator
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
+    def _default_payment_term(self):
+        """Get default payment term from configuration"""
+        param = self.env['ir.config_parameter'].sudo()
+        payment_term_id = param.get_param('l10n_dz_on_timbre_fiscal.default_payment_term_id')
+        if payment_term_id:
+            return int(payment_term_id)
+        return False
+
+    payment_term_id = fields.Many2one(
+        'account.payment.term',
+        default=_default_payment_term
+    )
     payment_type = fields.Char('Type de paiement')
     timbre = fields.Monetary(string='Timbre', store=True, readonly=True)
 

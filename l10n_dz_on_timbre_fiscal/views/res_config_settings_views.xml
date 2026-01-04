@@ -14,6 +14,9 @@
                    <setting id="stamp_sale_account_id" string="Compte du timbre (Vente)" help="Définir le compte utilisé pour le timbre fiscal dans les ventes.">
                     <field name="stamp_sale_account_id" domain="[('deprecated', '=', False)]" options="{'no_create_edit': True}"/>
                   </setting>
+                  <setting id="default_payment_term_id" string="Conditions de paiement par défaut" help="Définir les conditions de paiement par défaut pour les nouvelles factures et commandes (ex: Espèce Timbre).">
+                    <field name="default_payment_term_id" options="{'no_create_edit': True}"/>
+                  </setting>
               </xpath>
             </field>
        </record>
