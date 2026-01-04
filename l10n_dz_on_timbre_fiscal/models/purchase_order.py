@@ -11,12 +11,8 @@ class PurchaseOrder(models.Model):
     _inherit = "purchase.order"
 
     def _default_payment_term(self):
-        """Get default payment term from configuration"""
-        param = self.env['ir.config_parameter'].sudo()
-        payment_term_id = param.get_param('l10n_dz_on_timbre_fiscal.default_payment_term_id')
-        if payment_term_id:
-            return int(payment_term_id)
-        return False
+        """Get default payment term from company configuration"""
+        return self.env.company.default_payment_term_id
 
     payment_term_id = fields.Many2one(
         'account.payment.term',
