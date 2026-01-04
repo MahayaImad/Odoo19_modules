@@ -359,6 +359,45 @@ class AccountMove(models.Model):
 
         return result
 
+    @api.depends_context('lang')
+    @api.depends(
+        'invoice_line_ids.currency_rate',
+        'invoice_line_ids.tax_base_amount',
+        'invoice_line_ids.tax_line_id',
+        'invoice_line_ids.price_total',
+        'invoice_line_ids.price_subtotal',
+        'invoice_payment_term_id',
+        'partner_id',
+        'currency_id',
+        'fndia_subsidized',
+        'fndia_subsidy_total',
+        'invoice_line_ids.fndia_subsidy_amount',
+    )
+    def _compute_tax_totals(self):
+        """
+        Surcharge pour ajouter la subvention FNDIA dans les totaux affichés
+        avant le timbre fiscal
+        """
+        super()._compute_tax_totals()
+
+        for move in self:
+            if move.is_invoice() and move.fndia_subsidized and move.move_type == 'out_invoice' and move.fndia_subsidy_total > 0:
+                # Ajouter la subvention FNDIA dans les sous-totaux avant le timbre
+                # Le timbre a une séquence de 1000, donc on met FNDIA à 999 pour qu'il apparaisse avant
+                move.tax_totals.setdefault('subtotals', []).append({
+                    'name': "Subvention FNDIA",
+                    'amount': -move.fndia_subsidy_total,  # Négatif car c'est une déduction
+                    'base_amount': -move.fndia_subsidy_total,
+                    'base_amount_currency': -move.fndia_subsidy_total,
+                    'form_label': "Subvention FNDIA",
+                    'tax_ids': [],
+                    'display': True,
+                    'sequence': 999,  # Avant le timbre (1000)
+                    'code': "fndia",
+                    'group': "fndia",
+                    'tax_groups': [],
+                })
+
     @api.constrains('fndia_subsidized', 'fndia_subsidy_total', 'amount_total')
     def _check_fndia_subsidy(self):
         """Vérifications sur la subvention FNDIA"""

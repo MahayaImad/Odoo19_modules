@@ -13,20 +13,8 @@
                        widget="boolean_toggle"/>
             </xpath>
 
-            <!-- Ajouter le montant FNDIA juste avant le Timbre dans les totaux -->
-            <xpath expr="//field[@name='timbre']" position="before">
-                <field name="fndia_subsidy_total"
-                       string="Subvention FNDIA"
-                       invisible="not fndia_subsidized or move_type != 'out_invoice' or fndia_subsidy_total == 0"
-                       widget="monetary"
-                       options="{'currency_field': 'currency_id'}"/>
-                <field name="fndia_amount_to_pay"
-                       string="Montant à Payer (après FNDIA)"
-                       invisible="not fndia_subsidized or move_type != 'out_invoice' or fndia_subsidy_total == 0"
-                       widget="monetary"
-                       class="fw-bold"
-                       options="{'currency_field': 'currency_id'}"/>
-            </xpath>
+            <!-- Les totaux FNDIA sont automatiquement affichés via _compute_tax_totals -->
+            <!-- Pas besoin d'ajouter de champs supplémentaires dans la vue formulaire -->
 
             <!-- Ajouter la colonne montant FNDIA dans les lignes de facture (vue inline) -->
             <xpath expr="//field[@name='invoice_line_ids']//field[@name='price_subtotal']" position="after">
