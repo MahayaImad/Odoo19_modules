@@ -28,6 +28,12 @@ class AccountMoveLine(models.Model):
         help="Montant de subvention FNDIA pour cette ligne (prix_soutien × quantité)"
     )
 
+    isFNDIA = fields.Boolean(
+        string="Ligne FNDIA",
+        default=False,
+        help="Indique si cette ligne est une écriture de subvention FNDIA"
+    )
+
     @api.depends('product_id', 'quantity', 'move_id.fndia_subsidized', 'move_id.move_type')
     def _compute_fndia_subsidy_amount(self):
         """Calcule le montant de subvention FNDIA pour chaque ligne"""
@@ -128,7 +134,7 @@ class AccountMove(models.Model):
             'currency_id': self.currency_id.id,
             'debit': self.fndia_subsidy_total if self.move_type == 'out_invoice' else 0.0,
             'credit': self.fndia_subsidy_total if self.move_type == 'out_refund' else 0.0,
-            'exclude_from_invoice_tab': True,
+            'isFNDIA': True,
         }
 
     def _recompute_dynamic_lines(self, recompute_all_taxes=False, recompute_tax_base_amount=False):
@@ -149,7 +155,7 @@ class AccountMove(models.Model):
                 if subsidy_account:
                     # Supprimer l'ancienne ligne FNDIA si elle existe
                     old_fndia_lines = move.line_ids.filtered(
-                        lambda l: l.account_id == subsidy_account and l.exclude_from_invoice_tab
+                        lambda l: l.account_id == subsidy_account and l.isFNDIA
                     )
                     if old_fndia_lines:
                         old_fndia_lines.unlink()
@@ -161,7 +167,7 @@ class AccountMove(models.Model):
                     # Ajuster la ligne client pour refléter le montant à payer
                     # (Total - FNDIA) au lieu du total
                     receivable_line = move.line_ids.filtered(
-                        lambda l: l.account_id.account_type == 'asset_receivable' and not l.exclude_from_invoice_tab
+                        lambda l: l.account_id.account_type == 'asset_receivable' and not l.isFNDIA
                     )
 
                     if receivable_line:
@@ -322,7 +328,7 @@ class AccountMove(models.Model):
                                 'debit': move.fndia_subsidy_total if -sign > 0 else 0.0,
                                 'credit': 0.0 if -sign > 0 else move.fndia_subsidy_total,
                                 'partner_id': move.partner_id.id,
-                                'exclude_from_invoice_tab': True,
+                                'isFNDIA': True,
                             })
                         ]
 
