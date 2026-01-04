@@ -31,6 +31,9 @@
         # Vues
         'views/account_move_views.xml',
         'views/res_config_settings_views.xml',
+
+        # Rapports
+        'views/report_invoice_fndia.xml',
     ],
     'installable': True,
     'application': False,

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Rapport de facture - Ajouter le montant FNDIA avant le Timbre -->
+    <template id="report_invoice_document_fndia" inherit_id="account.report_invoice_document">
+
+        <!-- Ajouter le montant FNDIA dans le tableau des totaux avant le timbre -->
+        <!-- On cherche la ligne qui contient le champ timbre et on insère avant -->
+        <xpath expr="//span[@t-field='o.timbre']/../.." position="before">
+            <tr t-if="o.fndia_subsidized and o.move_type == 'out_invoice' and o.fndia_subsidy_total > 0"
+                class="border-black o_subtotal"
+                style="border-top: 1px solid #dee2e6;">
+                <td><strong>Subvention FNDIA</strong></td>
+                <td class="text-end">
+                    <span t-field="o.fndia_subsidy_total"
+                          t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                </td>
+            </tr>
+        </xpath>
+
+    </template>
+</odoo>
