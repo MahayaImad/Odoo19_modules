@@ -268,11 +268,65 @@ class AccountMove(models.Model):
 
     def action_post(self):
         """
-        Surcharge pour recalculer le timbre fiscal juste avant validation
-        si FNDIA est activé
+        Surcharge pour créer les écritures FNDIA AVANT validation
+        et recalculer le timbre fiscal
         """
         import logging
         _logger = logging.getLogger(__name__)
+
+        # Créer les écritures FNDIA AVANT validation
+        for move in self:
+            if move.is_invoice() and move.fndia_subsidized and move.move_type == 'out_invoice' and move.fndia_subsidy_total > 0:
+                _logger.info("█" * 80)
+                _logger.info(f"FNDIA action_post - Création écritures FNDIA AVANT validation")
+
+                # Récupérer le compte FNDIA
+                fndia_account = move.company_id.fndia_subsidy_account_id
+
+                if not fndia_account:
+                    raise UserError(_(
+                        "Le compte de subvention FNDIA n'est pas configuré.\n"
+                        "Veuillez le configurer dans Facturation > Configuration > Paramètres."
+                    ))
+
+                _logger.info(f"  Compte FNDIA: {fndia_account.code} - {fndia_account.name}")
+                _logger.info(f"  Montant FNDIA: {move.fndia_subsidy_total}")
+
+                # Vérifier si la ligne FNDIA existe déjà
+                fndia_line = move.line_ids.filtered(
+                    lambda l: l.account_id.id == fndia_account.id
+                )
+
+                if not fndia_line:
+                    _logger.info("  Création ligne FNDIA AVANT validation...")
+
+                    sign = move.direction_sign
+                    partner_line = move.line_ids.filtered(
+                        lambda l: l.account_id.account_type == 'asset_receivable'
+                    )
+
+                    if partner_line:
+                        _logger.info(f"  Ligne client AVANT - debit: {partner_line.debit}, credit: {partner_line.credit}")
+
+                        # Modifier directement line_ids (avant validation, c'est possible)
+                        move.line_ids = [
+                            # RÉDUIRE la ligne client
+                            (1, partner_line.id, {
+                                'debit': partner_line.debit - move.fndia_subsidy_total if -sign > 0 else partner_line.debit,
+                                'credit': partner_line.credit if -sign > 0 else partner_line.credit - move.fndia_subsidy_total,
+                            }),
+                            # CRÉER la ligne FNDIA
+                            (0, 0, {
+                                'name': 'Subvention FNDIA',
+                                'account_id': fndia_account.id,
+                                'debit': move.fndia_subsidy_total if -sign > 0 else 0.0,
+                                'credit': 0.0 if -sign > 0 else move.fndia_subsidy_total,
+                                'partner_id': move.partner_id.id,
+                                'exclude_from_invoice_tab': True,
+                            })
+                        ]
+
+                        _logger.info(f"  ✓ Ligne FNDIA créée")
 
         # Recalculer le timbre pour les factures FNDIA avant validation
         for move in self:
@@ -330,114 +384,36 @@ class AccountMove(models.Model):
         # Appeler le super pour créer les écritures avec le bon montant de timbre
         result = super().action_post()
 
-        # Créer les écritures FNDIA après super() (comme le fait le module timbre)
+        # Vérifier les écritures créées (pour logging)
         for move in self:
-            if move.is_invoice() and move.fndia_subsidized and move.move_type == 'out_invoice' and move.fndia_subsidy_total > 0:
+            if move.fndia_subsidized and move.move_type == 'out_invoice' and move.fndia_subsidy_total > 0:
                 _logger.info("█" * 80)
-                _logger.info(f"FNDIA action_post APRÈS super() - Création écritures FNDIA")
+                _logger.info(f"FNDIA action_post APRÈS validation - Vérification")
 
-                # Récupérer le compte FNDIA depuis la configuration
-                fndia_account = move.company_id.fndia_subsidy_account_id
-
-                if not fndia_account:
-                    raise UserError(_(
-                        "Le compte de subvention FNDIA n'est pas configuré.\n"
-                        "Veuillez le configurer dans Facturation > Configuration > Paramètres."
-                    ))
-
-                _logger.info(f"  Compte FNDIA: {fndia_account.code} - {fndia_account.name}")
-                _logger.info(f"  Montant FNDIA: {move.fndia_subsidy_total}")
-
-                # Vérifier si la ligne FNDIA existe déjà
-                fndia_line = move.line_ids.filtered(
-                    lambda l: l.account_id.id == fndia_account.id
-                )
-
-                # Récupérer la ligne client (receivable)
-                sign = move.direction_sign
+                # Afficher les écritures finales
                 partner_line = move.line_ids.filtered(
                     lambda l: l.account_id.account_type == 'asset_receivable'
                 )
-
-                if not partner_line:
-                    _logger.error("  ERREUR: Ligne client (receivable) non trouvée!")
-                    continue
-
-                _logger.info(f"  Ligne client AVANT:")
+                _logger.info(f"  Ligne client FINAL:")
                 _logger.info(f"    - debit: {partner_line.debit}")
                 _logger.info(f"    - credit: {partner_line.credit}")
 
-                # Si la ligne FNDIA n'existe pas, la créer
-                if not fndia_line:
-                    _logger.info("  Création de la ligne FNDIA...")
+                fndia_account = move.company_id.fndia_subsidy_account_id
+                if fndia_account:
+                    fndia_line = move.line_ids.filtered(
+                        lambda l: l.account_id.id == fndia_account.id
+                    )
+                    if fndia_line:
+                        _logger.info(f"  Ligne FNDIA FINAL:")
+                        _logger.info(f"    - debit: {fndia_line.debit}")
+                        _logger.info(f"    - credit: {fndia_line.credit}")
 
-                    # La ligne client a déjà été créée avec le total incluant timbre
-                    # On doit RÉDUIRE le débit client du montant FNDIA
-                    # Et créer une ligne FNDIA au DÉBIT pour le même montant
-                    # Ainsi le client paie moins, et FNDIA prend en charge la différence
-
-                    move.write({
-                        'line_ids': [
-                            # RÉDUIRE la ligne client du montant FNDIA
-                            (1, partner_line.id, {
-                                'debit': partner_line.debit - move.fndia_subsidy_total if -sign > 0 else partner_line.debit,
-                                'credit': partner_line.credit if -sign > 0 else partner_line.credit - move.fndia_subsidy_total,
-                            }),
-                            # Créer la ligne FNDIA au DÉBIT (pris en charge par FNDIA)
-                            (0, 0, {
-                                'name': 'Subvention FNDIA',
-                                'account_id': fndia_account.id,
-                                'debit': move.fndia_subsidy_total if -sign > 0 else 0.0,
-                                'credit': 0.0 if -sign > 0 else move.fndia_subsidy_total,
-                                'partner_id': move.partner_id.id,
-                                'exclude_from_invoice_tab': True,
-                            })
-                        ]
-                    })
-
-                    _logger.info(f"  ✓ Ligne FNDIA créée")
-                else:
-                    _logger.info("  Ligne FNDIA existe déjà, mise à jour...")
-                    # Mettre à jour la ligne existante
-                    move.write({
-                        'line_ids': [
-                            (1, partner_line.id, {
-                                'debit': partner_line.debit - move.fndia_subsidy_total if -sign > 0 else partner_line.debit,
-                                'credit': partner_line.credit if -sign > 0 else partner_line.credit - move.fndia_subsidy_total,
-                            }),
-                            (1, fndia_line.id, {
-                                'name': 'Subvention FNDIA',
-                                'debit': move.fndia_subsidy_total if -sign > 0 else 0.0,
-                                'credit': 0.0 if -sign > 0 else move.fndia_subsidy_total,
-                                'partner_id': move.partner_id.id,
-                                'exclude_from_invoice_tab': True,
-                            })
-                        ]
-                    })
-
-                # Afficher les écritures finales
-                _logger.info(f"  Ligne client APRÈS:")
-                partner_line_after = move.line_ids.filtered(
-                    lambda l: l.account_id.account_type == 'asset_receivable'
-                )
-                _logger.info(f"    - debit: {partner_line_after.debit}")
-                _logger.info(f"    - credit: {partner_line_after.credit}")
-
-                fndia_line_after = move.line_ids.filtered(
-                    lambda l: l.account_id.id == fndia_account.id
-                )
-                if fndia_line_after:
-                    _logger.info(f"  Ligne FNDIA créée:")
-                    _logger.info(f"    - debit: {fndia_line_after.debit}")
-                    _logger.info(f"    - credit: {fndia_line_after.credit}")
-
-                # Afficher aussi le timbre
                 if STAMP_CALCULATOR_AVAILABLE and StampCalculator is not None:
                     try:
                         timbre_account_id = StampCalculator(self.env).GetStampAccount(move.move_type)
                         timbre_line = move.line_ids.filtered(lambda l: l.account_id.id == int(timbre_account_id))
                         if timbre_line:
-                            _logger.info(f"  Ligne timbre fiscal:")
+                            _logger.info(f"  Ligne timbre FINAL:")
                             _logger.info(f"    - debit: {timbre_line.debit}")
                             _logger.info(f"    - credit: {timbre_line.credit}")
                     except Exception as e:
