@@ -13,32 +13,18 @@
                        widget="boolean_toggle"/>
             </xpath>
 
-            <!-- Ajouter les totaux FNDIA dans le groupe des totaux -->
-            <xpath expr="//group[@name='note_group']" position="before">
-                <group name="fndia_totals_group"
-                       invisible="not fndia_subsidized or move_type != 'out_invoice'">
-                    <group colspan="2">
-                        <group class="oe_subtotal_footer oe_right" name="fndia_monetary">
-                            <field name="fndia_subsidy_total"
-                                   widget="monetary"
-                                   class="oe_subtotal_footer_separator"
-                                   options="{'currency_field': 'currency_id'}"/>
-                            <field name="fndia_amount_to_pay"
-                                   widget="monetary"
-                                   class="oe_subtotal_footer_separator"
-                                   style="font-weight: bold; font-size: 1.2em;"
-                                   options="{'currency_field': 'currency_id'}"/>
-                        </group>
-                    </group>
-                </group>
-            </xpath>
-
             <!-- Ajouter le montant FNDIA juste avant le Timbre dans les totaux -->
             <xpath expr="//field[@name='timbre']" position="before">
                 <field name="fndia_subsidy_total"
                        string="Subvention FNDIA"
                        invisible="not fndia_subsidized or move_type != 'out_invoice' or fndia_subsidy_total == 0"
                        widget="monetary"
+                       options="{'currency_field': 'currency_id'}"/>
+                <field name="fndia_amount_to_pay"
+                       string="Montant à Payer (après FNDIA)"
+                       invisible="not fndia_subsidized or move_type != 'out_invoice' or fndia_subsidy_total == 0"
+                       widget="monetary"
+                       class="fw-bold"
                        options="{'currency_field': 'currency_id'}"/>
             </xpath>
 
