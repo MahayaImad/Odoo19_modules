@@ -35,7 +35,6 @@
         # Les totaux (incluant FNDIA et Timbre) sont affichés via tax_totals
         # Pas besoin de template de rapport personnalisé
     ],
-    'post_init_hook': 'post_init_hook',
     'installable': True,
     'application': False,
     'auto_install': False,
