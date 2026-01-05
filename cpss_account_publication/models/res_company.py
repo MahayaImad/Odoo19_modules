@@ -22,7 +22,7 @@ class ResCompany(models.Model):
 
     enable_publication_stock_tracking = fields.Boolean(
         string="Activer le suivi du stock publié/non publié",
-        default=False,
+        default=True,
         help="Si activé, le système suivra le stock publié et non publié séparément. "
              "Lors de la publication d'une facture, il vérifiera que suffisamment de stock publié est disponible."
     )

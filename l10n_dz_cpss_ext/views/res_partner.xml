@@ -5,20 +5,20 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//page[@name='accounting_disabled']" position="inside">
+            <xpath expr="//page[@name='accounting']//group[@name='credit_limits']" position="after">
 
-                <group string="Information fiscale" invisible="company_type not in ['company']" groups="account.group_account_invoice">
-                    <field name="fiscal_position" options="{'no_edit' : True, 'no_create': True}" groups="account.group_account_invoice"/>
+                <group string="Information fiscale" invisible="not is_company" groups="account.group_account_invoice,account.group_account_readonly">
+                    <field name="fiscal_position" options="{'no_edit' : True, 'no_create': True}" groups="account.group_account_invoice,account.group_account_readonly"/>
                     <field name="activity_code" widget="many2many_tags"/>
-                    <field name="rc" class="oe_line" groups="account.group_account_invoice"/>
-                    <field name="nif" class="oe_line" groups="account.group_account_invoice"/>
-                    <field name="ai" class="oe_line" groups="account.group_account_invoice"/>
-                    <field name="nis" class="oe_line" groups="account.group_account_invoice"/>
+                    <field name="rc" class="oe_line" groups="account.group_account_invoice,account.group_account_readonly"/>
+                    <field name="nif" class="oe_line" groups="account.group_account_invoice,account.group_account_readonly"/>
+                    <field name="ai" class="oe_line" groups="account.group_account_invoice,account.group_account_readonly"/>
+                    <field name="nis" class="oe_line" groups="account.group_account_invoice,account.group_account_readonly"/>
                 </group>
             </xpath>
             <xpath expr="//field[@name='phone']" position="after">
                  <i class="fa fa-fw me-1 fa-phone text-primary" title="Fax"/>
-                <field name="fax" widget="phone" class="w-100" groups="account.group_account_invoice"/>
+                <field name="fax" widget="phone" class="w-100"/>
             </xpath>
             <xpath expr="//field[@name='vat']" position="attributes">
                 <attribute name="invisible">True</attribute>
@@ -29,7 +29,7 @@
         </field>
     </record>
 
-    <record id="account_view_partner_property_form_inherit" model="ir.ui.view">
+    <!--<record id="account_view_partner_property_form_inherit" model="ir.ui.view">
         <field name="name">account.view.partner.property.form.inherit</field>
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="account.view_partner_property_form"/>
@@ -38,5 +38,5 @@
                 <attribute name="invisible">True</attribute>
             </xpath>
         </field>
-    </record>
+    </record>-->
 </odoo>

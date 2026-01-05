@@ -95,24 +95,11 @@
                   groups="cpss_sync_inter_company_base.group_sync_user"/>
 
         <!-- Configuration -->
-        <menuitem id="menu_sync_configuration"
+        <menuitem id="menu_sync_config"
                   name="Configuration"
                   parent="menu_sync_main"
-                  sequence="50"
-                  groups="cpss_sync_inter_company_base.group_sync_manager"/>
-
-        <menuitem id="menu_sync_config"
-                  name="Sync Settings"
-                  parent="menu_sync_configuration"
                   action="action_open_sync_settings"
-                  sequence="10"
-                  groups="cpss_sync_inter_company_base.group_sync_manager"/>
-
-        <menuitem id="menu_company_data_config"
-                  name="Company Data Sharing"
-                  parent="menu_sync_configuration"
-                  action="action_company_data_config"
-                  sequence="20"
+                  sequence="50"
                   groups="cpss_sync_inter_company_base.group_sync_manager"/>
     </data>
 </odoo>

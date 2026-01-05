@@ -32,7 +32,7 @@
         <field name="model">account.move</field>
         <field name="inherit_id" ref="account.view_invoice_tree"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='amount_total']" position="after">
+            <xpath expr="//field[@name='amount_total_in_currency_signed']" position="after">
                 <field name="fndia_subsidized"
                        optional="hide"/>
                 <field name="fndia_subsidy_total"

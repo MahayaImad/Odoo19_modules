@@ -8,5 +8,5 @@ class ResCompany(models.Model):
 
     num_agrement = fields.Char(
         string="Numéro d'agrément",
-        help="Numéro d'agrément de la société"
+        help="Numéro d'agrément"
     )

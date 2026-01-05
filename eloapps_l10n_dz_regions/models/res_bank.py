@@ -21,8 +21,7 @@ class ResBank(models.Model):
     # Le champ country_id existe déjà dans res.bank, on l'étend seulement
     country_id = fields.Many2one(
         'res.country',
-        string='Pays',
-        required=True,
+        string='Pays'
         # Attention: 'state' n'existe pas, utilisez 'state_id' si c'est ce que vous voulez
         #related='state_id.country_id'  # Décommentez si vous avez un champ state_id
     )

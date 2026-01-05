@@ -1,6 +1,5 @@
 from . import cpss_sync_mixin
 from . import cpss_sync_config
-from . import cpss_company_data_config
 from . import cpss_sync_history
 from . import cpss_sync_log
 from . import account_move

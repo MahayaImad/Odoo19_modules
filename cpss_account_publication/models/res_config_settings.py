@@ -11,7 +11,8 @@ class ResConfigSettings(models.TransientModel):
         string='Journal des factures publiées',
         related='company_id.journal_publication_id',
         readonly=False,
-        domain="[('type', 'in', ['bank', 'cash']), ('company_id', '=', company_id)]",
+        domain="[('type', 'in', ['bank', 'cash'])]",
+        check_company=True,
         help="Journal utilisé pour enregistrer les paiements des factures publiées"
     )
 
