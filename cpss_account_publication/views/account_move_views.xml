@@ -22,18 +22,17 @@
                         groups="account.group_account_manager"/>
             </xpath>
 
-            <!-- Ajouter le champ statusbar après le champ state -->
+            <!-- Ajouter le champ statusbar après le champ state
             <xpath expr="//field[@name='state']" position="after">
                 <field name="publication_state"
                        widget="statusbar"
                        statusbar_visible="not_published,published"/>
-            </xpath>
+            </xpath> -->
 
             <!-- Ajouter le ribbon "Publié" en haut à droite du formulaire -->
-            <xpath expr="//sheet" position="before">
-                <widget name="web_ribbon"
-                        text="Publié"
-                        bg_color="text-bg-success"
+
+            <xpath expr="//sheet/widget[1]" position="before">
+                <widget name="web_ribbon" text="Publié" bg_color="text-bg-success"
                         invisible="publication_state != 'published'"
                         tooltip="Cette facture a été publiée avec le numéro de publication"/>
             </xpath>
@@ -48,21 +47,14 @@
             </xpath>
 
             <!-- Ajouter les informations de publication dans l'onglet "Autres informations" -->
-            <xpath expr="//page[@name='other_info']//group[@name='misc_group']" position="inside">
-                <group string="Publication" name="publication_group">
-                    <!-- Afficher le numéro BL original ici quand publié -->
+            <xpath expr="//field[@name='payment_reference']" position="after">
                     <field name="name"
                            string="Numéro BL (Original)"
                            readonly="1"
                            invisible="publication_state != 'published'"/>
-                    <field name="publication_number"
-                           string="Numéro de Publication"
-                           readonly="1"
-                           invisible="publication_state != 'published'"/>
                     <field name="publication_date"
                            readonly="1"
-                           invisible="publication_state == 'not_published'"/>
-                </group>
+                           invisible="publication_state != 'published'"/>
             </xpath>
         </field>
     </record>

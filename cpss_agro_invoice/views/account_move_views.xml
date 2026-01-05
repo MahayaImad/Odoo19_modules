@@ -13,32 +13,14 @@
                        widget="boolean_toggle"/>
             </xpath>
 
-            <!-- Ajouter les totaux FNDIA dans le groupe des totaux -->
-            <xpath expr="//group[@name='note_group']" position="before">
-                <group name="fndia_totals_group"
-                       invisible="not fndia_subsidized or move_type != 'out_invoice'">
-                    <group colspan="2">
-                        <group class="oe_subtotal_footer oe_right" name="fndia_monetary">
-                            <field name="fndia_subsidy_total"
-                                   widget="monetary"
-                                   class="oe_subtotal_footer_separator"
-                                   options="{'currency_field': 'currency_id'}"/>
-                            <field name="fndia_amount_to_pay"
-                                   widget="monetary"
-                                   class="oe_subtotal_footer_separator"
-                                   style="font-weight: bold; font-size: 1.2em;"
-                                   options="{'currency_field': 'currency_id'}"/>
-                        </group>
-                    </group>
-                </group>
-            </xpath>
+            <!-- Les totaux FNDIA sont automatiquement affichés via _compute_tax_totals -->
+            <!-- Pas besoin d'ajouter de champs supplémentaires dans la vue formulaire -->
 
-            <!-- Ajouter la colonne montant FNDIA dans les lignes de facture -->
-            <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='price_subtotal']" position="after">
+            <!-- Ajouter la colonne montant FNDIA dans les lignes de facture (vue inline) -->
+            <xpath expr="//field[@name='invoice_line_ids']//field[@name='price_subtotal']" position="after">
                 <field name="fndia_subsidy_amount"
                        string="Subvention FNDIA"
-                       optional="show"
-                       invisible="parent.move_type != 'out_invoice' or not parent.fndia_subsidized"
+                       optional="hide"
                        widget="monetary"/>
             </xpath>
         </field>
@@ -50,18 +32,15 @@
         <field name="model">account.move</field>
         <field name="inherit_id" ref="account.view_invoice_tree"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='amount_total']" position="after">
+            <xpath expr="//field[@name='amount_total_in_currency_signed']" position="after">
                 <field name="fndia_subsidized"
-                       optional="hide"
-                       widget="boolean_toggle"/>
+                       optional="hide"/>
                 <field name="fndia_subsidy_total"
-                       optional="hide"
-                       widget="monetary"/>
+                       string="Subvention FNDIA"
+                       optional="hide"/>
                 <field name="fndia_amount_to_pay"
                        string="Montant à Payer"
-                       optional="show"
-                       widget="monetary"
-                       invisible="not fndia_subsidized"/>
+                       optional="hide"/>
             </xpath>
         </field>
     </record>

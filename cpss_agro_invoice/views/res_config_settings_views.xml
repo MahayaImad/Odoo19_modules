@@ -7,7 +7,7 @@
         <field name="inherit_id" ref="account.res_config_settings_view_form"/>
         <field name="arch" type="xml">
             <!-- Ajouter la configuration FNDIA dans la section Comptabilité -->
-            <xpath expr="//div[@id='customer_payments']" position="after">
+            <xpath expr="//app[@name='account']" position="inside">
                 <h2>Subvention FNDIA</h2>
                 <div class="row mt16 o_settings_container" id="fndia_settings">
                     <div class="col-12 col-lg-6 o_setting_box">
@@ -20,7 +20,7 @@
                             <div class="content-group mt16">
                                 <field name="fndia_subsidy_account_id"
                                        placeholder="Sélectionner un compte client..."
-                                       domain="[('account_type', '=', 'asset_receivable'), ('company_id', '=', company_id)]"
+                                       domain="[('account_type', '=', 'asset_receivable')]"
                                        context="{'default_account_type': 'asset_receivable'}"/>
                             </div>
                         </div>
