@@ -22,7 +22,7 @@
         'account',
         'cpss_product_categories',  # Pour accéder au champ prix_soutien
         'l10n_dz',  # Pour le timbre fiscal algérien
-        'l10n_dz_on_timbre_fiscal',
+        'l10n_dz_on_timbre_fiscal',  # Pour réutiliser la logique du timbre fiscal
     ],
     'data': [
         # Données
@@ -31,6 +31,9 @@
         # Vues
         'views/account_move_views.xml',
         'views/res_config_settings_views.xml',
+
+        # Les totaux (incluant FNDIA et Timbre) sont affichés via tax_totals
+        # Pas besoin de template de rapport personnalisé
     ],
     'installable': True,
     'application': False,
