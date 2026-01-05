@@ -9,8 +9,8 @@ class ResCompany(models.Model):
     fndia_subsidy_account_id = fields.Many2one(
         'account.account',
         string="Compte de Subvention FNDIA",
-        help="Compte comptable utilisé pour enregistrer les subventions FNDIA",
-        domain="[('account_type', '=', 'asset_receivable')]",
+        help="Compte comptable utilisé pour enregistrer les subventions FNDIA (créance sur l'État)",
+        domain="[('account_type', 'in', ['asset_current', 'asset_receivable'])]",
         check_company=True
     )
 
