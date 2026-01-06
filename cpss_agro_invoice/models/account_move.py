@@ -82,12 +82,30 @@ class AccountMove(models.Model):
         Override du module l10n_dz_on_timbre_fiscal pour filtrer aussi les lignes FNDIA
         afin de masquer les lignes FNDIA de l'onglet "Lignes de facture"
         """
+        _logger.info("=" * 80)
+        _logger.info("DIAGNOSTIC: _compute_invoice_line_ids_visible APPELÉE")
+
         super()._compute_invoice_line_ids_visible()
+
         for move in self:
+            _logger.info(f"  Facture: {move.name or 'Nouveau'}")
+            _logger.info(f"  Nombre total de lignes (invoice_line_ids): {len(move.invoice_line_ids)}")
+
+            # Afficher détails de chaque ligne
+            for idx, line in enumerate(move.invoice_line_ids, 1):
+                _logger.info(f"    Ligne {idx}: {line.name[:50] if line.name else 'Sans nom'}")
+                _logger.info(f"      - account_id: {line.account_id.code if line.account_id else 'None'}")
+                _logger.info(f"      - isFNDIA: {line.isFNDIA}")
+                _logger.info(f"      - isStamp: {line.isStamp}")
+                _logger.info(f"      - display_type: {line.display_type}")
+
             # Filtrer à la fois les lignes Stamp ET FNDIA
             move.invoice_line_ids_visible = move.invoice_line_ids.filtered(
                 lambda l: not l.isStamp and not l.isFNDIA
             )
+
+            _logger.info(f"  Nombre lignes APRÈS filtrage (invoice_line_ids_visible): {len(move.invoice_line_ids_visible)}")
+            _logger.info("=" * 80)
 
     @api.model
     def _get_default_fndia_subsidized(self):
@@ -354,7 +372,17 @@ class AccountMove(models.Model):
                             })
                         ]
 
-                        _logger.info(f"  ✓ Ligne FNDIA créée")
+                        _logger.info(f"  ✓ Ligne FNDIA créée avec isFNDIA=True")
+
+                        # DIAGNOSTIC : Vérifier la ligne FNDIA créée
+                        fndia_line_created = move.line_ids.filtered(lambda l: l.isFNDIA)
+                        if fndia_line_created:
+                            _logger.info(f"  ✓ Ligne FNDIA trouvée après création:")
+                            _logger.info(f"    - name: {fndia_line_created.name}")
+                            _logger.info(f"    - isFNDIA: {fndia_line_created.isFNDIA}")
+                            _logger.info(f"    - account_id: {fndia_line_created.account_id.code}")
+                        else:
+                            _logger.error(f"  ✗ ERREUR: Ligne FNDIA non trouvée après création!")
 
                         # DIAGNOSTIC : Afficher toutes les lignes receivable APRÈS création FNDIA
                         receivable_lines_after = move.line_ids.filtered(
