@@ -374,6 +374,10 @@ class AccountMove(models.Model):
 
                         _logger.info(f"  ✓ Ligne FNDIA créée avec isFNDIA=True")
 
+                        # FORCER le recalcul de invoice_line_ids_visible
+                        move._compute_invoice_line_ids_visible()
+                        _logger.info(f"  ✓ invoice_line_ids_visible recalculé")
+
                         # DIAGNOSTIC : Vérifier la ligne FNDIA créée
                         fndia_line_created = move.line_ids.filtered(lambda l: l.isFNDIA)
                         if fndia_line_created:
