@@ -76,6 +76,19 @@ class AccountMove(models.Model):
         help="Montant à payer par le client (Montant TTC - Montant FNDIA)"
     )
 
+    @api.depends('invoice_line_ids', 'invoice_line_ids.isFNDIA')
+    def _compute_invoice_line_ids_visible(self):
+        """
+        Override du module l10n_dz_on_timbre_fiscal pour filtrer aussi les lignes FNDIA
+        afin de masquer les lignes FNDIA de l'onglet "Lignes de facture"
+        """
+        super()._compute_invoice_line_ids_visible()
+        for move in self:
+            # Filtrer à la fois les lignes Stamp ET FNDIA
+            move.invoice_line_ids_visible = move.invoice_line_ids.filtered(
+                lambda l: not l.isStamp and not l.isFNDIA
+            )
+
     @api.model
     def _get_default_fndia_subsidized(self):
         """Active FNDIA par défaut pour les factures de vente uniquement"""
