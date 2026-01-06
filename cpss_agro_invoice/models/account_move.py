@@ -296,7 +296,16 @@ class AccountMove(models.Model):
                     ))
 
                 _logger.info(f"  Compte FNDIA: {fndia_account.code} - {fndia_account.name}")
+                _logger.info(f"  Type compte FNDIA: {fndia_account.account_type}")
                 _logger.info(f"  Montant FNDIA: {move.fndia_subsidy_total}")
+
+                # DIAGNOSTIC : Afficher toutes les lignes receivable AVANT création FNDIA
+                receivable_lines_before = move.line_ids.filtered(
+                    lambda l: l.account_id.account_type == 'asset_receivable'
+                )
+                _logger.info(f"  Lignes receivable AVANT création FNDIA: {len(receivable_lines_before)}")
+                for line in receivable_lines_before:
+                    _logger.info(f"    - {line.account_id.code} ({line.account_id.account_type}): debit={line.debit}, credit={line.credit}")
 
                 # Vérifier si la ligne FNDIA existe déjà
                 fndia_line = move.line_ids.filtered(
@@ -333,6 +342,16 @@ class AccountMove(models.Model):
                         ]
 
                         _logger.info(f"  ✓ Ligne FNDIA créée")
+
+                        # DIAGNOSTIC : Afficher toutes les lignes receivable APRÈS création FNDIA
+                        receivable_lines_after = move.line_ids.filtered(
+                            lambda l: l.account_id.account_type == 'asset_receivable'
+                        )
+                        _logger.info(f"  Lignes receivable APRÈS création FNDIA: {len(receivable_lines_after)}")
+                        for line in receivable_lines_after:
+                            _logger.info(f"    - {line.account_id.code} ({line.account_id.account_type}): debit={line.debit}, credit={line.credit}")
+
+                        _logger.info("  Appel super().action_post() va se faire maintenant...")
 
         # Recalculer le timbre pour les factures FNDIA avant validation
         for move in self:
