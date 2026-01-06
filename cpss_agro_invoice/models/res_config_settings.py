@@ -25,9 +25,9 @@ class ResCompany(models.Model):
         """
         for company in self:
             # Chercher le compte 441200 (Subventions d'exploitation à recevoir)
+            # Odoo 19 : account.account n'a pas company_id, chercher juste par code
             account_441200 = self.env['account.account'].search([
-                ('code', '=', '441200'),
-                ('company_id', '=', company.id)
+                ('code', '=', '441200')
             ], limit=1)
 
             if account_441200:
