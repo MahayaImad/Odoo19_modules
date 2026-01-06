@@ -16,6 +16,11 @@
             <!-- Les totaux FNDIA sont automatiquement affichés via _compute_tax_totals -->
             <!-- Pas besoin d'ajouter de champs supplémentaires dans la vue formulaire -->
 
+            <!-- Filtrer les lignes FNDIA de l'onglet Lignes de facture (comme pour le timbre) -->
+            <xpath expr="//field[@name='invoice_line_ids']" position="attributes">
+                <attribute name="domain">[('display_type', 'in', ('product', 'line_section', 'line_note')), ('isFNDIA', '=', False)]</attribute>
+            </xpath>
+
             <!-- Ajouter la colonne montant FNDIA dans les lignes de facture (vue inline) -->
             <xpath expr="//field[@name='invoice_line_ids']//field[@name='price_subtotal']" position="after">
                 <field name="fndia_subsidy_amount"
