@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!--
-    Configuration du compte FNDIA :
-    Le compte standard pour les subventions FNDIA est : 441000 "État et autres collectivités publiques, subventions à recevoir"
+    <data noupdate="1">
+        <!-- Compte comptable spécifique pour les subventions FNDIA -->
+        <!-- Sous-compte de 441000 : État et autres collectivités publiques -->
+        <record id="account_fndia_subsidy" model="account.account">
+            <field name="name">État - Subventions FNDIA à recevoir</field>
+            <field name="code">441100</field>
+            <field name="account_type">asset_current</field>
+            <field name="reconcile">True</field>
+            <field name="note">Compte utilisé pour enregistrer les subventions FNDIA sur les factures de vente d'engrais (créance sur le Fonds National de Développement de l'Investissement Agricole)</field>
+        </record>
 
-    Ce compte doit être configuré manuellement dans :
-    Facturation > Configuration > Paramètres > Compte de Subvention FNDIA
-
-    Sélectionnez le compte : 441000 - État et autres collectivités publiques, subventions à recevoir
-    -->
+        <!-- Configurer le compte FNDIA par défaut pour la société -->
+        <function model="res.company" name="write">
+            <value eval="[ref('base.main_company')]"/>
+            <value eval="{'fndia_subsidy_account_id': ref('account_fndia_subsidy')}"/>
+        </function>
+    </data>
 </odoo>
