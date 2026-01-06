@@ -31,9 +31,7 @@
         # Vues
         'views/account_move_views.xml',
         'views/res_config_settings_views.xml',
-
-        # Les totaux (incluant FNDIA et Timbre) sont affichés via tax_totals
-        # Pas besoin de template de rapport personnalisé
+        'views/report_invoice_inherit.xml',
     ],
     'installable': True,
     'application': False,
