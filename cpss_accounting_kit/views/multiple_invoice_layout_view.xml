@@ -37,6 +37,6 @@
         <field name="view_mode">form</field>
         <field name="target">new</field>
         <field name="res_model">multiple.invoice.layout</field>
-        <field name="view_id" ref="base_accounting_kit.multiple_invoice_layout_view_form"/>
+        <field name="view_id" ref="cpss_accounting_kit.multiple_invoice_layout_view_form"/>
     </record>
 </odoo>

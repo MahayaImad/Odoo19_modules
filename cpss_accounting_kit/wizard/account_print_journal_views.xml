@@ -4,7 +4,7 @@
     <record id="account_common_report_inherited" model="ir.ui.view">
         <field name="name">account.print.journal.view.form.inherit.base.accounting.kit</field>
         <field name="model">account.print.journal</field>
-        <field name="inherit_id" ref="base_accounting_kit.account_report_view_form"/>
+        <field name="inherit_id" ref="cpss_accounting_kit.account_report_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='target_move']" position="after">
                 <field name="amount_currency" groups="base.group_multi_currency"/>
@@ -27,6 +27,6 @@
               name="Journals Audit"
               sequence="9"
               action="action_account_print_journal_menu"
-              parent="base_accounting_kit.account_reports_audit"
-              groups="base_accounting_kit.group_account_chief,account.group_account_user"/>
+              parent="cpss_accounting_kit.account_reports_audit"
+              groups="cpss_accounting_kit.group_account_chief,account.group_account_user"/>
 </odoo>

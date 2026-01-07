@@ -79,7 +79,7 @@ class MultipleInvoiceLayout(models.TransientModel):
                 layout = self._get_layout_for_preview()
                 ir_ui_view = wizard.env['ir.ui.view']
                 wizard.preview = ir_ui_view._render_template(
-                    'base_accounting_kit.multiple_invoice_wizard_preview',
+                    'cpss_accounting_kit.multiple_invoice_wizard_preview',
                     {'company': wizard.company_id, 'preview_css': preview_css,
                      'layout': layout,
                      'mi_type': self.multiple_invoice_type,
@@ -87,7 +87,7 @@ class MultipleInvoiceLayout(models.TransientModel):
                      'body_txt_position': self.body_text_position,
                      'txt_align': self.text_align,
                      'mi': self.env.ref(
-                         'base_accounting_kit.multiple_invoice_sample_name')
+                         'cpss_accounting_kit.multiple_invoice_sample_name')
                      })
             else:
                 wizard.preview = False
@@ -139,16 +139,16 @@ class MultipleInvoiceLayout(models.TransientModel):
     def _get_layout_for_preview(self):
         """Returns the layout Preview for the accounting module"""
         if self.layout == 'web.external_layout_boxed':
-            new_layout = 'base_accounting_kit.boxed'
+            new_layout = 'cpss_accounting_kit.boxed'
 
         elif self.layout == 'web.external_layout_bold':
-            new_layout = 'base_accounting_kit.bold'
+            new_layout = 'cpss_accounting_kit.bold'
 
         elif self.layout == 'web.external_layout_striped':
-            new_layout = 'base_accounting_kit.striped'
+            new_layout = 'cpss_accounting_kit.striped'
 
         else:
-            new_layout = 'base_accounting_kit.standard'
+            new_layout = 'cpss_accounting_kit.standard'
 
         return new_layout
 

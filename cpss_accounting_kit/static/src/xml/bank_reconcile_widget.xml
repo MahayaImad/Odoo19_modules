@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <templates id="template" xml:space="preserve">
-    <t t-name="base_accounting_kit.bank_reconcile_widget_lines_widget">
+    <t t-name="cpss_accounting_kit.bank_reconcile_widget_lines_widget">
         <t t-set="data" t-value="getRenderValues()"/>
         <div class="o_list_renderer table-responsive">
             <table class="table table-sm position-relative mb-0 o_list_table_ungrouped table-striped o_bank_reconcile_lines_widget_line">
@@ -116,7 +116,7 @@
             </table>
         </div>
     </t>
-    <t t-name="base_accounting_kit.FormListView" owl="1">
+    <t t-name="cpss_accounting_kit.FormListView" owl="1">
         <t t-if="props.record.id">
             <View t-props="bankReconcileListViewProps"/>
         </t>

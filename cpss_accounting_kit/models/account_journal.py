@@ -58,10 +58,10 @@ class AccountJournal(models.Model):
         if self.type in ('bank', 'cash'):
             views = [
                 (self.env.ref(
-                    'base_accounting_kit.account_bank_statement_line_view_kanban').id,
+                    'cpss_accounting_kit.account_bank_statement_line_view_kanban').id,
                  'kanban'),
                 (self.env.ref(
-                    'base_accounting_kit.account_bank_statement_line_view_tree').id,
+                    'cpss_accounting_kit.account_bank_statement_line_view_tree').id,
                  'list'),  # Include tree view
             ]
             context = {
@@ -78,7 +78,7 @@ class AccountJournal(models.Model):
                 'context': context,
                 'search_view_id': [
                     self.env.ref(
-                        'base_accounting_kit.account_bank_statement_line_view_search').id,
+                        'cpss_accounting_kit.account_bank_statement_line_view_search').id,
                     'search'],
                 'view_mode': 'kanban,list' if kanban_first else 'list,kanban',
                 'views': views if kanban_first else views[::-1],

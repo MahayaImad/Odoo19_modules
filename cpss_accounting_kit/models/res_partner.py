@@ -245,7 +245,7 @@ class ResPartner(models.Model):
                 'currency': self.currency_id.symbol,
             }
             report = self.env['ir.actions.report'].sudo()._render_qweb_pdf(
-                'base_accounting_kit.res_partner_action', self, data=data)
+                'cpss_accounting_kit.res_partner_action', self, data=data)
             data_record = base64.b64encode(report[0])
             ir_values = {
                 'name': 'Statement Report',
@@ -301,7 +301,7 @@ class ResPartner(models.Model):
                 'balance': amount[0]['balance'],
                 'currency': self.currency_id.symbol,
             }
-            return self.env.ref('base_accounting_kit.res_partner_action'
+            return self.env.ref('cpss_accounting_kit.res_partner_action'
                                 ).report_action(self, data=data)
         else:
             raise ValidationError('There is no statement to print')

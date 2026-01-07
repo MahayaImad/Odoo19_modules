@@ -37,10 +37,10 @@
               name="Actions"
               sequence="500"
               parent="account.menu_finance_entries"
-              groups="base_accounting_kit.group_account_chief"/>
+              groups="cpss_accounting_kit.group_account_chief"/>
     <menuitem id="menu_lock_dates"
               name="Lock Dates"
               action="account_update_lock_date_act_window"
-              parent="base_accounting_kit.actions_menu"
-              groups="base_accounting_kit.group_account_chief"/>
+              parent="cpss_accounting_kit.actions_menu"
+              groups="cpss_accounting_kit.group_account_chief"/>
 </odoo>

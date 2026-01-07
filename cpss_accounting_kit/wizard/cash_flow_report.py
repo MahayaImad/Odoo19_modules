@@ -123,6 +123,6 @@ class AccountingReport(models.TransientModel):
              'account_report_id', 'enable_filter', 'label_filter',
              'target_move'])[0])
         return self.env.ref(
-            'base_accounting_kit.action_report_cash_flow').report_action(self,
+            'cpss_accounting_kit.action_report_cash_flow').report_action(self,
                                                                          data=data,
                                                                          config=False)

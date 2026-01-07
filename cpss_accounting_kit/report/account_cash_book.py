@@ -25,7 +25,7 @@ from odoo.exceptions import UserError
 
 
 class ReportCashBook(models.AbstractModel):
-    _name = 'report.base_accounting_kit.report_cash_book'
+    _name = 'report.cpss_accounting_kit.report_cash_book'
     _description = 'Cash Book Report'
 
     def _get_account_move_entry(self, accounts, init_balance, sortby, display_account):
