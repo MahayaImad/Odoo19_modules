@@ -5,8 +5,8 @@
         <field name="name">Statement Report</field>
         <field name="model">res.partner</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">base_accounting_kit.res_partner_statement_report_template</field>
-        <field name="report_file">base_accounting_kit.res_partner_statement_report_template</field>
+        <field name="report_name">cpss_accounting_kit.res_partner_statement_report_template</field>
+        <field name="report_file">cpss_accounting_kit.res_partner_statement_report_template</field>
         <field name="print_report_name">'Statement Report- %s' %(object.name)</field>
         <field name="binding_model_id" ref="model_res_partner"/>
         <field name="binding_type">report</field>

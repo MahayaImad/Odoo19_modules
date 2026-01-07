@@ -4,7 +4,7 @@
     <record id="account_report_balance_view" model="ir.ui.view">
         <field name="name">account.balance.report.view.form.inherit.base.accounting.kit</field>
         <field name="model">account.balance.report</field>
-        <field name="inherit_id" ref="base_accounting_kit.account_report_view_form"/>
+        <field name="inherit_id" ref="cpss_accounting_kit.account_report_view_form"/>
         <field name="arch" type="xml">
             <field name="journal_ids" position="replace"/>
             <xpath expr="//field[@name='target_move']" position="after">
@@ -28,5 +28,5 @@
               name="Trial Balance"
               sequence="7"
               action="action_account_balance_menu"
-              parent="base_accounting_kit.account_reports_audit"/>
+              parent="cpss_accounting_kit.account_reports_audit"/>
 </odoo>

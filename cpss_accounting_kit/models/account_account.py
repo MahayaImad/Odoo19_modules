@@ -30,7 +30,7 @@ class CashFlow(models.Model):
 
     def get_cash_flow_ids(self):
         """Returns a list of cashflows for the account"""
-        cash_flow_id = self.env.ref('base_accounting_kit.account_financial_report_cash_flow0')
+        cash_flow_id = self.env.ref('cpss_accounting_kit.account_financial_report_cash_flow0')
         if cash_flow_id:
             return [('parent_id.id', '=', cash_flow_id.id)]
 

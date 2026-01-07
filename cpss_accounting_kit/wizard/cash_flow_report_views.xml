@@ -4,7 +4,7 @@
     <record id="cash_flow_report_view" model="ir.ui.view">
         <field name="name">cash.flow.report.view.form.inherit.base.accounting.kit</field>
         <field name="model">cash.flow.report</field>
-        <field name="inherit_id" ref="base_accounting_kit.account_report_view_form"/>
+        <field name="inherit_id" ref="cpss_accounting_kit.account_report_view_form"/>
         <field name="arch" type="xml">
             <field name="company_id" position="replace"/>
             <field name="target_move" position="before">
@@ -43,12 +43,12 @@
         <field name="view_id" ref="cash_flow_report_view"/>
         <field name="target">new</field>
         <field name="context"
-               eval="{'default_account_report_id':ref('base_accounting_kit.account_financial_report_cash_flow0')}"/>
+               eval="{'default_account_report_id':ref('cpss_accounting_kit.account_financial_report_cash_flow0')}"/>
     </record>
 <!--Menu Cash Flow Statement-->
     <menuitem id="menu_account_cash_flow_report"
               name="Cash Flow Statement"
               sequence="5"
               action="action_cash_flow_report"
-              parent="base_accounting_kit.account_reports_generic_statements"/>
+              parent="cpss_accounting_kit.account_reports_generic_statements"/>
 </odoo>

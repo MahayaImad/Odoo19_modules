@@ -84,5 +84,5 @@
 <!--  FollowUp MenuItem  -->
     <menuitem action="action_account_followup_definition_form" id="account_followup_menu"
               parent="account.account_account_menu" name="Follow-up Levels"
-              groups="base_accounting_kit.group_account_chief" sequence="2"/>
+              groups="cpss_accounting_kit.group_account_chief" sequence="2"/>
 </odoo>

@@ -44,7 +44,7 @@
         <field name="model">account.bank.statement.line</field>
         <field name="arch" type="xml">
             <kanban js_class="custom_kanban"
-                    on_create="base_accounting_kit.action_bank_statement_line_form_bank_reconcile_widget">
+                    on_create="cpss_accounting_kit.action_bank_statement_line_form_bank_reconcile_widget">
                 <field name="id" invisible="1"/>
                 <field name="state" invisible="1"/>
                 <field name="statement_complete" invisible="1"/>
@@ -71,7 +71,7 @@
                                 <a role="button"
                                    class="btn btn-secondary btn-sm statement"
                                    tabindex="-1" type="action"
-                                   name="%(base_accounting_kit.action_bank_statement_create_form_bank_reconcile_widget)d">
+                                   name="%(cpss_accounting_kit.action_bank_statement_create_form_bank_reconcile_widget)d">
                                     Statement
                                 </a>
                             </div>

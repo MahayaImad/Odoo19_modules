@@ -53,5 +53,5 @@ class AccountBalanceReport(models.TransientModel):
         data = self.pre_print_report(data)
         records = self.env[data['model']].browse(data.get('ids', []))
         return self.env.ref(
-            'base_accounting_kit.action_report_trial_balance').report_action(
+            'cpss_accounting_kit.action_report_trial_balance').report_action(
             records, data=data)

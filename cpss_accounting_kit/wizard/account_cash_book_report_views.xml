@@ -38,5 +38,5 @@
     </record>
 <!--Menu Cash Book-->
     <menuitem id="account_cash_book_menu" name="Cash Book" action="action_account_cash_book_view"
-              parent="base_accounting_kit.account_reports_daily_reports"/>
+              parent="cpss_accounting_kit.account_reports_daily_reports"/>
 </odoo>

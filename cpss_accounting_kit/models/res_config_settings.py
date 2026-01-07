@@ -60,5 +60,5 @@ class ResConfigSettings(models.TransientModel):
     def get_view_id(self):
         """Retrieve the ID of the view for bank reconciliation widget form."""
         view_id = self.env['ir.model.data']._xmlid_to_res_id(
-            'base_accounting_kit.view_bank_reconcile_widget_form')
+            'cpss_accounting_kit.view_bank_reconcile_widget_form')
         return view_id

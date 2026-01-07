@@ -65,7 +65,7 @@ class ResCompany(models.Model):
                     'type': 'ir.actions.act_window',
                     'domain': [('id', 'in', unreconciled_statement_lines.ids)],
                     'views': [[self.env.ref(
-                        'base_accounting_kit.account_bank_statement_line_view_kanban').id,
+                        'cpss_accounting_kit.account_bank_statement_line_view_kanban').id,
                                'kanban']]
                 }
                 raise RedirectWarning(error_msg, action_error, _('Show Unreconciled Bank Statement Lines'))
