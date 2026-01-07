@@ -46,7 +46,7 @@ class AccountingReport(models.TransientModel):
                                     ], string='Target Moves', required=True, default='posted')
     journal_ids = fields.Many2many(
         comodel_name='account.journal',
-        string='Journals',
+        string='Selected Journals',
         required=True,
         default=lambda self: self.env['account.journal'].search([('company_id', '=', self.company_id.id)]),
         domain="[('company_id', '=', company_id)]",
