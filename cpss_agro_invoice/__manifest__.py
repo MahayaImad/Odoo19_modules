@@ -23,6 +23,7 @@
         'cpss_product_categories',  # Pour accéder au champ prix_soutien
         'l10n_dz',  # Pour le timbre fiscal algérien
         'l10n_dz_on_timbre_fiscal',  # Pour réutiliser la logique du timbre fiscal
+        'cpss_account_publication',
     ],
     'data': [
         # Données

@@ -137,19 +137,13 @@ class AccountMove(models.Model):
                     'message': _('La subvention FNDIA est disponible uniquement pour les factures client.')
                 }
             }
-
-        # Forcer le recalcul des montants FNDIA sur chaque ligne
         for line in self.invoice_line_ids:
             line._compute_fndia_subsidy_amount()
 
-        # Forcer le recalcul des totaux FNDIA
         self._compute_fndia_amounts()
-
-        # Forcer le recalcul du timbre et amount_total
         self._compute_amount()
-
-        # Forcer le recalcul des tax_totals (pour afficher/masquer FNDIA dans les totaux)
         self._compute_tax_totals()
+        self.action_post(self)
 
     def _get_fndia_account(self):
         """Retourne le compte comptable pour la subvention FNDIA"""
@@ -195,6 +189,10 @@ class AccountMove(models.Model):
             if move.fndia_subsidized and move.move_type == 'out_invoice' and move.fndia_subsidy_total > 0:
                 # Récupérer le compte FNDIA
                 subsidy_account = move._get_fndia_account()
+                _logger.info("=" * 80)
+                _logger.info(subsidy_account)
+                _logger.info("=" * 80)
+
 
                 if subsidy_account:
                     # Supprimer l'ancienne ligne FNDIA si elle existe
@@ -321,8 +319,7 @@ class AccountMove(models.Model):
         Surcharge pour créer/supprimer les écritures FNDIA AVANT validation
         et recalculer le timbre fiscal
         """
-        import logging
-        _logger = logging.getLogger(__name__)
+
 
         # Gérer les écritures FNDIA AVANT validation
         for move in self:
@@ -338,9 +335,6 @@ class AccountMove(models.Model):
             # CAS 1 : FNDIA décoché → Supprimer les lignes FNDIA existantes
             if not move.fndia_subsidized:
                 if fndia_lines:
-                    _logger.info("█" * 80)
-                    _logger.info(f"FNDIA action_post - Suppression écritures FNDIA (fndia_subsidized=False)")
-                    _logger.info(f"  Nombre de lignes FNDIA à supprimer: {len(fndia_lines)}")
 
                     # Récupérer la ligne client
                     partner_line = move.line_ids.filtered(
@@ -349,10 +343,9 @@ class AccountMove(models.Model):
 
                     if partner_line:
                         sign = move.direction_sign
+
                         # Montant total FNDIA à remettre sur le compte client
                         fndia_total = sum(fndia_lines.mapped('debit')) - sum(fndia_lines.mapped('credit'))
-
-                        _logger.info(f"  Montant FNDIA à remettre sur compte client: {fndia_total}")
 
                         # Supprimer les lignes FNDIA et augmenter le compte client
                         move.line_ids = [
@@ -361,17 +354,14 @@ class AccountMove(models.Model):
                                 'debit': partner_line.debit + fndia_total if -sign > 0 else partner_line.debit,
                                 'credit': partner_line.credit if -sign > 0 else partner_line.credit + fndia_total,
                             }),
+
                             # SUPPRIMER les lignes FNDIA
                             *[(2, line.id) for line in fndia_lines]
                         ]
-
-                        _logger.info(f"  ✓ Lignes FNDIA supprimées")
                         move._compute_invoice_line_ids_visible()
 
             # CAS 2 : FNDIA coché → Créer/Mettre à jour les lignes FNDIA
             elif move.fndia_subsidy_total > 0:
-                _logger.info("█" * 80)
-                _logger.info(f"FNDIA action_post - Création écritures FNDIA AVANT validation")
 
                 if not fndia_account:
                     raise UserError(_(
@@ -379,28 +369,18 @@ class AccountMove(models.Model):
                         "Veuillez le configurer dans Facturation > Configuration > Paramètres."
                     ))
 
-                _logger.info(f"  Compte FNDIA: {fndia_account.code} - {fndia_account.name}")
-                _logger.info(f"  Type compte FNDIA: {fndia_account.account_type}")
-                _logger.info(f"  Montant FNDIA: {move.fndia_subsidy_total}")
-
                 # DIAGNOSTIC : Afficher toutes les lignes receivable AVANT création FNDIA
                 receivable_lines_before = move.line_ids.filtered(
                     lambda l: l.account_id.account_type == 'asset_receivable'
                 )
-                _logger.info(f"  Lignes receivable AVANT création FNDIA: {len(receivable_lines_before)}")
-                for line in receivable_lines_before:
-                    _logger.info(f"    - {line.account_id.code} ({line.account_id.account_type}): debit={line.debit}, credit={line.credit}")
 
                 if not fndia_lines:
-                    _logger.info("  Création ligne FNDIA AVANT validation...")
-
                     sign = move.direction_sign
                     partner_line = move.line_ids.filtered(
                         lambda l: l.account_id.account_type == 'asset_receivable'
                     )
 
                     if partner_line:
-                        _logger.info(f"  Ligne client AVANT - debit: {partner_line.debit}, credit: {partner_line.credit}")
 
                         # Modifier directement line_ids (avant validation, c'est possible)
                         move.line_ids = [
@@ -420,63 +400,23 @@ class AccountMove(models.Model):
                             })
                         ]
 
-                        _logger.info(f"  ✓ Ligne FNDIA créée avec isFNDIA=True")
-
-                        # FORCER le recalcul de invoice_line_ids_visible
-                        move._compute_invoice_line_ids_visible()
-                        _logger.info(f"  ✓ invoice_line_ids_visible recalculé")
-
-                        # DIAGNOSTIC : Vérifier la ligne FNDIA créée
-                        fndia_line_created = move.line_ids.filtered(lambda l: l.isFNDIA)
-                        if fndia_line_created:
-                            _logger.info(f"  ✓ Ligne FNDIA trouvée après création:")
-                            _logger.info(f"    - name: {fndia_line_created.name}")
-                            _logger.info(f"    - isFNDIA: {fndia_line_created.isFNDIA}")
-                            _logger.info(f"    - account_id: {fndia_line_created.account_id.code}")
-                        else:
-                            _logger.error(f"  ✗ ERREUR: Ligne FNDIA non trouvée après création!")
-
-                        # DIAGNOSTIC : Afficher toutes les lignes receivable APRÈS création FNDIA
-                        receivable_lines_after = move.line_ids.filtered(
-                            lambda l: l.account_id.account_type == 'asset_receivable'
-                        )
-                        _logger.info(f"  Lignes receivable APRÈS création FNDIA: {len(receivable_lines_after)}")
-                        for line in receivable_lines_after:
-                            _logger.info(f"    - {line.account_id.code} ({line.account_id.account_type}): debit={line.debit}, credit={line.credit}")
-
-                        _logger.info("  Appel super().action_post() va se faire maintenant...")
-
         # Recalculer le timbre pour les factures FNDIA avant validation
         for move in self:
             if move.fndia_subsidized and move.move_type == 'out_invoice' and move.fndia_subsidy_total > 0:
-                _logger.info("█" * 80)
-                _logger.info(f"FNDIA action_post DÉBUT - Facture {move.name}")
-                _logger.info(f"  AVANT recalcul - amount_untaxed: {move.amount_untaxed}")
-                _logger.info(f"  AVANT recalcul - amount_tax: {move.amount_tax}")
-                _logger.info(f"  AVANT recalcul - amount_total: {move.amount_total}")
-                _logger.info(f"  AVANT recalcul - timbre: {move.timbre}")
-                _logger.info(f"  AVANT recalcul - fndia_subsidy_total: {move.fndia_subsidy_total}")
 
                 if move.invoice_payment_term_id and move.invoice_payment_term_id.payment_type == 'cash':
-                    _logger.info(f"  Type paiement: {move.invoice_payment_term_id.payment_type} ✓")
 
                     # Vérifier que StampCalculator est disponible
                     if not STAMP_CALCULATOR_AVAILABLE or StampCalculator is None:
-                        _logger.error("  ERREUR: StampCalculator n'est pas disponible")
+                        continue
                     else:
                         # Recalculer la base du timbre
                         base_timbre_original = move.amount_untaxed + move.amount_tax
                         base_timbre = move.amount_untaxed + move.amount_tax - move.fndia_subsidy_total
 
-                        _logger.info(f"  CALCUL base_timbre: {move.amount_untaxed} + {move.amount_tax} - {move.fndia_subsidy_total} = {base_timbre}")
-
                         # Calculer le nouveau timbre
                         c_timbre = StampCalculator(self.env).calculate(base_timbre)
                         sign = move.direction_sign
-
-                        _logger.info(f"  StampCalculator.calculate({base_timbre}) retourne:")
-                        _logger.info(f"    - timbre: {c_timbre.get('timbre')}")
-                        _logger.info(f"    - amount_timbre: {c_timbre.get('amount_timbre')}")
 
                         old_timbre = move.timbre
                         old_amount_total = move.amount_total
@@ -490,54 +430,12 @@ class AccountMove(models.Model):
                         move.amount_residual = c_timbre['amount_timbre']
                         move.amount_residual_signed = -sign * move.amount_residual
 
-                        _logger.info(f"  MISE À JOUR:")
-                        _logger.info(f"    timbre: {old_timbre} → {move.timbre}")
-                        _logger.info(f"    amount_total: {old_amount_total} → {move.amount_total}")
                 else:
-                    _logger.warning(f"  Type paiement NON comptant ou None")
+                    continue
 
-                _logger.info("FNDIA action_post FIN - Appel super()")
-                _logger.info("█" * 80)
 
         # Appeler le super pour créer les écritures avec le bon montant de timbre
         result = super().action_post()
-
-        # Vérifier les écritures créées (pour logging)
-        for move in self:
-            if move.fndia_subsidized and move.move_type == 'out_invoice' and move.fndia_subsidy_total > 0:
-                _logger.info("█" * 80)
-                _logger.info(f"FNDIA action_post APRÈS validation - Vérification")
-
-                # Afficher les écritures finales
-                partner_line = move.line_ids.filtered(
-                    lambda l: l.account_id.account_type == 'asset_receivable'
-                )
-                _logger.info(f"  Ligne client FINAL:")
-                _logger.info(f"    - debit: {partner_line.debit}")
-                _logger.info(f"    - credit: {partner_line.credit}")
-
-                fndia_account = move.company_id.fndia_subsidy_account_id
-                if fndia_account:
-                    fndia_line = move.line_ids.filtered(
-                        lambda l: l.account_id.id == fndia_account.id
-                    )
-                    if fndia_line:
-                        _logger.info(f"  Ligne FNDIA FINAL:")
-                        _logger.info(f"    - debit: {fndia_line.debit}")
-                        _logger.info(f"    - credit: {fndia_line.credit}")
-
-                if STAMP_CALCULATOR_AVAILABLE and StampCalculator is not None:
-                    try:
-                        timbre_account_id = StampCalculator(self.env).GetStampAccount(move.move_type)
-                        timbre_line = move.line_ids.filtered(lambda l: l.account_id.id == int(timbre_account_id))
-                        if timbre_line:
-                            _logger.info(f"  Ligne timbre FINAL:")
-                            _logger.info(f"    - debit: {timbre_line.debit}")
-                            _logger.info(f"    - credit: {timbre_line.credit}")
-                    except Exception as e:
-                        _logger.error(f"  Erreur timbre: {e}")
-
-                _logger.info("█" * 80)
 
         return result
 
