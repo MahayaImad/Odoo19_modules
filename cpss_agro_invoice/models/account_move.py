@@ -155,18 +155,127 @@ class AccountMove(models.Model):
         """
         Surcharge pour gérer le changement de fndia_subsidized sur une facture validée
         """
+        _logger.info("🔵" * 80)
+        _logger.info(f"FNDIA write() APPELÉE - vals: {vals}")
+        _logger.info(f"  Nombre de factures dans self: {len(self)}")
+
         # Détecter si fndia_subsidized change
         if 'fndia_subsidized' in vals:
+            _logger.info(f"  ✓ 'fndia_subsidized' détecté dans vals = {vals['fndia_subsidized']}")
+
             for move in self:
+                _logger.info(f"  Facture: {move.name}")
+                _logger.info(f"    - state: {move.state}")
+                _logger.info(f"    - move_type: {move.move_type}")
+                _logger.info(f"    - fndia_subsidized actuel: {move.fndia_subsidized}")
+                _logger.info(f"    - fndia_subsidized nouveau: {vals['fndia_subsidized']}")
+
                 # Si facture validée et changement FNDIA
                 if move.state == 'posted' and move.move_type == 'out_invoice':
+                    _logger.info(f"    ✓ Facture validée de type out_invoice")
+
                     old_value = move.fndia_subsidized
                     new_value = vals['fndia_subsidized']
 
                     # Si on décoche FNDIA sur facture validée
                     if old_value and not new_value:
                         _logger.info("=" * 80)
-                        _logger.info(f"FNDIA write() - Suppression lignes FNDIA sur facture validée {move.name}")
+                        _logger.info(f"FNDIA write() - DÉCOCHER FNDIA sur facture validée {move.name}")
+                        _logger.info(f"  Transition: True → False")
+
+                        # DIAGNOSTIC : Afficher TOUTES les lignes de la facture
+                        _logger.info(f"  AVANT modification - Toutes les lignes de la facture:")
+                        for idx, line in enumerate(move.line_ids, 1):
+                            _logger.info(f"    Ligne {idx}: {line.name[:40] if line.name else 'Sans nom'}")
+                            _logger.info(f"      - account: {line.account_id.code} ({line.account_id.account_type})")
+                            _logger.info(f"      - debit: {line.debit}, credit: {line.credit}")
+                            _logger.info(f"      - isFNDIA: {line.isFNDIA}")
+                            _logger.info(f"      - ID: {line.id}")
+
+                        # Chercher lignes FNDIA existantes
+                        fndia_lines = move.line_ids.filtered(lambda l: l.isFNDIA)
+                        _logger.info(f"  Lignes FNDIA trouvées: {len(fndia_lines)}")
+
+                        if fndia_lines:
+                            _logger.info(f"  ✓ Trouvé {len(fndia_lines)} lignes FNDIA à supprimer")
+                            for fndia_line in fndia_lines:
+                                _logger.info(f"    - ID {fndia_line.id}: {fndia_line.name}, debit={fndia_line.debit}, credit={fndia_line.credit}")
+
+                            # Récupérer la ligne client
+                            partner_line = move.line_ids.filtered(
+                                lambda l: l.account_id.account_type == 'asset_receivable'
+                            )
+
+                            _logger.info(f"  Lignes receivable trouvées: {len(partner_line)}")
+
+                            if partner_line:
+                                try:
+                                    partner_line.ensure_one()  # S'assurer qu'il n'y a qu'une seule ligne
+                                    _logger.info(f"  ✓ Une seule ligne client trouvée: {partner_line.account_id.code}")
+                                except ValueError as e:
+                                    _logger.error(f"  ✗ ERREUR: Multiple lignes receivable trouvées!")
+                                    for pl in partner_line:
+                                        _logger.error(f"    - {pl.account_id.code}: debit={pl.debit}, credit={pl.credit}")
+                                    raise
+
+                                sign = move.direction_sign
+                                _logger.info(f"  direction_sign: {sign}")
+
+                                # Montant FNDIA à remettre sur compte client
+                                fndia_total = sum(fndia_lines.mapped('debit')) - sum(fndia_lines.mapped('credit'))
+
+                                _logger.info(f"  Montant FNDIA à remettre: {fndia_total}")
+                                _logger.info(f"  Ligne client AVANT suppression:")
+                                _logger.info(f"    - debit: {partner_line.debit}")
+                                _logger.info(f"    - credit: {partner_line.credit}")
+
+                                # Supprimer les lignes FNDIA
+                                _logger.info(f"  Suppression des lignes FNDIA avec unlink()...")
+                                fndia_lines.unlink()
+                                _logger.info(f"  ✓ unlink() exécuté")
+
+                                # Augmenter le compte client
+                                new_debit = partner_line.debit + fndia_total if -sign > 0 else partner_line.debit
+                                new_credit = partner_line.credit if -sign > 0 else partner_line.credit + fndia_total
+
+                                _logger.info(f"  Calcul nouveaux montants:")
+                                _logger.info(f"    - Nouveau debit: {new_debit} (ancien: {partner_line.debit})")
+                                _logger.info(f"    - Nouveau credit: {new_credit} (ancien: {partner_line.credit})")
+
+                                partner_line.write({
+                                    'debit': new_debit,
+                                    'credit': new_credit,
+                                })
+                                _logger.info(f"  ✓ partner_line.write() exécuté")
+
+                                _logger.info(f"  Ligne client APRÈS modification:")
+                                _logger.info(f"    - debit: {partner_line.debit}")
+                                _logger.info(f"    - credit: {partner_line.credit}")
+
+                                # DIAGNOSTIC : Afficher TOUTES les lignes après suppression
+                                _logger.info(f"  APRÈS modification - Toutes les lignes de la facture:")
+                                for idx, line in enumerate(move.line_ids, 1):
+                                    _logger.info(f"    Ligne {idx}: {line.name[:40] if line.name else 'Sans nom'}")
+                                    _logger.info(f"      - account: {line.account_id.code}")
+                                    _logger.info(f"      - debit: {line.debit}, credit: {line.credit}")
+                                    _logger.info(f"      - isFNDIA: {line.isFNDIA}")
+
+                                # Recalculer invoice_line_ids_visible
+                                move._compute_invoice_line_ids_visible()
+                                _logger.info(f"  ✓ invoice_line_ids_visible recalculé")
+
+                        else:
+                            _logger.warning(f"  ✗ AUCUNE ligne FNDIA trouvée!")
+                            _logger.warning(f"  Vérification: Toutes les lignes avec isFNDIA:")
+                            for line in move.line_ids:
+                                if hasattr(line, 'isFNDIA'):
+                                    _logger.warning(f"    - {line.name}: isFNDIA={line.isFNDIA}")
+
+                    # Si on coche FNDIA sur facture validée
+                    elif not old_value and new_value:
+                        _logger.info("=" * 80)
+                        _logger.info(f"FNDIA write() - COCHER FNDIA sur facture validée {move.name}")
+                        _logger.info(f"  Transition: False → True")
 
                         # Chercher lignes FNDIA existantes
                         fndia_lines = move.line_ids.filtered(lambda l: l.isFNDIA)
@@ -264,9 +373,17 @@ class AccountMove(models.Model):
                                 move._compute_invoice_line_ids_visible()
 
                         # Ne pas appeler super().write() à la fin car déjà fait
+                        _logger.info(f"  Retour anticipé (super().write() déjà appelé)")
                         return True
+                else:
+                    _logger.info(f"    ⚠ Facture NON validée (state={move.state}) OU type incorrect (move_type={move.move_type})")
+        else:
+            _logger.info(f"  ⚠ 'fndia_subsidized' N'EST PAS dans vals")
 
-        return super().write(vals)
+        _logger.info(f"🔵 Fin write() - Appel super().write(vals)")
+        result = super().write(vals)
+        _logger.info(f"🔵 super().write() terminé avec succès")
+        return result
 
     def _get_fndia_account(self):
         """Retourne le compte comptable pour la subvention FNDIA"""
