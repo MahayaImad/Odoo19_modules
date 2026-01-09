@@ -138,6 +138,19 @@ class AccountMove(models.Model):
                 }
             }
 
+        # Forcer le recalcul des montants FNDIA sur chaque ligne
+        for line in self.invoice_line_ids:
+            line._compute_fndia_subsidy_amount()
+
+        # Forcer le recalcul des totaux FNDIA
+        self._compute_fndia_amounts()
+
+        # Forcer le recalcul du timbre et amount_total
+        self._compute_amount()
+
+        # Forcer le recalcul des tax_totals (pour afficher/masquer FNDIA dans les totaux)
+        self._compute_tax_totals()
+
     def _get_fndia_account(self):
         """Retourne le compte comptable pour la subvention FNDIA"""
         self.ensure_one()
