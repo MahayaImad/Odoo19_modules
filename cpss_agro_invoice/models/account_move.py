@@ -140,10 +140,133 @@ class AccountMove(models.Model):
         for line in self.invoice_line_ids:
             line._compute_fndia_subsidy_amount()
 
+        # Forcer le recalcul des totaux FNDIA (première passe)
         self._compute_fndia_amounts()
         self._compute_amount()
+
+        # Recalculer les totaux FNDIA (deuxième passe avec amount_total à jour)
+        self._compute_fndia_amounts()
+
+        # Forcer le recalcul des tax_totals (pour afficher/masquer FNDIA dans les totaux)
         self._compute_tax_totals()
         self.action_post(self)
+
+    def write(self, vals):
+        """
+        Surcharge pour gérer le changement de fndia_subsidized sur une facture validée
+        """
+        # Détecter si fndia_subsidized change
+        if 'fndia_subsidized' in vals:
+            for move in self:
+                # Si facture validée et changement FNDIA
+                if move.state == 'posted' and move.move_type == 'out_invoice':
+                    old_value = move.fndia_subsidized
+                    new_value = vals['fndia_subsidized']
+
+                    # Si on décoche FNDIA sur facture validée
+                    if old_value and not new_value:
+                        _logger.info("=" * 80)
+                        _logger.info(f"FNDIA write() - Suppression lignes FNDIA sur facture validée {move.name}")
+
+                        # Chercher lignes FNDIA existantes
+                        fndia_lines = move.line_ids.filtered(lambda l: l.isFNDIA)
+
+                        if fndia_lines:
+                            _logger.info(f"  Trouvé {len(fndia_lines)} lignes FNDIA à supprimer")
+
+                            # Récupérer la ligne client
+                            partner_line = move.line_ids.filtered(
+                                lambda l: l.account_id.account_type == 'asset_receivable'
+                            )
+
+                            if partner_line:
+                                partner_line.ensure_one()  # S'assurer qu'il n'y a qu'une seule ligne
+                                sign = move.direction_sign
+                                # Montant FNDIA à remettre sur compte client
+                                fndia_total = sum(fndia_lines.mapped('debit')) - sum(fndia_lines.mapped('credit'))
+
+                                _logger.info(f"  Montant FNDIA à remettre: {fndia_total}")
+                                _logger.info(f"  Ligne client avant: debit={partner_line.debit}, credit={partner_line.credit}")
+
+                                # Supprimer les lignes FNDIA
+                                fndia_lines.unlink()
+
+                                # Augmenter le compte client
+                                partner_line.write({
+                                    'debit': partner_line.debit + fndia_total if -sign > 0 else partner_line.debit,
+                                    'credit': partner_line.credit if -sign > 0 else partner_line.credit + fndia_total,
+                                })
+
+                                _logger.info(f"  Ligne client après: debit={partner_line.debit}, credit={partner_line.credit}")
+                                _logger.info("  ✓ Lignes FNDIA supprimées")
+
+                                # Recalculer invoice_line_ids_visible
+                                move._compute_invoice_line_ids_visible()
+
+                    # Si on coche FNDIA sur facture validée
+                    elif not old_value and new_value:
+                        _logger.info("=" * 80)
+                        _logger.info(f"FNDIA write() - Création lignes FNDIA sur facture validée {move.name}")
+
+                        # Appeler d'abord super().write() pour que fndia_subsidized soit mis à jour
+                        super(AccountMove, move).write(vals)
+
+                        # Recalculer les montants FNDIA
+                        for line in move.invoice_line_ids:
+                            line._compute_fndia_subsidy_amount()
+                        move._compute_fndia_amounts()
+                        move._compute_amount()
+
+                        # Créer les lignes FNDIA si montant > 0
+                        if move.fndia_subsidy_total > 0:
+                            fndia_account = move.company_id.fndia_subsidy_account_id
+
+                            if not fndia_account:
+                                raise UserError(_(
+                                    "Le compte de subvention FNDIA n'est pas configuré.\n"
+                                    "Veuillez le configurer dans Facturation > Configuration > Paramètres."
+                                ))
+
+                            _logger.info(f"  Montant FNDIA: {move.fndia_subsidy_total}")
+
+                            # Récupérer la ligne client
+                            partner_line = move.line_ids.filtered(
+                                lambda l: l.account_id.account_type == 'asset_receivable'
+                            )
+
+                            if partner_line:
+                                partner_line.ensure_one()  # S'assurer qu'il n'y a qu'une seule ligne
+                                sign = move.direction_sign
+
+                                _logger.info(f"  Ligne client avant: debit={partner_line.debit}, credit={partner_line.credit}")
+
+                                # Réduire le compte client
+                                partner_line.write({
+                                    'debit': partner_line.debit - move.fndia_subsidy_total if -sign > 0 else partner_line.debit,
+                                    'credit': partner_line.credit if -sign > 0 else partner_line.credit - move.fndia_subsidy_total,
+                                })
+
+                                # Créer la ligne FNDIA
+                                self.env['account.move.line'].create({
+                                    'name': 'Subvention FNDIA',
+                                    'move_id': move.id,
+                                    'account_id': fndia_account.id,
+                                    'debit': move.fndia_subsidy_total if -sign > 0 else 0.0,
+                                    'credit': 0.0 if -sign > 0 else move.fndia_subsidy_total,
+                                    'partner_id': move.partner_id.id,
+                                    'isFNDIA': True,
+                                })
+
+                                _logger.info(f"  Ligne client après: debit={partner_line.debit}, credit={partner_line.credit}")
+                                _logger.info("  ✓ Ligne FNDIA créée")
+
+                                # Recalculer invoice_line_ids_visible
+                                move._compute_invoice_line_ids_visible()
+
+                        # Ne pas appeler super().write() à la fin car déjà fait
+                        return True
+
+        return super().write(vals)
 
     def _get_fndia_account(self):
         """Retourne le compte comptable pour la subvention FNDIA"""
