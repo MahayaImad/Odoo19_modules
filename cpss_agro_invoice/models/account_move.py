@@ -269,15 +269,22 @@ class AccountMove(models.Model):
                         _logger.info(f"FNDIA write() - Création lignes FNDIA sur facture validée {move.name}")
 
                         # Appeler d'abord super().write() pour que fndia_subsidized soit mis à jour
+                        _logger.info(f"  ⚙️ Appel super().write(vals) sur move...")
                         super(AccountMove, move).write(vals)
+                        _logger.info(f"  ✓ super().write(vals) terminé")
+                        _logger.info(f"  move.fndia_subsidized après super: {move.fndia_subsidized}")
 
                         # Recalculer les montants FNDIA
+                        _logger.info(f"  ⚙️ Recalcul des montants FNDIA...")
                         for line in move.invoice_line_ids:
                             line._compute_fndia_subsidy_amount()
                         move._compute_fndia_amounts()
                         move._compute_amount()
+                        _logger.info(f"  ✓ Recalcul terminé")
+                        _logger.info(f"  move.fndia_subsidy_total = {move.fndia_subsidy_total}")
 
                         # Créer les lignes FNDIA si montant > 0
+                        _logger.info(f"  🔍 Vérification: fndia_subsidy_total > 0 ? {move.fndia_subsidy_total} > 0 = {move.fndia_subsidy_total > 0}")
                         if move.fndia_subsidy_total > 0:
                             fndia_account = move.company_id.fndia_subsidy_account_id
 
@@ -322,9 +329,11 @@ class AccountMove(models.Model):
 
                                 # Recalculer invoice_line_ids_visible
                                 move._compute_invoice_line_ids_visible()
+                        else:
+                            _logger.warning(f"  ⚠️ fndia_subsidy_total <= 0, aucune ligne FNDIA créée")
 
                         # Ne pas appeler super().write() à la fin car déjà fait
-                        _logger.info(f"  Retour anticipé (super().write() déjà appelé)")
+                        _logger.info(f"  ⏎ Retour anticipé (super().write() déjà appelé)")
                         return True
                 else:
                     _logger.info(f"    ⚠ Facture NON validée (state={move.state}) OU type incorrect (move_type={move.move_type})")
