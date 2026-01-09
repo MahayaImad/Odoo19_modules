@@ -10,6 +10,7 @@
             <xpath expr="//field[@name='partner_id']" position="after">
                 <field name="fndia_subsidized"
                        invisible="move_type != 'out_invoice'"
+                       readonly="publication_state != 'published'"
                        widget="boolean_toggle"/>
             </xpath>
 

@@ -55,7 +55,7 @@ class AccountMove(models.Model):
 
     fndia_subsidized = fields.Boolean(
         string="Subventionné FNDIA",
-        default=lambda self: self._get_default_fndia_subsidized(),
+        default=False,
         tracking=True,
         help="Si activé, la subvention FNDIA sera calculée et enregistrée dans un compte séparé"
     )
@@ -106,13 +106,6 @@ class AccountMove(models.Model):
 
             _logger.info(f"  Nombre lignes APRÈS filtrage (invoice_line_ids_visible): {len(move.invoice_line_ids_visible)}")
             _logger.info("=" * 80)
-
-    @api.model
-    def _get_default_fndia_subsidized(self):
-        """Active FNDIA par défaut pour les factures de vente uniquement"""
-        # Si on est dans un contexte de création avec move_type défini
-        move_type = self.env.context.get('default_move_type')
-        return move_type == 'out_invoice'
 
     @api.depends('invoice_line_ids.fndia_subsidy_amount', 'amount_total', 'fndia_subsidized')
     def _compute_fndia_amounts(self):
