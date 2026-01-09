@@ -8,13 +8,9 @@
         <field name="arch" type="xml">
             <!-- Ajouter le champ "Subventionné FNDIA" après le partenaire -->
             <xpath expr="//field[@name='partner_id']" position="after">
-                <group col="2" invisible="move_type != 'out_invoice' or publication_state != 'published'">
-                    <label for="fndia_subsidized"
-                           string="Subventionné FNDIA"/>
-                    <field name="fndia_subsidized"
-                           widget="boolean_toggle"
-                           nolabel="1"/>
-                </group>
+                <field name="fndia_subsidized"
+                       invisible="move_type != 'out_invoice'"
+                       widget="boolean_toggle"/>
             </xpath>
 
             <!-- Les totaux FNDIA sont automatiquement affichés via _compute_tax_totals -->
