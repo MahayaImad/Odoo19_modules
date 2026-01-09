@@ -146,8 +146,10 @@ class AccountMove(models.Model):
         self._compute_amount()
         self._compute_tax_totals()
 
-        # Note: Les écritures comptables (line_ids) seront créées/modifiées automatiquement
-        # lors de la validation (action_post) ou par _recompute_dynamic_lines()
+        # Si la facture est déjà validée, mettre à jour les écritures comptables immédiatement
+        if self.state == 'posted':
+            self._update_fndia_journal_entries()
+        # Sinon, les écritures seront créées lors de la validation (action_post) ou par _recompute_dynamic_lines()
 
     def _get_fndia_account(self):
         """Retourne le compte comptable pour la subvention FNDIA"""
@@ -178,6 +180,89 @@ class AccountMove(models.Model):
             'credit': self.fndia_subsidy_total if self.move_type == 'out_refund' else 0.0,
             'isFNDIA': True,
         }
+
+    def _update_fndia_journal_entries(self):
+        """
+        Met à jour les écritures comptables FNDIA pour les factures DÉJÀ VALIDÉES
+        Cette méthode est appelée depuis _onchange_fndia_subsidized quand la facture est en état 'posted'
+        """
+        self.ensure_one()
+
+        # Ne traiter que les factures validées de type 'out_invoice'
+        if self.state != 'posted' or self.move_type != 'out_invoice':
+            return
+
+        # Récupérer le compte FNDIA
+        fndia_account = self.company_id.fndia_subsidy_account_id
+
+        # Chercher les lignes FNDIA existantes
+        if fndia_account:
+            fndia_lines = self.line_ids.filtered(
+                lambda l: l.isFNDIA and l.account_id == fndia_account
+            )
+        else:
+            fndia_lines = self.line_ids.filtered(lambda l: l.isFNDIA)
+
+        # Récupérer la ligne client (receivable)
+        partner_line = self.line_ids.filtered(
+            lambda l: l.account_id.account_type == 'asset_receivable' and not l.isFNDIA
+        )
+
+        if not partner_line:
+            _logger.warning(f"Aucune ligne client trouvée pour la facture {self.name}")
+            return
+
+        sign = self.direction_sign
+
+        # Utiliser un contexte spécial pour permettre la modification des écritures validées
+        ctx = dict(self.env.context, check_move_validity=False, skip_account_move_synchronization=True)
+
+        # CAS 1 : FNDIA décoché → Supprimer les lignes FNDIA et restaurer le montant client
+        if not self.fndia_subsidized and fndia_lines:
+            _logger.info(f"FNDIA décoché sur facture validée {self.name} - Suppression des lignes FNDIA")
+
+            # Montant total FNDIA à remettre sur le compte client
+            fndia_total = sum(fndia_lines.mapped('debit')) - sum(fndia_lines.mapped('credit'))
+
+            # Augmenter la ligne client
+            partner_line.with_context(ctx).write({
+                'debit': partner_line.debit + fndia_total if -sign > 0 else partner_line.debit,
+                'credit': partner_line.credit if -sign > 0 else partner_line.credit + fndia_total,
+                'amount_currency': partner_line.amount_currency + fndia_total if -sign > 0 else partner_line.amount_currency - fndia_total,
+            })
+
+            # Supprimer les lignes FNDIA
+            fndia_lines.with_context(ctx).unlink()
+
+            _logger.info(f"Lignes FNDIA supprimées, ligne client restaurée à {partner_line.debit}")
+
+        # CAS 2 : FNDIA coché → Créer les lignes FNDIA et réduire le montant client
+        elif self.fndia_subsidized and self.fndia_subsidy_total > 0 and not fndia_lines:
+            if not fndia_account:
+                raise UserError(_(
+                    "Le compte de subvention FNDIA n'est pas configuré.\n"
+                    "Veuillez le configurer dans Facturation > Configuration > Paramètres."
+                ))
+
+            _logger.info(f"FNDIA coché sur facture validée {self.name} - Création des lignes FNDIA")
+
+            # Réduire la ligne client du montant FNDIA
+            new_receivable_amount = self.fndia_amount_to_pay
+            partner_line.with_context(ctx).write({
+                'debit': new_receivable_amount if -sign > 0 else 0.0,
+                'credit': 0.0 if -sign > 0 else new_receivable_amount,
+                'amount_currency': new_receivable_amount if -sign > 0 else -new_receivable_amount,
+            })
+
+            # Créer la ligne FNDIA
+            fndia_line_vals = self._prepare_fndia_subsidy_line(fndia_account)
+            fndia_line_vals['move_id'] = self.id
+            self.env['account.move.line'].with_context(ctx).create(fndia_line_vals)
+
+            _logger.info(f"Ligne FNDIA créée pour {self.fndia_subsidy_total}, ligne client réduite à {new_receivable_amount}")
+
+        # Recalculer l'amount_residual de la facture
+        self.with_context(ctx)._compute_amount()
 
     def _recompute_dynamic_lines(self, recompute_all_taxes=False, recompute_tax_base_amount=False):
         """
