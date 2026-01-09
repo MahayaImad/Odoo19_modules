@@ -142,11 +142,14 @@ class AccountMove(models.Model):
         for line in self.invoice_line_ids:
             line._compute_fndia_subsidy_amount()
 
-        # Forcer le recalcul des totaux FNDIA
+        # Forcer le recalcul des totaux FNDIA (première passe)
         self._compute_fndia_amounts()
 
         # Forcer le recalcul du timbre et amount_total
         self._compute_amount()
+
+        # Recalculer les totaux FNDIA (deuxième passe avec amount_total à jour)
+        self._compute_fndia_amounts()
 
         # Forcer le recalcul des tax_totals (pour afficher/masquer FNDIA dans les totaux)
         self._compute_tax_totals()
