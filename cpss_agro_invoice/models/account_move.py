@@ -137,13 +137,17 @@ class AccountMove(models.Model):
                     'message': _('La subvention FNDIA est disponible uniquement pour les factures client.')
                 }
             }
+        # Force le recalcul des montants FNDIA sur toutes les lignes
         for line in self.invoice_line_ids:
             line._compute_fndia_subsidy_amount()
 
+        # Recalcul des totaux et affichage
         self._compute_fndia_amounts()
         self._compute_amount()
         self._compute_tax_totals()
-        self.action_post(self)
+
+        # Note: Les écritures comptables (line_ids) seront créées/modifiées automatiquement
+        # lors de la validation (action_post) ou par _recompute_dynamic_lines()
 
     def _get_fndia_account(self):
         """Retourne le compte comptable pour la subvention FNDIA"""
@@ -330,7 +334,13 @@ class AccountMove(models.Model):
             fndia_account = move.company_id.fndia_subsidy_account_id
 
             # Chercher les lignes FNDIA existantes
-            fndia_lines = move.line_ids.filtered(lambda l: l.isFNDIA)
+            # On filtre par isFNDIA ET par compte FNDIA si configuré (plus sûr)
+            if fndia_account:
+                fndia_lines = move.line_ids.filtered(
+                    lambda l: l.isFNDIA and l.account_id == fndia_account
+                )
+            else:
+                fndia_lines = move.line_ids.filtered(lambda l: l.isFNDIA)
 
             # CAS 1 : FNDIA décoché → Supprimer les lignes FNDIA existantes
             if not move.fndia_subsidized:
