@@ -149,7 +149,6 @@ class AccountMove(models.Model):
 
         # Forcer le recalcul des tax_totals (pour afficher/masquer FNDIA dans les totaux)
         self._compute_tax_totals()
-        self.action_post(self)
 
     def write(self, vals):
         """
