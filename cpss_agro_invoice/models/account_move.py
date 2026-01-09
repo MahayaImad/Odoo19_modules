@@ -2,6 +2,7 @@
 
 from odoo import models, fields, api, _
 from odoo.exceptions import UserError, ValidationError
+from odoo.tools.misc import formatLang
 import logging
 
 _logger = logging.getLogger(__name__)
@@ -149,7 +150,9 @@ class AccountMove(models.Model):
         # Si la facture est déjà validée, mettre à jour les écritures comptables immédiatement
         if self.state == 'posted':
             self._update_fndia_journal_entries()
-        # Sinon, les écritures seront créées lors de la validation (action_post) ou par _recompute_dynamic_lines()
+        # Si la facture est en brouillon, forcer le recalcul des écritures dynamiques
+        elif self.state == 'draft':
+            self._recompute_dynamic_lines(recompute_all_taxes=False)
 
     def _get_fndia_account(self):
         """Retourne le compte comptable pour la subvention FNDIA"""
@@ -572,6 +575,14 @@ class AccountMove(models.Model):
                     'group': "fndia",
                     'tax_groups': [],
                 })
+
+                # Déduire la subvention FNDIA du total affiché
+                move.tax_totals['amount_total'] = move.fndia_amount_to_pay
+                move.tax_totals['formatted_amount_total'] = formatLang(
+                    self.env,
+                    move.fndia_amount_to_pay,
+                    currency_obj=move.currency_id
+                )
 
     @api.constrains('fndia_subsidized', 'fndia_subsidy_total', 'amount_total')
     def _check_fndia_subsidy(self):
