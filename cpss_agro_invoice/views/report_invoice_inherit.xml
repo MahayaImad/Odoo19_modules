@@ -6,5 +6,36 @@
         <xpath expr="//t[@t-set='lines_to_report']" position="replace">
             <t t-set="lines_to_report" t-value="o._get_move_lines_to_report().filtered(lambda l: not l.isFNDIA and not l.isStamp)"/>
         </xpath>
+
     </template>
+    <template id="report_invoice_show_fndia_stamp"
+          inherit_id="account.document_tax_totals">
+
+    <!-- Affichage -->
+    <xpath expr="//tr[contains(@class,'o_total')]" position="before">
+
+        <tr t-if="o.timbre">
+            <td class="text-start">
+                Timbre fiscal
+            </td>
+            <td class="text-end">
+                <span t-out="o.timbre"
+                      t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+            </td>
+        </tr>
+
+        <tr t-if="o.fndia_subsidy_total">
+            <td class="text-start">
+                Subvention FNDIA
+            </td>
+            <td class="text-end">
+                <span t-out="o.fndia_subsidy_total"
+                      t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+            </td>
+        </tr>
+
+    </xpath>
+
+</template>
+
 </odoo>
