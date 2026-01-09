@@ -266,47 +266,6 @@ class AccountMove(models.Model):
                     # Si on coche FNDIA sur facture validée
                     elif not old_value and new_value:
                         _logger.info("=" * 80)
-                        _logger.info(f"FNDIA write() - COCHER FNDIA sur facture validée {move.name}")
-                        _logger.info(f"  Transition: False → True")
-
-                        # Chercher lignes FNDIA existantes
-                        fndia_lines = move.line_ids.filtered(lambda l: l.isFNDIA)
-
-                        if fndia_lines:
-                            _logger.info(f"  Trouvé {len(fndia_lines)} lignes FNDIA à supprimer")
-
-                            # Récupérer la ligne client
-                            partner_line = move.line_ids.filtered(
-                                lambda l: l.account_id.account_type == 'asset_receivable'
-                            )
-
-                            if partner_line:
-                                partner_line.ensure_one()  # S'assurer qu'il n'y a qu'une seule ligne
-                                sign = move.direction_sign
-                                # Montant FNDIA à remettre sur compte client
-                                fndia_total = sum(fndia_lines.mapped('debit')) - sum(fndia_lines.mapped('credit'))
-
-                                _logger.info(f"  Montant FNDIA à remettre: {fndia_total}")
-                                _logger.info(f"  Ligne client avant: debit={partner_line.debit}, credit={partner_line.credit}")
-
-                                # Supprimer les lignes FNDIA
-                                fndia_lines.unlink()
-
-                                # Augmenter le compte client
-                                partner_line.write({
-                                    'debit': partner_line.debit + fndia_total if -sign > 0 else partner_line.debit,
-                                    'credit': partner_line.credit if -sign > 0 else partner_line.credit + fndia_total,
-                                })
-
-                                _logger.info(f"  Ligne client après: debit={partner_line.debit}, credit={partner_line.credit}")
-                                _logger.info("  ✓ Lignes FNDIA supprimées")
-
-                                # Recalculer invoice_line_ids_visible
-                                move._compute_invoice_line_ids_visible()
-
-                    # Si on coche FNDIA sur facture validée
-                    elif not old_value and new_value:
-                        _logger.info("=" * 80)
                         _logger.info(f"FNDIA write() - Création lignes FNDIA sur facture validée {move.name}")
 
                         # Appeler d'abord super().write() pour que fndia_subsidized soit mis à jour
