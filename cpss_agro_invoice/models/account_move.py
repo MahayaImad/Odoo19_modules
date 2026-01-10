@@ -150,9 +150,7 @@ class AccountMove(models.Model):
         # Si la facture est déjà validée, mettre à jour les écritures comptables immédiatement
         if self.state == 'posted':
             self._update_fndia_journal_entries()
-        # Si la facture est en brouillon, forcer le recalcul des écritures dynamiques
-        elif self.state == 'draft':
-            self._recompute_dynamic_lines(recompute_all_taxes=False)
+        # Pour les factures en brouillon, les écritures seront créées lors de la validation (action_post)
 
     def _get_fndia_account(self):
         """Retourne le compte comptable pour la subvention FNDIA"""
@@ -272,10 +270,14 @@ class AccountMove(models.Model):
         Surcharge pour ajouter la ligne de subvention FNDIA dans les écritures comptables
         et modifier le calcul du timbre fiscal
         """
-        res = super()._recompute_dynamic_lines(
-            recompute_all_taxes=recompute_all_taxes,
-            recompute_tax_base_amount=recompute_tax_base_amount
-        )
+        # Appeler le parent seulement si la méthode existe
+        # (elle peut ne pas exister dans Odoo 19 standard)
+        res = None
+        if hasattr(super(AccountMove, self), '_recompute_dynamic_lines'):
+            res = super()._recompute_dynamic_lines(
+                recompute_all_taxes=recompute_all_taxes,
+                recompute_tax_base_amount=recompute_tax_base_amount
+            )
 
         for move in self:
             if move.fndia_subsidized and move.move_type == 'out_invoice' and move.fndia_subsidy_total > 0:
